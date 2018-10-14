@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="BranchQ6AU15.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Local maximums and minimums."/> 
+<meta name="learning-outcome" content="Critical points."/> 
+<meta name="learning-outcome" content="First derivative test."/> 
+<meta name="learning-outcome" content="Second derivative test."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="5fbcf117d9f0121b55b92674dcb4431d006ae258 maximumsAndMinimums/exercises/BranchQ6AU15.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<span class="learning-outcome">Local maximums and minimums.</span> <span class="learning-outcome">Critical points.</span> <span class="learning-outcome">First derivative test.</span> <span class="learning-outcome">Second derivative test.</span>
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+<!--l. 15--><p class="noindent">Let <script type="math/tex">f(x) = 20 + 8x^2 - x^4</script>.<br class="newline"/>(a) Find all the critical points of <script type="math/tex">f</script> and classify them, i.e., for each critical point of <script type="math/tex">f</script>
+decide whether it is a local minimum, local maximum or neither. (b) Find all
+inflection points of <script type="math/tex">f</script>.
+</p><!--l. 19--><p class="noindent">(a) First, we have to compute <script type="math/tex">f'(x)</script>.
+</p><!--l. 21--><p class="noindent"><script type="math/tex">f'(x) = \answer {16x-4x^3}</script>.
+</p><!--l. 23--><p class="noindent">Complete the statement below.
+</p><!--l. 25--><p class="noindent">The x-coordinates of all critical points of <script type="math/tex">f</script> (from left to right) are <script type="math/tex">a=\answer {-2}</script>, <script type="math/tex">b=\answer {0}</script>, and
+<script type="math/tex">c=\answer {2}</script>.
+</p>
+<div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Now compute <script type="math/tex; mode=display"> f''(x)=\answer {16-12x^2} </script>
+<!--l. 38--><p class="noindent">Now, we will evaluate the second derivative at all the critical points of <script type="math/tex">f</script> and apply
+the second derivative test to determine whether the function <script type="math/tex">f</script> has a local
+extremum at any of those points. <script type="math/tex; mode=display"> f''(a)=\answer {-32} </script> </p><div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> Because the value of <script type="math/tex">f''(a)</script> is <span class="word-choice" id="word-choice4"><a id="x1-67r4"></a><span class="choice  " id="choice1">positive</span><span class="choice correct " id="choice2">negative</span><span class="choice  " id="choice3">zero</span>
+</span>, the function <script type="math/tex">f</script> has <span class="word-choice" id="word-choice5"><a id="x1-68r5"></a><span class="choice correct " id="choice4">a local maximum</span><span class="choice  " id="choice5">a local minimum</span><span class="choice  " id="choice6">neither a local
+maximum nor a local minimum</span><span class="choice  " id="choice7">possibly a local maximum, a local minimum or
+neither</span>
+</span> at <script type="math/tex">x=a</script> by the second derivative test. <script type="math/tex; mode=display"> f''(b)=\answer {16} </script> <div role="article" class="problem-environment exercise" id="problem6"><a id="x1-69r6"></a> Because the value of <script type="math/tex">f''(b)</script> is <span class="word-choice" id="word-choice7"><a id="x1-70r7"></a><span class="choice correct " id="choice8">positive</span><span class="choice  " id="choice9">negative</span><span class="choice  " id="choice10">zero</span>
+</span>, the function <script type="math/tex">f</script> has<span class="word-choice" id="word-choice8"><a id="x1-71r8"></a><span class="choice  " id="choice11">a local maximum</span><span class="choice correct " id="choice12">a local minimum</span><span class="choice  " id="choice13">neither a local
+maximum nor a local minimum</span><span class="choice  " id="choice14">possibly a local maximum, a local minimum or
+neither</span>
+</span> at <script type="math/tex">x=b</script> by the second derivative test.
+<!--l. 52--><p class="noindent"><script type="math/tex; mode=display"> f''(c)=\answer {-32} </script> </p><div role="article" class="problem-environment exercise" id="problem9"><a id="x1-72r9"></a> Because the value of <script type="math/tex">f''(c)</script> is <span class="word-choice" id="word-choice10"><a id="x1-73r10"></a><span class="choice  " id="choice15">positive</span><span class="choice correct " id="choice16">negative</span><span class="choice  " id="choice17">zero</span>
+</span>, the function <script type="math/tex">f</script> has<span class="word-choice" id="word-choice11"><a id="x1-74r11"></a><span class="choice correct " id="choice18">a local maximum</span><span class="choice  " id="choice19">a local minimum</span><span class="choice  " id="choice20">neither a local
+maximum nor a local minimum</span><span class="choice  " id="choice21">possibly a local maximum, a local minimum or
+neither</span>
+</span> at <script type="math/tex">x=c</script> by the second derivative test.<br class="newline"/>
+<!--l. 57--><p class="noindent">(b) Complete the statement below. </p><div role="article" class="problem-environment exercise" id="problem12"><a id="x1-75r12"></a>
+<!--l. 60--><p class="noindent">Since <script type="math/tex">f''(x)=\answer {16-12x^2}</script>, it follows that inflection point might occur at (from left to right) <script type="math/tex">m=\answer {-\frac {2}{\sqrt {3}}}</script> and
+<script type="math/tex">n=\answer {\frac {2}{\sqrt {3}}}</script>.<br class="newline"/>
+</p><!--l. 62--><p class="noindent">In order to check whether the function <script type="math/tex">f</script> has an inflection point at either <script type="math/tex">x=m</script> or <script type="math/tex">x=n</script>, we have
+to check the sign of <script type="math/tex">f''(x)</script> on the intervals <script type="math/tex">(-\infty ,m)</script>, <script type="math/tex">(m,n)</script>, and <script type="math/tex">(n,+\infty )</script>.
+</p><!--l. 64--><p class="noindent">Since <script type="math/tex">a < m < b < n < c</script>, we can use the values <script type="math/tex">f''(a)</script>, <script type="math/tex">f''(b)</script>, and <script type="math/tex">f''(c)</script> to determine the sign of <script type="math/tex">f''(x)</script> on these intervals.
+</p><div role="article" class="problem-environment exercise" id="problem13"><a id="x1-76r13"></a>
+                                                                  
+
+                                                                  
+<!--l. 68--><p class="noindent"><script type="math/tex">f''(x)</script> is <span class="word-choice" id="word-choice14"><a id="x1-77r14"></a><span class="choice  " id="choice22">positive</span><span class="choice correct " id="choice23">negative</span><span class="choice  " id="choice24">zero</span>
+</span> on the interval <script type="math/tex">(-\infty ,m)</script>.<br class="newline"/>
+</p><!--l. 70--><p class="noindent"><script type="math/tex">f''(x)</script> is <span class="word-choice" id="word-choice15"><a id="x1-78r15"></a><span class="choice correct " id="choice25">positive</span><span class="choice  " id="choice26">negative</span><span class="choice  " id="choice27">zero</span>
+</span> on the interval <script type="math/tex">(m,n)</script>.<br class="newline"/>
+</p><!--l. 72--><p class="noindent"><script type="math/tex">f''(x)</script> is <span class="word-choice" id="word-choice16"><a id="x1-79r16"></a><span class="choice  " id="choice28">positive</span><span class="choice correct " id="choice29">negative</span><span class="choice  " id="choice30">zero</span>
+</span> on the interval <script type="math/tex">(n,+\infty )</script>.<br class="newline"/></p><div role="article" class="problem-environment exercise" id="problem17"><a id="x1-80r17"></a> Make a correct choice.<br class="newline"/>
+<!--l. 76--><p class="noindent">The function <script type="math/tex">f</script> <span class="word-choice" id="word-choice18"><a id="x1-81r18"></a><span class="choice correct " id="choice31">has</span><span class="choice  " id="choice32">does not have</span>
+</span> an inflection point at <script type="math/tex">x=m</script>, because the sign of <script type="math/tex">f''(x)</script> <span class="word-choice" id="word-choice19"><a id="x1-82r19"></a><span class="choice correct " id="choice33">changes</span><span class="choice  " id="choice34">does not change</span>
+</span> at <script type="math/tex">x=m</script>.<br class="newline"/>The function <script type="math/tex">f</script> <span class="word-choice" id="word-choice20"><a id="x1-83r20"></a><span class="choice correct " id="choice35">has</span><span class="choice  " id="choice36">does not have</span>
+</span> an inflection point at <script type="math/tex">x=n</script>, because the sign of <script type="math/tex">f''(x)</script> <span class="word-choice" id="word-choice21"><a id="x1-84r21"></a><span class="choice correct " id="choice37">changes</span><span class="choice  " id="choice38">does not change</span>
+</span> at <script type="math/tex">x=n</script>.<br class="newline"/>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

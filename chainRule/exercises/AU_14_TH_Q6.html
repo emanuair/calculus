@@ -1,0 +1,107 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="AU_14_TH_Q6.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the properties of trigonometric functions."/> 
+<meta name="learning-outcome" content="Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions."/> 
+<meta name="learning-outcome" content="Understand rate of change when quantities are dependent upon each other."/> 
+<meta name="learning-outcome" content="Apply chain rule to relate quantities expressed with different units."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="250cf613ff558a2fa6a7528ed3b7d11df500acfb chainRule/exercises/AU_14_TH_Q6.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<span class="learning-outcome">Understand the properties of trigonometric functions.</span> <span class="learning-outcome">Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions.</span> <span class="learning-outcome">Understand rate of change when quantities are dependent upon each other.</span> <span class="learning-outcome">Apply chain rule to relate quantities expressed with different units.</span> <div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> A spherical meteorite enters the earth’s atmosphere and burns up radially at a
+rate proportional to its surface area with constant of proportionality <script type="math/tex">\alpha <0</script>. We shall show
+that its radius decreases at a constant rate.
+<!--l. 14--><p class="noindent">First, given a sphere of radius <script type="math/tex">r</script>, recall the formula for its volume, <script type="math/tex">V</script>. <script type="math/tex; mode=display"> V=\answer {\frac {4}{3}\pi r^3} </script> </p><div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Similarly, recall
+that the surface area <script type="math/tex">A</script> of a sphere of radius <script type="math/tex">r</script> is given by <script type="math/tex; mode=display"> A=\answer {4\pi r^2} </script> <div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> Since the meteorite burns up
+radially at a rate proportional to its surface area <script type="math/tex">A</script> with constant of proportionality <script type="math/tex">\alpha </script>, <script type="math/tex; mode=display"> \dd [V]{t}=\answer {\alpha A} </script> <div role="article" class="problem-environment exercise" id="problem4"><a id="x1-67r4"></a>
+Now compute <script type="math/tex">\dd [V]{t}</script> and express it in terms of the surface area <script type="math/tex">A</script> and <script type="math/tex">r'=\dd [r]{t}</script>. (If you
+<em>must</em> enter a derivative of the function <script type="math/tex">r</script> with respective time, simply write <script type="math/tex">r'</script>,
+not <script type="math/tex">\dd [r]{t}</script> <script type="math/tex; mode=display"> \dd [V]{t}=\answer {A}\cdot r' </script> <div role="article" class="problem-environment exercise" id="problem5"><a id="x1-68r5"></a> Equating these two expressions obtained for <script type="math/tex">\dd [V]{t}</script>, we find that <script type="math/tex">\alpha A=A r'</script>. If the
+meteorite is still burning up at a time <script type="math/tex">t</script>, then <script type="math/tex">A(t)\ne 0</script>. Therefore for such <script type="math/tex">t</script>, <script type="math/tex; mode=display"> r'(t)=\answer {\alpha } </script> Thus, <script type="math/tex">\dd [r]{t}</script> is
+constant.
+</div>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>
