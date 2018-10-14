@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="LinearApproximations3.tex"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define linear approximation as an application of the tangent to a curve."/> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Label a graph with the appropriate quantities used in linear approximation."/> 
+<meta name="learning-outcome" content="Find the error of a linear approximation."/> 
+<meta name="learning-outcome" content="Compute differentials."/> 
+<meta name="learning-outcome" content="Use the second derivative to discuss whether the linear approximation over or underestimates the actual function value."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="10185f44ab905b9f8ec4b8380e9c421c57b19f8f linearApproximation/exercises/LinearApproximations3.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Consider the function <script type="math/tex">f(x) = \frac {4}{x}</script>. The graph below is an attempt to depict <script type="math/tex">f</script> and the linear
+approximation to <script type="math/tex">f</script> at <script type="math/tex">a=2</script>. Is the graph correct? <div class="multiple-choice" id="problem2"><span class="choice  " id="choice1">Yes</span> <span class="choice correct " id="choice2">No</span> </div>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="LinearApproximations3-2.svg" width="238.39783 " height="241.03334 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 51--><p class="noindent">The linear approximation to <script type="math/tex">f</script> at <script type="math/tex">a=2</script> is <script type="math/tex; mode=display"> L(x) = \answer {4-x}. </script>
+</p><!--l. 56--><p class="noindent">Using that linear approximation, we can estimate the value of <script type="math/tex">\frac {4}{2.8}</script> to be about
+<script type="math/tex; mode=display"> \frac {4}{2.8} \approx \answer {4-2.8}. </script>
+</p><!--l. 61--><p class="noindent">This approximation is an <span class="word-choice" id="word-choice3"><a id="x1-65r2"></a><span class="choice  " id="choice3">overestimate</span><span class="choice correct " id="choice4">underestimate</span>
+</span> because <script type="math/tex">f(x)</script> is concave <span class="word-choice" id="word-choice4"><a id="x1-66r3"></a><span class="choice correct " id="choice5">up</span><span class="choice  " id="choice6">down</span>
+</span> and the graph of <script type="math/tex">L</script> lies <span class="word-choice" id="word-choice5"><a id="x1-67r4"></a><span class="choice  " id="choice7">above</span><span class="choice correct " id="choice8">below</span>
+</span> the graph of <script type="math/tex">f</script> near <script type="math/tex">a=2</script>.
+</p><!--l. 63--><p class="noindent">The percent error,PE, in an approximation is given by <script type="math/tex; mode=display"> 100\frac {|approximation - exact|}{|exact|}, </script> where the exact value is given
+by a calculator. In this case our percent error PE (to the nearest percentage point) in
+approximating <script type="math/tex">\frac {4}{2.8}</script> is <script type="math/tex; mode=display"> PE= \answer {16}\%. </script>
+</p><!--l. 72--><p class="noindent">When <script type="math/tex">x</script> changes from <script type="math/tex">a=2</script> to <script type="math/tex">a+\Delta x = 2.8</script>, the change in <script type="math/tex">y</script> is <script type="math/tex; mode=display"> \Delta y = f\left (\answer {2.8}\right ) - f\left (\answer {2}\right ) = -\frac {4}{\answer {7}}. </script> Now in this case the <strong>approximate</strong>
+change in <script type="math/tex">y</script> is <script type="math/tex; mode=display"> \d {y} = f'\left (\answer {2}\right )\d {x} = \answer {-0.8}. </script>
+</p><!--l. 81--><p class="noindent">The picture below shows the graph of <script type="math/tex">f</script> along with the linear approximation to <script type="math/tex">f</script> at <script type="math/tex">a=2</script>.
+On this diagram are quantities labeled <script type="math/tex">A</script>, <script type="math/tex">B</script>, <script type="math/tex">C</script>, <script type="math/tex">D</script>, and <script type="math/tex">E</script>. Correctly identify them
+below.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="LinearApproximations3-4.svg" width="215.09163 " height="234.78809 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 120--><p class="noindent">Chose the correct expression for <script type="math/tex">A</script> </p><div class="multiple-choice" id="problem6"><span class="choice  " id="choice9"><script type="math/tex">\d {x}</script></span> <span class="choice  " id="choice10"><script type="math/tex">\d {y}</script></span> <span class="choice correct " id="choice11"><script type="math/tex">\Delta y</script></span> <span class="choice  " id="choice12"><script type="math/tex">a</script></span> <span class="choice  " id="choice13"><script type="math/tex">a+\Delta x</script></span> </div>
+<!--l. 129--><p class="noindent">Chose the correct expression for <script type="math/tex">B</script> </p><div class="multiple-choice" id="problem7"><span class="choice  " id="choice14"><script type="math/tex">\d {x}</script></span> <span class="choice correct " id="choice15"><script type="math/tex">\d {y}</script></span> <span class="choice  " id="choice16"><script type="math/tex">\Delta y</script></span> <span class="choice  " id="choice17"><script type="math/tex">a</script></span> <span class="choice  " id="choice18"><script type="math/tex">a+\Delta x</script></span> </div>
+<!--l. 138--><p class="noindent">Chose the correct expression for <script type="math/tex">C</script> </p><div class="multiple-choice" id="problem8"><span class="choice correct " id="choice19"><script type="math/tex">\d {x}</script></span> <span class="choice  " id="choice20"><script type="math/tex">\d {y}</script></span> <span class="choice  " id="choice21"><script type="math/tex">\Delta y</script></span> <span class="choice  " id="choice22"><script type="math/tex">a</script></span> <span class="choice  " id="choice23"><script type="math/tex">a+\Delta x</script></span> </div>
+<!--l. 147--><p class="noindent">Chose the correct expression for <script type="math/tex">D</script> </p><div class="multiple-choice" id="problem9"><span class="choice  " id="choice24"><script type="math/tex">\d {x}</script></span> <span class="choice  " id="choice25"><script type="math/tex">\d {y}</script></span> <span class="choice  " id="choice26"><script type="math/tex">\Delta y</script></span> <span class="choice correct " id="choice27"><script type="math/tex">a</script></span> <span class="choice  " id="choice28"><script type="math/tex">a+\Delta x</script></span> </div>
+<!--l. 156--><p class="noindent">Chose the correct expression for <script type="math/tex">E</script> </p><div class="multiple-choice" id="problem10"><span class="choice  " id="choice29"><script type="math/tex">\d {x}</script></span> <span class="choice  " id="choice30"><script type="math/tex">\d {y}</script></span> <span class="choice  " id="choice31"><script type="math/tex">\Delta y</script></span> <span class="choice  " id="choice32"><script type="math/tex">a</script></span> <span class="choice correct " id="choice33"><script type="math/tex">a+\Delta x</script></span> </div>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

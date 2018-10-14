@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="levelCurves.tex"/> 
+<meta name="author" content="Jim  Fowler  and  Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="2e45cb8b8b9eb5345fe5ab26a6863eb84413dd5c exams/calculus3/exam1/levelCurves.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+Consider the following contour plot for a differentiable function <script type="math/tex">F : \R ^2 \to \R </script>. The <script type="math/tex">x</script>-axis is
+horizontal and the <script type="math/tex">y</script>-axis is vertical. Assume nothing too complicated happens
+between the contour lines. <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <img src="contourPlot.png" alt="PIC"/> </div>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> On the plot above, draw your best guess as to what the gradient vector looks like at
+the point <script type="math/tex">A</script>.  <div class="multiple-choice" id="problem2"><span class="choice correct " id="choice1">I drew the vector</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback3">Your vector should look like this: <div class="image-environment" role="img" aria-labelledby="image-alt-2"><img src="contourWithGrad.png" alt="PIC"/> </div>
+Gradient vectors are perpendicular to level curves and point in the initial direction of
+greatest increase for the function. </div>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-65r2"></a> Do you think <script type="math/tex">\frac {\partial F}{\partial y}</script> is positive or negative at the point <script type="math/tex">B</script>? Why?  <div class="multiple-choice" id="problem5"><span class="choice correct " id="choice2">positive</span> <span class="choice  " id="choice3">negative</span>
+</div>
+<div class="feedback" data-feedback="attempt" id="feedback6">As increase the <script type="math/tex">y</script>-value from point <script type="math/tex">B</script>, the value of <script type="math/tex">F</script> increases. </div>
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-66r3"></a> Let <script type="math/tex">\uvec {u} = \vector { \frac {1}{\sqrt {2}}, \frac {1}{\sqrt {2}} }</script>. Which is larger: <script type="math/tex">D_{\uvec {u}} F</script> or <script type="math/tex">|\grad F|</script> at the point <script type="math/tex">C</script>? Why?  <div class="multiple-choice" id="problem8"><span class="choice  " id="choice4"><script type="math/tex">D_{\uvec {u}} F</script></span> <span class="choice correct " id="choice5"><script type="math/tex">|\grad F|</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback9">At point <script type="math/tex">C</script>, <script type="math/tex">\uvec {u}</script> points nearly along the level curve, so <script type="math/tex">D_{\uvec {u}} F</script> is near zero. On the other hand, <script type="math/tex">|\grad F|</script> is
+nonzero. </div>
+</div>
+<div role="article" class="problem-environment problem" id="problem10"><a id="x1-67r4"></a> The point <script type="math/tex">D</script> is at <script type="math/tex">(-4,3)</script> and the point <script type="math/tex">E</script> is at <script type="math/tex">(4,-2)</script>. Let <script type="math/tex">\vec {v} = \grad F(-4,3)</script> and let <script type="math/tex">\vec {w} = \grad F(4,-2)</script>. Do you think <script type="math/tex">|\vec {v}|</script> or <script type="math/tex">|\vec {w}|</script> is bigger?
+Why?  <div class="multiple-choice" id="problem11"><span class="choice  " id="choice6"><script type="math/tex">|\vec {v}|</script></span> <span class="choice correct " id="choice7"><script type="math/tex">|\vec {w}|</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback12">The contour lines are closer together at point <script type="math/tex">E</script> than at point <script type="math/tex">D</script>. Hence <script type="math/tex">|\vec {w}|</script> is bigger than <script type="math/tex">|\vec {v}|</script>. </div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>
