@@ -1,0 +1,246 @@
+<!DOCTYPE html><html lang="en"><head> <title>L’Hopital’s
+                                                                  
+
+                                                                  
+rule</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInLhopitalsRule.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Recall how to find limits for forms that are not indeterminate."/> 
+<meta name="learning-outcome" content="Define an indeterminate form."/> 
+<meta name="learning-outcome" content="Convert indeterminate forms to the form zero over zero or infinity over infinity."/> 
+<meta name="learning-outcome" content="Define L&#39;Hopital&#39;s Rule and identify when it can be used."/> 
+<meta name="learning-outcome" content="Use L&#39;Hopital&#39;s Rule to find limits."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="1cec19e7467439157ea377b1676b3d642ff78b05 lhopitalsRule/digInLhopitalsRule.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 15--><p class="noindent">We use derivatives to give us a “short-cut” for computing limits.
+</p></div>   <div class="maketitle"></div>
+Derivatives allow us to take problems that were once difficult to solve and
+convert them to problems that are easier to solve. Let us consider L’Hôpital’s
+rule:
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">L’Hôpital’s Rule</span> Let <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script> be functions that are differentiable near <script type="math/tex">a</script>. If <script type="math/tex; mode=display"> \lim _{x \to a} f(x) = \lim _{x \to a}g(x) = 0 \qquad \text {or} \pm \infty , </script> and <script type="math/tex">\lim _{x \to a} \frac {f'(x)}{g'(x)}</script> exists,
+and <script type="math/tex">g'(x) \neq 0</script> for all <script type="math/tex">x</script> near <script type="math/tex">a</script>, then <script type="math/tex; mode=display"> \lim _{x \to a} \frac {f(x)}{g(x)} = \lim _{x \to a} \frac {f'(x)}{g'(x)}. </script>
+</div>
+<!--l. 35--><p class="noindent">This theorem is somewhat difficult to prove, in part because it incorporates so many
+different possibilities, so we will not prove it here. </p><div class="theorem-like problem-environment remark" id="problem2"><a id="x1-65r2"></a>L’Hôpital’s rule applies even when <script type="math/tex">\lim _{x\to a}f(x) = \pm \infty </script>
+and <script type="math/tex">\lim _{x\to a}g(x) = \mp \infty </script>.
+</div>
+<!--l. 44--><p class="noindent">L’Hôpital’s rule allows us to investigate limits of <em>indeterminate form</em>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem3"><a id="x1-66r3"></a><span class="theorem-like-title">List of Indeterminate Forms</span>
+     <dl class="description"><dt class="description">
+<script type="math/tex">\relax \boldsymbol {\tfrac {0}{0}}</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} \frac {f(x)}{g(x)}</script> where <script type="math/tex">f(x)\to 0</script> and <script type="math/tex">g(x)\to 0</script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \boldsymbol {\tfrac {\infty }{\infty }}</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} \frac {f(x)}{g(x)}</script> where <script type="math/tex">f(x)\to \infty </script> and <script type="math/tex">g(x)\to \infty </script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \small \boldsymbol {0\cdot \infty }</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} \left (f(x)\cdot g(x)\right )</script> where <script type="math/tex">f(x)\to 0</script> and <script type="math/tex">g(x)\to \infty </script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \small \boldsymbol {\infty - \infty }</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a}\left ( f(x)-g(x)\right )</script> where <script type="math/tex">f(x)\to \infty </script> and <script type="math/tex">g(x)\to \infty </script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \boldsymbol {1^\infty }</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} f(x)^{g(x)}</script> where <script type="math/tex">f(x)\to 1</script> and <script type="math/tex">g(x)\to \infty </script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \boldsymbol {0^0}</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} f(x)^{g(x)}</script> where <script type="math/tex">f(x)\to 0</script> and <script type="math/tex">g(x)\to 0</script> as <script type="math/tex">x\to a</script>.
+     </dd><dt class="description">
+<script type="math/tex">\relax \boldsymbol {\infty ^0}</script> </dt><dd class="description">This refers to a limit of the form <script type="math/tex">\lim _{x\to a} f(x)^{g(x)}</script> where <script type="math/tex">f(x)\to \infty </script> and <script type="math/tex">g(x)\to 0</script> as <script type="math/tex">x\to a</script>.</dd></dl>
+<!--l. 64--><p class="noindent">In each of these cases, the value of the limit is <strong>not</strong> immediately obvious. Hence, a
+careful analysis is required!
+</p></div>
+
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a id="x1-1000"></a>Basic indeterminant forms</h3>
+<!--l. 71--><p class="noindent">Our first example is the computation of a limit that was somewhat difficult
+before.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-1001r4"></a>Compute <script type="math/tex; mode=display"> \lim _{x\to 0} \frac {\sin (x)}{x}. </script> <div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-1002r5"></a>Set <script type="math/tex">f(x) = \sin (x)</script> and <script type="math/tex">g(x) = x</script>. Since both <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script> are differentiable functions at <script type="math/tex">0</script>, and <script type="math/tex; mode=display"> \lim _{x \to 0} f(x) = \lim _{x \to 0}g(x) = 0, </script> this
+situation is ripe for L’Hôpital’s Rule. Now <script type="math/tex; mode=display"> f'(x) = \answer [given]{\cos (x)} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{1}. </script> L’Hôpital’s rule tells us that
+<script type="math/tex; mode=display"> \lim _{x \to 0} \frac {\sin (x)}{x} = \lim _{x \to 0} \frac {\cos (x)}{1} = 1. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment remark" id="problem6"><a id="x1-1003r6"></a>Note, the astute mathematician will notice that in our example above, we
+are somewhat cheating. To apply L’Hôpital’s rule, we need to know the
+derivative of sine; however, to know the derivative of sine we must be able to
+compute the limit: <script type="math/tex; mode=display"> \lim _{x\to 0}\frac {\sin (x)}{x} </script> Hence using L’Hôpital’s rule to compute this limit is
+a circular argument! We encourage the gentle reader to view L’Hôpital’s
+rule a “reminder” as to what is true, not as the formal derivation of the
+result.
+</div>
+<!--l. 115--><p class="noindent">Our next set of examples will run through the remaining indeterminate forms one is
+likely to encounter.
+</p>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-1004r7"></a>Compute <script type="math/tex; mode=display"> \lim _{x\to \pi /2^+} \frac {\sec (x)}{\tan (x)}. </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-1005r8"></a>Set <script type="math/tex">f(x) = \sec (x)</script> and <script type="math/tex">g(x) = \tan (x)</script>. Both <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script> are differentiable near <script type="math/tex">\pi /2</script>. Additionally, <script type="math/tex; mode=display"> \lim _{x \to \pi /2^+} f(x) = \lim _{x \to \pi /2^+}g(x) = -\infty . </script> This
+situation is ripe for L’Hôpital’s Rule. Now <script type="math/tex; mode=display"> f'(x) = \answer [given]{\sec (x)\tan (x)} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{\sec ^2(x)}. </script> L’Hôpital’s rule tells us that
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to \pi/2^+} \frac{\sec(x)}{\tan(x)} &= \lim_{x\to \pi/2^+}
+\frac{\sec(x)\tan(x)}{\sec^2(x)} \\
+&= \lim_{x\to \pi/2^+} \sin(x)\\
+&=\answer[given]{1}.
+\end{align*}</script>
+<!--l. 144--></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-1006r9"></a><a class="ximera-label" id="example:xlnx infty"></a> Compute <script type="math/tex; mode=display"> \lim _{x\to 0^+} x\ln x. </script> <div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-1007r10"></a>This doesn’t appear to be suitable for L’Hôpital’s Rule. As <script type="math/tex">x</script> approaches
+zero, <script type="math/tex">\ln x</script> goes to <script type="math/tex">-\infty </script>, so the product looks like <script type="math/tex; mode=display"> (\text {something very small})\cdot (\text {something very large and negative}). </script> This product could be anything.
+A careful analysis is required. Write <script type="math/tex; mode=display"> x\ln x = \frac {\ln x}{x^{-1}}. </script> Set <script type="math/tex">f(x) = \ln (x)</script> and <script type="math/tex">g(x) = x^{-1}</script>. Since both functions are
+differentiable near zero and <script type="math/tex; mode=display"> \lim _{x\to 0+} \ln (x) = -\infty \qquad \text {and}\qquad \lim _{x\to 0+} x^{-1} = \infty , </script> we may apply L’Hôpital’s rule. Write with me <script type="math/tex; mode=display"> f'(x) = \answer [given]{x^{-1}} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{-x^{-2}}, </script> so
+<script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 0^+} x\ln x &= \lim_{x\to 0^+} \frac{\ln x}{x^{-1}} \\
+  &= \lim_{x\to 0^+} \frac{x^{-1}}{-x^{-2}}\\
+  &=\lim_{x\to 0^+} -x \\
+  &= 0.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 185--><p class="noindent">One way to interpret this is that since <script type="math/tex">\lim _{x\to 0^+}x\ln x = 0</script>, the function <script type="math/tex">x</script> approaches zero much faster
+than <script type="math/tex">\ln x</script> approaches <script type="math/tex">-\infty </script>.
+</p></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Indeterminate forms involving subtraction</h3>
+<!--l. 194--><p class="noindent">There are two basic cases here, we’ll do an example of each.
+</p>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-2001r11"></a>Compute <script type="math/tex; mode=display"> \lim _{x\to 0} \left (\cot (x) - \csc (x)\right ). </script> <div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-2002r12"></a>Here we simply need to write each term as a fraction,
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to 0} \left(\cot(x) - \csc(x)\right) &= \lim_{x\to 0} \left(\frac{\cos(x)}{\sin(x)} - \frac{1}{\sin(x)}\right)\\
+&= \lim_{x\to 0} \frac{\cos(x)-1}{\sin(x)}
+\end{align*}</script>
+<!--l. 207--><p class="noindent">Setting <script type="math/tex">f(x) = \cos (x)-1</script> and <script type="math/tex">g(x)=\sin (x)</script>, both functions are differentiable near zero and
+<script type="math/tex; mode=display"> \lim _{x\to 0}(\cos (x)-1)=\lim _{x\to 0}\sin (x) = 0. </script> We may now apply L’Hôpital’s rule. Write with me <script type="math/tex; mode=display"> f'(x) = \answer [given]{-\sin (x)} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{\cos (x)}, </script> so
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 0} \left(\cot(x) - \csc(x)\right) &= \lim_{x\to 0} \frac{\cos(x)-1}{\sin(x)}\\
+  &= \lim_{x\to 0} \frac{-\sin(x)}{\cos(x)} \\
+  &=0.
+\end{align*}</script>
+<!--l. 225--></div>
+</div>
+<!--l. 229--><p class="noindent">Sometimes one must be slightly more clever.
+</p>
+<div class="theorem-like problem-environment example" id="problem13"><a id="x1-2003r13"></a>Compute <script type="math/tex; mode=display"> \lim _{x\to \infty }\left (\sqrt {x^2+x}-x\right ). </script> <div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-2004r14"></a>Again, this doesn’t appear to be suitable for L’Hôpital’s
+Rule. A bit of algebraic manipulation will help. Write with me
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty}\left(\sqrt{x^2+x}-x\right) &= \lim_{x\to\infty}\left(x\left(\sqrt{1+1/x}-1\right)\right)\\
+&=\lim_{x\to\infty}\frac{\sqrt{1+1/x}-1}{x^{-1}}
+\end{align*}</script>
+<!--l. 243--><p class="noindent">Now set <script type="math/tex">f(x) = \sqrt {1+1/x}-1</script>, <script type="math/tex">g(x) = x^{-1}</script>. Since both functions are differentiable for large values
+of <script type="math/tex">x</script> and <script type="math/tex; mode=display"> \lim _{x\to \infty } (\sqrt {1+1/x}-1) = \lim _{x\to \infty }x^{-1} = 0, </script> we may apply L’Hôpital’s rule. Write with me <script type="math/tex; mode=display"> f'(x) = \answer [given]{(1/2)(1+1/x)^{-1/2}\cdot (-x^{-2})} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{-x^{-2}} </script> so
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty}\left(\sqrt{x^2+x}-x\right) &= \lim_{x\to\infty}\frac{\sqrt{1+1/x}-1}{x^{-1}} \\
+&= \lim_{x\to\infty}\frac{(1/2)(1+1/x)^{-1/2}\cdot(-x^{-2})}{-x^{-2}} \\
+&= \lim_{x\to\infty} \frac{1}{2\sqrt{1+1/x}}\\
+                                                                  
+
+                                                                  
+&= \frac{1}{2}.
+\end{align*}</script>
+<!--l. 263--></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-3000"></a>Exponential Indeterminate Forms</h3>
+<!--l. 268--><p class="noindent">There is a standard trick for dealing with the indeterminate forms <script type="math/tex; mode=display"> \oneToInfty ,\quad \zeroToZero ,\quad \inftyToZero . </script> Given <script type="math/tex">u(x)</script> and <script type="math/tex">v(x)</script> such
+that <script type="math/tex; mode=display"> \lim _{x\to a}u(x)^{v(x)} </script> falls into one of the categories described above, rewrite as <script type="math/tex; mode=display"> \lim _{x\to a}e^{\ln \left (u(x)^{v(x)}\right )} </script> and then we rewrite
+as <script type="math/tex; mode=display"> \lim _{x\to a}e^{v(x)\ln {(u(x))}}. </script> Recall that the exponential function is continuous. Therefore <script type="math/tex; mode=display"> \lim _{x\to a}e^{v(x)\ln {(u(x))}}=e^{\left [\lim _{x\to a} v(x)\ln (u(x))\right ]}. </script> Now we
+will focus on the limit <script type="math/tex; mode=display"> \lim _{x\to a} v(x)\ln (u(x)) </script> using L’Hôpital’s rule. We will only give a single
+example.
+</p>
+<div class="theorem-like problem-environment example" id="problem15"><a id="x1-3001r15"></a>First determine the form of the limit, then compute the limit. <script type="math/tex; mode=display"> \lim _{x\to \infty }\left (1 + \frac {1}{x}\right )^x. </script> Select the correct
+choice. The form of the limit is <div class="multiple-choice" id="problem16"><span class="choice  " id="choice1"><script type="math/tex">\zeroOverZero </script></span> <span class="choice  " id="choice2"> <script type="math/tex">\relax \boldsymbol {\tfrac {\infty }{\infty }}</script></span> <span class="choice  " id="choice3"><script type="math/tex">\zeroTimesInfty </script></span> <span class="choice  " id="choice4"> <script type="math/tex">\relax \small \boldsymbol {\infty - \infty }</script></span> <span class="choice correct " id="choice5"><script type="math/tex">\oneToInfty </script></span> <span class="choice  " id="choice6"><script type="math/tex"> \inftyToZero </script></span> <span class="choice  " id="choice7"><script type="math/tex">\zeroToZero </script></span> </div>
+<div class="theorem-like problem-environment explanation" id="problem17"><a id="x1-3002r16"></a>Write <script type="math/tex; mode=display"> \lim _{x\to \infty }\left (1 + \frac {1}{x}\right )^x = e^{\left [\lim _{x\to \infty }x\ln \left (1 + \frac {1}{x}\right )\right ]}. </script> So now look at the limit of the exponent <script type="math/tex; mode=display"> \lim _{x\to \infty } x\ln \left (1 + \frac {1}{x}\right ) = \lim _{x\to \infty } \frac {\ln \left (1 + \frac {1}{x}\right )}{x^{-1}}. </script> Setting <script type="math/tex">f(x) = \ln \left (1 + \frac {1}{x}\right )</script> and <script type="math/tex">g(x) = x^{-1}</script>, both functions are
+differentiable for large values of <script type="math/tex">x</script> and <script type="math/tex; mode=display"> \lim _{x\to \infty }\ln \left (1 + \frac {1}{x}\right )=\lim _{x\to \infty }x^{-1} = 0. </script> We may now apply L’Hôpital’s rule. Write <script type="math/tex; mode=display"> f'(x) = \answer [given]{\frac {-x^{-2}}{1 + \frac {1}{x}}} </script> and <script type="math/tex; mode=display"> g'(x) = \answer [given]{-x^{-2}}, </script> so
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty} \frac{\ln\left(1 + \frac{1}{x}\right)}{x^{-1}} &= \lim_{x\to\infty} \frac{\frac{-x^{-2}}{1 + \frac{1}{x}}}{-x^{-2}} \\
+&=\lim_{x\to\infty} \frac{1}{1 + \frac{1}{x}}\\
+&=1.
+\end{align*}</script>
+<!--l. 337--><p class="noindent">Hence, </p><script type="math/tex; mode=display"> \begin{align*} 
+   \lim_{x\to \infty}\left(1 + \frac{1}{x}\right)^x &=e^{ \eval{\lim_{x\to \infty}x\ln\left(1 + \frac{1}{x}\right)}} \\
+  &=e^{ \eval{\lim_{x\to\infty} \frac{\ln\left(1 + \frac{1}{x}\right)}{x^{-1}}}} \\
+  &=e^{1} \\
+  &= e.
+\end{align*}</script>
+<!--l. 344--></div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>
