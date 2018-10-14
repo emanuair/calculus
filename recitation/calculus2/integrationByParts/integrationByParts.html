@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="en"><head> <title>Section  7.2:  Integration  By
+                                                                  
+
+                                                                  
+Parts</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="integrationByParts.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Apply the Integration by Parts technique to evaluate definite and indefinite integrals."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="e5535c6511d02211fa0b8adb35d58b301bf31e04 recitation/calculus2/integrationByParts/integrationByParts.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>
+<!--l. 36--><p class="noindent"><span class="learning-outcome">Apply the Integration by Parts technique to evaluate definite and indefinite integrals.</span>   </p> <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions:</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> A student evaluates the integral
+                                 <script type="math/tex; mode=display"> \int _0^1 x e^x \d x </script>
+ via Integration by Parts with <script type="math/tex">u=x</script>, <script type="math/tex">\d v = e^x \d x</script> as follows:
+                                 <script type="math/tex; mode=display"> \int _0^1 x e^x \d x = x e^x - \int _0^1 e^x \d x = x e^x + \eval {e^x}_0^1 = x e^x + e^1 - e^0 = xe^x + e -1. </script>
+ Is the student’s work correct?
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> The student’s work is certainly not correct! Since they are evaluating a definite
+integral, their answer should be a number. However, their answer is a function of the
+integration variable <script type="math/tex">x</script>. In particular, the student forgot to evaluate the first term
+during the course of the integration by parts process. The correct solution
+is
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _0^1 x e^x \d x = \eval {x e^x}_0^1 - \int _0^1 e^x \d x = e^1 - 0e^0 + \eval {e^x}_0^1 = e^1 + e^1 - e^0 = 2e -1. </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> For each example, decide on an integration strategy (but don’t actually evaluate the
+integrals).
+<div class="center">
+<!--l. 67--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\int x \sin (x) \d x</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-2" class="td11"> II. <script type="math/tex">\int x \sin (x^2) \d x</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-3" class="td11"> III. <script type="math/tex">\int x^2 \sin (x) \d x</script>.  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem4"><a id="x1-1004r4"></a> I. This integral is easily solved via Integration by Parts, with <script type="math/tex">u=x</script> and <script type="math/tex">\d v = \sin (x) \d x</script>.
+<!--l. 77--><p class="noindent">II. This integral can be solved via <script type="math/tex">u</script>-substitution with <script type="math/tex">u = x^2</script>, so that <script type="math/tex">\d u = 2 x \d x</script>.
+</p><!--l. 79--><p class="noindent">III. Integration by Parts can be used for this example, with <script type="math/tex">u=x^2</script> and <script type="math/tex">\d v = \sin (x) \d x</script>. After applying the
+method once, the integral reduces to
+                                 <script type="math/tex; mode=display"> \int x^2 \sin (x) \d x = -x^2\cos (x) + 2\int x \cos (x) \d x. </script>
+ The second term can be evaluated by applying Integration by Parts once more with <script type="math/tex">u = x</script>
+and <script type="math/tex">\d v = \cos (x) \d x</script>.
+</p></div>
+
+                                                                  
+
+                                                                  
+<h3 class="sectionHead"><a id="x1-2000"></a>Group work:</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Evaluate the following integrals
+<div class="center">
+<!--l. 91--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">\int _1^3 x^2 e^{2x} \d x</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-2" class="td11"> II. <script type="math/tex">\int \arcsin (x) \d x</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-3" class="td11"> III. <script type="math/tex">\int x^{\frac {5}{3}} (\ln x)^2 \d x</script>.  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem6"><a id="x1-2002r6"></a> I. We use Integration by Parts with <script type="math/tex">u = x^2</script> and <script type="math/tex">\d v = e^{2x} \d x</script>, so that <script type="math/tex">\d u = 2x \d x</script> and <script type="math/tex">v = \frac {1}{2} e^{2x}</script>. Then
+                                 <script type="math/tex; mode=display"> \int _1^3 x^2 e^{2x} \d x = \eval {\frac {x^2}{2} e^{2x}}_1^3 - \int _1^3 x e^{2x} \d x. </script>
+ The second integral is evaluated by another application of Integration
+by Parts, with <script type="math/tex">u =x</script>, <script type="math/tex">\d v = e^{2x} \d x</script>, <script type="math/tex">\d u = \d x</script> and <script type="math/tex">v = \frac {1}{2}e^{2x}</script>. Continuing our integration, we have
+<script type="math/tex; mode=display"> \begin{align*} 
+\eval{\frac{x^2}{2} e^{2x}}_1^3 - \int_1^3 x e^{2x} \d x & = \frac{9}{2} e^6 - \frac{1}{2} e^2 - \eval{\frac{x}{2}e^{2x}}_1^3 + \int_1^3 \frac{1}{2} e^{2x} \d x \\
+& = \frac{9}{2} e^6 - \frac{1}{2} e^2 - \frac{3}{2} e^6 + \frac{1}{2} e^2 + \eval{\frac{1}{4}e^{2x}}_1^3 \\
+& = 3e^6 + \frac{1}{4} e^6 - \frac{1}{4} e^2 \\
+& = \frac{13}{4} e^6 - \frac{1}{4} e^2.
+\end{align*}</script>
+<!--l. 111--><p class="noindent">II. We do not know how to integrate <script type="math/tex">\arcsin (x)</script>, but we do know how to differentiate
+it, so we will use integration by parts. Let <script type="math/tex">u = \arcsin (x)</script> and <script type="math/tex">\d v = \d x</script>. Then <script type="math/tex">\d u = \frac {1}{\sqrt {1-x^2}} \d x</script> and <script type="math/tex">v = x</script>. This gives
+us
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int \arcsin (x) \d x = x\arcsin (x) - \int \frac {x \d x}{\sqrt {1-x^2}}. </script>
+ The second term can be evaluated by <script type="math/tex">u</script>-substitution, with <script type="math/tex">u = 1- x^2</script> and <script type="math/tex">\d u = -2x \d x</script>. This yields
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \int \frac{x \d x}{\sqrt{1-x^2}} &= \int \frac{-\d u}{2\sqrt{u}}\\
+  &= -\frac{1}{2} \int u^{-\frac{1}{2}} \d u \\
+  &= -\frac{1}{2} \cdot 2u^{\frac{1}{2}} +C \\
+  &= - \sqrt{1-x^2} +C.
+  \end{align*}</script>
+<!--l. 122--><p class="noindent">Therefore
+                                 <script type="math/tex; mode=display"> \int \arcsin (x) \d x = x\arcsin (x) + \sqrt {1-x^2} +C. </script>
+</p><!--l. 127--><p class="noindent">III. We begin with the substitution <script type="math/tex">w = \ln x</script>, so that <script type="math/tex">\d w = \frac {1}{x} \d x</script>. Solving the substitution equation for <script type="math/tex">x</script>
+yields <script type="math/tex">x = e^w</script>, and we have </p><script type="math/tex; mode=display"> \begin{align*} 
+      \int x^{\frac{5}{3}} (\ln x)^2 \d x
+    &= \int x^{\frac{8}{3}} (\ln x)^2 \cdot \frac{1}{x} \d x  \\
+    &= \int (e^w)^{\frac{8}{3}} w^2 \d w  \\
+    &= \int w^2 e^{\frac{8}{3} w} \d w.
+    \end{align*}</script>
+<!--l. 134--><p class="noindent">We now use integration by parts, with <script type="math/tex">u = w^2</script> and <script type="math/tex">\d v = e^{\frac {8}{3} w} \d w</script>, whence <script type="math/tex">\d u = 2 w \d w</script> and <script type="math/tex">v = \frac {3}{8} e^{\frac {8}{3} w}</script>. This gives us
+</p><script type="math/tex; mode=display"> \begin{align*} 
+    \int x^{\frac{5}{3}} (\ln x)^2 \d x
+    &= \frac{3}{8} w^2 e^{\frac{8}{3} w} - \int \frac{3}{8} (2w) e^{\frac{8}{3} w} \d w  \\
+    &= \frac{3}{8} w^2 e^{\frac{8}{3} w} - \frac{3}{4} \int w e^{\frac{8}{3} w} \d w.
+    \end{align*}</script>
+<!--l. 140--><p class="noindent">To evaluate the second term, we apply integration by parts one last time with <script type="math/tex">u = w</script>, <script type="math/tex">\d u = \d w</script>, <script type="math/tex">\d v = e^{\frac {8}{3} w} \d w</script> and
+<script type="math/tex">v = \frac {3}{8} e^{\frac {8}{3} w}</script>. This yields </p><script type="math/tex; mode=display"> \begin{align*} 
+      \int x^{\frac{5}{3}} (\ln x)^2 \d x
+                                                                  
+
+                                                                  
+    &= \frac{3}{8}w^2 e^{\frac{8}{3} w} - \frac{3}{4} \left( \frac{3}{8} w e^{\frac{8}{3} w} - \frac{3}{8} \int e^{\frac{8}{3} w} \d w \right) \\
+    &= \frac{3}{8} w^2 e^{\frac{8}{3} w} - \frac{9}{32} w e^{\frac{8}{3} w} + \frac{27}{256} e^{\frac{8}{3} w} + C  \\
+    &= \frac{3}{8} e^{\frac{8}{3} \ln x} \left( (\ln x)^2 - \frac{3}{4} \ln x + \frac{9}{32} \right) + C  \\
+    &= \frac{3}{8} x^{\frac{8}{3}} \left( (\ln x)^2 - \frac{3}{4} \ln x + \frac{9}{32} \right) + C.
+    \end{align*}</script>
+<!--l. 148--></div>
+                                                                  
+
+                                                                  
+
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2003r7"></a>
+<!--l. 159--><p class="noindent">Evaluate the following integrals
+</p>
+<div class="center">
+<!--l. 161--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-3" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-3-1g"><col id="TBL-3-1"/><col id="TBL-3-2"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-3-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-3-1-1" class="td11"> I. <script type="math/tex">\int \sin (3x) e^{7x} \d x</script>                II. <script type="math/tex">\int x^5 \cos \left ( x^3 \right ) \d x</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem8"><a id="x1-2004r8"></a> I. We begin by letting <script type="math/tex">I = \int \sin (3x) e^{7x} \d x</script>. We then use integration by parts with <script type="math/tex; mode=display"> u = e^{7x} \qquad \d v = \sin (3x) \d x </script> <script type="math/tex; mode=display"> \d u = 7e^{7x} \d x \qquad v = -\frac {1}{3} \cos (3x). </script> Then
+<script type="math/tex; mode=display"> \begin{align*} 
+    I = \int \sin(3x) e^{7x} \d x &= -\frac{1}{3} e^{7x} \cos(3x) - \int -\frac{1}{3} (7e^{7x}) \cos(3x) \d x  \\
+     &= -\frac{1}{3} e^{7x} \cos(3x) + \frac{7}{3} \int e^{7x} \cos(3x) \d x.
+    \end{align*}</script>
+<!--l. 183--><p class="noindent">We then apply integration by parts again, this time with <script type="math/tex; mode=display"> u = e^{7x} \qquad \d v = \cos (3x) \d x </script> <script type="math/tex; mode=display"> \d u = 7e^{7x} \d x \qquad v = \frac {1}{3} \sin (3x). </script> This gives us
+</p><script type="math/tex; mode=display"> \begin{align*} 
+    I &= -\frac{1}{3} e^{7x} \cos(3x) + \frac{7}{3} \left[ \frac{1}{3} e^{7x} \sin(3x) - \int \frac{1}{3} (7e^{7x}) \sin(3x) \d x \right]  \\
+        &= -\frac{1}{3} e^{7x} \cos(3x) + \frac{7}{9} e^{7x} \sin(3x) - \frac{49}{9} \int e^{7x} \sin(3x) \d x  \\
+    &= -\frac{1}{3} e^{7x} \cos(3x) + \frac{7}{9} e^{7x} \sin(3x) - \frac{49}{9} I.
+    \end{align*}</script>
+<!--l. 196--><p class="noindent">Since we are interested in the integral <script type="math/tex">I</script>, we solve the above equation for <script type="math/tex">I</script> to
+obtain
+                                 <script type="math/tex; mode=display"> \frac {58}{9} I = -\frac {1}{3} e^{7x} \cos (3x) + \frac {7}{9} e^{7x} \sin (3x), </script>
+ so that
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> I = \frac {9}{58} \left ( -\frac {1}{3} e^{7x} \cos (3x) + \frac {7}{9} e^{7x} \sin (3x) \right ) + C. </script>
+</p><!--l. 205--><p class="noindent">II. We begin with the substitution <script type="math/tex">w = x^3</script>, so that <script type="math/tex">\d w = 3x^2 \d x</script>. It follows that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+    \int x^5 \cos \left( x^3 \right) \d x
+    &= \int x^3 \cos \left( x^3 \right) \cdot x^2 \d x  \\
+    &= \int w \cos(w) \cdot \frac{1}{3} \d w  \\
+    &= \frac{1}{3} \int w \cos(w) \d w.
+    \end{align*}</script>
+<!--l. 212--><p class="noindent">We then use integration by parts, with <script type="math/tex; mode=display"> u = w \qquad \d v = \cos (w) \d w </script> <script type="math/tex; mode=display"> \d u = \d w \qquad v = \sin (w), </script> which yields </p><script type="math/tex; mode=display"> \begin{align*} 
+      \int x^5 \cos \left( x^3 \right) \d x
+    &= \frac{1}{3} \left( w \sin(w) - \int \sin(w) \d w \right)  \\
+    &= \frac{1}{3} \left( w \sin(w) + \cos(w) \right) + C  \\
+    &= \frac{1}{3} \left( x^3 \sin \left( x^3 \right) + \cos \left( x^3 \right) \right) + C.
+    \end{align*}</script>
+<!--l. 226--></div>
+
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-2005r9"></a> The region <script type="math/tex">R</script> is bounded by the curves <script type="math/tex">y=0</script>, <script type="math/tex">y=\ln (x)</script> and <script type="math/tex">x=e</script>. Using the shell method, find the
+volume of the solid formed by rotating <script type="math/tex">R</script> around the <script type="math/tex">y</script>-axis.
+</div>
+<div class="free-response" id="problem10"><a id="x1-2006r10"></a> Since we are rotating around a vertical axis and we wish to use the Shell method,
+our slices should be vertical. The height of the shell at <script type="math/tex">x</script> is given by <script type="math/tex">\ln (x)</script>, and our
+bounds of integration are <script type="math/tex">x=1</script> (corresponding to <script type="math/tex">y=0</script>) and <script type="math/tex">x=e</script>. The volume integral
+is
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _1^e 2 \pi x \ln (x) \d x. </script>
+ To evaluate the integral, we use integration by parts with <script type="math/tex">u = \ln (x)</script> and <script type="math/tex">\d v = x \d x</script>, so that <script type="math/tex">\d u = \frac {1}{x} \d x</script> and <script type="math/tex">v = \frac {x^2}{2}</script>. This gives us
+<script type="math/tex; mode=display"> \begin{align*} 
+\int_1^e 2 \pi x \ln (x) \d x &= \eval{\frac{x^2}{2} \ln x}_1^e - \int_1^e \frac{x}{2} \d x \\
+&= \frac{e^2}{2}\ln(e) - \frac{1}{2}\ln (1) - \eval{\frac{x^2}{4}}_1^e \\
+&= \frac{e^2}{2} - \frac{e^2}{4} + \frac{1}{4} \\
+&= \frac{e^2}{4} + \frac{1}{4}.
+\end{align*}</script>
+<!--l. 244--></div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head> <title>Dot Products</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="dotProducts.tex"/> 
+<meta name="author" content="Jim Talamo and Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute dot products between $2$ and $3$-dimensional vectors."/> 
+<meta name="learning-outcome" content="Answer conceptual questions about dot products."/> 
+<meta name="learning-outcome" content="Find orthogonal decompositions of vectors."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="d4f89982ff942bd5c2c9fb1cb561ba4e28119ac3 recitation/calculus2/dotProducts/dotProducts.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Let <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> be nonzero <script type="math/tex">3</script>-dimensional vectors. Determine whether the following
+statements are true or false.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\mathrm {scal}_{\vec {v}} \vec {u} \leq \left |\vec {u}\right |</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\vec {w}</script> is parallel to <script type="math/tex">\vec {v}</script>, then <script type="math/tex">\mathrm {proj}_\vec {v} \vec {u} = \mathrm {proj}_\vec {w} \vec {u}</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">(\vec {u} - \mathrm {proj}_\vec {v} \vec {u}) \cdot \vec {v} = 0</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\mathrm {scal}_\vec {u} \vec {u} = 0</script>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\mathrm {proj}_\vec {v} \vec {u} = \mathrm {proj}_\vec {u} \vec {v}</script> then <script type="math/tex">\vec {u} = \vec {v}</script>
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\mathrm {scal}_\vec {v} \vec {u} = \mathrm {scal}_\vec {u} \vec {v}</script> then <script type="math/tex">\vec {u} = \vec {v}</script></dd></dl>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">This statement is true. We have
+                                   <script type="math/tex; mode=display"> \mathrm {scal}_{\vec {v}} \vec {u} = \frac {\vec {u} \cdot \vec {v}}{\left |\vec {v}\right |} = \left |\vec {u}\right | \cos \theta , </script>
+     where <script type="math/tex">\theta </script> is the angle between <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script>. Since the range of the cosine function
+     is <script type="math/tex">[-1,1]</script>, the conclusion follows.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">This statement is true. Assume that <script type="math/tex">\vec {v} = a \vec {w}</script> for some scalar <script type="math/tex">a</script>. Then
+                                                                  
+
+                                                                  
+                                   <script type="math/tex; mode=display"> \mathrm {proj}_\vec {v} \vec {u} = \frac {\vec {u} \cdot \vec {v}}{\left |\vec {v}\right |^2} \vec {v} = \frac {\vec {u} \cdot a \vec {w}}{\left |a \vec {w}\right |^2} a \vec {w} = \frac {a^2}{a^2} \frac {\vec {u} \cdot \vec {w}}{\left |\vec {w}\right |^2} \vec {w} = \mathrm {proj}_\vec {w} \vec {u}. </script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">This statement is true. We have
+                                   <script type="math/tex; mode=display"> (\vec {u} - \mathrm {proj}_\vec {v} \vec {u}) \cdot \vec {v} = \vec {u} \cdot \vec {v} - \frac {\vec {u} \cdot \vec {v}}{\left |\vec {v}\right |^2} \vec {v} \cdot \vec {v} = \vec {u} \cdot \vec {v} - \frac {\vec {u} \cdot \vec {v}}{\left |\vec {v}\right |^2} \left |\vec {v}\right |^2 = \vec {u} \cdot \vec {v} - \vec {u} \cdot \vec {v} = 0. </script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">This statement is false. For any nonzero <script type="math/tex">\vec {u}</script>, we have
+                                   <script type="math/tex; mode=display"> \mathrm {scal}_\vec {u} \vec {u} = \frac {\vec {u} \cdot \vec {u}}{\left |\vec {u}\right |} = \frac {\left |\vec {u}\right |^2}{\left |\vec {u}\right |} = \left |\vec {u}\right | \neq 0. </script>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">This statement is false; a counterexample is given by any pair of nonzero,
+     orthogonal vectors.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">This statement is false, with the same counterexample used in the previous
+     statement.</dd></dl>
+                                                                  
+
+                                                                  
+</dd></dl>
+<!--l. 82--><p class="noindent"><img src="dotProducts0x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-2001r2"></a> Let <script type="math/tex">\vec {u} = \left <1,0,2\right ></script>, <script type="math/tex">\vec {v} = \left <-1,1,2\right ></script> and <script type="math/tex">\vec {w} = \left <2,2,0\right ></script>.
+     <ul class="itemize1">
+     <li class="itemize">Which pairs of vectors listed above are orthogonal?
+     </li>
+     <li class="itemize">Which pairs of vectors have interior angle between them less than <script type="math/tex">\frac {\pi }{2}</script>?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Calculating dot products explicitly, we have
+<script type="math/tex; mode=display"> \begin{align*} 
+\vec{u} \cdot \vec{v} &=  1 \cdot -1 + 0 \cdot 1 + 2 \cdot 2 = 3 \neq 0\\
+\vec{u} \cdot \vec{w} &= 1 \cdot 2 + 0 \cdot 2 + 2 \cdot 0 = 2 \neq 0 \\
+\vec{v} \cdot \vec{w} &= -1 \cdot 2 + 1 \cdot 2 + 2 \cdot 0 = 0.
+\end{align*}</script>
+<!--l. 100--><p class="noindent">It follows that <script type="math/tex">\vec {v}</script> and <script type="math/tex">\vec {w}</script> are the unique pair which are orthogonal.
+</p><!--l. 102--><p class="noindent">II. A pair of vectors has interior angle less than <script type="math/tex">\frac {\pi }{2}</script> if and only if their dot
+product is positive. Therefore the pairs <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> and <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {w}</script> have this property.
+</p></dd></dl>
+<!--l. 103--><p class="noindent"><img src="dotProducts1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2002r3"></a> Let <script type="math/tex">\vec {u} = \left <2,a,6\right ></script> and <script type="math/tex">\vec {v} = \left <-1,2,a\right ></script> for some number <script type="math/tex">a</script>.
+     <ul class="itemize1">
+     <li class="itemize">Find <script type="math/tex">a</script> so that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are parallel or explain why no such number <script type="math/tex">a</script> exists.
+     </li>
+     <li class="itemize">Find <script type="math/tex">a</script> so that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are orthogonal or explain why no such number <script type="math/tex">a</script> exists.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Since the first coordinate of <script type="math/tex">\vec {u}</script> is <script type="math/tex">2</script> and the first coordinate of <script type="math/tex">\vec {v}</script> is <script type="math/tex">-1</script>, the
+vectors could only be parallel if <script type="math/tex">\vec {u} = -2 \cdot \vec {v}</script>. Considering the second and third coordinates
+of the vectors, this condition would force <script type="math/tex">-2 \cdot 2 = a</script> and <script type="math/tex">-2 \cdot a = 6</script>. Since these equations cannot be
+                                                                  
+
+                                                                  
+satisfied simultaneously, it must be that there is no number <script type="math/tex">a</script> which would make
+the vectors <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> parallel.
+<!--l. 116--><p class="noindent">II. We have
+                                 <script type="math/tex; mode=display"> \vec {u} \cdot \vec {v} = 2 \cdot (-1) + a \cdot 2 + 6 \cdot a = -2 + 8a. </script>
+ For the vectors to be orthogonal, we need
+                                 <script type="math/tex; mode=display"> -2 + 8 a = 0. </script>
+ The number <script type="math/tex">a = \frac {1}{4}</script> produces orthogonal vectors <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script>. </p></dd></dl>
+<!--l. 125--><p class="noindent"><img src="dotProducts2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2003r4"></a> Let <script type="math/tex">\vec {u} = \left <-2,2\right ></script> and <script type="math/tex">\vec {v} = \left <1,4\right ></script>.
+     <ul class="itemize1">
+                                                                  
+
+                                                                  
+     <li class="itemize">Compute <script type="math/tex">\mathrm {proj}_\vec {v} \vec {u}</script>. Sketch <script type="math/tex">\vec {u}</script>, <script type="math/tex">\vec {v}</script> and <script type="math/tex">\mathrm {proj}_{\vec {v}} \vec {u}</script> on the axes below. <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="dotProducts-2.svg" width="284.6951 " height="243.81287 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+     </div>
+     </li>
+     <li class="itemize">Find a vector <script type="math/tex">\vec {p}</script> parallel to <script type="math/tex">\vec {v}</script> and a vector <script type="math/tex">\vec {n}</script> orthogonal to <script type="math/tex">\vec {v}</script> so that <script type="math/tex">\vec {u} = \vec {p} + \vec {n}</script> and sketch <script type="math/tex">\vec {u}</script>, <script type="math/tex">\vec {v}</script>, <script type="math/tex">\vec {p}</script>
+     and <script type="math/tex">\vec {n}</script> on the axes below.
+     <div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="dotProducts-4.svg" width="284.6951 " height="243.81287 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+     </div>
+     </li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The projection vector is
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \mathrm {proj}_\vec {v} \vec {u} = \frac {\left <-2,2\right > \cdot \left <1,4\right >}{\left |\left <1,4\right >\right |^2} \left <1,4\right > = \frac {-2 + 8}{1^2 + 4^2} \left <1,4\right > = \frac {6}{17}\left <1,4\right >. </script>
+<!--l. 178--><p class="noindent">II. Let <script type="math/tex">\vec {p} = \mathrm {proj}_\vec {v} \vec {u}</script>, as calculated above, and let
+                                 <script type="math/tex; mode=display"> \vec {n} = \vec {u} - \vec {p} = \left <-2,2\right > - \frac {6}{17} \left <1,4\right > = \left <-\frac {40}{17},\frac {10}{17}\right >. </script>
+ One can check by a calculation that <script type="math/tex">\vec {p}</script> is parallel to <script type="math/tex">\vec {v}</script> and <script type="math/tex">\vec {n}</script> is perpendicular to
+<script type="math/tex">\vec {v}</script>. This also follows by general principles: <script type="math/tex">\vec {p}</script> is parallel to <script type="math/tex">\vec {v}</script> by definition, and <script type="math/tex">\vec {n}</script> is
+perpendicular to <script type="math/tex">\vec {v}</script> by Problem 1. </p></dd></dl>
+<!--l. 183--><p class="noindent"><img src="dotProducts3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2004r5"></a> Determine necessary and sufficient conditions on vectors <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> for <script type="math/tex">\mathrm {proj}_\vec {v} \vec {u} = \mathrm {proj}_\vec {u} \vec {v}</script>. (Hint: consider
+the case where <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are orthogonal separately.)
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">If <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are orthogonal, then
+                                 <script type="math/tex; mode=display"> \mathrm {proj}_\vec {v} \vec {u} = \mathrm {proj}_\vec {u} \vec {v} = \vec {0}. </script>
+ In fact, orthogonality of <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> is both necessary and sufficient for one (and
+hence both) projections to be <script type="math/tex">\vec {0}</script>.
+                                                                  
+
+                                                                  
+<!--l. 196--><p class="noindent">Now suppose that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are not orthogonal. Then <script type="math/tex">\mathrm {proj}_\vec {v} \vec {u} = \mathrm {proj}_\vec {u} \vec {v}</script> holds if and ony if
+                                 <script type="math/tex; mode=display"> \frac {\vec {u} \cdot \vec {v}}{\left |\vec {v}\right |^2} \vec {v} = \frac {\vec {v} \cdot \vec {u}}{\left |\vec {u}\right |^2} \vec {u}. </script>
+ Since we have assumed that <script type="math/tex">\vec {u} \cdot \vec {v} \neq 0</script>, this equation holds if and only if
+                                 <script type="math/tex; mode=display"> \frac {\vec {u}}{\left |\vec {u}\right |^2} = \frac {\vec {v}}{\left |\vec {v}\right |^2}. </script>
+ </p></dd></dl>
+<!--l. 204--><p class="noindent"><img src="dotProducts4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

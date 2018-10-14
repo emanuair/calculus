@@ -1,0 +1,226 @@
+<!DOCTYPE html><html lang="en"><head> <title>Partial  Fractions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="partialFractions.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Evaluate integrals using partial fraction decompositions."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="b37a64e4cdbf3013e97b3c56b582e9898685c64e recitation/calculus2/partialFractions/partialFractions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Classify each of the following expressions as an irreducible quadratic, a product of
+distinct linear factors, or a product of repeated linear factors.
+<div class="center">
+<!--l. 49--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">x^2+5x+1</script>             II. <script type="math/tex">x^2</script>             III. <script type="math/tex">x^2+x+1</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> I. Although it may not be immediately obvious how to factor it, this quadratic is
+reducible. To test this, one checks the discriminant <script type="math/tex">b^2-4ac</script>; the discriminant is <script type="math/tex">\geq 0</script> if and only if
+the polynomial can be factored, and is strictly greater than zero if and only if the
+factors are distinct. In this case the discriminant is <script type="math/tex">5^2-4 \cdot 1 \cdot 1 = 21 > 0</script>. The expression is therefore a
+product of distinct linear factors.
+<!--l. 59--><p class="noindent">II. This expression is a product of the repeated linear factor <script type="math/tex">x</script>.
+</p><!--l. 61--><p class="noindent">III. The discriminant is <script type="math/tex">1^2-4 \cdot 1 \cdot 1 = -3 < 0</script>, so the quadratic is irreducible.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> A student claims that the partial fraction decomposition for <script type="math/tex">\frac {6x^2+7x+1}{x(2x+1)^2}</script> is <script type="math/tex">\frac {Ax+B}{(2x+1)^2}+\frac {C}{x}</script> and justifies his or
+her response by finding that <script type="math/tex">A=2</script>, <script type="math/tex">B=3</script> and <script type="math/tex">C=1</script>.
+     <ul class="itemize1">
+     <li class="itemize">Is it true that <script type="math/tex">\frac {6x^2+7x+1}{x(2x+1)^2}+\frac {1}{x} = \frac {2x+3}{(2x+1)^2}+\frac {1}{x}</script>?
+     </li>
+     <li class="itemize">Is this the correct partial fraction decomposition?</li></ul>
+</div>
+<div class="free-response" id="problem4"><a id="x1-1004r4"></a> I. This is true, as we can readily check:
+                                 <script type="math/tex; mode=display"> \frac {2x+3}{(2x+1)^2}+\frac {1}{x} = \frac {2x^2+3x}{x(2x+1)^2} + \frac {(2x+1)^2}{x(2x+1)^2} = \frac {2x^2+3x+4x^2+4x+1}{x(2x+1)^2} =\frac {6x^2+7x+1}{x(2x+1)^2}. </script>
+                                                                  
+
+                                                                  
+<!--l. 79--><p class="noindent">II. Remember that the whole point of the method of partial fraction decomposition is
+to rewrite the rational function in an equivalent way which <em>we know how to integrate</em>.
+The student has provided an equivalent expression for the rational function,
+but their expression includes the term <script type="math/tex">\frac {2x+3}{(2x+1)^2}</script>, and it is not clear how to find the
+antiderivative of this term. The correct partial fraction decomposition is of the
+form
+                                 <script type="math/tex; mode=display"> \frac {6x^2+7x+1}{x(2x+1)^2} = \frac {A}{x} + \frac {B}{2x+1} + \frac {C}{(2x+1)^2}. </script>
+ Note that each term in the resulting definition is something that we know how to
+integrate.
+</p></div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Determine the form of the partial fraction decomposition of each expression, but
+don’t solve for constants.
+<div class="center">
+<!--l. 90--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">\frac {2x+1}{x^2+5x+6}</script>       II. <script type="math/tex">\frac {2x^2+x+3}{(x^2-2x+1)(x+2)}</script>       III. <script type="math/tex">\frac {3x^2+x+1}{3x^3+3x^2+6x}</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem6"><a id="x1-2002r6"></a> The partial fraction decompositions take the forms:
+<!--l. 100--><p class="noindent">I. <script type="math/tex">\frac {2x+1}{x^2+5x+6} = \frac {2x+1}{(x+2)(x+3)} = \frac {A}{x+2} + \frac {B}{x+3}</script>
+</p><!--l. 102--><p class="noindent">II. <script type="math/tex">\frac {2x^2+x+3}{(x^2-2x+1)(x+2)} = \frac {2x^2+x+3}{(x-1)^2(x+2)} = \frac {A}{x-1} + \frac {B}{(x-1)^2} + \frac {C}{x+2}</script>
+</p><!--l. 104--><p class="noindent">III. <script type="math/tex">\frac {3x^2+x+1}{3x^3+3x^2+6x} = \frac {3x^2 + x + 1}{3x(x^2+x + 2)} = \frac {A}{3x} + {Bx+C}{x^2+x+2}</script>
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2003r7"></a> Evaluate the integral
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int \frac {1}{x^3-x^2} \d x. </script>
+</div>
+<div class="free-response" id="problem8"><a id="x1-2004r8"></a> The partial fraction decomposition of the integrand is given by
+                                 <script type="math/tex; mode=display"> \frac {1}{x^3-x^2} = \frac {1}{x^2(x-1)} = \frac {A}{x} + \frac {B}{x^2} + \frac {C}{x-1}. </script>
+ Clearing denominators in this equation, we have
+                                 <script type="math/tex; mode=display"> 1 = Ax(x-1) + B(x-1) + Cx^2 = (A + C)x^2 + (-A + B) x + (-B). </script>
+ Comparing terms by degree, it must be that <script type="math/tex">-B = 1</script>, or <script type="math/tex">B=-1</script>. We also have <script type="math/tex">-A+B = 0</script>, or <script type="math/tex">A=B=-1</script>. Finally, <script type="math/tex">A+C=0</script>
+implies <script type="math/tex">C = -A = 1</script>. We conclude that
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \frac {1}{x^3-x^2} = -\frac {1}{x} - \frac {1}{x^2} + \frac {1}{x-1}. </script>
+ Therefore <script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{1}{x^3-x^2} \d x &= \int \frac{1}{x^3-x^2} = \int -\frac{1}{x} - \frac{1}{x^2} + \frac{1}{x-1}\d x  \\
+&= -\ln |x| + \frac{1}{x} + \ln |x-1| + C.
+\end{align*}</script>
+<!--l. 132--></div>
+
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-2005r9"></a> Consider the integral
+                                 <script type="math/tex; mode=display"> \int _2^3 \frac {1}{x^2-1} \d x. </script>
+ Evaluate the integral in two ways: first by trigonometric substitution with <script type="math/tex">x=\sec \theta </script>, then via
+partial fraction decomposition. For the trigonometric substitution method, it may be
+useful to recall that
+                                 <script type="math/tex; mode=display"> \int \csc \theta \d \theta = -\ln | \csc \theta + \cot \theta | + C. </script>
+ If we change the bounds of integration to <script type="math/tex">x=0</script> to <script type="math/tex">x=1/2</script>, would both methods still be
+valid?
+</div>
+<div class="free-response" id="problem10"><a id="x1-2006r10"></a> First  let  <script type="math/tex">x=\sec \theta </script>,  so  that  <script type="math/tex">\d x = \sec \theta \tan \theta \d \theta </script>.  Then
+<script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{1}{x^2-1} \d x &= \int \frac{1}{\tan^2 \theta} \sec \theta \tan \theta \d \theta \\
+&= \int \frac{\sec \theta}{\tan \theta} \d \theta \\
+                                                                  
+
+                                                                  
+&= \int \frac{1}{\cos \theta} \frac{\cos \theta}{\sin \theta} \d \theta \\
+&= \int \csc \theta \d \theta \\
+&= \ln |\csc \theta - \cot \theta| + C \\
+&= \ln \left|\frac{x}{\sqrt{x^2-1}} - \frac{1}{\sqrt{x^2-1}}\right|+C,
+\end{align*}</script>
+<!--l. 156--><p class="noindent">with the last line derived via a reference triangle. Therefore
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_2^3 \frac{1}{x^2-1} \d x &= \eval{\ln \left|\frac{x}{\sqrt{x^2-1}} - \frac{1}{\sqrt{x^2-1}}\right|}_2^3 \\
+&= \ln \left|\frac{3}{\sqrt{8}} - \frac{1}{\sqrt{8}}\right| - \ln \left| \frac{2}{\sqrt{3}} - \frac{1}{\sqrt{3}}\right|\\
+&= \ln \frac{1}{\sqrt{2}} - \ln \frac{1}{\sqrt{3}} \\
+&= -\frac{1}{2} \ln 2 + \frac{1}{2} \ln 3.
+\end{align*}</script>
+<!--l. 164--><p class="noindent">On the other hand, the partial fraction decomposition of the integrand is
+                                 <script type="math/tex; mode=display"> \frac {1}{x^2-1} = \frac {1}{(x+1)(x-1)} = \frac {A}{x+1} + \frac {B}{x-1}. </script>
+ Clearing denominators, we have
+                                 <script type="math/tex; mode=display"> 1 = A(x-1) + B(x+1) = (A+B)x + (-A+B). </script>
+ Comparing terms of the same degree, we have <script type="math/tex">-A+B=1</script> and <script type="math/tex">A+B = 0</script>. Solving the second equation
+yields <script type="math/tex">A=-B</script>, and substituting this into the first equation yields <script type="math/tex">2B=1</script>, or <script type="math/tex">B=1/2</script>. Therefore <script type="math/tex">A=-1/2</script>,
+                                                                  
+
+                                                                  
+and
+                                 <script type="math/tex; mode=display"> \frac {1}{x^2-1} = -\frac {1/2}{x+1} + \frac {1/2}{x-1}. </script>
+ The  integral  is  therefore  given  by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_2^3 \frac{1}{x^2-1} \d x &= \int_2^3  -\frac{1/2}{x+1} + \frac{1/2}{x-1} \d x \\
+&= \eval{-\frac{1}{2} \ln |x+1| + \frac{1}{2} \ln |x-1| }_2^3 \\
+&= \frac{1}{2}\left(- \ln 4 + \ln 2 + \ln 3 - \ln 1\right) \\
+&=  -\frac{1}{2} \ln 2 + \frac{1}{2} \ln 3.
+\end{align*}</script>
+<!--l. 183--><p class="noindent">We therefore obtain the same answer as we did using trigonometric substitution, but
+with a smaller amount of effort. Moreover, making the substitution <script type="math/tex">x=\sec \theta </script> implicitly
+assumes that <script type="math/tex">|x| \geq 1</script> (since this is the range of the secant function). This means that the
+trigonometric substitution method would not be valid if we integrated over any
+region containing <script type="math/tex">x</script> with <script type="math/tex">|x| < 1</script>.
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

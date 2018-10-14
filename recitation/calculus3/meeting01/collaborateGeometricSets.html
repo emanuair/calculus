@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head> <title>Geometric  sets</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateGeometricSets.tex"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Work in three-dimensional space."/> 
+<meta name="learning-outcome" content="Interpert implicit equations as geometric sets."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="1275e93497f3b3e541e19228d78e425d8045d256 recitation/calculus3/meeting01/collaborateGeometricSets.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">We investigate geometric sets determined by implicit equations.
+</p></div>   <div class="maketitle"></div>
+<!--l. 19--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p>
+<h3 class="sectionHead"><a id="x1-1000"></a>Geometry disguised as algebra</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Consider the equations: <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 6\\
+    x^2+y^2+z^2&=18
+  \end{align*}</script>
+<!--l. 127--><p class="noindent">Find a solution to these equations. </p><div role="article" class="problem-environment hint" id="problem2"><a id="x1-1002r2"></a> Guess-and-check is not a bad method for this
+problem.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Explain what the equations <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 6\\
+    x^2+y^2+z^2&=18
+  \end{align*}</script>
+<!--l. 139--><p class="noindent">describe from a geometric point of view.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-1004r4"></a> Use geometry to explain why the equations <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 6\\
+    x^2+y^2+z^2&=18
+  \end{align*}</script>
+<!--l. 148--><p class="noindent">have exactly one solution where <script type="math/tex">x</script>, <script type="math/tex">y</script>, and <script type="math/tex">z</script> are real numbers.
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Thinking about a tetrahedron</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Sketch the triangle in <script type="math/tex">\R ^3</script> whose vertices are the intersections of the plane <script type="math/tex; mode=display"> 20x + 15y + 12z = 60 </script> and the
+coordinate axes.
+</div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-2002r6"></a> Compute the volume of the tetrahedron (triangular-based pyramid) of in <script type="math/tex">\R ^3</script> bounded
+by the planes <script type="math/tex">x=0</script>, <script type="math/tex">y=0</script>, <script type="math/tex">z=0</script>, and the plane <script type="math/tex">20x + 15y + 12z = 60</script>. <div role="article" class="problem-environment hint" id="problem7"><a id="x1-2003r7"></a> Recall that the volume of a cone (pyramid!) is
+given by: <script type="math/tex; mode=display"> V = \left (\frac {1}{3}\right ) (\text {area of base})(\text {height}) </script>
+</div>
+                                                                  
+
+                                                                  
+</div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-2004r8"></a> Compute the area of the triangle in <script type="math/tex">\R ^3</script> whose vertices are the intersections of the plane
+<script type="math/tex">20x + 15y + 12z = 60</script> and the coordinate axes. <div role="article" class="problem-environment hint" id="problem9"><a id="x1-2005r9"></a> For now, use your old friend: <script type="math/tex; mode=display"> A = \frac {bh}{2} </script> and use calculus
+to minimize the distance between the line connecting <script type="math/tex">(3,0,0)</script> to <script type="math/tex">(0,4,0)</script>, and the point
+<script type="math/tex">(0,0,5)</script>.
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

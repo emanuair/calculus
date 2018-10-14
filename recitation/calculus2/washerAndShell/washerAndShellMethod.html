@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="en"><head> <title>Volume by Slicing</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="washerAndShellMethod.tex"/> 
+<meta name="author" content="Tom Needham and Jim
+                                                                  
+
+                                                                  
+Talamo"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use definite integrals to compute volumes of solids of revolution."/> 
+<meta name="learning-outcome" content="Determine whether the Washer or Shell method is better to compute the volume of a solid."/> 
+<meta name="learning-outcome" content="Determine the appropriate variable of integration to compute the volume of a solid."/> 
+<meta name="learning-outcome" content="Set up integrals with respect to both $x$ and $y$ that give the volume of the solid."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="9e96c7595f03658e2f2138db44ad28eb62c20b25 recitation/calculus2/washerAndShell/washerAndShellMethod.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   I. </dt><dd class="enumerate-enumitem">The region bounded by <script type="math/tex">y=x</script>, <script type="math/tex">y=3x</script>, and <script type="math/tex">x=2</script> is revolved about the line <script type="math/tex">x=5</script>. We wish to
+     compute the volume of the resulting solid by integrating with respect to <script type="math/tex">x</script>.
+     Which method (Washer or Shell) should be used to compute the volume?
+     </dd><dt class="enumerate-enumitem">
+  II. </dt><dd class="enumerate-enumitem">The region bounded by <script type="math/tex">y=\sqrt {x}</script>, <script type="math/tex">y=0</script>, <script type="math/tex">x=1</script> and <script type="math/tex">x=4</script> is revolved about the line <script type="math/tex">x=8</script>. We wish
+     to compute the volume of the resulting solid using the Washer Method.
+     Which variable should we integrate with respect to in order to compute
+     the volume?
+     </dd><dt class="enumerate-enumitem">
+ III. </dt><dd class="enumerate-enumitem">The region bounded by <script type="math/tex">y=-e^x</script>, <script type="math/tex">y=0</script>, <script type="math/tex">x=1</script> and <script type="math/tex">x=2</script> is rotated about either a horizontal
+     or a vertical line. Suppose that the volume of the resulting solid can be
+     calculated using the Shell method, integrating with respect to <script type="math/tex">y</script>. Was the
+     axis of rotation horizontal or vertical?</dd></dl>
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> I. Since we are revolving around a vertical line and integrating with respect to <script type="math/tex">x</script>, our
+slices need to be vertical as well. This means that we should use the Shell
+method.
+<!--l. 63--><p class="noindent">II. Since we are revolving around a vertical line and using the Washer method,
+our slices must be horizontal. This means that we should use the Washer
+method.
+</p><!--l. 65--><p class="noindent">III. Since we are integrating with respect to <script type="math/tex">y</script>, the slices used to form the shells
+must be horizontal. This means that the axis of rotation must have been
+horizontal.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Let <script type="math/tex">R</script> be the region bounded by <script type="math/tex">y=4-x^2</script> and <script type="math/tex">2x+y=1</script>.
+<div class="center">
+<!--l. 70--><p class="noindent">
+                                                                  
+
+                                                                  
+</p><!--l. 71--><p class="noindent"> <object data="washerAndShellMethod-1.svg" width="293.74269 " height="243.83235 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   I. </dt><dd class="enumerate-enumitem">If <script type="math/tex">R</script> is revolved about the line <script type="math/tex">x=-2</script>, what is the minimum number of integrals
+     required to express the volume of the resulting solid if the Washer method
+     is used? What if the Shell method is used?
+     </dd><dt class="enumerate-enumitem">
+  II. </dt><dd class="enumerate-enumitem">If <script type="math/tex">R</script> is revolved about the line <script type="math/tex">y=5</script>, what is the minimum number of integrals
+     required to express the volume of the resulting solid if the Washer method
+     is used? What if the Shell method is used?</dd></dl>
+</div>
+<div class="free-response" id="problem4"><a id="x1-1004r4"></a> I. If we use the Washer method, then the slices used to form the washers must be
+horizontal. This means that we would need two integrals to compute the volume (see
+the figure below). If we use the Shell method, then the slices would be vertical and
+the volume could be calculated with a single integral.
+<div class="center">
+<!--l. 106--><p class="noindent">
+</p><!--l. 107--><p class="noindent"> <object data="washerAndShellMethod-2.svg" width="293.74269 " height="243.83235 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+<!--l. 133--><p class="noindent">II. Now the Washer method would use vertical slices, so the computation would take
+                                                                  
+
+                                                                  
+one integral. The Shell method would use horizontal slices and would require two
+integrals.
+</p><!--l. 135--></div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> The region <script type="math/tex">R</script> bounded by <script type="math/tex">y=\ln (x)</script>, <script type="math/tex">y=0</script>, <script type="math/tex">y=2</script>, and <script type="math/tex">x=1</script> is revolved about the <script type="math/tex">y</script>-axis. Calculate the volume
+of the resulting solid using any method you like.
+</div>
+<div class="free-response" id="problem6"><a id="x1-2002r6"></a> The region <script type="math/tex">R</script> is shown below. From the plot, it is clear that either the Shell or Washer
+method will only require a single integral.
+<div class="center">
+<!--l. 148--><p class="noindent">
+</p><!--l. 149--><p class="noindent"> <object data="washerAndShellMethod-3.svg" width="312.7658 " height="243.82945 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+<!--l. 173--><p class="noindent">To use the Shell method, we would integrate with respect to <script type="math/tex">x</script>. We see that in this
+case, our integrand would be the function <script type="math/tex">2 \pi x (2-\ln (x))</script>, which doesn’t seem very easy to integrate.
+We therefore choose to use the Washer method, whence we integrate with respect to <script type="math/tex">y</script>.
+The bounds on <script type="math/tex">y</script> are <script type="math/tex">0</script> and <script type="math/tex">2</script>. To find the correct integrand, we solve <script type="math/tex">y = \ln (x)</script> for <script type="math/tex">x</script> to obtain <script type="math/tex">x = e^y</script>.
+The washer at <script type="math/tex">y</script> has outer radius <script type="math/tex">e^y</script> and inner radius <script type="math/tex">1</script>. Our volume integral is therefore
+given by
+                                 <script type="math/tex; mode=display"> \int _0^2 \pi (e^y)^2 - \pi \d y. </script>
+                                                                  
+
+                                                                  
+ The volume is
+                                 <script type="math/tex; mode=display"> \int _0^2 \pi e^{2y} - \pi \d y = \eval {\frac {\pi }{2} e^{2y} - \pi y}_0^2 = \frac {\pi }{2} e^4 - \frac {\pi }{2} -2\pi . </script>
+</p><!--l. 183--></div>
+
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2003r7"></a> The region <script type="math/tex">R</script> in the upper half plane, bounded by the curves <script type="math/tex">x^2+y^2 = 1</script> and <script type="math/tex">y=0</script>, is rotated around
+the line <script type="math/tex">y=2</script>. Set up (but don’t evaluate) an integral or some of integrals with respect to <script type="math/tex">y</script>
+which could be used to compute the volume of the solid.
+</div>
+<div class="free-response" id="problem8"><a id="x1-2004r8"></a> Since we are integrating with respect to <script type="math/tex">y</script>, our slices must be horizontal. Since we are
+rotating around a horizontal axis, we must use the shell method. The graph of <script type="math/tex">x^2+y^2=1</script> is a
+circle, so we can immediately conclude that the bounds on integration will be <script type="math/tex">y=0</script> and <script type="math/tex">y=1</script>.
+To find the integrand, we need to solve the equation for <script type="math/tex">x</script> in terms of <script type="math/tex">y</script>. Doing so, we
+see that there are two solutions:
+                                 <script type="math/tex; mode=display"> x^2+y^2 = 1 \Rightarrow x^2 = 1-y^2 \Rightarrow x = \pm \sqrt {1-y^2}. </script>
+ The solutions correspond to the left and right halves of the circle, respectively. The
+height of each cylindrical slice is therefore given by subtracting the left boundary
+value from the right boundary value, or
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \left (\sqrt {1-y^2}\right ) - \left (-\sqrt {1-y^2}\right ) = 2\sqrt {1-y^2}. </script>
+ We conclude that the volume integral is
+                                 <script type="math/tex; mode=display"> \int _0^1 2 \pi (2-y) \cdot 2 \sqrt {1-y^2} \d y = 4 \pi \int _0^1 (2-y) \sqrt {1-y^2} \d y. </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-2005r9"></a> Let <script type="math/tex">R</script> be the region bounded by <script type="math/tex">y=\sin (x)</script>, <script type="math/tex">y=0</script>, <script type="math/tex">x=\frac {\pi }{4}</script> and <script type="math/tex">x = \frac {\pi }{2}</script>. For each of the following cases, set up (but
+don’t evaluate) integrals which could be used to calculate the volume of the given
+solid using both the Shell method and the Washer method.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   I. </dt><dd class="enumerate-enumitem">The solid is formed by rotating <script type="math/tex">R</script> around the line <script type="math/tex">x = -1</script>.
+     </dd><dt class="enumerate-enumitem">
+  II. </dt><dd class="enumerate-enumitem">The solid is formed by rotating <script type="math/tex">R</script> around the line <script type="math/tex">y=-1</script>.</dd></dl>
+</div>
+<div class="free-response" id="problem10"><a id="x1-2006r10"></a> The region is pictured below.
+<div class="center">
+<!--l. 215--><p class="noindent">
+                                                                  
+
+                                                                  
+</p><!--l. 216--><p class="noindent"> <object data="washerAndShellMethod-4.svg" width="278.94827 " height="234.75098 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+<!--l. 239--><p class="noindent">I. Since we are rotating the region around a vertical line, the Shell method will
+require integration with respect to <script type="math/tex">x</script> (the slices are parallel to the axis of rotation,
+hence vertical, hence parameterized by <script type="math/tex">x</script> values) and the Washer method will require
+integration with respect to <script type="math/tex">y</script>.
+</p><!--l. 241--><p class="noindent">Let us begin with the Shell method. The bounds on <script type="math/tex">x</script> are <script type="math/tex">\frac {\pi }{4}</script> and <script type="math/tex">\frac {\pi }{2}</script> and the cylindrical
+slice at parameter <script type="math/tex">x</script> has radius <script type="math/tex">x+1</script> and height <script type="math/tex">\sin (x)</script>. The volume integral is
+                                 <script type="math/tex; mode=display"> \int _{\pi /4}^{\pi /2} 2\pi (x+1) \sin (x) \d x. </script>
+</p><!--l. 246--><p class="noindent">To use the Washer method, we must integrate with respect to <script type="math/tex">y</script>. Solving <script type="math/tex">y=\sin (x)</script> for <script type="math/tex">x</script> yields <script type="math/tex">x = \arcsin (y)</script>.
+(One must be careful here, since the function <script type="math/tex">f(x) = \sin (x)</script> is only invertible if its domain is
+restricted. The values of <script type="math/tex">x</script> that we are interested in lie in the appropriate restricted
+domain <script type="math/tex">[-\pi /2,\pi /2]</script>, so this will not cause an issue in this example.) The inner radius of the
+washer at parameter <script type="math/tex">y</script> is <script type="math/tex">\arcsin (y)</script> and the outer radius is <script type="math/tex">1+\frac {\pi }{2}</script> (this doesn’t depend on <script type="math/tex">y</script>). The
+volume is therefore given by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _0^1 \pi \left (1+ \frac {\pi }{2}\right )^2 - \pi \arcsin (y)^2 \d y. </script>
+</p><!--l. 251--><p class="noindent">II. We now rotate about a horizontal line, so that the Shell method will require
+integration with respect to <script type="math/tex">y</script> and the Washer method will require integration with
+respect to <script type="math/tex">x</script>.
+</p><!--l. 253--><p class="noindent">Using the Shell method, the cylindrical shell at <script type="math/tex">y</script> will have radius <script type="math/tex">1+y</script> and height <script type="math/tex">\frac {\pi }{2} - \arcsin (y)</script>. The
+volume integral is
+                                 <script type="math/tex; mode=display"> \int _0^1 2 \pi (1+y) \left (\frac {\pi }{2} - \arcsin (y) \right ) \d y. </script>
+</p><!--l. 258--><p class="noindent">Using the Washer method, the washer at <script type="math/tex">x</script> will have outer radius <script type="math/tex">\sin (x) + 1</script> and inner radius <script type="math/tex">1</script>.
+The volume of the resulting solid is
+                                 <script type="math/tex; mode=display"> \int _{\pi /4}^{\pi /2} \pi \left (\sin (x) + 1\right )^2 - \pi \d x. </script>
+</p><!--l. 263--></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Ratio  and  Root  Tests</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="ratioAndRootTest.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the ratio test to determine whether a series converges or diverges."/> 
+<meta name="learning-outcome" content="Use the root test to determine whether a series converges or diverges."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="8b8e59def2b767b24382ba94b0cedfc10eeef2ec recitation/calculus2/ratioAndRootTest/ratioAndRootTest.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Suppose that we want to determine whether the series
+                                 <script type="math/tex; mode=display"> \sum _{n=1}^\infty \frac {n^2+6n}{5n^3 + 2n^2 + 1} </script>
+ converges or diverges. Would either the Ratio Test or the Root Test be a useful tool
+for this task?
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We  can  tell  immediately  that  neither  the  Ratio  Test  nor  the
+Root Test would be conclusive for this example. This follows because, for any
+polynomials <script type="math/tex">p(n)</script> and <script type="math/tex">q(n)</script>, it holds that
+                                 <script type="math/tex; mode=display"> \lim _{n\rightarrow \infty } \frac {p(n+1)/q(n+1)}{p(n)/q(n)} = 1 </script>
+ and
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \lim _{n\rightarrow \infty } \sqrt [n]{p(n)} = 1. </script>
+ </dd></dl>
+<!--l. 64--><p class="noindent"><img src="ratioAndRootTest0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Suppose that <script type="math/tex">\{a_k\}</script> is a sequence with positive terms and
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {a_{k+1}}{a_k} = \frac {1}{2}. </script>
+ Is it possible to determine whether the following series converge or diverge?
+<div class="center">
+<!--l. 73--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\sum _{k=1}^\infty a_k</script>                             II. <script type="math/tex">\sum _{k=1}^\infty \frac {a_{k+1}}{a_k}</script>.  </td>
+</tr></tbody></table>
+</div></div>
+<!--l. 78--><p class="noindent">A student claims that <script type="math/tex">\sum _{k=1}^\infty a_k</script> converges to <script type="math/tex">\frac {1}{2}</script>. Is the student correct?
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The sequence in I. converges by the Ratio Test and the sequence
+in II. diverges by the Divergence Test. The student is not correct; the Ratio
+Test can only tell us that a series converges, not what it converges to. To give
+a concrete counterexample to the student’s claim, consider the series
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty \frac {1}{2^k}. </script>
+ The terms <script type="math/tex">a_k = 1/2^k</script> of this series satisfy <script type="math/tex">\lim _{k \rightarrow \infty } \frac {a_{k+1}}{a_k} = \frac {1}{2}</script>, but in this case we can determine the value
+of the series exactly:
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty \frac {1}{2^k} = \sum _{k=0}^\infty \frac {1}{2^k} - 1 = \frac {1}{1-1/2} - 1 = 1 \neq \frac {1}{2}. </script>
+ </dd></dl>
+<!--l. 89--><p class="noindent"><img src="ratioAndRootTest1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Suppose that the sequence <script type="math/tex">\{a_k\}_{k=1}^\infty </script> has sequence of partial sums <script type="math/tex">\{s_n\}_{n=1}^\infty </script> given by the
+formula
+                                 <script type="math/tex; mode=display"> s_n = \frac {3^n}{n!}. </script>
+ Determine the convergence properties of the series
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{n=1}^\infty s_n \;\; \mbox { and } \;\; \sum _{k=1}^\infty a_k. </script>
+ The possible answers for each case are: “converges to a known value”, “converges to
+some value that we are unable to determine”, or “diverges”.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">By definition,
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty a_k = \lim _{n\rightarrow \infty } s_n = \lim _{n\rightarrow \infty } \frac {3^n}{n!} = 0, </script>
+ where the limit is computed by comparing growth rates. That is, the sequence
+<script type="math/tex">\sum a_k</script> converges to a known value.
+<!--l. 110--><p class="noindent">The series <script type="math/tex">\sum s_n</script> converges, by the Ratio Test, since
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{n \rightarrow \infty} \frac{s_{n+1}}{s_n} &= \lim_{n \rightarrow \infty} \frac{3^{n+1}/(n+1)!}{3^n}{n!} \\
+&= \lim_{n \rightarrow \infty} \frac{3^{n+1}}{(n+1)!} \frac{n!}{3^n} \\
+&= \lim_{n \rightarrow \infty} \frac{3}{n+1} \\
+&= 0.
+\end{align*}</script>
+<!--l. 117--><p class="noindent">That is, the series <script type="math/tex">\sum s_n</script> converges, but we don’t have the tools necessary to determine its
+value. </p></dd></dl>
+<!--l. 118--><p class="noindent"><img src="ratioAndRootTest2x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2001r4"></a> Let <script type="math/tex">\{a_k\}_{k=1}^\infty </script> be the sequence defined by <script type="math/tex">a_k = \frac {k^5}{k^k}</script> and let <script type="math/tex">\{s_n\}</script> denote its sequence of partial
+sums. Determine whether the respective sequences <script type="math/tex">\{a_k\}</script> and <script type="math/tex">\{s_n\}</script> are bounded and/or
+monotonic.
+                                                                  
+
+                                                                  
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The first few terms of <script type="math/tex">a_k</script> are <script type="math/tex">1, 2^5/2^2 = 8, 3^5/3^3 = 9, 4^5/4^4 = 4</script>, so we see that the sequence is neither
+monotonically increasing nor decreasing (although the sequence will “eventually”
+become monotonically decreasing). It does have a limit (which can be seen by
+comparing growth rates), and it follows that the sequence is bounded. The terms
+<script type="math/tex">a_k</script> are all positive, so the sequence <script type="math/tex">\{s_n\}</script> is monotonically increasing. We claim that the
+sequence <script type="math/tex">\{s_n\}</script> is bounded. To see this, we will show that the series <script type="math/tex">\sum a_k</script> converges. This
+follows by the Root Test, as
+                                 <script type="math/tex; mode=display"> \lim _{k\rightarrow \infty } \sqrt [k]{\frac {k^5}{k^k}} = \lim _{k\rightarrow \infty } \frac {(k^{1/k})^5}{k}. </script>
+ We have previously seen that <script type="math/tex">\lim _{k\rightarrow \infty } k^{1/k} = 1</script>, so we have
+                                 <script type="math/tex; mode=display"> \lim _{k\rightarrow \infty } \frac {(k^{1/k})^5}{k} = 0 < 1. </script>
+ </dd></dl>
+<!--l. 135--><p class="noindent"><img src="ratioAndRootTest3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2002r5"></a> Determine whether the following series converge or diverge.
+<div class="center">
+<!--l. 141--><p class="noindent">
+</p>
+                                                                  
+
+                                                                  
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">\sum _{n=1}^\infty \left (\frac {3n^2+2}{n^2-10}\right )^{2n}</script>           II. <script type="math/tex">\sum _{n=1}^\infty \frac {2n^2+10}{n+3n^2}</script>           III. <script type="math/tex">\sum _{n=1}^\infty \frac {(n!)^2}{(2n)!}</script>  </td>
+</tr></tbody></table>
+</div></div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Since each term in the series is raised to the power <script type="math/tex">2n</script>, this series
+is amenable to the Root Test. We have
+                                 <script type="math/tex; mode=display"> \lim _{n \rightarrow \infty } \sqrt [n]{\left (\frac {3n^2+2}{n^2-10}\right )^{2n}} = \lim _{n \rightarrow \infty } \left (\frac {3n^2+2}{n^2-10}\right )^{2} = \lim _{n \rightarrow \infty } \frac {9 n^4}{n^4} = 9 > 1, </script>
+ where the second equality follows by identifying the dominant terms in the
+numerator and denominator. It follows that the series diverges.
+<!--l. 154--><p class="noindent">II. This series diverges by the Divergence Test. Remember that the first step in
+determining whether a series converges or diverges should be to quickly check
+whether the Divergence Test is applicable.
+</p><!--l. 156--><p class="noindent">III. Because the terms in the series involve factorials, the Ratio Test should be useful here. We have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{n \rightarrow \infty} \frac{((n+1)!)^2}{(2(n+1))!} \frac{(2n)!}{(n!)^2} &= \lim_{n \rightarrow \infty} \frac{(n+1)! \cdot (n+1)!}{(2n+2)!} \frac{(2n)!}{n! \cdot n!} \\
+&= \lim_{n \rightarrow \infty} \frac{(2n)!}{(2n+2)(2n+1)(2n)!} \frac{(n+1)! \cdot (n+1)!}{n! \cdot n!} \\
+&= \lim_{n \rightarrow \infty} \frac{1}{(2n+2)(2n+1)} \frac{(n+1)^2}{1} \\
+&= \lim_{n \rightarrow \infty} \frac{n^2}{4n^2} \\
+&= \frac{1}{4} < 1.
+\end{align*}</script>
+<!--l. 164--><p class="noindent">It follows that the series converges. </p></dd></dl>
+<!--l. 165--><p class="noindent"><img src="ratioAndRootTest4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

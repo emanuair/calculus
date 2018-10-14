@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head> <title>Line integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateLineIntegrals.tex"/> 
+<meta name="author" content="Austin Antoniou and Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="7f5e7b6b2cae75869b48e85df36937204376fd57 recitation/calculus3/meeting10/collaborateLineIntegrals.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We work some examples of line integrals and vector fields.
+</p></div>   <div class="maketitle"></div>
+<!--l. 16--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> Carefully sketch the following vector fields:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {F}(x,y) = \vector {1,1}</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {G}(x,y) = \vector {x,y}</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {H}(x,y) = \vector {y,-x}</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {I}(x,y) = \vector {x,-y}</script></dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-69r2"></a> Let <script type="math/tex">C</script> be the circle of radius <script type="math/tex">1</script>, centered at the origin, drawn once in a counterclockwise
+direction. Using the fields above, compute:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _C \vec {F}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _C \vec {G}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _C \vec {H}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _C \vec {I}\dotp \d \vec {p}</script></dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-74r3"></a> Let <script type="math/tex">T</script> be the triangle with vertices at <script type="math/tex">(-2,-1)</script>, <script type="math/tex">(2,-1)</script>, and <script type="math/tex">(0,2)</script> drawn once in a counterclockwise
+direction. Using the fields above, compute:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _T \vec {F}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _T \vec {G}\dotp \d \vec {p}</script>
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _T \vec {H}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _T \vec {I}\dotp \d \vec {p}</script></dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-79r4"></a> Let <script type="math/tex">A</script> be the path connecting <script type="math/tex">(-2,-1)</script> to <script type="math/tex">(2,-1)</script> to <script type="math/tex">(0,2)</script>. Note, this is <strong>not</strong> a closed path. Using the fields
+above, compute:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _A \vec {F}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _A \vec {G}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _A \vec {H}\dotp \d \vec {p}</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _A \vec {I}\dotp \d \vec {p}</script></dd></dl>
+</div>
+<div class="theorem-like problem-environment definition" id="problem5"><a id="x1-84r5"></a>The <strong>work</strong> <script type="math/tex">W</script> done by a force <script type="math/tex">\vec {F}</script> on an object moving along a curve <script type="math/tex">C</script>, parameterized by <script type="math/tex">\vec {p}(t)</script> is
+given by: <script type="math/tex; mode=display"> W = \int _C \vec {F}\dotp \d \vec {p} </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-85r6"></a> A raindrop of mass <script type="math/tex">0.001\unit {kg}</script> slides from the top of a flat windshield to the bottom. If the
+windshield is <script type="math/tex">\frac {1}{2} \unit {m}</script> high and <script type="math/tex">\frac {1}{2}\unit {m}</script> deep, how much work is done by gravity? (Assume that the
+acceleration due to gravity is <script type="math/tex">10 \unit {m}/\unit {s}^2</script>.)
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-86r7"></a> A skateboarder of mass <script type="math/tex">70\unit {kg}</script> rolls from the left side of a circular half-pipe
+of radius <script type="math/tex">3\unit {m}</script> to the right side. How much work is done by gravity? <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="collaborateLineIntegrals-1.svg" width="268.69125 " height="135.91228 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

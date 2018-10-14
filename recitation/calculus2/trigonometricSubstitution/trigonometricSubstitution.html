@@ -1,0 +1,253 @@
+<!DOCTYPE html><html lang="en"><head> <title>Trigonometric  Substitution</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="trigonometricSubstitution.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the technique of trigonometric substitution to compute integrals."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="dc263ef68e2d5c4e511a615abf48ad1cbcd9a83b recitation/calculus2/trigonometricSubstitution/trigonometricSubstitution.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> A student claim that
+                                 <script type="math/tex; mode=display"> \int \sqrt {x^2-4} \d x = \int x-2 \d x = \frac {1}{2}x^2 - 2x + C. </script>
+ Is the student correct? If not, determine a likely error that the student made in the
+calculation.
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> The student is not correct. The student’s mistake is in the claim that <script type="math/tex">\sqrt {x^2-4}=x-2</script>.
+This claim is clearly false; the two functions do not even have the same
+domain and they evaluate to different values for most inputs in their common
+domain.
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Each of the following integrals can be evaluated using trigonometric substitution.
+For each example, determine which trigonometric substitution should be
+used.
+<div class="center">
+<!--l. 62--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\int x^3 \sqrt {4-x^2} \d x </script>       II.<script type="math/tex">\int \frac {x^3}{\sqrt {x^2+16}} \d x</script>       III. <script type="math/tex">\int \frac {1}{x^2 \sqrt {x^2-2}} \d x</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem4"><a id="x1-1004r4"></a> Trigonometric substitution is based on the Pythagorean identities:
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sin ^2 \theta = 1 - \cos ^2 \theta \;\; \mbox { and } \;\; 1 + \tan ^2 \theta = \sec ^2 \theta . </script>
+ To choose the correct substitution, one applies the relevant identity.
+<!--l. 76--><p class="noindent">I. Let <script type="math/tex">x = 2 \sin \theta </script>, so that the first Pythagorean identity can be applied.
+</p><!--l. 78--><p class="noindent">II. Let <script type="math/tex">x=4 \tan \theta </script>, so that the second Pythagorean identity can be applied.
+</p><!--l. 80--><p class="noindent">III. Let <script type="math/tex">x=\sqrt {2}\sec \theta </script>, so that the second Pythagorean identity can be applied.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-1005r5"></a> For <script type="math/tex">x>2</script>, the trigonometric substitution <script type="math/tex">x = 2 \sec \theta </script> gives the result:
+                                 <script type="math/tex; mode=display">\int \dfrac {4}{x^2\sqrt {x^2-4}} \, dx = \int \cos \theta \, d \theta .</script>
+ Evaluate <script type="math/tex">\displaystyle \int \dfrac {8}{x^2\sqrt {x^2-4}} \, dx</script>.
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> A. <script type="math/tex">\dfrac {\sqrt {x^2-4}}{x}+C</script>                    </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-2" class="td11"> B. <script type="math/tex">-\dfrac {\sqrt {x^2-4}}{x}+C</script>                </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-3" class="td11"> C. <script type="math/tex">4 \ln \bigg (x^2\sqrt {x^2-4}\bigg ) +C</script>                   </td></tr><tr class="vspace" style="font-size:12.91663pt"><td> </td><td> </td><td> </td></tr><tr style="vertical-align:baseline;" id="TBL-2-2-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-2-1" class="td11"> D.  <script type="math/tex">\dfrac {x}{\sqrt {x^2-4}}+C</script>      </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-2-2" class="td11"> E.  <script type="math/tex">-\dfrac {x}{\sqrt {x^2-4}}+C</script>    </td><td style="white-space:nowrap; text-align:left;" id="TBL-2-2-3" class="td11"> F. None of these</td>
+</tr><tr class="vspace" style="font-size:8.61108pt"><td> </td><td> </td><td> </td></tr><tr style="vertical-align:baseline;" id="TBL-2-3-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-3-1" class="td11">                  </td>
+</tr></tbody></table></div>
+</div>
+<div class="free-response" id="problem6"><a id="x1-1006r6"></a> The answer is F. We use the given information to write
+<script type="math/tex; mode=display"> \begin{align*} 
+\displaystyle \int \dfrac{8}{x^2\sqrt{x^2-4}} \d x &= 2 \int \dfrac{4}{x^2\sqrt{x^2-4}} \d x \\
+&= 2 \int \cos \theta \d \theta \\
+&= 2 \sin \theta + C \\
+&= 2 \frac{\sqrt{x^2-4}}{x} + C.
+\end{align*}</script>
+<!--l. 102--><p class="noindent">The last expression is found using a reference triangle for <script type="math/tex">\sec \theta = \frac {x}{2}</script>.
+</p></div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2001r7"></a>
+                                                                  
+
+                                                                  
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+   I. </dt><dd class="enumerate-enumitem">Given that <script type="math/tex">\sin \theta = \frac {2}{5}</script> and that <script type="math/tex">\theta </script> lies in the second quadrant, determine the value of
+     <script type="math/tex">\cos \theta </script>.
+     </dd><dt class="enumerate-enumitem">
+  II. </dt><dd class="enumerate-enumitem">Given  that  <script type="math/tex">\tan \theta = x</script>,  for  some  value  <script type="math/tex">x</script>,  and  that  <script type="math/tex">\theta </script>  lies  in  the  fourth  quadrant,
+     determine the values of <script type="math/tex">\cos \theta </script> and <script type="math/tex">\csc \theta </script> in terms of <script type="math/tex">x</script>.</dd></dl>
+</div>
+<div class="free-response" id="problem8"><a id="x1-2002r8"></a> I. A reference triangle for <script type="math/tex">\theta </script> has hypotenuse <script type="math/tex">5</script> and opposite side <script type="math/tex">2</script>. The adjacent side
+therefore has length <script type="math/tex">\sqrt {5^2-2^2} = \sqrt {21}</script>. Since <script type="math/tex">\theta </script> lies in the second quadrant, cosine must be negative, and
+we conclude that <script type="math/tex">\cos \theta = -\frac {\sqrt {21}}{5}</script>.
+<!--l. 119--><p class="noindent">II. A reference triangle for <script type="math/tex">\theta </script> has opposite side length <script type="math/tex">x</script> and adjacent side length <script type="math/tex">1</script>. The
+hypotenuse length is therefore <script type="math/tex">\sqrt {x^2+1}</script>. Since <script type="math/tex">\theta </script> lies in the fourth quadrant, <script type="math/tex">\cos \theta </script> is positive and <script type="math/tex">\csc \theta </script> is
+negative. Therefore
+                                 <script type="math/tex; mode=display"> \cos \theta = \frac {1}{\sqrt {x^2+1}} \;\; \mbox { and } \;\; \csc \theta = -\frac {\sqrt {x^2+1}}{x}. </script>
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-2003r9"></a> Evaluate the following integrals using trigonometric substitution.
+<div class="center">
+<!--l. 127--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-3" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-3-1g"><col id="TBL-3-1"/><col id="TBL-3-2"/><col id="TBL-3-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-3-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-3-1-1" class="td11"> I. <script type="math/tex">\int _{\sqrt {2}}^2 \frac {1}{t^3 \sqrt {t^2 -1}} \d t</script>       II. <script type="math/tex">\int \frac {27 x^2}{(4+9x^2)^{3/2}} \d x</script>       III. <script type="math/tex">\int \frac {x^2}{\sqrt {4x-x^2}} \d x</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem10"><a id="x1-2004r10"></a> I. Let <script type="math/tex">t = \sec \theta </script>, so that <script type="math/tex">\d t = \sec \theta \tan \theta \d \theta </script>. Then <script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{1}{t^3\sqrt{t^2-1}} \d t &= \int \frac{1}{\sec^3 \theta \tan \theta} \sec \theta \tan \theta \d \theta \\
+&= \int \frac{1}{\sec^2 \theta} \d \theta \\
+&= \int \cos^2 \theta \d \theta \\
+                                                                  
+
+                                                                  
+&= \int \frac{1}{2} + \frac{\cos (2 \theta)}{2} \d \theta \\
+&= \frac{1}{2}\theta + \frac{\sin (2\theta)}{4} + C \\
+&= \frac{1}{2} \theta-+\frac{\sin \theta \cos \theta}{2} + C \\
+&= \frac{1}{2} \sec^{-1}\theta + \frac{\sqrt{t^2-1}}{2t^2} + C,
+\end{align*}</script>
+<!--l. 145--><p class="noindent">where we find the last term using a reference triangle for <script type="math/tex">\theta </script>. Since <script type="math/tex">\sec \theta = t</script>, a reference triangle
+can be formed with hypotenuse <script type="math/tex">t</script> and adjacent side length <script type="math/tex">1</script>, so that the opposite side
+length is <script type="math/tex">\sqrt {t^2-1}</script>. It follows that <script type="math/tex">\cos \theta = \frac {1}{t}</script> and <script type="math/tex">\sin \theta = \frac {\sqrt {t^2-1}}{t}</script>. Therefore
+                                 <script type="math/tex; mode=display"> \int _{\sqrt {2}}^2 \frac {1}{t^3 \sqrt {t^2 -1}} \d t = \eval {\frac {1}{2} \sec ^{-1}\theta + \frac {\sqrt {t^2-1}}{2t^2}}_{\sqrt {2}}^2 = \frac {\pi }{6} + \frac {\sqrt {3}}{8} - \frac {\pi }{8} - \frac {1}{4}. </script>
+</p><!--l. 151--><p class="noindent">II. We choose the substitution <script type="math/tex"> x = \frac {2}{3} \tan \theta </script>, so that <script type="math/tex">\d x = \frac {2}{3} \sec ^2 \theta \d \theta </script>. Making the substitution into the integral gives:
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{27 x^2}{(4+9x^2)^{3/2}} \, dx & =  \int \dfrac{27 \cdot  \frac{4}{9 \tan^2 \theta}}{(4+9 \cdot \frac{4}{9}\tan^2 \theta)^{3/2}} \, \left[ \dfrac{2}{3} \sec^2 \theta \d \theta \right] \\
+&=  \int \dfrac{8 \tan^2 \theta}{ (4[1+1\tan^2 \theta])^{3/2}} \,  \cdot \sec^2 \theta \d \theta  \\
+&=  \int \dfrac{8 \tan^2 \theta}{8 (\sec^2 \theta)^{3/2}} \,  \cdot \sec^2 \theta \d \theta  \\
+&=  \int \dfrac{   \tan^2 \theta}{\sec^3 \theta} \,  \cdot \sec^2 \theta \d \theta  \\
+&=  \int \dfrac{   \tan^2 \theta}{\sec \theta} \d \theta \\
+&=  \int \dfrac{   \sec^2 \theta + 1}{\sec \theta} \,  d\theta  \\
+&=  \int \left[\dfrac{   \sec^2 \theta}{\sec \theta} + \dfrac{1}{\sec \theta}\right] \,  d\theta  \\
+&=  \int ( \sec \theta + \cos \theta )  \,  d\theta  \\
+&=  \ln \left| \sec \theta + \tan \theta \right| - \sin \theta +C  \\
+&= \ln \left| \dfrac{\sqrt{4+9x^2}}{2}+\dfrac{3x}{2} \right| - \dfrac{3x}{\sqrt{4x^2+9}} +C.
+\end{align*}</script>
+<!--l. 164--><p class="noindent">To derive the last line, we use a reference triangle for <script type="math/tex">\theta </script>, with <script type="math/tex">\tan \theta = \frac {3x}{2}</script>. This triangle has
+opposite side length <script type="math/tex">3x</script> and adjacent side length <script type="math/tex">2</script>, and therefore has hypotenuse length <script type="math/tex">\sqrt {9x^2 + 4}</script>.
+It follows that <script type="math/tex">\sec \theta = \frac {\sqrt {9x^2+4}}{2}</script>.
+                                                                  
+
+                                                                  
+</p><!--l. 166--><p class="noindent">III. We first complete the square under the square root sign, using
+                                 <script type="math/tex; mode=display"> 4x-x^2 = -(x^2-4x) = -((x-2)^2-4) = 4-(x-2)^2. </script>
+ We therfore wish to choose a substitution so that <script type="math/tex">4-(x-2)^2</script> transforms
+to <script type="math/tex">4-4\sin ^2\theta </script>. The correct substituion is therefore <script type="math/tex">x-2 = 2 \sin \theta </script>, or <script type="math/tex">x= 2 \sin \theta + 2</script>. Then <script type="math/tex">\d x = 2 \cos \theta \d \theta </script>, and
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{x^2}{\sqrt{4x-x^2}} \d x & = \int \frac{x^2}{\sqrt{4-(x-2)^2}} \d x \\
+&= \int \frac{4 \sin^2 \theta + 4 \sin \theta + 4}{2 \cos \theta} 2 \cos \theta \d \theta \\
+&= \int 4 \sin^2 \theta + 4 \sin \theta + 4 \d \theta \\
+&= 4 \int \frac{1}{2} - \frac{\cos (2 \theta)}{2} \d \theta -4 \cos \theta + 4 \theta \\
+&= 2 \theta - \sin (2 \theta) - 4 \cos \theta + 4 \theta + C \\
+&= 6 \theta - 2 \sin \theta \cos \theta - 4 \cos \theta + C \\
+&= 6 \arcsin \left(\frac{x-2}{2}\right) - (x-2)\frac{\sqrt{4-(x-2)^2}}{2} - 2 \sqrt{4-(x-2)^2} + C.
+\end{align*}</script>
+<!--l. 180--><p class="noindent">The last line follows from a reference triangle. A reference triangle for <script type="math/tex">\theta </script>, with <script type="math/tex">\sin \theta = (x-2)/2</script>, has
+opposite side length <script type="math/tex">x-2</script> and hypotenuse <script type="math/tex">2</script>. It therefore has adjacent side length <script type="math/tex">\sqrt {4-(x-2)^2}</script>, so that
+<script type="math/tex">\cos \theta = \sqrt {4-(x-2)^2}/2</script>.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem11"><a id="x1-2005r11"></a> Evaluate the integral
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int \frac {x}{x^2-9} \d x </script>
+ in two ways: first via trigonometric substitution, then via <script type="math/tex">u</script>-substitution. Which
+method takes less work?
+</div>
+<div class="free-response" id="problem12"><a id="x1-2006r12"></a> Using trigonometric substitution, we take <script type="math/tex">x = 3 \sec \theta </script>. Then <script type="math/tex">\d x = 3 \sec \theta \tan \theta \d \theta </script>, and
+<script type="math/tex; mode=display"> \begin{align*} 
+\int \frac{x}{x^2-9} \d x &= \int \frac{3 \sec \theta}{9(\sec^2 \theta - 1)} 3 \sec \theta \tan \theta \d \theta \\
+&= \int \frac{\sec \theta}{\tan^2 \theta} \sec \theta \tan \theta \d \theta \\
+&= \int \frac{\sec^2 \theta}{\tan^2 \theta} \d \theta.
+\end{align*}</script>
+<!--l. 198--><p class="noindent">Now let <script type="math/tex">u = \tan \theta </script> so that <script type="math/tex">\d u = \sec ^2 \theta \d \theta </script>. The integral becomes
+                                 <script type="math/tex; mode=display"> \int \frac {\sec ^2 \theta }{\tan \theta } \d \theta = \int \frac {1}{u} \d u = \ln |u| + C = \ln | \tan \theta | + C. </script>
+ Finally, using a reference triangle we conclude that <script type="math/tex">\tan \theta = \frac {\sqrt {x^2-9}}{3}</script>, so the answer is
+                                 <script type="math/tex; mode=display"> \ln \left | \frac {\sqrt {x^2-9}}{3}\right | + C. </script>
+</p><!--l. 207--><p class="noindent">On the other hand, we can immediately make the substitution <script type="math/tex">u = x^2 - 9</script>, so that <script type="math/tex">\d u = 2x \d x</script>,
+and
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int \frac {x}{x^2-9} \d x = \frac {1}{2} \int \frac {1}{u} \d u = \frac {1}{2} \ln |u| + C = \frac {1}{2} \ln |x^2-9| + C. </script>
+ Note that (by applying log rules) this differs from the previous answer by addition of
+a constant, so that the two answers are equivalent. Apparently, directly using
+<script type="math/tex">u</script>-substitution takes much less work.
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

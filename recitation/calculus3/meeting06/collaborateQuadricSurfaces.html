@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head> <title>Quadric  surfaces</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateQuadricSurfaces.tex"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="723f2eeb89a610d0e1772c495abb8d48d2e7cb30 recitation/calculus3/meeting06/collaborateQuadricSurfaces.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\arraystretch }[0]{1.5}
+\newcommand {\arraystretch }[0]{1.5}                                                    </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We investigate quadric surfaces.
+</p></div>   <div class="maketitle"></div>
+<!--l. 16--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p><!--l. 19--><p class="noindent">Consider <script type="math/tex">F(x,y)= 39 - 30 x + 5 x^2 + 2 y + y^2</script>. Here is a plot of the quadric surface <script type="math/tex">z=F(x,y)</script>: </p><div class="image-environment" role="img" aria-labelledby="image-alt-1"> <img src="surfacePlot1.jpg" alt="PIC"/> </div>
+Here we see a contour plot for <script type="math/tex">z = F(x,y)</script> with the same domain: <div class="image-environment" role="img" aria-labelledby="image-alt-2"> <img src="contours1.jpg" alt="PIC"/> </div>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-66r1"></a> Here we see a table of values for <script type="math/tex">z= F(x,y)</script> with the same domain: <script type="math/tex; mode=display"> \renewcommand *{\arraystretch }{1.5} \begin {array}{c|c|c|c|c|c|c|c|}\hline \rule {.5cm}{0cm} & 77 & 42 & 17 & 2 & -3 & 2 & 17 \\ \hline & 74 & 39 & 14 & -1 & -6 & -1 & 14 \\ \hline & 73 & 38 & 13 & -2 & -7 & -2 & 13 \\ \hline & 74 & 39 & 14 & -1 & -6 & -1 & 14 \\ \hline & 77 & 42 & 17 & 2 & -3 & 2 & 17 \\ \hline & 82 & 47 & 22 & 7 & 2 & 7 & 22 \\ \hline & 89 & 54 & 29 & 14 & 9 & 14 & 29 \\ \hline & & & & & & & \end {array} </script> The <script type="math/tex">x</script>-coordinates should
+run along the bottom of this table and the <script type="math/tex">y</script> coordinates should run along the
+left-hand side. Fill them in.
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-67r2"></a> Estimate the height of each of the level curves in the contour plot for <script type="math/tex">F(x,y)</script> above. <strong>Write
+the heights directly on the contour plot.</strong>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-68r3"></a> Find <script type="math/tex">(x,y)</script> such that <script type="math/tex">\grad F(x,y) = \vec {0}</script>. Mark this position on the contour plot and on the table above. Call
+this point <script type="math/tex">\vec {c}</script>.
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-69r4"></a> Compute the second degree Taylor polynomial for <script type="math/tex">F(x,y)</script> centered at the point <script type="math/tex">\vec {c}</script> found
+above.
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-70r5"></a> Identify the surface described by <script type="math/tex">z = F(x,y)</script> and find its extrema (if any). Confirm with the
+second derivative test.
+</div>
+<!--l. 75--><p class="noindent">
+                                                                  
+
+                                                                  
+</p><!--l. 78--><p class="noindent">Consider <script type="math/tex">G(x,y)= -7 - 2 x + x^2 - 12 y - 3 y^2</script>. Here is a plot of the quadric surface <script type="math/tex">z=G(x,y)</script>: </p><div class="image-environment" role="img" aria-labelledby="image-alt-3"> <img src="surfacePlot2.jpg" alt="PIC"/> </div>
+Here we see a contour plot for <script type="math/tex">z = G(x,y)</script> with the same domain: <div class="image-environment" role="img" aria-labelledby="image-alt-4"> <img src="contours2.jpg" alt="PIC"/> </div>
+<!--l. 88--><p class="noindent">
+                                                                  
+
+                                                                  
+</p>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-71r6"></a> Here we see a table of values for <script type="math/tex">z= G(x,y)</script> with the same domain:
+<!--l. 106--><p class="noindent"><script type="math/tex; mode=display"> \renewcommand *{\arraystretch }{1.5} \begin {array}{c|c|c|c|c|c|c|c|}\hline \rule {.5cm}{0cm}& -19 & -22 & -23 & -22 & -19 & -14 & -7 \\\hline & -4 & -7 & -8 & -7 & -4 & 1 & 8 \\\hline & 5 & 2 & 1 & 2 & 5 & 10 & 17 \\\hline & 8 & 5 & 4 & 5 & 8 & 13 & 20 \\\hline & 5 & 2 & 1 & 2 & 5 & 10 & 17 \\\hline & -4 & -7 & -8 & -7 & -4 & 1 & 8 \\\hline & -19 & -22 & -23 & -22 & -19 & -14 & -7 \\\hline & & & & & & & \end {array} </script>
+</p><!--l. 108--><p class="noindent">The <script type="math/tex">x</script>-coordinates should run along the bottom of this table and the <script type="math/tex">y</script> coordinates
+should run along the left-hand side. Fill them in.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-72r7"></a> Estimate the height of each of the level curves in the contour plot for <script type="math/tex">G(x,y)</script> above. <strong>Write
+the heights directly on the contour plot.</strong>
+</div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-73r8"></a> Find <script type="math/tex">(x,y)</script> such that <script type="math/tex">\grad G(x,y) = \vec {0}</script>. Mark this position on the contour plot and on the table above. Call
+this point <script type="math/tex">\vec {c}</script>.
+</div>
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-74r9"></a> Compute the second degree Taylor polynomial for <script type="math/tex">G(x,y)</script> centered at the point <script type="math/tex">\vec {c}</script> found
+above.
+</div>
+<!--l. 131--><p class="noindent">These next problems are more difficult. As you learn more, you should return to
+them and see if you can finish them off.
+</p>
+<div role="article" class="problem-environment problem" id="problem10"><a id="x1-75r10"></a> Identify the surface described by <script type="math/tex">z = G(x,y)</script> and find its extrema (if any). Confirm with the
+second derivative test.
+</div>
+<div role="article" class="problem-environment problem" id="problem11"><a id="x1-76r11"></a> Find three surfaces where the second derivative test is inconclusive. One
+where there is a local maximum, one with a local minimum, and one with a
+saddle.
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Comparison  Tests</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="comparisonTest.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the Comparison Test to determine whether a series converges or diverges."/> 
+<meta name="learning-outcome" content="Use the Limit Comparison Test to determine whether a series converges or diverges."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="673b7e27d3501d1a25415a11406fc2f9ab0be8d7 recitation/calculus2/comparisonTest/comparisonTest.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Let <script type="math/tex">\{a_k\}_{k=1}^\infty </script> and <script type="math/tex">\{b_k\}_{k=1}^\infty </script> be sequences of positive numbers. Determine whether the following
+statements are true or false and justify your answer.
+<!--l. 52--><p class="noindent">I. If <script type="math/tex">a_k \leq b_k</script> for sufficiently large <script type="math/tex">k</script> and if the series <script type="math/tex">\sum b_k</script> converges, then the series <script type="math/tex">\sum a_k</script> must also
+converge.
+</p><!--l. 54--><p class="noindent">II. If <script type="math/tex">a_k \leq b_k</script> for sufficiently large <script type="math/tex">k</script> and the series <script type="math/tex">\sum a_k</script> converges, then the series <script type="math/tex">\sum b_k</script> must also
+converge.
+</p><!--l. 56--><p class="noindent">III. If <script type="math/tex">\lim _{k \rightarrow \infty } \frac {a_k}{b_k}</script> is finite and the series <script type="math/tex">\sum a_k</script> diverges, then the series <script type="math/tex">\sum b_k</script> must also diverge.
+</p><!--l. 58--><p class="noindent">IV. If the series <script type="math/tex">\sum a_k</script> converges and the series <script type="math/tex">\sum b_k</script> diverges, then the limit <script type="math/tex">\lim _{k \rightarrow \infty } \frac {a_k}{b_k}</script> either does not
+exist or is infinite.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. This statement is true, by the Comparison Test.
+<!--l. 63--><p class="noindent">II. This statement is false; for example, let <script type="math/tex">b_k = 1</script> for all <script type="math/tex">k</script> and let <script type="math/tex">a_k = 1/k^2</script>.
+</p><!--l. 65--><p class="noindent">III. This statement is true, by the Comparison Test.
+</p><!--l. 67--><p class="noindent">IV. This statement is false. For example, let <script type="math/tex">a_k = 1/k^2</script> and let <script type="math/tex">b_k = 1/k</script>. Then <script type="math/tex">\sum a_k</script> converges, <script type="math/tex">\sum b_k</script> diverges,
+and
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {a_k}{b_k} = \lim _{k \rightarrow \infty } \frac {1/k^2}{1/k} = \lim _{k \rightarrow \infty } \frac {1}{k} = 0 </script>
+ is finite. A correct statement is “If the series <script type="math/tex">\sum a_k</script> converges and the series <script type="math/tex">\sum b_k</script> diverges,
+then the limit <script type="math/tex">\lim _{k \rightarrow \infty } \frac {a_k}{b_k}</script> either does not exist or is zero or infinity.” </p></dd></dl>
+<!--l. 72--><p class="noindent"><img src="comparisonTest0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Consider the following statement:
+<!--l. 78--><p class="noindent">If <script type="math/tex">\{a_k\}_{k=1}^\infty </script> and <script type="math/tex">\{b_k\}_{k=1}^\infty </script> are sequences of positive numbers such that <script type="math/tex">\lim _{k\rightarrow \infty } a_k = \lim _{k \rightarrow \infty } b_k</script>, then the series
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty a_k \;\; \mbox { and } \;\; \sum _{k=1}^\infty b_k </script>
+ either both converge or they both diverge.
+</p><!--l. 84--><p class="noindent">Determine whether the following proof of this statement is valid:
+</p><!--l. 86--><p class="noindent">Assume that <script type="math/tex">\lim _{k\rightarrow \infty } a_k = \lim _{k \rightarrow \infty } b_k</script>. Then
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {a_k}{b_k} = \frac {\lim _{k\rightarrow \infty } a_k}{\lim _{k\rightarrow \infty } b_k} = 1. </script>
+ Since this limit is finite, it follows by the ratio test that the series <script type="math/tex">\sum a_k</script> and <script type="math/tex">\sum b_k</script> both
+converge or both diverge.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The “proof” of the statement is not valid; if the limits <script type="math/tex">\lim _{k\rightarrow \infty } a_k = \lim _{k \rightarrow \infty } b_k</script> are equal to
+zero, then the division step in the proof is not justified. In fact, there is no valid
+proof of the statement, because the statement is false. A simple counterexample
+is given by the sequences defined by <script type="math/tex">a_k = 1/k</script> and <script type="math/tex">b_k = 1/k^2</script>. </dd></dl>
+<!--l. 94--><p class="noindent"><img src="comparisonTest1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Let <script type="math/tex">\{a_k\}_{k=1}^\infty </script> and <script type="math/tex">\{b_k\}_{k=1}^\infty </script> be sequences of positive numbers and suppose that the series <script type="math/tex">\sum b_k</script> converges.
+Which of the following conditions would allow us to conclude that the series <script type="math/tex">\sum a_k</script>
+converges?
+<!--l. 101--><p class="noindent">I. For sufficiently large <script type="math/tex">k</script>, <script type="math/tex">b_k \leq a_k</script>.
+</p><!--l. 103--><p class="noindent">II. For sufficiently large <script type="math/tex">k</script>, <script type="math/tex">a_k \leq b_k</script>.
+</p><!--l. 105--><p class="noindent">III. <script type="math/tex">\lim _{k\rightarrow \infty } \frac {b_k}{a_k} = 0</script>.
+                                                                  
+
+                                                                  
+</p><!--l. 107--><p class="noindent">IV. The series <script type="math/tex">\sum \frac {a_k}{b_k}</script> converges.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Statement  II.  would  guarantee  the  convergence  of  <script type="math/tex">\sum a_k</script>,  by  the
+Comparison Test. Statement IV. would also imply the convergence of <script type="math/tex">\sum a_k</script>, since the
+convergence of <script type="math/tex">\sum \frac {a_k}{b_k}</script> implies that <script type="math/tex">\lim _{k\rightarrow \infty } \frac {a_k}{b_k} = 0</script>, and the claim follows by the Limit Comparison
+Test.
+<!--l. 113--><p class="noindent">Statements I. and III. do not imply the convergence of <script type="math/tex">\sum a_k</script>. To see that Statement I.
+is not sufficient, note that if <script type="math/tex">a_k = 1</script> for all <script type="math/tex">k</script>, then <script type="math/tex">b_k \leq a_k</script> will hold for sufficiently large <script type="math/tex">k</script> for any
+sequence of terms <script type="math/tex">\{b_k\}</script> such that <script type="math/tex">\sum b_k</script> converges. A counterexample to the sufficiency of
+Statement III. is given by <script type="math/tex">b_k = 1/k^2</script> and <script type="math/tex">a_k = 1/k</script>. </p></dd></dl>
+<!--l. 114--><p class="noindent"><img src="comparisonTest2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-1004r4"></a> Determine which test(s) would be useful to deduce whether each of the following
+series converges or diverges.
+<div class="center">
+<!--l. 119--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\sum _{k=1}^\infty \frac {8k^2-3k}{7k^2+k^4+10}</script>         </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-2" class="td11"> II. <script type="math/tex">\sum _{k=1}^\infty \frac {5^{k+1}}{k!}</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-3" class="td11"> III. <script type="math/tex">\sum _{k=1}^\infty \frac {2+k^5+\ln (k^{10})}{100k^5+3k}</script>  </td></tr><tr style="vertical-align:baseline;" id="TBL-1-2-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-1" class="td11"> </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-2" class="td11"> </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-3" class="td11"></td>
+</tr><tr style="vertical-align:baseline;" id="TBL-1-3-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-3-1" class="td11"> IV. <script type="math/tex">\sum _{k=1}^\infty \frac {5\cdot 2^{1+3k}}{3^{2k}}</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-3-2" class="td11"> V. <script type="math/tex">\sum _{k=1}^\infty \frac {1}{3^k + k}</script>        </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-3-3" class="td11"> VI. <script type="math/tex">\sum _{k=1}^\infty \left (\frac {k^2}{0.9k^2+k^{1/2}}\right )^{5k}</script>  </td>
+</tr></tbody></table></div></div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I.  The  Limit  Comparison  Test  would  be  useful  here.  Noting
+that the dominant term in the numerator is <script type="math/tex">8k^2</script> and the dominant term in the
+denominator is <script type="math/tex">k^4</script>, the series compares naturally with <script type="math/tex">\sum \frac {8}{k^2}</script>.
+<!--l. 129--><p class="noindent">II. Since the terms of the series involve factorials, the Ratio Test would be useful.
+</p><!--l. 131--><p class="noindent">III. By inspection, it is easy to see that the Divergence Test implies that this
+series diverges.
+</p><!--l. 133--><p class="noindent">IV. By rewriting the terms of the series using exponent rules, we see that this
+is a geometric series. This can be used to easily determine whether or not the
+series converges.
+</p><!--l. 135--><p class="noindent">V. The Comparison Test would be useful here, since <script type="math/tex">\frac {1}{3^k + k} \leq \frac {1}{3^k}</script> for all <script type="math/tex">k</script>, and <script type="math/tex">\sum \frac {1}{3^k}</script> converges.
+</p><!--l. 137--><p class="noindent">VI. Since the terms of the series are raised to the power <script type="math/tex">5k</script>, the Root Test would
+be useful. </p></dd></dl>
+<!--l. 138--><p class="noindent"><img src="comparisonTest3x.png" alt="PICT"/>
+                                                                  
+
+                                                                  
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Determine whether the following series converge or diverge and justify your
+claim.
+<div class="center">
+<!--l. 145--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">\sum _{k=1}^\infty \frac {3-\cos (2k)}{k^2}</script>           II. <script type="math/tex">\sum _{k=1}^\infty \frac {5k^3+3k^2}{100 + k^7 + \ln (k)}</script>           III. <script type="math/tex">\sum _{k=1}^\infty \frac {5^k + k^5}{3^{k+1}}</script>  </td>
+</tr></tbody></table>
+</div></div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Noting that <script type="math/tex">|\cos (2k)| \leq 1</script> for all <script type="math/tex">k</script>, we have
+                                 <script type="math/tex; mode=display"> \frac {3-\cos (2k)}{k^2} \leq \frac {4}{k^2} </script>
+ for all <script type="math/tex">k</script>. Since <script type="math/tex">\sum \frac {4}{k^2}</script> converges (by the <script type="math/tex">p</script>-Series Test), the series we are interested in
+must converge, by the Comparison Test.
+<!--l. 158--><p class="noindent">II. Examining the terms in the series, we see that for large values of
+<script type="math/tex">k</script>, the terms behave like <script type="math/tex">5k^3/k^7</script>, or <script type="math/tex">5/k^4</script>. We then emply the Limit Comparison Test,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{k \rightarrow \infty} \frac{(5k^3+3k^2)/(100+k^7+\ln(k))}{5/k^4} &= \lim_{k \rightarrow \infty} \frac{5k^7 + 3k^6}{500+5k^7 + 5\ln(k)} \\
+&= \lim_{k \rightarrow \infty}  \frac{5k^7}{5k^7} \\
+&= 1.
+\end{align*}</script>
+<!--l. 164--><p class="noindent">Since <script type="math/tex">\sum \frac {5}{k^4}</script> converges, the Limit Comparison Test implies that the series we are interested
+in must also converge.
+</p><!--l. 166--><p class="noindent">III. We compare this series with <script type="math/tex">\sum (5/3)^k</script>. We have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{k \rightarrow \infty} \frac{5^k + k^5}{3^{k+1}} \cdot \frac{3^k}{5^k} &= \lim_{k \rightarrow \infty} \frac{15^k + 3^k k^5}{3 \cdot 15^k} \\
+&= \frac{1}{3}.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 171--><p class="noindent">Since <script type="math/tex">\sum (5/3)^k</script> is a geometric series with ratio <script type="math/tex">> 1</script>, it diverges. The Limit Comparison
+Test therefore implies that hte series we are interested in must also diverge.
+</p></dd></dl>
+<!--l. 172--><p class="noindent"><img src="comparisonTest4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head> <title>The Divergence Test and The Integral Test</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="divergenceAndIntegralTests.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the divergence test to conclude that a series diverges."/> 
+<meta name="learning-outcome" content="Use the integral test to determine whether a series converges or diverges."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="a702e50d17f1d18a84055d376ba88204b7929d96 recitation/calculus2/divergenceAndIntegralTests/divergenceAndIntegralTests.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Determine whether the following statements are true or false, and explain your
+answer.
+<!--l. 51--><p class="noindent">I. If the sequence <script type="math/tex">\{a_n\}</script> satisfies <script type="math/tex">\lim _{n\rightarrow \infty } a_n = 0</script>, then the series <script type="math/tex">\sum _{n=1}^\infty a_n</script> converges.
+</p><!--l. 53--><p class="noindent">II. If the sequence <script type="math/tex">\{a_n\}</script> satisfies <script type="math/tex">\lim _{n \rightarrow \infty } a_n \neq 0</script>, then the series <script type="math/tex">\sum _{n=1}^\infty a_n</script> diverges.
+</p><!--l. 55--><p class="noindent">III. If the series <script type="math/tex">\sum _{n=1}^\infty a_n</script> converges, then <script type="math/tex">\lim _{n\rightarrow \infty } a_n = 0</script>.
+</p><!--l. 57--><p class="noindent">IV. If the series <script type="math/tex">\sum _{n=1}^\infty a_n</script> diverges, then <script type="math/tex">\lim _{n\rightarrow \infty } a_n \neq 0</script>.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I.  This  statement  is  false.  For  example,  the  harmonic  series  <script type="math/tex">\sum \frac {1}{n}</script>
+diverges, while <script type="math/tex">\lim _{n \rightarrow \infty } \frac {1}{n} = 0</script>.
+<!--l. 62--><p class="noindent">II. This is The Divergence Test, and is therefore true.
+</p><!--l. 64--><p class="noindent">III. This is the contrapositive of, and is therefore logically equivalent to, The
+Divergence Test, so it is true.
+</p><!--l. 66--><p class="noindent">IV. This statement is the contrapositive of the statement in I., and is false. </p></dd></dl>
+<!--l. 67--><p class="noindent"><img src="divergenceAndIntegralTests0x.png" alt="PICT"/>
+</p>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Suppose that the series <script type="math/tex">\sum _{k=1}^\infty a_k</script> has sequence of partial sums <script type="math/tex">\{s_n\}</script> given by the explicit
+formula
+                                 <script type="math/tex; mode=display"> s_n = \frac {2n+1}{4n+3}. </script>
+ Student A claims that the series <script type="math/tex">\sum _{k=1}^\infty a_k</script> converges because <script type="math/tex">\lim _{n \rightarrow \infty } s_n = \frac {1}{2}</script>. Student B claims that <script type="math/tex">\lim _{n\rightarrow \infty } s_n = \frac {1}{2} \neq 0</script>, so the
+divergence test implies that the series <script type="math/tex">\sum _{k=1}^\infty a_k</script> diverges. Which (if either) student is
+correct?
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Student A is correct, by the definition of convergence. Student B
+is incorrect; the divergence test deals with the limit of the sequence of terms <script type="math/tex">a_k</script>,
+not the limit of the sequence of partial sums. </dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 81--><p class="noindent"><img src="divergenceAndIntegralTests1x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a> Determine whether the series
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty \frac {k^3 - \ln (k+10) + k^5}{(2k+100)^5} </script>
+ converges or diverges.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Comparing  the  growth  rates  of  the  dominant  terms  in  the
+numerator and denominator, we have
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {k^3 - \ln (k+10) + k^5}{(2k+100)^5} = \lim _{k\rightarrow \infty } \frac {k^5}{2^5 k^5} = \frac {1}{32} . </script>
+ Since the limit is nonzero, the series diverges by The Divergence Test. </dd></dl>
+<!--l. 99--><p class="noindent"><img src="divergenceAndIntegralTests2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2002r4"></a> Determine whether the series
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{k=2}^\infty \frac {1}{k \ln (k)} </script>
+ converges or diverges.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Since
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {1}{k \ln (k)} = 0, </script>
+ The Divergence Test is inconclusive, and we will attempt to solve
+the problem via The Integral Test. We compute the improper integral
+<script type="math/tex; mode=display"> \begin{align*} 
+\int_2^\infty \frac{1}{x \ln (x)} \d x
+\end{align*}</script>
+<!--l. 119--><p class="noindent">by making the substitution <script type="math/tex">u = \ln (x)</script>, so that <script type="math/tex">\d u = \frac {1}{x} \d x</script>, so that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_2^\infty \frac{1}{x \ln (x)} \d x &= \lim_{b \rightarrow \infty} \int_{\ln (2)}^b \frac{1}{u} \d u \\
+&= \lim_{b \rightarrow \infty} \eval{\ln(u)}_{\ln(2)}^b \\
+&= \lim_{b \rightarrow \infty} \ln(b) - \ln 2 \\
+&= \infty.
+\end{align*}</script>
+<!--l. 126--><p class="noindent">The Integral Test therefore implies that the series diverges. </p></dd></dl>
+<!--l. 127--><p class="noindent"><img src="divergenceAndIntegralTests3x.png" alt="PICT"/>
+</p></div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2003r5"></a> For each part, determine which of the following properties each of the given
+sequences <script type="math/tex">\{a_k\}</script> and <script type="math/tex">\{s_n\}</script> has: monotone increasing, monotone decreasing, bounded above,
+bounded below.
+<!--l. 133--><p class="noindent">I. Let <script type="math/tex">\{a_k\}_{k=1}^\infty </script> be the sequence defined by <script type="math/tex">a_k = \frac {1}{k^3}</script> and let <script type="math/tex">\{s_n\}_{n=1}^\infty </script> denote its sequence of partial
+sums.
+</p><!--l. 135--><p class="noindent">II. Let <script type="math/tex">\{a_k\}_{k=1}^\infty </script> be the sequence defined by <script type="math/tex">a_k = \frac {2^k}{2^k +1}</script> and let <script type="math/tex">\{s_n\}_{n=1}^\infty </script> denote its sequence of partial
+sums.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The sequence <script type="math/tex">\{a_k\}</script> is monotone decreasing and bounded (above and
+below), by inspection. Since the terms of <script type="math/tex">\{a_k\}</script> are strictly positive, the sequence <script type="math/tex">\{s_n\}</script>
+must be monotone increasing. It is straightforward to show via the Integral Test
+that the series <script type="math/tex">\sum \frac {1}{k^3}</script> converges. It follows by the definition of convergence that the
+sequence <script type="math/tex">\{s_n\}</script> has a finite limit and is therefore bounded.
+<!--l. 140--><p class="noindent">II.  The  sequence  <script type="math/tex">\{a_k\}</script>  is  monotone  increasing  and  bounded,  with  limit  <script type="math/tex">\lim _{k\rightarrow \infty } a_k = 1</script>.  The
+Divergence Test implies that the series <script type="math/tex">\sum a_k</script> diverges. It follows that the sequence <script type="math/tex">\{s_n\}</script>
+is monotone increasing and bounded below (because the terms of <script type="math/tex">a_k</script> are positive),
+but not bounded above (because <script type="math/tex">\lim _{n \rightarrow \infty } s_n = \infty </script>). </p></dd></dl>
+<!--l. 141--><p class="noindent"><img src="divergenceAndIntegralTests4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

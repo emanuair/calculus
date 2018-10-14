@@ -1,0 +1,212 @@
+<!DOCTYPE html><html lang="en"><head> <title>Vectors in 2 and 3 Dimensions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="vectorsIn2and3Dimensions.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the conceptual meaning of the term ``vector" ."=""/> 
+<meta name="learning-outcome" content="Do basic calculations with vectors and their magnitudes."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="cc5db5c0fd54f9dd8c300f33113719b29d4b177e recitation/calculus2/vectorsIn2and3Dimensions/vectorsIn2and3Dimensions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Determine whether the following statements are true or false.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\vec {u}</script> is a nonzero vector, then <script type="math/tex">\frac {\vec {u}}{\left |\vec {u}\right |}</script> is a unit vector.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\vec {u} = \vec {v}</script> then <script type="math/tex">\left |\vec {u}\right | = \left |\vec {v}\right |</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\left |\vec {u}\right | = \left |\vec {v}\right |</script> then <script type="math/tex">\vec {u} = \vec {v}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\left |\vec {u} - \vec {v}\right | = 0</script> then <script type="math/tex">\vec {u} = \vec {v}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">Let <script type="math/tex">\vec {u} = \left <u_1,u_2\right ></script> and <script type="math/tex">\vec {v}=\left <v_1,v_2\right ></script>. Then <script type="math/tex">\vec {u} = \vec {v}</script> if and only if <script type="math/tex">u_1 = v_1</script> and <script type="math/tex">u_2 = v_2</script>.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem"><script type="math/tex">\left |2\vec {u} + 3 \vec {v} \right | = 2 \left |\vec {u}\right | + 3 \left |\vec {v}\right |</script>.
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\vec {u} = 5 \vec {v}</script>, then <script type="math/tex">\left |2\vec {u} + 3 \vec {v} \right | = 2 \left |\vec {u}\right | + 3 \left |\vec {v}\right |</script>.</dd></dl>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">This statement is true, as
+                                   <script type="math/tex; mode=display"> \left | \frac {\vec {u}}{\left |\vec {u}\right |}\right | = \frac {\left |\vec {u}\right |}{\left |\vec {u}\right |} = 1. </script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">This statement is, of course, true—the magnitude of a vector certainly
+     can’t depend on the name that we choose for the vector!
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">This statement is false; for example, the vectors <script type="math/tex">\vec {u} = \left <1,0\right ></script> and <script type="math/tex">\vec {v} = \left <0,1\right ></script> have the same
+     magnitude.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">This statement is true. The only vector with magnitude <script type="math/tex">0</script> is the zero vector.
+     Therefore <script type="math/tex">\left |\vec {u} - \vec {v}\right | = 0</script> implies that <script type="math/tex">\vec {u} - \vec {v} = \vec {0}</script>. This implies, in turn, that <script type="math/tex">\vec {u} = \vec {v}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">This statement is true, by definition.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">This statement is false. For example, let <script type="math/tex">\vec {u} = \left <1,0\right ></script> and <script type="math/tex">\vec {v} = \left <0,1\right ></script>. Then
+                                   <script type="math/tex; mode=display"> \left |2\vec {u} + 3 \vec {v}\right | = \left |\left <2,3\right > \right | = \sqrt {2^2 + 3^2} = \sqrt {13} = 3.605\ldots , </script>
+     while
+                                   <script type="math/tex; mode=display"> 2 \left |\vec {u}\right | + 3 \left |\vec {v}\right | = 2 \cdot 1 + 3 \cdot 1 = 5 \neq \sqrt {13}. </script>
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd class="enumerate-enumitem">This statement is true, as <script type="math/tex">\vec {u} = 5 \vec {v}</script> implies
+     <script type="math/tex; mode=display"> \begin{align*} 
+&\left| 2 \vec{u} + 3 \vec{v}\right| = \left| 2 \cdot 5 \vec{v} + 3 \vec{v}\right| = \left|13 \vec{v}\right| = 13 \left|\vec{v}\right|  \\
+     & \qquad = 10 \left|\vec{v}\right| + 3 \left|\vec{v} \right| = 2 \left|5\vec{v}\right| + 3 \left|\vec{v} \right| = 2 \left|\vec{u}\right| + 3 \left|\vec{v} \right|.
+     \end{align*}</script>
+     </dd></dl>
+                                                                  
+
+                                                                  
+</dd></dl>
+<!--l. 83--><p class="noindent"><img src="vectorsIn2and3Dimensions0x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-2001r2"></a> Given that <script type="math/tex">\vec {u} = \left <1,2\right ></script>, which of the following are parallel to <script type="math/tex">\vec {u}</script>?
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v_1}=\left <2,4\right ></script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v_2}=\left <1,1\right ></script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v_3}</script>, the vector from <script type="math/tex">(3,1)</script> to <script type="math/tex">(5,-1)</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {w} = 6 \vec {v_2} - \vec {v_3}</script></dd></dl>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Since <script type="math/tex">\vec {v_1} = 2 \cdot \vec {u}</script>, <script type="math/tex">\vec {v_1}</script> is parallel to <script type="math/tex">\vec {u}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">If there exists a scalar <script type="math/tex">a</script> with <script type="math/tex">a \cdot \vec {v_2} = \vec {u}</script>, it would have to satisfy <script type="math/tex">a \cdot 1 = 1</script> and <script type="math/tex">a \cdot 1 = 2</script> simultaneously.
+     No such scalar exists, and it follows that <script type="math/tex">\vec {v_2}</script> is not parallel to <script type="math/tex">\vec {u}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">The vector <script type="math/tex">\vec {v_3}</script> has coordinate representation
+                                   <script type="math/tex; mode=display"> \vec {v_3} = \left <-1 - 3, 5 - 1\right > - \left <-4, 4\right >. </script>
+     By similar reasoning as that used in the previous example, <script type="math/tex">\vec {v_3}</script> is not parallel
+     to <script type="math/tex">\vec {u}</script>.
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">In coordinates, this vector is
+                                   <script type="math/tex; mode=display"> \vec {w} = 6 \left <1,1\right > - \left <-4,4\right > = \left <2,10\right >. </script>
+     By the same reasoning as what was used for the previous two examples,
+     we conclude that <script type="math/tex">\vec {w}</script> is not parallel to <script type="math/tex">\vec {u}</script>.</dd></dl>
+</dd></dl>
+<!--l. 114--><p class="noindent"><img src="vectorsIn2and3Dimensions1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2010r3"></a> Given <script type="math/tex">\vec {u} = \left <1,2,-1\right ></script>,
+     <ul class="itemize1">
+     <li class="itemize">find a unit vector in the same direction as <script type="math/tex">\vec {u}</script>,
+     </li>
+     <li class="itemize">find a vector which is parallel to <script type="math/tex">\vec {u}</script> and has magnitude <script type="math/tex">6</script>.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. A unit vector in the same direction as <script type="math/tex">\vec {u}</script> is
+                                 <script type="math/tex; mode=display"> \frac {\vec {u}}{\left |\vec {u}\right |} = \frac {\left <1,2,-1\right >}{\sqrt {1^2 + (-2)^2 + (-1)^2}} = \frac {\left <1,2,-1\right >}{\sqrt {6}}. </script>
+                                                                  
+
+                                                                  
+<!--l. 129--><p class="noindent">II. Since the vector we found in the previous example has magnitude <script type="math/tex">1</script>, a vector
+which is parallel to <script type="math/tex">\vec {u}</script> and has magnitude <script type="math/tex">6</script> is given by
+                                 <script type="math/tex; mode=display"> 6 \cdot \frac {\left <1,2,-1\right >}{\sqrt {6}}. </script>
+ </p></dd></dl>
+<!--l. 133--><p class="noindent"><img src="vectorsIn2and3Dimensions2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2011r4"></a> Find a number <script type="math/tex">a</script> so that <script type="math/tex">\left |\vec {u}\right | = 3</script> if <script type="math/tex">\vec {u} = \left <1,a,2\right ></script>.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The magnitude of <script type="math/tex">\vec {u}</script> is given by
+                                 <script type="math/tex; mode=display"> \left |\vec {u}\right | = \sqrt {1^2 + a^2 + 2^2} = \sqrt {5 + a^2}. </script>
+ It follows that our desired number <script type="math/tex">a</script> must satisfy
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sqrt {5 + a^2} = 3. </script>
+ This equation can be rewritten as <script type="math/tex">5 + a^2 = 9</script>, or <script type="math/tex">a^2 = 4</script>. We conclude that possible choices for <script type="math/tex">a</script>
+are <script type="math/tex">\pm 2</script>. </dd></dl>
+<!--l. 149--><p class="noindent"><img src="vectorsIn2and3Dimensions3x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

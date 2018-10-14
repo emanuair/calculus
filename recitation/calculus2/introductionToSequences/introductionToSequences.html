@@ -1,0 +1,248 @@
+<!DOCTYPE html><html lang="en"><head> <title>Introduction  to  Sequences</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="introductionToSequences.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand notation for sequences."/> 
+<meta name="learning-outcome" content="Manipulate and combine sequences defined recursively or by explicit formulas."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="2f6e7575091c7cf5848101533758cb28ee6843aa recitation/calculus2/introductionToSequences/introductionToSequences.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Classify the sequences defined by the following formulas as geometric, arithmetic or
+neither.
+<div class="center">
+<!--l. 50--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">a_n = 5n + 7</script>             II. <script type="math/tex">b_n = n^2 + 1</script>             III. <script type="math/tex">c_1 = 10, \; c_{n+1}= 2\cdot c_n</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> I. The sequence <script type="math/tex">\{a_n\}</script> is arithmetic, since
+                                 <script type="math/tex; mode=display"> a_{n+1}-a_n = 5(n+1)+7-(5n+7) = 5n + 5 + 7 - 5n - 7 = 5 </script>
+ is a constant for all <script type="math/tex">n</script>.
+<!--l. 64--><p class="noindent">II. The sequence <script type="math/tex">\{b_n\}</script> is not arithmetic, since
+                                 <script type="math/tex; mode=display"> b_{n+1}-b_n = (n+1)^2 + 1 - (n^2+1) = n^2 + 2n + 1 + 1 - n^2 - 1 = 2n + 2 </script>
+ is not constant. It is also not geometric, since
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \frac {b_{n+1}}{b_n} = \frac {(n+1)^2 + 1}{n^2 + 1} = \frac {n^2+2n + 2}{n^2 + 1} </script>
+ is not constant.
+</p><!--l. 74--><p class="noindent">III. The sequence <script type="math/tex">\{c_n\}</script> is geometric. This is true because, for <script type="math/tex">n\geq 1</script>, we have
+                                 <script type="math/tex; mode=display"> \frac {c_{n+1}}{c_n} = \frac {2 c_n}{c_n} = 2, </script>
+ which is constant.
+</p></div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a> Let <script type="math/tex">\{a_n\}_{n=0}^\infty </script> be the sequence defined by the recursive formula
+                                 <script type="math/tex; mode=display"> a_0 = 1, \; a_{n+1}=\frac {n+1}{2} \cdot a_n. </script>
+ Write out the first four terms of the sequence.
+<!--l. 91--><p class="noindent">Let <script type="math/tex">\{b_n\}_{n=0}^\infty </script> be the sequence defined by the explicit formula
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> b_n = \frac {n!}{2^n}. </script>
+ Write out the first four terms of the sequence.
+</p><!--l. 97--><p class="noindent">You should notice that the first four terms of the sequences are the same. Show that
+for <em>every</em> <script type="math/tex">n \geq 0</script>, <script type="math/tex">a_n = b_n</script>.
+</p></div>
+<div class="free-response" id="problem4"><a id="x1-2002r4"></a> The first four terms of <script type="math/tex">\{a_n\}</script> are <script type="math/tex; mode=display"> \begin{align*} 
+a_0 &= 1 \\
+a_1 &= \frac{1}{2} a_0 = \frac{1}{2} \\
+a_2 &= \frac{2}{2} a_1 = \frac{1}{2} \\
+a_3 &= \frac{3}{2} a_2 = \frac{3}{4}.
+\end{align*}</script>
+<!--l. 108--><p class="noindent">The first four terms of <script type="math/tex">\{b_n\}</script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+b_0 &= \frac{0!}{2^0} = 1\\
+b_1 &= \frac{1!}{2^1} = \frac{1}{2}\\
+b_2 &= \frac{2!}{2^2} = \frac{2}{4} = \frac{1}{2} \\
+b_3 &= \frac{3!}{2^3} = \frac{6}{8} = \frac{3}{4}.\\
+\end{align*}</script>
+<!--l. 116--><p class="noindent">To show that <script type="math/tex">a_n = b_n</script> for all <script type="math/tex">n \geq 0</script>, we will show that the terms in <script type="math/tex">\{b_n\}</script> satisfy the recursion formula
+defining <script type="math/tex">\{a_n\}</script>. We already have shown that <script type="math/tex">b_0 = 1</script>. Moreover, we have
+                                 <script type="math/tex; mode=display"> b_{n+1} = \frac {(n+1)!}{2^{n+1}} = \frac {(n+1) \cdot n!}{2 \cdot 2^n} = \frac {n+1}{2} \cdot \frac {n!}{2^n} = \frac {n+1}{2} b_n. </script>
+                                                                  
+
+                                                                  
+</p></div>
+                                                                  
+
+                                                                  
+
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2003r5"></a> Let <script type="math/tex">\{a_n\}_{n=1}^\infty </script> be the sequence given by the formula
+                                 <script type="math/tex; mode=display"> a_n = \frac {1}{n!} </script>
+ Write the out the first four terms of each of sequences defined by the following
+formulas. Each sequence is defined for <script type="math/tex">n \geq 1</script>.
+<div class="center">
+<!--l. 130--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/><col id="TBL-2-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">s_n = \sum _{j=1}^n a_j</script>             II. <script type="math/tex">b_n = \frac {a_{n+1}}{a_n}</script>             III. <script type="math/tex">c_n = \sqrt [n]{a_n}</script>  </td>
+</tr></tbody></table>
+</div></div>
+<!--l. 135--><p class="noindent">For the sequence defined in part II, find a simplified form for the <script type="math/tex">n</script>th term
+<script type="math/tex">b_n</script>.
+</p></div>
+<div class="free-response" id="problem6"><a id="x1-2004r6"></a> I. The first four terms of <script type="math/tex">\{s_n\}</script> are <script type="math/tex; mode=display"> \begin{align*} 
+s_1 &= a_1 = 1\\
+s_2 &= a_1 + a_2 = 1 + \frac{1}{2} = \frac{3}{2}\\
+s_3 &= s_2 + a_3 = \frac{3}{2} + \frac{1}{6} = \frac{5}{3} \\
+s_4 &= s_3 + a_4  = \frac{5}{3} + \frac{1}{24} = \frac{41}{24}.\\
+\end{align*}</script>
+<!--l. 147--><p class="noindent">II. The first four terms of <script type="math/tex">\{b_n\}</script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+b_1 &= \frac{a_2}{a_1} = \frac{1/2}{1} = \frac{1}{2} \\
+b_2 &= \frac{a_3}{a_2} = \frac{1/6}{1/2} = \frac{1}{3} \\
+b_3 &= \frac{a_4}{a_3} = \frac{1/24}{1/6} = \frac{1}{4} \\
+b_4 &= \frac{a_5}{a_4} = \frac{1/120}{1/24} = \frac{1}{5}.\\
+\end{align*}</script>
+<!--l. 154--><p class="noindent">After looking at these terms, one might guess that <script type="math/tex">b_n = \frac {1}{n+1}</script> for all <script type="math/tex">n \geq 1</script>. Indeed, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> b_n = \frac {a_{n+1}}{a_n} = \frac {1/(n+1)!}{1/n!} = \frac {n!}{(n+1)!} = \frac {n!}{(n+1) \cdot n!} = \frac {1}{n+1}. </script>
+</p><!--l. 159--><p class="noindent">III. The first four terms of <script type="math/tex">\{c_n\}</script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+c_1 &= \sqrt[1]{a_1} = 1\\
+c_2 &= \sqrt[2]{a_2} = \sqrt{\frac{1}{2}} \\
+c_3 &= \sqrt[3]{a_3} = \sqrt[3]{\frac{1}{6}} \\
+c_4 &= \sqrt[4]{a_4} = \sqrt[4]{\frac{1}{24}}.\\
+\end{align*}</script>
+<!--l. 166--></div>
+
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2005r7"></a> Let <script type="math/tex">\{a_n\}_{n=1}^\infty </script> be the sequence defined by the formula
+                                 <script type="math/tex; mode=display"> a_n = \frac {n+2}{3^n} </script>
+ and let <script type="math/tex">\{b_n\}_{n=0}^\infty </script> be the sequence defined recursively by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> b_0 = 1 \mbox { and } b_{n+1} = b_n + \frac {1}{b_n}. </script>
+ Write the out the first four terms of each of sequences defined by the following
+formulas.
+<div class="center">
+<!--l. 178--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-3" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-3-1g"><col id="TBL-3-1"/><col id="TBL-3-2"/><col id="TBL-3-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-3-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-3-1-1" class="td11"> I. <script type="math/tex">\{a_n+b_n\}_{n=1}^\infty </script>           II. <script type="math/tex">\{a_{n+1}/b_n\}_{n=0}^\infty </script>           III. <script type="math/tex">c_1 = 1, \; c_{n+1} = c_n + a_n + b_n</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem8"><a id="x1-2006r8"></a> It seems that it would be useful to first write out several terms of the squences <script type="math/tex">\{a_n\}</script> and <script type="math/tex">\{b_n\}</script>:
+<script type="math/tex; mode=display"> \begin{align*} 
+a_1 &= \frac{3}{3} = 1 \\
+a_2 &= \frac{4}{3^2} = \frac{4}{9} \\
+a_3 &= \frac{5}{3^3} = \frac{5}{27} \\
+a_4 &= \frac{6}{3^4} = \frac{6}{81} = \frac{2}{27}\\
+\end{align*}</script>
+<!--l. 193--><p class="noindent">and </p><script type="math/tex; mode=display"> \begin{align*} 
+b_0 &= 1\\
+b_1 &= 1 + \frac{1}{1} = 2\\
+b_2 &= 2 + \frac{1}{2} = \frac{5}{2}\\
+b_3 &= \frac{5}{2} + \frac{2}{5} = \frac{29}{10} \\
+b_4 &= \frac{29}{10} + \frac{10}{29} = \frac{29^2 + 10^2}{290} = \frac{941}{290}\\
+\end{align*}</script>
+<!--l. 202--><p class="noindent">I. The first four terms of the sequence <script type="math/tex">\{a_n + b_n\}_{n=1}^\infty </script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+a_1 + b_1 &= 1 + 2 = 3\\
+a_2 + b_2 &= \frac{4}{9} + \frac{5}{2}\\
+a_3 + b_3 &= \frac{5}{27} + \frac{29}{10} \\
+a_4 + b_4 &= \frac{2}{27} + \frac{941}{290}.\\
+\end{align*}</script>
+<!--l. 210--><p class="noindent">II. The first four terms of the sequence <script type="math/tex">\{a_{n+1}/b_n\}</script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{a_1}{b_0} &= 1 \\
+\frac{a_2}{b_1} &= \frac{4/9}{2} = \frac{2}{9} \\
+\frac{a_3}{b_2} &= \frac{5/27}{5/2} = \frac{2}{27}\\
+                                                                  
+
+                                                                  
+\frac{a_4}{b_3} &= \frac{2/27}{29/10} = \frac{20}{783}.\\
+\end{align*}</script>
+<!--l. 218--><p class="noindent">III. The first four terms of <script type="math/tex">\{c_n\}</script> are </p><script type="math/tex; mode=display"> \begin{align*} 
+c_1 &= 1 \\
+c_2 &= c_1 + a_1 + b_1 = 1 + 3 = 4 \\
+c_3 &= c_2 + a_2 + b_2 = 4 + \frac{4}{9} + \frac{5}{2} \\
+c_4 &= c_3 + a_3 + b_3 =  4 + \frac{4}{9} + \frac{5}{2} + \frac{5}{27} + \frac{29}{10}\\
+\end{align*}</script>
+<!--l. 225--></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

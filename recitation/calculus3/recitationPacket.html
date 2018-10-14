@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head> <title>Recitation  handouts  for  calculus
+                                                                  
+
+                                                                  
+3</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="recitationPacket.tex"/> 
+<meta name="og:image" content=""/> 
+<meta name="description" content="xourse"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="1275e93497f3b3e541e19228d78e425d8045d256 recitation/calculus3/meeting01/collaborateGeometricSets.tex"/><meta name="dependency" content="89603d412569157c8bfc96c3bb672a50482d94bf recitation/calculus3/meeting02/collaborateDotProductAndCrossProducts.tex"/><meta name="dependency" content="18a611dcd0d48c8508bda64b350cab2c54f554f1 recitation/calculus3/meeting03/collaborateMovingThingsAround.tex"/><meta name="dependency" content="8605257a4d606c817fb0b4ae35f4ceddb1974f8f recitation/calculus3/meeting04/collaborateMirroredCurves.tex"/><meta name="dependency" content="f77c40368a6cb9762e51eb7ab31f2cc56f069db4 recitation/calculus3/meeting05/collaborateConsideringSurfaces.tex"/><meta name="dependency" content="c479e6a664eeeaf6eaf92840d514e32d5e9f9790 recitation/calculus3/lecture/identifyingSurfaces/collaborateIdentifyingSurfaces.tex"/><meta name="dependency" content="723f2eeb89a610d0e1772c495abb8d48d2e7cb30 recitation/calculus3/meeting06/collaborateQuadricSurfaces.tex"/><meta name="dependency" content="9ee3d2525320372b07132decccefb66990a8da7b recitation/calculus3/meeting07/collaborateDistanceBetweenPointsAnd.tex"/><meta name="dependency" content="c54915156de8afc4268fecf612628a5c9ec355c8 recitation/calculus3/meeting08/collaborateDescribingRegions.tex"/><meta name="dependency" content="7e9e92aced2ec4242e83cd905eac5408d3bbe963 recitation/calculus3/meeting09/collaborateMultipleIntegrals.tex"/><meta name="dependency" content="7f5e7b6b2cae75869b48e85df36937204376fd57 recitation/calculus3/meeting10/collaborateLineIntegrals.tex"/><meta name="dependency" content="3259c66cab19c32a72ce9a67e602d0045c151ff4 recitation/calculus3/meeting11/collaborateBreakingMath.tex"/><meta name="dependency" content="aff381496667b7f8eb50f4f13854ff50c4d58362 recitation/calculus3/lecture/choosingIntegrals/collaborateChoosingIntegrals.tex"/><meta name="dependency" content="411491065519940c506bf37e57e0aa7887a7376f recitation/calculus3/meeting12/collaborateVolumeAndTheDivergenceTheorem.tex"/><meta name="dependency" content="6a59a5433208c87de03740cdee8d3e558224c50a recitation/calculus3/recitationPacket.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\graded }[1]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+ <div class="maketitle"></div>
+<a class="activity card chapter" href="recitation/calculus3/meeting01/collaborateGeometricSets" data-options="">meeting01/collaborateGeometricSets.tex<h2>Geometric  sets</h2><h3>We investigate geometric sets determined by implicit equations.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting02/collaborateDotProductAndCrossProducts" data-options="">meeting02/collaborateDotProductAndCrossProducts.tex<h2>Dot products and cross products</h2><h3>Working with the dot product and cross product.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting03/collaborateMovingThingsAround" data-options="">meeting03/collaborateMovingThingsAround.tex<h2>Moving  things
+                                                                  
+
+                                                                  
+around</h2><h3>We move things around in space.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting04/collaborateMirroredCurves" data-options="">meeting04/collaborateMirroredCurves.tex<h2>Mirrored  curves</h2><h3>We study how to bounce vectors off of curves.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting05/collaborateConsideringSurfaces" data-options="">meeting05/collaborateConsideringSurfaces.tex<h2>Considering
+                                                                  
+
+                                                                  
+surfaces</h2><h3>We think about surfaces in different ways.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/lecture/identifyingSurfaces/collaborateIdentifyingSurfaces" data-options="">lecture/identifyingSurfaces/collaborateIdentifyingSurfaces.tex<h2>Identifying
+                                                                  
+
+                                                                  
+surfaces</h2><h3>We identify surfaces.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting06/collaborateQuadricSurfaces" data-options="">meeting06/collaborateQuadricSurfaces.tex<h2>Quadric  surfaces</h2><h3>We investigate quadric surfaces.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting07/collaborateDistanceBetweenPointsAnd" data-options="">meeting07/collaborateDistanceBetweenPointsAnd.tex<h2>Distance between points and...</h2><h3>Investigate the distance between points and lines or planes.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting08/collaborateDescribingRegions" data-options="">meeting08/collaborateDescribingRegions.tex<h2>Describing  regions</h2><h3>We describe areas and volumes of regions using iterated integrals.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting09/collaborateMultipleIntegrals" data-options="">meeting09/collaborateMultipleIntegrals.tex<h2>Multiple
+                                                                  
+
+                                                                  
+integrals</h2><h3>
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting10/collaborateLineIntegrals" data-options="">meeting10/collaborateLineIntegrals.tex<h2>Line integrals</h2><h3>We work some examples of line integrals and vector fields.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting11/collaborateBreakingMath" data-options="">meeting11/collaborateBreakingMath.tex<h2>Breaking  math</h2><h3>Two calculus students attempt to “break” math.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/lecture/choosingIntegrals/collaborateChoosingIntegrals" data-options="">lecture/choosingIntegrals/collaborateChoosingIntegrals.tex<h2>Choosing
+                                                                  
+
+                                                                  
+integrals</h2><h3>We give ourselves a choice of integrals to compute.
+</h3></a> <a class="activity card chapter" href="recitation/calculus3/meeting12/collaborateVolumeAndTheDivergenceTheorem" data-options="">meeting12/collaborateVolumeAndTheDivergenceTheorem.tex<h2>Volume and the divergence theorem</h2><h3>We compute volumes using the divergence theorem.
+</h3></a>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

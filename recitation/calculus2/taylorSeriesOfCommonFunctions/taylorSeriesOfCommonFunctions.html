@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head> <title>Taylor Series of Common Functions and Rules of Compositions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="taylorSeriesOfCommonFunctions.tex"/> 
+<meta name="author" content="Jim
+                                                                  
+
+                                                                  
+Talamo"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find Taylor Polynomials."/> 
+<meta name="learning-outcome" content="Understand the relationship between the derivatives of a function and the coefficients of its Taylor Polynomial."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="87b64e28d952f3c5f1d39a6f508e26bae91d0a63 recitation/calculus2/taylorSeriesOfCommonFunctions/taylorSeriesOfCommonFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a>
+<!--l. 49--><p class="noindent">Suppose that <script type="math/tex">\displaystyle f(x) = \sum _{k=0}^{\infty } \frac {k+1}{3^k}x^{2k}.</script>
+</p>
+     <ul class="itemize1">
+     <li class="itemize">A student claims that <script type="math/tex">f(0)=0</script>. Determine if the student is correct or incorrect. If
+     the student is incorrect, what should <script type="math/tex">f(0)</script> be?
+     </li>
+     <li class="itemize">Find the radius of convergence of this series.
+     </li>
+     <li class="itemize">Does the series represented by <script type="math/tex">f(2)</script> converge or diverge? What about the series
+     represented by <script type="math/tex">f'(2)</script>?
+     </li>
+     <li class="itemize">Would you expect that a higher order Taylor polynomial approximates <script type="math/tex">f(2)</script>
+     better or worse than a lower order one?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Writing out the first few terms of <script type="math/tex">f(x)</script>, we have
+                                 <script type="math/tex; mode=display"> f(x)= \frac {0+1}{3^0}x^{2\cdot 0} + \frac {1+1}{3^1} x^{2\cdot 1}+ \frac {2+1}{3^2} x^{2 \cdot 2} + \cdots = 1 + \frac {2}{3}x^2 + \frac {1}{3}x^4 + \cdots , </script>
+ where all remaining terms have degree strictly larger than <script type="math/tex">4</script>. From this, we see
+that <script type="math/tex">f(0)=1</script>.
+<!--l. 67--><p class="noindent">II. We have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {k+2}{3^{k+1}} x^{2k+2} \cdot \frac {3^k}{(k+1) x^{2k}}= \lim _{k \rightarrow \infty } \frac {k+2}{k+1} \cdot \frac {1}{3} \cdot x^2 = \frac {x^2}{3}. </script>
+ By the Ratio Test, a sufficient condition for convergence of the series is <script type="math/tex">x^2/3 < 1</script>, which
+tells us that the radius of convergence of the power series is <script type="math/tex">\sqrt {3}</script>.
+</p><!--l. 73--><p class="noindent">III. Since the center of the power series is <script type="math/tex">0</script>, and the radius of convergence is <script type="math/tex">\sqrt {3} < 2</script>,
+we know that <script type="math/tex">f(2)</script> must diverge. The radius of convergence of <script type="math/tex">f'(x)</script> is the same as that
+of <script type="math/tex">f(x)</script>, so <script type="math/tex">f'(2)</script> also must diverge.
+</p><!--l. 75--><p class="noindent">IV. Since the radius of convergence of <script type="math/tex">f(x)</script> is <script type="math/tex">\sqrt {3} < 2</script>, <script type="math/tex">f(2)</script> is undefined. It therefore doesn’t make
+sense to try to approximate <script type="math/tex">f(2)</script> (something which doesn’t exist) by <em>any</em> Taylor
+polynomial. </p></dd></dl>
+<!--l. 76--><p class="noindent"><img src="taylorSeriesOfCommonFunctions0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> The Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">\cos (x)</script> is <script type="math/tex">\displaystyle \sum _{k=0}^{\infty } \frac {(-1)^k}{(2k)!} x^{2k}</script>
+     <ul class="itemize1">
+     <li class="itemize">A student reasons that it follows that the fourth degree Taylor polynomial
+     centered at <script type="math/tex">x=0</script> is:
+                                   <script type="math/tex; mode=display">p_4(x) = 1-\dfrac {1}{2}x^2+\dfrac {1}{24}x^4.</script>
+     Is the student correct? If not, what should the correct fourth degree Taylor
+     polynomial be?
+     </li>
+     <li class="itemize">The  student  now  reasons  that  the  fourth  degree  Taylor  polynomial
+     centered at <script type="math/tex">x=1</script> is:
+                                                                  
+
+                                                                  
+                                   <script type="math/tex; mode=display">p_4(x) = 1-\dfrac {1}{2}(x-1)^2+\dfrac {1}{24}(x-1)^4.</script>
+      Is  the  student  correct?  If  not,  how  should  the  student  find  this
+     polynomial?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Writing out the first few terms of the series explicitly, we have
+                                 <script type="math/tex; mode=display"> \sum _{k=0}^{\infty } \frac {(-1)^k}{(2k)!} x^{2k} = 1 - \frac {1}{2} x^2 + \frac {1}{24}x^4 + \cdots . </script>
+ Therefore the student is correct, by the definitions of Taylor polynomials and
+Taylor series.
+<!--l. 96--><p class="noindent">II. If the student were correct, we would have <script type="math/tex">p_4(1) = \cos (1)</script>. However,
+                                 <script type="math/tex; mode=display"> p_4(1) = 1 - \frac {1}{2}(0)^2 + \frac {1}{24}(0)^4 = 1 </script>
+ is not equal to
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \cos (1) = 0.54\ldots . </script>
+ To compute the Taylor series centered at <script type="math/tex">1</script>, the student would need to recompute
+the coefficents using derivatives of <script type="math/tex">\cos (x)</script> at <script type="math/tex">x=1</script>. </p></dd></dl>
+<!--l. 105--><p class="noindent"><img src="taylorSeriesOfCommonFunctions1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Write down the fifth degree Taylor polynomial centered at <script type="math/tex">x=0</script> for the following and
+simplify your answers completely.
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">f(x) = \sin (2x)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f(x) = x^2 \sin (x)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f(x) = \sin (2x)+ x^2 \sin (x)</script></li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We begin by recalling that the Taylor series for <script type="math/tex">f(x)=\sin (x)</script> centered at <script type="math/tex">x=0</script> is
+<script type="math/tex; mode=display"> \begin{equation} 
+\label{eqn:sin_series}
+\sum_{k=0}^\infty \frac{(-1)^k}{(2k+1)!} x^{2k+1}.
+\end{equation}</script>
+<!--l. 123--><p class="noindent">I. We find the Taylor series for <script type="math/tex">f(x) = \sin (2x)</script> by replacing the variable <script type="math/tex">x</script> in (<a class="reference" href="#eqn:sin_series">eqn:sin_series</a>) with <script type="math/tex">2x</script>, yielding the
+series
+                                 <script type="math/tex; mode=display"> \sum _{k=0}^\infty \frac {(-1)^k}{(2k+1)!} (2x)^{2k+1} = \sum _{k=0}^\infty \frac {(-1)^k2^{2k+1}}{(2k+1)!} x^{2k+1}. </script>
+ The fifth degree Taylor polynomial is therefore
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> 2x - \frac {4}{3}x^3 + \frac {4}{15} x^5. </script>
+</p><!--l. 132--><p class="noindent">II. The Taylor series for <script type="math/tex">f(x) = x^2 \sin (x)</script> is obtained by multiplying each term in (<a class="reference" href="#eqn:sin_series">eqn:sin_series</a>) by <script type="math/tex">x^2</script>, which
+gives
+                                 <script type="math/tex; mode=display"> \sum _{k=0}^\infty x^2 \cdot \frac {(-1)^k}{(2k+1)!} x^{2k+1} = \sum _{k=0}^\infty \frac {(-1)^k}{(2k+1)!} x^{2k+3}. </script>
+ This gives us the fifth degree Taylor polynomial
+                                 <script type="math/tex; mode=display"> x^3 - \frac {1}{3!} x^5. </script>
+</p><!--l. 141--><p class="noindent">III. The Taylor series for <script type="math/tex">f(x) = \sin (2x)+ x^2 \sin (x)</script> is the sum of the series from parts I and II:
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{k=0}^\infty \frac {(-1)^k 2^{2k+1}}{(2k+1)!} x^{2k+1} + \sum _{k=0}^\infty \frac {(-1)^k}{(2k+1)!} x^{2k+3}. </script>
+ The fifth degree Taylor polynomial for <script type="math/tex">f(x)</script> is the sum of the fifth degree Taylor
+polynomials from parts I and II:
+                                 <script type="math/tex; mode=display"> 2x - \frac {4}{3}x^3 + \frac {4}{15} x^5 + x^3 - \frac {1}{3!} x^5 = 2x - \frac {1}{3} x^3 + \frac {1}{10} x^5. </script>
+</p>
+</dd></dl>
+<!--l. 150--><p class="noindent"><img src="taylorSeriesOfCommonFunctions2x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2001r4"></a> Give the radius of convergence for the following:
+     <ul class="itemize1">
+     <li class="itemize">The Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">f(x) = \dfrac {5}{1-2x}</script>.
+     </li>
+     <li class="itemize">The Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">f(x) = \dfrac {1}{6-x}</script>.
+     </li>
+     <li class="itemize">The Taylor series centered at <script type="math/tex">x=5</script> for <script type="math/tex">f(x) = \dfrac {1}{6-x}</script>.</li></ul>
+                                                                  
+
+                                                                  
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Recall  that  the  Taylor  series  centered  at  <script type="math/tex">x=0</script>  for  <script type="math/tex">g(x) = 1/(1-x)</script>  has  radius  of
+convergence <script type="math/tex">1</script>.
+<!--l. 168--><p class="noindent">I. The function <script type="math/tex">f(x) = 5/(1-2x)</script> satisfies <script type="math/tex">f(x) = 5 g(2x)</script>. The radius of convergence is then determined by the
+inequality <script type="math/tex">|2x| < 1</script>, or <script type="math/tex">|x| < 1/2</script>, and we conclude that the radius of convergence is <script type="math/tex">1/2</script>.
+</p><!--l. 170--><p class="noindent">II. The function <script type="math/tex">f(x) = 1/(6-x)</script> satisfies
+                                 <script type="math/tex; mode=display"> f(x) = \frac {1}{6-x} = \frac {1}{6(1-x/6)} = \frac {1}{6} \cdot \frac {1}{1-x/6} = \frac {1}{6} \cdot g(x/6). </script>
+ The radius of convergence is determined by the inequality <script type="math/tex">|x/6| < 1</script>, and is therefore
+equal to <script type="math/tex">6</script>.
+</p><!--l. 176--><p class="noindent">III. Note that the function <script type="math/tex">f(x) = 1/(6-x)</script> satisfies
+                                 <script type="math/tex; mode=display"> f(x) = \frac {1}{6-x} = \frac {1}{1-(x-5)} = g(x-5). </script>
+ The Taylor series centered at <script type="math/tex">x=5</script> for <script type="math/tex">g(x-5)</script> is the same as the Taylor series for <script type="math/tex">g(x)</script> based
+at <script type="math/tex">x=0</script>. Therefore the radius of convergence of <script type="math/tex">f(x)</script> is <script type="math/tex">1</script>. </p></dd></dl>
+<!--l. 181--><p class="noindent"><img src="taylorSeriesOfCommonFunctions3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2002r5"></a> Consider the function <script type="math/tex">f(x) = \dfrac {4x^2}{1+3x^2}.</script>
+     <ul class="itemize1">
+     <li class="itemize">Find the Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">f(x)</script>.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">What is <script type="math/tex">f^{(23)}(0)</script>?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Recall that the Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">g(x) =1/(1-x)</script> is <script type="math/tex">\sum _{k=0}^\infty x^k</script>.
+<!--l. 197--><p class="noindent">I. We rewrite <script type="math/tex">f(x)</script> as
+                                 <script type="math/tex; mode=display"> f(x) = \frac {4x^2}{1+3x^2} = 4x^2 \cdot \frac {1}{1-(-3x^2)}. </script>
+ The Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">f(x)</script> is therefore
+                                 <script type="math/tex; mode=display"> \sum _{k=0}^\infty 4x^2 \cdot (-3x^2)^k = \sum _{k=0}^\infty 4 (-3)^k x^{2k+2}. </script>
+</p><!--l. 206--><p class="noindent">II. Recall that the <script type="math/tex">k</script>th term in the Taylor series centered at <script type="math/tex">x=0</script> of <script type="math/tex">f(x)</script> is
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \frac {f^{(k)}(0)}{k!} x^k. </script>
+ We can therefore determine <script type="math/tex">f^{(23)}(0)</script> by examining the coefficient of the degree-<script type="math/tex">23</script> term of
+the Taylor series we found in part I. From our formula, we see that the powers
+of <script type="math/tex">x</script> occuring in the Taylor series for <script type="math/tex">f(x)</script> are always even (since the expression is
+written in terms of <script type="math/tex">x^{2k+2}</script>). This implies that the coefficient of <script type="math/tex">x^{23}</script> in the series is zero,
+so that <script type="math/tex">f^{(23)}(0)=0</script>. </p></dd></dl>
+<!--l. 211--><p class="noindent"><img src="taylorSeriesOfCommonFunctions4x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-2003r6"></a> Consider the function <script type="math/tex">f(x) = 4x^2e^x+3\sin (2x)</script>.
+     <ul class="itemize1">
+     <li class="itemize">Find the sum of the first three nonzero terms in the Taylor series centered
+     at <script type="math/tex">x=0</script> for <script type="math/tex">f(x)</script>.
+     </li>
+     <li class="itemize">Find <script type="math/tex">f^{(4)}(0)</script>.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We could, of course, compute the terms in the Taylor series by
+hand, using the general formula for its coefficients. It would instead be faster
+to use properties of Taylor series and the known series expansions of <script type="math/tex">e^x</script> and <script type="math/tex">\sin (x)</script>. We
+recall that
+                                 <script type="math/tex; mode=display"> e^x = \sum _{k=0}^\infty \frac {1}{k!}x^k = 1 + x + \frac {1}{2} x^2 + \frac {1}{3!} x^3 + \frac {1}{4!}x^4 + \cdots </script>
+ and
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sin (x) = \sum _{k=0}^\infty \frac {(-1)^k}{(2k+1)!} x^{2k+1} = x - \frac {1}{3!}x^3 + \frac {1}{5!}x^5 + \cdots . </script>
+<!--l. 235--><p class="noindent">I. Using the above, the Taylor series centered at <script type="math/tex">x=0</script> for <script type="math/tex">f(x)</script> is
+</p><script type="math/tex; mode=display"> \begin{align*} 
+&4x^2 \cdot \left(1 + x + \frac{1}{2} x^2 + \frac{1}{3!} x^3 + \frac{1}{4!}x^4 + \cdots\right) + 3 \cdot \left((2x) - \frac{1}{3!}(2x)^3 + \frac{1}{5!}(2x)^5 + \cdots\right) \\
+&\hspace{.2in} = \left(4x^2 + 4x^3 + 2x^4 + \frac{4}{3!} x^5 + \frac{4}{4!}x^6 + \cdots\right) + \left(6x - \frac{3 \cdot 8}{3!} x^3 + \frac{3 \cdot 32}{5!} x^5 + \cdots \right) \\
+&\hspace{.2in} = \left(4x^2 + 4x^3 + 2x^4 + \frac{2}{3} x^5 + \frac{1}{6}x^6 + \cdots\right) + \left(6x - 4 x^3 + \frac{5}{4} x^5 + \cdots \right).
+\end{align*}</script>
+<!--l. 241--><p class="noindent">Combining terms of the same degree, we see that the sum of the first three nonzero
+terms is
+                                 <script type="math/tex; mode=display"> 6x + 4x^2 + 2x^4. </script>
+</p><!--l. 246--><p class="noindent">II. The degree-<script type="math/tex">4</script> term of the Taylor series is given by the general formula
+                                 <script type="math/tex; mode=display"> \frac {f^{(4)}(0)}{4!} x^4. </script>
+ On the other hand, we see from part I. that the degree-<script type="math/tex">4</script> term is <script type="math/tex">2x^4</script>. Equating the
+coefficients of these expressions, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> 2 = \frac {f^{(4)}(0)}{4!}, </script>
+ and conclude that <script type="math/tex">f^{(4)}(0) = 2 \cdot 4! = 48</script>. </p></dd></dl>
+<!--l. 255--><p class="noindent"><img src="taylorSeriesOfCommonFunctions5x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

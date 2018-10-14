@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"><head> <title>Describing  regions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateDescribingRegions.tex"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="c54915156de8afc4268fecf612628a5c9ec355c8 recitation/calculus3/meeting08/collaborateDescribingRegions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We describe areas and volumes of regions using iterated integrals.
+</p></div>   <div class="maketitle"></div>
+<!--l. 16--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p>
+<h3 class="sectionHead"><a id="x1-1000"></a>Trivial regions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Without doing <strong>any</strong> integrals, evaluate <script type="math/tex; mode=display"> \iint _R \d A </script> where <script type="math/tex; mode=display"> R =\{(x,y):-2\le x\le 4 \text { and } -6\le y\le 1\}. </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Without doing <strong>any</strong> integrals, evaluate <script type="math/tex; mode=display"> \iiint _R \d V </script> where <script type="math/tex; mode=display"> R =\{(x,y,z):-4\le x\le 3, -1\le y\le 5,\text { and, } -3\le z\le 2\}. </script>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Two-dimensional regions</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a> Consider the region <script type="math/tex; mode=display"> R=\{(x,y):0\le x\le 2+\cos (y)\text { and }0<y<2\pi \} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <img src="region.png" alt="PIC"/> </div>
+Compute the area of this region with an iterated integral where one integrates first
+with respect to <script type="math/tex">x</script> and next integrates with respect to <script type="math/tex">y</script>.
+<!--l. 59--><p class="noindent"><strong>As a challenge</strong>, compute the area with an iterated integral where one integrates
+first with respect to <script type="math/tex">y</script> and next integrates with respect to <script type="math/tex">x</script>.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2002r4"></a> Consider the region <div class="image-environment" role="img" aria-labelledby="image-alt-2"> <object data="collaborateDescribingRegions-2.svg" width="294.1832 " height="240.02652 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">y</script> and next integrates with respect to <script type="math/tex">x</script>.
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">x</script> and next integrates with respect to <script type="math/tex">y</script>.</dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2005r5"></a> Consider the ellipse centered at the origin: <div class="image-environment" role="img" aria-labelledby="image-alt-3"> <object data="collaborateDescribingRegions-4.svg" width="276.49591 " height="240.04034 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Recall that the implicit formula for an ellipse is given by <script type="math/tex; mode=display"> \left (\frac {x-x_0}{a}\right )^2 + \left (\frac {y-y_0}{b}\right )^2 = 1. </script>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">y</script> and next integrates with respect to <script type="math/tex">x</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">x</script> and next integrates with respect to <script type="math/tex">y</script>.</dd></dl>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-2008r6"></a> Consider the following region: <div class="image-environment" role="img" aria-labelledby="image-alt-4"> <object data="collaborateDescribingRegions-6.svg" width="294.1832 " height="240.02853 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+The largest <script type="math/tex">y</script>-value of the region is <script type="math/tex">y=\sqrt {2}</script>.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">y</script> and next integrates with respect to <script type="math/tex">x</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Compute  the  area  of  this  region  with  an  iterated  integral  where  one
+     integrates first with respect to <script type="math/tex">x</script> and next integrates with respect to <script type="math/tex">y</script>.</dd></dl>
+</div>
+<h3 class="sectionHead"><a id="x1-3000"></a>Three-dimensional regions</h3>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-3001r7"></a> Consider the region bounded by the planes:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">x=0</script>
+     </li>
+     <li class="itemize"><script type="math/tex">y=0</script>
+     </li>
+     <li class="itemize"><script type="math/tex">z=0</script>
+     </li>
+     <li class="itemize"><script type="math/tex">6x+3y+2z = 24</script></li></ul>
+<!--l. 194--><p class="noindent">Sketch this region and set-up <strong>six</strong> iterated integrals that compute the volume of this
+solid, all which integrate in a different order.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-3002r8"></a> Consider the region: <script type="math/tex; mode=display"> R=\{(x,y,z): 0 \le x \le 1, -1\le y \le 0, 0\le z\le y^2\} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-5"> <img src="threeRegion2.png" alt="PIC"/> </div>
+                                                                  
+
+                                                                  
+Set up <strong>six</strong> iterated integrals that compute the volume of this solid, all which
+integrate in a different order.
+</div>
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-3003r9"></a> Consider the region: <script type="math/tex; mode=display"> R=\{(x,y,z): 0 \le x \le 1, \sqrt {x}\le y \le 1, 0\le z\le 1-y\} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-6"> <img src="threeRegion1.png" alt="PIC"/> </div>
+Set up <strong>six</strong> iterated integrals that compute the volume of this solid, all which
+integrate in a different order.
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

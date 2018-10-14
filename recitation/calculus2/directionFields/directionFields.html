@@ -1,0 +1,196 @@
+<!DOCTYPE html><html lang="en"><head> <title>Introduction To Differential Equations</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="directionFields.tex"/> 
+<meta name="author" content="Jim
+                                                                  
+
+                                                                  
+Talamo"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand terminology associated with ODEs."/> 
+<meta name="learning-outcome" content="Classify ODE as linear or nonlinear."/> 
+<meta name="learning-outcome" content="Determine the order of an ODE."/> 
+<meta name="learning-outcome" content="Verify if a given function is a solution to an ODE."/> 
+<meta name="learning-outcome" content="Verify if a given function is a solution to an IVP."/> 
+<meta name="learning-outcome" content="Find parameters so a function satisfies an ODE/IVP or explain why no such parameters exist."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="7930362953b09001459d1cf16454f0a911ac2e8a recitation/calculus2/directionFields/directionFields.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a>
+<!--l. 52--><p class="noindent">Consider the direction field below.
+</p>
+<hr class="figure"/><div class="figure">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<!--l. 56--><p class="noindent"><img src="directionFields0x.png" alt="PIC" class="graphics" width="137" height="137"/><!--tex4ht:graphics  
+name="directionFields0x.png" src="DirectionField1.eps"  
+-->
+                                                                  
+
+                                                                  
+</p>
+</div><hr class="endfigure"/>
+<!--l. 59--><p class="noindent">Which of the following differential equations is represented by this direction
+field?
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/><col id="TBL-1-4"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> A. <script type="math/tex">\dfrac {dy}{dx} = \dfrac {8x^2y}{x^2+y^2}</script>   </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-2" class="td11"> B. <script type="math/tex">\dfrac {dy}{dx} = \dfrac {8xy^2}{x^2+y^2}</script>  </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-3" class="td11"> C. <script type="math/tex">\dfrac {dy}{dx} = \dfrac {8x^2y^2}{x^2+y^2}</script>  </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-4" class="td11"> D. <script type="math/tex">\dfrac {dy}{dx} = \dfrac {8xy}{x^2+y^2}</script>  </td>
+</tr></tbody></table>
+</div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We can rule out functions based on the sign of the slope in each
+quadrant. Since the slopes are negative in the second quadrant, the functions
+in A and C are ruled out. Positive slopes in the third quadrant rule out the
+function in B. This leaves the function in D, and inspection of the slopes shows
+that they agree with this function. </dd></dl>
+<!--l. 68--><p class="noindent"><img src="directionFields1x.png" alt="PICT"/>
+</p></div> <div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> The graph of a certain function <script type="math/tex">y=f(x)</script> is shown below.
+<div class="center">
+<!--l. 74--><p class="noindent">
+</p><!--l. 75--><p class="noindent"> <object data="directionFields-2.svg" width="278.09077 " height="234.89682 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+<!--l. 95--><p class="noindent">Determine whether <script type="math/tex">y=f(x)</script> could be a solution to the initial value problem below and justify
+your response. <script type="math/tex; mode=display"> \dfrac {dy}{dx}-4y=e^{-3x} , \qquad y(0)=2 </script>
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">A solution of the IVP must satisfy
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \eval {\frac {dy}{dx}}_{x=0} = \eval {4y + e^{-3x}}_{x=0} = 4y(0) + e^0 = 4 \cdot 2 + 1 = 9. </script>
+ The function graphed above appears to have <script type="math/tex">f'(0) \approx 3</script>, so it cannot be a solution of the
+IVP. </dd></dl>
+<!--l. 106--><p class="noindent"><img src="directionFields2x.png" alt="PICT"/>
+</p>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Which of the following is the direction field for the differential equation <script type="math/tex">\dfrac {dy}{dx} = \dfrac {y-2x}{2}</script>
+?
+<hr class="figure"/><div class="figure">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<!--l. 118--><p class="noindent">  
+                                                        </p><!--l. 119--><p class="noindent"><img src="directionFields3x.png" alt="PIC" class="graphics" width="137" height="109"/><!--tex4ht:graphics  
+name="directionFields3x.png" src="MCA.eps"  
+-->                                           
+</p><!--l. 123--><p class="noindent"><img src="directionFields4x.png" alt="PIC" class="graphics" width="137" height="113"/><!--tex4ht:graphics  
+name="directionFields4x.png" src="MCB.eps"  
+-->
+                                                                  
+
+                                                                  
+</p>
+</div><hr class="endfigure"/>
+<hr class="figure"/><div class="figure">
+                                                                  
+
+                                                                  
+                                                                  
+
+                                                                  
+<!--l. 130--><p class="noindent">  
+                                                        </p><!--l. 131--><p class="noindent"><img src="directionFields5x.png" alt="PIC" class="graphics" width="137" height="113"/><!--tex4ht:graphics  
+name="directionFields5x.png" src="MCC.eps"  
+-->                                           
+</p><!--l. 135--><p class="noindent"><img src="directionFields6x.png" alt="PIC" class="graphics" width="137" height="113"/><!--tex4ht:graphics  
+name="directionFields6x.png" src="MCD.eps"  
+-->
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">First note that <script type="math/tex">\frac {dy}{dx}=0</script> along the line <script type="math/tex">y=2x</script>. This rules out the direction fields
+in A and B, but appears to be the case for the direction fields in C and D. Next
+note that in the second quadrant, <script type="math/tex">y > 0</script> and <script type="math/tex">x < 0</script> implies that <script type="math/tex">y-2x > 0</script>, so that the direction
+field must have positive slope. Therefore the correct direction field is the one
+appearing in D. </dd></dl>
+<!--l. 141--><p class="noindent"><img src="directionFields7x.png" alt="PICT"/>
+                                                                  
+
+                                                                  
+</p>
+</div><hr class="endfigure"/>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en"><head> <title>Cross Products</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="crossProducts.tex"/> 
+<meta name="author" content="Jim Talamo and Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute cross products between $2$ and $3$-dimensional vectors."/> 
+<meta name="learning-outcome" content="Answer conceptual questions about dot products, cross products, and projections."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="87d1b189bf2c7842b9ba4b758acec428155eb2f9 recitation/calculus2/crossProducts/crossProducts.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Suppose that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are three dimensional, nonzero vectors and let <script type="math/tex">\dotp </script> denote the vector
+dot product and <script type="math/tex">\cross </script> denote the vector cross product. Determine whether the following
+quantities are scalars, vectors, or undefined.
+<!--l. 51--><p class="noindent">Suppose that <script type="math/tex">\vec {u} = \vector {1,-1,0}</script> and <script type="math/tex">\vec {v} = \vector {0,2,1}</script>.
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">(\vec {u} \dotp \vec {v})+\vec {u}</script>               </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-2" class="td11"> II. <script type="math/tex">(proj_{\vec {u}} \vec {v}) \cross \vec {v}</script>.         </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-3" class="td11"> III. <script type="math/tex">(\vec {u} \cross \vec {v}) \dotp \vec {u}</script>  </td></tr><tr class="vspace" style="font-size:8.61108pt"><td> </td><td> </td><td> </td></tr><tr style="vertical-align:baseline;" id="TBL-1-2-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-1" class="td11"> IV.  <script type="math/tex">(scal_{\vec {v}} \vec {u}) \dotp \vec {v}</script> </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-2" class="td11"> V.  <script type="math/tex">\frac {\vec {u}}{\vec {v}} \cross \vec {v}</script> </td><td style="white-space:nowrap; text-align:left;" id="TBL-1-2-3" class="td11"> VI.  <script type="math/tex">proj_{\vec {u} \dotp \vec {v}} \vec {u}</script></td>
+</tr></tbody></table>
+</div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Since <script type="math/tex">\vec {u} \dotp \vec {v}</script> is a scalar and <script type="math/tex">\vec {u}</script> is a vector, this quantity is undefined.
+<!--l. 61--><p class="noindent">II. This quantity is a vector.
+</p><!--l. 63--><p class="noindent">III. This quantity is a scalar.
+</p><!--l. 65--><p class="noindent">IV. Since <script type="math/tex">scal_{\vec {v}} \vec {u}</script> is a scalar, this quantity is undefined.
+</p><!--l. 67--><p class="noindent">V. The object <script type="math/tex">\frac {\vec {u}}{\vec {v}}</script> is undefined, so the quantity is also undefined.
+</p><!--l. 69--><p class="noindent">VI. Since <script type="math/tex">\vec {u} \dotp \vec {v}</script> is a scalar, this quantity is undefined. </p></dd></dl>
+<!--l. 70--><p class="noindent"><img src="crossProducts0x.png" alt="PICT"/>
+</p>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Suppose that <script type="math/tex">\vec {u} = \vector {1,-1,0}</script> and <script type="math/tex">\vec {v} = \vector {0,2,1}</script>.
+     <ul class="itemize1">
+     <li class="itemize">Find <script type="math/tex">\vec {u} \cross \vec {v}</script>.
+     </li>
+     <li class="itemize">Check whether <script type="math/tex">\vec {u} \cross \vec {v}</script> is orthogonal to <script type="math/tex">\vec {u}</script>. Is it orthogonal to <script type="math/tex">\vec {v}</script>?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. We compute
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \vec {u} \cross \vec {v} = \left <-1 \cdot 1 - 0 \cdot 2, -(1 \cdot 1- 0 \cdot 0), 1 \cdot 2 - (-1) \cdot 0\right > = \left <-1,-1,2\right >. </script>
+<!--l. 89--><p class="noindent">II. Taking the dot product of our answer to part I. with <script type="math/tex">\vec {u}</script>, we obtain
+                                 <script type="math/tex; mode=display"> (\vec {u} \cross \vec {v}) \dotp \vec {u} = \left <-1,-1,2\right > \dotp \left <1,-1,0\right > = -1 \cdot 1 + (-1) \cdot (-1) + 2 \cdot 0 = 0. </script>
+ Therefore <script type="math/tex">\vec {u} \cross \vec {v}</script> is orthogonal to <script type="math/tex">\vec {u}</script>. Similarly, it is orthogonal to <script type="math/tex">\vec {v}</script>. </p></dd></dl>
+<!--l. 94--><p class="noindent"><img src="crossProducts1x.png" alt="PICT"/>
+</p>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a> Let <script type="math/tex">\vec {u} = \vector {0,4,5}</script> and <script type="math/tex">\vec {v} =\vector {-1,0,2}</script>.
+     <ul class="itemize1">
+     <li class="itemize">Find a vector <script type="math/tex">\vec {w}</script> with magnitude 4 that is <em>orthogonal</em> to <script type="math/tex">\vec {u}</script>.
+     </li>
+     <li class="itemize">Find a vector <script type="math/tex">\vec {w}</script> with magnitude 4 that is <em>parallel</em> to <script type="math/tex">\vec {u}</script>.
+     </li></ul>
+<div class="free-response" id="problem4"><a id="x1-2002r4"></a> I. Since <script type="math/tex">\vec {u}</script> lies in the <script type="math/tex">yz</script>-plane, any vector of the form <script type="math/tex">\vector {a,0,0}</script> is orthogonal to it. In particular,
+the vector <script type="math/tex">\vector {4,0,0}</script> has magnitude <script type="math/tex">4</script>.
+<!--l. 113--><p class="noindent">II. Any vector of the form <script type="math/tex">a \vec {u}</script> is parallel to <script type="math/tex">\vec {u}</script>. In particular, the vector
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \frac {4}{\left |\vec {u}\right |} \vec {u} = \frac {4}{\sqrt {4^2 + 5^2}} \vector {0,4,5} = \frac {4}{41}\vector {0,4,5} </script>
+ has magnitude <script type="math/tex">4</script>.
+</p></div>
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2003r5"></a> Find the area of the parallelogram below.
+<div class="center">
+<!--l. 124--><p class="noindent">
+</p><!--l. 125--><p class="noindent"><object data="crossProducts-1.svg" width="279.1401 " height="248.11353 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object></p></div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The parallelogram is spanned by <script type="math/tex">\vector {2,1}</script> and <script type="math/tex">\vector {1,2}</script>, so its area is given by
+                                 <script type="math/tex; mode=display"> \left |\vector {2,1,0} \cross \vector {1,2,0}\right | = 3. </script>
+ </dd></dl>
+<!--l. 162--><p class="noindent"><img src="crossProducts2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-2004r6"></a> Let <script type="math/tex">\vec {u} = \vector {-2,5,0}</script> and <script type="math/tex">\vec {v} = \vector {0,-1,2}</script>.
+                                                                  
+
+                                                                  
+     <ul class="itemize1">
+     <li class="itemize">Find a vector <script type="math/tex">\vec {p}</script> parallel to <script type="math/tex">\vec {v}</script> and a vector <script type="math/tex">\vec {n}</script> orthogonal to <script type="math/tex">\vec {v}</script> so that <script type="math/tex">\vec {u} = \vec {p} + \vec {n}</script>.
+     </li>
+     <li class="itemize">Find a vector orthogonal to both <script type="math/tex">\vec {p}</script> and <script type="math/tex">\vec {n}</script>.
+     </li>
+     <li class="itemize">Let <script type="math/tex">\vec {w} = \vector {-6,2,-4}</script>. Find constants <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script> so <script type="math/tex">\vec {w} = a\vec {p}+b\vec {n}+c\vec {p} \times \vec {n}</script>.
+     </li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Let
+                                 <script type="math/tex; mode=display"> \vec {p} = proj_\vec {v} \vec {u} = \frac {\vec {u}\dotp \vec {v}}{\left |\vec {v}\right |^2} \vec {v} = -\frac {5}{5} \vector {0,-1,2} = \vector {0,1,-2}. </script>
+ Then <script type="math/tex">\vec {p}</script> is parallel to <script type="math/tex">\vec {v}</script>,
+                                 <script type="math/tex; mode=display"> \vec {n} = \vec {u} - \vec {p} = \vector {-2,5,0} - \vector {0,1,-2} = \vector {-2,4,2}. </script>
+ is orthogonal to <script type="math/tex">\vec {v}</script>, and <script type="math/tex">\vec {u} = \vec {p} + \vec {n}</script>.
+<!--l. 188--><p class="noindent">II. A vector which is orthogonal to both <script type="math/tex">\vec {p}</script> and <script type="math/tex">\vec {n}</script> is given by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \vec {p} \times \vec {n} = \vector {10,4,2}. </script>
+</p><!--l. 193--><p class="noindent">III. We wish to find constants <script type="math/tex">a</script>, <script type="math/tex">b</script> and <script type="math/tex">c</script> such that
+                                 <script type="math/tex; mode=display"> \vector {-6,2,-4} = a \vector {0,1,-2} + b \vector {-2,4,2} + c \vector {10,4,2}. </script>
+ This can be written as a system of three linear equations in three unknowns:
+</p><script type="math/tex; mode=display"> \begin{align*} 
+-6 &= -2b + 10c \\
+2 &= a + 4b + 4c \\
+-4 &= -2a + 2b + 2c.
+\end{align*}</script>
+<!--l. 203--><p class="noindent">This could be solved via the usual methods, although it would require some
+tedious algebra. On the other hand, a more clever solution is to realize that <script type="math/tex">\vec {p}</script>, <script type="math/tex">\vec {n}</script>
+and <script type="math/tex">\vec {p} \times \vec {n}</script> are mutually orthogonal. This means we can solve for the constants
+by taking dot products; that is, dotting both sides of the equation with <script type="math/tex">\vec {p}</script>
+yields
+                                 <script type="math/tex; mode=display"> \vec {w} \dotp \vec {p} = (a\vec {p}+b\vec {n}+c\vec {p} \times \vec {n})\dotp \vec {p} = a \left |\vec {p}\right |^2. </script>
+ Therefore
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \vector {-6,2,-4} \dotp \vector {0,1,-2} = a \vec {p} \dotp \vec {p} + b \vec {n} \dotp \vec {p} + c (\vec {p} \times \vec {n})\dotp \vec {p} = a \left |\vec {p}\right |^2 + b \cdot 0 + c \cdot 0, </script>
+ or <script type="math/tex">10 = a \cdot 5</script>. Therefore <script type="math/tex">a=2</script>.
+</p><!--l. 213--><p class="noindent">Similarly, we dot with <script type="math/tex">\vec {n}</script> to obtain
+                                 <script type="math/tex; mode=display"> \vec {w} \dotp \vec {n} = b \left |\vec {n}\right |^2 \Rightarrow 12 = b \cdot 24, </script>
+ hence <script type="math/tex">b = 1/2</script>. Finally, dotting with <script type="math/tex">\vec {p} \times \vec {n}</script> yields
+                                 <script type="math/tex; mode=display"> \vec {w} \dotp (\vec {p} \times \vec {n}) = c \cdot \left |\vec {p} \times \vec {n} \right |^2 \Rightarrow -60 = c \cdot 120, </script>
+ so that <script type="math/tex">c = -1/2</script>. </p></dd></dl>
+<!--l. 222--><p class="noindent"><img src="crossProducts3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2005r7"></a> Suppose that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are nonzero three dimensional vectors. Show that <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are
+parallel if and only if <script type="math/tex">\vec {u} \cross (\vec {u} \cross \vec {v}) = \vec {0}</script>.
+                                                                  
+
+                                                                  
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Recall that, in general, <script type="math/tex">\vec {u} \times \vec {v} = \vec {0}</script> if and only if <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are parallel. Therefore <script type="math/tex">\vec {u} \cross (\vec {u} \cross \vec {v}) = \vec {0}</script>
+if and only if <script type="math/tex">\vec {u}</script> is parallel to <script type="math/tex">\vec {u} \cross \vec {v}</script>. On the other hand, <script type="math/tex">\vec {u} \cross \vec {v}</script> and <script type="math/tex">\vec {u}</script> are always perpendicular.
+It follows that <script type="math/tex">\vec {u} \cross \vec {v}</script> is both perpendicular and parallel to the same vector, and it
+must therefore be the case that <script type="math/tex">\vec {u} \cross \vec {v} = \vec {0}</script>. By the first comment, this is the case if and
+only if <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are parallel. </dd></dl>
+<!--l. 230--><p class="noindent"><img src="crossProducts4x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-2006r8"></a> Let <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> be nonzero <script type="math/tex">3</script>-dimensional vectors. Determine whether the following
+statements are true or false.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">|\vec {u} \cross \vec {v}| = |\vec {v} \cross \vec {u}|</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">proj_{\vec {v}} (\vec {u} \cross \vec {v}) = \vec {0}</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">If <script type="math/tex">\hat {u}</script> and <script type="math/tex">\hat {v}</script> are unit vectors, then <script type="math/tex">\hat {u} \cross \hat {v}</script> is a unit vector.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">(proj_{\vec {v}} \vec {u}) \cross \vec {u} = \vec {0}</script>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">If <script type="math/tex">|\vec {u} \cross \vec {v}| = |\vec {u}||\vec {v}|</script>, then <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are orthogonal.</dd></dl>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Switching the order in a cross product only changes the sign of the result,
+     so this statement is true.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">This statement is true, since <script type="math/tex">\vec {u} \times \vec {v}</script> is perpendicular to <script type="math/tex">\vec {v}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">This is false, since (in general) <script type="math/tex">\left |\vec {u} \times \vec {v}\right | = \left |\vec {u}\right | \cdot \left |\vec {v} \right | \cdot \sin \theta </script>, where <script type="math/tex">\theta </script> is the interior angle between the
+     vectors. The claim therefore fails if <script type="math/tex">\hat {u}</script> and <script type="math/tex">\hat {v}</script> are not orthogonal.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">This statement is false; for example, it fails when <script type="math/tex">\vec {u} = \vector {1,1,0}</script> and <script type="math/tex">\vec {v} = \vector {1,0,0}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">This statement is true. If <script type="math/tex">|\vec {u} \cross \vec {v}| = |\vec {u}||\vec {v}|</script>, then the interior angle <script type="math/tex">\theta </script> between <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> must be
+     <script type="math/tex">\theta = \pi /2</script>, in which case <script type="math/tex">\vec {u}</script> and <script type="math/tex">\vec {v}</script> are orthogonal.</dd></dl>
+                                                                  
+
+                                                                  
+</dd></dl>
+<!--l. 254--><p class="noindent"><img src="crossProducts5x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html><html lang="en"><head> <title>Improper  Integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="improperIntegrals.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Recognize when a definite integral is improper."/> 
+<meta name="learning-outcome" content="Determine whether an improper integral converges or diverges."/> 
+<meta name="learning-outcome" content="Evaluate convergent improper integrals."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="812f868d068d78b6ecca760b2a7f0551318cbccf recitation/calculus2/improperIntegrals/improperIntegrals.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Determine whether the following integrals are improper.
+<div class="center">
+<!--l. 51--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/><col id="TBL-1-4"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\int _{-1}^1 \frac {1}{x-2} \d x</script>       II. <script type="math/tex">\int _{-1}^2 \frac {1}{x-2} \d x</script>       III. <script type="math/tex">\int _1^\infty \d x</script>       IV. <script type="math/tex">\int _1^3 \sec (x) \d x</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> I. This integral is not improper, since the integrand function is continuous on the
+closed interval <script type="math/tex">[-1,1]</script>.
+<!--l. 61--><p class="noindent">II. This integral is improper, since <script type="math/tex">\lim _{x \rightarrow 2^-} \frac {1}{x-2} = -\infty </script>.
+</p><!--l. 63--><p class="noindent">III. This integral is improper, since one of the limits of integration is <script type="math/tex">\infty </script>.
+</p><!--l. 65--><p class="noindent">IV. This integral is improper, since <script type="math/tex">y=\sec (x)</script> has a vertical asymptote at <script type="math/tex">x = \frac {\pi }{2}</script> and this value is
+contained in the region of integration.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Consider the integral
+                                 <script type="math/tex; mode=display"> \int _{-1}^1 \frac {1}{x} \d x. </script>
+ A student evaluates the integral using the Fundamental Theorem of Calculus to
+obtain
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _{-1}^1 \frac {1}{x} \d x = \eval { \ln |x| }_{-1}^1 = \ln |1| - \ln |-1| = \ln (1) - \ln (1) = 0. </script>
+ Is the student’s work correct? If not, which step in the calculation was
+unjustified?
+</div>
+<div class="free-response" id="problem4"><a id="x1-1004r4"></a> The student is not correct. One hypothesis of the Fundamental Theorem of Calculus
+is that the integrand is continuous over the region of integration. That is not the case
+here, as <script type="math/tex">y=\frac {1}{x}</script> has a vertical asymptote at <script type="math/tex">x=0</script>, which lies within the region of integration. This
+integral is improper, so more sophisticated methods must be used to evaluate it or to
+determine that it diverges.
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Evaluate the improper integrals.
+<div class="center">
+<!--l. 89--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-2" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-2-1g"><col id="TBL-2-1"/><col id="TBL-2-2"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-2-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-2-1-1" class="td11"> I. <script type="math/tex">\int _0^\infty \frac {2x-4}{(x^2+1)(2x+1)} \d x</script>                II. <script type="math/tex">\int _{-\infty }^0 x e^x \d x</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem6"><a id="x1-2002r6"></a> I. The partial fraction decomposition of the integrand is
+                                 <script type="math/tex; mode=display"> \frac {2x-4}{(x^2+1)(2x+1)} = \frac {Ax+B}{x^2+1} + \frac {C}{2x+1}. </script>
+ Clearing denominators, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> 2x-4 = (Ax+B)(2x+1) + C(x^2+1) = (2A+C)x^2 + (A+2B)x+(B+C). </script>
+ Comparing terms of equal degree, we have <script type="math/tex; mode=display"> \begin{align*} 
+2A + C &= 0 \\
+A + 2B &= 2 \\
+B + C &= -4.
+\end{align*}</script>
+<!--l. 111--><p class="noindent">Solving these equations, we have <script type="math/tex">A=2</script>, <script type="math/tex">B=0</script> and <script type="math/tex">C=-4</script>, so that
+                                 <script type="math/tex; mode=display"> \frac {2x-4}{(x^2+1)(2x+1)} = \frac {2x}{x^2+1} - \frac {4}{2x+1}. </script>
+ Thus,  for  any  <script type="math/tex">b \geq 0</script>,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^b \frac{2x-4}{(x^2+1)(2x+1)}  \d x &= \int_0^b \frac{2x}{x^2+1} - \frac{4}{2x+1} \d x \\
+&= \eval{\ln |x^2+1| - 2\ln |2x+1|}_0^b \\
+&= \ln (b^2+1) - 2 \ln (2b+1) - \ln 1 + 2 \ln 1 \\
+&= \ln (b^2+1) - 2 \ln (2b+1).
+\end{align*}</script>
+<!--l. 122--><p class="noindent">To evaluate the improper integral, we take the limit as <script type="math/tex">b\rightarrow \infty </script>. Note that the form of this
+limit will be <script type="math/tex">\infty - \infty </script>, so we will exploit log rules to derive the answer. The limit is given by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{b\rightarrow \infty} \ln (b^2+1) - 2 \ln (2b+1) &= \lim_{b\rightarrow \infty} \ln \frac{b^2+1}{(2b+1)^2} \\
+&= \ln \left(\lim_{b\rightarrow \infty} \frac{b^2+1}{(2b+1)^2}\right) \\
+&= \ln \frac{1}{4}.
+\end{align*}</script>
+<!--l. 128--><p class="noindent">The second-to-last equality uses the continuity of the natural logarithm function and
+the last equality uses limit rules for evaluating rational functions of polynomials.
+Therefore
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _0^\infty \frac {2x-4}{(x^2+1)(2x+1)} \d x = \ln \frac {1}{4}. </script>
+</p><!--l. 133--><p class="noindent">II. For any number <script type="math/tex">b \geq 0</script>, we evaluate the integral using integration by parts with <script type="math/tex">u=x</script>, <script type="math/tex">\d u = \d x</script>, <script type="math/tex">\d v = e^x \d x</script> and <script type="math/tex">v = e^x</script> as
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int_{-b}^0 x e^x \d x &= \eval{x e^x}_{-b}^0 - \int_{-b}^0 e^x \d x \\
+&= \eval{x e^x - e^x}_{-b}^0 \\
+&= 0 \cdot e^0 - e^0 - (-b)e^{-b} + e^{-b} \\
+&= b e^{-b} + e^{-b} - 1.
+\end{align*}</script>
+<!--l. 140--><p class="noindent">To evaluate the improper integral, we take the limit as <script type="math/tex">b \rightarrow \infty </script>. The term <script type="math/tex">e^{-b}</script> approaches zero
+and the term <script type="math/tex">-1</script> is constant. On the other hand, the limit of <script type="math/tex">b e^{-b}</script> is of the form <script type="math/tex">\infty \cdot 0</script>, so we
+rewrite the limit as
+                                 <script type="math/tex; mode=display"> \lim _{b\rightarrow \infty }b e^{-b} = \lim _{b\rightarrow \infty } \frac {b}{e^b} = \lim _{b\rightarrow \infty } \frac {1}{e^b} = 0. </script>
+ The second equality follows from an application of L’Hopital’s rule. We conclude
+that
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _{-\infty }^0 x e^x \d x = -1. </script>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

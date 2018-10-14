@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head> <title>Breaking  math</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateBreakingMath.tex"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="3259c66cab19c32a72ce9a67e602d0045c151ff4 recitation/calculus3/meeting11/collaborateBreakingMath.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">Two calculus students attempt to “break” math.
+</p></div>   <div class="maketitle"></div>
+<!--l. 16--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p><!--l. 19--><p class="noindent">Check out this dialogue between two calculus students (based on a true
+story):
+     </p><dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Riley, I have something very important to say.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Yeah? Hit me with it.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I think I just broke math.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">I’ve suspected for ages that all this calculus stuff was razzmatazz. Lay it
+     on me.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Consider the vector field: <script type="math/tex; mode=display"> \vector {\frac {-y}{x^2+y^2},\frac {x}{x^2+y^2}} </script>
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Got it. It looks like a whirlpool.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! Now compute its curl.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">OK–I get zero curl.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! Now consider Green’s Theorem.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">You mean: <script type="math/tex; mode=display"> \iint _R \curl \vec {F} \d A = \oint _{C} \vec {F}\dotp \d \vec {p} </script> What’s <script type="math/tex">R</script>? What’s <script type="math/tex">C</script>?
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Let <script type="math/tex">R</script> be the unit disk centered at the origin.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">OK, so <script type="math/tex">C</script> is the unit circle centered at the origin.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Right. Now here’s the deal…The left-hand side of the equation is zero
+     because the curl of our vector field is zero.
+                                                                  
+
+                                                                  
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Oh. And the right-hand side of the equation cannot be zero because our
+     vector field looks like a whirlpool.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">And now we have zero equals something not zero, and kablamy, math
+     is in ruins.</dd></dl>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> What just happened? Explain why Devin and Riley think math is broken. Try to
+take it step-by-step.
+</div>
+<!--l. 55--><p class="noindent">Let’s investigate further. To really understand this, we’re going to have to check each
+of their claims.
+</p>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-66r2"></a> Consider the vector field <script type="math/tex; mode=display"> \vector {\frac {-y}{x^2+y^2},\frac {x}{x^2+y^2}} </script> Plot some vectors on the grid below. Focus on getting the
+directions of the vectors correct, and don’t worry to much about the magnitudes. <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="collaborateBreakingMath-2.svg" width="293.73463 " height="243.81287 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Does it look like a “whirlpool?”
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-67r3"></a> Letting <script type="math/tex">\vec {F}(x,y) = \vector {\frac {-y}{x^2+y^2},\frac {x}{x^2+y^2}}</script>, explain why someone might believe that <script type="math/tex; mode=display"> \oint _{C} \vec {F}\dotp \d \vec {p} </script> is nonzero. No computation are
+necessary at this point.
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-68r4"></a> Parametrize the unit circle <script type="math/tex">U</script> centered at the origin and compute: <script type="math/tex; mode=display"> \oint _{U} \vec {F}\dotp \d \vec {p} </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-69r5"></a> Parametrize a circle <script type="math/tex">C</script> of radius <script type="math/tex">r</script> centered at the origin and compute: <script type="math/tex; mode=display"> \oint _{C} \vec {F}\dotp \d \vec {p} </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-70r6"></a> As a gesture of friendship, we reveal that:
+<script type="math/tex; mode=display"> \begin{align*} 
+    \grad \arctan(y/x) &= \vector{\frac{-y}{x^2+y^2},\frac{x}{x^2+y^2}}\\
+                                                                  
+
+                                                                  
+    \grad \arctan(-x/y) &= \vector{\frac{-y}{x^2+y^2},\frac{x}{x^2+y^2}}
+  \end{align*}</script>
+<!--l. 117--><p class="noindent">Confirm these equations.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-71r7"></a> Use the Fundamental Theorem of Line Integrals to compute <script type="math/tex; mode=display"> \oint _S \frac {-y}{x^2+y^2}\d x + \frac {x}{x^2+y^2}\d y </script> where <script type="math/tex">S</script> is the square
+with vertices <script type="math/tex">(1,1)</script>, <script type="math/tex">(-1,1)</script>, <script type="math/tex">(-1,-1)</script>, and <script type="math/tex">(1,-1)</script> drawn in a counterclockwise fashion. <div role="article" class="problem-environment hint" id="problem8"><a id="x1-72r8"></a> For the fundamental
+theorem to apply, the chosen path must be in the domain of the potential
+function.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-73r9"></a> Use the Fundamental Theorem of Line Integrals to compute <script type="math/tex; mode=display"> \oint _Q \frac {-y}{x^2+y^2}\d x + \frac {x}{x^2+y^2}\d y </script> where <script type="math/tex">Q</script> is the square
+with vertices <script type="math/tex">(a,a)</script>, <script type="math/tex">(-a,a)</script>, <script type="math/tex">(-a,-a)</script>, and <script type="math/tex">(a,-a)</script> drawn in a counterclockwise fashion, where <script type="math/tex">a>0</script>. <div role="article" class="problem-environment hint" id="problem10"><a id="x1-74r10"></a> For the
+fundamental theorem to apply, the chosen path must be in the domain of the
+potential function.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem11"><a id="x1-75r11"></a> Use the Fundamental Theorem of Line Integrals to compute <script type="math/tex; mode=display"> \oint _Y \frac {-y}{x^2+y^2}\d x + \frac {x}{x^2+y^2}\d y </script> where <script type="math/tex">Y</script> is a
+polygonal path you choose for yourself that contains the point <script type="math/tex">(0,0)</script> in the <strong>interior</strong>.
+A triangle of some sort would probably be easiest. <div role="article" class="problem-environment hint" id="problem12"><a id="x1-76r12"></a> For the fundamental
+theorem to apply, the chosen path must be in the domain of the potential
+function.
+</div>
+</div>
+<!--l. 160--><p class="noindent">At this point, you might suspect that something strange is going on…
+</p>
+<div role="article" class="problem-environment problem" id="problem13"><a id="x1-77r13"></a> Again letting <script type="math/tex">\vec {F}(x,y) = \vector {\frac {-y}{x^2+y^2},\frac {x}{x^2+y^2}}</script>, compute: <script type="math/tex; mode=display"> \curl \vec {F} </script> Is <script type="math/tex">\curl \vec {F}</script> zero? <div role="article" class="problem-environment hint" id="problem14"><a id="x1-78r14"></a> It is not <strong>always</strong> zero.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem15"><a id="x1-79r15"></a> What would you say to Devin and Riley to assure them that mathematics is not
+“broken?”
+</div>
+<!--l. 181--><p class="noindent">
+                                                                  
+
+                                                                  
+</p>
+<h3 class="sectionHead"><a id="x1-1000"></a>The take-away</h3>
+<!--l. 186--><p class="noindent">Here we presented you with a field where the (scalar) curl was zero everywhere
+except at the origin. At the origin the (scalar) curl was undefined; hence, Green’s
+Theorem does not apply.
+</p><!--l. 190--><p class="noindent">What is remarkable is that in this case, where the (scalar) curl is zero except for a
+point, any path <script type="math/tex">C</script> around the point where the field is undefined will yield the same
+value for: <script type="math/tex; mode=display"> \oint _C \vec {F}\dotp \d \vec {p} </script>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>

@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head> <title>The First Fundamental Theorem of
+                                                                  
+
+                                                                  
+Calculus</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInFirstFundamentalTheoremOfCalculus.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define accumulation functions."/> 
+<meta name="learning-outcome" content="Calculate and evaluate accumulation functions."/> 
+<meta name="learning-outcome" content="State the First Fundamental Theorem of Calculus."/> 
+<meta name="learning-outcome" content="Take derivatives of accumulation functions using the First Fundamental Theorem of Calculus."/> 
+<meta name="learning-outcome" content="Use accumulation functions to find information about the original function."/> 
+<meta name="learning-outcome" content="Understand the relationship between the function and the derivative of its accumulation function."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="d7a6fa4486187e30f04a219eb3ebdbafd14a913a firstFundamentalTheoremOfCalculus/digInFirstFundamentalTheoremOfCalculus.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 16--><p class="noindent">The rate that accumulated area under a curve grows is described identically by that
+curve.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Accumulation functions</h3>
+<!--l. 24--><p class="noindent">While the definite integral computes a signed area, which is a fixed number, there is
+a way to turn it into a function.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a>A given a function <script type="math/tex">f</script>, an <strong>accumulation function</strong> is <script type="math/tex; mode=display"> F(x) = \int _a^x f(t) \d t. </script>
+</div> One thing that you might notice is that an accumulation function seems to have two
+variables: <script type="math/tex">x</script> and <script type="math/tex">t</script>. Let’s see if we can explain this. Consider the following graph: <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="digInFirstFundamentalTheoremOfCalculus-2.svg" width="571.16446 " height="265.35307 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 65--><p class="noindent">An accumulation function <script type="math/tex">F</script> measures the signed area in the region <script type="math/tex">[a,x]</script> between <script type="math/tex">f</script> and the
+<script type="math/tex">t</script>-axis. Hence <script type="math/tex">t</script> is playing the role of a “place-holder” that allows us to evaluate <script type="math/tex">f</script>. On
+the other hand, <script type="math/tex">x</script> is the <strong>specific number</strong> that we are using to bound the region that
+will determine the area between <script type="math/tex">f</script> and the <script type="math/tex">t</script>-axis, and hence the value of <script type="math/tex">F</script>. </p><div role="article" class="problem-environment question" id="problem2"><a id="x1-1002r2"></a> Given <script type="math/tex; mode=display"> F(x) = \int _{-3}^x 4 \d t, </script> what
+is <script type="math/tex">F(5)</script>?  <script type="math/tex; mode=display"> F(5) = \answer {32} </script>
+<div role="article" class="problem-environment question" id="problem3"><a id="x1-1003r3"></a> What is <script type="math/tex">F(-5)</script>?  <script type="math/tex; mode=display"> F(-5) = \answer {-8} </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-1004r4"></a>Consider the following accumulation function for <script type="math/tex">f(x) = x^3</script>. <script type="math/tex; mode=display"> F(x) = \int _{-1}^x t^3 \d t. </script> Considering the interval <script type="math/tex">[-1,1]</script>, where is
+<script type="math/tex">F</script> increasing? Where is <script type="math/tex">F</script> decreasing? When does <script type="math/tex">F</script> have local extrema?
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-1005r5"></a>We can see a graph of <script type="math/tex">f</script> along with the signed area measured by the accumulation function below <div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="digInFirstFundamentalTheoremOfCalculus-4.svg" width="533.49208 " height="256.9307 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+The accumulation function starts off at zero, and then as <script type="math/tex">x</script> grows, <script type="math/tex">F</script> is <span class="word-choice" id="word-choice6"><a id="x1-1006r6"></a><span class="choice  " id="choice1">increasing</span><span class="choice correct " id="choice2">decreasing</span>
+</span> as the function accumulates negatively signed area.
+<!--l. 134--><p class="noindent">However when <script type="math/tex">x>0</script>, <script type="math/tex">F</script> starts to accumulate positively signed area, and hence is <span class="word-choice" id="word-choice7"><a id="x1-1007r7"></a><span class="choice correct " id="choice3">increasing</span><span class="choice  " id="choice4">decreasing</span>
+</span>. Thus <script type="math/tex">F</script> is increasing on <script type="math/tex">(0,1)</script>, decreasing on <script type="math/tex">(-1,0)</script> and hence has a local minimum at
+<script type="math/tex">(0,0)</script>.
+</p></div>
+</div>
+<!--l. 142--><p class="noindent">Working with the accumulation function leads us to a question, what is <script type="math/tex; mode=display"> \int _a^x f(t) \d t </script> when <script type="math/tex">x< a</script>?
+The general convention is that <script type="math/tex; mode=display"> \int _a^b f(t) \d t = -\int _b^a f(t) \d t. </script> With this in mind, let’s consider one more
+example.
+</p>
+<div class="theorem-like problem-environment example" id="problem8"><a id="x1-1008r8"></a>Consider the following accumulation function for <script type="math/tex">f(x) = x^3</script>. <script type="math/tex; mode=display"> F(x) = \int _{-1}^x t^3 \d t. </script> Where is <script type="math/tex">F</script> increasing? Where is <script type="math/tex">F</script>
+decreasing? When does <script type="math/tex">F</script> have local extrema? <div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-1009r9"></a>From our previous example, we know
+that <script type="math/tex">F</script> is increasing on <script type="math/tex">(0,1)</script>. Since <script type="math/tex">f</script> continues to be positive at <script type="math/tex">t=1</script> and beyond, <script type="math/tex">F</script> is <span class="word-choice" id="word-choice10"><a id="x1-1010r10"></a><span class="choice correct " id="choice5">increasing</span><span class="choice 
+" id="choice6">decreasing</span>
+</span> on <script type="math/tex">(0,\infty )</script>. On the other hand, we know from our previous example that <script type="math/tex">F</script> is <span class="word-choice" id="word-choice11"><a id="x1-1011r11"></a><span class="choice  " id="choice7">increasing</span><span class="choice correct " id="choice8">decreasing</span>
+                                                                  
+
+                                                                  
+</span> on <script type="math/tex">(-1,0)</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-3"><object data="digInFirstFundamentalTheoremOfCalculus-6.svg" width="533.49751 " height="256.9943 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+For values to the left of <script type="math/tex">t=-1</script>, <script type="math/tex">F</script> is still decreasing, as less and less positively signed area is
+accumulated. Hence <script type="math/tex">F</script> is increasing on <script type="math/tex">(0,\infty )</script>, decreasing on <script type="math/tex">(-\infty ,0)</script> and hence has an absolute
+minimum at <script type="math/tex">(0,0)</script>.
+</div>
+</div> The key point to take from these examples is that an accumulation function <script type="math/tex; mode=display"> F(x) = \int _a^x f(t) \d t </script> is
+increasing precisely when <script type="math/tex">f</script> is positive and is decreasing precisely when <script type="math/tex">f</script> is negative. In
+short, it seems that <script type="math/tex">f</script> is behaving in a similar fashion to <script type="math/tex">F'</script>.
+<h3 class="sectionHead"><a id="x1-2000"></a>The First Fundamental Theorem of Calculus</h3>
+<!--l. 212--><p class="noindent">Let <script type="math/tex">f</script> be a continuous function on the real numbers and consider <script type="math/tex; mode=display"> F(x) = \int _a^x f(t)\d t. </script> From our previous
+work we know that <script type="math/tex">F</script> is increasing when <script type="math/tex">f</script> is positive and <script type="math/tex">F</script> is decreasing when <script type="math/tex">f</script> is
+negative. Moreover, with careful observation, we can even see that <script type="math/tex">F</script> is concave up
+when <script type="math/tex">f'</script> is positive and that <script type="math/tex">F</script> is concave down when <script type="math/tex">f'</script> is negative. Thinking
+about what we have learned about the relationship of a function to its first
+and second derivatives, it is not too hard to guess that there must be a
+connection between <script type="math/tex">F'</script> and the function <script type="math/tex">f</script>. This is a good guess, check out our next
+theorem:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem12"><a id="x1-2001r12"></a><span class="theorem-like-title">First Fundamental Theorem of Calculus</span> Suppose that <script type="math/tex">f</script> is continuous on the real
+numbers and let <script type="math/tex; mode=display"> F(x)=\int _a^x f(t)\d t. </script> Then <script type="math/tex">F'(x)=f(x)</script>.
+</div> The First Fundamental Theorem of Calculus says that an accumulation
+function of <script type="math/tex">f</script> is an antiderivative of <script type="math/tex">f</script>. Another way of saying this is: <div class="image-environment" role="img" aria-labelledby="image-alt-4"><object data="digInFirstFundamentalTheoremOfCalculus-7.svg" width="271.16042 " height="51.43388 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+This could be read as:
+                                                                  
+
+                                                                  
+     <div class="quote">
+     <!--l. 244--><p class="noindent"><strong>The  <span style="color:#004DB2;">rate</span>  that  <span style="color:#007D4D;">accumulated  area</span>  under  a  <span style="color:#56008F;">curve</span>
+     grows is described identically by that curve.</strong></p></div>
+<!--l. 247--><p class="noindent">Now that we are working with accumulation functions, let’s see what happens when
+we compose them with other functions.
+</p>
+<div class="theorem-like problem-environment example" id="problem13"><a id="x1-2002r13"></a>Find the derivative of <script type="math/tex; mode=display"> F(x) = \int _2^{x^2} \ln t \d t. </script> <div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-2003r14"></a>Consider <script type="math/tex; mode=display"> G(x) = \int _2^x \ln t \d t </script> and set <script type="math/tex">h(x) = \answer [given]{x^2}</script>. Now <script type="math/tex; mode=display"> F(x) = G(h(x)). </script> The First Fundamental Theorem of
+Calculus states that <script type="math/tex">G'(x) = \ln x</script>. The chain rule gives us <script type="math/tex; mode=display"> \begin{align*} 
+         F'(x) &= G'(h(x)) h'(x) \\
+      &= \ln (h(x)) h'(x) \\
+      &= \answer[given]{\ln (x^2) 2x}.
+    \end{align*}</script>
+<!--l. 271--></div>
+</div>
+<!--l. 274--><p class="noindent">Let’s practice this once more.
+</p>
+<div class="theorem-like problem-environment example" id="problem15"><a id="x1-2004r15"></a>Find the derivative of <script type="math/tex; mode=display"> F(x) = \int _{\cos x}^5 t^3\d t. </script> <div class="theorem-like problem-environment explanation" id="problem16"><a id="x1-2005r16"></a>Consider <script type="math/tex; mode=display"> G(x) = - \int _5^x t^3 \d t </script> and set <script type="math/tex">h(x) = \answer [given]{\cos (x)}</script>. Now <script type="math/tex; mode=display"> F(x) = G(h(x)). </script> The First Fundamental Theorem of
+Calculus states that <script type="math/tex">G'(x) = -x^3</script>. The chain rule gives us <script type="math/tex; mode=display"> \begin{align*} 
+         F'(x) &= G'(h(x))h'(x)\\
+      &=-h(x)^3 h'(x)\\
+      &=\answer[given]{-\cos^3(x) (-\sin(x))}.
+    \end{align*}</script>
+<!--l. 297--></div>
+</div> <div class="theorem-like problem-environment example" id="problem17"><a id="x1-2006r17"></a>Given the graph of a function <script type="math/tex">f</script> on the interval <script type="math/tex">[-1,5]</script>, sketch the graph of the accumulation function <script type="math/tex; mode=display"> F(x) = \int _{-1}^x f(t) \d t, \hspace {0.2in} -1\le x\le 5. </script>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-5"><object data="digInFirstFundamentalTheoremOfCalculus-9.svg" width="533.47437 " height="248.42284 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem18"><a id="x1-2007r18"></a>First, we evaluate <script type="math/tex">F</script> at some significant points. <script type="math/tex; mode=display"> F(-1) = \int _{-1}^{-1} f(t) \d t=\answer [given]{0}. </script> <script type="math/tex; mode=display"> F(0) = \int _{-1}^{0} f(t) \d t=\answer [given]{-1.5}. </script> <script type="math/tex; mode=display"> F(1) = \int _{-1}^{1} f(t) \d t=\answer [given]{-2}. </script> <script type="math/tex; mode=display"> F(3) = \int _{-1}^{3} f(t) \d t=\answer [given]{0}. </script> <script type="math/tex; mode=display"> F(4) = \int _{-1}^{4} f(t) \d t=\answer [given]{2}. </script> <script type="math/tex; mode=display"> F(5) = \int _{-1}^{5} f(t) \d t=\answer [given]{4}. </script>
+<!--l. 351--><p class="noindent">Since <script type="math/tex">F'(x)=f(x)</script>, it follows that the function <script type="math/tex">F</script> is increasing on the interval <script type="math/tex; mode=display"> \left (\answer [given]{1},\answer [given]{5}\right ) </script> and decreasing on
+the interval <script type="math/tex; mode=display"> \left (\answer [given]{-1},\answer [given]{1}\right ). </script> Since the function <script type="math/tex">f</script>, the derivative of <script type="math/tex">F</script>, is increasing on <script type="math/tex">(1,3)</script>, <script type="math/tex">F</script> is
+concave up on the interval <script type="math/tex; mode=display"> \left (\answer [given]{1},\answer [given]{3}\right ). </script> Since <script type="math/tex">f</script> is constant on the interval <script type="math/tex">[3,5]</script>, <script type="math/tex">F</script> is linear on
+<script type="math/tex">[3,5]</script>.
+</p><!--l. 365--><p class="noindent">The function <script type="math/tex">F</script> has a local and global minimum at <script type="math/tex; mode=display"> x=\answer [given]{1}, </script> and the global maximum at <script type="math/tex; mode=display"> x=\answer [given]{5}. </script> Now
+we are ready to sketch the graph of <script type="math/tex">F</script>, on the same set of axes as the graph of <script type="math/tex">f</script>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-6"><object data="digInFirstFundamentalTheoremOfCalculus-11.svg" width="533.47437 " height="247.8792 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+</div>
+</div>
+<!--l. 409--><p class="noindent">What if <script type="math/tex">f</script> is the velocity function for an object moving along a straight line, i.e. <script type="math/tex">f(t)=v(t)</script>,
+                                                                  
+
+                                                                  
+<script type="math/tex">a\le t\le b</script>?
+</p><!--l. 411--><p class="noindent">What is the meaning of an accumulation function in that case?
+</p><!--l. 414--><p class="noindent">We use different variables in that case, since we want <script type="math/tex">F</script> to be a function of time, <script type="math/tex">t</script>.
+With this adjustment, we define the accumulation function <script type="math/tex">F</script> as follows. <script type="math/tex; mode=display"> F(t)=\int _a^t v(z)\d z. </script> Since the
+integral <script type="math/tex; mode=display"> \int _a^t v(z)\d z </script> gives the displacement of the object on the time interval <script type="math/tex">[a,t]</script>, it follows that <script type="math/tex; mode=display"> s(t)-s(a)= \int _a^t v(z)\d z, </script>
+where <script type="math/tex">s(t)</script> gives the position of the object at the time <script type="math/tex">t</script>. If we differentiate this equation
+with respect to <script type="math/tex">t</script>, we get that <script type="math/tex; mode=display"> s'(t)=\dd t \int _a^t v(z)\d z. </script> Since <script type="math/tex">s'(t)=v(t)</script>, we have that <script type="math/tex; mode=display"> v(t)=\dd t \int _a^t v(z)\d z. </script> This is the the First Fundamental
+Theorem of Calculus!
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>

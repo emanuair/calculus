@@ -1,0 +1,214 @@
+<!DOCTYPE html><html lang="en"><head> <title>Sequences  as  Functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="sequencesAsFunctions.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Evaluate limits of sequences."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="cb6b1753134e1d13bedb22c4c0d8ebe1fe827661 recitation/calculus2/sequencesAsFunctions/sequencesAsFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Quickly evaluate the limits of the following sequences, with as few explicit
+calculations as possible. In each example, give a quick justification for your answer
+using what you know about growth rates of functions.
+<div class="center">
+<!--l. 50--><p class="noindent">
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">\lim _{n \rightarrow \infty } \frac {(n+2)^3}{(2n+1)(n+2)}</script>    II. <script type="math/tex">\lim _{n \rightarrow \infty } \frac {n^2 + \ln (n+2)-1000}{10n - n^{11/5}}</script>    III. <script type="math/tex">\lim _{n\rightarrow \infty } \frac {5 \cdot 4^n}{(2^n + n^{50})^2}</script>  </td>
+</tr></tbody></table>
+</div></div>
+</div>
+<div class="free-response" id="problem2"><a id="x1-1002r2"></a> We will use growth rate comparisons to quickly evaluate the limits.
+<!--l. 60--><p class="noindent">I. The dominant term in the numerator is <script type="math/tex">n^3</script> and the dominant term in the
+denominator is <script type="math/tex">2n^2</script>, so a growth rate comparison shows that the limit is <script type="math/tex">\infty </script>.
+</p><!--l. 62--><p class="noindent">II. The dominant term in the numerator is <script type="math/tex">n^2</script> and the dominant term in the
+denominator is <script type="math/tex">n^{11/5}</script>. Since <script type="math/tex">\frac {11}{5} > 2</script>, the limit is <script type="math/tex">0</script>.
+</p><!--l. 64--><p class="noindent">III. The only term in the numerator is <script type="math/tex">5 \cdot 4^n</script> and the dominant term in the denominator is
+<script type="math/tex">(2^n)^2 = 4^n</script>. It follows that the limit is <script type="math/tex">5</script>.
+</p></div>
+
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> Determine which of the following statements are true.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">A sequence which has a limit must be bounded and monotonic.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">A sequence which is bounded and monotonic must have a limit.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">If the sequences <script type="math/tex">\{a_n\}</script> and <script type="math/tex">\{b_n\}</script> are both bounded, then the sequence <script type="math/tex">\{a_n + b_n\}</script> must be
+     bounded.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">A sequence which has a limit must be bounded.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">A bounded sequence must have a limit.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">A sequence which takes only finitely many distinct values must have a
+     limit.</dd></dl>
+                                                                  
+
+                                                                  
+</div>
+<div class="free-response" id="problem4"><a id="x1-1010r4"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">This statement is not true. For example, the sequence <script type="math/tex">\left \{\frac {1}{n} \cos (n) \right \}_{n=1}^\infty </script> is not monotonic,
+     but the limit of its terms is <script type="math/tex">0</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">This statement is true (it is an important theorem in the text).
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">This statement is true. If we have bounds <script type="math/tex">A \leq a_n \leq A'</script> and <script type="math/tex">B \leq b_n \leq B'</script> which hold for all <script type="math/tex">n</script>, then <script type="math/tex">A + B \leq a_n + b_n \leq A' + B'</script>
+     for all <script type="math/tex">n</script>. It follows that the sequence <script type="math/tex">\{a_n+b_n\}</script> is bounded.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">This statement is true. Assume that the sequence is indexed as <script type="math/tex">\{a_n\}_{n=1}^\infty </script> and that
+     <script type="math/tex">\lim _{n \rightarrow \infty } a_n = L</script>. Then there exists an index <script type="math/tex">N</script> such that <script type="math/tex">L-1 \leq a_k \leq L+1</script> whenever <script type="math/tex">k \geq N</script>. This shows that the
+    “tail” of the sequence is bounded between <script type="math/tex">L-1</script> and <script type="math/tex">L+1</script>. On the other hand, there
+     are finitely many terms <script type="math/tex">a_1,a_2,\ldots ,a_{N-1}</script> with index less than <script type="math/tex">N</script>, and these finitely many
+     terms must have upper and lower bounds (e.g., the largest number in the
+     finite list is an upper bound for all the terms in the list). Putting these
+     statements together, we see that the sequence <script type="math/tex">\{a_n\}</script> must be bounded.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">The statement is false. For example, consider the sequence defined by <script type="math/tex">a_n = 1</script> if <script type="math/tex">n</script>
+     is even and <script type="math/tex">a_n = -1</script> if <script type="math/tex">n</script> is odd. The sequence is bounded, but doesn’t have a limit.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">The same counterexample used for the previous statement also shows that
+     this statement is false.</dd></dl>
+<!--l. 88--></div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2001r5"></a> Consider the sequence <script type="math/tex">\{a_n\}_{n=1}^\infty </script> defined by the formula
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> a_n = n^2 + 10n -1. </script>
+ Compute the limit
+                                 <script type="math/tex; mode=display"> \lim _{n \rightarrow \infty } \frac {a_{n+1}}{a_n}. </script>
+</div>
+<div class="free-response" id="problem6"><a id="x1-2002r6"></a> Using the method of growth rates comparison, we have
+                                 <script type="math/tex; mode=display"> \lim _{n \rightarrow \infty } \frac {a_{n+1}}{a_n} = \lim _{n \rightarrow \infty } \frac {(n+1)^2 + 10(n+1) - 1}{n^2 + 10n -1} = 1. </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-2003r7"></a> Consider the sequence <script type="math/tex">\{a_n\}_{n=1}^\infty </script> defined by the formula
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> a_n = \left (\frac {1}{n}\right )^{\ln n}. </script>
+ Compute the limit
+                                 <script type="math/tex; mode=display"> \lim _{n \rightarrow \infty } a_n. </script>
+</div>
+<div class="free-response" id="problem8"><a id="x1-2004r8"></a> Consider the sequence <script type="math/tex">\{b_n\}_{n=1}^\infty </script> defined by the formula
+                                 <script type="math/tex; mode=display"> b_n = \ln a_n = \ln \left (\frac {1}{n}\right )^{\ln n} = \ln n \ln \frac {1}{n}. </script>
+ We know that <script type="math/tex">\lim _{n\rightarrow \infty } \ln n = \infty </script> and <script type="math/tex">\lim _{n\rightarrow \infty } \ln \frac {1}{n} = -\infty </script>, and it follows that <script type="math/tex">\lim _{n\rightarrow \infty } b_n = -\infty </script>. Finally, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \lim _{n\rightarrow \infty } a_n = e^{\lim _{n \rightarrow \infty } b_n} =0. </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem9"><a id="x1-2005r9"></a> Consider the sequences <script type="math/tex">\{a_n\}_{n=1}^\infty </script>, <script type="math/tex">\{b_n\}_{n=1}^\infty </script> and <script type="math/tex">\{s_n\}_{n=1}^\infty </script> defined, respectively, by the formulas
+                                 <script type="math/tex; mode=display"> a_n = \frac {1}{n}, </script>
+                                 <script type="math/tex; mode=display"> b_n = 5 + \sin (n) </script>
+ and
+                                 <script type="math/tex; mode=display"> s_n = \sum _{k=1}^n b_k. </script>
+ Determine which of the following properties each sequence has:
+                                                                  
+
+                                                                  
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">the sequence is bounded
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">the sequence is monotone increasing
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">the sequence is monotone decreasing
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">the sequence has a finite limit</dd></dl>
+</div>
+<div class="free-response" id="problem10"><a id="x1-2010r10"></a> The sequence <script type="math/tex">\{a_n\}</script> is bounded (above by <script type="math/tex">1</script> and below by <script type="math/tex">0</script>), montonone decreasing, and
+therefore must have a finite limit (specifically, <script type="math/tex">0</script>).
+<!--l. 155--><p class="noindent">Since the function <script type="math/tex">f(x)=\sin (x)</script> is bounded by <script type="math/tex">\pm 1</script>, the sequence <script type="math/tex">\{b_n\}</script> is bounded below by <script type="math/tex">4</script> and above by <script type="math/tex">6</script>.
+The sequence is neither monotone increasing nor monotone decreasing (compute the
+terms <script type="math/tex">n=4,5,6</script> to verify this). It has no limit, since the terms realize large oscillations in the
+interval <script type="math/tex">[4,6]</script> indefinitely.
+</p><!--l. 157--><p class="noindent">The sequence <script type="math/tex">\{s_n\}</script> is monotone increasing, since all of the terms <script type="math/tex">b_n</script> are positive. It is
+unbounded, since all of the terms <script type="math/tex">b_n</script> are greater than or equal to <script type="math/tex">4</script>. Since the sequence is
+unbounded, it does not have a finite limit.
+</p></div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

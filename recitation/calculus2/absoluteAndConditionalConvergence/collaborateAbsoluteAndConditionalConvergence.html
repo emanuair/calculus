@@ -1,0 +1,184 @@
+<!DOCTYPE html><html lang="en"><head> <title>Absolute and Conditional Convergence</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateAbsoluteAndConditionalConvergence.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Determine whether a series converges absolutely or conditionally."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="34ee09c9c6120db51853a48b3d789ad4f2766799 recitation/calculus2/absoluteAndConditionalConvergence/collaborateAbsoluteAndConditionalConvergence.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Consider the series <script type="math/tex">\sum _{k=1}^{\infty } \frac {(-1)^k}{k^p}</script>.
+     <ul class="itemize1">
+     <li class="itemize">For which values of <script type="math/tex">p</script> does the series converge?
+     </li>
+     <li class="itemize">For which values of <script type="math/tex">p</script> does the series converge absolutely?
+     </li>
+     <li class="itemize">For which values of <script type="math/tex">p</script> does the series converge conditionally?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The series converges whenever <script type="math/tex">\lim _{k \rightarrow \infty } 1/k^p = 0</script>, and this is the case for all <script type="math/tex">p > 0</script>. The
+series converges absolutely exactly when the series <script type="math/tex">\sum 1/k^p</script> converges. By the <script type="math/tex">p</script>-series
+test, this is the case when <script type="math/tex">p > 1</script>. It follows that the series converges conditionally
+when <script type="math/tex">0 < p \leq 1</script>. </dd></dl>
+<!--l. 56--><p class="noindent"><img src="collaborateAbsoluteAndConditionalConvergence0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> A student is asked to determine if the series <script type="math/tex">\sum _{k=1}^{\infty } \frac {(-1)^k}{2k+1}</script> converges and provides the following
+reasoning.
+     <div class="quote">
+     <!--l. 63--><p class="noindent">We check the series for absolute convergence. Since <script type="math/tex">\sum _{k=1}^{\infty } \left | \frac {(-1)^k}{2k+1} \right | = \sum _{k=1}^{\infty } \frac {1}{2k+1}</script> and we can use
+     the limit comparison test to show <script type="math/tex">\sum _{k=1}^{\infty } \frac {1}{2k+1}</script> diverges, then the original series
+     <script type="math/tex">\sum _{k=1}^{\infty } \frac {(-1)^k}{2k+1}</script> does not converge absolutely. Hence, it diverges.</p></div>
+<!--l. 65--><p class="noindent">Determine if the student is correct or incorrect. If the student is incorrect, provide a
+correct response.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The  student  is  incorrect.  Indeed,  the  Alternating  Series  Test
+implies that the series converges, since the terms meet the hypotheses of the
+test and <script type="math/tex">\lim _{k \rightarrow \infty } 1/(2k+1)</script>. A likely mistake in the student’s reasoning is that they were confused
+about the following (true) statement: If a series converges absolutely, then it
+must converge. The student apparently attempted to apply the converse of this
+statement (if a series does not converge absolutely, then it must diverge), which
+is not true. </dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 68--><p class="noindent"><img src="collaborateAbsoluteAndConditionalConvergence1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> For the following, give an example of a series with the described properties or
+explain why no such series exists.
+     <ul class="itemize1">
+     <li class="itemize">A convergent series <script type="math/tex">\sum _{k=1}^{\infty } a_k</script> for which <script type="math/tex">\sum _{k=1}^{\infty } |a_k|</script> diverges.
+     </li>
+     <li class="itemize">A convergent series <script type="math/tex">\sum _{k=1}^{\infty } |a_k|</script> for which <script type="math/tex">\sum _{k=1}^{\infty } a_k</script> diverges.
+     </li>
+     <li class="itemize">A sequence <script type="math/tex">\{a_k\}</script> of positive terms for which <script type="math/tex">\sum _{k=1}^{\infty } a_k</script> converges conditionally.
+     </li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. A basic example is the alternating harmonic series.
+<!--l. 87--><p class="noindent">II. No such example can exist. If a series converges absolutely, then it must
+converge.
+</p><!--l. 89--><p class="noindent">III. No such example can exist. A series converges conditionally if <script type="math/tex">\sum |a_k|</script> diverges but
+<script type="math/tex">\sum a_k</script> converges. Since all <script type="math/tex">a_k</script> are assumed to be positive, <script type="math/tex">|a_k| = a_k</script> for all <script type="math/tex">k</script>, so it is not possible
+for the series to converge conditionally. </p></dd></dl>
+<!--l. 90--><p class="noindent"><img src="collaborateAbsoluteAndConditionalConvergence2x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2001r4"></a> Determine if the series <script type="math/tex">\sum _{k=1}^\infty \frac {(-1)^k \cdot (k+2)}{k^3+\ln (k) +10k}</script> converges absolutely, converges conditionally, or
+diverges.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We first test for absolute convergence by checking the convergence
+properties of the series
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^\infty \left |\frac {(-1)^k \cdot (k+2)}{k^3+\ln (k) +10k}\right | = \sum _{k=1}^\infty \frac {k+2}{k^3+\ln (k) +10k}. </script>
+ A straightforward application of the limit comparison test, comparing with the
+series <script type="math/tex">\sum 1/k^2</script>, shows that this series converges. We conclude that the series converges
+absolutely. </dd></dl>
+<!--l. 104--><p class="noindent"><img src="collaborateAbsoluteAndConditionalConvergence3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2002r5"></a> Let <script type="math/tex">\{s_n\}</script> denote the sequence of partial sums for the series <script type="math/tex">\sum _{k=1}^\infty a_k</script> and suppose the explicit
+formula <script type="math/tex">s_n</script> is <script type="math/tex">s_n = \frac {\sin (n)}{n^2}.</script>
+     <ul class="itemize1">
+     <li class="itemize">Determine if <script type="math/tex">\sum _{k=1}^{\infty } a_k</script> converges.
+     </li>
+     <li class="itemize">Determine if <script type="math/tex">\sum _{k=1}^{\infty } s_k</script> converges.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The series <script type="math/tex">\sum a_k</script> converges to <script type="math/tex">\lim _{n\rightarrow \infty } s_n = 0</script>, by the definition of series convergence.
+<!--l. 117--><p class="noindent">II. First consider the series
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^{\infty } |s_k| = \sum _{k=1}^{\infty } \left |\frac {\sin (k)}{k^2} \right |. </script>
+ Since <script type="math/tex">|\sin (x)| \leq 1</script> for all <script type="math/tex">x</script>, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \left |\frac {\sin (k)}{k^2} \right | \leq \frac {1}{k^2} </script>
+ for all <script type="math/tex">k</script>. Since the <script type="math/tex">p</script>-Series Test tells us that the series <script type="math/tex">\sum 1/k^2</script> converges, The Direct
+Comparison Test therefore implies that <script type="math/tex">\sum |s_k|</script> converges. It follows that <script type="math/tex">\sum s_k</script> converges
+absolutely, and therefore converges. </p></dd></dl>
+<!--l. 126--><p class="noindent"><img src="collaborateAbsoluteAndConditionalConvergence4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

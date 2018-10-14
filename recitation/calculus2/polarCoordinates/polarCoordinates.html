@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head> <title>Polar  Coordinates</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="polarCoordinates.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Convert between Cartesian and polar coordinates."/> 
+<meta name="learning-outcome" content="Find coordinates of intersection points of polar curves."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="7506749b160c8f1ec22f468198b6114464dd8148 recitation/calculus2/polarCoordinates/polarCoordinates.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Consider the following list of points represented in polar coordinates <script type="math/tex">(r,\theta )</script>:
+                                 <script type="math/tex; mode=display"> (1,\pi /2), \, (-1,\pi /2),\, (1,11\pi /2), \, (1,3\pi /2), \, (-1,5\pi /2). </script>
+ A student claims that, since all of the coordinates are distinct, the points
+represented by the coordinates must all be distinct. Is the student correct?
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The student is not correct. The same point has (infinitely) many
+polar  coordinate  representations.  In  particular,  polar  coordinates  <script type="math/tex">(1,\pi /2)</script>  represent
+the point with Cartesian coordinates <script type="math/tex">(0,1)</script> and the remaining polar coordinates all
+represent the point with Cartesian coordinates <script type="math/tex">(0,-1)</script>. </dd></dl>
+<!--l. 55--><p class="noindent"><img src="polarCoordinates0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a>
+     <ul class="itemize1">
+     <li class="itemize">A point has polar coordinates <script type="math/tex">(r,\theta )=(-10,13\pi /4)</script>. What are the Cartesian coordinates of the
+     point?
+     </li>
+     <li class="itemize">A point has Cartesian coordinates <script type="math/tex">(x,y)=(-2,4)</script>. Give two distinct polar coordinate
+     representations of the point.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The Cartesian coordinates of the point are
+<script type="math/tex; mode=display"> \begin{align*} 
+x&= r \cos \theta = -10 \cos (13\pi/4) = -10 \cdot -\frac{\sqrt{2}}{2} = 5 \sqrt{2}, \\
+y &= r \sin \theta = -10 \sin (13 \pi/ 4) = -10 \cdot -\frac{\sqrt{2}}{2} = 5 \sqrt{2}.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+<!--l. 72--><p class="noindent">II. One polar coordinate representation is given by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+r = \sqrt{x^2 + y^2} = \sqrt{4 + 16} = \sqrt{20}, \\
+\theta = \arctan (y/x) = \arctan (-2).
+\end{align*}</script>
+<!--l. 77--><p class="noindent">To obtain other polar coordinate representations, we can add an even multiple of <script type="math/tex">\pi </script> to <script type="math/tex">\theta </script>
+without changing <script type="math/tex">r</script>; e.g.
+                                 <script type="math/tex; mode=display"> \left (\sqrt {20},\arctan (-2) + 10 \pi \right ). </script>
+ Alternatively, we can add an even multiple of <script type="math/tex">\pi </script> to <script type="math/tex">\theta </script> and change the sign of <script type="math/tex">r</script>;
+e.g.
+                                 <script type="math/tex; mode=display"> \left (-\sqrt {20},\arctan (-2)-17 \pi \right ). </script>
+ </p></dd></dl>
+<!--l. 85--><p class="noindent"><img src="polarCoordinates1x.png" alt="PICT"/>
+                                                                  
+
+                                                                  
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a>
+     <ul class="itemize1">
+     <li class="itemize">Find an equation in polar coordinates <script type="math/tex">(r,\theta )</script> whose graph agrees with the graph
+     of the the equation <script type="math/tex">y=2x+5</script> in Cartesian coordinates.
+     </li>
+     <li class="itemize">Find an equation in Cartesian coordinates <script type="math/tex">(x,y)</script> whose graph agrees with the
+     graph of the equation <script type="math/tex">r=3 \cos \theta </script> in polar coordinates.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The polar equation
+                                 <script type="math/tex; mode=display"> r \sin \theta = 2 r \cos \theta + 5 </script>
+ has the same graph as the Cartesian equation <script type="math/tex">y=2x+5</script>.
+<!--l. 104--><p class="noindent">II. Multiplying both sides of the equation by <script type="math/tex">r</script>, we have
+                                 <script type="math/tex; mode=display"> r^2 = 3 r \cos \theta . </script>
+ In Cartesian coordinates, this becomes
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> x^2 + y^2 = 3 x. </script>
+ </p></dd></dl>
+<!--l. 112--><p class="noindent"><img src="polarCoordinates2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2002r4"></a> Find all Cartesian coordinates of the points where the graphs of the polar equations <script type="math/tex">r=\cos \theta </script>
+and <script type="math/tex">r=1-\cos \theta </script> intersect.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We begin by solving the equation
+                                 <script type="math/tex; mode=display"> \cos \theta = 1- \cos \theta . </script>
+ After some algebra, the equation becomes
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \cos \theta = \frac {1}{2}, </script>
+ which has solutions in the range <script type="math/tex">[0,2\pi )</script> given by <script type="math/tex">\theta = \frac {\pi }{3}</script> and <script type="math/tex">\frac {5 \pi }{3}</script>. The corresponding value of <script type="math/tex">r</script>
+is
+                                 <script type="math/tex; mode=display"> r = \cos \frac {\pi }{3} = \frac {1}{2}. </script>
+ The Cartesian coordinates for these points are
+                                 <script type="math/tex; mode=display"> (1/2 \cos \pi /3, 1/2 \sin \pi /3) = (1/4,\sqrt {3}/4) </script>
+ and
+                                 <script type="math/tex; mode=display"> (1/2 \cos 5\pi /3, 1/2 \sin 5\pi /3) = (1/4,-\sqrt {3}/4). </script>
+                                                                  
+
+                                                                  
+<!--l. 141--><p class="noindent">One must be careful when solving problems like this in polar coordinates, since
+points in the plane do not have unique polar representatives. Indeed, the points
+that we found above do not give all possible solutions. Plots of the two curves
+are shown below.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="polarCoordinates-2.svg" width="262.73854 " height="243.82945 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 164--><p class="noindent">We see that the curves also intersect at the origin. This is verified by checking
+algebraically that both curves pass through the origin:
+                                 <script type="math/tex; mode=display"> 0 = \cos \theta </script>
+ for <script type="math/tex">\theta = \pi /2</script> and
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> 0 = 1 - \cos \theta </script>
+ for <script type="math/tex">\theta = 0</script>. The fact that the <script type="math/tex">\theta </script> values are distinct explains why these solutions were not
+found by our first approach to the problem. </p></dd></dl>
+<!--l. 173--><p class="noindent"><img src="polarCoordinates3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2003r5"></a> Find all values of <script type="math/tex">a</script> so that the graph of the polar equation <script type="math/tex">r = 2 + a \sin \theta </script> passes through the
+origin.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The graph passes through the origin whenever there is some value
+of <script type="math/tex">\theta </script> such that
+                                 <script type="math/tex; mode=display"> 0 = 2 + a \sin \theta , </script>
+ or
+                                 <script type="math/tex; mode=display"> a \sin \theta = -2. </script>
+ Since the range of <script type="math/tex">\sin \theta </script> is <script type="math/tex">[-1,1]</script>, this equation has a solution if and only if <script type="math/tex">a \geq 2</script> or <script type="math/tex">a \leq -2</script>. </dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 189--><p class="noindent"><img src="polarCoordinates4x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

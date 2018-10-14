@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head> <title>Radius and Interval of Convergence</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="radiusAndIntervalOfConvergence.tex"/> 
+<meta name="author" content="Jim
+                                                                  
+
+                                                                  
+Talamo"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find Taylor Polynomials."/> 
+<meta name="learning-outcome" content="Understand the relationship between the derivatives of a function and the coefficients of its Taylor Polynomial."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="aba323bd9c1143d547a3a2e8ad370211887416f9 recitation/calculus2/radiusAndIntervalOfConvergence/radiusAndIntervalOfConvergence.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div><h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Suppose that <script type="math/tex">f(x) = \sum _{k=0}^{\infty } a_k x^k</script> and it is known that <script type="math/tex">\sum _{k=0}^{\infty } 2^k a_k </script> converges but <script type="math/tex"> \sum _{k=0}^{\infty } (-1)^k 2^k a_k </script> diverges.
+     <ul class="itemize1">
+     <li class="itemize">What is the radius of convergence of the power series?
+     </li>
+     <li class="itemize">What is the interval of convergence of the power series?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. Since <script type="math/tex">\sum 2^k a_k = f(2)</script> converges, the radius of convergence is at least <script type="math/tex">2</script>. Since <script type="math/tex">\sum (-1)^k 2^k a_k = f(-2)</script>, the
+radius of convergence is at most <script type="math/tex">2</script>. We conclude that the radius of convergence
+is exactly <script type="math/tex">2</script>.
+<!--l. 60--><p class="noindent">II. Since the radius of convergence is <script type="math/tex">2</script>, with convergence at the right endpoint
+and divergence at the left endpoint, the interval of convergence is <script type="math/tex">(-2,2]</script>. </p></dd></dl>
+<!--l. 61--><p class="noindent"><img src="radiusAndIntervalOfConvergence0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Suppose that <script type="math/tex">f(x) = \sum _{k=0}^{\infty } a_k (x+3)^k</script> and it is known that <script type="math/tex">\sum _{k=0}^{\infty } 5^k a_k</script> converges and the series represented by <script type="math/tex">f(-10)</script>
+diverges.
+     <ul class="itemize1">
+     <li class="itemize">Does the series represented by <script type="math/tex">f(5)</script> converge, diverge, or is more information
+     needed to determine this?
+     </li>
+     <li class="itemize">Does the series <script type="math/tex">\sum _{k=1}^{\infty } a_k</script> converge, diverge, or is more information needed?
+     </li>
+     <li class="itemize">What is the smallest and largest possible radius and interval of convergence
+     for the series represented by <script type="math/tex">f(x)</script>?</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. The power series is centered at <script type="math/tex">x=-3</script>. Since <script type="math/tex">5</script> is farther from the center
+than <script type="math/tex">-10</script>, and <script type="math/tex">f(-10)</script> diverges, we conclude that the series represented by <script type="math/tex">f(5)</script> must diverge.
+<!--l. 78--><p class="noindent">II. The series <script type="math/tex">\sum a_k</script> is equal to <script type="math/tex">f(-2)</script>. Since <script type="math/tex">-2</script> is closer to the center of series than <script type="math/tex">2</script> and <script type="math/tex">f(2) = \sum 5^k a_k</script>
+converges, the series represented by <script type="math/tex">f(-2)</script> converges.
+</p><!--l. 80--><p class="noindent">III. That the series <script type="math/tex">\sum 5^k a_k = f(2)</script> converges implies that the radius of convergence of the
+series is at least <script type="math/tex">5</script>. Since <script type="math/tex">f(-10)</script> diverges, the radius of convergence is at most <script type="math/tex">7</script>. </p></dd></dl>
+<!--l. 81--><p class="noindent"><img src="radiusAndIntervalOfConvergence1x.png" alt="PICT"/>
+                                                                  
+
+                                                                  
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-2001r3"></a> Suppose that <script type="math/tex">f(x) = \sum _{k=1}^{\infty } \frac {k^2x^k}{3^k+1}</script>. Determine whether the series represented by <script type="math/tex">f(2)</script> converges or
+diverges.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The series represented by <script type="math/tex">f(2)</script> is
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^{\infty } \frac {k^2 2^k}{3^k+1}. </script>
+ First note that <script type="math/tex">\frac {k^2 2^k}{3^k+1} \leq \frac {k^2 2^k}{3^k}</script> for all <script type="math/tex">k</script>. To apply the Ratio Test to the series with terms given
+by this upper bounding sequence, we compute the limit
+                                 <script type="math/tex; mode=display"> \lim _{k\rightarrow \infty } \frac {(k+1)^2 2^{k+1}}{3^{k+1}} \cdot \frac {3^k}{k^2 2^k} = \lim _{k\rightarrow \infty } \frac {2(k+1)^2}{3k^2} = \frac {2}{3}. </script>
+ It follows that the series represented by <script type="math/tex">f(2)</script> converges. </dd></dl>
+<!--l. 104--><p class="noindent"><img src="radiusAndIntervalOfConvergence2x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2002r4"></a> Find the radius and interval of convergence for the following power series:
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/><col id="TBL-1-3"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:left;" id="TBL-1-1-1" class="td11"> I. <script type="math/tex">f(x) = \sum _{k=1}^{\infty } \frac {x^k}{k!}</script>             II. <script type="math/tex">f(x) = \sum _{k=1}^{\infty } \frac {(-1)^kx^{2k}}{\sqrt {k}}</script>             III. <script type="math/tex">f(x) = \sum _{k=1}^{\infty } k! x^k</script>  </td>
+</tr></tbody></table>
+</div>
+                                                                  
+
+                                                                  
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. We apply the Ratio Test to the series
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^{\infty } \left |\frac {x^k}{k!}\right | = \sum _{k=1}^{\infty } \frac {|x|^k}{k!} </script>
+ in order to test for absolute convergence. The relevant limit is
+                                 <script type="math/tex; mode=display"> \lim _{k \rightarrow \infty } \frac {|x|^{k+1}}{(k+1)!} \cdot \frac {k!}{|x|^k} = \lim _{k \rightarrow \infty } \frac {|x|}{k+1} = 0 </script>
+ for all <script type="math/tex">x</script>. The radius of convergence is therefore <script type="math/tex">\infty </script> and the interval of convergence
+is <script type="math/tex">(-\infty ,\infty )</script>.
+<!--l. 126--><p class="noindent">II. We once again test for absolute convergence by considering the series
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^{\infty } \left |\frac {(-1)^kx^{2k}}{\sqrt {k}}\right | = \sum _{k=1}^{\infty } \frac {x^{2k}}{\sqrt {k}}. </script>
+ Applying the Ratio Test, we have
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \lim _{k\rightarrow \infty } \frac {x^{2(k+1)}}{\sqrt {k+1}} \frac {\sqrt {k}}{x^{2k}} = \lim _{k\rightarrow \infty } x^2 \frac {\sqrt {k}}{\sqrt {k+1}} = x^2. </script>
+ A sufficient condition for convergence is <script type="math/tex">x^2 < 1</script>, or <script type="math/tex">-1 < x < 1</script>. The radius of convergence is
+therefore <script type="math/tex">1</script>. To find the interval of convergence, we test the endpoints <script type="math/tex">f(1)</script> and <script type="math/tex">f(-1)</script>
+separately. The series represented by <script type="math/tex">f(1)</script> is
+                                 <script type="math/tex; mode=display"> \sum _{k=1}^{\infty } \frac {(-1)^k}{\sqrt {k}}, </script>
+ which converges by the Alternating Series Test. Similarly, the series represented
+by <script type="math/tex">f(-1)</script> converges by the Alternating Series Test. The interval of convergence is
+therefore <script type="math/tex">[-1,1]</script>.
+</p><!--l. 140--><p class="noindent">III. By comparing growth rates, we see that for any <script type="math/tex">x > 0</script>,
+                                 <script type="math/tex; mode=display"> \lim _{k\rightarrow \infty } k! x^k = \infty , </script>
+ and for any <script type="math/tex">x < 0</script>, the limit does not exist. It follows that the radius of convergence
+for this series is zero. The “interval” of convergence is the singleton set <script type="math/tex">\{0\}</script>. </p></dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 145--><p class="noindent"><img src="radiusAndIntervalOfConvergence3x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

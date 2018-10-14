@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="en"><head> <title>Calculus  in  Polar  Coordinates</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="calculusInPolarCoordinates.tex"/> 
+<meta name="author" content="Tom
+                                                                  
+
+                                                                  
+Needham"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find slopes of tangent lines to polar curves."/> 
+<meta name="learning-outcome" content="Determine areas of regions using integrals in polar coordinates."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="a85eb0d3f755a35209ee45fbe5f124f7f3840a87 recitation/calculus2/calculusInPolarCoordinates/calculusInPolarCoordinates.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Discussion Questions</h3>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a>
+<!--l. 49--><p class="noindent">On the axes below, plot the point on the polar curve <script type="math/tex">r = \cos (4 \theta )</script> corresponding to <script type="math/tex">\theta = 3\pi /4</script>.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="calculusInPolarCoordinates-2.svg" width="295.06953 " height="234.78499 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">Plugging <script type="math/tex">\theta = 3\pi /4</script> into the equation, we have
+                                 <script type="math/tex; mode=display"> r = \cos (4 \cdot 3 \pi /4) = \cos (3\pi ) = -1. </script>
+ It follows that the relevant point has Cartesian coordinates.
+<script type="math/tex; mode=display"> \begin{align*} 
+x &= -\cos(3 \pi /4) = \sqrt{2}/2 \\
+y &= -\sin(3 \pi/4) = - \sqrt{2}/2.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+</dd></dl>
+<!--l. 79--><p class="noindent"><img src="calculusInPolarCoordinates0x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Consider the curve given by the plot of the polar curve <script type="math/tex">r = 2 \sin \theta </script>. A student claims that the
+slope of the tangent line to the curve at <script type="math/tex">\theta = \pi /2</script> is given by
+                                 <script type="math/tex; mode=display"> \left .\frac {\d r}{\d \theta }\right |_{\theta = \pi /2} = \left . \frac {\d }{\d \theta } \right |_{\theta = \pi /2} 2 \sin \theta = \left .2 \cos \theta \right |_{\theta = \pi /2} = 0. </script>
+ Is the student correct? If not, explain the mistake in their reasoning and find the
+correct slope.
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The student is not correct, since the slope of the
+tangent line should be calculated in Cartesian coordinates. Writing
+<script type="math/tex; mode=display"> \begin{align*} 
+x &= r \cos \theta = 2 \sin \theta \cos \theta = \sin (2\theta) \\
+y &= r \sin \theta = 2 \sin \theta \sin \theta = 2 \sin^2 \theta,
+\end{align*}</script>
+<!--l. 94--><p class="noindent">we have </p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{\d x}{\d \theta} &= 2 \cos (2 \theta) \\
+\frac{\d y}{\d \theta} &= 4 \sin \theta \cos \theta = 2 \sin(2\theta).
+\end{align*}</script>
+<!--l. 99--><p class="noindent">Evaluating these derivatives at <script type="math/tex">\theta = \pi /2</script> yields </p><script type="math/tex; mode=display"> \begin{align*} 
+\left.\frac{\d x}{\d \theta}\right|_{\theta = \pi/2} &= -2 \\
+\left.\frac{\d y}{\d \theta}\right|_{\theta = \pi/2} &= 0.
+\end{align*}</script>
+<!--l. 104--><p class="noindent">By the chain rule, it follows that the slope of the tangent line is <script type="math/tex">\frac {0}{-2} = 0</script>. </p></dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 105--><p class="noindent"><img src="calculusInPolarCoordinates1x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1003r3"></a> The shaded region shown below has boundary curve given by the plot of the polar
+curve <script type="math/tex">r = \cos (3\theta )</script>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="calculusInPolarCoordinates-4.svg" width="295.06953 " height="234.78499 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 131--><p class="noindent">A student claims that the area of the region is given by
+                                 <script type="math/tex; mode=display"> \int _0^{2\pi } \frac {1}{2} \cos ^2(3\theta ) \d \theta . </script>
+ Is the student correct? Explain why or why not. If the student is incorrect, set up an
+integral which gives the correct area.
+</p><dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">The student is not correct. Inspecting the equation, we see that
+the full image of the curve is plotted as <script type="math/tex">\theta </script> runs from <script type="math/tex">0</script> to <script type="math/tex">\pi </script>. Therefore the area of
+the region is given by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _0^{\pi } \frac {1}{2} \cos ^2(3\theta ) \d \theta . </script>
+ </dd></dl>
+<!--l. 142--><p class="noindent"><img src="calculusInPolarCoordinates2x.png" alt="PICT"/>
+</p></div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Group Work</h3>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-2001r4"></a> A plot of the polar curve <script type="math/tex">r=1+2\sin (\theta )</script> is shown below. <div class="image-environment" role="img" aria-labelledby="image-alt-3"><object data="calculusInPolarCoordinates-6.svg" width="293.7348 " height="234.77888 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+     <ul class="itemize1">
+     <li class="itemize">Find the equation of the tangent line to the point corresponding to <script type="math/tex">\theta = \pi /6</script>.
+     </li>
+     <li class="itemize">Determine the Cartesian coordinates of all points on the curve with a
+     horizontal tangent line.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. We find the slope of the tangent line by first writing
+<script type="math/tex; mode=display"> \begin{align*} 
+x &= r \cos \theta = (1+ 2 \sin \theta) \cdot \cos \theta = \cos \theta + 2 \sin\theta \cos \theta = \cos \theta + \sin (2\theta), \\
+                                                                  
+
+                                                                  
+y&= r \sin \theta = (1+ 2 \sin \theta) \cdot \sin \theta = \sin \theta + 2 \sin^2 \theta,
+\end{align*}</script>
+<!--l. 178--><p class="noindent">so that </p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{\d x}{\d \theta} &= -\sin \theta + 2 \cos(2 \theta), \\
+\frac{\d y}{\d \theta} &= \cos \theta + 4 \sin \theta \cos \theta = \cos \theta + 2 \sin(2 \theta).
+\end{align*}</script>
+<!--l. 183--><p class="noindent">Evaluating at <script type="math/tex">\theta = \pi /6</script> yields </p><script type="math/tex; mode=display"> \begin{align*} 
+\left.\frac{\d x}{\d \theta}\right|_{\theta = \pi/6} &= -\frac{1}{2} +  2 \frac{1}{2} = \frac{1}{2} \\
+\left.\frac{\d y}{\d \theta}\right|_{\theta = \pi/6} &= \frac{\sqrt{3}}{2} + 2 \frac{\sqrt{3}}{2} = 3 \frac{\sqrt{3}}{2},
+\end{align*}</script>
+<!--l. 188--><p class="noindent">and the chain rule therefore implies that the slope of the tangent line is
+<script type="math/tex">3 \sqrt {3}</script>.
+</p><!--l. 190--><p class="noindent">The point that the tangent line passes through has Cartesian coordinates
+</p><script type="math/tex; mode=display"> \begin{align*} 
+x &= \cos(\pi/6) + \sin (\pi/3) = \sqrt{3}{2} + \frac{\sqrt{3}}{2} = \sqrt{3} \\
+y &= \sin(\pi/6) + 2 \sin^2(\pi/6) = \frac{1}{2} + 2 \cdot \frac{1}{4} = 1.
+\end{align*}</script>
+<!--l. 195--><p class="noindent">We conclude that the equation of the tangent line is <script type="math/tex">y-1 = 3 \sqrt {3}(x-\sqrt {3})</script>.
+</p><!--l. 197--><p class="noindent">II. The curve has a horizontal tangent line when <script type="math/tex">\d y/ \d \theta = 0</script> and <script type="math/tex">\d x /\d \theta \neq 0</script>. Using our formulas above, we
+see that we need to solve
+                                 <script type="math/tex; mode=display"> \cos \theta + 2 \sin (2 \theta ) = 0. </script>
+ Then
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> 0 = \cos \theta + 4 \sin \theta \cos \theta = \cos \theta ( 1+ 4 \sin \theta ), </script>
+ so that <script type="math/tex">\cos \theta = 0</script> or <script type="math/tex">\sin \theta = - \frac {1}{4}</script>. The first equation has solutions (on the domain <script type="math/tex">[0,2\pi )</script>) <script type="math/tex">\theta = \pi /2</script> or <script type="math/tex">3\pi /2</script>. The Cartesian coordinates
+of the corresponding points are </p><script type="math/tex; mode=display"> \begin{align*} 
+x &= \cos (\pi/2) + \sin(2 \cdot \pi/2) = 0\\
+y &= \sin(\pi/2) + 2 \sin^2(\pi/2) = 3
+\end{align*}</script>
+<!--l. 210--><p class="noindent">and, similarly, <script type="math/tex">(x,y) = (0,1)</script>.
+</p><!--l. 212--><p class="noindent">The equation <script type="math/tex">\sin \theta = -\frac {1}{4}</script> has solutions <script type="math/tex">\theta = \arcsin (-1/4)</script> and <script type="math/tex">\pi - \arcsin (-1/4)</script> and the corrsponding points in Cartesian coordinates are
+</p><script type="math/tex; mode=display"> \begin{align*} 
+x &= \cos (\arcsin(-1/4)) + \sin (2 \arcsin(-1/4)) = \frac{\sqrt{15}}{4} + 2 \frac{\sqrt{15}}{4} \cdot \frac{-1}{4} = \frac{\sqrt{15}}{8}, \\
+y &= \sin(\arcsin(-1/4)) + 2 \sin^2 (\arcsin(-1/4)) = -\frac{1}{4} + 2 \frac{1}{16} = -\frac{1}{8}
+\end{align*}</script>
+<!--l. 217--><p class="noindent">and <script type="math/tex">(x,y) = (-\sqrt {15}/8,-1/8)</script>. </p></dd></dl>
+<!--l. 218--><p class="noindent"><img src="calculusInPolarCoordinates3x.png" alt="PICT"/>
+</p></div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-2002r5"></a>
+<!--l. 223--><p class="noindent">Find the areas of both the blue shaded region (i.e., outside the circle) and the green
+shaded region (i.e., inside the circle) shown below. The relevant boundary curves are
+the polar curve <script type="math/tex">r=2 \cos (2 \theta )</script> and the unit circle.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><object data="calculusInPolarCoordinates-8.svg" width="261.52582 " height="234.7756 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+                                                                  
+
+                                                                  
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">We begin with the (top half of the) blue region. First we shall
+find the intersection point of the curves. The intersections occur exactly when
+<script type="math/tex">2 \cos (2 \theta ) = 1</script>, or <script type="math/tex">\cos (2 \theta ) = 1/2</script>. There are many solutions to this equation, but we are interested in the
+smallest positive value of <script type="math/tex">\theta </script> which satisfies the equation; namely, <script type="math/tex">2\theta = \pi /3</script> or <script type="math/tex">\theta = \pi /6</script>. The limits
+of integration to compute the area of the top half of the blue region are therefore
+<script type="math/tex">\theta = 0</script> to <script type="math/tex">\pi /6</script>. The outer radius of the region is <script type="math/tex">2 \cos (2\theta )</script> and the inner radius is <script type="math/tex">1</script>. Thus the area
+is
+                                 <script type="math/tex; mode=display"> \int _0^{\pi /6} \frac {1}{2}(4 \cos ^2 (2\theta ) - 1) \d \theta = \frac {\sqrt {3}}{8}. </script>
+ The area of the full blue region is <script type="math/tex">2 \cdot \frac {\sqrt {3}}{8} = \frac {\sqrt {3}}{4}</script>.
+<!--l. 257--><p class="noindent">We now consider the green region. For this region, we need to determine the
+<script type="math/tex">\theta </script>-value at which the curve <script type="math/tex">r=2\cos (2\theta )</script> first passes through the origin. This is the smallest
+positive value of <script type="math/tex">\theta </script> such that <script type="math/tex">0 = 2 \cos (2\theta )</script>, and therefore satisfies <script type="math/tex">2 \theta = \pi /2</script> or <script type="math/tex">\theta = \pi /4</script>. To get the area of the
+green region, we observe that it is given by subtracting the area of the blue
+region from the area
+                                 <script type="math/tex; mode=display"> \int _{-\pi /4}^{\pi /4} \frac {1}{2} \cdot 4 \cos ^2 (2 \theta ) \d \theta = \frac {\pi }{2}. </script>
+ The area of the green region is therefore <script type="math/tex">\frac {\pi }{2} - \frac {\sqrt {3}}{4}</script>. </p></dd></dl>
+<!--l. 262--><p class="noindent"><img src="calculusInPolarCoordinates4x.png" alt="PICT"/>
+</p></div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-2003r6"></a> For each region given below, calculate its area using both Cartesian and polar
+coordinates.
+     <ul class="itemize1">
+     <li class="itemize">The rectangle bounded by <script type="math/tex">y=0</script>, <script type="math/tex">y=\sqrt {3}</script>, <script type="math/tex">x=0</script> and <script type="math/tex">x=1</script>.
+     </li>
+     <li class="itemize">The region in the first quadrant bounded by the line <script type="math/tex">y=x</script>, the unit circle and
+     the positive <script type="math/tex">y</script>-axis.</li></ul>
+<dl class="trivlist"><dt class="trivlist">
+Solution:   </dt><dd class="trivlist">I. From basic geometry, the area is clearly <script type="math/tex">\sqrt {3}</script>. To verify this with an
+integral in Cartesian coordinates, the area is
+                                 <script type="math/tex; mode=display"> \int _0^1 \sqrt {3} \d x = \sqrt {3}. </script>
+ Finally, to express the area integral in polar coordinates, we note that the
+vertical line <script type="math/tex">x = 1</script> has polar equation <script type="math/tex">r = \sec \theta </script>. The area is therefore
+                                 <script type="math/tex; mode=display"> 2 \int _0^{\pi /3} \frac {1}{2} \sec ^2 \theta \d \theta = \eval {\tan \theta }_0^{\pi /3} = \sqrt {3}. </script>
+<!--l. 284--><p class="noindent">II. From basic geometry, the area is <script type="math/tex">\frac {1}{8} \pi </script>. Using polar coordinates, the area is given
+by
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display"> \int _{\pi /4}^{\pi /2} \frac {1}{2} \d \theta = \frac {1}{2}\left (\frac {\pi }{2} - \frac {\pi }{4}\right ) = \frac {\pi }{8}. </script>
+ Using Cartesian coordinates, the area is given by
+                                 <script type="math/tex; mode=display"> \int _0^{\sqrt {2}{2}} \sqrt {1- x^2}-x \d x. </script>
+ A  tedious  calculation  involving  trigonometric  substitution  shows  that  this
+integral also evaluates to <script type="math/tex">\pi /8</script>. </p></dd></dl>
+<!--l. 293--><p class="noindent"><img src="calculusInPolarCoordinates5x.png" alt="PICT"/>
+</p></div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

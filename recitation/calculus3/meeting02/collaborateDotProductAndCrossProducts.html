@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head> <title>Dot products and cross products</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateDotProductAndCrossProducts.tex"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="89603d412569157c8bfc96c3bb672a50482d94bf recitation/calculus3/meeting02/collaborateDotProductAndCrossProducts.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">Working with the dot product and cross product.
+</p></div>   <div class="maketitle"></div>
+<!--l. 16--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> Draw and label two vectors <script type="math/tex">\vec {v}</script> and <script type="math/tex">\vec {w}</script> such that
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v}\dotp \vec {w} <0</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v}\dotp \vec {w} =0</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\vec {v}\dotp \vec {w} >0</script></dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-68r2"></a> Give <strong>three</strong> explanations (one algebraic, one geometric, one using trigonometry) why
+<script type="math/tex; mode=display"> \proj _{\vec {a}}(\vec {b}) = \vec {0} </script> if <script type="math/tex">\vec {a}\dotp \vec {b} = 0</script>.
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-69r3"></a> Give two explanations (one algebric and one geometric) that shows that
+<script type="math/tex; mode=display"> \vec {b} - \proj _{\vec {a}}(\vec {b}) \quad \text {is orthogonal to}\quad \vec {a} </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-70r4"></a> Let <script type="math/tex">\vec {r}</script> be a random (nonzero) vector in <script type="math/tex">\R ^2</script>. Compute: <script type="math/tex; mode=display"> \proj _\vecj \left (\proj _\veci (\vec {r})\right ) </script> Explain your reasoning.
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-71r5"></a> Let <script type="math/tex">\vec {r}</script> be a random (nonzero) vector in <script type="math/tex">\R ^2</script>. Could there be a vector <script type="math/tex">\vec {v}</script> such that one
+expects <script type="math/tex; mode=display"> \proj _\vecj \left (\proj _{\vec {v}}\left (\proj _\veci (\vec {r})\right )\right )\ne \vec {0}? </script> Explain your reasoning.
+</div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-72r6"></a> Consider three vectors in <script type="math/tex">\R ^3</script>: <script type="math/tex; mode=display"> \begin{align*} 
+      \vec{a} &= \vector{a_1,a_2,a_3}\\
+    \vec{b} &= \vector{b_1,b_2,b_3}\\
+    \vec{c} &= \vector{c_1,c_2,c_3}
+  \end{align*}</script>
+<!--l. 73--><p class="noindent">We claim: <script type="math/tex; mode=display"> \det \begin {bmatrix} a_1 & a_2 & a_3\\ b_1 & b_2 & b_3\\ c_1 & c_2 & c_3 \end {bmatrix} = \vec {a}\dotp (\vec {b}\cross \vec {c}) = (\vec {a}\cross \vec {b})\dotp \vec {c} </script> Give an algebraic verification of this claim. For your information, <script type="math/tex">(\vec {a}\cross \vec {b})\dotp \vec {c}</script> is
+commonly called the <strong>scalar triple product</strong>.
+</p></div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-73r7"></a> Given vectors <script type="math/tex">\vec {a}</script>, <script type="math/tex">\vec {b}</script>, and <script type="math/tex">\vec {c}</script>, in <script type="math/tex">\R ^3</script>, we claim: <script type="math/tex; mode=display"> \vec {a}\dotp (\vec {b}\cross \vec {c}) = (\vec {a}\cross \vec {b})\dotp \vec {c} </script> Use the diagram <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="collaborateDotProductAndCrossProducts-1.svg" width="432.60419 " height="195.69768 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+and recall that the volume of a parallelpiped is given by <script type="math/tex; mode=display"> \text {area of the base}\times \text {height} </script> to give a geometric
+verification of the <strong>two</strong> facts:
+     <ul class="itemize1">
+     <li class="itemize">First, that <script type="math/tex; mode=display"> \left |\det \begin {bmatrix} a_1 & a_2 & a_3\\ b_1 & b_2 & b_3\\ c_1 & c_2 & c_3 \end {bmatrix}\right | </script> is the volume of the parallelepiped spanned by vectors <script type="math/tex">\vec {a}</script>, <script type="math/tex">\vec {b}</script>, and
+     <script type="math/tex">\vec {c}</script>.
+     </li>
+     <li class="itemize">Second, that <script type="math/tex; mode=display"> \vec {a}\dotp (\vec {b}\cross \vec {c}) = (\vec {a}\cross \vec {b})\dotp \vec {c} </script></li></ul>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

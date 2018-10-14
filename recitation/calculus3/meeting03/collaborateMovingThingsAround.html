@@ -1,0 +1,181 @@
+<!DOCTYPE html><html lang="en"><head> <title>Moving  things
+                                                                  
+
+                                                                  
+around</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="collaborateMovingThingsAround.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="18a611dcd0d48c8508bda64b350cab2c54f554f1 recitation/calculus3/meeting03/collaborateMovingThingsAround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">We move things around in space.
+</p></div>   <div class="maketitle"></div>
+<!--l. 14--><p class="noindent"><strong>Work in groups of 3–4, writing your answers on a separate sheet of
+paper.</strong>
+</p>
+<h3 class="sectionHead"><a id="x1-1000"></a>Moving parametric graphs around</h3>
+<!--l. 19--><p class="noindent">We have (at least!) two ways of writing a parametric formula for a curve in
+space <script type="math/tex; mode=display"> \vector {x(t),y(t),z(t)}\quad \text {and}\quad x(t) \veci + y(t) \vecj + z(t) \veck </script> This second way, using <script type="math/tex">\veci </script>, <script type="math/tex">\vecj </script>, and <script type="math/tex">\veck </script> is what we’re going to think about
+today.
+</p>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-1001r1"></a> Compare and contrast the following vector-valued functions in <script type="math/tex">\R ^3</script>:
+<script type="math/tex; mode=display"> \begin{align*} 
+    \vec{a}(t) &= \veci \cos(t) + \vecj \sin(t)\\
+    \vec{b}(t) &= \veci \cos(t) + \veck \sin(t)\\
+    \vec{c}(t) &= \vecj \cos(t) + \veck \sin(t)
+  \end{align*}</script>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-1002r2"></a> Consider  vectors:
+<script type="math/tex; mode=display"> \begin{align*} 
+    \uvec{v} &= \vector{\frac{1}{\sqrt{6}},\frac{-2}{\sqrt{6}},\frac{1}{\sqrt{6}}}\\
+    \uvec{w} &= \vector{\frac{1}{\sqrt{2}},0,\frac{-1}{\sqrt{2}}}
+  \end{align*}</script>
+<!--l. 43--><p class="noindent">Verify the following:
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">|\uvec {v}| = |\uvec {w}| = 1</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\uvec {v}</script> is orthogonal to <script type="math/tex">\uvec {w}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">The lines <script type="math/tex">\vecl (t) = t \uvec {v}</script> and <script type="math/tex">\vec {m}(t) = t \uvec {w}</script> both lie on the plane <script type="math/tex">x+y+z = 0</script>.</dd></dl>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-1006r3"></a> Give a vector-valued formula for a circle of radius <script type="math/tex">1</script> that lies in the plane
+<script type="math/tex">x+y+z=0</script>.
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-1007r4"></a> Consider the equations: <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 6\\
+                                                                  
+
+                                                                  
+    x^2+y^2+z^2 &= 18
+  \end{align*}</script>
+<!--l. 64--><p class="noindent">How many solutions for <script type="math/tex">x</script>, <script type="math/tex">y</script>, and <script type="math/tex">z</script> do you expect to find? </p><div role="article" class="problem-environment hint" id="problem5"><a id="x1-1008r5"></a> Draw a picture showing the
+geometry of this situation.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-1009r6"></a> Consider the equations: <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 0\\
+    x^2+y^2+z^2 &= 18
+  \end{align*}</script>
+<!--l. 76--><p class="noindent">Parameterize a curve giving the solutions to these equations. </p><div role="article" class="problem-environment hint" id="problem7"><a id="x1-1010r7"></a> Draw a picture showing
+the geometry of this situation.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem8"><a id="x1-1011r8"></a> Consider the equations: <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= 2\\
+    x^2+y^2+z^2 &= 18
+  \end{align*}</script>
+<!--l. 89--><p class="noindent">Parameterize a curve giving the solutions to these equations. </p><div role="article" class="problem-environment hint" id="problem9"><a id="x1-1012r9"></a> Draw a picture showing
+the geometry of this situation.
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem10"><a id="x1-1013r10"></a> Let <script type="math/tex">a</script> and <script type="math/tex">b</script> be fixed real numbers. Consider the equations: <script type="math/tex; mode=display"> \begin{align*} 
+      x+y &= a\\
+    x^2+y^2+z^2 &= b
+  \end{align*}</script>
+<!--l. 102--><p class="noindent">Give a general solution in terms of <script type="math/tex">a</script> and <script type="math/tex">b</script>. </p><div role="article" class="problem-environment hint" id="problem11"><a id="x1-1014r11"></a> Draw a picture showing the geometry of
+this situation.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Moving graphs around</h3>
+<!--l. 116--><p class="noindent">We have just worked with vector-valued functions. The intrepid young mathematician
+who wishes to further expand their mind, might wish to press-on, and work with
+implicit equations as well.
+</p>
+<div role="article" class="problem-environment problem" id="problem12"><a id="x1-2001r12"></a> Explain how graphing <script type="math/tex; mode=display"> y= x^2 </script> is related to all vectors <script type="math/tex">\vec {x}= \vector {x,y}</script> such that <script type="math/tex; mode=display"> \scal _\vecj (\vec {x}) = \scal _\veci (\vec {x})^2. </script>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem13"><a id="x1-2002r13"></a> Consider <script type="math/tex">\vec {v} = \vector {1,1}</script>, <script type="math/tex">\vec {w} = \vector {-1,1}</script>, and <script type="math/tex">\vec {x} = \vector {x,y}</script>. What will the graph of <script type="math/tex; mode=display"> \scal _\vec {w}(\vec {x}) = \scal _\vec {v}(\vec {x})^2 </script> look like? Confirm your answer by using
+something like <em>Desmos</em>, <em>GeoGebra</em>, or <em>WolframAlpha</em>.
+</div>
+<div role="article" class="problem-environment problem" id="problem14"><a id="x1-2003r14"></a> Consider <script type="math/tex">\vec {v} = \vector {1,-2}</script>, <script type="math/tex">\vec {w} = \vector {2,1}</script>, and <script type="math/tex">\vec {x} = \vector {x-3,y+4}</script>. What will the graph of <script type="math/tex; mode=display"> \scal _\vec {w}(\vec {x}) = \scal _\vec {v}(\vec {x})^2 </script> look like? Confirm your answer by using
+something like <em>Desmos</em>, <em>GeoGebra</em>, or <em>WolframAlpha</em>.
+</div>
+<div role="article" class="problem-environment problem" id="problem15"><a id="x1-2004r15"></a> Consider <script type="math/tex">\uvec {v} = \vector {\cos (\theta ),\sin (\theta )}</script>, <script type="math/tex">\uvec {w} = \vector {-\sin (\theta ),\cos (\theta )}</script>, and <script type="math/tex">\vec {x} = \vector {x,y}</script>. For any fixed value of <script type="math/tex">\theta </script>, what will the graph of <script type="math/tex; mode=display"> \scal _\uvec {w}(\vec {x}) = f(\scal _\uvec {v}(\vec {x})) </script> look like? Confirm
+your answer for different values of <script type="math/tex">\theta </script> by choosing a reasonable function <script type="math/tex">f</script> and using
+something like <em>Desmos</em>, <em>GeoGebra</em>, or <em>WolframAlpha</em>.
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>
