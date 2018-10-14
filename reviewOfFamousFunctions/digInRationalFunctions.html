@@ -1,0 +1,137 @@
+<!DOCTYPE html><html lang="en"><head> <title>Rational
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInRationalFunctions.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Know the graphs and properties of ``famous&#39;&#39; functions."/> 
+<meta name="learning-outcome" content="Understand the definition of a rational function."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="67d2653683d01e0226d2099c425612e1229a5a80 reviewOfFamousFunctions/digInRationalFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">Rational functions are functions defined by fractions of polynomials.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>What are rational functions?</h3>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a>A <strong>rational function</strong> in the variable <script type="math/tex">x</script> is a function the form <script type="math/tex; mode=display"> f(x) = \frac {p(x)}{q(x)} </script> where <script type="math/tex">p</script> and <script type="math/tex">q</script> are
+polynomial functions. The domain of a rational function is all real numbers except for
+where the denominator is equal to zero.
+</div>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-1002r2"></a> Which of the following are rational functions? <div class="select-all" id="problem3"><a id="x1-1003r3"></a> <span class="choice correct " id="choice1"><script type="math/tex">f(x) = 0</script></span> <span class="choice correct " id="choice2"><script type="math/tex">f(x) = \frac {3x+1}{x^2-4x+5}</script></span> <span class="choice  " id="choice3"><script type="math/tex">f(x)=e^x</script></span> <span class="choice  " id="choice4"><script type="math/tex">f(x)=\frac {\sin (x)}{\cos (x)}</script></span> <span class="choice correct " id="choice5"><script type="math/tex">f(x) = -4x^{-3}+5x^{-1}+7-18x^2</script></span> <span class="choice  " id="choice6"><script type="math/tex">f(x) = x^{1/2}-x +8</script></span> <span class="choice  " id="choice7"><script type="math/tex">f(x)=\frac {\sqrt {x}}{x^3-x}</script></span>
+</div> <div class="feedback" data-feedback="attempt" id="feedback4">All polynomials can be thought of as rational functions. </div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>What can the graphs look like?</h3>
+<!--l. 51--><p class="noindent">There is a somewhat wide variation in the graphs of rational functions.
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-2001r4"></a>Here we see the the graphs of four rational functions.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><!--tex4ht:inline--><div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-1" class="td11"> <object data="digInRationalFunctions-2.svg" width="198.97116 " height="166.56535 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>  </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-2" class="td11"> <object data="digInRationalFunctions-4.svg" width="214.6241 " height="166.59181 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object> </td>
+</tr><tr style="vertical-align:baseline;" id="TBL-1-2-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-1" class="td11"> <object data="digInRationalFunctions-6.svg" width="210.1845 " height="166.5543 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object> </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-2" class="td11"> <object data="digInRationalFunctions-8.svg" width="214.62984 " height="166.54807 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object> </td>
+</tr></tbody></table></div> </div>
+Match the curves <script type="math/tex">A</script>, <script type="math/tex">B</script>, <script type="math/tex">C</script>, and <script type="math/tex">D</script> with the functions <script type="math/tex; mode=display"> \begin{align*} 
+      &\frac{x^2-3x+2}{x-2}, &&\frac{x^2-3x+2}{x+2}, \\
+    &\frac{x-2}{x^2-3x+2}, &&\frac{x+2}{x^2-3x+2}.
+                                                                  
+
+                                                                  
+  \end{align*}</script>
+<div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-2002r5"></a>Consider <script type="math/tex">\frac {x^2-3x+2}{x-2}</script>. This function is undefined only at <script type="math/tex">x=2</script>. Of the curves that we see above, <script type="math/tex">\answer [given]{D}</script> is
+undefined exactly at <script type="math/tex">x=2</script>.
+<!--l. 134--><p class="noindent">Now consider <script type="math/tex">\frac {x^2-3x+2}{x+2}</script>. This function is undefined only at <script type="math/tex">x=-2</script>. The only function above that
+undefined exactly at <script type="math/tex">x=-2</script> is curve <script type="math/tex">\answer [given]{A}</script>.
+</p><!--l. 138--><p class="noindent">Now consider <script type="math/tex">\frac {x-2}{x^2-3x+2}</script>. This function is undefined at the roots of <script type="math/tex; mode=display"> x^2-3x+2 = (x-2)(x-1). </script> Hence it is
+undefined at <script type="math/tex">x=2</script> and <script type="math/tex">x=1</script>. It looks like both curves <script type="math/tex">B</script> and <script type="math/tex">C</script> would work. Distinguishing
+between these two curves is easy enough if we evaluate at <script type="math/tex">x=-2</script>. Check it out.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+    \eval{\frac{x-2}{x^2-3x+2}}_{x=-2} &= \frac{-2-2}{(-2)^2-3(-2)+2}\\
+    &= \frac{-4}{4+6+2}\\
+    &=\frac{-4}{12}.
+  \end{align*}</script>
+<!--l. 151--><p class="noindent">Since this is negative, we see that <script type="math/tex">\frac {x-2}{x^2-3x+2}</script> corresponds to curve <script type="math/tex">\answer [given]{B}</script>.
+</p><!--l. 154--><p class="noindent">Finally, it must be the case that curve <script type="math/tex">\answer [given]{C}</script> corresponds to <script type="math/tex">\frac {x+2}{x^2-3x+2}</script>. We should note that if this
+function is evaluated at <script type="math/tex">x=-2</script>, the output is zero, and this corroborates our work
+above.
+</p></div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

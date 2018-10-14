@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"><head> <title>Falling
+                                                                  
+
+                                                                  
+objects</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInFallingObjects.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="32cdd9349dc870f8909a9cccd168c51882eae2de antiderivatives/digInFallingObjects.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">We study a special type of differential equation.
+</p></div>   <div class="maketitle"></div>
+A <strong>differential equation</strong> is simply an equation with a derivative in it like this: <script type="math/tex; mode=display"> f'(x) = k f(x). </script>
+When a mathematician solves a differential equation, they are finding a <em>function</em> that
+satisfies the equation.
+<!--l. 21--><p class="noindent">Consider a falling object. Recall that the acceleration due to gravity is about <script type="math/tex">-9.8</script> m/s<script type="math/tex">^2</script>.
+Since the first derivative of the velocity function is the acceleration and the second
+derivative of a position function is the acceleration, we have the differential equations
+</p><script type="math/tex; mode=display"> \begin{align*} 
+v'(t) &=  -9.8,\\
+s''(t) &=  -9.8.
+\end{align*}</script>
+<!--l. 30--><p class="noindent">From these simple equations, we can derive expressions for the velocity and for the
+position of the object using antiderivatives.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>A ball is tossed into the air with an initial velocity of <script type="math/tex">15</script> m/s. What is the velocity of the
+ball after 1 second? How about after 2 seconds? <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Knowing that the acceleration due to
+gravity is <script type="math/tex">-9.8</script> m/s<script type="math/tex">^2</script>, we write <script type="math/tex; mode=display"> v'(t) = \answer [given]{-9.8}. </script> To solve this differential equation, take the antiderivative of
+both sides <script type="math/tex; mode=display"> \begin{align*} 
+\int v'(t) \d t &= \int \answer[given]{-9.8} \d t\\
+v(t) &= \answer[given]{-9.8 t} + C.
+\end{align*}</script>
+<!--l. 48--><p class="noindent">Since it is tossed up with an initial velocity of <script type="math/tex">15</script> m/s, <script type="math/tex; mode=display"> \answer [given]{15} = v(0) = -9.8\cdot 0 + C, </script> and we see that <script type="math/tex">C=\answer [given]{15}</script>. Therefore, <script type="math/tex">C</script>
+represents the initial velocity of the ball. Hence <script type="math/tex">v(t) = -9.8t + 15</script>.
+</p><!--l. 56--><p class="noindent">Now when <script type="math/tex">t=1</script>, <script type="math/tex">v(1) = 5.2</script> m/s, and the ball is rising, and at <script type="math/tex">t=2</script>, <script type="math/tex">v(2) = -4.6</script> m/s, and the ball is falling.
+</p></div>
+</div>
+<!--l. 62--><p class="noindent">Now let’s do a similar problem, but instead of finding the velocity, we will find the
+position.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-66r3"></a>A ball is tossed into the air with an initial velocity of <script type="math/tex">15</script> m/s from a height of 2 meters.
+When does the ball hit the ground? <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>Knowing that the acceleration due to gravity is <script type="math/tex">-9.8</script>
+m/s<script type="math/tex">^2</script>, we write <script type="math/tex; mode=display"> v'(t) = \answer [given]{-9.8}. </script> Start by taking the antiderivative of both sides of the equation
+<script type="math/tex; mode=display"> \begin{align*} 
+\int v'(t) \d t &= \int \answer[given]{-9.8} \d t\\
+v(t) &= \answer[given]{-9.8 t} + C.
+\end{align*}</script>
+<!--l. 78--><p class="noindent">Here <script type="math/tex">C</script> represents the initial velocity of the ball. Since it is tossed up with
+                                                                  
+
+                                                                  
+an initial velocity of <script type="math/tex">15</script> m/s, <script type="math/tex">C = 15</script> and <script type="math/tex; mode=display"> v(t) = -9.8t + 15. </script> Since the velocity is the derivative of the
+position, we can write, alternatively <script type="math/tex; mode=display"> s'(t) = -9.8t + 15. </script> Now let’s take the antiderivative again.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\int s'(t) \d t &= \int \answer[given]{-9.8t +15} \d t\\
+s(t) &= \answer[given]{\frac{-9.8t^2}{2} + 15t} + D.
+\end{align*}</script>
+<!--l. 92--><p class="noindent">Since we know the initial height was <script type="math/tex">2</script> meters, write <script type="math/tex; mode=display"> 2 = s(0) = \frac {-9.8\cdot 0^2}{2} + 15\cdot 0 + D. </script> Hence <script type="math/tex">s(t) = \frac {-9.8t^2}{2} + 15t + 2</script>. We need to know when
+the ball hits the ground, this is when <script type="math/tex">s(t)=0</script>. Solving the equation <script type="math/tex; mode=display"> \frac {-9.8t^2}{2} + 15t + 2 = 0 </script> we find two solutions <script type="math/tex">t\approx -0.1</script>
+and <script type="math/tex">t\approx 3.2</script>. Discarding the negative solution, we see the ball will hit the ground after
+approximately <script type="math/tex">3.2</script> seconds.
+</p></div>
+</div>
+<!--l. 107--><p class="noindent">The power of calculus is that it frees us from rote memorization of formulas and
+enables us to derive what we need.
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>

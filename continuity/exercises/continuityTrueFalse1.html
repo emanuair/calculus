@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="continuityTrueFalse1.tex"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the connection between continuity of a function and the value of a limit."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="bba5e366eef81c1a8e3358f13f7aeec3ac44b0e6 continuity/exercises/continuityTrueFalse1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+For the following statements select True if the statement is always true, and select
+False if the statement can be false.
+<!--l. 14--><p class="noindent">Let <script type="math/tex">f</script> and <script type="math/tex">g</script> be two functions defined on <script type="math/tex">\left (-1,1\right )</script>. If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left (-1,1\right )</script> and if <script type="math/tex">\lim _{x\to 0}g(x)=0</script> then
+<script type="math/tex">\lim _{x\to 0}\left (f(x)g(x)\right ) = 0</script>.
+</p>
+<div class="multiple-choice" id="problem2"><span class="choice correct " id="choice1">True</span> <span class="choice  " id="choice2">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback3">Since <script type="math/tex">f</script> is continuous on <script type="math/tex">\left (-1,1\right )</script> we know <script type="math/tex">\lim _{x\to 0}f(x)</script> exists. This allows us to use the limit product law
+to compute the desired limit. </div>
+<div role="article" class="problem-environment exercise" id="problem4"><a id="x1-65r2"></a>
+<!--l. 27--><p class="noindent">Let <script type="math/tex">f</script> and <script type="math/tex">g</script> be two functions defined on <script type="math/tex">\left (-1,1\right )</script>. If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left (-1,1\right )</script> and if <script type="math/tex">\lim _{x\to 0}g(x)=0</script> then
+<script type="math/tex">\lim _{x\to 0}\frac {g(x)}{f(x)} = 0</script>.
+</p>
+<div class="multiple-choice" id="problem5"><span class="choice  " id="choice3">True</span> <span class="choice correct " id="choice4">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback6">For example, take <script type="math/tex">f(x)=g(x)</script> in which case the limit is 1. </div>
+<div role="article" class="problem-environment exercise" id="problem7"><a id="x1-66r3"></a>
+<!--l. 40--><p class="noindent">Let <script type="math/tex">f</script> and <script type="math/tex">g</script> be two functions defined on <script type="math/tex">\left (-1,1\right )</script>. If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left (-1,1\right )</script> and if <script type="math/tex">\lim _{x\to 0}g(x)=0</script> then
+<script type="math/tex">\lim _{x\to 0}g(f(x)) = 0</script>.
+</p>
+<div class="multiple-choice" id="problem8"><span class="choice  " id="choice5">True</span> <span class="choice correct " id="choice6">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback9">For example, take <script type="math/tex">g(x) = x</script> and <script type="math/tex">f(x) = \frac {1}{2}</script> in which case the limit is <script type="math/tex">\frac {1}{2}</script>. </div>
+<div role="article" class="problem-environment exercise" id="problem10"><a id="x1-67r4"></a>
+<!--l. 53--><p class="noindent">If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left [1,3\right ]</script>, and if <script type="math/tex">f(1) = 4</script> and <script type="math/tex">f(3) = 0</script>, the the equation <script type="math/tex">f(x) = e</script> has a solution in <script type="math/tex">\left (1,3\right )</script>.
+</p>
+<div class="multiple-choice" id="problem11"><span class="choice correct " id="choice7">True</span> <span class="choice  " id="choice8">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback12"><script type="math/tex">f</script> is continuous on <script type="math/tex">\left [1,3\right ]</script> and <script type="math/tex">e</script> is between <script type="math/tex">f(1)</script> and <script type="math/tex">f(3)</script> so we can apply the Intermediate Value
+Theorem. </div>
+<div role="article" class="problem-environment exercise" id="problem13"><a id="x1-68r5"></a>
+<!--l. 66--><p class="noindent">If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left [1,3\right ]</script>, and if <script type="math/tex">f(1) = e</script> and <script type="math/tex">f(3) = 0</script>, the the equation <script type="math/tex">f(x) = \pi </script> has a solution in <script type="math/tex">\left (1,3\right )</script>.
+</p>
+                                                                  
+
+                                                                  
+<div class="multiple-choice" id="problem14"><span class="choice  " id="choice9">True</span> <span class="choice correct " id="choice10">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback15"><script type="math/tex">\pi </script> is not between <script type="math/tex">f(1)</script> and <script type="math/tex">f(3)</script> so we cannot apply the intermediate value theorem. Consider,
+as a counterexample, <script type="math/tex">f</script> being the line between <script type="math/tex">(1,e)</script> and <script type="math/tex">(3,0)</script>. </div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

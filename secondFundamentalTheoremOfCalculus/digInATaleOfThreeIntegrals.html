@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head> <title>A  tale  of  three
+                                                                  
+
+                                                                  
+integrals</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInATaleOfThreeIntegrals.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="6bf929491bef0fa1f1a2bb84f3dbb37df3a26709 secondFundamentalTheoremOfCalculus/digInATaleOfThreeIntegrals.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">At this point we have three “different” integrals.
+</p></div>   <div class="maketitle"></div>
+At this point we have three different “integrals.” Let’s see if we can sort out the
+differences.
+<h3 class="sectionHead"><a id="x1-1000"></a>Indefinite integrals</h3>
+<!--l. 18--><p class="noindent">An indefinite integral, also called an <strong>antiderivative</strong> computes classes of functions: <script type="math/tex; mode=display"> \int f(x) \d x = \text {``a class of functions whose derivative is $f$''} </script>
+Here there are no limits of integration, and your answer will have a “<script type="math/tex">+C</script>” at the end.
+Pay attention to the notation: </p><div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="digInATaleOfThreeIntegrals-1.svg" width="281.30548 " height="48.40558 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Where <script type="math/tex">F'(x) = f(x)</script>. <div class="theorem-like problem-environment explanation" id="problem1"><a id="x1-1001r1"></a>Indefinite integrals <span class="word-choice" id="word-choice2"><a id="x1-1002r2"></a><span class="choice  " id="choice1">have</span><span class="choice correct " id="choice2">do not have</span>
+</span> limits of integration, and they compute <span class="word-choice" id="word-choice3"><a id="x1-1003r3"></a><span class="choice  " id="choice3">signed area</span><span class="choice  " id="choice4">an antiderivative</span><span class="choice correct " id="choice5">a class of
+antiderivatives</span>
+</span>.
+</div>
+<div role="article" class="problem-environment question" id="problem4"><a id="x1-1004r4"></a> Two students, say Devyn and Riley, are working with the following indefinite
+integral: <script type="math/tex; mode=display"> \int \frac {2}{x\ln (x^2)}\d x </script> Devyn computes the integral as <script type="math/tex; mode=display"> \int \frac {2}{x\ln (x^2)}\d x = \ln |\ln |x^2|| + C </script> and Riley computes the integral as <script type="math/tex; mode=display"> \int \frac {2}{x\ln (x^2)}\d x = \ln |\ln |x|| + C. </script> Which
+student is correct? <div class="multiple-choice" id="problem5"><span class="choice  " id="choice6">Devyn is correct</span> <span class="choice  " id="choice7">Riley is correct</span> <span class="choice correct " id="choice8">Both students are correct</span> <span class="choice  " id="choice9">Neither student is correct</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback6">Both students are correct! The seeming discrepancy arises from the fact that the
+“+C” in each case is <em>different</em>! </div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Accumulation functions</h3>
+<!--l. 74--><p class="noindent">An <strong>accumulation function</strong>, also called an <strong>area function</strong> computes accumulated
+area: <script type="math/tex; mode=display"> \int _a^x f(t) \d t = \text {``a function $F$ whose derivative is $f$''} </script> This is a function of <script type="math/tex">x</script> whose derivative is <script type="math/tex">f</script>, with the additional property that <script type="math/tex">F(a)=0</script>.
+Pay attention to the notation: </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="digInATaleOfThreeIntegrals-2.svg" width="238.40648 " height="48.40558 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Where <script type="math/tex">F'(x) = f(x)</script>. <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-2001r5"></a>Accumulation functions <span class="word-choice" id="word-choice8"><a id="x1-2002r6"></a><span class="choice correct " id="choice10">have</span><span class="choice  " id="choice11">do not have</span>
+</span> limits of integration, and they compute <span class="word-choice" id="word-choice9"><a id="x1-2003r7"></a><span class="choice  " id="choice12">signed area</span><span class="choice correct " id="choice13">an antiderivative</span><span class="choice  " id="choice14">a class of
+antiderivatives</span>
+</span>.
+</div> <div role="article" class="problem-environment question" id="problem10"><a id="x1-2004r8"></a> True or false: There exists a function <script type="math/tex">f</script> such that <script type="math/tex; mode=display"> \int _0^x f(t) \d t = e^x </script>  <div class="multiple-choice" id="problem11"><span class="choice  " id="choice15">true</span> <span class="choice correct " id="choice16">false</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback12">Let <script type="math/tex; mode=display"> F(x) = \int _0^x f(t) \d t, </script> this is an accumulation function and <script type="math/tex">F(0) = 0</script>, since no area is accumulated yet. However,
+<script type="math/tex">e^0 =1</script>. Hence there can be no such function <script type="math/tex">f</script>. On the other hand, there is a function <script type="math/tex">g</script> with <script type="math/tex; mode=display"> \int _0^x g(t) \d t = e^x-1 </script>
+                                                                  
+
+                                                                  
+namely, <script type="math/tex">g(x) = e^x</script>. This subtlety arises from the fact that an accumulation function <script type="math/tex; mode=display"> F(x) = \int _a^x f(t) \d t </script>
+gives a <strong>specific</strong> antiderivative of <script type="math/tex">f</script>, the one that when evaluated at <script type="math/tex">x=a</script> is zero. </div>
+</div>
+<h3 class="sectionHead"><a id="x1-3000"></a>Definite integrals</h3>
+<!--l. 137--><p class="noindent">A <strong>definite integral</strong> computes signed area: <script type="math/tex; mode=display"> \int _a^b f(x) \d x = \text {``the signed area between the $x$-axis and $f$''} </script> Here we always have limits of
+integration, both of which are numbers. Moreover, definite integrals have definite
+values, the signed area between <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis. Pay attention to the notation: </p><div class="image-environment" role="img" aria-labelledby="image-alt-3"><object data="digInATaleOfThreeIntegrals-3.svg" width="335.84222 " height="49.56401 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Where <script type="math/tex">F'(x) = f(x)</script>. <div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-3001r9"></a>Definite integrals <span class="word-choice" id="word-choice14"><a id="x1-3002r10"></a><span class="choice correct " id="choice17">have</span><span class="choice  " id="choice18">do not have</span>
+</span> limits of integration, and they compute <span class="word-choice" id="word-choice15"><a id="x1-3003r11"></a><span class="choice correct " id="choice19">signed area</span><span class="choice  " id="choice20">an antiderivative</span><span class="choice  " id="choice21">a class of
+antiderivatives</span>
+</span>.
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

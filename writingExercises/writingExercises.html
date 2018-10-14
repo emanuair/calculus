@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="en"><head> <title>Writing exercises</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="writingExercises.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c11de33896682148cb67f1eeabc3521f2f2a77ec writingExercises/writingExercises.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }</script><script type="text/javascript"> 
+</script> 
+</div>
+<div class="abstract">
+<!--l. 7--><p class="noindent">We give a workflow and template for exercises.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Template for exercises</h3>
+<!--l. 13--><p class="noindent">Exercises are fairly easy to write. All exercises should be in a directory named
+“<span class="obeylines-h"><span class="verb">exercises</span></span>” that is contained within the directory for the section to which the
+exercises pertain. For an example, see <a href="https://github.com/mooculus/calculus/tree/master/workingInTwoAndThreeDimensions">here</a>
+</p><!--l. 19--><p class="noindent">The exercises should have outcomes that align with the outcomes from the
+section and title page. Authors of exercises should check that these outcomes
+align.
+</p><!--l. 23--><pre>\documentclass{ximera}
+ <br/>
+ <br/>\author{Jane Doe}
+ <br/>
+ <br/>\outcome{Some outcome from the chapter.}
+ <br/>
+ <br/>\input{../../preamble.tex}
+ <br/>
+ <br/>\begin{document}
+ <br/>\begin{exercise}
+ <br/>What is $2+2$?
+ <br/>\[
+ <br/>2+2 = \answer{4}
+ <br/>\]
+ <br/>\end{exercise}
+ <br/>\end{document}
+<!--l. 40--></pre>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Keeping track of exercises</h3>
+<!--l. 44--><p class="noindent">It is important to keep track of all exercises. We do this with various exercise
+lists.
+</p><!--l. 47--><p class="noindent">In the <span class="obeylines-h"><span class="verb">exercises</span></span> directory, one should make a file <span class="obeylines-h"><span class="verb">exerciseList.tex</span></span> that lists the
+                                                                  
+
+                                                                  
+exercises. As an example, see <a href="https://github.com/mooculus/calculus/blob/master/workingInTwoAndThreeDimensions/exercises/exerciseList.tex">this</a>.
+</p><!--l. 50--><p class="noindent">Additionally, one should add there exercises to a larger exercise list, found
+in the <span class="obeylines-h"><span class="verb">exercises</span></span> directory, at the top-level of the calculus repository. See
+<a href="https://github.com/mooculus/calculus/tree/master/exercises">this</a>.
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>
