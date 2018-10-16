@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="expDerivativeApplication1.tex"/> 
+<meta name="date" content="2018-10-16 01:32:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Take derivatives of functions raised to functions."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="dee5bf0c6c85caf231050764a9c9abc1fb58a158 logarithmicDifferentiation/exercises/expDerivativeApplication1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+The total number of people who have contracted a common cold by a time <script type="math/tex">t</script> days after
+its outbreak on an island is given by <script type="math/tex; mode=display"> N(t) = \frac {200000}{1+100e^{-0.1t}},\quad t\geq 0. </script>
+<!--l. 17--><p class="noindent">The graph of <script type="math/tex">N</script> on the intervall <script type="math/tex">[0,100]</script> is given below.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">                   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script>20000400006000080000100000120000140000160000180000200000<script type="math/tex">t</script><script type="math/tex">N</script>
+</div>
+<!--l. 39--><p class="noindent"><script type="math/tex">N'(t)</script> is increasing on the interval <script type="math/tex; mode=display"> \left [\answer {0},\answer {50}\right ]. </script>
+</p><!--l. 44--><p class="noindent">The time at which the number of people who have contracted the cold is growing the
+fastest is <script type="math/tex; mode=display"> t = \answer {50}. </script>
+</p><!--l. 49--><p class="noindent">The rate at which the number of people who have contracted the cold is changing is
+<script type="math/tex; mode=display"> N'(t) = \answer {\frac {2000000e^{-0.1t}}{\left (1+100e^{-0.1t}\right )^2}}. </script>
+</p><!--l. 54--><p class="noindent">The limit of <script type="math/tex">N'(t)</script> as <script type="math/tex">t</script> goes to <script type="math/tex">\infty </script> is <script type="math/tex; mode=display"> \lim _{t\to \infty }N'(t) = \answer {0}. </script>
+</p><!--l. 59--><p class="noindent">Chose the best interpretation of the limit above. </p><div class="multiple-choice" id="problem2"><span class="choice  " id="choice1">The number of people who have
+contracted the cold will keep growing in the long run.</span> <span class="choice correct " id="choice2">The number of people who
+have contracted the cold will stop growing in the long run.</span> <span class="choice  " id="choice3">The number of
+people who have contracted the cold will decrease in the long run.</span> <span class="choice  " id="choice4">The
+number of people who have contracted the cold will oscillate in the long run.</span> </div>
+<!--l. 67--><p class="noindent">The average rate that <script type="math/tex">N</script> changed on the time interval <script type="math/tex">[5,6]</script> rounded to one decimal is
+<script type="math/tex; mode=display"> N_{\text {avg}} = \answer {335.1}. </script>
+</p><!--l. 72--><p class="noindent">The instantaneous growth rate of <script type="math/tex">N</script> at <script type="math/tex">t=5</script> rounded to one decimal place is <script type="math/tex; mode=display"> N_{\text {inst}} = \answer {319.1}. </script>
+</p><!--l. 77--><p class="noindent">It seems that <script type="math/tex; mode=display"> N_{\text {avg}}\approx N_{\text {inst}}. </script> This can be explained since <script type="math/tex; mode=display"> N_{\text {inst}} = N'\left (\answer {5}\right ) = \lim _{t\to \answer {5}}\frac {N(t)-N(5)}{t-5} \approx \frac {N(6) - N(\answer {5})}{6-\answer {5}} = N_{\text {avg}}. </script>
+</p>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
