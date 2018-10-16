@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="singVarCalcOptimization9.tex"/> 
+<meta name="author" content="Bart  Snappand  Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible."/> 
+<meta name="learning-outcome" content="Set up an optimization problem by identifying the objective function and appropriate constraints."/> 
+<meta name="learning-outcome" content="Solve optimization problems by finding the appropriate absolute extremum."/> 
+<meta name="learning-outcome" content="Solve basic word problems involving maxima or minima."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="e3e249db2393b3bdb2d5fde8cd388b88a107322e optimization/exercises/singVarCalcOptimization9.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+You want to make cylindrical containers to hold 1 liter (1000<script type="math/tex">\text {cm}^3</script>) using the least amount
+of construction material. The side is made from a rectangular piece of material, and
+this can be done with no material wasted. However, the top and bottom are cut from
+squares of side <script type="math/tex">2r</script>, so that <script type="math/tex">2(2r)^2=8r^2</script> of material is needed (rather than <script type="math/tex">2\pi r^2</script>, which is the total area of
+the top and bottom). Find the dimensions of the container using the least
+amount of material. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> The total area of the material spent consists of the
+area of the lateral side of the cylinder plus the area of two squares of side
+<script type="math/tex">2r</script>.
+<!--l. 24--><p class="noindent"><script type="math/tex">S= 2\pi r h +8 r^2</script>
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="singVarCalcOptimization9-1.svg" width="392.31474 " height="192.2842 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+</div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> Use the fact that the volume of the cylinder, <script type="math/tex">V=r^2\cdot \pi \cdot h</script> and that <script type="math/tex">V=1000</script>. Express <script type="math/tex">h</script> in terms of <script type="math/tex">r</script>. Now
+you can express <script type="math/tex">S</script> as a function of <script type="math/tex">r</script>.
+</div> Our objective function <script type="math/tex">S</script> is given by the expression
+<!--l. 62--><p class="noindent"><script type="math/tex">S(r)=\frac {\answer {2000}}{r}+8r^{\answer {2}}</script>. </p><div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a>
+</div> <script type="math/tex; mode=display"> \text {radius}=\answer {5}\text {cm}\qquad \text {height}=\answer {40/\pi }\text {cm} </script>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

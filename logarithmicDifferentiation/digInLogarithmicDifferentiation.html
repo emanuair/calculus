@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="en"><head> <title>Logarithmic differentiation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInLogarithmicDifferentiation.tex"/> 
+<meta name="author" content="Nela Lakos and Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Identify situations where logs can be used to help find derivatives."/> 
+<meta name="learning-outcome" content="Use logarithmic differentiation to simplify taking derivatives."/> 
+<meta name="learning-outcome" content="Take derivatives of logarithms and exponents of all bases."/> 
+<meta name="learning-outcome" content="Take derivatives of functions raised to functions."/> 
+<meta name="learning-outcome" content="Recognize the difference between a variable as the base and a variable as the exponent."/> 
+<meta name="learning-outcome" content="Work with the inverse properties of functions."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="7bb61c1b2cb5f2741636991c4e443fef0ce73ca2 logarithmicDifferentiation/digInLogarithmicDifferentiation.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 18--><p class="noindent">We use logarithms to help us differentiate.
+</p></div>   <div class="maketitle"></div>
+Logarithms were originally developed as a computational tool. The key fact that
+made this possible is that: <script type="math/tex; mode=display"> \log _b(xy) = \log _b(x)+\log _b(y). </script> <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="digInLogarithmicDifferentiation-2.svg" width="280.28485 " height="243.80415 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<!--l. 48--><p class="noindent">Before the days of calculators and computers, this was critical knowledge for anyone
+in a computational discipline.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Compute <script type="math/tex">138\cdot 23.4</script> using logarithms. <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Start by writing both numbers in scientific
+notation <script type="math/tex; mode=display"> \left (1.38\cdot 10^{\answer [given]{2}}\right )\cdot \left (2.34 \cdot 10^{\answer [given]{1}}\right ). </script> Next we use a log-table, which gives <script type="math/tex">\log _{10}(N)</script> for values of <script type="math/tex">N</script> ranging
+between <script type="math/tex">0</script> and <script type="math/tex">9</script>. We’ve reproduced part of such a table below. <div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="digInLogarithmicDifferentiation-3.svg" width="477.83972 " height="75.1615 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+From the table, we see that <script type="math/tex; mode=display"> \log _{10}(1.38) \approx \answer [given]{0.1399}\qquad \text {and}\qquad \log _{10}(2.34)\approx \answer [given]{0.3692} </script> Add these numbers together to get <script type="math/tex">\answer [given]{0.5091}</script>. Essentially, we
+know the following at this point:
+<div class="center">
+<!--l. 78--><p class="noindent">
+</p><!--l. 79--><p class="noindent"><object data="digInLogarithmicDifferentiation-4.svg" width="255.58601 " height="66.51443 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+                                                                  
+
+                                                                  
+</p></div>
+<!--l. 86--><p class="noindent">Using the table again, we see that <script type="math/tex">\log _{10}(\answer [given]{3.23})\approx 0.5091</script>. Since we were working in scientific notation, we
+need to multiply this by <script type="math/tex">10^3</script>. Our final answer is <script type="math/tex; mode=display"> 3230 \approx 138\cdot 23.4 </script> Since <script type="math/tex">138\cdot 23.4 = 3229.2</script>, this is a good approximation.
+</p></div>
+</div> The moral is:
+     <div class="quote">
+     <!--l. 98--><p class="noindent"><strong>Logarithms   allow   us   to   use   addition   in   place   of
+     multiplication.</strong></p></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Logarithmic differentiation</h3>
+<!--l. 105--><p class="noindent">When taking derivatives, both the product rule and the quotient rule can be
+cumbersome to use. Logarithms will save the day. A key point is the following <script type="math/tex; mode=display"> \ddx \ln (f(x)) = \frac {1}{f(x)}\cdot f'(x) = \frac {f'(x)}{f(x)} </script> which
+follows from the chain rule. Let’s look at an illustrative example to see how this is
+actually used.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-1001r3"></a>Compute: <script type="math/tex; mode=display"> \ddx \frac {x^9e^{4x}}{\sqrt {x-4}} </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-1002r4"></a>Recall the properties of logarithms:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\log _b(xy) = \log _b(x) + \log _b(y)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\log _b(x/y) = \log _b(x) - \log _b(y)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\log _b(x^y) = y\log _b(x)</script></li></ul>
+<!--l. 127--><p class="noindent">While we could use the product and quotient rule to solve this problem, it would be
+tedious. Start by taking the logarithm of the function to be differentiated.
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\ln\left(\frac{x^9e^{4x}}{\sqrt{x-4}} \right) &= \ln\left(\answer[given]{x^9e^{4x}}\right) - \ln\left(\answer[given]{\sqrt{x-4}}\right)\\
+&= \ln\left(x^9\right)+\ln\left(e^{4x}\right) - \ln\left((x-4)^{1/2}\right)\\
+&= \answer[given]{9}\ln(x)+4x - \answer[given]{\frac{1}{2}}\ln(x-4).
+\end{align*}</script>
+<!--l. 135--><p class="noindent">Setting <script type="math/tex">f(x) = \frac {x^9e^{4x}}{\sqrt {x-4}}</script>, we can write <script type="math/tex; mode=display"> \ln (f(x)) = 9\ln (x)+4x - \frac {1}{2}\ln (x-4). </script> Differentiating both sides, we find <script type="math/tex; mode=display"> \frac {f'(x)}{f(x)} = \answer [given]{\frac {9}{x}+4} - \frac {1}{2(x-4)}. </script> Finally we solve for <script type="math/tex">f'(x)</script>, write
+<script type="math/tex; mode=display"> f'(x) = \left (\frac {9}{x}+4 - \frac {1}{2(x-4)}\right )\left (\answer [given]{\frac {x^9e^{4x}}{\sqrt {x-4}}}\right ). </script>
+</p></div>
+</div>
+<!--l. 150--><p class="noindent">The process above is called <em>logarithmic differentiation</em>. Logarithmic differentiation
+allows us to compute new derivatives too.
+                                                                  
+
+                                                                  
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-1003r5"></a>For <script type="math/tex">x>0</script>, compute <script type="math/tex; mode=display"> \ddx x^x </script> <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-1004r6"></a>The function <script type="math/tex">x^x</script> is tricky to differentiate. We cannot use the power
+rule, as the exponent is not a constant. However, if we set <script type="math/tex">f(x) = x^x</script> we can write
+<script type="math/tex; mode=display"> \begin{align*} 
+\ln(f(x)) &= \ln\left(x^x\right)\\
+&=x\ln(x).
+\end{align*}</script>
+<!--l. 167--><p class="noindent">Differentiating both sides, we find <script type="math/tex; mode=display"> \frac {f'(x)}{f(x)} = \answer [given]{1 + \ln (x)}. </script> Now we can solve for <script type="math/tex">f'(x)</script>, <script type="math/tex; mode=display"> f'(x) = x^x + x^x\ln (x). </script>
+</p></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-1005r7"></a>Compute the derivative. <script type="math/tex; mode=display"> \ddx \ln {(|x|)} </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-1006r8"></a>The function <script type="math/tex">|x|</script> is a piecewise defined function. If <script type="math/tex">x>0</script>
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx\ln{(|x|)} &= \ddx\ln{(\answer[given]{x})}\\
+&=\frac{1}{\answer[given]{x}}.
+\end{align*}</script>
+<!--l. 191--><p class="noindent">The function <script type="math/tex">\ln {(|x|)}</script> is not defined at <script type="math/tex">x=0</script>. If <script type="math/tex">x<0</script> </p><script type="math/tex; mode=display"> \begin{align*} 
+\ddx\ln{(|x|)} &= \ddx\ln{(\answer[given]{-x})}\\
+&=\frac{-1}{\answer[given]{-x}}\\
+&=\answer[given]{\frac{1}{x}}.
+\end{align*}</script>
+<!--l. 197--></div>
+</div>
+<!--l. 200--><p class="noindent">The next example will be useful when we want to use logarithmic differentiations for
+functions that assume negative values.
+</p>
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-1007r9"></a>Compute the derivative. <script type="math/tex; mode=display"> \ddx \ln {(|f(x)|)} </script> <div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-1008r10"></a>By the previous example and the Chain Rule
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx\ln{(|f(x)|)} &=\answer[given]{\frac{1}{f(x)}}\cdot f'(x).\\
+&=\frac{f'(x)}{\answer[given]{f(x)}}
+\end{align*}</script>
+<!--l. 215--></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-2000"></a>Proof of the power rule</h3>
+<!--l. 222--><p class="noindent">Finally, recall that previously we only proved the power rule for positive
+integer exponents. Now we’ll use logarithmic differentiation to give a proof
+                                                                  
+
+                                                                  
+for all real-valued exponents. We restate the power rule for convenience
+sake:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem11"><a id="x1-2001r11"></a><span class="theorem-like-title">Power Rule</span> For any real number <script type="math/tex">n</script>, <script type="math/tex; mode=display"> \ddx x^n = n x^{n-1}. </script> <div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-2002r12"></a>
+<!--l. 234--><p class="noindent">We will use logarithmic differentiation. Set <script type="math/tex">f(x) = x^n</script>. Write </p><script type="math/tex; mode=display"> \begin{align*} 
+\ln(|f(x)|) &= \ln\left(|x|^n\right) , x\ne0\\
+&= n\ln(|x|).
+\end{align*}</script>
+<!--l. 239--><p class="noindent">Now differentiate both sides, and solve for <script type="math/tex">f'(x)</script> </p><script type="math/tex; mode=display"> \begin{align*} 
+\frac{f'(x)}{f(x)} &= \frac{n}{x}\\
+f'(x) &=\frac{n f(x)}{x}\\
+&= \answer[given]{n x^{n-1}}.
+\end{align*}</script>
+<!--l. 245--><p class="noindent">Whenever <script type="math/tex">x=0</script> is in the domain of <script type="math/tex">f</script>, the definition of the derivative at <script type="math/tex">x=0</script> implies that <script type="math/tex">f'(0)=0</script>, if <script type="math/tex">n\ne 1</script>
+and <script type="math/tex">f'(0)=1</script>, if <script type="math/tex">n=1</script> , so the power rule applies to <script type="math/tex">x=0</script>, too.<br class="newline"/>
+</p><!--l. 247--><p class="noindent">Thus we see that the power rule holds for all real-valued (nonzero) exponents.
+</p></div>
+</div>
+<!--l. 251--><p class="noindent">While logarithmic differentiation might seem strange and new at first, with a little
+practice it will seem much more natural to you.
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>

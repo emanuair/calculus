@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Inverse  Function
+                                                                  
+
+                                                                  
+Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInInverseFunctionTheorem.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand how the derivative of an inverse function relates to the original derivative."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="8fc526837a56025f3a73aa97cea69fd67b95bd89 derivativesOfInverseFunctions/digInInverseFunctionTheorem.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We see the theoretical underpinning of finding the derivative of an inverse function at
+a point.
+</p></div>   <div class="maketitle"></div>
+There is one catch to all the explanations given above where we computed
+derivatives of inverse functions. To write something like <script type="math/tex; mode=display"> \ddx (e^y)=e^y\cdot y' </script> we need to know that
+the function <script type="math/tex">y</script> <em>has</em> a derivative. The <em>Inverse Function Theorem</em> guarantees
+this.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Inverse Function Theorem</span><a class="ximera-label" id="theorem:IFT"></a> If <script type="math/tex">f</script> is a differentiable function that is one-to-one near <script type="math/tex">a</script> and <script type="math/tex">f'(a) \neq 0</script>,
+then
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">f^{-1}(x)</script> is <strong>defined</strong> for <script type="math/tex">x</script> near <script type="math/tex">b=f(a)</script>,
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">f^{-1}(x)</script> is <strong>differentiable</strong> near <script type="math/tex">b=f(a)</script>,
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">last, but not least: <script type="math/tex; mode=display"> \eval {\ddx f^{-1}(x)}_{x=b} = \frac {1}{f'(a)}\qquad \text {where}\qquad b = f(a). </script></dd></dl>
+<div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-68r2"></a>We will only explain the last result. We know <script type="math/tex; mode=display"> f(f^{-1}(x)) = x, </script> and now we use the chain rule to write
+<script type="math/tex; mode=display"> \begin{align*} 
+  \ddx f(f^{-1}(x)) &= f'(f^{-1}(x)) (f^{-1})'(x)\\
+  &=1.
+  \end{align*}</script>
+<!--l. 46--><p class="noindent">Solving for <script type="math/tex">(f^{-1})'(x)</script> we see <script type="math/tex; mode=display"> (f^{-1})'(x) = \frac {1}{f'(f^{-1}(x))}. </script> This is what we have written above.
+</p></div>
+</div>
+<!--l. 54--><p class="noindent">It is worth giving one more piece of evidence for the formula above, this time based
+on increments in function, <script type="math/tex">\Delta f</script>, and increments in variable, <script type="math/tex">\Delta x</script>. Consider this plot of a
+                                                                  
+
+                                                                  
+function <script type="math/tex">f</script> and its inverse: </p><div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="digInInverseFunctionTheorem-2.svg" width="290.52739 " height="291.24866 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Since the graph of the inverse of a function is the reflection of the graph of the
+function over the line <script type="math/tex">y=x</script>, we see that the increments are “switched” when reflected.
+Hence we see that <script type="math/tex; mode=display"> \dfrac {\Delta f^{-1}}{\Delta {x}} = \dfrac {\Delta x}{\Delta f}=\dfrac {1}{\dfrac {\Delta f}{\Delta x}}. </script> Taking the limit as <script type="math/tex">\Delta x</script> goes to <script type="math/tex">0</script>, we can obtain the expression for the
+derivative of <script type="math/tex">f^{-1}</script>. <br class="newline"/><script type="math/tex; mode=display"> \dfrac {d f^{-1}}{d{x}} = \dfrac {1}{\dfrac {d f}{d x}} </script>
+<!--l. 101--><p class="noindent">The inverse function theorem gives us a recipe for computing the derivatives of
+inverses of functions at points.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-69r3"></a>Let <script type="math/tex">f</script> be a differentiable function that has an inverse. In the table below we give
+several values for both <script type="math/tex">f</script> and <script type="math/tex">f'</script>: <script type="math/tex; mode=display"> \begin {array}{|c|c|c|}\hline x & f & f' \\ \hline \hline 2 & 0 & 2 \\ \hline 3 &1 &5 \\ \hline 4 & 3 & 0 \\ \hline \end {array} </script> Compute <script type="math/tex; mode=display"> \ddx f^{-1}(x)\;\text {at $x=1$.} </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-70r4"></a>From the table above we see that <script type="math/tex; mode=display"> 1 = f(\answer [given]{3}). </script> Hence, by
+the inverse function theorem <script type="math/tex; mode=display"> \left (f^{-1}\right )' (1)= \frac {1}{f'(\answer [given]{3})} = \answer [given]{\frac {1}{5}}. </script>
+</div>
+</div>
+<!--l. 131--><p class="noindent">If one example is good, two are better:
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-71r5"></a>Let <script type="math/tex">f</script> be a differentiable function that has an inverse. In the table below we give
+several values for both <script type="math/tex">f</script> and <script type="math/tex">f'</script>: <script type="math/tex; mode=display"> \begin {array}{|c|c|c|}\hline x & f & f' \\ \hline \hline 2 & 0 & 2 \\ \hline 3 & 1 &5 \\ \hline 4 & 3 & 0 \\ \hline \end {array} </script> Compute <script type="math/tex; mode=display"> \left (f^{-1}\right )'(0) </script> <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-72r6"></a>Note, <script type="math/tex; mode=display"> \left (f^{-1}\right )'(0) = \ddx f^{-1}(x)\;\text {at $x=0$.} </script> From the table above we see that <script type="math/tex; mode=display"> 0 = f(\answer [given]{2}). </script>
+Hence, by the inverse function theorem <script type="math/tex; mode=display"> \left (f^{-1}\right )'(0) = \frac {1}{f'(\answer [given]{2})} = \answer [given]{\frac {1}{2}}. </script>
+</div>
+</div>
+<!--l. 164--><p class="noindent">Finally, let’s see an example where the theorem does not apply.
+</p>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-73r7"></a>Let <script type="math/tex">f</script> be a differentiable function that has an inverse. In the table below we give
+several values for both <script type="math/tex">f</script> and <script type="math/tex">f'</script>: <script type="math/tex; mode=display"> \begin {array}{|c|c|c|}\hline x & f & f' \\ \hline \hline 2 & 0 & 2 \\ \hline 3 & 1 & 4 \\ \hline 4 & 3 & 0 \\ \hline \end {array} </script> Compute <script type="math/tex; mode=display"> \eval {\ddx f^{-1}(x)}_{x=3} </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-74r8"></a>From the table above we see that <script type="math/tex; mode=display"> 3 = f(\answer [given]{4}). </script> Ah! But
+                                                                  
+
+                                                                  
+here, <script type="math/tex">f'(\answer [given]{4}) = \answer [given]{0}</script>, so we have no guarantee that the inverse exists near the point <script type="math/tex">x=3</script>, but even if it
+did the inverse would not be differentiable there.
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

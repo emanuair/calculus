@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="positionFromVelocity1.tex"/> 
+<meta name="author" content="Gregory Hartman and Matthew Carrand Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute definite integrals using the properties of integrals."/> 
+<meta name="learning-outcome" content="Given a velocity function, calculate displacement and distance traveled."/> 
+<meta name="learning-outcome" content="Understand the relationship between position, velocity and acceleration."/> 
+<meta name="learning-outcome" content="Solve basic word problems involving maxima or minima."/> 
+<meta name="learning-outcome" content="Understand the difference between displacement and distance traveled."/> 
+<meta name="learning-outcome" content="Understand the relationship between indefinite and definite integrals."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="b3ed24cfa96e09d8499f26b6ff94b4d0215167f2 antiderivatives/exercises/positionFromVelocity1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+An object is thrown straight up from a height of <script type="math/tex">48</script> ft and its velocity, in ft/s, is given
+by <script type="math/tex">v(t)=-32t+64</script>, for <script type="math/tex">t</script> in time interval <script type="math/tex">I</script>, where <script type="math/tex">t</script> is time in seconds.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">What is the object’s maximum velocity? <script type="math/tex; mode=display">v_{max}=\answer {64}\,ft/s</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the position of the object at any time <script type="math/tex">t</script>, for <script type="math/tex">t</script> in <script type="math/tex">I</script>? <div role="article" class="problem-environment hint" id="problem2"><a id="x1-67r2"></a> You have to solve the
+     Initial Value Problem:
+     <!--l. 28--><p class="noindent"><script type="math/tex">s'(t)=-32t+64</script>
+     </p><!--l. 30--><p class="noindent"><script type="math/tex">s(0)=48</script>
+     </p></div> <script type="math/tex; mode=display">s(t)=\answer {-16} t^2+\answer {64} t+\answer {48} \,ft/s</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">When will the object reach a height of <script type="math/tex">0</script>? <div role="article" class="problem-environment hint" id="problem3"><a id="x1-69r3"></a> Solve the equation
+     <!--l. 36--><p class="noindent"><script type="math/tex">s(t)=0</script>
+     </p></div> <script type="math/tex; mode=display">t=\answer {2+\sqrt {7}}\,s</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">What is the object’s maximum displacement from its starting position? <script type="math/tex; mode=display">d=\answer {64}\,ft</script>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">When does the maximum displacement occur? <script type="math/tex; mode=display">t=\answer {2}\,s</script>
+     </dd></dl>
+</div>  
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

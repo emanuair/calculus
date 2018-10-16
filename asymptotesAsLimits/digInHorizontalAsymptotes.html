@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="en"><head> <title>Horizontal
+                                                                  
+
+                                                                  
+asymptotes</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInHorizontalAsymptotes.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find horizontal asymptotes using limits."/> 
+<meta name="learning-outcome" content="Recognize that a curve can cross a horizontal asymptote."/> 
+<meta name="learning-outcome" content="Calculate the limit as $x$ approaches $\pm \infty $ of common functions algebraically."/> 
+<meta name="learning-outcome" content="Find the limit as $x$ approaches $\pm \infty $ from a graph."/> 
+<meta name="learning-outcome" content="Define a horizontal asymptote."/> 
+<meta name="learning-outcome" content="Compute limits at infinity of famous functions."/> 
+<meta name="learning-outcome" content="Identify horizontal asymptotes by looking at a graph."/> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="e5a7bad56513546ee25d408bff892b437304a388 asymptotesAsLimits/digInHorizontalAsymptotes.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 17--><p class="noindent">We explore functions that behave like horizontal lines as the input grows without
+bound.
+</p></div>   <div class="maketitle"></div>
+Let’s start with an example: <div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Consider the function: <script type="math/tex; mode=display"> g(x) = \frac {1}{x} </script> with the table below
+<script type="math/tex; mode=display"> \begin {array}{c|c} x & g(x)=\frac {1}{x} \\\hline 10 & \answer [given]{0.1} \\ 100 & \answer [given]{0.01} \\ 1000 & \answer [given]{0.001} \\ 10000 & \answer [given]{0.0001} \\ 100000 & \answer [given]{0.00001}\\ 1000000 & \answer [given]{0.000001} \end {array} </script>
+<!--l. 41--><p class="noindent">What does the table tell us about <script type="math/tex">g(x)</script> as <script type="math/tex">x</script> grows bigger and bigger? </p><div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>
+<!--l. 44--><p class="noindent">As <script type="math/tex">x</script> grows bigger and bigger, it seems that <script type="math/tex">g(x)</script> approaches <script type="math/tex">0</script>. It seems that we should
+write <script type="math/tex; mode=display"> \lim _{x\to \infty }\frac {1}{x}=0 </script>
+</p></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-66r3"></a>Now consider a different function: <script type="math/tex; mode=display"> f(x) = \frac {6x-9}{x-1} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-1"><object data="digInHorizontalAsymptotes-2.svg" width="319.4466 " height="243.83 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+Fill in the table below, rounding to <script type="math/tex">5</script> decimal places. <script type="math/tex; mode=display"> \begin {array}{c|c} x & f(x)=\frac {6x-9}{x-1} \\ \hline 10 & \answer [given]{5.66667}\\ 100 & \answer [given]{5.96970}\\ 1000 & \answer [given]{5.99700}\\ 10000 & \answer [given]{5.99970}\\ 100000 & \answer [given]{5.99997}\\ \end {array} </script> What does the table tell us
+about <script type="math/tex">f(x)</script> as <script type="math/tex">x</script> grows bigger and bigger? <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>As <script type="math/tex">x</script> grows bigger and bigger, it seems like <script type="math/tex">f(x)</script>
+approaches <script type="math/tex">6</script>. It seems that we should write <script type="math/tex; mode=display"> \lim _{x\to \infty }\frac {6x-9}{x-1}=6 </script>
+</div>
+</div>
+<div class="theorem-like problem-environment definition" id="problem5"><a id="x1-68r5"></a><a class="ximera-label" id="def:limitAtInfty"></a> If <script type="math/tex">f(x)</script> becomes arbitrarily close to a specific value <script type="math/tex">L</script> by making <script type="math/tex">x</script> sufficiently large, we
+write <script type="math/tex; mode=display"> \lim _{x\to \infty } f(x) = L </script> and we say, the <strong>limit at infinity</strong> of <script type="math/tex">f(x)</script> is <script type="math/tex">L</script>.
+<!--l. 105--><p class="noindent">If <script type="math/tex">f(x)</script> becomes arbitrarily close to a specific value <script type="math/tex">L</script> by making <script type="math/tex">x</script> sufficiently large
+and negative, we write <script type="math/tex; mode=display"> \lim _{x\to -\infty } f(x) = L </script> and we say, the <strong>limit at negative infinity</strong> of <script type="math/tex">f(x)</script> is
+<script type="math/tex">L</script>.
+</p></div>
+
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-69r6"></a>Compute the limit. <script type="math/tex; mode=display"> \lim _{x\to \infty } \frac {6x-9}{x-1}. </script> We will confirm what we guessed earlier by computing the limit
+at infinity.<br class="newline"/>We can assume that all the Limit Laws also apply to limits at infinity. <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-70r7"></a>Write
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty}\frac{6x-9}{x-1} &= \lim_{x\to\infty}\frac{6x-9}{x-1}\cdot \frac{1/x}{1/x}\\
+&=\lim_{x\to\infty}\frac{\frac{6x}{x} - \frac{9}{x}}{\frac{x}{x} - \frac{1}{x}}\\
+&=\frac{\lim_{x\to\infty}\Bigl(6- \frac{9}{x}\Bigr)}{\lim_{x\to\infty}\Bigl(1- \frac{1}{x}\Bigr)}\\
+&=\frac{6-9\lim_{x\to\infty}  \frac{1}{x}}{1-\lim_{x\to\infty} \frac{1}{x}}\\
+&=\frac{6-9(0)}{1-0}\\
+&=  \frac{6}{1}\\
+&= 6.
+\end{align*}</script>
+<!--l. 130--></div>
+</div>
+<!--l. 133--><p class="noindent">Sometimes one must be careful, consider this example.
+</p>
+<div class="theorem-like problem-environment example" id="problem8"><a id="x1-71r8"></a>
+<!--l. 139--><p class="noindent"><script type="math/tex; mode=display"> \lim _{x\to -\infty } \frac {x^3+1}{\sqrt {x^6+5}} </script> </p><div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-72r9"></a>In this case we multiply the numerator and denominator by
+<script type="math/tex">-1/x^3</script>, which is a positive number as since <script type="math/tex">x\to -\infty </script>, <script type="math/tex">x^3</script> is a negative number.
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} &= \lim_{x\to -\infty} \frac{x^3+1}{\sqrt{x^6+5}} \cdot \frac{-1/x^3}{-1/x^3}\\
+&= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{x^6/x^6+5/x^6}}\\
+&= \lim_{x\to -\infty} \frac{-1-1/x^3}{\sqrt{1+5/x^6}}\\
+&= \frac{ \lim_{x\to -\infty}\Bigl(-1-1/x^3\Bigr)}{\lim_{x\to -\infty}\sqrt{1+5/x^6}}\\
+&= \frac{ -1-\lim_{x\to -\infty}(1/x)^3}{\sqrt{\lim_{x\to -\infty}\Bigl(1+5/x^6\Bigr)}}\\
+&= \frac{ -1-(\lim_{x\to -\infty}1/x)^3}{\sqrt{1+5(\lim_{x\to -\infty}1/x)^6}}\\
+&= \frac{ -1-(0)^3}{\sqrt{1+5(0)^6}}\\
+&= \frac{ -1-0}{\sqrt{1+0}}\\
+&= -1.
+\end{align*}</script>
+<!--l. 155--></div>
+</div>
+<!--l. 158--><p class="noindent">Note, since <script type="math/tex; mode=display"> \lim _{x\to \infty } f(x) = \lim _{x\to 0^+} f\left (\frac {1}{x}\right ) </script> and <script type="math/tex; mode=display"> \lim _{x\to -\infty } f(x) = \lim _{x\to 0^-} f\left (\frac {1}{x}\right ) </script> we can also apply the Squeeze Theorem when taking limits at
+infinity. Here is an example of a limit at infinity that uses the Squeeze Theorem, and
+shows that functions can, in fact, cross their horizontal asymptotes.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment example" id="problem10"><a id="x1-73r10"></a>Compute: <script type="math/tex; mode=display"> \lim _{x\to \infty } \frac {\sin (7x)+4x}{x} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-2"><object data="digInHorizontalAsymptotes-4.svg" width="306.85393 " height="255.11253 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-74r11"></a>We can bound our function <script type="math/tex; mode=display"> \frac {-1+4x}{x} \le \frac {\sin (7x)+4x}{x} \le \frac {1+4x}{x}. </script> Now write with me
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty}\frac{-1+4x}{x} \cdot \frac{1/x}{1/x} &= \lim_{x\to\infty}\frac{-1/x+4}{1}\\
+&=4.
+\end{align*}</script>
+<!--l. 206--><p class="noindent">And  we  also  have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\lim_{x\to\infty}\frac{1+4x}{x} \cdot \frac{1/x}{1/x} &= \lim_{x\to\infty}\frac{1/x+4}{1}\\
+&=4.
+\end{align*}</script>
+<!--l. 211--><p class="noindent">Since <script type="math/tex; mode=display"> \lim _{x\to \infty } \frac {-1+4x}{x} = 4 = \lim _{x\to \infty }\frac {1+4x}{x} </script> we conclude by the Squeeze Theorem, <script type="math/tex">\lim _{x\to \infty }\frac {\sin (7x)}{x}+4 = 4</script>.
+</p></div>
+</div>
+
+<div class="theorem-like problem-environment definition" id="problem12"><a id="x1-75r12"></a><a class="ximera-label" id="def:horiz asymptote"></a> If <script type="math/tex; mode=display"> \lim _{x\to \infty } f(x) = L \qquad \text {or}\qquad \lim _{x\to -\infty } f(x) = L, </script> then the line <script type="math/tex">y=L</script> is a <strong>horizontal asymptote</strong> of <script type="math/tex">f(x)</script>.
+</div>
+<div class="theorem-like problem-environment example" id="problem13"><a id="x1-76r13"></a>Give the horizontal asymptotes of <script type="math/tex; mode=display"> f(x) = \frac {6x-9}{x-1} </script> <div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-77r14"></a>From our previous work, we see that <script type="math/tex">\lim _{x\to \infty } f(x) = 6</script>, and upon
+further inspection, we see that <script type="math/tex">\lim _{x\to -\infty } f(x) = 6</script>. Hence the horizontal asymptote of <script type="math/tex">f(x)</script> is the line
+<script type="math/tex">y=6</script>.
+</div>
+</div>
+<!--l. 246--><p class="noindent">It is a common misconception that a function cannot cross an asymptote. As the next
+example shows, a function can cross a horizontal asymptote, and in the example this
+                                                                  
+
+                                                                  
+occurs an infinite number of times!
+</p>
+<div class="theorem-like problem-environment example" id="problem15"><a id="x1-78r15"></a>Give a horizontal asymptote of <script type="math/tex; mode=display"> f(x) = \frac {\sin (7x)+4x}{x}. </script> <div class="theorem-like problem-environment explanation" id="problem16"><a id="x1-79r16"></a>Again from previous work, we see that <script type="math/tex">\lim _{x\to \infty } f(x) = \answer [given]{4}</script>. Hence <script type="math/tex">y=\answer [given]{4}</script> is a
+horizontal asymptote of <script type="math/tex">f(x)</script>.
+</div>
+</div>
+<!--l. 262--><p class="noindent">We conclude with an infinite limit at infinity.
+</p>
+<div class="theorem-like problem-environment example" id="problem17"><a id="x1-80r17"></a>Compute <script type="math/tex; mode=display"> \lim _{x\to \infty } \ln (x) </script> <div class="image-environment" role="img" aria-labelledby="image-alt-3"><object data="digInHorizontalAsymptotes-6.svg" width="312.77267 " height="243.81413 " type="image/svg+xml"><p>SVG-Viewer needed.</p></object>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem18"><a id="x1-81r18"></a>The function <script type="math/tex">\ln (x)</script> grows very slowly, and seems like it may have a horizontal asymptote,
+see the graph above. However, if we consider the definition of the natural log as the
+inverse of the exponential function
+     <div class="quote">
+     <!--l. 292--><p class="noindent"><script type="math/tex">\ln (x) = y</script> means that <script type="math/tex">e^y =x</script> and that <script type="math/tex">x</script> is positive.</p></div>
+<!--l. 294--><p class="noindent">We see that we may raise <script type="math/tex">e</script> to higher and higher values to obtain larger numbers. This
+means that <script type="math/tex">\ln (x)</script> is unbounded, and hence <script type="math/tex">\lim _{x\to \infty }\ln (x)=\infty </script>.
+</p></div>
+</div>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>

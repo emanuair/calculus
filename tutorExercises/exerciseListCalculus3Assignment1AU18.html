@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="exerciseListCalculus3Assignment1AU18.tex"/> 
+<meta name="og:image" content=""/> 
+<meta name="description" content="xourse"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="c16362109e185cb33feb8b045dd60366fd5bb050 preamble.tex"/><meta name="dependency" content="32c810032d19d37762c871e14f198c23c87d61c5 sage-preamble.tex"/><meta name="dependency" content="e99065ed8af7a16d2cef8c52a35fb25e469757bf tutorExercises/exerciseListCalculus3Assignment1AU18.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\graded }[1]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\makerandom }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<h1 id="part1" class="card part">Working in two and three dimensions</h1>
+<a class="activity card practice" href="workingInTwoAndThreeDimensions/exercises/distance3" data-options="">../workingInTwoAndThreeDimensions/exercises/distance3.tex</a>
+<h1 id="part2" class="card part">Vectors</h1>
+<a class="activity card practice" href="vectors/exercises/10_02_ex21" data-options="">../vectors/exercises/10_02_ex21.tex</a>
+<h1 id="part3" class="card part">The dot product</h1>
+<a class="activity card practice" href="dotProducts/exercises/10_03_ex_15" data-options="">../dotProducts/exercises/10_03_ex_15.tex</a> <a class="activity card practice" href="dotProducts/exercises/tipClose3" data-options="">../dotProducts/exercises/tipClose3.tex</a>
+<h1 id="part4" class="card part">The cross product</h1>
+<a class="activity card practice" href="crossProducts/exercises/10_04_ex_09" data-options="">../crossProducts/exercises/10_04_ex_09.tex</a>
+<h1 id="part5" class="card part">Lines and curves in space</h1> <a class="activity card practice" href="linesAndCurvesInSpace/exercises/10_05_ex_17b" data-options="">../linesAndCurvesInSpace/exercises/10_05_ex_17b.tex</a> <a class="activity card practice" href="linesAndCurvesInSpace/exercises/linePointPosition.ditto2" data-options="">../linesAndCurvesInSpace/exercises/linePointPosition.ditto2.tex</a>
+<h1 id="part6" class="card part">Calculus and vector-valued functions</h1>
+<a class="activity card practice" href="calculusAndVectorValuedFunctions/exercises/vectorValuedLimitTrig.ditto" data-options="">../calculusAndVectorValuedFunctions/exercises/vectorValuedLimitTrig.ditto.tex</a> <a class="activity card practice" href="calculusAndVectorValuedFunctions/exercises/derivAndTan2" data-options="">../calculusAndVectorValuedFunctions/exercises/derivAndTan2.tex</a>
+<h1 id="part7" class="card part">Motion and paths in space</h1>
+<a class="activity card practice" href="motionAndPathsInSpace/exercises/arcLength1" data-options="">../motionAndPathsInSpace/exercises/arcLength1.tex</a>
+<h1 id="part8" class="card part">Normal vectors</h1>
+<a class="activity card practice" href="normalVectors/exercises/13_02_ex_02" data-options="">../normalVectors/exercises/13_02_ex_02.tex</a>
+<h1 id="part9" class="card part">Normal vectors and parametric plots</h1>
+<a class="activity card practice" href="normalVectors/exercisesParametricPlots/record" data-options="">../normalVectors/exercisesParametricPlots/record.tex</a>
+<h1 id="part10" class="card part">Functions of several variables</h1>
+<a class="activity card practice" href="functionsOfSeveralVariables/exercises/domain3" data-options="">../functionsOfSeveralVariables/exercises/domain3.tex</a>
+<h1 id="part11" class="card part">Continuity of functions of several variables</h1>
+<a class="activity card practice" href="continuityOfFunctionsOfSeveralVariables/exercises/limit5" data-options="">../continuityOfFunctionsOfSeveralVariables/exercises/limit5.tex</a>
+<h1 id="part12" class="card part">Partial derivatives and The Gradient Vector</h1>
+<a class="activity card practice" href="partialDerivativesAndTheGradientVector/exercises/partialDerivative.ditto4" data-options="">../partialDerivativesAndTheGradientVector/exercises/partialDerivative.ditto4.tex</a> <a class="activity card practice" href="partialDerivativesAndTheGradientVector/exercises/gradCompThree.ditto2" data-options="">../partialDerivativesAndTheGradientVector/exercises/gradCompThree.ditto2.tex</a>
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</body></html>
