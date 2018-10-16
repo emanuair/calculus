@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="expandingBox1.tex"/> 
+<meta name="date" content="2018-10-16 01:43:00"/> 
+<meta name="author" content="Nela  Lakos  and  Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the domain and range of a function."/> 
+<meta name="learning-outcome" content="Perform basic operations and compositions on functions."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="1173e5193e75260f3fed5dd631811738276537fe understandingFunctions/exercises/expandingBox1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> A box with an open top is to be constructed from a rectangular piece of cardboard
+with dimensions <script type="math/tex">12\unit {in}</script> by <script type="math/tex">20\unit {in}</script> by cutting out equal squares of side <script type="math/tex">x</script> at each corner and then
+folding up the sides: <div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">20</script><script type="math/tex">12</script><script type="math/tex">x</script><script type="math/tex">x</script>
+</div>
+Express the volume <script type="math/tex">V</script> of the box as a function of <script type="math/tex">x</script>. <script type="math/tex; mode=display"> V(x) = \answer {x(20-2x)(12-2x)} </script>
+</div> <div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Simplify your answer above: <script type="math/tex; mode=display"> V(x) = \answer {4}x^3 + \answer {-64}x^2 + \answer {240}x </script>
+</div> <div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> What is the (natural) domain of <script type="math/tex">V</script>? <script type="math/tex; mode=display"> \left [\answer {0},\answer {6}\right ] </script>
+</div> <div role="article" class="problem-environment exercise" id="problem4"><a id="x1-67r4"></a> Is the function <script type="math/tex">V</script> a polynomial? <div class="multiple-choice" id="problem5"><span class="choice  " id="choice1">yes</span> <span class="choice correct " id="choice2">no</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback6"><script type="math/tex">V</script> is not a polynomial. The domain of a polynomial is <script type="math/tex">(-\infty ,\infty )</script>. <script type="math/tex">V</script> is a polynomial on a restricted
+domain. </div>
+</div> <div role="article" class="problem-environment exercise" id="problem7"><a id="x1-68r5"></a> Evaluate (either write a number or “DNE”): <script type="math/tex; mode=display"> \begin{align*} 
+      V(1) &= \answer{180}\\
+    V(5) &= \answer{100}\\
+    V(10) &= \answer{DNE}
+  \end{align*}</script>
+</div> <div role="article" class="problem-environment exercise" id="problem8"><a id="x1-69r6"></a> If <script type="math/tex">x = 1</script> and increases by <script type="math/tex">h</script>, by how much will volume of the box change? Simplify. <div role="article" class="problem-environment hint" id="problem9"><a id="x1-70r7"></a> You
+may find the following formulas useful: <script type="math/tex; mode=display"> \begin{align*} 
+         (a+b)^2 &= a^2 + 2ab + b^2\\
+      (a + b)^3 &= a^3 + 3 a^2 b + 3 ab^2 + b^3
+    \end{align*}</script>
+</div> <script type="math/tex; mode=display"> V(1+h) - V(1) = \answer {4}h^3 +\answer {-52}h^2 + \answer {124}h </script>
+</div>
+<div role="article" class="problem-environment exercise" id="problem10"><a id="x1-71r8"></a> As <script type="math/tex">x</script> increases from <script type="math/tex">x=1</script> to <script type="math/tex">x=5</script>, what is <script type="math/tex">h</script>? <script type="math/tex; mode=display"> h=\answer {4} </script> Now, compute <script type="math/tex; mode=display"> \begin{align*} 
+      V(5) &= \answer{100}\\
+    V(1) &= \answer{180}\\
+    V(5) - V(1) &= \answer{-80}
+  \end{align*}</script>
+<div role="article" class="problem-environment exercise" id="problem11"><a id="x1-72r9"></a> We also know from your work above that <script type="math/tex; mode=display"> \begin{align*} 
+         V(1+h) -V(1) &= 4h^3 -52h^2 + 124h\\
+                                                                  
+
+                                                                  
+      V(1+4) - V(1) &= \answer{-80}
+    \end{align*}</script>
+</div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem12"><a id="x1-73r10"></a> Express the total surface area (inside and outside) of the open box as a function of <script type="math/tex">x</script>.
+<script type="math/tex; mode=display"> S(x) = \answer {480-8x^2} </script>
+</div> <div role="article" class="problem-environment exercise" id="problem13"><a id="x1-74r11"></a> As <script type="math/tex">x</script> increases from <script type="math/tex">1</script> to <script type="math/tex">(1+h)</script>, the total surface area of the box changes by <script type="math/tex; mode=display"> S(1+h) - S(1) = \answer {-8}h^2 + \answer {-16}h </script> So as <script type="math/tex">x</script> increases
+from <script type="math/tex">1</script> to <script type="math/tex">(1+h)</script>, the surface areas decreases by <script type="math/tex">\answer {16h+8h^2}</script>.
+As a final exercise, illustrate this change in a picture and share your picture with a
+classmate. <div class="multiple-choice" id="problem14"><span class="choice correct " id="choice3">I have done this.</span> <span class="choice  " id="choice4">I have not done this.</span> </div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,258 @@
+<!DOCTYPE html><html lang="en"><head> <title>Concepts  of  graphing
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInConceptsOfGraphingFunctions.tex"/> 
+<meta name="date" content="2018-10-16 01:10:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="dfdb8068ad87a2b482f905e4206c954808632e80 conceptsOfGraphingFunctions/digInConceptsOfGraphingFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">We use the language of calculus to describe graphs of functions.
+</p></div>   <div class="maketitle"></div>
+In this section, we review the graphical implications of limits, and the sign of the first
+and second derivative. You already know all this stuff: it is just important enough to
+hit it more than once, and put it all together.
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Sketch the graph of a function <script type="math/tex">f</script> which has the following properties:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">f(0)=0</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\lim _{x \to 10^+} f(x) = +\infty </script>
+     </li>
+     <li class="itemize"><script type="math/tex">\lim _{x \to 10^-} f(x) = -\infty </script>
+     </li>
+     <li class="itemize"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">(-\infty ,0) \cup (6,10) \cup (10,14)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">(0,6) \cup (14,\infty )</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f''(x)<0</script> on <script type="math/tex">(4,10)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f''(x)>0</script> on <script type="math/tex">(-\infty ,4) \cup (10,\infty )</script></li></ul>
+<div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Try this on your own first, then either check with a friend or check the online
+version.
+<div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> The first thing we will do is to plot the point <script type="math/tex">(0,0)</script> and indicate the appropriate vertical
+asymptote due to the limit conditions. We also mark all of the places where <script type="math/tex">f'</script> or <script type="math/tex">f''</script>
+change sign.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">
+<script type="math/tex">10</script><script type="math/tex">4</script><script type="math/tex">6</script><script type="math/tex">14</script><script type="math/tex">x</script><script type="math/tex">y</script></div>
+</div>
+<div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> Now we classify the behavior on each of the intervals:
+     <ul class="itemize1">
+     <li class="itemize">On <script type="math/tex">(-\infty , 0)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice5"><a id="x1-68r5"></a><span class="choice  " id="choice1">increasing</span> <span class="choice correct " id="choice2">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice6"><a id="x1-69r6"></a><span class="choice correct " id="choice3">up</span><span class="choice  " id="choice4">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(0, 4)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice7"><a id="x1-70r7"></a><span class="choice correct " id="choice5">increasing</span> <span class="choice  " id="choice6">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice8"><a id="x1-71r8"></a><span class="choice correct " id="choice7">up</span><span class="choice  " id="choice8">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(4, 6)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice9"><a id="x1-72r9"></a><span class="choice correct " id="choice9">increasing</span> <span class="choice  " id="choice10">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice10"><a id="x1-73r10"></a><span class="choice  " id="choice11">up</span><span class="choice correct " id="choice12">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(6, 10)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice11"><a id="x1-74r11"></a><span class="choice  " id="choice13">increasing</span> <span class="choice correct " id="choice14">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice12"><a id="x1-75r12"></a><span class="choice  " id="choice15">up</span><span class="choice correct " id="choice16">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(10, 14)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice13"><a id="x1-76r13"></a><span class="choice  " id="choice17">increasing</span> <span class="choice correct " id="choice18">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice14"><a id="x1-77r14"></a><span class="choice correct " id="choice19">up</span><span class="choice  " id="choice20">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(14, \infty )</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice15"><a id="x1-78r15"></a><span class="choice correct " id="choice21">increasing</span> <span class="choice  " id="choice22">decreasing</span>
+                                                                  
+
+                                                                  
+     </span> and concave <span class="word-choice" id="word-choice16"><a id="x1-79r16"></a><span class="choice correct " id="choice23">up</span><span class="choice  " id="choice24">down</span>
+     </span></li></ul>
+</div>
+<div role="article" class="problem-environment hint" id="problem17"><a id="x1-80r17"></a> Utilizing all of this information, we are forced to sketch something like the
+following:
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">
+<script type="math/tex">10</script><script type="math/tex">4</script><script type="math/tex">6</script><script type="math/tex">14</script><script type="math/tex">x</script><script type="math/tex">y</script></div>
+</div>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem18"><a id="x1-81r18"></a>Sketch the graph of a function <script type="math/tex">f</script> which has the following properties:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">f(0)=1</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f(6)=2</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\lim _{x \to 6^+} f(x) = 3</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\lim _{x \to 6^-} f(x) = 1</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">(-\infty ,1)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">(1,6)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f'(x) = -2</script> on <script type="math/tex">(6, \infty )</script>
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><script type="math/tex">f''(x)<0</script> on <script type="math/tex">(2.5,5)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">f''(x)>0</script> on <script type="math/tex">(-\infty ,2.5) \cup (5,6)</script></li></ul>
+<div class="theorem-like problem-environment explanation" id="problem19"><a id="x1-82r19"></a>Try this on your own first, then either check with a friend or check the online
+version.
+<div role="article" class="problem-environment hint" id="problem20"><a id="x1-83r20"></a> The first thing we will do is to plot the points <script type="math/tex">(0,1)</script> and <script type="math/tex">(6,2)</script>, and the “holes” at <script type="math/tex">(6,3)</script> and <script type="math/tex">(6,1)</script> due to
+the limit conditions. We can immediately draw in what <script type="math/tex">f</script> looks like on <script type="math/tex">(6,\infty )</script> since it is
+linear with slope <script type="math/tex">2</script>, and must connect to the hole at <script type="math/tex">(6,2)</script>. We also mark all of the places
+where <script type="math/tex">f'</script> or <script type="math/tex">f''</script> change sign.
+<div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">1</script><script type="math/tex">2.5</script><script type="math/tex">5</script><script type="math/tex">6</script><script type="math/tex">3</script><script type="math/tex">2</script><script type="math/tex">1</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+<div role="article" class="problem-environment hint" id="problem21"><a id="x1-84r21"></a> Now we classify the behavior on each of the intervals:
+     <ul class="itemize1">
+     <li class="itemize">On <script type="math/tex">(-\infty , 1)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice22"><a id="x1-85r22"></a><span class="choice  " id="choice25">increasing</span> <span class="choice correct " id="choice26">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice23"><a id="x1-86r23"></a><span class="choice correct " id="choice27">up</span><span class="choice  " id="choice28">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(1, 2.5)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice24"><a id="x1-87r24"></a><span class="choice correct " id="choice29">increasing</span> <span class="choice  " id="choice30">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice25"><a id="x1-88r25"></a><span class="choice correct " id="choice31">up</span><span class="choice  " id="choice32">down</span>
+     </span>
+     </li>
+     <li class="itemize">On <script type="math/tex">(2.5, 5)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice26"><a id="x1-89r26"></a><span class="choice correct " id="choice33">increasing</span> <span class="choice  " id="choice34">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice27"><a id="x1-90r27"></a><span class="choice  " id="choice35">up</span><span class="choice correct " id="choice36">down</span>
+     </span>
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">On <script type="math/tex">(5, 6)</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice28"><a id="x1-91r28"></a><span class="choice correct " id="choice37">increasing</span> <span class="choice  " id="choice38">decreasing</span>
+     </span> and concave <span class="word-choice" id="word-choice29"><a id="x1-92r29"></a><span class="choice correct " id="choice39">up</span><span class="choice  " id="choice40">down</span>
+     </span></li></ul>
+</div>
+<div role="article" class="problem-environment hint" id="problem30"><a id="x1-93r30"></a> Utilizing all of this information, we are forced to draw something like the
+following:
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">1</script><script type="math/tex">2.5</script><script type="math/tex">5</script><script type="math/tex">6</script><script type="math/tex">3</script><script type="math/tex">2</script><script type="math/tex">1</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem31"><a id="x1-94r31"></a>The graph of <script type="math/tex">f'</script> (the derivative of <script type="math/tex">f</script> ) is shown below.
+<!--l. 230--><p class="noindent">Assume <script type="math/tex">f</script> is continuous for all real numbers.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div role="article" class="problem-environment question" id="problem32"><a id="x1-95r32"></a> On which of the following intervals is <script type="math/tex">f</script> increasing? <div class="select-all" id="problem33"><a id="x1-96r33"></a> <span class="choice correct " id="choice41"><script type="math/tex">(-\infty ,0)</script></span> <span class="choice  " id="choice42"><script type="math/tex">(0,1)</script></span> <span class="choice  " id="choice43"><script type="math/tex">(1,2)</script></span> <span class="choice correct " id="choice44"><script type="math/tex">(2,3)</script></span> <span class="choice  " id="choice45"><script type="math/tex">(3,\infty )</script></span>
+</div> <div role="article" class="problem-environment hint" id="problem34"><a id="x1-97r34"></a> <script type="math/tex">f</script> is increasing where <script type="math/tex">f'(x)>0</script>, i.e. on the intervals <script type="math/tex">(-\infty , 0)</script> and <script type="math/tex">(2,3)</script>.
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem35"><a id="x1-98r35"></a> Which of the following are critical points of <script type="math/tex">f</script>? <div class="select-all" id="problem36"><a id="x1-99r36"></a> <span class="choice correct " id="choice46"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice47"><script type="math/tex">x=1</script></span> <span class="choice correct " id="choice48"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice49"><script type="math/tex">x=3</script></span>
+</div>
+<div role="article" class="problem-environment hint" id="problem37"><a id="x1-100r37"></a> <script type="math/tex">f</script> has a critical point at the zeros of <script type="math/tex">f'</script>, and the places where <script type="math/tex">f'</script> does not exist. In this
+case, <script type="math/tex">x=0</script>, <script type="math/tex">x=2</script>, and <script type="math/tex">x=3</script>.
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem38"><a id="x1-101r38"></a> Where do the local maxima occur? <div class="select-all" id="problem39"><a id="x1-102r39"></a> <span class="choice correct " id="choice50"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice51"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice52"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice53"><script type="math/tex">x=3</script></span>
+</div> <div role="article" class="problem-environment hint" id="problem40"><a id="x1-103r40"></a> A local maximum occurs at a critical point where the function transitions from
+increasing to decreasing, i.e. the derivative passes from positive to negative. In this
+case, we see that the local maxima occur at <script type="math/tex">x=0</script> and <script type="math/tex">x=3</script>.
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem41"><a id="x1-104r41"></a> Where does a point of inflection occur? <div class="select-all" id="problem42"><a id="x1-105r42"></a> <span class="choice  " id="choice54"><script type="math/tex">x=0</script></span> <span class="choice correct " id="choice55"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice56"><script type="math/tex">x=2</script></span> <span class="choice  " id="choice57"><script type="math/tex">x=3</script></span>
+</div>
+<div role="article" class="problem-environment hint" id="problem43"><a id="x1-106r43"></a> A point of inflection occurs when the concavity of <script type="math/tex">f</script> changes. This is reflected in
+the sign of <script type="math/tex">f''</script> changing. This only occurs at one point in this graph, namely
+<script type="math/tex">x=1</script>.
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem44"><a id="x1-107r44"></a> On which of the following intervals is <script type="math/tex">f</script> concave down? <div class="select-all" id="problem45"><a id="x1-108r45"></a> <span class="choice correct " id="choice58"><script type="math/tex">(-\infty ,0)</script></span> <span class="choice correct " id="choice59"><script type="math/tex">(0,1)</script></span> <span class="choice  " id="choice60"><script type="math/tex">(1,2)</script></span> <span class="choice  " id="choice61"><script type="math/tex">(2,3)</script></span> <span class="choice  " id="choice62"><script type="math/tex">(3,\infty )</script></span>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment hint" id="problem46"><a id="x1-109r46"></a> <script type="math/tex">f</script> is concave down when <script type="math/tex">f''(x)<0</script>. This occurs for <script type="math/tex">x<1</script> on this graph. So the correct answer is to
+select both <script type="math/tex">(-\infty , 0)</script> and <script type="math/tex">(0,1)</script>.
+</div>
+</div>
+<!--l. 330--></div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html><html lang="en"><head> <title>Relating  velocity  and
+                                                                  
+
+                                                                  
+position</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInVelocity.tex"/> 
+<meta name="date" content="2018-10-16 00:57:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="68cfb140a8b8f00e8c5daee6291a90bba0d0b9f4 antiderivativesAndArea/digInVelocity.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+</div>   <div class="maketitle"></div>
+<!--l. 13--><p class="noindent">A central theme of this course has been that we can often gain a better
+understanding of a function by looking at its derivative, and then working backwards.
+This has been our approach to max/min problems, curve sketching, linear
+approximation, and so on. So antiderivatives have really been important to us all
+along.
+</p><!--l. 19--><p class="noindent">We have a graphical interpretation of the derivative as the slope of a tangent
+line at a point. We have not yet found a graphical interpretation of the
+antiderivative.
+</p>
+<div role="article" class="problem-environment question" id="problem1"><a id="x1-64r1"></a> Let <script type="math/tex">f</script> be the constant function <script type="math/tex">4</script>. Let <script type="math/tex">F</script> be any antiderivative of <script type="math/tex">f</script>. Then <script type="math/tex">F(5)-F(2) = \answer {12}</script>. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> This is just a
+fancy way of saying that <script type="math/tex">f</script> is a line of slope <script type="math/tex">4</script>, and we are looking for the rise
+corresponding to a run of <script type="math/tex">5-2= 3</script>
+</div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> <script type="math/tex">F(5) - F(2) = 4(5-2) = 12</script>
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem4"><a id="x1-67r4"></a> The area of the region bounded by the graph of <script type="math/tex">f</script>, the horizontal axis, and the
+vertical lines <script type="math/tex">x=2</script> and <script type="math/tex">x=5</script> is <script type="math/tex">\answer {12}</script>.
+<div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">2</script><script type="math/tex">5</script><script type="math/tex">4</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-69r6"></a> This is a rectangle with height <script type="math/tex">4</script> and width <script type="math/tex">3</script>, so the area is <script type="math/tex">12</script>
+</div>
+</div>
+<!--l. 69--><p class="noindent">The fact that these two answers are the same is the germ of one of the most
+“fundamental” ideas in all of calculus. However, before we can step ahead, we might
+first look back to our even younger days of being mathemaitcians.
+</p><!--l. 74--><p class="noindent">There are two basic models of multiplication: A “rate times time” perpective and an
+“area” perspective. For instance, we could interpret <script type="math/tex; mode=display"> 3\times 4 </script> as an answer to the question:
+</p>
+<div class="center">
+<!--l. 81--><p class="noindent">
+                                                                  
+
+                                                                  
+</p><!--l. 82--><p class="noindent">“If I am going <script type="math/tex">3 \textrm {mph}</script> for <script type="math/tex">4</script> hours, how far have I traveled?”</p></div>
+<!--l. 85--><p class="noindent">or as the answer to the question </p>
+<div class="center">
+<!--l. 86--><p class="noindent">
+</p><!--l. 87--><p class="noindent">“What is the area of a rectangle with length <script type="math/tex">3</script> and width <script type="math/tex">4</script>?”</p></div>
+<!--l. 91--><p class="noindent">It is this dual interperating that will allow us to begin to understand a geometric
+meaning of the antiderivative.
+</p><!--l. 94--><p class="noindent">Let <script type="math/tex">v(t)</script> be the velocity of some object at time <script type="math/tex">t</script>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">f</script><script type="math/tex">1</script><script type="math/tex">3</script><script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+and let <script type="math/tex">F</script> be an antiderivative of <script type="math/tex">f</script>. Suppose we want to approximate <script type="math/tex">F(3) - F(1)</script>. Let’s get an
+approximation using <script type="math/tex">4</script> subintervals.
+<script type="math/tex; mode=display"> \begin{align*} 
+F(3) - F(1) &= (F(3) - F(2.5))+(F(2.5) - F(2))+(F(2) - F(1.5))+(F(1.5) - F(1))\\
+  &\approx F'(3)\frac{1}{2}+F'(2.5)\frac{1}{2}+F'(2)\frac{1}{2}+F'(1.5)\frac{1}{2}\\
+  &=f(3)\frac{1}{2}+f(2.5)\frac{1}{2}+f(2)\frac{1}{2}+f(1.5)\frac{1}{2}
+  \end{align*}</script>
+<!--l. 127--><p class="noindent">We can visualize this as the sum of the areas of <script type="math/tex">4</script> rectangles. Note that while the first <script type="math/tex">3</script>
+terms are positive, the last is negative because <script type="math/tex">f(3)<0</script>. We should think of these rectangles
+as having <strong>signed area</strong>, where the area is negative when it lives below the
+<script type="math/tex">x</script>-axis.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">f</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex"> \hphantom {22}3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 166--><p class="noindent">By approximating <script type="math/tex">f</script> by a piecewise constant function, we are approximating <script type="math/tex">F</script> by a
+piecewise linear function:
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">F</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex">2.5</script><script type="math/tex">3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 199--><p class="noindent">On the one hand, we can interpret each <script type="math/tex">F'(x)\Delta x</script> as an approximation in the change in the
+height of <script type="math/tex">F</script> over the subinterval. On the other hand, since <script type="math/tex">F' =f</script>, we can think of <script type="math/tex">F'(x)\Delta x = f(x)\Delta x</script> as the area
+of a rectangle based on the subinterval, and with hieght <script type="math/tex">f(x)</script>. So the total change in <script type="math/tex">F</script> over
+<script type="math/tex">[1,3]</script> can be reinterpreted as the sum of the signed areas of the rectangles under
+<script type="math/tex">f</script>.
+</p><!--l. 201--><p class="noindent">If we make our subintervals smaller, the repeated linear approximation should get
+more precise, and the sum of the areas of the rectangles gets closer to the area under
+the curve:
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">f</script><script type="math/tex">1</script><script type="math/tex">3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+<!--l. 243--><p class="noindent">So it is reasonable to think that <script type="math/tex">F(3) - F(1)</script> should be exactly equal to the <strong>signed area</strong> under
+the graph of <script type="math/tex">f</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem7"><a id="x1-70r7"></a>To find the <strong>signed area</strong> of <script type="math/tex">f</script> from <script type="math/tex">x=a</script> to <script type="math/tex">x=b</script>, sum the positive area of all those regions lying
+above the <script type="math/tex">x</script> axis, and subtract the area of all those regions lying below the
+<script type="math/tex">x</script>-axis.
+</div>
+<div class="theorem-like problem-environment observation" id="problem8"><a id="x1-71r8"></a>Our investigations above lead us to suspect that, if <script type="math/tex">F' = f</script>, then <script type="math/tex">F(b) - F(a)</script> should be equal to the
+signed area under <script type="math/tex">f</script> from <script type="math/tex">a</script> to <script type="math/tex">b</script>.
+</div>
+<div role="article" class="problem-environment question" id="problem9"><a id="x1-72r9"></a> Assume a particle is accelerating at a constant rate of <script type="math/tex">3 \frac {m}{s^2}</script>, and starts at velocity of <script type="math/tex">-3 \frac {m}{s}</script> and
+travels for <script type="math/tex">5</script> seconds. Draw a graph of the velocity as a function of time, and use the
+ideas in this section to compute the displacement of the particle over its
+journey.
+<div role="article" class="problem-environment hint" id="problem10"><a id="x1-73r10"></a> The graph of velocity versus time looks like this:
+<div class="image-environment" role="img" aria-labelledby="image-alt-6"><script type="math/tex">f</script><script type="math/tex">1</script><script type="math/tex">5</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+<div role="article" class="problem-environment hint" id="problem11"><a id="x1-74r11"></a> Since velocity is the derivative of position with respect to time, then by our
+discussion above the change in position should be the signed area under the
+velocity curve. You can compute this as the difference in the areas of two
+triangles.
+</div>
+<div role="article" class="problem-environment hint" id="problem12"><a id="x1-75r12"></a> The blue triangle has area <script type="math/tex">\frac {1}{2}(5-1)(12) = 24</script>, and the red triangle has area <script type="math/tex">\frac {1}{2}(1)(3) = \frac {3}{2}</script>. So the net area is <script type="math/tex">24-\frac {3}{2} = \frac {45}{2}</script>. This
+is the displacement of the particle!
+</div>
+<!--l. 300--><p class="noindent">The displacement of the particle is <script type="math/tex">\answer {\frac {45}{2}}</script> meters in the positive direction.
+</p>
+<div class="feedback" data-feedback="attempt" id="feedback13">You could have also solved this problem by finding an antiderivative. Try that
+method and see how it compares. Does this geometry shed light on your
+                                                                  
+
+                                                                  
+understanding of constant acceleration? </div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>
