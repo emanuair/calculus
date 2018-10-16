@@ -1,0 +1,191 @@
+<!DOCTYPE html><html lang="en"><head> <title>Derivatives  of  trigonometric
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInDerivativesOfTrigonometricFunctions.tex"/> 
+<meta name="date" content="2018-10-16 01:10:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Apply chain rule to relate quantities expressed with different units."/> 
+<meta name="learning-outcome" content="Compute derivatives of trigonometric functions."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="100286ee593814988d09aa6b8aeffd96c8cf7e03 chainRule/digInDerivativesOfTrigonometricFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 12--><p class="noindent">We use the chain rule to unleash the derivatives of the trigonometric functions.
+</p></div>   <div class="maketitle"></div>
+Up until this point of the course we have been ignoring a large class of functions:
+Trigonometric functions other than <script type="math/tex">\sin (x)</script>. We know that <script type="math/tex; mode=display"> \ddx \sin (x) = \cos (x). </script> Armed with this fact we will
+discover the derivatives of all of the standard trigonometric functions.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">The derivative of cosine</span> <script type="math/tex; mode=display"> \ddx \cos (x) = -\sin (x). </script> <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Recall that
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\cos (x) = \sin \left (\frac {\pi }{2}-x\right )</script>, and
+     </li>
+     <li class="itemize"><script type="math/tex">\sin (x) = \cos \left (\frac {\pi }{2}-x\right )</script>.</li></ul>
+<!--l. 36--><p class="noindent">Now </p><script type="math/tex; mode=display"> \begin{align*} 
+\ddx \cos(x) &= \ddx \sin\left(\frac{\pi}{2}-x\right)\\
+&=-\cos\left(\frac{\pi}{2}-x\right) \\
+&= -\sin(x).
+\end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-66r3"></a>Compute: <script type="math/tex; mode=display"> \eval {\ddx \cos \left ( \frac {x^3}{2} \right )}_{x=\sqrt [3]{\pi }} </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>Now that we know the derivative of cosine, we may
+combine this with the chain rule, so we have that <script type="math/tex; mode=display"> \ddx \cos \left ( \frac {x^3}{2} \right ) = \answer [given]{\frac {3 x^2}{2}} \left (- \sin \left ( \frac {x^3}{2} \right ) \right ) </script> and so <script type="math/tex; mode=display"> \eval {\ddx \cos \left ( \frac {x^3}{2} \right )}_{x=\sqrt [3]{\pi }} </script>
+<script type="math/tex; mode=display"> \begin{align*} 
+  &= \eval{\left( \frac{3}{2} x^2 \left(- \sin \left( \frac{x^3}{2}
+    \right) \right) \right)}_{x=\sqrt[3]{\pi}} \\
+  &= - \frac{3}{2}(\sqrt[3]{\pi})^2 \sin \left( \frac{\pi}{2} \right) \\
+  &= -\frac{3}{2} \pi^{\frac{2}{3}} \cdot \answer[given]{1} \\
+  &=\answer[given]{\frac{-3 \pi^{\frac{2}{3}}}{2}}.
+\end{align*}</script>
+</div>
+</div>
+<!--l. 71--><p class="noindent">Next we have:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem5"><a id="x1-68r5"></a><span class="theorem-like-title">The derivative of tangent</span> <script type="math/tex; mode=display"> \ddx \tan (x) = \sec ^2(x). </script>
+<div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-69r6"></a>We’ll rewrite <script type="math/tex">\tan (x)</script> as <script type="math/tex">\frac {\sin (x)}{\cos (x)}</script> and use the quotient rule. Write with me:
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx\tan(x) &= \ddx\frac{\sin(x)}{\cos(x)}\\
+&=\frac{\cos^2(x) + \answer[given]{\sin^2(x)}}{\cos^2(x)}\\
+&=\frac{\answer[given]{1}}{\cos^2(x)}\\
+                                                                  
+
+                                                                  
+&=\sec^2(x).
+\end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-70r7"></a>Compute: <script type="math/tex; mode=display"> \ddx \left ( \frac {5x \tan (x)}{x^2 - 3} \right ) </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-71r8"></a>Applying the quotient rule, and the product rule, and the derivative of
+tangent: <script type="math/tex; mode=display"> \begin{align*} 
+   \ddx &\left( \frac{5x \tan(x)}{x^2 - 3} \right) \\
+  &= \frac{(x^2 - 3) \cdot \ddx(\answer[given]{5x \tan(x)}) - 5x \tan(x) \cdot \ddx (\answer[given]{x^2 - 3})}{(x^2 - 3)^2}  \\
+  &= \frac{(x^2 - 3)(5 \tan(x) + 5x \answer[given]{\sec^2(x)}) - 5x \tan(x) \cdot 2x}{(x^2 - 3)^2}  \\
+  &= \frac{5(x^2-3)(\tan(x)+x \sec^2(x)) - 10x^2 \tan(x)}{(x^2-3)^2}
+\end{align*}</script>
+</div>
+</div>
+<!--l. 107--><p class="noindent">Finally, we have:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem9"><a id="x1-72r9"></a><span class="theorem-like-title">The derivative of secant</span> <script type="math/tex; mode=display"> \ddx \sec (x) = \sec (x)\tan (x). </script>
+<div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-73r10"></a>We’ll rewrite <script type="math/tex">\sec (x)</script> as <script type="math/tex">(\cos (x))^{-1}</script> and use the power rule and the chain rule. Write
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx \sec(x) &= \ddx(\cos (x))^{-1}\\
+&=-1(\cos(x))^{-2}(\answer[given]{-\sin(x)}) \\
+&= \frac{\sin(x)}{\cos^2(x)} \\
+&= \frac{1}{\cos(x)} \cdot \frac{\sin(x)}{\cos(x)}  \\
+&= \sec(x)\tan(x).
+\end{align*}</script>
+</div>
+</div>
+<!--l. 127--><p class="noindent">The derivatives of the cotangent and cosecant are similar and left as exercises.
+Putting this all together, we have:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem11"><a id="x1-74r11"></a><span class="theorem-like-title">The Derivatives of Trigonometric Functions</span>
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\ddx \sin (x) = \cos (x)</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\ddx \cos (x) = -\sin (x)</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\ddx \tan (x) = \sec ^2(x)</script>.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><script type="math/tex">\ddx \sec (x) = \sec (x)\tan (x)</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\ddx \csc (x) = -\csc (x)\cot (x)</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\ddx \cot (x) = -\csc ^2(x)</script>.</li></ul>
+<!--l. 139--></div>
+
+<div class="theorem-like problem-environment example" id="problem12"><a id="x1-75r12"></a>Compute: <script type="math/tex; mode=display"> \eval {\ddx ( \csc (x) \cot (x) )}_{x=\frac {\pi }{3}} </script> <div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-76r13"></a>Applying the product rule and the facts above, we know that <script type="math/tex; mode=display"> \ddx ( \csc (x) \cot (x) ) = - \csc ^3(x) - \cot ^2(x)\answer [given]{\csc (x)} </script> and so <script type="math/tex; mode=display"> \eval {\ddx ( \csc (x) \cot (x) )}_{x=\frac {\pi }{3}} </script>
+<script type="math/tex; mode=display"> \begin{align*} 
+  &= \eval{  - \csc^3(x) - \cot^2(x) \answer[given]{\csc(x)}}_{x=\frac{\pi}{3}}  \\
+&= - \frac{8}{3 \sqrt{3}} - \frac{1}{3}\cdot \answer[given]{2/\sqrt{3}}
+\end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment warning" id="problem14"><a id="x1-77r14"></a>When working with derivatives of trigonometric functions, we suggest you use
+<strong>radians</strong> for angle measure. For example, while <script type="math/tex; mode=display"> \sin \left ((90^\circ \right )^2) = \sin \left (\left (\frac {\pi }{2}\right )^2\right ), </script> one must be careful with derivatives
+as <script type="math/tex; mode=display"> \eval {\ddx \sin \left (x^2\right )}_{x=90^\circ } \ne \underbrace {2\cdot 90\cdot \cos (90^2)}_{\text {incorrect}} </script> Alternatively, one could think of <script type="math/tex">x^\circ </script> as meaning <script type="math/tex">\frac {x\cdot \pi }{180}</script>, as then <script type="math/tex">90^\circ = \frac {90\cdot \pi }{180} = \frac {\pi }{2}</script>. In this case
+<script type="math/tex; mode=display"> 2\cdot 90^\circ \cdot \cos ((90^\circ )^2) = 2\cdot \frac {\pi }{2}\cdot \cos \left (\left (\frac {\pi }{2}\right )^2\right ). </script>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

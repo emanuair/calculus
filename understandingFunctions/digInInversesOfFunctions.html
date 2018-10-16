@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head> <title>Inverses  of
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInInversesOfFunctions.tex"/> 
+<meta name="date" content="2018-10-16 01:04:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the domain and range of a function."/> 
+<meta name="learning-outcome" content="Determine if a function is one-to-one."/> 
+<meta name="learning-outcome" content="Perform basic operations and compositions on functions."/> 
+<meta name="learning-outcome" content="Define and work with inverse functions."/> 
+<meta name="learning-outcome" content="Plot the inverse of a basic functions."/> 
+<meta name="learning-outcome" content="Find inverse functions (algebraically and graphically)."/> 
+<meta name="learning-outcome" content="Find the largest interval containing a given point where the function is invertible."/> 
+<meta name="learning-outcome" content="Determine the intervals on which a function has an inverse."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="4de237ceaae008c3ff96199338149fe92472fb5b understandingFunctions/digInInversesOfFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 22--><p class="noindent">Here we “undo” functions.
+</p></div>   <div class="maketitle"></div>
+If a function maps every “input” to exactly one “output,” an inverse of that function
+maps every “output” to exactly one “input.” We need a more formal definition to
+actually say anything with rigor.
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-64r1"></a>Let <script type="math/tex">f</script> be a function with domain <script type="math/tex">A</script> and range <script type="math/tex">B</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-1">    <script type="math/tex">A</script><script type="math/tex">B</script><script type="math/tex">f</script>
+</div>
+Let <script type="math/tex">g</script> be a function with domain <script type="math/tex">B</script> and range <script type="math/tex">A</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-2">             <script type="math/tex">B</script><script type="math/tex">A</script><script type="math/tex">g</script>
+</div>
+We say that <script type="math/tex">f</script> and <script type="math/tex">g</script> are <strong>inverses</strong> of each other if <script type="math/tex">f(g(b)) = b</script> for all <script type="math/tex">b</script> in <script type="math/tex">B</script>, and also <script type="math/tex">g(f(a)) = a</script> for all <script type="math/tex">a</script> in <script type="math/tex">A</script>.
+Sometimes we write <script type="math/tex">g = f^{-1}</script> in this case. <div class="image-environment" role="img" aria-labelledby="image-alt-3">             <script type="math/tex">B</script><script type="math/tex">B</script><script type="math/tex">f\circ f^{-1}</script>
+</div>
+and <div class="image-environment" role="img" aria-labelledby="image-alt-4">    <script type="math/tex">A</script><script type="math/tex">A</script><script type="math/tex">f^{-1}\circ f</script>
+</div>
+So, we could rephrase these conditions as <script type="math/tex; mode=display"> f(f^{-1}(x)) = x\qquad \text {and}\qquad f^{-1}(f(x)) = x. </script>
+</div> These two simple equations are somewhat more subtle than they initially
+appear.
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-65r2"></a> Let <script type="math/tex">f</script> be a function. If the point <script type="math/tex">(1,9)</script> is on the graph of <script type="math/tex">f</script>, what point must be the the
+graph of <script type="math/tex">f^{-1}</script>?  <script type="math/tex; mode=display"> \left ( \answer {9}, \answer {1} \right ) </script>
+<div class="feedback" data-feedback="attempt" id="feedback3">Since <script type="math/tex">f(1) = 9</script>, we must have <script type="math/tex">f^{-1}(f(1)) = 1</script>, so <script type="math/tex">f^{-1}(9) = 1</script>. Thus <script type="math/tex">(9,1)</script> is on the graph of <script type="math/tex">f^{-1}</script>. This is a general rule. If <script type="math/tex">(a,b)</script> is on
+the graph of <script type="math/tex">f</script>, then <script type="math/tex">(b,a)</script> will be on the graph of <script type="math/tex">f^{-1}</script>. </div>
+</div>
+<div class="theorem-like problem-environment warning" id="problem4"><a id="x1-66r3"></a>This notation can be very confusing. Keep a watchful eye:
+<script type="math/tex; mode=display"> \begin{align*} 
+    f^{-1}(x) &= \text{the inverse function of $f$ evaluated at $x$.}\\
+    f(x)^{-1} &= \text{$\frac{1}{f(x)}$.}
+  \end{align*}</script>
+</div> <div role="article" class="problem-environment question" id="problem5"><a id="x1-67r4"></a> Which of the following is notation for the inverse of the function <script type="math/tex">\sin (\theta )</script> on the interval <script type="math/tex">[-\pi /2,\pi /2]</script>? <div class="multiple-choice" id="problem6"><span class="choice correct " id="choice1"><script type="math/tex">\sin ^{-1}(\theta )</script></span> <span class="choice  " id="choice2"><script type="math/tex">\sin (\theta )^{-1}</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback7"><script type="math/tex">\sin ^{-1}(\theta )</script> is the inverse function for <script type="math/tex">\sin (\theta )</script> on the interval <script type="math/tex">[-\pi /2,\pi /2]</script>.
+<!--l. 113--><p class="noindent">On the other hand, <script type="math/tex; mode=display"> \sin (\theta )^{-1} = \frac {1}{\sin (\theta )} \ne \sin ^{-1}(\theta ). </script> </p></div>
+                                                                  
+
+                                                                  
+</div>
+<div role="article" class="problem-environment question" id="problem8"><a id="x1-68r5"></a> Consider the graph of <script type="math/tex">y=f(x)</script> below <div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">0.5</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex">0.5</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Is <script type="math/tex">f(x)</script> invertible at <script type="math/tex">x=1</script>?  <div class="multiple-choice" id="problem9"><span class="choice correct " id="choice3">yes</span> <span class="choice  " id="choice4">no</span> </div>
+<div role="article" class="problem-environment question" id="problem10"><a id="x1-69r6"></a> <script type="math/tex; mode=display"> f^{-1}(1) = \answer {1.5} </script>
+</div>
+</div>
+<!--l. 175--><p class="noindent">So far, we’ve only dealt with abstract examples. Let’s see if we can ground this in a
+real-life context.
+</p>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-70r7"></a>The function <script type="math/tex; mode=display"> f(t) = \left (\frac {9}{5}\right ) t + 32 </script> takes a temperature <script type="math/tex">t</script> in degrees Celsius, and converts it into Fahrenheit.
+What does the inverse of this function tell you? What is the inverse of this
+function?
+<div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-71r8"></a>If <script type="math/tex">f</script> converts Celsius measurements to Fahrenheit measurements of temperature, then <script type="math/tex">f^{-1}</script>
+converts Fahrenheit measurements to Celsius measurements of temperature.
+<!--l. 192--><p class="noindent">To find the inverse function, first note that <script type="math/tex; mode=display"> f(f^{-1}(t)) = t \qquad \text {by the definition of inverse functions.} </script> Now write out the left-hand side of the equation <script type="math/tex; mode=display"> f(f^{-1}(t)) = \left (\frac {9}{5}\right ) f^{-1}(t)+32\qquad \text {by the rule for $f$} </script> and solve
+for <script type="math/tex">f^{-1}(t)</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+         \left(\frac{9}{5}\right) f^{-1}(t)+32 &= t &&\text{by the rule for $f$}\\
+      \left(\frac{9}{5}\right) f^{-1}(t)&= t -32\\
+      f^{-1}(t) &= \answer[given]{\left(\frac{5}{9}\right)(t - 32)}.
+    \end{align*}</script>
+So <script type="math/tex">f^{-1}(t) = \left (\frac {5}{9}\right )(t - 32)</script> is the inverse function of <script type="math/tex">f</script>, which converts a Fahrenheit measurement back into a
+Celsius measurement.
+<!--l. 211--><p class="noindent">Finally, we could check our work again using the definition of inverse functions. We have
+already guaranteed that <script type="math/tex; mode=display"> f(f^{-1}(t)) = t, </script> since we solved for <script type="math/tex">f^{-1}</script> in our calculation. On the other hand,
+</p><script type="math/tex; mode=display"> \begin{align*} 
+     f^{-1}(f(t))&=f^{-1} \left(\left(\frac{9}{5}\right)t+32\right) \\
+     &= \frac{5}{9}\Big( \left(\frac{9}{5}\right)t+32-32\Big)\\
+     &=t
+                                                                  
+
+                                                                  
+       \end{align*}</script>
+which shows that <script type="math/tex">f^{-1}(f(t)) = t</script>.
+</div>
+</div>
+<!--l. 228--><p class="noindent">We have examined several functions in order to determine their inverse functions, but
+there is still more to this story. Not every function has an inverse, so we must learn
+how to check for this situation.
+</p>
+<div role="article" class="problem-environment question" id="problem13"><a id="x1-72r9"></a> Let <script type="math/tex">f</script> be a function, and imagine that the points <script type="math/tex">(2,3)</script> and <script type="math/tex">(7,3)</script> are both on its graph. Could <script type="math/tex">f</script>
+have an inverse function?  <div class="multiple-choice" id="problem14"><span class="choice  " id="choice5">yes</span> <span class="choice correct " id="choice6">no</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback15">The function <script type="math/tex">f</script> could <strong>not</strong> have an inverse function. Imagine that it did. Then <script type="math/tex">f^{-1}(f(2)) = 2</script> and <script type="math/tex">f^{-1}(f(7)) = 7</script>.
+Then we have both <script type="math/tex">f^{-1}(3) = 2</script> and <script type="math/tex">f^{-1}(3) = 7</script>. Since a <strong>function</strong> cannot send the same input to two
+different outputs, <script type="math/tex">f</script> must not have an inverse function. </div>
+</div>
+<!--l. 253--><p class="noindent">Look again at the last question. If two different inputs for a function have the same
+output, there is no hope of that function having an inverse function. Why? This is
+because the inverse function must also be a function, and a function can
+only have one output for each input. More specifically, we have the next
+definition.
+</p>
+<div class="theorem-like problem-environment definition" id="problem16"><a id="x1-73r10"></a>A function is called <strong>one-to-one</strong> if each output value corresponds to exactly one
+input value.
+</div>
+<div role="article" class="problem-environment question" id="problem17"><a id="x1-74r11"></a> Which of the following are functions that are also one-to-one? <div class="select-all" id="problem18"><a id="x1-75r12"></a> <span class="choice  " id="choice7">Mapping words to
+their meaning in a dictionary.</span> <span class="choice correct " id="choice8">Given a runner racing forward on a straight path,
+mapping time to the position of the runner.</span> <span class="choice  " id="choice9">Mapping people to their birth date.</span> <span class="choice  " id="choice10">Mapping mothers to their children.</span>
+</div> <div class="feedback" data-feedback="attempt" id="feedback19">
+     <ul class="itemize1">
+     <li class="itemize">Since words may have more than one definition, “relating words to their
+     definition in a dictionary” is not a function.
+     </li>
+     <li class="itemize">Since  the  runner  is  running  forward  on  the  straight  path,  every  time
+     corresponds to a position, and every position corresponds to a time. So
+     this gives a one-to-one function.
+     </li>
+     <li class="itemize">Since every person only has one birth date, “relating people to their birth
+     date” is a function. However, many people have the same birth date, hence
+     this function is not one-to-one.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">Since mothers can have more (or less) than one child, “relating mothers
+     to their children” is not a function.</li></ul>
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem20"><a id="x1-76r13"></a> Which of the following functions are one to one? Select all that apply. <div class="select-all" id="problem21"><a id="x1-77r14"></a> <span class="choice correct " id="choice11"><script type="math/tex">f(x) = x</script></span> <span class="choice  " id="choice12"><script type="math/tex">f(x) = x^2</script></span> <span class="choice  " id="choice13"><script type="math/tex">f(x) = x^3 - 4x</script></span> <span class="choice correct " id="choice14"><script type="math/tex">f(x) = x^3+4</script></span>
+</div>
+</div>
+<!--l. 304--><p class="noindent">You may recall that a plot gives <script type="math/tex">y</script> as a function of <script type="math/tex">x</script> if every vertical line crosses the
+plot at most once, and we called this the <strong>vertical line test</strong>. Similarly, a function is
+one-to-one if every horizontal line crosses the plot at most once, and we call this the
+<strong>horizontal line test</strong>.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem22"><a id="x1-78r15"></a>A function is one-to-one on its domain if the horizontal line <script type="math/tex">y = b</script> intersects the curve <script type="math/tex">y=f(x)</script> in
+exactly one point, for all values <script type="math/tex">b</script> in the range of <script type="math/tex">f</script>. This is called the <strong>horizontal line
+test</strong>.
+</div> Below, we give a graph of <script type="math/tex">f(x)=-5x^2+30x+60</script>. While this graph passes the vertical line test, and hence
+represents <script type="math/tex">y</script> as a function of <script type="math/tex">x</script>, it does not pass the horizontal line test, so the function
+is not one-to-one. <div class="image-environment" role="img" aria-labelledby="image-alt-6">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Although the line <script type="math/tex">y=20</script> intersects the curve <script type="math/tex">y=f(x)</script> exactly once, the function <script type="math/tex">f</script> is <strong>not
+one-to-one</strong> on its domain, since the line <script type="math/tex">y=80</script> intersects the curve twice.
+<!--l. 336--><p class="noindent">As we have discussed, we can only find an inverse of a function when it is one-to-one.
+If a function is not one-to-one, but we still want an inverse, we must restrict the
+domain. Let’s see what this means in our next examples.
+</p>
+<div role="article" class="problem-environment question" id="problem23"><a id="x1-79r16"></a> Consider the graph of the function <script type="math/tex">f</script> below:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-7">
+<script type="math/tex">f</script><script type="math/tex">A</script><script type="math/tex">B</script><script type="math/tex">C</script><script type="math/tex">D</script><script type="math/tex">E</script><script type="math/tex">f</script><script type="math/tex">x</script><script type="math/tex">y</script></div>
+On which of the following intervals is <script type="math/tex">f</script> one-to-one? <div class="select-all" id="problem24"><a id="x1-80r17"></a> <span class="choice correct " id="choice15"><script type="math/tex">[A,B]</script></span> <span class="choice  " id="choice16"><script type="math/tex">[A,C]</script></span> <span class="choice correct " id="choice17"><script type="math/tex">[B,D]</script></span> <span class="choice  " id="choice18"><script type="math/tex">[C,E]</script></span> <span class="choice correct " id="choice19"><script type="math/tex">[C,D]</script></span>
+</div>
+</div>
+<!--l. 384--><p class="noindent">This idea of restricting the domain is critical for understanding functions like
+<script type="math/tex">f(x) = \sqrt {x}</script>.
+</p>
+<div class="theorem-like problem-environment warning" id="problem25"><a id="x1-81r18"></a>We define <script type="math/tex">f(x) = \sqrt {x}</script> to be the positive square-root, so that we can be sure that <script type="math/tex">f</script> is a function.
+Thinking of the square-root as the inverse of the squaring function, we can see the
+issue a little more clearly. There are two <script type="math/tex">x</script>-values that square to <script type="math/tex">9</script>. <script type="math/tex; mode=display"> x^2 = 9\qquad \text {means $x=\pm 3$} </script> Since we
+require that <strong>square-root is a function</strong>, we must have only one output
+value when we plug in <script type="math/tex">9</script>. We choose the positive square-root, meaning that
+<script type="math/tex; mode=display"> \sqrt {9} =3. </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem26"><a id="x1-82r19"></a>Consider the function <script type="math/tex; mode=display"> f(x) = x^2. </script> Does <script type="math/tex">f</script> have an inverse? If so, what is it? If not, attempt to
+restrict the domain of <script type="math/tex">f</script> and find an inverse on the restricted domain. <div class="theorem-like problem-environment explanation" id="problem27"><a id="x1-83r20"></a>In
+this case <script type="math/tex">f</script> is not one-to-one. However, it is one-to-one on the interval <script type="math/tex">[0,\infty )</script>.
+Hence we can find an inverse of <script type="math/tex">f(x)=x^2</script> on this interval. We plug <script type="math/tex">f^{-1}(x)</script> into <script type="math/tex">f</script> and write
+<script type="math/tex; mode=display"> \begin{align*} 
+        f(f^{-1}(x)) &= \left(f^{-1}(x)\right)^2\\
+        x &= \left(f^{-1}(x)\right)^2.
+      \end{align*}</script>
+Since the domain of <script type="math/tex">f</script> is <script type="math/tex">[0, \infty )</script>, we know that <script type="math/tex">x</script> is positive. This means we can take the square-root
+                                                                  
+
+                                                                  
+of each side of the equation to find that <script type="math/tex; mode=display"> \sqrt {x} = f^{-1}(x). </script> <div class="image-environment" role="img" aria-labelledby="image-alt-8">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f^{-1}</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+</div> <div role="article" class="problem-environment question" id="problem28"><a id="x1-84r21"></a> Consider the graph of <script type="math/tex">y=f(x)</script> below <div class="image-environment" role="img" aria-labelledby="image-alt-9"><script type="math/tex">0.5</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex">0.5</script><script type="math/tex">1</script><script type="math/tex">1.5</script><script type="math/tex">2</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Is the function <script type="math/tex">f</script> one-to-one on the interval <script type="math/tex">[1,2]</script>? <div class="multiple-choice" id="problem29"><span class="choice correct " id="choice20">yes</span> <span class="choice  " id="choice21">no</span> </div>
+<div role="article" class="problem-environment question" id="problem30"><a id="x1-85r22"></a> Let <script type="math/tex">f^{-1}</script> be the inverse function of <script type="math/tex">f</script> restricted to the domain <script type="math/tex">[1,2]</script>.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Find the domain of <script type="math/tex">f^{-1}</script>.  <script type="math/tex; mode=display"> \text {The domain of $f^{-1}$ is } \left [\answer {0}, \answer {2}\right ] </script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the value of <script type="math/tex">f\left ( f^{-1}(0.5)\right )</script>.  <script type="math/tex; mode=display"> f\left ( f^{-1}(0.5)\right ) = \answer {0.5} </script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Choose the correct answer regarding <script type="math/tex">f^{-1}(0.5)</script>. <div class="multiple-choice" id="problem31"><span class="choice correct " id="choice22"><script type="math/tex">f^{-1}(0.5)>1.5</script></span> <span class="choice  " id="choice23"><script type="math/tex">f^{-1}(0.5)\le 1.5</script></span> <span class="choice  " id="choice24"><script type="math/tex">f^{-1}(0.5)</script> is not defined</span> </div>
+     </dd></dl>
+                                                                  
+
+                                                                  
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem32"><a id="x1-89r23"></a>Consider the function <script type="math/tex; mode=display"> f(x) = x^3. </script> Does the function <script type="math/tex">f</script> have an inverse? If so, what is it? If not, attempt
+to restrict the domain of <script type="math/tex">f</script> and find an inverse on the restricted domain. <div class="theorem-like problem-environment explanation" id="problem33"><a id="x1-90r24"></a>In this case <script type="math/tex">f</script>
+is one-to-one. We may write <script type="math/tex; mode=display"> \begin{align*} 
+      f(f^{-1}(x)) &= \left(f^{-1}(x)\right)^3\\
+    x &= \left(f^{-1}(x)\right)^3\\
+    \sqrt[3]{x} &= f^{-1}(x).
+  \end{align*}</script>
+For your viewing pleasure we give a graph of <script type="math/tex">y=f(x)=x^3</script> and <script type="math/tex">y=f^{-1}(x)= \sqrt [3]{x}</script>. Note, the graph of <script type="math/tex">f^{-1}</script> is the image
+of <script type="math/tex">f</script> after being flipped over the line <script type="math/tex">y=x</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-10">  
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f^{-1}</script><script type="math/tex">x</script><script type="math/tex">y</script></div></div></div> 
+ 
+
+                                                                  
+
+
+</body></html>
