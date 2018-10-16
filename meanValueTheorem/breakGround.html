@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head> <title>Let’s  run  to
+                                                                  
+
+                                                                  
+class</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 01:04:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the Mean Value Theorem to solve word problems."/> 
+<meta name="learning-outcome" content="Compare and contrast the Intermediate Value Theorem, the Mean Value Theorem, and Rolle&#39;s Theorem."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="d0be542a3fea2a666d4aab0d48a738340a86b627 meanValueTheorem/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 54--><p class="noindent">Two young mathematicians race to math class.
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Riley, I want to go to math class. Now. Look, this straight, long hall is
+     empty. Let’s race!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Yes. Let’s race! On, your mark…. Ready. Steady. Go!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">You may think you’re fast, but I’m catching up!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Noooooo!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Now I’m winning! I’ve never won a foot race in my life!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Never…give…up!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Whew! We both made it to math class at exactly the same time!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Wow. We should run to every class. Hey I have a question, was there a
+     time during our race that we were running at exactly the same speed?</dd></dl>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> Which of the following describes the race above? <div class="multiple-choice" id="problem2"><span class="choice  " id="choice1">Devyn was leading until the end,
+when the race finished in a tie.</span> <span class="choice  " id="choice2">Riley was leading until the end, when the race
+finished in a tie.</span> <span class="choice  " id="choice3">Devyn was leading, then Riley was leading until the
+end, when the race finished in a tie.</span> <span class="choice correct " id="choice4">Riley was leading, then Devyn was
+leading until the end, when the race finished in a tie.</span> <span class="choice  " id="choice5">None of the above.</span> </div>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-66r2"></a> What can you say about Devyn’s and Riley’s average velocities? <div class="multiple-choice" id="problem4"><span class="choice  " id="choice6">Devyn has
+the larger average velocity.</span> <span class="choice  " id="choice7">Riley has the larger average velocity.</span> <span class="choice correct " id="choice8">Their
+average velocities are equal.</span> <span class="choice  " id="choice9">None of the above.</span> <div class="feedback" data-feedback="attempt" id="feedback5">Since Devyn and Riley
+start and stop at the same time and place, their average velocities are equal.
+</div>
+</div>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-67r3"></a> Record your guess to Riley’s question: is there a moment during the race where
+Devyn and Riley were running at exactly the same speed? <div class="free-response" id="problem7"><a id="x1-68r4"></a> Enter your guess
+of “yes” or “no”, then come back after the Dig-In to see if your guess was
+correct!
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

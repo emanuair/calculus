@@ -1,0 +1,189 @@
+<!DOCTYPE html><html lang="en"><head> <title>Basic
+                                                                  
+
+                                                                  
+optimization</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInOptimization.tex"/> 
+<meta name="date" content="2018-10-16 01:09:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Describe the goals of optimization problems generally."/> 
+<meta name="learning-outcome" content="Find all local maximums and minimums using the First and Second Derivative tests."/> 
+<meta name="learning-outcome" content="Identify when we can find an absolute maximum or minimum on an open interval."/> 
+<meta name="learning-outcome" content="Contrast optimization on open and closed intervals."/> 
+<meta name="learning-outcome" content="Describe the objective function and constraints in a given optimization problem."/> 
+<meta name="learning-outcome" content="Solve optimization problems by finding the appropriate extreme values."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="a491f7ab91224352350a1c042d175d4a7c528e40 optimization/digInOptimization.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 16--><p class="noindent">Now we put our optimization skills to work.
+</p></div>   <div class="maketitle"></div>
+An <strong>optimization problem</strong> is a problem where you need to maximize or minimize
+some quantity given some constraints. This can be accomplished using the tools of
+differential calculus that we have already developed.
+<!--l. 25--><p class="noindent">Perhaps the most basic optimization problems is generated by the following
+question:
+     </p><div class="quote">
+     <!--l. 29--><p class="noindent">Among all rectangles of a fixed perimeter, which has the greatest
+     area?</p></div>
+<!--l. 32--><p class="noindent">Let’s not do this problem in the abstract, let’s do it with numbers.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Of all rectangles of perimeter <script type="math/tex">12</script>, which side lengths give the greatest area? <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>If a
+rectangle has perimeter <script type="math/tex">12</script> and one side is length <script type="math/tex">x</script>, then the length of the other side is <script type="math/tex">\answer [given]{6-x}</script>.
+Hence the area of a rectangle of perimeter <script type="math/tex">12</script> can be given by <script type="math/tex; mode=display"> A(x) = x(\answer [given]{6-x}). </script> However, for the side
+lengths to be physically relevant, we must assume that <script type="math/tex">x</script> is in the interval
+<script type="math/tex">(\answer [given]{0},\answer [given]{6})</script>.
+<!--l. 47--><p class="noindent">So to maximize the area of the rectangle, we need to find the maximum value of <script type="math/tex">A(x)</script> on
+the appropriate interval.
+     </p><div class="quote">
+     <!--l. 50--><p class="noindent"><strong>At this point, you should graph the function if you can.</strong></p></div>
+<!--l. 52--><p class="noindent">We’ll continue on without the aid of a graph, and use the derivative. Write <script type="math/tex; mode=display"> A'(x) = \answer [given]{6-2x} </script> Now we
+find the critical points, solving the equation <script type="math/tex; mode=display"> \answer [given]{6-2x} = 0, </script> we see that the only critical point of <script type="math/tex">A</script> is
+at <script type="math/tex">x=\answer [given]{3}</script>
+</p><!--l. 62--><p class="noindent">Since <script type="math/tex">A'(x) = \answer [given]{6-2x}</script> is <span class="word-choice" id="word-choice3"><a id="x1-66r3"></a><span class="choice correct " id="choice1">positive</span><span class="choice  " id="choice2">negative</span>
+</span> on <script type="math/tex">(0,3)</script> and <span class="word-choice" id="word-choice4"><a id="x1-67r4"></a><span class="choice  " id="choice3">positive</span><span class="choice correct " id="choice4">negative</span>
+</span> on <script type="math/tex">(3,6)</script>, <script type="math/tex">x=3</script> is where the maximum value of <script type="math/tex">A</script> happens. This is exactly when the rectangle is
+a square!
+</p></div>
+</div>
+<!--l. 71--><p class="noindent">A key step to note, is when we explained why <script type="math/tex">x=3</script> is actually the maximum.
+Above we basically used facts about the derivative. Below we use a similar
+argument.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-68r5"></a>Of all rectangles of area <script type="math/tex">100</script>, which has the smallest perimeter? <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-69r6"></a>First we draw a picture,
+Here is a rectangle with an area of <script type="math/tex">100</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">A=100</script><script type="math/tex">x</script>
+</div>
+<!--l. 91--><p class="noindent">If <script type="math/tex">x</script> denotes one of the sides of the rectangle, then the adjacent side must be
+<script type="math/tex">\answer [given]{100/x}</script>.
+</p><!--l. 94--><p class="noindent">The perimeter of this rectangle is given by <script type="math/tex; mode=display"> P(x)=\answer [given]{2x+2\cdot 100/x}. </script> We wish to minimize <script type="math/tex">P(x)</script>. Note,
+not all values of <script type="math/tex">x</script> make sense in this problem: lengths of sides of rectangles
+must be positive, so <script type="math/tex">x>0</script>. If <script type="math/tex">x>0</script> then so is <script type="math/tex">100/x</script>, so we need no second condition on
+<script type="math/tex">x</script>.
+     </p><div class="quote">
+     <!--l. 103--><p class="noindent"><strong>At this point, you should graph the function if you can.</strong></p></div>
+<!--l. 105--><p class="noindent">We next find <script type="math/tex">P'(x)</script> and set it equal to zero. Write <script type="math/tex; mode=display"> P'(x)=\answer [given]{2-200/x^2} = 0. </script> Solving for <script type="math/tex">x</script> gives us <script type="math/tex">x=\pm \answer [given]{10}</script>. We are interested
+only in <script type="math/tex">x>0</script>, so only the value <script type="math/tex">x=\answer [given]{10}</script> is of interest. Since <script type="math/tex">P'(x)</script> is defined everywhere on the interval <script type="math/tex">(0,\infty )</script>,
+there are no more critical values, and there are no endpoints. Is there a
+local maximum, minimum, or neither at <script type="math/tex">x=10</script>? The second derivative is <script type="math/tex; mode=display"> P''(x)=\answer [given]{400/x^3}, </script> and <script type="math/tex">P''(10)>0</script>,
+so there is a local minimum. Since there is only one critical point, this is
+also the global minimum, so the rectangle with smallest perimeter is the <script type="math/tex">10\times 10</script>
+square.
+</p></div>
+</div>
+<!--l. 125--><p class="noindent">Hence, calculus gives a <strong>reason</strong> for <strong>why</strong> a square is the rectangle with both
+</p>
+     <ul class="itemize1">
+     <li class="itemize">the largest area for a given perimeter.
+     </li>
+     <li class="itemize">the smallest perimeter for a given area.</li></ul>
+<!--l. 132--><p class="noindent">We may be done with rectangles, but they aren’t done with us. Here is a
+problem where there are more constraints on the possible side lengths of the
+rectangle.
+                                                                  
+
+                                                                  
+</p>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-70r7"></a>Find the rectangle with largest area that fits inside the graph of the
+parabola <script type="math/tex">y=x^2</script> below the line <script type="math/tex">y=a</script>, where <script type="math/tex">a</script> is an unspecified positive constant, with
+the top side of the rectangle on the horizontal line <script type="math/tex">y=a</script>. See the figure below:
+<div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">A(x) =</script> area<script type="math/tex">(x,x^2)</script><script type="math/tex">(x,a)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-71r8"></a>We want to maximize value of <script type="math/tex">A(x)</script>. The lower right corner of the rectangle is at <script type="math/tex">(x,x^2)</script>,
+and once this is chosen the rectangle is completely determined. Then the
+area is <script type="math/tex; mode=display"> A(x)=\answer [given]{(2x)(a-x^2)}. </script> We want the maximum value of <script type="math/tex">A(x)</script> when <script type="math/tex">x</script> is in <script type="math/tex">[0,\sqrt {a}]</script>. You might object to
+allowing <script type="math/tex">x=0</script> or <script type="math/tex">x=\sqrt {a}</script>, since then the “rectangle” has either no width or no height,
+so is not “really” a rectangle. But the problem is somewhat easier if we
+simply allow such rectangles, which have zero area as we may then apply the
+Extreme Value Theorem and see that we indeed have a maximum and minimum
+value.
+     <div class="quote">
+     <!--l. 187--><p class="noindent"><strong>At this point, you should graph the function if you can.</strong></p></div>
+<!--l. 189--><p class="noindent">Setting <script type="math/tex">0=A'(x)=\answer [given]{-6x^2+2a}</script> we find <script type="math/tex">x=\answer [given]{\sqrt {a/3}}</script> as the only critical point. Testing this and the two endpoints (as the
+maximum could also be there), we have <script type="math/tex">A(0)=A(\sqrt {a})=\answer [given]{0}</script> and <script type="math/tex">A(\sqrt {a/3})=\answer [given]{(4/9)\sqrt {3}a^{3/2}}</script>. Hence, the maximum area occurs
+when the rectangle has dimensions <script type="math/tex">2\sqrt {a/3}\times (2/3)a</script>.
+</p></div>
+</div>
+<!--l. 198--><p class="noindent">Again, note that above we used the Extreme Value Theorem to guarantee that we
+found the maximum.
+ 
+ 
+
+                                                                  
+
+
+</p></body></html>

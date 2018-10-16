@@ -1,0 +1,379 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  definite
+                                                                  
+
+                                                                  
+integral</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheDefiniteIntegral.tex"/> 
+<meta name="date" content="2018-10-16 01:11:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use integral notation for both antiderivatives and definite integrals."/> 
+<meta name="learning-outcome" content="Compute definite integrals using geometry."/> 
+<meta name="learning-outcome" content="Compute definite integrals using the properties of integrals."/> 
+<meta name="learning-outcome" content="Justify the properties of definite integrals using algebra or geometry."/> 
+<meta name="learning-outcome" content="Understand how Riemann sums are used to find exact area."/> 
+<meta name="learning-outcome" content="Define net area."/> 
+<meta name="learning-outcome" content="Split the area under a curve into several pieces to aid with calculations."/> 
+<meta name="learning-outcome" content="Use symmetry to calculate definite integrals."/> 
+<meta name="learning-outcome" content="Explain geometrically why symmetry of a function simplifies calculation of some definite integrals."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="7edafa25a1a7d03be7651ec6bb17fc1e0cd3a7fe definiteIntegral/digInTheDefiniteIntegral.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 20--><p class="noindent">Definite integrals compute net area.
+</p></div>   <div class="maketitle"></div>
+The process of approximating areas under curves led to the notion of a Riemann
+sum
+<!--l. 31--><p class="noindent"><script type="math/tex; mode=display"> A\approx \sum _{k=1}^n f(x_k^*)\Delta x, </script> where <script type="math/tex">f</script> is a nonnegative, continuous function on the interval <script type="math/tex">[a,b]</script>, and
+</p><!--l. 34--><p class="noindent"><script type="math/tex">x_k^*</script> is a sample point for the <script type="math/tex">k^{th}</script> rectangle, <script type="math/tex">k=1,2,..., n</script>.
+</p><!--l. 36--><p class="noindent">The limit of Riemann sums, as <script type="math/tex">n\to \infty </script>, gives the exact area between the curve <script type="math/tex">y=f(x)</script> and the
+interval on the <script type="math/tex">x-</script>axis:
+</p><!--l. 40--><p class="noindent"><script type="math/tex; mode=display"> A=\lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x. </script> It does not matter whether we consider only right Riemann sums, or left Riemann
+sums, or midpoint Riemann sums, or others: the limit of any kind of Riemann
+sum as <script type="math/tex">n\to \infty </script> is equal to the area, as long as <script type="math/tex">f</script> is nonnegative and continuous on
+<script type="math/tex">[a,b]</script>.
+</p><!--l. 45--><p class="noindent">What happens when a continuous function <script type="math/tex">f</script> assumes negative values on the interval
+<script type="math/tex">[a,b]</script>?
+</p><!--l. 47--><p class="noindent">We can still form Riemann sums and take the limit.
+</p><!--l. 49--><p class="noindent">The question is: What is the meaning of a Riemann sum in that case?
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>The graph of the function <script type="math/tex">f</script> on the interval <script type="math/tex">[0,10]</script> is given in the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">f(2)\cdot 2</script><script type="math/tex">f(4)\cdot 2</script><script type="math/tex">f(6)\cdot 2</script><script type="math/tex">f(8)\cdot 2</script><script type="math/tex">f(10)\cdot 2</script><script type="math/tex">y=f(x)</script><script type="math/tex">x_2^*=2</script><script type="math/tex">x_3^*=4</script><script type="math/tex">x_4^*=6</script><script type="math/tex">x_5^*=8</script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 100--><p class="noindent">The figure illustrates a right Riemann sum with <script type="math/tex">n=5</script> rectangles for <script type="math/tex">f</script> on <script type="math/tex">[0,10]</script>. <script type="math/tex; mode=display"> \sum _{k=1}^5 f(x_k^*)\Delta x= f(2)\Delta x+ f(4)\Delta x+ f(6)\Delta x+f(8)\Delta x+ f(10)\Delta x </script>
+</p><!--l. 105--><p class="noindent">So, the Riemann sum is the sum of <strong>signed areas</strong> of rectangles: rectangles
+that lie above the <script type="math/tex">x</script>-axis contribute positive values, and rectangles that
+lie below the <script type="math/tex">x</script>-axis contribute negative values to the Riemann sum.
+                                                                  
+
+                                                                  
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \sum_{k=1}^5 f(x_k^*)\Delta x= &\left(\underbrace{f(2)\Delta x}_{\text{nonnegative}}+  \underbrace{f(4)\Delta x}_{\text{nonnegative}}+  \underbrace{f(6)\Delta x}_{\text{nonnegative}}\right)\\
+  &+ \left(\underbrace{f(8)\Delta x}_{\text{negative}}+  \underbrace{f(10)\Delta x}_{\text{negative}}\right)
+\end{align*}</script>
+</div>
+<!--l. 115--><p class="noindent">When we take the limit of Riemann sums, it seems that we should get that
+</p><!--l. 119--><p class="noindent"><script type="math/tex; mode=display"> \lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x= A_1+(-A_2), </script> where the areas <script type="math/tex">A_1</script> and <script type="math/tex">A_2</script> are depicted in the figure below.
+</p><!--l. 122--><p class="noindent">In other words, the limit of Riemann sums seems to be equal to the sum of signed
+areas of the regions that lie entirely above or below the <script type="math/tex">x</script>-axis. The signed area of
+regions that lie above the <script type="math/tex">x</script>-axis is positive, and the signed area of regions that lie
+below the <script type="math/tex">x</script>-axis is negative.
+</p><!--l. 125--><p class="noindent">This sum of signed areas is called the net area of the
+region between the graph of <script type="math/tex">f</script> and the interval on the <script type="math/tex">x</script>- axis .
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">A_1</script><script type="math/tex">A_2</script><script type="math/tex">y=f(x)</script>246810<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 152--><p class="noindent">The limit of Riemann sums will exist for any continuous functions on the interval
+<script type="math/tex">[a,b]</script>, even if <script type="math/tex">f</script> assumes negative values on <script type="math/tex">[a,b]</script>. The limit of Riemann sums gives
+the <strong>net area</strong> of the region between the graph of <script type="math/tex">f</script> and an interval on the <script type="math/tex">x</script>-
+axis.
+</p><!--l. 155--><p class="noindent">This leads to the following definition. </p><div class="theorem-like problem-environment definition" id="problem2"><a id="x1-65r2"></a> Let <script type="math/tex">f</script> be a function which is continuous on the
+interval <script type="math/tex">[a,b]</script>. We define the <strong>definite integral</strong> of <script type="math/tex">f</script> on <script type="math/tex">[a,b]</script> by <script type="math/tex; mode=display"> \int _a^b f(x) \d x=\lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x. </script>
+</div> The definite integral is a number that gives the net area of the region between the
+curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[a,b]</script>.
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-66r3"></a>The graph a function <script type="math/tex">f</script> on the interval <script type="math/tex">[0,9]</script> is given in the figure. The areas of four regions
+that lie either above or below the <script type="math/tex">x</script>-axis are labeled in the figure.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">A_1</script><script type="math/tex">A_2</script><script type="math/tex">A_3</script><script type="math/tex">A_4</script><script type="math/tex">y=f(x)</script>369<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Consider the integral <script type="math/tex; mode=display"> \int _0^9 f(x) \d x </script> Express the integral in terms of areas <script type="math/tex">A_1</script>, <script type="math/tex">A_2</script>, <script type="math/tex">A_3</script> and <script type="math/tex">A_4</script>.
+<div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a><script type="math/tex; mode=display"> \begin{align*} 
+    \int_0^9 f(x) \d x&= -A_1+A_2-A_3+A_4\\
+\end{align*}</script>
+<!--l. 205--></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-68r5"></a>Consider the integral <script type="math/tex; mode=display"> \int _0^{10}-x \d x. </script> Compute the integral in two ways:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">by interpreting the integral as the net area of the region between the curve
+     <script type="math/tex">y=-x</script> and the interval <script type="math/tex">[0,10]</script> on the <script type="math/tex">x</script>-axis;
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">using the definition of the definite integral, i.e. by computing the limit of
+     Riemann sums.</dd></dl>
+<div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-71r6"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">The area between the <script type="math/tex">x</script>-axis and the curve can be easily computed, since it is the area of a triangle.
+                                                                  
+
+                                                                  
+     <div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">A</script>246810<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+     </div>
+     <!--l. 247--><p class="noindent"><script type="math/tex; mode=display"> A=\frac {1}{2}\cdot 10\cdot 10=\answer [given]{50}. </script>
+     </p><!--l. 249--><p class="noindent">Then, it follows that
+     </p><!--l. 253--><p class="noindent"><script type="math/tex; mode=display"> \int _0^{10}-x \d x=\answer [given]{-}A </script>
+     </p></dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">We use the <strong>definition of the definite integral</strong> and write <script type="math/tex; mode=display"> \int _0^{10}-x \d x=\lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x=\lim _{n\to \infty }\sum _{k=1}^n -x_k^*\Delta x </script> It does not matter
+     what type of a Riemann sum we use, so we choose a right Riemann
+     sum.
+     <!--l. 262--><p class="noindent"><script type="math/tex; mode=display"> \int _0^{10}-x \d x=\lim _{n\to \infty }\sum _{k=1}^n -x_k\Delta x </script> A right Riemann sum with <script type="math/tex">n=5</script> is illustrated in the figure below.
+     </p><div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">x_1^*=2</script><script type="math/tex">x_2^*=4</script><script type="math/tex">x_3^*=6</script><script type="math/tex">x_4^*=8</script><script type="math/tex">x_5^*=10</script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+     </div>
+     <!--l. 305--><p class="noindent">We can apply the constant multiple rule for sums and limits:
+                                                                  
+
+                                                                  
+     </p><script type="math/tex; mode=display"> \begin{align*} 
+  \int_0^{10}-x \d x &=\lim_{n\to\infty}\sum_{k=1}^n -x_k\Delta x\\
+       &=\lim_{n\to\infty}\left(-\sum_{k=1}^n x_k\Delta x\right)\\
+       &=-\lim_{n\to\infty}\sum_{k=1}^n x_k\Delta x
+     \end{align*}</script>
+     <!--l. 312--><p class="noindent">We can now finish our computation of the limit of right Riemann sums.
+    </p><script type="math/tex; mode=display"> \begin{align*} 
+\int_0^{10}-x \d x&=-\lim_{n\to\infty}\sum_{k=1}^n x_k\Delta x\\
+     &=-\lim_{n\to\infty}\sum_{k=1}^n k\cdot\frac{10}{n}\cdot\frac{10}{n}\\
+     &=-\lim_{n\to\infty}\left(\frac{10}{n}\right)^2\sum_{k=1}^n k\\
+     &=-\lim_{n\to\infty}\left(\frac{10}{n}\right)^2\frac{n(n+1)}{2}\\
+     &=-\lim_{n\to\infty}50\frac{n+1}{n}\\
+     &=\answer[given]{-50}\\
+     \end{align*}</script>
+     </dd></dl>
+<!--l. 322--></div>
+</div> <div class="theorem-like problem-environment example" id="problem7"><a id="x1-74r7"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Express the limit as a definite integral. <script type="math/tex; mode=display"> \lim _{n\to \infty } \sum _{k=1}^n \left (\sqrt {1-\left (-1+\frac {2k}{n}\right )^2}\right ) \left (\frac {2}{n}\right ) </script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Compute this limit: <script type="math/tex; mode=display"> \lim _{n\to \infty } \sum _{k=1}^n \left (\sqrt {1-\left (-1+\frac {2k}{n}\right )^2}\right ) \left (\frac {2}{n}\right ) </script>
+     <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-77r8"></a>
+         <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+      (i) </dt><dd class="enumerate-enumitem">This is a limit of Riemann sums! Specifically, it is a limit of Riemann
+         sums of <script type="math/tex">n</script> rectangles, where <script type="math/tex; mode=display"> \Delta x = \answer [given]{\frac {2}{n}}, </script>
+         <!--l. 349--><p class="noindent"><script type="math/tex; mode=display"> x_k^* = -1+\frac {2k}{n}, </script> <script type="math/tex; mode=display"> a= x_0^* = \answer [given]{-1}, </script> and <script type="math/tex; mode=display"> b=x_n^* = \answer [given]{1}. </script> Hence, we may rewrite this as <script type="math/tex; mode=display"> \lim _{n\to \infty } \sum _{k=1}^n \left (\sqrt {1-(x_k^*)^2}\right )=\int _{\answer [given]{-1}}^{\answer [given]{1}}\sqrt {1-x^2} \d x. </script>
+         </p></dd><dt class="enumerate-enumitem">
+     (ii) </dt><dd class="enumerate-enumitem">The limit computes the area between the <script type="math/tex">x</script>-axis and the curve
+                                                                  
+
+                                                                  
+         <!--l. 365--><p class="noindent"><script type="math/tex">y = \sqrt {1-x^2}</script>. Let’s see it: </p><div class="image-environment" role="img" aria-labelledby="image-alt-6"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+         </div>
+         By geometry, we know that this semicircle has area <script type="math/tex">\answer [given]{\pi /2}</script>. Hence <script type="math/tex; mode=display"> \lim _{n\to \infty } \sum _{k=1}^n \left (\sqrt {1-(x_k^*)^2}\right )\Delta x =\answer [given]{\pi /2}. </script></dd></dl>
+     <!--l. 389--></div></dd></dl>
+<!--l. 391--></div>
+<!--l. 396--><p class="noindent">The definite integral computes the net area (sum of signed areas) between <script type="math/tex">y=f(x)</script> and the
+<script type="math/tex">x</script>-axis on the interval <script type="math/tex">[a,b]</script>. </p><div role="article" class="problem-environment question" id="problem9"><a id="x1-80r9"></a> Consider the graph of a function <script type="math/tex">f</script> on the interval <script type="math/tex">[0,5]</script>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-7">  <script type="math/tex">A_1</script><script type="math/tex">A_2</script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Compute the definite integral <script type="math/tex; mode=display"> \int _0^5 f(x) \d x. </script> <div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-81r10"></a>The net area in the figure above is given by
+<script type="math/tex; mode=display"> \int _0^5 f(x) \d x=A_1-A_2 </script>
+<!--l. 443--><p class="noindent">The areas <script type="math/tex">A_1</script> and <script type="math/tex">A_2</script> are easily computed, since both are the areas of triangles. Therefore,
+                                                                  
+
+                                                                  
+<script type="math/tex; mode=display"> \int _0^5 f(x) \d x=\answer [given]{1.25} </script>
+</p></div>
+</div> There is more to this example, than just a value of the integral.
+<!--l. 452--><p class="noindent">Notice that <script type="math/tex; mode=display"> \int _0^3 f(x) \d x= A_1, </script> <script type="math/tex; mode=display"> \int _3^5 f(x) \d x=-A_2, </script> and <script type="math/tex; mode=display"> \int _0^5 f(x) \d x=A_1-A_2. </script> It follows that <script type="math/tex; mode=display"> \int _0^5 f(x) \d x= \int _0^3 f(x) \d x+ \int _3^5 f(x) \d x. </script>
+</p><!--l. 468--><p class="noindent">This looks like a property of the definite integral. Are there other properties?
+</p>
+<div class="theorem-like problem-environment theorem" id="problem11"><a id="x1-82r11"></a><span class="theorem-like-title">Properties of the definite integral</span> Let <script type="math/tex">f</script> and <script type="math/tex">g</script> be defined on a closed interval <script type="math/tex">[a,b]</script> that
+contains the value <script type="math/tex">c</script>, and let <script type="math/tex">k</script> be a constant. The following hold:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _a^a f(x)\d x = 0</script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _a^c f(x)\d x + \int _c^b f(x)\d x = \int _a^b f(x)\d x</script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _a^bf(x)\d x = -\int _b^a f(x)\d x</script>
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _a^bk\cdot f(x)\d x = k\cdot \int _a^bf(x)\d x</script>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _a^b f(x)\pm g(x)\d x = \int _a^bf(x)\d x \pm \int _a^bg(x)\d x</script></dd></dl>
+<div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-88r12"></a>We will address each property in turn:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Here, there is no “area under the curve” when the region has no width;
+     hence this definite integral is <script type="math/tex">0</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">This states that total area is the sum of the areas of
+     subregions. Here a picture is worth a thousand words:
+                                                                  
+
+                                                                  
+     <div class="image-environment" role="img" aria-labelledby="image-alt-8"><script type="math/tex">\int _a^c f(x)\d x</script><script type="math/tex">\int _c^b f(x)\d x</script><script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+     </div>
+     It is important to note that this still holds true even if <script type="math/tex">a<b<c</script>. We discuss this in the
+     next point.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">For now, this property can be viewed a merely a convention to make other
+     properties work well. However, later we will see how this property has a
+     justification all its own.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">This states that when one scales a function by, for instance, <script type="math/tex">7</script>, the area of the
+     enclosed region also is scaled by a factor of <script type="math/tex">7</script>.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">This states that the integral of the sum is the sum of the integrals.</dd></dl>
+<!--l. 529--></div>
+</div>
+<!--l. 532--><p class="noindent">Due to the geometric nature of integration, geometric properties of functions can help
+us compute integrals.
+</p>
+<div class="theorem-like problem-environment example" id="problem13"><a id="x1-94r13"></a>Compute: <script type="math/tex; mode=display"> \int _0^6 |x-3| \d x </script> <div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-95r14"></a>This may seem difficult at first. Perhaps the first thing to do is look at a graph of <script type="math/tex">y=x-3</script>:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-9">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Now we can graph <script type="math/tex">y=|x-3|</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-10">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Now we see that we really have two triangles, each with base <script type="math/tex">3</script> and height <script type="math/tex">3</script>. Hence
+<script type="math/tex; mode=display"> \begin{align*} 
+    \int_0^6 |x-3| \d x &= \int_0^3 \answer[given]{3-x} \d x + \int_3^6 \answer[given]{x-3} \d x\\
+    &= \frac{3\cdot 3}{2} + \frac{3\cdot 3}{2}\\
+    &=\answer[given]{9}.
+    \end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment definition" id="problem15"><a id="x1-96r15"></a>A function <script type="math/tex">f</script> is an <strong>odd</strong> function if <script type="math/tex; mode=display"> f(-x) = -f(x), </script> and a function <script type="math/tex">g</script> is an <strong>even</strong> function if
+<script type="math/tex; mode=display"> g(-x) = g(x). </script>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 598--><p class="noindent">The names <em>odd</em> and <em>even</em> come from the fact that these properties are shared by functions of
+the form <script type="math/tex">x^n</script> where <script type="math/tex">n</script> is either odd or even. For example, if <script type="math/tex">f(x) = x^3</script>, then <script type="math/tex; mode=display"> f(-7) = -f(7), </script> and if <script type="math/tex">g(x) = x^4</script>, then <script type="math/tex; mode=display"> g(-7) = g(7). </script> Geometrically,
+even functions have symmetry with respect to the <script type="math/tex">y-</script>axis . Cosine is an even function:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-11"><script type="math/tex">-2\pi </script><script type="math/tex">-3\pi /2</script><script type="math/tex">-\pi </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">3\pi /2</script><script type="math/tex">2\pi </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\cos (\theta )</script><script type="math/tex">\theta </script><script type="math/tex">x</script>
+</div>
+On the other hand, odd functions have <script type="math/tex">180^\circ </script> <em>rotational symmetry</em> around the origin. Sine is an odd
+function: <div class="image-environment" role="img" aria-labelledby="image-alt-12"><script type="math/tex">-2\pi </script><script type="math/tex">-3\pi /2</script><script type="math/tex">-\pi </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">3\pi /2</script><script type="math/tex">2\pi </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\sin (\theta )</script><script type="math/tex">\theta </script><script type="math/tex">x</script>
+</div>
+<div role="article" class="problem-environment question" id="problem16"><a id="x1-97r16"></a> Let <script type="math/tex">f</script> be an odd function defined for all real numbers. Compute: <script type="math/tex; mode=display"> \int _{-2}^2 f(x) \d x \begin {prompt}=\answer {0}\end {prompt} </script> <div role="article" class="problem-environment hint" id="problem17"><a id="x1-98r17"></a> Since our function
+is odd, it must look something like: <div class="image-environment" role="img" aria-labelledby="image-alt-13"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+                                                                  
+
+                                                                  
+</div> <div role="article" class="problem-environment hint" id="problem18"><a id="x1-99r18"></a> The integral above computes the following net area: <div class="image-environment" role="img" aria-labelledby="image-alt-14"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem19"><a id="x1-100r19"></a> Let <script type="math/tex">f</script> be an odd function defined for all real numbers. Which of the following are
+equal to <script type="math/tex; mode=display"> \int _2^4 f(x) \d x ? </script> <div class="select-all" id="problem20"><a id="x1-101r20"></a> <span class="choice  " id="choice1"><script type="math/tex">\int _{4}^{2} f(x) \d x</script></span> <span class="choice  " id="choice2"><script type="math/tex">\int _{-4}^{-2} f(x) \d x</script></span> <span class="choice correct " id="choice3"><script type="math/tex">\int _{-2}^{-4} f(x) \d x</script></span> <span class="choice correct " id="choice4"><script type="math/tex">\int _{-2}^{4} f(x) \d x</script></span> <span class="choice  " id="choice5"><script type="math/tex">\int _{4}^{-2} f(x) \d x</script></span> <span class="choice correct " id="choice6"><script type="math/tex">\int _{2}^{-4} f(x) \d x</script></span> <span class="choice  " id="choice7"><script type="math/tex">\int _{-4}^{2} f(x) \d x</script></span> <span class="choice correct " id="choice8"><script type="math/tex">-\int _{-4}^{2} f(x) \d x</script></span> <span class="choice correct " id="choice9"><script type="math/tex">-\int _{-4}^{-2} f(x) \d x</script></span>
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Net area versus geometric area</h3>
+<!--l. 723--><p class="noindent">We know that the net area of the region between a curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis on <script type="math/tex">[a,b]</script> is given
+by <script type="math/tex; mode=display"> \int _a^b f(x) \d x. </script> On the other hand, if we want to know the <em>geometric area</em>, meaning the “actual”
+area, we compute <script type="math/tex; mode=display"> \int _a^b |f(x)| \d x. </script> </p><div class="theorem-like problem-environment example" id="problem21"><a id="x1-1001r21"></a>The graph of a function <script type="math/tex">f</script> is given in the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-15"><script type="math/tex">A_1</script><script type="math/tex">A_2</script><script type="math/tex">A_3</script><script type="math/tex">A_4</script><script type="math/tex">y=f(x)</script>123456789<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Express the geometric area of the region between the curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis
+     on the interval <script type="math/tex">[0,9]</script> as a definite integral.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Express the geometric area of the region between the curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis
+     on the interval <script type="math/tex">[0,9]</script> in terms of definite integrals of <script type="math/tex">f</script>.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Express the geometric area of the region between the curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis
+     on the interval <script type="math/tex">[0,9]</script> in terms of areas <script type="math/tex">A_1</script>, <script type="math/tex">A_2</script>, <script type="math/tex">A_3</script> and <script type="math/tex">A_4</script>.
+     <div class="theorem-like problem-environment explanation" id="problem22"><a id="x1-1005r22"></a>
+         <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+      (i) </dt><dd class="enumerate-enumitem">The geometric area is given by the integral <script type="math/tex; mode=display"> \int _0^9 |f(x)| \d x </script> The figure below depicts the graph of <script type="math/tex">|f|</script>.
+         <div class="image-environment" role="img" aria-labelledby="image-alt-16"><script type="math/tex">A_1</script><script type="math/tex">A_2</script><script type="math/tex">A_3</script><script type="math/tex">A_4</script><script type="math/tex">y=|f(x)|</script>123456789<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+         </div>
+         </dd><dt class="enumerate-enumitem">
+     (ii) </dt><dd class="enumerate-enumitem">Using the properties of definite integrals, we can write
+         <script type="math/tex; mode=display"> \begin{align*} 
+   \int_0^9 |f(x)| \d x = \int_0^1 |f(x) |\d x &+ \int_1^5 |f(x)| \d x\\
+           &+ \int_5^8 |f(x)| \d x\\
+           &+ \int_8^9 |f(x)| \d x
+         \end{align*}</script>
+         Rewriting the absolute value signs: <script type="math/tex; mode=display"> \begin{align*} 
+   = \int_0^1 (-f(x)) \d x &+ \int_1^5 f(x) \d x\\
+           &+ \int_5^8 (-f(x)) \d x\\
+           &+ \int_8^9 f(x) \d x
+         \end{align*}</script>
+         Pulling out negative signs: <script type="math/tex; mode=display"> \begin{align*} 
+   = -\int_0^1 f(x) \d x &+ \int_1^5 f(x) \d x\\
+                                                                  
+
+                                                                  
+           &- \int_5^8 f(x) \d x\\
+           &+ \int_8^9 f(x) \d x
+          \end{align*}</script>
+         </dd><dt class="enumerate-enumitem">
+     (iii) </dt><dd class="enumerate-enumitem"><script type="math/tex; mode=display"> \int _0^9 |f(x)| \d x =A_1 +A_2+A_3+A_4 </script>
+         </dd></dl>
+     <!--l. 830--></div></dd></dl>
+<!--l. 832--></div> <div role="article" class="problem-environment question" id="problem23"><a id="x1-1009r23"></a> True or false: <script type="math/tex; mode=display"> \int _a^b |f(x)| \d x = \left |\int _a^b f(x) \d x\right | </script>  <div class="multiple-choice" id="problem24"><span class="choice  " id="choice10">true</span> <span class="choice correct " id="choice11">false</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback25">Consider <script type="math/tex">f(x) = x</script> on the interval <script type="math/tex">[-1,1]</script>. Here <script type="math/tex; mode=display"> \int _a^b |f(x)| \d x = 1 \qquad \text {but}\qquad \left |\int _a^b f(x) \d x\right | = 0. </script> </div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html><html lang="en"><head> <title>The Extreme Value Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInExtremeValueTheorem.tex"/> 
+<meta name="date" content="2018-10-16 01:05:00"/> 
+<meta name="author" content="Nela Lakos and Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement of the Extreme Value Theorem."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="54ba138f6aaacacbda92b3f14b5afbc3ab2fa1f1 meanValueTheorem/digInExtremeValueTheorem.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">We examine a fact about continuous functions.
+</p></div>   <div class="maketitle"></div>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-64r1"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">A function <script type="math/tex">f</script> has a <strong>global maximum</strong> at <script type="math/tex">x=a</script>, if <script type="math/tex">f(a)\ge f(x)</script> for every <script type="math/tex">x</script> in the domain of
+     the function.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">A function <script type="math/tex">f</script> has a <strong>global minimum</strong> at <script type="math/tex">x=a</script>, if <script type="math/tex">f(a)\le f(x)</script> for every <script type="math/tex">x</script> in the domain of
+     the function.</dd></dl>
+<!--l. 24--><p class="noindent">A <strong>global extremum</strong> is either a global maximum or a global minimum.
+</p></div>
+Let <script type="math/tex">f</script> be the function given by the graph below. <div class="image-environment" role="img" aria-labelledby="image-alt-1">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-67r2"></a> Find the <script type="math/tex">x</script>-coordinate of the point where the function <script type="math/tex">f</script> has a global maximum.  <script type="math/tex; mode=display"> x= \answer [given]{2} </script>
+<!--l. 57--><p class="noindent">Observe that <script type="math/tex">f(2)\ge f(x)</script> for all <script type="math/tex">x</script> in the domain of <script type="math/tex">f</script>. Notice that the function <script type="math/tex">f</script> has also a local
+maximum at <script type="math/tex">x=2</script>.
+</p>
+<div role="article" class="problem-environment question" id="problem3"><a id="x1-68r3"></a>
+<!--l. 62--><p class="noindent">Find the <script type="math/tex">x</script>-coordinate of the point where the function <script type="math/tex">f</script> has a global minimum.
+<script type="math/tex; mode=display"> x= \answer [given]{5} </script>
+Observe that <script type="math/tex">f(5)\le f(x)</script> for all <script type="math/tex">x</script> in the domain of <script type="math/tex">f</script>. Notice that the function <script type="math/tex">f</script> does not have a
+local minimum at <script type="math/tex">x=5</script>. Recall, a function cannot not have a local extremum at a
+boundary point.
+</p></div> <div role="article" class="problem-environment question" id="problem4"><a id="x1-69r4"></a> Find the <script type="math/tex">x</script>-coordinate(s) of the point(s) where the function <script type="math/tex">f</script> has a local minimum.
+<script type="math/tex; mode=display"> x= \answer [given]{1} </script>
+Observe that <script type="math/tex">f(1)\le f(x)</script> for all <script type="math/tex">x</script> in the interval, say, <script type="math/tex">(0,2)</script>. But it is not true that <script type="math/tex">f(1)\le f(x)</script> for all <script type="math/tex">x</script> in the
+domain of <script type="math/tex">f</script>. For example, <script type="math/tex">f(4.5)<f(1)</script>.
+                                                                  
+
+                                                                  
+</div>
+</div> <div role="article" class="problem-environment question" id="problem5"><a id="x1-70r5"></a> Does every function attain a global extremum on its domain? Select the correct
+answer. <div class="multiple-choice" id="problem6">
+<span class="choice  " id="choice1">All functions must attain both global minimum and global maximum on their
+domain.</span> <span class="choice  " id="choice2">All functions attain a global minimum on their domain.</span> <span class="choice  " id="choice3">All functions
+attain a global maximum on their domain.</span> <span class="choice correct " id="choice4">Some functions have no global
+extremums on their domain.</span> </div>
+</div> Check the following graph. <div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Notice, the function is <strong>not continuous</strong> at <script type="math/tex">x=1</script>, and, therefore, <script type="math/tex">f</script> is <strong>not continuous</strong> on
+its domain, <script type="math/tex">(-1,5)</script>.<br class="newline"/>Does the function given by the graph above attain a global extremum on its domain?
+Select the correct answer. <div class="multiple-choice" id="problem7">
+<span class="choice  " id="choice5">The function attains both global minimum and global maximum on its domain.</span> <span class="choice  " id="choice6">The function attains a global minimum, but has no global maximum on
+its domain.</span> <span class="choice  " id="choice7">The function attains a global maximum, but has no global
+minimum on its domain.</span> <span class="choice correct " id="choice8">The function has no global extremum on its domain.</span>
+</div>
+Check the graph below. <div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Notice, the function is <strong>continuous</strong> on its domain <script type="math/tex">(-1,5)</script>. Does the function given by the
+graph above attain a global extremum on its domain? Select the correct answer.
+<div class="multiple-choice" id="problem8">
+<span class="choice  " id="choice9">The function attains both global minimum and global maximum on its domain.</span> <span class="choice correct " id="choice10">
+The function attains a global minimum, but has no global maximum on
+                                                                  
+
+                                                                  
+its domain.</span> <span class="choice  " id="choice11">The function attains a global maximum, but has no global
+minimum on its domain.</span> <span class="choice  " id="choice12">The function has no global extremum on its domain.</span>
+</div>
+Check the following graph. <div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Notice, the function is <strong>continuous on a closed interval</strong> <script type="math/tex">[-1,5]</script>. Does the function given
+by the graph above attain a global extremum on its domain? Select the correct
+answer. <div class="multiple-choice" id="problem9">
+<span class="choice correct " id="choice13"> The function attains both global minimum and global maximum on its domain.</span> <span class="choice  " id="choice14">The function attains a global minimum, but has no global maximum on
+its domain.</span> <span class="choice  " id="choice15">The function attains a global maximum, but has no global
+minimum on its domain.</span> <span class="choice  " id="choice16">The function has no global extremum on its domain.</span>
+</div>
+<div role="article" class="problem-environment question" id="problem10"><a id="x1-71r6"></a>
+<!--l. 195--><p class="noindent">Find the x-coordinate(s) of the point(s) where the function <script type="math/tex">f</script> has a global minimum.  <script type="math/tex; mode=display"> x= \answer [given]{-1},\hspace {0.2in} x= \answer [given]{1} </script>
+</p></div> <div role="article" class="problem-environment question" id="problem11"><a id="x1-72r7"></a> Find the x-coordinate(s) of the point(s) where the function <script type="math/tex">f</script> has a global maximum.
+<script type="math/tex; mode=display"> x= \answer [given]{5} </script>
+</div> Sometimes it is important to know whether a function attains a global extremum on
+its domain. The following theorem, which comes as no surprise after the
+previous three examples, gives a simple answer to that question. <div class="theorem-like problem-environment theorem" id="problem12"><a id="x1-73r8"></a><span class="theorem-like-title">Extreme
+Value Theorem</span><a class="ximera-label" id="theorem:evt"></a> If <script type="math/tex">f</script> is continuous on the closed interval <script type="math/tex">[a,b]</script>, then there are points
+<script type="math/tex">c</script> and <script type="math/tex">d</script> in <script type="math/tex">[a,b]</script>, such that <script type="math/tex">(c,f(c))</script> is a global maximum and <script type="math/tex">(d,f(d))</script> is a global minimum on
+<script type="math/tex">[a, b]</script>.
+<!--l. 218--><p class="noindent">Below, we see a geometric interpretation of this theorem.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-5">     <script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">d</script><script type="math/tex">b</script><script type="math/tex">f(d)</script><script type="math/tex">f(c)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div> <div role="article" class="problem-environment question" id="problem13"><a id="x1-74r9"></a> Would this theorem hold if we were working on an open interval?  <div class="multiple-choice" id="problem14"><span class="choice  " id="choice17">yes</span> <span class="choice correct " id="choice18">no</span>
+</div>
+<div role="article" class="problem-environment hint" id="problem15"><a id="x1-75r10"></a> Consider <script type="math/tex">\tan (\theta )</script> for <script type="math/tex">-\pi /2 < \theta < \pi /2</script>. Does this function achieve its maximum and minimum?
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem16"><a id="x1-76r11"></a>Would this theorem hold if we were working on a closed interval <script type="math/tex">[a,b]</script>, but a function is
+not continuous on <script type="math/tex">[a,b]</script>?  <div class="multiple-choice" id="problem17"><span class="choice  " id="choice19">yes</span> <span class="choice correct " id="choice20">no</span> </div>
+<div role="article" class="problem-environment hint" id="problem18"><a id="x1-77r12"></a> Consider a function <script type="math/tex">f</script> on a closed interval <script type="math/tex">[-1,1]</script>, defined by <script type="math/tex">f(x)=\frac {1}{x}</script> for <script type="math/tex">x\neq 0</script> and <script type="math/tex">f(0)=0</script> . Does this function
+achieve its maximum and minimum?
+</div>
+</div> Assume that a function <script type="math/tex">f</script> is continuous on a closed interval <script type="math/tex">[a,b]</script>. By the Extreme Value
+Theorem, <script type="math/tex">f</script> attains both global extremums on the interval <script type="math/tex">[a,b]</script>. How can we locate these
+global extrema? We have seen that they can occur at the end points or in the
+open interval <script type="math/tex">(a,b)</script>. If a global extremum occurs at a point <script type="math/tex">x</script> in the open interval <script type="math/tex">(a,b)</script>,
+then <script type="math/tex">f</script> has a local extremum at <script type="math/tex">x</script>. That means that <script type="math/tex">f</script> has a critical point at <script type="math/tex">x</script>.
+So, the global extrema of a function <script type="math/tex">f</script> occur either at the end points, <script type="math/tex">a</script> or <script type="math/tex">b</script>,
+or at critical points. If we want to locate the global extrema, we have to
+evaluate the function at the end points and at critical points, and compare the
+values.
+<div role="article" class="problem-environment question" id="problem19"><a id="x1-78r13"></a>Let <script type="math/tex">f(x)=x^2e^{-x}</script>, for <script type="math/tex"> -2\le x\le 1</script>.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Does the function <script type="math/tex">f</script> satisfy the conditions of the Extreme Value Theorem on its
+     domain? <div class="multiple-choice" id="problem20"><span class="choice  " id="choice21">Yes, because <script type="math/tex">f</script> is continuous on <script type="math/tex">(-2,1)</script>.</span> <span class="choice correct " id="choice22">Yes, because <script type="math/tex">f</script> is continuous on <script type="math/tex">[-2,1]</script>.</span> <span class="choice  " id="choice23">No, because <script type="math/tex">f</script> is not continuous on <script type="math/tex">[-2,1]</script>.</span> <span class="choice  " id="choice24">No, because <script type="math/tex">f</script> is not differentiable on <script type="math/tex">(-2,1)</script>.</span>
+     </div>
+                                                                  
+
+                                                                  
+     Now we know that the Extreme Value Theorem guarantees that the function <script type="math/tex">f</script>
+     attains both global extremums on its domain!
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Locate the global extremums of <script type="math/tex">f</script> on the closed interval <script type="math/tex">[-2,1]</script>. <div class="theorem-like problem-environment explanation" id="problem21"><a id="x1-81r14"></a>
+     <!--l. 316--><p class="noindent">The global extremums occur at the end points or at critical points.
+     </p><!--l. 319--><p class="noindent">Let’s find the critical points of <script type="math/tex">f</script>. First, compute the derivative of <script type="math/tex">f</script>.  <script type="math/tex; mode=display"> f'(x)= xe^{-x}(\answer [given]{2-x}) </script>
+     In order to find the critical points of <script type="math/tex">f</script>, we have to solve the equation
+     <script type="math/tex; mode=display"> f'(x)= \answer [given]{0}. </script>
+     It follows that the function <script type="math/tex">f</script> has only one critical point <script type="math/tex">\left (c,f(c)\right )</script>. Find <script type="math/tex">c</script>.  <script type="math/tex; mode=display"> c= \answer [given]{0} </script>
+     In order to locate the global extremums of <script type="math/tex">f</script>, we have to evaluate <script type="math/tex">f</script> at the end
+     points and at the critical point.  <script type="math/tex; mode=display"> f(-2)= \answer [given]{4e^{2}} </script>
+     <script type="math/tex; mode=display"> f(c)= \answer [given]{0} </script>
+     </p><!--l. 355--><p class="noindent"><script type="math/tex; mode=display"> f(1)= \answer [given]{e^{-1}} </script>
+     Order the three values, <script type="math/tex">f(-2)</script>, <script type="math/tex">f(c)</script>, and <script type="math/tex">f(1)</script>, from smallest to largest. You should replace <script type="math/tex">c</script>
+     with its value, when you write <script type="math/tex">f(c)</script> in your answer below.  <script type="math/tex; mode=display"> f(\answer [given]{0})<f(\answer [given]{1})<f(\answer [given]{-2}) </script>
+     </p><!--l. 365--><p class="noindent">Based on this comparison, the function <script type="math/tex">f</script> has the global minimum at <script type="math/tex">x=\answer [given]{0}</script>, and the
+     global maximum at <script type="math/tex">x=\answer [given]{-2}</script>.
+     </p></div></dd></dl>
+<!--l. 368--><p class="noindent">For your convenience, the graph of <script type="math/tex">f</script> on the interval <script type="math/tex">[-2,1]</script> is given below.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-6">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=x^{2}e^{-x}</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
