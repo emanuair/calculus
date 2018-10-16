@@ -1,0 +1,117 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="limitOfRiemannSums.tex"/> 
+<meta name="date" content="2018-10-16 01:01:00"/> 
+<meta name="author" content="Gregory Hartman and Matthew CarrMathew Carrand Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Add up a large number of terms quickly using sigma notation."/> 
+<meta name="learning-outcome" content="Compute left, right, and midpoint Riemann Sums with many rectangles."/> 
+<meta name="learning-outcome" content="Understand the relationship between area under a curve and sums of rectangles."/> 
+<meta name="learning-outcome" content="Approximate area under a curve."/> 
+<meta name="learning-outcome" content="Understand how the area under a curve is related to the antiderivative."/> 
+<meta name="learning-outcome" content="Use limits of Riemann sums to find the exact area under a curve."/> 
+<meta name="learning-outcome" content="Understand how Riemann sums are used to find exact area."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="71608fa135ab7e0010db852e5dd8a077e09a1def approximatingTheAreaUnderACurve/exercises/limitOfRiemannSums.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Answer the following, given that it is a well known fact that <script type="math/tex">\sum _{k=1}^{n}k=\frac {n(n+1)}{2}</script> and <script type="math/tex">\sum _{k=1}^{n}C=nC</script> .
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Find the Right Riemann Sum for <script type="math/tex">f(x)=3x+1</script> on the interval <script type="math/tex">[0,4]</script> using <script type="math/tex">n</script> rectangles. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-66r2"></a>
+     <script type="math/tex; mode=display"> \Delta x= \frac {\answer {4}}{n} </script>
+     </div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-67r3"></a> Let’s determine the grid points, for <script type="math/tex">0\le k\le n</script> <script type="math/tex; mode=display"> x_k= \answer {k}\cdot \frac {\answer {4}}{n} </script>
+     </div> <div role="article" class="problem-environment hint" id="problem4"><a id="x1-68r4"></a> <script type="math/tex; mode=display"> x_k^*= \answer {k}\cdot \frac {\answer {4}}{n} </script> <script type="math/tex; mode=display"> f(x_k^*)=f\left ( \answer {k}\cdot \frac {\answer {4}}{n}\right )=3\cdot \left (\answer {k}\cdot \frac {\answer {4}}{n}\right )+1 </script>
+     </div> <div role="article" class="problem-environment hint" id="problem5"><a id="x1-69r5"></a> Now, lets write the right Riemann sum <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x=\sum _{k=1}^n \left (3\cdot \left (\answer {k}\cdot \frac {\answer {4}}{n}\right )+1\right )\cdot \frac {\answer {4}}{n} </script>
+     </div> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-70r6"></a> Now, lets simplify the sum <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x= \frac {\answer {4}}{n}\sum _{k=1}^n \left (3\cdot \left (\answer {k}\cdot \frac {\answer {4}}{n}\right )+1\right )= \frac {\answer {4}}{n}\left (\sum _{k=1}^n 3\cdot \left (\answer {k}\cdot \frac {\answer {4}}{n}\right )+\sum _{k=1}^n 1\right ) </script>
+     </div> <div role="article" class="problem-environment hint" id="problem7"><a id="x1-71r7"></a> Now, lets simplify more <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x= \frac {\answer {4}}{n}\left (3\cdot \frac {\answer {4}}{n}\sum _{k=1}^n \answer {k}+\sum _{k=1}^n 1\right ) </script>
+     </div> <div role="article" class="problem-environment hint" id="problem8"><a id="x1-72r8"></a> Now, apply the given formulas <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x= \frac {\answer {4}}{n}\left (3\cdot \frac {\answer {4}}{n}\frac {n(n+1)}{2}+n\right ) </script>
+     </div>  <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x=28+\frac {\answer {24}}{n} </script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Compute the limit as <script type="math/tex">n\to \infty </script> of your answer above.  <script type="math/tex; mode=display"> \lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x=\answer {28} </script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Compute the area between the curve <script type="math/tex">y=f(x)</script> and the interval <script type="math/tex">[0,4]</script> using geometry. <div role="article" class="problem-environment hint" id="problem9"><a id="x1-75r9"></a>
+     <div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">1</script><script type="math/tex">2</script><script type="math/tex">3</script><script type="math/tex">4</script>24681012<script type="math/tex">x</script><script type="math/tex">y</script>
+     </div>
+     </div>  <script type="math/tex; mode=display"> A=\answer {28} </script>
+     </dd></dl>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

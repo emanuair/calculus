@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="LinearApproximations6.tex"/> 
+<meta name="date" content="2018-10-16 01:31:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define linear approximation as an application of the tangent to a curve."/> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Find the error of a linear approximation."/> 
+<meta name="learning-outcome" content="Compute differentials."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="a85bcd50d023ecf122a4cdce7ede45885f8532bb linearApproximation/exercises/LinearApproximations6.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Consider the function <script type="math/tex">f(x) = \frac {(x+2)^2}{12}</script>.
+<!--l. 23--><p class="noindent">In the figure below the graph of <script type="math/tex">f</script>, the secant line between <script type="math/tex">(0,f(0))</script> and <script type="math/tex">(4,f(4))</script>, and the linear
+approximation to <script type="math/tex">f</script> at <script type="math/tex">a=4</script> are shown.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 48--><p class="noindent">The slope of the secant line depicted is <script type="math/tex; mode=display"> m_{sec} = \answer {\frac {2}{3}}. </script>
+</p><!--l. 53--><p class="noindent">The linear approximation <script type="math/tex">L</script> to <script type="math/tex">f</script> at <script type="math/tex">a=4</script> is <script type="math/tex; mode=display"> L(x) = \answer {(x-4) + 3}. </script>
+</p><!--l. 58--><p class="noindent">Using this linear approximation, we can estimate <script type="math/tex">f</script> at <script type="math/tex">x=4.01</script> as <script type="math/tex; mode=display"> f(4.01) \approx \answer {3.01}. </script> This estimate is an <span class="word-choice" id="word-choice2"><a id="x1-65r2"></a><span class="choice correct " id="choice1">underestimate</span><span class="choice  " id="choice2">overestimate</span>
+</span> because the second derivative of <script type="math/tex">f</script> is <span class="word-choice" id="word-choice3"><a id="x1-66r3"></a><span class="choice  " id="choice3">negative</span><span class="choice correct " id="choice4">positive</span>
+</span> and the graph of <script type="math/tex">L</script> lies <span class="word-choice" id="word-choice4"><a id="x1-67r4"></a><span class="choice  " id="choice5">above</span><span class="choice correct " id="choice6">below</span>
+</span> the graph of <script type="math/tex">f</script>.
+</p><!--l. 64--><p class="noindent">When <script type="math/tex">x</script> changes from <script type="math/tex">a=4</script> to <script type="math/tex">a+\Delta x=4.01</script>, <script type="math/tex">f(x)</script> changes by <script type="math/tex">\Delta y</script> (rounded to the thousands place) given by <script type="math/tex; mode=display"> \Delta y = f\left (\answer {4.01}\right ) - f\left (\answer {4}\right ) = \answer {0.01}. </script>
+We can also estimate this change in <script type="math/tex">f(x)</script> as <script type="math/tex">\d {y}</script> given by <script type="math/tex; mode=display"> \d {y} = f'\left (\answer {4}\right )\d {x} = \answer {0.01}. </script> We see that our approximation of
+the change in <script type="math/tex">f(x)</script> is very close to the true change.
+</p>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

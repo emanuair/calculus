@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="surfaceArea.tex"/> 
+<meta name="date" content="2018-10-16 01:22:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="d7fef0c71db3a9b49f73d6240f36527f9f207cb0 exams/calculus3/exam2/surfaceArea.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> Sketch the region bounded by the <script type="math/tex">(x,y)</script>-plane, the <script type="math/tex">(y,z)</script>-plane, the <script type="math/tex">(x,z)</script>-plane and the plane <script type="math/tex">x+2y + 3z = 6</script>.
+<strong>Label relevant points.</strong> <div class="image-environment" role="img" aria-labelledby="image-alt-1">                           <script type="math/tex">y</script><script type="math/tex">z</script><script type="math/tex">x</script>
+</div>
+<div class="multiple-choice" id="problem2"><span class="choice correct " id="choice1">I’ve drawn this.</span> </div>
+<div class="feedback" data-feedback="correct" id="feedback3"> <div class="image-environment" role="img" aria-labelledby="image-alt-2"><img src="scan1.jpg" alt="PIC"/> </div>
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-65r2"></a> Let <script type="math/tex">F(x,y) = \frac {6-x-2y}{3}</script>. Let <script type="math/tex; mode=display"> R =\{(x,y,z): 0\le x \le 6, 0 \le y \le \frac {-x}{2} + 3\} </script> Compute: <script type="math/tex">\iint _R \d S</script>. Give a very brief explanation.  <script type="math/tex; mode=display"> \mathrm {Area} = \answer {3\sqrt {14}} </script> <div class="feedback" data-feedback="correct" id="feedback5"> One could either use half the
+magnitude cross product of something like <script type="math/tex">|\vector {-6,0,2}\cross \vector {-6,3,0}|</script>, or one could compute an interated
+integral like: <script type="math/tex; mode=display"> \int _0^6\int _0^{-x/2+3} \sqrt {14}/3 \d y \d x </script> </div>
+</div>__________________________________________________________________
+<div role="article" class="problem-environment problem" id="problem6"><a id="x1-66r3"></a>  Select all true statements.
+<div class="select-all" id="problem7"><a id="x1-67r4"></a> <span class="choice correct " id="choice2">The function <script type="math/tex">F(x,y) = x^6+y^4</script> has exactly one minimum.</span> <span class="choice  " id="choice3">If <script type="math/tex">F^{(1,0)}(1,2)=F^{(0,1)}(1,2)=0</script>, <script type="math/tex">F^{(2,0)}(1,2) > 0</script>, <script type="math/tex">F^{(0,2)}(1,2)>0</script>, and <script type="math/tex">F^{(1,1)}(1,2) <0</script>, then <script type="math/tex">(1,2)</script> is a local minimum
+for <script type="math/tex">F</script>.</span> <span class="choice correct " id="choice4">If <script type="math/tex">F^{(1,0)}(3,4)=0</script>, <script type="math/tex">F^{(0,1)}(3,4)=0</script>, <script type="math/tex">F^{(2,0)}(3,4) =0</script>, <script type="math/tex">F^{(0,2)}(3,4)>0</script>, and <script type="math/tex">F^{(1,1)}(3,4) <0</script>, then <script type="math/tex">(3,4)</script> is a saddle-point for <script type="math/tex">F</script>.</span> <span class="choice correct " id="choice5">If <script type="math/tex">F(x,y)</script> has a critical point at <script type="math/tex">(-3,1)</script>, then <script type="math/tex">G(x,y)=\left (F(x,y)\right )^6</script>
+also has a critical point at <script type="math/tex">(-3,1)</script>.</span> <span class="choice correct " id="choice6">If <script type="math/tex">(2,-3)</script> is a critical point of <script type="math/tex">F</script>, <script type="math/tex">F^{(1,1)}(2,-3) = 0</script>, <script type="math/tex">F^{(2,0)}(2,-3)>0</script>, and <script type="math/tex">F^{(0,2)}(2,-3)<0</script>, then at <script type="math/tex">(2,-3)</script> <script type="math/tex">F</script> locally looks
+like a hyperbolic paraboloid.</span> <span class="choice  " id="choice7">None of these.</span>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

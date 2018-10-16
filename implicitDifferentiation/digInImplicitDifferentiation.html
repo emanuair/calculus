@@ -1,0 +1,203 @@
+<!DOCTYPE html><html lang="en"><head> <title>Implicit differentiation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInImplicitDifferentiation.tex"/> 
+<meta name="date" content="2018-10-16 01:08:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Implicitly differentiate expressions."/> 
+<meta name="learning-outcome" content="Find the equation of the tangent line for curves that are not plots of functions."/> 
+<meta name="learning-outcome" content="Understand how changing the variable changes how we take the derivative."/> 
+<meta name="learning-outcome" content="Understand the derivatives of expressions that are not functions or not ``solved for $y$&#39;&#39;."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="52f76058f150dde07d854ba9d8c58790c9dec8cb implicitDifferentiation/digInImplicitDifferentiation.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 17--><p class="noindent">In this section we differentiate equations that contain more than one variable on one
+side.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Review of the chain rule</h3>
+<!--l. 22--><p class="noindent">Implicit differentiation is really just an application of the chain rule. So
+recall:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-1001r1"></a><span class="theorem-like-title">Chain Rule</span> If <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script> are differentiable, then <script type="math/tex; mode=display"> \ddx f(g(x)) = f'(g(x))g'(x). </script>
+</div>
+<!--l. 32--><p class="noindent">Of particular use in this section is the following. If <script type="math/tex">y</script> is a differentiable function of <script type="math/tex">x</script> and
+if <script type="math/tex">f</script> is a differentiable function, then <script type="math/tex; mode=display"> \ddx (f(y)) = f'(y) \cdot \ddx (y) = f'(y) \dd [y]{x}. </script>
+</p>
+<h3 class="sectionHead"><a id="x1-2000"></a>Implicit differentiation</h3>
+<!--l. 41--><p class="noindent">The functions we’ve been dealing with so far have been <em>explicit functions</em>, meaning
+that the dependent variable is written in terms of the independent variable. For
+example: <script type="math/tex; mode=display"> y=3x^2-2x+1,\qquad y=e^{3x}, \qquad y = \frac {x-2}{x^2-3x+2}. </script> However, there is another type of function, called an <em>implicit function</em>. In
+this case, the dependent variable is not stated explicitly in terms of the independent
+variable. Some examples are: <script type="math/tex; mode=display"> x^2+y^2 = 4,\qquad x^3+y^3 = 9xy, \qquad x^4+3x^2 = x^{2/3}+y^{2/3} + 1. </script> Your inclination might be simply to solve
+each of these for <script type="math/tex">y</script> and go merrily on your way. However this can be difficult
+and it may require two <em>branches</em>, for example to explicitly plot <script type="math/tex">x^2+y^2 = 4</script>, one needs
+both <script type="math/tex">y= \sqrt {4-x^2}</script> and <script type="math/tex">y=-\sqrt {4-x^2}</script>. Moreover, it may not even be possible to solve for <script type="math/tex">y</script>. To deal
+with such situations, we use <em>implicit differentiation</em>. We’ll start with a basic
+example.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a id="x1-2001r2"></a>Consider the curve defined by: <script type="math/tex; mode=display"> x^2 + y^2 = 1 </script>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Compute <script type="math/tex">\dd [y]{x}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the slope of the tangent line at <script type="math/tex">\left (\frac {\sqrt {2}}{2},\frac {\sqrt {2}}{2}\right )</script>.</dd></dl>
+<div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-2004r3"></a>Starting with <script type="math/tex; mode=display"> x^2 + y^2 = 1 </script> we differentiate both sides of the equation with respect to <script type="math/tex">x</script> to obtain <script type="math/tex; mode=display"> \ddx \left (x^2+y^2\right ) = \ddx 1. </script>
+Applying the sum rule we see <script type="math/tex; mode=display"> \ddx x^2+\ddx y^2 = 0. </script> Let’s examine each of these terms in turn. To start <script type="math/tex; mode=display"> \ddx x^2 = \answer [given]{2x}. </script>
+On the other hand, <script type="math/tex">\ddx y^2</script> is somewhat different. Here you imagine that <script type="math/tex">y = f(x)</script>, and hence by the
+chain rule <script type="math/tex; mode=display"> \begin{align*} 
+\ddx y^2 &= \ddx (f(x))^2 \\
+&= 2\cdot f(x) \cdot f'(x) \\
+&= 2y\dd[y]{x}.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+Putting this together we are left with the equation <script type="math/tex; mode=display"> 2x + 2y\dd [y]{x} =0 </script> At this point, we solve for <script type="math/tex">\dd [y]{x}</script>. Write
+<script type="math/tex; mode=display"> \begin{align*} 
+2x + 2y\dd[y]{x} &= 0\\
+2y \dd[y]{x} &= -2x\\
+\dd[y]{x} &= \answer[given]{\frac{-x}{y}}.
+\end{align*}</script>
+<!--l. 106--><p class="noindent">For the second part of the problem, we simply plug <script type="math/tex">x=\frac {\sqrt {2}}{2}</script> and <script type="math/tex">y=\frac {\sqrt {2}}{2}</script> into the formula above,
+hence the slope of the tangent line at this point is <script type="math/tex">\answer [given]{-1}</script>. We can confirm our results by
+looking at the graph of the curve and our tangent line: <script type="math/tex; mode=display"> \graph {x^2+y^2=1,-x+\sqrt {2}} </script> 
+</p></div>
+</div>
+<!--l. 119--><p class="noindent">Let’s see another illustrative example:
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-2005r4"></a>Consider the curve defined by: <script type="math/tex; mode=display"> x^3+y^3 = 9xy </script> <div class="image-environment" role="img" aria-labelledby="image-alt-1"> 
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script></div>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Compute <script type="math/tex">\dd [y]{x}</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the slope of the tangent line at <script type="math/tex">(4,2)</script>.</dd></dl>
+<div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-2008r5"></a>Starting with <script type="math/tex; mode=display"> x^3+y^3 = 9xy, </script> we differentiate both sides of the equation with respect to <script type="math/tex">x</script> to obtain <script type="math/tex; mode=display"> \ddx \left (x^3+y^3\right ) = \ddx 9xy. </script>
+Applying the sum rule we see <script type="math/tex; mode=display"> \ddx x^3+\ddx y^3 = \ddx 9xy. </script> Let’s examine each of these terms in turn. To start <script type="math/tex; mode=display"> \ddx x^3 = \answer [given]{3x^2}. </script>
+On the other hand <script type="math/tex">\ddx y^3</script> is somewhat different. Here you imagine that <script type="math/tex">y = f(x)</script>, and hence by the
+chain rule <script type="math/tex; mode=display"> \begin{align*} 
+\ddx y^3 &= \ddx (f(x))^3 \\
+&= 3(f(x))^2 \cdot f'(x) \\
+                                                                  
+
+                                                                  
+&= 3y^2\dd[y]{x}.
+\end{align*}</script>
+Considering the final term <script type="math/tex">\ddx 9xy</script>, we again imagine that <script type="math/tex">y=f(x)</script>. Hence
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx 9xy &= 9\ddx \Bigl(x\cdot f(x)\Bigr) \\
+&= 9 \left(x\cdot f'(x) + f(x)\right)\\
+&= 9x \dd[y]{x} + 9y.
+\end{align*}</script>
+Putting this all together we are left with the equation <script type="math/tex; mode=display"> 3x^2 + 3y^2\dd [y]{x} =9x \dd [y]{x} + 9y. </script> At this point, we solve for <script type="math/tex">\dd [y]{x}</script>.
+Write <script type="math/tex; mode=display"> \begin{align*} 
+3x^2 + 3y^2\dd[y]{x} &= 9x \dd[y]{x} + 9y\\
+3y^2\dd[y]{x} -  9x \dd[y]{x} &= 9y - 3x^2\\
+\dd[y]{x}\left(3y^2-9x\right)&= 9y - 3x^2\\
+\dd[y]{x} &=\frac{9y - 3x^2}{3y^2-9x} = \frac{3y - x^2}{y^2-3x}.
+\end{align*}</script>
+<!--l. 195--><p class="noindent">For the second part of the problem, we simply plug <script type="math/tex">x=4</script> and <script type="math/tex">y=2</script> into the formula above,
+hence the slope of the tangent line at <script type="math/tex">(4,2)</script> is <script type="math/tex">\frac {5}{4}</script>. We’ve included a plot for your viewing
+pleasure: </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"> 
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script></div></div><!--l. 223--></div><!--l. 226--><p class="noindent">You might think that the step in which we solve for <script type="math/tex">\dd [y]{x}</script> could sometimes be difficult. In
+fact, <em>this never happens</em>. All occurrences <script type="math/tex">\dd [y]{x}</script> arise from applying the chain rule, and
+whenever the chain rule is used it deposits a single <script type="math/tex">\dd [y]{x}</script> multiplied by some other
+expression. Hence our expression is linear in <script type="math/tex">\dd [y]{x}</script>, it will always be possible to group
+the terms containing <script type="math/tex">\dd [y]{x}</script> together and factor out the <script type="math/tex">\dd [y]{x}</script>, just as in the previous
+examples.
+                                                                  
+
+                                                                  
+</p><!--l. 235--><p class="noindent">One more last example:
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-2009r6"></a>Consider the curve defined by <script type="math/tex; mode=display"> \cos (xy) - \frac {y}{x} = 4x^2 y^3. </script> Compute <script type="math/tex">\dd [x]{y}</script>. <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-2010r7"></a>First, notice that the problem asks for <script type="math/tex">\dd [x]{y}</script>,
+<strong>not</strong> <script type="math/tex">\dd [y]{x}</script>. So we are considering <script type="math/tex">x</script> as a function of <script type="math/tex">y</script>. This means the variables have changed
+places! Not to worry, everything is exactly the same. We apply <script type="math/tex">\dd {y}</script> to both sides of the
+equation to get <script type="math/tex; mode=display"> \dd {y} \left ( \cos (xy) - \frac {y}{x} \right ) = \dd {y} (4x^2 y^3) </script> which gives us <script type="math/tex; mode=display"> -\answer [given]{\sin (xy)} \left (y \dd [x]{y} + x \right ) - \frac {x - y \dd [x]{y}}{x^2} = 8xy^3 \dd [x]{y} + 12 x^2 y^2. </script> Distributing and multiplying by <script type="math/tex">x^2</script> yields
+<script type="math/tex; mode=display"> \begin{align*} 
+  -x^2 y \sin(xy) \dd[x]{y} &- x^3 \sin(xy) - x + y \dd[x]{y}\\
+  &= 8x^3y^3 \dd[x]{y} + 12x^4y^2.
+\end{align*}</script>
+Grouping terms, factoring, and dividing finally gives us
+<script type="math/tex; mode=display"> \begin{align*} 
+  -x^2 y \sin(xy) \dd[x]{y} &+ y \dd[x]{y} - 8x^3y^3 \dd[x]{y} \\
+  &= x^3 \sin(xy) + x + 12x^4 y^2
+\end{align*}</script>
+so, <script type="math/tex; mode=display"> \left ( y - x^2y\sin (xy) - 8x^3 y^3 \right ) \dd [x]{y} = x^3 \sin (xy) + x + 12x^4 y^2 </script> and now we see <script type="math/tex; mode=display"> \dd [x]{y} = \frac {x^3 \sin (xy) + x + 12x^4 y^2}{y - x^2y\sin (xy) - 8x^3 y^3}. </script>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

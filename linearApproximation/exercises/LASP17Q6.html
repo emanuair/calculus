@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="LASP17Q6.tex"/> 
+<meta name="date" content="2018-10-16 01:31:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Use the Mean Value Theorem to bound the error in linear approximation."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="969a0bf68086795435730943eaf019e948df9459 linearApproximation/exercises/LASP17Q6.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<span class="learning-outcome">Find the linear approximation to a function at a point and use it to approximate the function value.</span> <span class="learning-outcome">Use the Mean Value Theorem to bound the error in linear approximation.</span>
+<!--l. 9--><p class="noindent">Let <script type="math/tex">f</script> be a differentiable function on the interval <script type="math/tex">(0,6)</script> with the particular values of <script type="math/tex">f</script> and <script type="math/tex">f'</script>
+given in the table below. <script type="math/tex; mode=display"> \begin {array}{c|c|c|} x & f(x) & f'(x)\\ \hline 1 & 0 & 4\\ 2 & 1 & 3\\ 3 & 5 & 2\\ 4 & 6 & 5\\ \end {array} </script>
+</p>
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Find <script type="math/tex">L(x)</script>, the linear approximation to <script type="math/tex">f</script> at <script type="math/tex">x=3</script>. <script type="math/tex; mode=display"> L(x)=\answer {2x-1} </script> <div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Use the linear approximation <script type="math/tex">L(x)</script> to estimate
+the value of <script type="math/tex">f(2.8)</script>. <script type="math/tex; mode=display"> f(2.8)\approx \answer {4.6} </script> <div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> Find the average rate of change of <script type="math/tex">f</script> on the interval <script type="math/tex">[1,4]</script>. <script type="math/tex; mode=display"> \text {average rate of change of $f$ on $[1,4]$}=\answer {2} </script> <div role="article" class="problem-environment exercise" id="problem4"><a id="x1-67r4"></a> Choose the
+correct statement. <div class="multiple-choice" id="problem5"><span class="choice  " id="choice1">There exists a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that <script type="math/tex">f'(c)=\frac {f(4)-f(1)}{4-1}</script>, although the function <script type="math/tex">f</script> does
+not satisfy the conditions on the mean value theorem on <script type="math/tex">[1,4]</script>.</span> <span class="choice correct " id="choice2">There exists a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script>
+such that <script type="math/tex">f'(c)=\frac {f(4)-f(1)}{4-1}</script>, since the function <script type="math/tex">f</script> satisfies the conditions on the mean value
+theorem on <script type="math/tex">[1,4]</script>.</span> <span class="choice  " id="choice3">There exists a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that <script type="math/tex">f'(c)=\frac {f(4)-f(1)}{4-1}</script>, but we don’t have enough
+information to find such a point.</span> <span class="choice  " id="choice4">There exists no point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that <script type="math/tex">f'(c)=\frac {f(4)-f(1)}{4-1}</script>.</span>
+</div>
+<div role="article" class="problem-environment exercise" id="problem6"><a id="x1-68r5"></a> <div role="article" class="problem-environment exercise" id="problem7"><a id="x1-69r6"></a> Again, choose the correct statement. <div class="multiple-choice" id="problem8"><span class="choice  " id="choice5">For each <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script>, there exists a point <script type="math/tex">c</script> in <script type="math/tex">(2,3)</script>
+such that <script type="math/tex">f'(c)=\frac {f(x)-f(2)}{x-2}</script>, although the function <script type="math/tex">f</script> does not satisfy the conditions on the
+mean value theorem on <script type="math/tex">[2,3]</script>.</span> <span class="choice correct " id="choice6">For each <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script>, there exists a point <script type="math/tex">c</script> in <script type="math/tex">(2,3)</script> such that <script type="math/tex">f'(c)=\frac {f(x)-f(2)}{x-2}</script>,
+since the function <script type="math/tex">f</script> satisfies the conditions on the mean value theorem on <script type="math/tex">[2,3]</script>.</span> <span class="choice  " id="choice7">There may be <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script>, for which there exists a point <script type="math/tex">c</script> in <script type="math/tex">(2,3)</script> such that <script type="math/tex">f'(c)=\frac {f(x)-f(2)}{x-2}</script>, but not
+necessarily every <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script>.</span> <span class="choice  " id="choice8">For each <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script>, there does not exist a point <script type="math/tex">c</script> in <script type="math/tex">(2,3)</script> such that <script type="math/tex">f'(c)=\frac {f(x)-f(2)}{x-2}</script>.</span>
+</div>
+<div role="article" class="problem-environment exercise" id="problem9"><a id="x1-70r7"></a> Suppose we know that <script type="math/tex">2\le f'(x)\le 3</script> for <script type="math/tex">x</script> in <script type="math/tex">(2,3)</script>. By the mean value theorem, for each <script type="math/tex">x</script> in<script type="math/tex"> [2,3]</script>, there exists
+<script type="math/tex">c</script> in <script type="math/tex">(2,3)</script> such that <script type="math/tex; mode=display"> f(x)=\answer {f'(c)(x-2)+1} </script> <div role="article" class="problem-environment exercise" id="problem10"><a id="x1-71r8"></a> Recall that we assumed <script type="math/tex">2\le f'(c)\le 3</script> for each <script type="math/tex">c</script> in <script type="math/tex">(2,3)</script>. Use your answer above to
+bound <script type="math/tex">f(x)</script> for <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script> from above and from below. <script type="math/tex; mode=display"> \answer {2(x-2)+1}\le f(x)\le \answer {3(x-2)+1} </script> <div role="article" class="problem-environment exercise" id="problem11"><a id="x1-72r9"></a> Use the bounds <script type="math/tex">2(x-2)+1\le f(x)\le 3(x-2)+1</script> for <script type="math/tex">x</script> in <script type="math/tex">[2,3]</script> you computed
+in the previous part to approximate <script type="math/tex">f(2.8)</script> from above and below. <script type="math/tex; mode=display"> \answer {2.6}\le f(2.8)\le \answer {3.4} </script> <div role="article" class="problem-environment exercise" id="problem12"><a id="x1-73r10"></a> Let <script type="math/tex">L(x)</script> be the
+linear approximation to <script type="math/tex">f</script> at <script type="math/tex">x=3</script> you computed before. We used <script type="math/tex">L(x)</script> to approximate <script type="math/tex">f(2.8)</script>
+and found that <script type="math/tex">f(2.8)</script> is approximately equal to <script type="math/tex">4.6</script>. Using our previous answers, we
+can deduce that this approximation to <script type="math/tex">f(2.8)</script> is a <span class="word-choice" id="word-choice13"><a id="x1-74r11"></a><span class="choice correct " id="choice9">over approximation</span><span class="choice  " id="choice10">under
+approximation</span>
+</span>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>
