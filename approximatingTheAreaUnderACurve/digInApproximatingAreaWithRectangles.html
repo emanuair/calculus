@@ -1,0 +1,372 @@
+<!DOCTYPE html><html lang="en"><head> <title>Approximating  area  with
+                                                                  
+
+                                                                  
+rectangles</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInApproximatingAreaWithRectangles.tex"/> 
+<meta name="date" content="2018-10-16 14:32:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define area."/> 
+<meta name="learning-outcome" content="Understand the relationship between area under a curve and sums of rectangles."/> 
+<meta name="learning-outcome" content="Approximate area under a curve."/> 
+<meta name="learning-outcome" content="Compute left, right, and midpoint Riemann sums with 10 or fewer rectangles."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="8806b315f53d111db8a93106a128d23396bb88f6 approximatingTheAreaUnderACurve/digInApproximatingAreaWithRectangles.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">We introduce the basic idea of using rectangles to approximate the area under a
+curve.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Rectangles and areas</h3>
+<!--l. 21--><p class="noindent">We want to compute the area between the curve <script type="math/tex">y=f(x)</script> and the horizontal axis on the interval <script type="math/tex">[a,b]</script>:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+One way to do this would be to approximate the area with
+rectangles. With one rectangle we get a rough approximation:
+<div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">\mathsf {1}</script><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Two rectangles might make a better approximation:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+With even more, we get a closer, and closer, approximation:
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a>If we are approximating the area between a curve and the <script type="math/tex">x</script>-axis on <script type="math/tex">[a,b]</script> with <script type="math/tex">n</script> rectangles
+of width <script type="math/tex">\Delta x</script>, then <script type="math/tex; mode=display"> \Delta x = \frac {b-a}{n}. </script>
+                                                                  
+
+                                                                  
+</div> <div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-1002r2"></a> Suppose we wanted to approximate area between the curve <script type="math/tex">y=x^2+1</script> and the <script type="math/tex">x</script>-axis on the
+interval <script type="math/tex">[-1,1]</script>, with <script type="math/tex">8</script> rectangles. What is <script type="math/tex">\Delta x</script>?  <script type="math/tex; mode=display"> \Delta x = \answer [given]{1/4} </script>
+</div>
+<!--l. 188--><p class="noindent">As we add rectangles, we are more closely approximating the area we are interested in:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-6"><script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+We could find the area exactly if we could compute the limit as the width of the
+rectangles goes to zero and the number of rectangles goes to infinity.
+<!--l. 219--><p class="noindent">Let’s setup some notation to help with these calculations:
+</p>
+<div class="theorem-like problem-environment definition" id="problem3"><a id="x1-1003r3"></a>When approximating an area with <script type="math/tex">n</script> rectangles, the <strong>grid points</strong> <script type="math/tex; mode=display"> x_0,x_1,x_2,\dots ,x_n </script> are the <script type="math/tex">x</script>-coordinates that
+determine the edges of the rectangles. In the graph below, we’ve numbered the rectangles
+to help you see the relation between the indices of the grid points and the <script type="math/tex">k</script>th rectangle.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-7"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_0=a</script><script type="math/tex">x_1</script><script type="math/tex">x_2</script><script type="math/tex">x_3</script><script type="math/tex">x_4</script><script type="math/tex">x_5=b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Note, if we are approximating the area between a curve and the horizontal axis on <script type="math/tex">[a,b]</script>
+with <script type="math/tex">n</script> rectangles, then it is always the case that <script type="math/tex; mode=display"> x_0=a\qquad \text {and}\qquad x_n = b. </script>
+</div>
+<div role="article" class="problem-environment question" id="problem4"><a id="x1-1004r4"></a> If we are approximating the area between a curve and the horizontal axis with <script type="math/tex">11</script>
+rectangles, how many grid points will we have? <div role="article" class="problem-environment hint" id="problem5"><a id="x1-1005r5"></a> You can draw it!
+</div> We’ll have <script type="math/tex">\answer [given]{12}</script> grid points.
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>But which set of rectangles?</h3>
+<!--l. 289--><p class="noindent">When we use <script type="math/tex">n</script> rectangles to compute the area under a curve, the width of each
+rectangle is <script type="math/tex">\Delta x=\frac {b-a}{n}</script>. It is clear that <script type="math/tex">\Delta x=x_k-x_{k-1}</script>, for <script type="math/tex">k=1,\dots , n</script>.
+</p><!--l. 292--><p class="noindent">But how do we determine <em>the height</em> of the rectangle?
+</p><!--l. 295--><p class="noindent">We choose a <em>sample point</em> <script type="math/tex">x_k^*</script> and evaluate the function at
+that point. The value <script type="math/tex">f(x_k^*)</script> determines the height of a rectangle.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-8"><script type="math/tex">\mathsf {k}</script><script type="math/tex">f(x^*_{k})</script><script type="math/tex">\Delta x</script><script type="math/tex">y=f(x)</script><script type="math/tex">x_0=a</script><script type="math/tex">x_{k-1}</script><script type="math/tex">x^*_{k}</script><script type="math/tex">x_k</script><script type="math/tex">x_n=b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div class="theorem-like problem-environment definition" id="problem6"><a id="x1-2001r6"></a>When approximating an area with rectangles, a <strong>sample point</strong> is the <script type="math/tex">x</script>-coordinate
+that determines the height of <script type="math/tex">k^{th}</script> rectangle. For <script type="math/tex">k=1,\dots , n</script>, we denote a sample point as: <script type="math/tex; mode=display"> x_k^* </script> and the
+value <script type="math/tex; mode=display"> f( x_k^*) </script> is the height of the <script type="math/tex">k^{th}</script> rectangle.
+</div> <div role="article" class="problem-environment question" id="problem7"><a id="x1-2002r7"></a> What is the area of the <script type="math/tex">k^{th}</script> rectangle shown in the figure above? <div class="select-all" id="problem8"><a id="x1-2003r8"></a> <span class="choice  " id="choice1"><script type="math/tex">A=\Delta x </script></span> <span class="choice  " id="choice2"><script type="math/tex">A=f(x)\Delta x </script></span> <span class="choice  " id="choice3"><script type="math/tex">A= f( x_k^*)x_k^*</script></span> <span class="choice correct " id="choice4"><script type="math/tex">A= f( x_k^*)\Delta x</script></span> <span class="choice  " id="choice5"><script type="math/tex">A=f(x)x</script></span> <span class="choice  " id="choice6"><script type="math/tex">A=k\Delta k</script></span> <span class="choice correct " id="choice7"><script type="math/tex">A= f( x_k^*)(x_k-x_{k-1})</script></span>
+</div>
+</div> Here are three options for sample points that we consider:
+<h4 class="subsectionHead"><a id="x1-3000"></a>Rectangles defined by left-endpoints</h4>
+<!--l. 362--><p class="noindent">We can set the rectangles up so that the sample point is the left-endpoint.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-9"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*</script><script type="math/tex">x_2^*</script><script type="math/tex">x_3^*</script><script type="math/tex">x_4^*</script><script type="math/tex">x_5^*</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+                                                                  
+
+                                                                  
+In the graph above, the <script type="math/tex">k^{th}</script> rectangle’s left-endpoint determines the height of the
+rectangle.
+<h4 class="subsectionHead"><a id="x1-4000"></a>Rectangles defined by right-endpoints</h4>
+<!--l. 402--><p class="noindent">We can set the rectangles up so that the right-endpoint determines the height.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-10"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*</script><script type="math/tex">x_2^*</script><script type="math/tex">x_3^*</script><script type="math/tex">x_4^*</script><script type="math/tex">x_5^*</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+In the graph above, the <script type="math/tex">k^{th}</script> rectangle’s right-endpoint of the base determines the
+height.
+<h4 class="subsectionHead"><a id="x1-5000"></a>Rectangles defined by midpoints</h4>
+<!--l. 439--><p class="noindent">We can set the rectangles up so that the midpoint of the base determines the
+height.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-11"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*</script><script type="math/tex">x_2^*</script><script type="math/tex">x_3^*</script><script type="math/tex">x_4^*</script><script type="math/tex">x_5^*</script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+In the graph above, the midpoint of the base of the <script type="math/tex">k^{th}</script> rectangle determines the
+height.
+<h3 class="sectionHead"><a id="x1-6000"></a>Riemann sums and approximating area</h3>
+<!--l. 491--><p class="noindent">Once we know how to identify our rectangles, we can compute approximations
+of some areas. If we are approximating area with <script type="math/tex">n</script> rectangles, then
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \text{Area} &\approx \sum_{k=1}^n (\text{height of $k$th rectangle})\times(\text{width of $k$th rectangle}) \\
+  &=\sum_{k=1}^n  f(x_k^*)\Delta x \\
+  &=  f(x_1^*)\Delta x +  f(x_2^*)\Delta x +   f(x_3^*)\Delta x + \dots +   f(x_n^*)\Delta x.
+\end{align*}</script>
+<div class="theorem-like problem-environment definition" id="problem9"><a id="x1-6001r9"></a>A sum of the form: <script type="math/tex; mode=display"> \sum _{k=1}^n f(x_k^*)\Delta x = f(x_1^*)\Delta x + f(x_2^*)\Delta x + \dots + f(x_n^*)\Delta x </script> is called a <strong>Riemann sum</strong>, pronounced “ree-mahn”
+sum.
+</div>
+<!--l. 508--><p class="noindent">A Riemann sum computes an approximation of the area between a curve and
+the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[a,b]</script>. It can be defined in several different ways. In our
+class, it will be defined via left-endpoints, right-endpoints, or midpoints.
+Here we see the explicit connection between a Riemann sum defined by
+left-endpoints and the area between a curve and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[a,b]</script>:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-12"><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta x</script><script type="math/tex">f(x_1^*)\Delta x</script><script type="math/tex">f(x_2^*)\Delta x</script><script type="math/tex">f(x_3^*)\Delta x</script><script type="math/tex">f(x_4^*)\Delta x</script><script type="math/tex">f(x_5^*)\Delta x</script><script type="math/tex">f(x_1^*)</script><script type="math/tex">f(x_5^*)</script><script type="math/tex">f(x_1^*)</script><script type="math/tex">f(x_2^*)</script><script type="math/tex">f(x_3^*)</script><script type="math/tex">f(x_4^*)</script><script type="math/tex">f(x_5^*)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+and here is the associated Riemann sum <script type="math/tex; mode=display"> \sum _{k=1}^5 f(x_k^*)\Delta x = f(x_1^*)\Delta x + f(x_2^*)\Delta x + f(x_3^*)\Delta x + f(x_4^*)\Delta x + f(x_5^*)\Delta x. </script>
+<h4 class="subsectionHead"><a id="x1-7000"></a>Left Riemann sums</h4>
+<div class="theorem-like problem-environment example" id="problem10"><a id="x1-7001r10"></a>Consider <script type="math/tex">f(x) = x^3/8-x+2</script>. Approximate the area between the curve <script type="math/tex">y=f(x)</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[-1,3]</script>
+using a <strong>left-endpoint</strong> Riemann sum with <script type="math/tex">n=5</script> rectangles.
+<div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-7002r11"></a>First note that the width of each rectangle is <script type="math/tex; mode=display"> \Delta x = \frac {3-(-1)}{5} = \answer [given]{4/5}. </script> The grid
+                                                                  
+
+                                                                  
+points define the edges of the rectangle and are seen below:
+<div class="image-environment" role="img" aria-labelledby="image-alt-13"><script type="math/tex">x_0=-1</script><script type="math/tex">x_1=-0.2</script><script type="math/tex">x_2=0.6</script><script type="math/tex">x_3=1.4</script><script type="math/tex">x_4=2.2</script><script type="math/tex">x_5=3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+On the other hand, the sample points identify which endpoints we use:
+<div class="image-environment" role="img" aria-labelledby="image-alt-14"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*=-1</script><script type="math/tex">x_2^*=-0.2</script><script type="math/tex">x_3^*=0.6</script><script type="math/tex">x_4^*=1.4</script><script type="math/tex">x_5^*=2.2</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+It is helpful to collect all of this data into a table: <script type="math/tex; mode=display"> \begin {array}{c|c|c|c} k & x_k & x^*_k & f(x^*_k) \\ \hline 0 & \answer [given]{-1} & \text {NA} & \text {NA} \\ 1 & \answer [given]{-0.2} & \answer [given]{-1} & \answer [given]{2.875} \\ 2 & \answer [given]{0.6} & \answer [given]{-0.2} & \answer [given]{2.199} \\ 3 & \answer [given]{1.4} & \answer [given]{0.6} & \answer [given]{1.427} \\ 4 & \answer [given]{2.2} & \answer [given]{1.4} & \answer [given]{0.943} \\ 5 & \answer [given]{3} & \answer [given]{2.2} & \answer [given]{1.131} \\ \end {array} </script> Now we may write a left Riemann sum <script type="math/tex; mode=display"> f(x_1^*)\Delta x + f(x_2^*)\Delta x + f(x_3^*)\Delta x +f(x_4^*)\Delta x+ f(x_5^*)\Delta x, </script> which
+evaluates to <script type="math/tex; mode=display"> \begin{align*} 
+   = 2.875 \cdot (4/5) &+ 2.199  \cdot(4/5) + 1.427  \cdot(4/5)\\
+  &+ 0.943  \cdot(4/5) + 1.131  \cdot(4/5)
+\end{align*}</script>
+and we find <script type="math/tex; mode=display"> = \answer [given]{6.86}. </script>
+</div>
+</div>
+<h4 class="subsectionHead"><a id="x1-8000"></a>Right Riemann sums</h4>
+<div class="theorem-like problem-environment example" id="problem12"><a id="x1-8001r12"></a>Consider <script type="math/tex">f(x) = x^3/8-x+2</script>. Approximate the area between the graph of <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[-1,3]</script>
+                                                                  
+
+                                                                  
+using a <strong>right-endpoint</strong> Riemann sum with <script type="math/tex">n=5</script> rectangles.
+<div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-8002r13"></a>First note that the width of each rectangle is <script type="math/tex; mode=display"> \Delta x = \frac {3-(-1)}{5} = \answer [given]{4/5}. </script> The grid
+points define the edges of the rectangle and are seen below:
+<div class="image-environment" role="img" aria-labelledby="image-alt-15"><script type="math/tex">x_0=-1</script><script type="math/tex">x_1=-0.2</script><script type="math/tex">x_2=0.6</script><script type="math/tex">x_3=1.4</script><script type="math/tex">x_4=2.2</script><script type="math/tex">x_5=3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+On the other hand, the sample points identify which endpoints we use:
+<div class="image-environment" role="img" aria-labelledby="image-alt-16"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*=-0.2</script><script type="math/tex">x_2^*=0.6</script><script type="math/tex">x_3^*=1.4</script><script type="math/tex">x_4^*=2.2</script><script type="math/tex">x_5^*=3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+It is helpful to collect all of this data into a table: <script type="math/tex; mode=display"> \begin {array}{c|c|c|c} k & x_k & x^*_k & f(x^*_k) \\ \hline 0 & \answer [given]{-1} & \text {NA} & \text {NA} \\ 1 & \answer [given]{-0.2} & \answer [given]{-0.2} & \answer [given]{2.199} \\ 2 & \answer [given]{0.6} & \answer [given]{0.6} & \answer [given]{1.427} \\ 3 & \answer [given]{1.4} & \answer [given]{1.4} & \answer [given]{0.943} \\ 4 & \answer [given]{2.2} & \answer [given]{2.2} & \answer [given]{1.131} \\ 5 & \answer [given]{3} & \answer [given]{3} & \answer [given]{2.375} \\ \end {array} </script> Now we may write a right Riemann sum <script type="math/tex; mode=display"> f(x_1^*)\Delta x + f(x_2^*)\Delta x + f(x_3^*)\Delta x +f(x_4^*)\Delta x+ f(x_5^*)\Delta x, </script>
+which evaluates to <script type="math/tex; mode=display"> \begin{align*} 
+   = 2.199 \cdot (4/5) &+ 1.427  \cdot(4/5) + 0.943  \cdot(4/5)\\
+  &+ 1.131  \cdot(4/5) + 2.375  \cdot(4/5)
+\end{align*}</script>
+and we find <script type="math/tex; mode=display"> = \answer [given]{6.46}. </script>
+</div>
+                                                                  
+
+                                                                  
+</div>
+<h4 class="subsectionHead"><a id="x1-9000"></a>Midpoint Riemann sums</h4>
+<div class="theorem-like problem-environment example" id="problem14"><a id="x1-9001r14"></a>Consider <script type="math/tex">f(x) = x^3/8-x+2</script>. Approximate the area between the graph of <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[-1,3]</script>
+using a <strong>midpoint </strong>Riemann sum with <script type="math/tex">n=5</script> rectangles.
+<div class="theorem-like problem-environment explanation" id="problem15"><a id="x1-9002r15"></a>First note that the width of each rectangle is <script type="math/tex; mode=display"> \Delta x = \frac {3-(-1)}{5} = \answer [given]{4/5}. </script> The grid
+points define the edges of the rectangle and are seen below:
+<div class="image-environment" role="img" aria-labelledby="image-alt-17"><script type="math/tex">x_0=-1</script><script type="math/tex">x_1=-0.2</script><script type="math/tex">x_2=0.6</script><script type="math/tex">x_3=1.4</script><script type="math/tex">x_4=2.2</script><script type="math/tex">x_5=3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+On the other hand, the sample points identify which endpoints we use:
+<div class="image-environment" role="img" aria-labelledby="image-alt-18"><script type="math/tex">\mathsf {1}</script><script type="math/tex">\mathsf {2}</script><script type="math/tex">\mathsf {3}</script><script type="math/tex">\mathsf {4}</script><script type="math/tex">\mathsf {5}</script><script type="math/tex">x_1^*=-0.6</script><script type="math/tex">x_2^*=0.2</script><script type="math/tex">x_3^*=1</script><script type="math/tex">x_4^*=1.8</script><script type="math/tex">x_5^*=2.6</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+It is helpful to collect all of this data into a table: <script type="math/tex; mode=display"> \begin {array}{c|c|c|c} k & x_k & x^*_k & f(x^*_k) \\ \hline 0 & \answer [given]{-1} & \text {NA} & \text {NA} \\ 1 & \answer [given]{-0.2} & \answer [given]{-0.6} & \answer [given]{2.573} \\ 2 & \answer [given]{0.6} & \answer [given]{0.2} & \answer [given]{1.801} \\ 3 & \answer [given]{1.4} & \answer [given]{1} & \answer [given]{1.125} \\ 4 & \answer [given]{2.2} & \answer [given]{1.8} & \answer [given]{0.929} \\ 5 & \answer [given]{3} & \answer [given]{2.6} & \answer [given]{1.597} \\ \end {array} </script> Now we may write a midpoint Riemann sum <script type="math/tex; mode=display"> f(x_1^*)\Delta x + f(x_2^*)\Delta x + f(x_3^*)\Delta x+ f(x_4^*)\Delta x + f(x_5^*)\Delta x, </script>
+which evaluates to <script type="math/tex; mode=display"> \begin{align*} 
+   = 2.573 \cdot (4/5) &+ 1.801\cdot(4/5) + 1.125 \cdot(4/5) \\
+  &+ 0.929 \cdot(4/5) + 1.597\cdot(4/5)
+                                                                  
+
+                                                                  
+\end{align*}</script>
+and we find <script type="math/tex; mode=display"> = \answer [given]{6.42}. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem16"><a id="x1-9003r16"></a>
+<!--l. 887--><p class="noindent">Consider the function <script type="math/tex; mode=display"> f(x) = 16 - x^2 </script> on the interval <script type="math/tex">[0,4]</script>. We will approximate the area between the
+graph of <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[0,4]</script>. See the figure below.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-19">
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script></div>
+<!--l. 916--><p class="noindent">The image depicts a <span class="word-choice" id="word-choice17"><a id="x1-9004r17"></a><span class="choice  " id="choice8">Left</span><span class="choice correct " id="choice9">Right</span><span class="choice  " id="choice10">Midpoint</span>
+</span> Riemann sum with <script type="math/tex">n=\answer [given]{8}</script> subintervals.
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+x_1^* &= \answer[given]{0.5}\\
+f(x_1^*) &= \answer[given]{15.75}\\
+x_6^* &= \answer[given]{3}\\
+f(x_6^*) &= \answer[given]{7}\\
+x_n^* &= \answer[given]{4}\\
+f(x_n^*) &= \answer[given]{0}\\
+\Delta x &= \answer[given]{\frac{1}{2}}\\
+\sum_{k=1}^n f(x_k^*)\Delta x &= \answer[given]{38.5}
+\end{align*}</script>
+This approximation is an <span class="word-choice" id="word-choice18"><a id="x1-9005r18"></a><span class="choice  " id="choice11">overestimate</span><span class="choice correct " id="choice12">underestimate</span>
+</span>.
+</div>
+<div class="theorem-like problem-environment example" id="problem19"><a id="x1-9006r19"></a>
+<!--l. 933--><p class="noindent">Consider the function <script type="math/tex; mode=display"> f(x) = 16 - x^2 </script> on the interval <script type="math/tex">[0,4]</script>. We will approximate the area between the
+graph of <script type="math/tex">f</script> and the <script type="math/tex">x</script>-axis on the interval <script type="math/tex">[0,4]</script> using a <strong>right </strong>Riemann sum with <script type="math/tex">n</script> rectangles.
+                                                                  
+
+                                                                  
+First, determine the width of each rectangle. <script type="math/tex; mode=display"> \Delta x = \answer [given]{\frac {4}{n}}\\ </script> Next, we will determine the
+grid-points.
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+x_0 &= \answer[given]{0}\\
+ x_1 &=0+\Delta x=\frac{4}{n}\\
+  x_2 &=  x_1+\Delta x=\answer[given]{2}\frac{4}{n}\\
+   x_3 &= x_2+\Delta x= \answer[given]{3}\frac{4}{n}\\
+   &\vdots\\
+     x_{k-1}&= x_{k-2}+\Delta x=(\answer[given]{k-1})\frac{4}{n}\\
+ x_k&= x_{k-1}+\Delta x=\answer[given]{k}\frac{4}{n}\\
+ &\vdots\\
+  x_n&=\answer[given]{4}.
+\end{align*}</script>
+For a right Riemann sum, for <script type="math/tex">k=1,\dots ,n</script>, we determine the sample points as
+follows: <script type="math/tex; mode=display"> x_k^* = x_k=\answer [given]{k}\frac {4}{n}. </script> Now, we can approximate the area with a right Riemann sum.
+<script type="math/tex; mode=display"> \begin{align*} 
+  A\approx\sum_{k=1}^n  f(x_k^*)\Delta x  &= \sum_{k=1}^n  f(x_k)\frac{4}{n}  \\
+  &= \sum_{k=1}^n  f\left(k\frac{4}{n}\right)\frac{4}{n}  \\
+  &= \sum_{k=1}^n  \left(16-k^2\frac{16}{n^2}\right)\frac{4}{n}
+\end{align*}</script>
+We can now simplify the last sum by using the distribution,
+commutativity and associativity properties of a sum.
+<script type="math/tex; mode=display"> \begin{align*} 
+  A\approx \sum_{k=1}^n  \left(16-k^2\frac{16}{n^2}\right)\frac{4}{n} &=\frac{4}{n} \sum_{k=1}^n  \left(16-k^2\frac{16}{n^2}\right)\\
+  &=\frac{4}{n}\left( \sum_{k=1}^n 16-\sum_{k=1}^n k^2\frac{16}{n^2}\right)
+\end{align*}</script>
+In the last sum, the constant <script type="math/tex">\frac {16}{n^2}</script> is a common factor, so we can again apply the
+distribution property and obtain the following <script type="math/tex; mode=display"> A\approx \frac {4}{n}\left ( \sum _{k=1}^n 16-\frac {16}{n^2}\sum _{k=1}^n k^2\right ) </script> In the first sum above, the constant <script type="math/tex">16</script>
+is added <script type="math/tex">n</script> times, and we have a formula for the second sum. Recall: <script type="math/tex">\sum _{k=1}^n k^2=\frac {n(n+1)(2n+1)}{6}</script>. Therefore, <script type="math/tex; mode=display"> A\approx \frac {4}{n}\left ( n(16)-\frac {16}{n^2}\cdot \frac {n(n+1)(2n+1)}{6}\right ) </script> We
+can simplify this expression and obtain <script type="math/tex; mode=display"> A\approx 64-\frac {32(n+1)(2n+1)}{3n^2} </script> This approximation is an <span class="word-choice" id="word-choice20"><a id="x1-9007r20"></a><span class="choice  " id="choice13">overestimate</span><span class="choice correct " id="choice14">underestimate</span>
+</span>.
+<div class="theorem-like problem-environment remark" id="problem21"><a id="x1-9008r21"></a>In our previous example we have computed a right Riemann sum for <script type="math/tex">n=8</script>. Check whether
+your result was correct by plugging in <script type="math/tex">n=8</script> in the formula above.
+</div> Now, we can take the limit of Riemann sums as <script type="math/tex">n\to \infty </script> to find the exact value of the
+area of the region under the curve <script type="math/tex">y=f(x)</script> on the interval <script type="math/tex">[0,4]</script>. Namely, <script type="math/tex; mode=display"> A=\lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x, </script> and, therefore
+<script type="math/tex; mode=display"> A=\lim _{n\to \infty }\left (64-\frac {32(n+1)(2n+1)}{3n^2}\right )=\answer [given]{\frac {128}{3}}. </script>
+                                                                  
+
+                                                                  
+</div>
+<h4 class="subsectionHead"><a id="x1-10000"></a>Summary</h4>
+<!--l. 1003--><p class="noindent">Riemann sums approximate the area between curves and the <script type="math/tex">x</script>-axis via rectangles.
+When computing this area via rectangles, there are several things to know:
+</p>
+     <ul class="itemize1">
+     <li class="itemize">What interval are we on? In our discussion above we call this <script type="math/tex">[a,b]</script>.
+     </li>
+     <li class="itemize">How many rectangles will be used? In our discussion above we called this
+     <script type="math/tex">n</script>.
+     </li>
+     <li class="itemize">What is the width of each individual rectangle? In our discussion above
+     we called this <script type="math/tex">\Delta x</script>.
+     </li>
+     <li class="itemize">What points will determine the height of the rectangle? In our discussion
+     above we called these sample points, <script type="math/tex">x_k^*</script>, and they can be left-endpoints,
+     right-endpoints, or midpoints.
+     </li>
+     <li class="itemize">What is the actual height of the rectangle? This will always be <script type="math/tex">f(x_k^*)</script>.
+     </li>
+     <li class="itemize">We approximate the area <script type="math/tex">A</script> with a Riemann sum
+     <!--l. 1020--><p class="noindent"><script type="math/tex">A\approx \sum _{k=1}^n f(x_k^*)\Delta x</script>.
+     </p></li>
+     <li class="itemize">As <script type="math/tex">n</script> gets bigger and bigger, <script type="math/tex">\Delta x</script> gets smaller and smaller, and approximation
+     gets better and better. We compute the exact value of <script type="math/tex">A</script> by taking the limit
+     of Riemann sums
+     <!--l. 1025--><p class="noindent"><script type="math/tex">A= \lim _{n\to \infty }\sum _{k=1}^n f(x_k^*)\Delta x</script>.</p></li></ul>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

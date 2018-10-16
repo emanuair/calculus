@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head> <title>More  than  one
+                                                                  
+
+                                                                  
+rate</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInMoreThanOneRate.tex"/> 
+<meta name="date" content="2018-10-16 14:35:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Solve basic related rates word problems."/> 
+<meta name="learning-outcome" content="Understand the process of solving related rates problems."/> 
+<meta name="learning-outcome" content="Calculate derivatives of expressions with multiple variables implicitly."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="069332d35e1268b39fd654897a6624312bc17122 moreThanOneRate/digInMoreThanOneRate.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">Here we work abstract related rates problems.
+</p></div>   <div class="maketitle"></div>
+Suppose we have two, variables <script type="math/tex">x</script> and <script type="math/tex">y</script>, which are both changing with respect to time.
+A <em>related rates</em> problem is a problem where we know one rate, say <script type="math/tex">\frac {dx}{dt}</script>, at a given instant,
+and wish to find the other (the unknown rate is ”related” to the known
+rate).
+<!--l. 22--><p class="noindent">Here, the chain rule is key: If <script type="math/tex">y</script> is written in terms of <script type="math/tex">x</script>, and we are given <script type="math/tex">\dd [x]{t}</script>, then it is
+easy to find <script type="math/tex">\dd [y]{t}</script> using the chain rule: <script type="math/tex; mode=display"> y=y(x) </script> <script type="math/tex; mode=display"> \dd [y]{t}=\dd [y]{x}\cdot \dd [x]{t}. </script> In many cases, particularly the interesting ones,
+our functions will be related in some other way. Nevertheless, in each case we’ll use
+the chain rule to help us find the desired rate. In this section, we will work several
+abstract examples in order to emphasize the mathematical concepts involved.
+In each of the examples below, we will follow essentially the same plan of
+attack:
+     </p><dl class="description"><dt class="description">
+<strong>Introduce variables, identify the given rate and the unknown rate.</strong> </dt><dd class="description">
+     <!--l. 43--><p class="noindent">Assign a variable to each quantity that changes in time.
+     </p></dd><dt class="description">
+<strong>Draw a picture.</strong> </dt><dd class="description">If possible, draw a schematic picture with all the relevant
+     information.
+     </dd><dt class="description">
+<strong>Find equations.</strong> </dt><dd class="description">Write equations that relate all relevant variables.
+     </dd><dt class="description">
+<strong>Differentiate with respect to t.</strong> </dt><dd class="description">Here    we    will    often    use    implicit
+     differentiation and obtain an equation that relates the given rate and the
+     unknown rate.
+     </dd><dt class="description">
+<strong>Evaluate and solve.</strong> </dt><dd class="description">Evaluate each quantity at the relevant instant and solve
+     for the unknown rate.
+     </dd></dl>
+<h3 class="sectionHead"><a id="x1-1000"></a>Formulas</h3>
+<!--l. 59--><p class="noindent">In order to relate several variables we can use known formulas.
+</p><!--l. 61--><p class="noindent">In our next example we consider an expanding circle and use the formulas for
+perimeter and area of a circle.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">                   
+</div>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-1001r1"></a>Imagine an expanding circle. If we know that the perimeter is expanding at a
+rate of <script type="math/tex">4</script> m/s, at what rate is the area changing when the radius is <script type="math/tex">3</script> meters?
+<div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-1002r2"></a>
+<!--l. 81--><p class="noindent">First, we <strong>introduce the variables</strong> <script type="math/tex">P</script>, <script type="math/tex">r</script>, and <script type="math/tex">A</script>, denoting the perimeter, the radius, and
+the area of the circle, in that order.
+</p><!--l. 83--><p class="noindent">We <strong>identify</strong> the given rate, <script type="math/tex">\frac {dP}{dt}=4</script> m/s, and the unknown rate, <script type="math/tex">\frac {dA}{dt}</script>, at the moment when
+<script type="math/tex">r=3</script>.
+</p><!--l. 85--><p class="noindent">Next, we <strong>draw a picture</strong>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-2">                 <script type="math/tex">r</script><script type="math/tex">\dfrac {dP}{dt}= 4</script> m/s<script type="math/tex">\frac {dA}{dt} = </script> ? , when <script type="math/tex">r=3</script>
+</div>
+Now we have to <strong>find equations</strong> that relate the variables <script type="math/tex">P</script>, <script type="math/tex">r</script>, and <script type="math/tex">A</script>.
+<!--l. 99--><p class="noindent">Naturally, we think of formulas for perimeter and area of a circle <script type="math/tex; mode=display"> P = 2\cdot \pi \cdot \answer [given]{r} \qquad \text {and}\qquad A = \pi \cdot \answer [given]{r^{2}}. </script> We know that the
+perimeter of the circle is expanding. This implies that both the radius and the area of
+the circle are changing in time, too. So, we note that <script type="math/tex">P</script>, <script type="math/tex">r</script>, and <script type="math/tex">A</script> are functions of time <script type="math/tex; mode=display"> P(t) = 2\cdot \pi \cdot r(t) \qquad \text {and}\qquad A(t) = \pi \cdot r(t)^2. </script>
+We <strong>differentiate</strong> both sides of each equation with respect to time, <script type="math/tex">t</script>. Using implicit
+differentiation, we get that
+</p><!--l. 119--><p class="noindent"><script type="math/tex; mode=display"> \underbrace { \dfrac {d}{dt}P(t)}_{given\hspace {0.05in} rate} = 2\cdot \pi \cdot \dfrac {d}{dt}r(t) \qquad \text {and}\qquad \underbrace { \dfrac {d}{dt}A(t)}_{unknown \hspace {0.05in}rate} = 2\cdot \pi \cdot r(t) \cdot \dfrac {d}{dt}r(t). </script>
+</p><!--l. 121--><p class="noindent">These two equations hold on some time interval. In particular, they are both true at
+an instant when <script type="math/tex">r=3</script>.
+</p><!--l. 123--><p class="noindent">We know that at that instant <script type="math/tex"> \dfrac {d}{dt}P(t) = \answer [given]{4}</script> and <script type="math/tex">r = \answer [given]{3}</script>.
+</p><!--l. 126--><p class="noindent">We now <strong>evaluate</strong> the two equations at the instant when <script type="math/tex">r=3</script>.
+</p><!--l. 132--><p class="noindent"><script type="math/tex; mode=display"> 4 = 2\cdot \pi \cdot \dfrac {d}{dt}r(t) \qquad \text {and}\qquad \dfrac {d}{dt}A(t) = 2\cdot \pi \cdot 3 \cdot \dfrac {d}{dt}r(t) </script>
+</p><!--l. 135--><p class="noindent">From  the  first  equation  we  get  that
+</p><script type="math/tex; mode=display"> \begin{align*} 
+     \dd{t}r(t)&=  2/\pi \hspace{0.1in} m/s, \hspace{0.1in} when \hspace{0.1in} r=3.
+    \end{align*}</script>
+<!--l. 140--><p class="noindent">Using this result and the equation on the right, we get, at the instant when
+                                                                  
+
+                                                                  
+<script type="math/tex">r=3</script>,
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+    \dfrac{d}{dt}A(t) &= 2\cdot \pi\cdot 3 \cdot 2/\pi\\
+      &=\answer[given]{12}\hspace{0.1in} m^2/s.
+    \end{align*}</script>
+Hence, the area is expanding at a rate of <script type="math/tex">12</script> <script type="math/tex">m^2/s</script> at the instant when <script type="math/tex">r=3</script> m.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Right triangles</h3>
+<!--l. 162--><p class="noindent">In our next example, we consider an expanding right triangle and use the Pythagorean
+Theorem to relate relevant variables. </p><div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\point </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-2001r3"></a>Imagine an expanding right triangle. If one leg has a fixed length of <script type="math/tex">3</script> m, one leg is
+increasing with a rate of <script type="math/tex">2</script> m/s, and the hypotenuse is expanding to accommodate the
+expanding leg, at what rate is the hypotenuse expanding when both legs are <script type="math/tex">3</script> m long?
+<div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-2002r4"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script>, denoting the fixed length, the length of
+a leg that is increasing, and the length of the hypotenuse, in that order. Then, we
+<strong>identify</strong> the given rate <script type="math/tex">\frac {db}{dt}=2</script> m/s and the unknown rate <script type="math/tex">\frac {dc}{dt}</script>, when <script type="math/tex">b=3</script>. Now, we <strong>draw a
+picture</strong>. <div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">\point </script><script type="math/tex">c</script><script type="math/tex">a = 3 m</script><script type="math/tex">\frac {db}{dt} = 2</script><script type="math/tex">\frac {dc}{dt} = </script> ? , when <script type="math/tex">b=3</script>
+</div>
+<!--l. 213--><p class="noindent">Next, we <strong>find equations</strong> that relate relevant variables. Here we use the Pythagorean
+Theorem. <script type="math/tex; mode=display"> c^2 = a^2 + b^2 </script> Note that <script type="math/tex">a=3</script> is a constant, and <script type="math/tex">c</script> and <script type="math/tex">b</script> are functions of time, <script type="math/tex">t</script>. We, then,
+<strong>differentiate</strong> both sides of the equation with respect to <script type="math/tex">t</script>, using implicit
+differentiation
+</p><!--l. 223--><p class="noindent"><script type="math/tex; mode=display"> 2\cdot c(t)\cdot \dfrac {d}{dt}c(t) = 2\cdot b\cdot \dfrac {d}{dt}b(t). </script> Now, we <strong>evaluate</strong> all the quantities at the instant when <script type="math/tex">b=3</script>, noting that <script type="math/tex">\dfrac {db}{dt} = 2</script> and that <script type="math/tex">b = 3</script>.
+Therefore, <script type="math/tex; mode=display"> 2\cdot c\cdot \dfrac {dc}{dt}= \answer [given]{12},\hspace {0.08in} when\hspace {0.08in}b=3. </script> We need to compute <script type="math/tex">c</script>, the length of the hypotenuse at the instant when <script type="math/tex">b=3</script>.
+Here we use the Pythagorean Theorem </p><script type="math/tex; mode=display"> \begin{align*} 
+   c^2 &= 3^2 + 3^2\\
+                                                                  
+
+                                                                  
+    &=\answer[given]{18},
+    \end{align*}</script>
+So, we see that <script type="math/tex">c = 3\sqrt {2}</script>, when <script type="math/tex">b=3</script>. <br class="newline"/>Then, we <strong>solve</strong> for the rate at the moment when <script type="math/tex">b=3</script>,<br class="newline"/><script type="math/tex; mode=display"> \begin{align*} 
+      6\sqrt{2}\cdot \dfrac{dc}{dt} &= 12 \\
+    \dfrac{dc}{dt} &= \sqrt{2}.
+    \end{align*}</script>
+Therefore, the hypotenuse is growing at a rate of <script type="math/tex">\answer [given]{\sqrt {2}}</script> m/s when both legs are <script type="math/tex">3m</script>
+long.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-3000"></a>Angular rates</h3>
+<!--l. 249--><p class="noindent">We can also investigate problems involving angular rates.
+</p>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-3001r5"></a>Imagine an expanding right triangle. If one leg has a fixed length of <script type="math/tex">3</script> m, one leg is
+increasing with a rate of <script type="math/tex">2</script> m/s, and the hypotenuse is expanding to accommodate the
+expanding leg, at what rate is the angle opposite the fixed leg changing
+when both legs are <script type="math/tex">3</script> m long? <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-3002r6"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">a</script>, <script type="math/tex">b</script>, <script type="math/tex">c</script>, as in
+the previous example, and <script type="math/tex">\theta </script>, denoting the angle opposite the leg with fixed
+length.
+<!--l. 262--><p class="noindent">We <strong>identify</strong> the given rate <script type="math/tex">\frac {db}{dt}=2</script> m/s and the unknown rate <script type="math/tex">\frac {d\theta }{dt}</script>, when <script type="math/tex">b=3</script>.
+</p><!--l. 265--><p class="noindent">Next, we <strong>draw a picture</strong>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-5">  <script type="math/tex">\point </script><script type="math/tex">a = 3 m</script><script type="math/tex">b</script><script type="math/tex">\theta </script><script type="math/tex">\frac {db}{dt} = 2</script><script type="math/tex">\frac {d\theta }{dt} = </script> ? , when <script type="math/tex">b=3</script>
+</div>
+<!--l. 290--><p class="noindent">We now <strong>find equations</strong> that combine relevant variables. Here we note that <script type="math/tex; mode=display"> \tan (\theta ) = \frac {3}{\answer [given]{b}}. </script> Since <script type="math/tex">\theta </script>
+and <script type="math/tex">b</script> are functions of time, we <strong>differentiate</strong> both sides of the equation using implicit
+differentiation
+</p><!--l. 301--><p class="noindent"><script type="math/tex; mode=display"> \sec ^2(\theta )\frac {d\theta }{dt} = \frac {-3}{b^2}\cdot \frac {db}{dt}. </script> Now, we <strong>evaluate</strong> all the quantities at the instant when <script type="math/tex">b=3</script>, keeping in mind that <script type="math/tex">\frac {db}{dt} = 2</script> and
+<script type="math/tex">b = 3</script>, <script type="math/tex; mode=display"> \sec ^2(\theta )\cdot \dfrac {d\theta }{dt}= \frac {-3}{3^2}\cdot 2\\ = \frac {-2}{3} . </script> It is clear that we still need to compute <script type="math/tex"> \sec ^2(\theta )</script> at the moment when <script type="math/tex">b=3</script>. A picture will help.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-6"> <script type="math/tex">\point </script><script type="math/tex">a = 3 m</script><script type="math/tex">b=3 m</script><script type="math/tex">\theta </script><script type="math/tex">\sec ^2{\theta }=\Bigl (\frac {c}{b}\Bigr )^2=\frac {c^2}{b^2}=\frac {3^2+3^2}{3^2}=2</script><script type="math/tex">OR</script><script type="math/tex">\sec ^2{\theta }=1+\tan ^2{\theta }=1+\Bigl (\frac {3}{3}\Bigr )^2=2</script>
+</div>
+<!--l. 333--><p class="noindent">Since we know the lengths of both legs in the right triangle, it is easier to
+compute
+</p><!--l. 335--><p class="noindent"><script type="math/tex">\tan (\theta )</script> than <script type="math/tex">\sec (\theta )</script>. Recall the trig identity: <script type="math/tex"> \sec ^2(\theta )=1+ \tan ^2(\theta )</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+      \sec^2(\theta)&= 1+ \tan^2(\theta)\\
+      &= 1+\Bigl(\frac{3}{3}\Bigr)^2\\
+      &= \answer[given]{2}
+    \end{align*}</script>
+Now we <strong>solve</strong> for the unknown rate, when <script type="math/tex">b=3</script>, <script type="math/tex; mode=display"> \begin{align*} 
+         2\cdot \dfrac{d\theta}{dt} &= \frac{-2}{3}\\
+    \dfrac{d\theta}{dt}&= \frac{-1}{3}
+    \end{align*}</script>
+So, when <script type="math/tex">b=3</script>, the angle is changing at <script type="math/tex">\answer [given]{-1/3}</script> radians per second.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-4000"></a>Similar triangles</h3>
+<!--l. 355--><p class="noindent">Finally, facts about similar triangles are often useful when solving related rates
+problems.
+</p>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-4001r7"></a>The figure shows two right triangles that share an (acute) angle.
+<div class="image-environment" role="img" aria-labelledby="image-alt-7">
+<script type="math/tex">\point </script><script type="math/tex">6</script><script type="math/tex">3</script></div>
+If <script type="math/tex">x</script> is growing from the vertex with a rate of <script type="math/tex">3</script> m/s, what rate is the area of the smaller
+triangle changing when <script type="math/tex">x = 5</script>m? <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-4002r8"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">h</script> and <script type="math/tex">A</script>, denoting the
+height and the area of the smaller triangle, in that order. Next, we <strong>identify</strong> the given
+rate <script type="math/tex">\frac {dx}{dt}=3</script> m/s and the unknown rate <script type="math/tex">\frac {dA}{dt}</script>, when <script type="math/tex">x=5</script>. Despite the fact that a nice picture is given,
+                                                                  
+
+                                                                  
+we should do what we always do and <strong>draw a picture</strong>. Note, we ad information to
+the picture: <div class="image-environment" role="img" aria-labelledby="image-alt-8">
+<script type="math/tex">\point </script><script type="math/tex">\point </script><script type="math/tex">6</script><script type="math/tex">3</script><script type="math/tex">\frac {dx}{dt}=3</script><script type="math/tex">\frac {dA}{dt}=</script> ? , when <script type="math/tex">x=5</script></div><!--l. 416--><p class="noindent">Next, we <strong>find equations</strong> that combine relevant variables. In this case there are two.
+The first is the formula for the area of a triangle: <script type="math/tex; mode=display"> A = \frac {1}{2} \cdot x \cdot h </script> The second uses the fact that the
+larger triangle is similar to the smaller triangle, meaning that the ratios between
+the corresponding sides in both triangles are equal, <script type="math/tex; mode=display"> \frac {h}{x} = \frac {3}{\answer [given]{6}}\qquad \text {so}\qquad h = \frac {1}{\answer [given]{2}}\cdot x </script> At this point we could
+<strong>differentiate</strong> both equations, but we choose a simpler path and express <script type="math/tex">A</script> in terms of <script type="math/tex">x</script>
+</p><script type="math/tex; mode=display"> \begin{align*} 
+    A& = \frac{1}{2} \cdot x\cdot\underbrace{ \frac{1}{2}\cdot x}_{h} .
+     \end{align*}</script>
+<!--l. 435--><p class="noindent">Therefore, <script type="math/tex; mode=display"> A=\frac {1}{4}\cdot x^2. </script> Since <script type="math/tex">A</script> and <script type="math/tex">x</script> are both functions of time, we <strong>differentiate</strong> both sides of
+this equation with respect to <script type="math/tex">t</script>
+</p><!--l. 443--><p class="noindent"><script type="math/tex; mode=display"> \frac {dA}{dt}=\frac {1}{4}\cdot 2\cdot x\cdot \frac {dx}{dt}. </script> In particular, when <script type="math/tex">x=5</script>, <script type="math/tex; mode=display"> \frac {dA}{dt}=\frac {1}{4}\cdot 2\cdot 5\cdot 3=\answer {\frac {15}{2}}. </script>
+</p><!--l. 449--><p class="noindent">Hence, the area is changing at a rate of <script type="math/tex"> \frac {15}{2}</script> <script type="math/tex">\text {m}^2/\text {s}</script> when <script type="math/tex">x=5</script>m.
+</p><!--l. 451--></div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

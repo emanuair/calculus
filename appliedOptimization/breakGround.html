@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head> <title>Volumes  of  aluminum
+                                                                  
+
+                                                                  
+cans</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 14:31:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible."/> 
+<meta name="learning-outcome" content="Set up an optimization problem by identifying the objective function and appropriate constraints."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="4efc2f4dd00609850a6f5bc5865503d548be3159 appliedOptimization/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 15--><p class="noindent">Two young mathematicians discuss optimizing aluminum cans.
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Riley, have you ever noticed aluminum cans?
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">So very recyclable!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! But I’ve also noticed that there are some that are short and
+     fat, and others that are tall and skinny, and yet they can still have the
+     same volume!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">So very observant!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">This got me wondering, if we want to make a can with volume <script type="math/tex">V</script>, what
+     shape of can uses the least aluminum?
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Ah! This sounds like a job for calculus! The volume of a
+     cylindrical can is given by <script type="math/tex; mode=display"> V = \pi \cdot r^2 \cdot h </script> where <script type="math/tex">r</script> is the radius of the cylinder and
+     <script type="math/tex">h</script> is the height of the cylinder. Also the surface area is given by
+     <script type="math/tex; mode=display"> \begin{align*} 
+      A &= \underbrace{\pi \cdot r^2}_{\text{bottom}} + \underbrace{2\cdot\pi \cdot r\cdot h}_{\text{sides}} + \underbrace{\pi \cdot r^2}_{\text{top}}\\
+         &= 2\cdot \pi \cdot r^2 + 2\cdot\pi \cdot r\cdot h.
+       \end{align*}</script>
+     Somehow we want to minimize the surface area, because that’s the amount of
+     aluminum used, but we also want to keep the volume constant.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Whoa, we have way too many letters here.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Yeah, somehow we need only one variable. Yikes. Too many letters.</dd></dl>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> Suppose we wish to construct an aluminum can with volume <script type="math/tex">V</script> that uses the least
+amount of aluminum. In the context above, what do we want to minimize? <div class="select-all" id="problem2"><a id="x1-66r2"></a> <span class="choice correct " id="choice1"><script type="math/tex">A</script></span> <span class="choice  " id="choice2"><script type="math/tex">V</script></span> <span class="choice  " id="choice3"><script type="math/tex">h</script></span> <span class="choice  " id="choice4"><script type="math/tex">r</script></span>
+</div>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-67r3"></a> In the context above, what should be considered a constant? <div class="select-all" id="problem4"><a id="x1-68r4"></a> <span class="choice  " id="choice5"><script type="math/tex">A</script></span> <span class="choice correct " id="choice6"><script type="math/tex">V</script></span> <span class="choice  " id="choice7"><script type="math/tex">h</script></span> <span class="choice  " id="choice8"><script type="math/tex">r</script></span>
+</div>
+</div>
+<!--l. 69--><p class="noindent">As Devyn and Riley noticed, when we work out this type of problem, we need to
+reduce the problem to a single variable.
+</p>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-69r5"></a> Consider <script type="math/tex">r</script> to be the variable, and express <script type="math/tex">A</script> as a function of <script type="math/tex">r</script>. <div role="article" class="problem-environment hint" id="problem6"><a id="x1-70r6"></a> First, let’s eliminate the
+variable <script type="math/tex">h</script>. We know that <script type="math/tex">V</script> is a constant and that <script type="math/tex; mode=display"> V = \pi \cdot r^2 \cdot h </script> so <script type="math/tex">h=V/(\answer [given]{\pi r^2})</script>. Substitute this expression for <script type="math/tex">h</script> in
+the equation <script type="math/tex; mode=display"> A = 2\cdot \pi \cdot r^2 + 2\cdot \pi \cdot r \cdot h. </script>
+</div> <script type="math/tex; mode=display"> A(r) = 2\cdot \pi \cdot r^2 + 2 \cdot V/\answer [given]{ r} </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-71r7"></a> Now consider <script type="math/tex">h</script> to be the variable, and express <script type="math/tex">A</script> as a function of <script type="math/tex">h</script>. <div role="article" class="problem-environment hint" id="problem8"><a id="x1-72r8"></a> First, let’s
+eliminate the variable <script type="math/tex">r</script>. We know that <script type="math/tex">V</script> is a constant and that <script type="math/tex; mode=display"> V = \pi \cdot r^2 \cdot h </script> so <script type="math/tex">r=\sqrt {V/(\answer [given]{\pi h})}</script>. Substitute this
+expression for <script type="math/tex">h</script> in the equation <script type="math/tex; mode=display"> A = 2\cdot \pi \cdot r^2 + 2\cdot \pi \cdot r \cdot h. </script>
+</div> <script type="math/tex; mode=display"> A(h) = 2\cdot V/h+ 2 \cdot \sqrt {V\pi h} </script>
+</div>
+<!--l. 112--><p class="noindent">Notice that we’ve reduced (one way or another) this function of two variables to a
+function of one variable. This process will be a key step in nearly every problem in
+this next section.
+ 
+ 
+
+                                                                  
+
+
+</p></body></html>

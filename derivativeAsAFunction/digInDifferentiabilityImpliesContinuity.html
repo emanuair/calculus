@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en"><head> <title>Differentiability  implies
+                                                                  
+
+                                                                  
+continuity</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInDifferentiabilityImpliesContinuity.tex"/> 
+<meta name="date" content="2018-10-16 01:08:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Explain the relationship between differentiability and continuity."/> 
+<meta name="learning-outcome" content="Determine whether a piecewise function is differentiable."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="5635123e667da79c2b70d8cb4c1617b5ace5b3e1 derivativeAsAFunction/digInDifferentiabilityImpliesContinuity.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We see that if a function is differentiable at a point, then it must be continuous at
+that point.
+</p></div>   <div class="maketitle"></div>
+There are connections between continuity and differentiability.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Differentiability Implies Continuity</span> If <script type="math/tex">f</script> is a differentiable function at <script type="math/tex">x = a</script>, then <script type="math/tex">f</script> is
+continuous at <script type="math/tex">x=a</script>. <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>To explain why this is true, we are going to use the following
+definition of the derivative <script type="math/tex; mode=display"> f'(a) = \lim _{x\to a} \frac {f(x)-f(a)}{x-a}. </script>
+<!--l. 28--><p class="noindent">Assuming that <script type="math/tex">f'(a)</script> exists, we want to show that <script type="math/tex">f(x)</script> is continuous at <script type="math/tex">x=a</script>, hence
+we must show that <script type="math/tex; mode=display"> \lim _{x\to a} f(x) = f(a). </script> Starting with <script type="math/tex; mode=display"> \lim _{x\to a} \left (f(x) - f(a)\right ) </script> we multiply and divide by <script type="math/tex">(x-a)</script> to get
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  &= \lim_{x\to a} \left((x-a)\frac{f(x) - f(a)}{x-a}\right) \\
+  &= \left(\lim_{x\to a} (x-a) \right) \left(\lim_{x\to a}\frac{f(x) - f(a)}{x-a}\right) &\text{Limit Law.} \\
+  &= \answer[given]{0}\cdot f'(a) = \answer[given]{0}.
+\end{align*}</script>
+Since <script type="math/tex; mode=display"> \lim _{x\to a}\left (f(x) - f(a)\right ) = 0 , </script> we apply the Difference Law to the left hand side <script type="math/tex; mode=display"> \lim _{x\to a}f(x) - \lim _{x\to a}f(a) = 0 , </script> and use continuity of a
+constant to obtain that <script type="math/tex; mode=display"> \lim _{x\to a}f(x) - f(a) = 0 . </script> Next, we add <script type="math/tex">f(a)</script> on both sides and get that <script type="math/tex; mode=display"> \lim _{x\to a}f(x) = f(a). </script> Now we see that <script type="math/tex">\lim _{x\to a} f(x) = f(a)</script>,
+and so <script type="math/tex">f</script> is continuous at <script type="math/tex">x=a</script>.
+</div>
+</div>
+<!--l. 64--><p class="noindent">This theorem is often written as its contrapositive:
+     </p><div class="quote">
+     <!--l. 66--><p class="noindent">If <script type="math/tex">f(x)</script> is not continuous at <script type="math/tex">x=a</script>, then <script type="math/tex">f(x)</script> is not differentiable at <script type="math/tex">x=a</script>.</p></div>
+<!--l. 71--><p class="noindent">Thus from the theorem above, we see that all differentiable functions on <script type="math/tex">\RR </script> are
+continuous on <script type="math/tex">\RR </script>. Nevertheless there are continuous functions on <script type="math/tex">\RR </script> that are not
+differentiable on <script type="math/tex">\RR </script>.
+</p>
+<div role="article" class="problem-environment question" id="problem3"><a id="x1-66r3"></a> Which of the following functions are continuous but not differentiable on <script type="math/tex">\RR </script>? <div class="multiple-choice" id="problem4"><span class="choice  " id="choice1"><script type="math/tex">x^2</script></span> <span class="choice  " id="choice2"><script type="math/tex">\lfloor x \rfloor </script></span> <span class="choice correct " id="choice3"><script type="math/tex">|x|</script></span> <span class="choice  " id="choice4"><script type="math/tex">\frac {\sin (x)}{x}</script></span> </div>
+</div>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-67r4"></a>Consider <script type="math/tex; mode=display"> f(x) = \begin {cases} x^2 &\text {if $x<3$,}\\ mx+b &\text {if $x\ge 3$.} \end {cases} </script> What values of <script type="math/tex">m</script> and <script type="math/tex">b</script> make <script type="math/tex">f</script> differentiable at <script type="math/tex">x=3</script>? <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-68r5"></a>To start, we know that <script type="math/tex">f</script> must be
+continuous at <script type="math/tex">x=3</script>, since it has to be differentiable there. We will start by making <script type="math/tex">f</script> continuous
+at <script type="math/tex">x=3</script>. Write with me: <script type="math/tex; mode=display"> \begin{align*} 
+         \lim_{x\to 3^-} f(x) &= \answer[given]{9}\\
+      \lim_{x\to 3^+} f(x) &= \answer[given]{m 3 + b}\\
+      f(3) &= \answer[given]{m 3 + b}
+    \end{align*}</script>
+So for the function to be continuous, we must have <script type="math/tex; mode=display"> m\cdot 3 + b =9. </script> We also must ensure that the
+                                                                  
+
+                                                                  
+function is differentiable at <script type="math/tex">x=3</script>. In other words, we have to ensure that the following
+limit exists
+<!--l. 112--><p class="noindent"><script type="math/tex; mode=display"> \lim _{x\to 3}\frac {f(x)-f(3)}{x-3}.\\ </script> In order to compute this limit, we have to compute the two
+one-sided limits <script type="math/tex; mode=display"> \lim _{x\to 3^{+}}\frac {f(x)-f(3)}{x-3}\\ </script> and <script type="math/tex; mode=display"> \lim _{x\to 3^{-}}\frac {f(x)-f(3)}{x-3},\\ </script> since <script type="math/tex">f(x)</script> changes expression at <script type="math/tex">x=3</script>. Write with me
+</p><script type="math/tex; mode=display"> \begin{align*} 
+        \lim_{x\to 3^{-}}\frac{f(x)-f(3)}{x-3}&= \lim_{x\to 3}\frac{x^2 -9}{x-3}\\
+      &= \lim_{x\to 3^{-}}\frac{\cancel{(x-3)}(x+3)}{\cancel{x-3}}\\
+      &= \lim_{x\to 3^{-}}\left(x+3\right)\\
+      &=6,
+    \end{align*}</script>
+and <script type="math/tex; mode=display"> \begin{align*} 
+             \lim_{x\to 3^{+}}\frac{f(x)-f(3)}{x-3}&= \lim_{x\to 3}\frac{mx+b -(3m+b)}{x-3}\\
+          &= \lim_{x\to 3^{+}}\frac{mx-3m}{x-3}\\
+      &= \lim_{x\to 3^{+}}\frac{m\cancel{(x-3)}}{\cancel{x-3}}\\
+      &= \lim_{x\to 3^{+}}m\\
+      &=m.
+    \end{align*}</script>
+Hence, we must have <script type="math/tex; mode=display"> m=6. </script> Ah! So now the equation that must be satisfied
+<script type="math/tex; mode=display"> \begin{align*} 
+      9 &= m\cdot 3 + b,\\
+    becomes\hspace{0.3in}  9 &= 6\cdot 3 + b.\\
+    \end{align*}</script>
+Therefore, <script type="math/tex">b=\answer [given]{-9}</script>. Thus setting <script type="math/tex">m=\answer [given]{6}</script> and <script type="math/tex">b=\answer [given]{-9}</script> will give us a function that is differentiable (and
+hence continuous) at <script type="math/tex">x=3</script>.
+<!--l. 150--></div>
+</div> Can we tell from its graph whether the function is differentiable or not at a point
+<script type="math/tex">a</script>?
+
+<div role="article" class="problem-environment question" id="problem7"><a id="x1-69r6"></a> What does the graph of a function <script type="math/tex">f</script> possibly look like when <script type="math/tex">f</script> is not differentiable at <script type="math/tex">a</script>?
+<div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-70r7"></a>
+<!--l. 158--><p class="noindent">Each of the figures A-D depicts a function that is not differentiable at <script type="math/tex">a=1</script>.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1"><!--tex4ht:inline--><div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/><col id="TBL-1-2"/></colgroup><tbody><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-1" class="td11">   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">A</script><script type="math/tex">x</script><script type="math/tex">y</script>                            </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-2" class="td11">   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">B</script><script type="math/tex">x</script><script type="math/tex">y</script>                            </td>
+</tr><tr style="vertical-align:baseline;" id="TBL-1-2-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-1" class="td11">   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">C</script><script type="math/tex">x</script><script type="math/tex">y</script>                            </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-2" class="td11">   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">D</script><script type="math/tex">x</script><script type="math/tex">y</script>                            </td>
+</tr></tbody></table></div> </div>
+The function in figure A is not continuous at <script type="math/tex">a</script>, and, therefore, it is not differentiable
+there.
+<!--l. 237--><p class="noindent">In figures <script type="math/tex">B</script>–<script type="math/tex">D</script> the functions are continuous at <script type="math/tex">a</script>, but in each case the limit <script type="math/tex; mode=display"> \lim _{x\to a} \frac {f(x)-f(a)}{x-a} </script> does not
+exist, for a different reason.
+</p><!--l. 243--><p class="noindent">In figure <script type="math/tex">B</script> <script type="math/tex; mode=display"> \lim _{x\to a^{+}} \frac {f(x)-f(a)}{x-a}\ne \lim _{x\to a^{-}} \frac {f(x)-f(a)}{x-a}. </script>
+</p><!--l. 249--><p class="noindent">In figure <script type="math/tex">C</script> <script type="math/tex; mode=display"> \lim _{x\to a} \frac {f(x)-f(a)}{x-a}=\infty . </script> In figure <script type="math/tex">D</script> the two one-sided limits don’t exist and neither one of them is
+infinity.
+</p><!--l. 256--><p class="noindent">So, if at the point <script type="math/tex">a</script> a function either has a ”jump” in the graph, or a corner, or what
+looks like a “vertical tangent line”, or if it rapidly oscillates near <script type="math/tex">a</script>, then the function
+is not differentiable at <script type="math/tex">a</script>.
+</p></div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
