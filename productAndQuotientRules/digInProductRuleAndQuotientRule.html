@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Product  rule  and  quotient
+                                                                  
+
+                                                                  
+rule</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInProductRuleAndQuotientRule.tex"/> 
+<meta name="date" content="2018-10-16 01:07:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Identify products of functions."/> 
+<meta name="learning-outcome" content="Use the product rule to calculate derivatives."/> 
+<meta name="learning-outcome" content="Identify quotients of functions."/> 
+<meta name="learning-outcome" content="Use the quotient rule to calculate derivatives."/> 
+<meta name="learning-outcome" content="Combine derivative rules to take derivatives of more complicated functions."/> 
+<meta name="learning-outcome" content="Explain the signs of the terms in the numerator of the quotient rule."/> 
+<meta name="learning-outcome" content="Multiply tangent lines to justify the product rule."/> 
+<meta name="learning-outcome" content="Use the product and quotient rule to calculate derivatives from a table of values."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="aee817b157049945c8c091a61efd2b2049bde40b productAndQuotientRules/digInProductRuleAndQuotientRule.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 18--><p class="noindent">Here we compute derivatives of products and quotients of functions
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>The product rule</h3>
+<!--l. 26--><p class="noindent">Consider the product of two simple functions, say <script type="math/tex; mode=display"> f(x)\cdot g(x) </script> where <script type="math/tex">f(x)=x^2+1</script> and <script type="math/tex">g(x)=x^3-3x</script>. An obvious guess for
+the derivative of <script type="math/tex">f(x)g(x)</script> is the product of the derivatives: </p><script type="math/tex; mode=display"> \begin{align*} 
+f'(x)g'(x) &= (2x)(3x^2-3)\\
+&= 6x^3-6x.
+\end{align*}</script>
+Is this guess correct? We can check by rewriting <script type="math/tex">f</script> and <script type="math/tex">g</script> and doing the calculation in a
+way that is known to work. Write with me <script type="math/tex; mode=display"> \begin{align*} 
+f(x)g(x) &= (x^2+1)(x^3-3x)\\
+&=x^5-3x^3+x^3-3x\\
+&=x^5-2x^3-3x.
+\end{align*}</script>
+Hence <script type="math/tex; mode=display"> \ddx f(x) g(x) = \ddx (x^5 - 2x^3 - 3x) = 5x^4-6x^2-3, </script> so we see that <script type="math/tex; mode=display"> \ddx f(x) g(x) \ne f'(x)g'(x). </script> So the derivative of <script type="math/tex">f(x)g(x)</script> is <strong>not</strong> as simple as <script type="math/tex">f'(x)g'(x)</script>. Never fear, we have a
+rule for exactly this situation. <div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-1001r1"></a><span class="theorem-like-title">The product rule</span><a class="ximera-label" id="theorem:product-rule"></a> If <script type="math/tex">f</script> and <script type="math/tex">g</script> are differentiable, then
+<script type="math/tex; mode=display"> \ddx f(x)g(x) = f(x)g'(x)+f'(x)g(x). </script>
+</div>
+<!--l. 142--><p class="noindent">Let’s return to the example with which we started. </p><div class="theorem-like problem-environment example" id="problem2"><a id="x1-1002r2"></a>Let <script type="math/tex">f(x)=(x^2+1)</script> and <script type="math/tex">g(x)=(x^3-3x)</script>. Compute:
+<script type="math/tex; mode=display"> \ddx f(x)g(x) </script>
+<div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-1003r3"></a>Write with me <script type="math/tex; mode=display"> \begin{align*} 
+\ddx f(x)g(x) &= f(x)g'(x) + f'(x)g(x)\\
+&=(x^2+1)(\answer[given]{3x^2-3}) + (\answer[given]{2x})(x^3-3x).
+\end{align*}</script>
+We could stop here, but we should show that expanding this out recovers our
+previous result. Write with me <script type="math/tex; mode=display"> \begin{align*} 
+(x^2+1)&(3x^2-3) + 2x(x^3-3x)\\
+  &= 3x^4-3x^2 +3x^2 -3 + 2x^4-6x^2\\
+&=\answer[given]{5x^4-6x^2-3},
+\end{align*}</script>
+which is precisely what we obtained before.
+</div>
+</div>
+<!--l. 166--><p class="noindent">Now that we are pros, let’s try one more example.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-1004r4"></a>Compute: <script type="math/tex; mode=display"> \ddx (xe^x-e^x) </script> <div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-1005r5"></a>Using the sum rule and the product rule, write with me
+<script type="math/tex; mode=display"> \begin{align*} 
+  \ddx \left(xe^x-e^x \right) &=\ddx \left(xe^x\right)-\ddx e^x\\
+  &=(xe^x+e^x)-e^x\\
+  &=\answer[given]{x e^x}.
+                                                                  
+
+                                                                  
+\end{align*}</script>
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>The quotient rule</h3>
+<!--l. 187--><p class="noindent">We’d like to have a formula to compute <script type="math/tex; mode=display"> \ddx \frac {f(x)}{g(x)} </script> This brings us to our next derivative
+rule.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem6"><a id="x1-2001r6"></a><span class="theorem-like-title">The quotient rule</span><a class="ximera-label" id="theorem:quotient-rule"></a> If <script type="math/tex">f</script> and <script type="math/tex">g</script> are differentiable, then <script type="math/tex; mode=display"> \ddx \frac {f(x)}{g(x)} = \frac {f'(x)g(x)-f(x)g'(x)}{g(x)^2}. </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-2002r7"></a>Compute: <script type="math/tex; mode=display"> \ddx \frac {x^2+1}{x^3-3x} </script>
+<div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-2003r8"></a>Write with me <script type="math/tex; mode=display"> \begin{align*} 
+\ddx \frac{x^2+1}{x^3-3x} &= \frac{2x(\answer[given]{x^3-3x})-(\answer[given]{x^2+1})(3x^2-3)}{(\answer[given]{x^3-3x})^2}\\
+&=\frac{-x^4-6x^2+3}{(\answer[given]{x^3-3x})^2}.
+\end{align*}</script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem9"><a id="x1-2004r9"></a>Compute: <script type="math/tex; mode=display"> \ddx \frac {\sin {x}}{x} </script>
+<div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-2005r10"></a>Write with me <script type="math/tex; mode=display"> \begin{align*} 
+\ddx \frac{\sin{x}}{x} &=  \frac{\cos{x}\cdot x-\sin{x}\cdot1}{x^2}
+\end{align*}</script>
+</div>
+</div> It is often possible to calculate derivatives in more than one way, as we have already
+seen. Since every quotient can be written as a product, it is always possible
+to use the product rule to compute the derivative, though it is not always
+simpler.
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-2006r11"></a>Compute: <script type="math/tex; mode=display"> \ddx \frac {625-x^2}{\sqrt {x}} </script> in two ways. First using the quotient rule and then using the product rule.
+<div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-2007r12"></a>First, we’ll compute the derivative using the quotient rule. Write with me
+<script type="math/tex; mode=display"> \ddx \frac {625-x^2}{\sqrt {x}} = \frac {\left (-2x\right )\left (\answer [given]{\sqrt {x}}\right ) - (\answer [given]{625-x^2})\left (\frac {1}{2}x^{-1/2}\right )}{\answer [given]{x}}. </script>
+<!--l. 267--><p class="noindent">Second, we’ll compute the derivative using the product rule:
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\ddx \frac{625-x^2}{\sqrt{x}} &= \ddx \left(625-x^2\right)x^{-1/2}\\
+=\left(625-x^2\right)&\left(\answer[given]{\frac{-x^{-3/2}}{2}}\right)+ (\answer[given]{-2x})\left(x^{-1/2}\right).
+\end{align*}</script>
+With a bit of algebra, both of these simplify to <script type="math/tex; mode=display"> -\frac {3x^2+625}{2x^{3/2}}. </script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem13"><a id="x1-2008r13"></a>Suppose we have two functions, <script type="math/tex">f</script>, and <script type="math/tex">g</script>, and we know that <script type="math/tex">f(4) = 3</script>, <script type="math/tex">f'(4) = 5</script>, <script type="math/tex">g(4) = -2</script>, and <script type="math/tex">g'(4) = 2</script>. What is the
+slope of the tangent line to the curve <script type="math/tex">y=\frac {f(x)}{g(x)}</script> at the point where <script type="math/tex">x = 4</script>? <div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-2009r14"></a>The slope of the tangent
+line to the curve <script type="math/tex">y=\frac {f(x)}{g(x)}</script> at <script type="math/tex">x = 4</script> is given by <script type="math/tex"> \eval {\ddx \frac {f(x)}{g(x)}}_{x=4}</script>.
+<!--l. 284--><p class="noindent">By the QuotientRule, this derivative is given by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\eval{\ddx\frac{f(x)}{g(x)}}_{x=4} &=\eval{\frac{f'(x)g(x)-f(x)g'(x)}{\left(g(x)\right)^2}}_{x=4}\\
+                                                                  
+
+                                                                  
+&=\frac{f'(4)g(4)-f(4)g'(4)}{\left(g(4)\right)^2}\\
+&=\frac{5(-2)-3\cdot2}{\left(-2\right)^2}\\
+&=\frac{-10-6}{4}\\
+&=4
+\end{align*}</script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem15"><a id="x1-2010r15"></a>Suppose we have two functions, <script type="math/tex">f</script>, and <script type="math/tex">g</script>, and we know that <script type="math/tex">f(4) = 3</script>, <script type="math/tex">f'(4) = 5</script>, <script type="math/tex">g(4) = -2</script>, and <script type="math/tex">g'(4) = 2</script>. What is the
+slope of the tangent line to the curve <script type="math/tex">y=\frac {xf(x)}{g(x)}</script> at the point where <script type="math/tex">x = 4</script>? <div class="theorem-like problem-environment explanation" id="problem16"><a id="x1-2011r16"></a>The slope of the tangent
+line to the curve <script type="math/tex">y=\frac {xf(x)}{g(x)}</script> at <script type="math/tex">x = 4</script> is given by <script type="math/tex"> \eval {\ddx \frac {xf(x)}{g(x)}}_{x=4}</script>.
+<!--l. 300--><p class="noindent">By the QuotientRule and the Product Rule, this derivative is given by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+\eval{\ddx\frac{xf(x)}{g(x)}}_{x=4} &=\eval{\frac{(xf'(x)+f(x))g(x)-xf(x)g'(x)}{\left(g(x)\right)^2}}_{x=4}\\
+&=\frac{(4f'(4)+f(4))g(4)-4f(4)g'(4)}{\left(g(4)\right)^2}\\
+&=\frac{(4\cdot5+3)(-2)-4\cdot3\cdot2}{\left(-2\right)^2}\\
+&=\frac{(4\cdot5+3)(-2)-4\cdot3\cdot2}{\left(-2\right)^2}\\
+&=\frac{-35}{2}\\
+\end{align*}</script>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

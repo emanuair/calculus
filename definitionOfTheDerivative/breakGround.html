@@ -1,0 +1,146 @@
+<!DOCTYPE html><html lang="en"><head> <title>Slope  of  a
+                                                                  
+
+                                                                  
+curve</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 01:08:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use limits to find the slope of the tangent line at a point."/> 
+<meta name="learning-outcome" content="Understand the definition of the derivative at a point."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="553387c6e927e785798b13f7ec9a1efecb3c793c definitionOfTheDerivative/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 12--><p class="noindent">Two young mathematicians discuss the novel idea of the “slope of a curve.”
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Riley, do you remember “slope?’
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Most definitely. “Rise over run.”
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">You know it.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">“Change in <script type="math/tex">y</script> over change in <script type="math/tex">x</script>.”
+     </dd><dt class="actor">
+Devny </dt><dd class="speech">That’s right.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Brought to you by the letter “<script type="math/tex">m</script>.”
+     </dd><dt class="actor">
+Devny </dt><dd class="speech">Enough! My important question is: could we define “slope” for a curve
+     that’s not a straight line?
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Well, maybe if we “zoom in” on a curve, it would look like a line, and
+     then we could call it “the slope at that point.”
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Ah! And this “zoom in” idea sounds like a limit!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">This is so awesome. We just made math!</dd></dl>
+<!--l. 35--><p class="noindent">The concept introduced above, of the “slope of a curve at a point,” is in fact one of
+the central concepts of calculus. It will, of course, be completely explained. Let’s
+explore Devyn and Riley’s ideas a little more, first.
+</p><!--l. 42--><p class="noindent">To find the “slope of a curve at a point,” Devyn and Riley spoke of “zooming in” on
+a curve until it looks like a line. When you zoom in on a <em>smooth</em> curve, it will
+eventually look like a line. This line is called the tangent line.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">      <script type="math/tex">a</script><script type="math/tex">x_2</script><script type="math/tex">x_1</script><script type="math/tex">f(a)</script><script type="math/tex">f(x_2)</script><script type="math/tex">f(x_1)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> Which of the following approximate the slope of the “zoomed line”? (You can select
+more than one.) <div class="select-all" id="problem2"><a id="x1-66r2"></a> <span class="choice  " id="choice1"><script type="math/tex">\frac {f(x_1)-f(a)}{x_2-a}</script></span> <span class="choice  " id="choice2"><script type="math/tex">\frac {f(x_1)-f(a)}{a-x_1}</script></span> <span class="choice correct " id="choice3"><script type="math/tex">\frac {f(x_1)-f(a)}{x_1-a}</script></span> <span class="choice  " id="choice4"><script type="math/tex">\frac {f(x_1)-a}{x_1-a}</script></span> <span class="choice correct " id="choice5"><script type="math/tex">\frac {f(a)-f(x_2)}{a-x_2}</script></span> <span class="choice correct " id="choice6"><script type="math/tex">\frac {f(x_2)-f(a)}{x_2-a}</script></span> <span class="choice  " id="choice7"><script type="math/tex">\frac {x_2-a}{f(x_2)-f(a)}</script></span> <span class="choice  " id="choice8"><script type="math/tex">\frac {f(x_1)-f(a)}{f(x_2)-f(a)}</script></span> <span class="choice  " id="choice9"><script type="math/tex">a(f(x_2)-f(x_1))</script></span> <span class="choice correct " id="choice10"><script type="math/tex">\frac {f(a)-f(x_1)}{a-x_1}</script></span>
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-67r3"></a> Let <script type="math/tex">f(x) = 3x-1</script>. Zoom in on the curve around <script type="math/tex">a = -2</script> so that <script type="math/tex">x_1 = -1.9</script>. Use one of the formulations in the
+problem above to approximate the slope of the curve. The slope of the curve at <script type="math/tex">a = -2</script> is
+approximately…<script type="math/tex">\answer {3}</script>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-68r4"></a> Repeat the previous problem for <script type="math/tex">f(x) = x^2 - 1</script>, <script type="math/tex">a = 0</script>, and <script type="math/tex">x_2 = 0.2</script>. Choose a formulation that will give you a
+positive answer for the slope. The (positive) slope of the curve at <script type="math/tex">a = 0</script> is approximately… <script type="math/tex">\answer {0.2}</script>
+</div>
+<div role="article" class="problem-environment problem" id="problem5"><a id="x1-69r5"></a> Zoom in on the curve <script type="math/tex">f(x) = x^2 - 1</script> near <script type="math/tex">x=0</script> again. By looking at the graph, what is your best guess
+for the actual slope of the curve at zero?  <div class="multiple-choice" id="problem6"><span class="choice  " id="choice11">impossible to say</span> <span class="choice correct " id="choice12">zero</span> <span class="choice  " id="choice13">one</span> <span class="choice  " id="choice14">infinity</span> </div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>
