@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="relatedRatesSimple6.tex"/> 
+<meta name="date" content="2018-10-16 01:36:00"/> 
+<meta name="author" content="Steven  Gubkinand  Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Solve basic related rates word problems."/> 
+<meta name="learning-outcome" content="Understand the process of solving related rates problems."/> 
+<meta name="learning-outcome" content="Calculate derivatives of expressions with multiple variables implicitly."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="f4f33b672d3c6aff9aa500880b81203143acaf3e moreThanOneRate/exercises/relatedRatesSimple6.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+<!--l. 13--><p class="noindent">A rectangular prism with a square base is deforming in such a way that it maintains
+a constant volume. At the instant that its height is <script type="math/tex">4</script>, the length of its base is <script type="math/tex">5</script>, and its
+length is <strong>shrinking</strong> at a rate of <script type="math/tex">3 \frac {\textrm {units}}{\textrm {s}}</script>, what is the rate of change in the height of the
+box?
+</p>
+<div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> If we let <script type="math/tex">L</script>, and <script type="math/tex">H</script> be the length of the base and height of the box, respectively, then we
+know that <script type="math/tex; mode=display"> L^2H = 25(4) = 100 </script> since the box has constant volume.
+</div>
+<div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> Differentiating implicitly with respect to time, we obtain <script type="math/tex; mode=display"> 2L(t)L'(t)H(t)+L(t)^2H'(t) = 0 </script> for all <script type="math/tex">t</script>.
+</div>
+<div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> At the time in question, say <script type="math/tex">t = t_0</script>, we have <script type="math/tex; mode=display"> (2)(5)(-3)(4)+(25)\Bigl [\frac {d}{dt}H(t)\Bigr ]_{L=5} = 0. </script>
+</div>
+<div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> Solving for <script type="math/tex">\Bigl [\frac {d}{dt}H(t)\Bigr ]_{L=5}</script>, we get <script type="math/tex">\Bigl [\frac {d}{dt}H(t)\Bigr ]_{L=5} =4.8\frac {\textrm {units}}{\textrm {s}}.</script>
+</div>
+<!--l. 51--><p class="noindent"><script type="math/tex; mode=display"> \Bigl [\frac {d}{dt}H(t)\Bigr ]_{L=5} = \answer {4.8}\frac {\textrm {units}}{\textrm {s}} </script>
+</p>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

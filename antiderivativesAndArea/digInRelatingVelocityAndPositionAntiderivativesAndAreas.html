@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="en"><head> <title>Relating velocity, displacement, antiderivatives and areas</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInRelatingVelocityAndPositionAntiderivativesAndAreas.tex"/> 
+<meta name="date" content="2018-10-16 15:00:00"/> 
+<meta name="author" content="Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Interpert the product of rate and time as area."/> 
+<meta name="learning-outcome" content="Approximate position from velocity."/> 
+<meta name="learning-outcome" content="Recognize Riemann sums."/> 
+<meta name="dependency" content="05a3902a1b033284c053e05730e15405b1898b30 preamble.tex"/><meta name="dependency" content="31809caa6508b4e6d69291b320dc83abba26b607 antiderivativesAndArea/digInRelatingVelocityAndPositionAntiderivativesAndAreas.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 16--><p class="noindent">We give an alternative interpretation of the definite integral and make a connection
+between areas and antiderivatives.
+</p></div>   <div class="maketitle"></div>
+We have a geometric interpretation of the derivative as the slope of a tangent line at
+a point. We have not yet found a geometric interpretation of antiderivatives.
+<h3 class="sectionHead"><a id="x1-1000"></a>More than one perspective</h3>
+<!--l. 28--><p class="noindent">We’ll start with a question:
+</p>
+<div role="article" class="problem-environment question" id="problem1"><a id="x1-1001r1"></a> Suppose you are in slow traffic moving at <script type="math/tex">4</script> mph from <script type="math/tex">2</script>pm to <script type="math/tex">5</script>pm. How far have you
+traveled?  <script type="math/tex; mode=display"> \text {displacement}= \answer {12}\ \text {miles}. </script>
+<div class="feedback" data-feedback="attempt" id="feedback2">Since the (constant) velocity over a time interval is given by <script type="math/tex; mode=display"> \text {velocity}=\frac {\text {displacement}}{\text {elapsed time}}, </script> it follows that the
+displacement of the object over an interval of time is given by <script type="math/tex; mode=display"> \text {displacement}=\text {velocity}\cdot (\text {elapsed time}), </script> The graph
+of the (constant) velocity function <script type="math/tex">v</script> on the interval <script type="math/tex">[2,5]</script> is given in the figure.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">y=v(t)</script><script type="math/tex">velocity</script> <script type="math/tex">v</script><script type="math/tex">elapsed</script><script type="math/tex">time</script> <script type="math/tex">\Delta t</script><script type="math/tex">\text {displacement}=v\cdot \Delta t</script><script type="math/tex">2</script><script type="math/tex">5</script><script type="math/tex">4</script><script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+<!--l. 79--><p class="noindent">So, the displacement of an object is given by the product of the velocity and elapsed
+time, and is represented by the area of the shaded rectangle in the figure. </p></div>
+</div> Since the displacement of an object moving at constant velocity over a time interval
+can be represented by the area of a rectangle, we can approximate displacement of an
+object moving at nonconstant velocity using Riemann sums. We explain this process
+in detail in our next example.
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-1002r2"></a>Assume an object is moving along a straight line with the velocity <script type="math/tex">v(t)=\frac {t^2}{4}+1</script>, for <script type="math/tex">0\le t\le 4</script>, where <script type="math/tex">t</script> is
+measured in seconds, and <script type="math/tex">v</script> in <script type="math/tex">\frac {\unit {ft}}{\unit {s}}</script>.
+<!--l. 120--><p class="noindent">Find the displacement of the object over the time interval <script type="math/tex">[0,4]</script>. </p><div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-1003r3"></a>Since we know how to
+compute the displacement when the velocity is constant, we will start by asuming
+that the velocity is constant and equal to <script type="math/tex">v(0)</script>, the initial velocity, for the entire
+four-second time interval, <script type="math/tex">\Delta t=4</script>.
+<!--l. 127--><p class="noindent">This scenario will give us a very rough approximation of the displacement, but it
+                                                                  
+
+                                                                  
+is a good starting point. <script type="math/tex; mode=display"> \text {displacement}\approx v(0)\cdot \Delta t=1\cdot (4-0)=4 \unit {ft}/\unit {s} </script> This scenario is illustrated in the figure below.
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">y=v(t)</script><script type="math/tex">v(0)\cdot \Delta t</script>123412345<script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+Now it should be clear how to proceed. We will keep approximating the velocity with
+a constant over smaller and smaller intervals of time.
+<!--l. 292--><p class="noindent">In our next step we will assume that the velocity is constant during two-second time
+intervals <script type="math/tex">[0,2]</script> and <script type="math/tex">[2,4]</script>. For each of these two intervals, we assume that the velocity is equal
+to the velocity at the beginning of the time interval.
+</p><!--l. 294--><p class="noindent">In this case, the object would move by <script type="math/tex">v(0)\cdot 2 \unit {ft}</script> during the time interval <script type="math/tex">[0,2]</script>, and during the next
+two seconds, the object would move by <script type="math/tex">v(2)\cdot 2 \unit {ft}</script>.
+</p><!--l. 297--><p class="noindent">If we let <script type="math/tex">\Delta t</script> denote the length of the time interval, we can approximate the displacement
+and write
+</p><!--l. 301--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}\approx v(0)\cdot \Delta t+v(2)\cdot \Delta t=1\cdot 2+2\cdot 2=\answer [given]{6} \unit {ft}/\unit {s} </script> Using sigma notation, we write <script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^2v((k-1)\cdot \Delta t)\Delta t </script> Since we evaluate the velocity at the sample points <script type="math/tex">t_{k}^*=(k-1)\cdot \Delta t</script>,
+<script type="math/tex">k=1,2</script>, we can also write
+</p><!--l. 310--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^2v(t_{k}^*)\Delta t. </script> This is a left Riemann sum for the function <script type="math/tex">v</script> on the interval <script type="math/tex">[0,4]</script>, when <script type="math/tex">n=2</script>. This scenario is
+                                                                  
+
+                                                                  
+illustrated in the figure below. </p><div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">v(0)\Delta t</script><script type="math/tex">v(2)\Delta t</script><script type="math/tex">y=v(t)</script>123412345<script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+Next, we approximate the displacement of the object assuming that the velocity is
+constant during one-second time intervals, and that velocity is equal to the velocity
+at the beginning of each time interval.
+<!--l. 350--><p class="noindent">Under this assumption, during the first second, the object would move by <script type="math/tex">v(0)\cdot 1 \unit {ft}</script>; during
+the second time interval of one second, the object would move by <script type="math/tex">v(1)\cdot 1 \unit {ft}</script>, during the third
+second, the object would move by <script type="math/tex">v(2)\cdot 1 \unit {ft}</script>, and during the last second, it would move by
+<script type="math/tex">v(3)\cdot 1 \unit {ft}</script>.
+</p><!--l. 356--><p class="noindent">During the entire time interval, the object would move by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \text{displacement} &\approx v(0)\cdot\Delta t+v(1)\cdot\Delta t+v(2)\cdot\Delta t+v(3)\cdot\Delta t\\
+  &=\frac{\answer[given]{15}}{4} \unit{ft}/\unit{s}
+\end{align*}</script>
+Using sigma notation and the fact that <script type="math/tex">\Delta t=\frac {4-0}{4}=1</script>, we can write <script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^4v((k-1)\cdot \Delta t)\Delta t </script> Again, we denote the
+sample points by <script type="math/tex">t_{k}^*=(k-1)\cdot \Delta t</script>, <script type="math/tex">k=1,2,3,4</script>, and write <script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^4v(t_{k}^*)\Delta t </script> This is a left Riemann sum for the function <script type="math/tex">v</script>
+on the interval <script type="math/tex">[0,4]</script>, when <script type="math/tex">n=4</script>. This scenario is illustrated in the figure below.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">v(0)\Delta t</script><script type="math/tex">v(1)\Delta t</script><script type="math/tex">v(2)\Delta t</script><script type="math/tex">v(3)\Delta t</script><script type="math/tex">y=v(t)</script>123412345<script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+Now, we approximate the displacement of the object assuming that the velocity is
+constant during half-second time intervals, and that velocity is equal to the velocity
+at the beginning of each time interval.
+<!--l. 414--><p class="noindent">Under this assumption, during the first half-second, the object would move by <script type="math/tex">v(0)\cdot \frac {1}{2} \unit {ft}</script>;
+during the second time interval of half a second, the object would move by <script type="math/tex">v\left (\frac {1}{2}\right )\cdot \frac {1}{2} \unit {ft}</script>, during
+the third half- second interval, the object would move by <script type="math/tex">v(1)\cdot \frac {1}{2} \unit {ft}</script>,etc.
+</p><!--l. 417--><p class="noindent">During the entire time interval, the object would move by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+   \text{displacement} &\approx v(0)\Delta t+v\left(\frac{1}{2}\right)\Delta t+ \cdots +v\left(\frac{7}{2}\right)\Delta t\\
+   &=\answer[given]{8.375} \unit{ft}
+\end{align*}</script>
+Using sigma notation and the fact that <script type="math/tex">\Delta t=\frac {4-0}{8}=\frac {1}{2}</script>, we can write
+<!--l. 426--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^8v((k-1)\cdot \Delta t)\Delta t </script> Using the standard notation for sample points, we can write <script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^8v(t_{k}^*)\Delta t </script> and, This is a left
+Riemann sum for the function <script type="math/tex">v</script> on the interval <script type="math/tex">[0,4]</script>,when <script type="math/tex">n=8</script>. This scenario is illustrated in
+the figure below.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-5">  <script type="math/tex">v(0)\Delta t</script><script type="math/tex">v(0.5)\Delta t</script><script type="math/tex">v(1)\Delta t</script><script type="math/tex">v(1.5)\Delta t</script><script type="math/tex">v(2)\Delta t</script><script type="math/tex">v(2.5)\Delta t</script><script type="math/tex">v(3)\Delta t</script><script type="math/tex">v(3.5)\Delta t</script><script type="math/tex">y=v(t)</script>0.511.522.533.5412345<script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+We pause here to illustrate the <script type="math/tex">k</script>th rectangle when computing a left Riemann sum of the function <script type="math/tex">v</script> on the
+interval <script type="math/tex">[0,4]</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-6"><script type="math/tex">\mathsf {k}</script><script type="math/tex">v(t^*_{k})</script><script type="math/tex">\Delta t</script><script type="math/tex">y=v(t)</script><script type="math/tex">t_{k-1}=t^*_{k}</script><script type="math/tex">t_k</script><script type="math/tex">t_n=4</script><script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+<!--l. 517--><p class="noindent">We continue by approximating the displacement of the object assuming that the
+velocity is constant during <script type="math/tex">4/n</script>-second time intervals, with velocity equal to the velocity
+at the beginning of each time interval.
+</p><!--l. 522--><p class="noindent">Under this assumption, during the first <script type="math/tex">\frac {4}{n}</script>-second interval, the object would move by <script type="math/tex">v(0)\cdot \frac {4}{n} \unit {ft}</script>;
+                                                                  
+
+                                                                  
+during the second such time interval, the object would move by <script type="math/tex">v\left (\frac {4}{n}\right )\cdot \frac {4}{n} \unit {ft}</script>, during the third
+time interval, the object would move by
+</p><!--l. 528--><p class="noindent"><script type="math/tex">v\left (2\frac {4}{n}\right )\cdot \frac {4}{n} \unit {ft}</script>, etc.
+</p><!--l. 530--><p class="noindent">During the entire time interval, the object would move by
+</p><script type="math/tex; mode=display"> \begin{align*} 
+   \text{displacement} \approx v(0)\cdot\Delta
+   t &+v\left(\frac{4}{n}\right)\cdot\Delta
+   t+v\left(2\frac{4}{n}\right)\cdot\Delta
+   t+\cdots\\
+   &+v\left((n-1)\frac{4}{n}\right)\cdot\Delta
+   t+v\left(n\frac{4}{n}\right)\cdot\Delta t
+\end{align*}</script>
+Using sigma notation, notation for the length of each time interval, <script type="math/tex">\Delta t=\frac {4-0}{n}=\frac {4}{n}</script>, and notation for
+sample pints, we write
+<!--l. 545--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^nv((k-1)\cdot \Delta t)\Delta t </script> and <script type="math/tex; mode=display"> \text {displacement}\approx \sum _{k=1}^nv(t_{k}^*)\Delta t. </script> This is a left Riemann sum for the function <script type="math/tex">v</script> on the interval <script type="math/tex">[0,4]</script>.
+</p><!--l. 553--><p class="noindent">What happens when we let <script type="math/tex">n\to \infty </script>?
+</p><!--l. 555--><p class="noindent">Approximations get better and better, because we approximate the velocity with a
+constant over smaller and smaller time intervals. Therefore, it seems reasonable to
+write
+</p><!--l. 561--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}=\lim _{n\to \infty }\sum _{k=1}^nv(t_k^*)\Delta t </script>
+</p><!--l. 563--><p class="noindent">By the definition of the definite integral, we can write
+</p><!--l. 568--><p class="noindent"><script type="math/tex; mode=display"> \text {displacement}=\int _{0}^{4}v(t)\d t. </script>
+</p><!--l. 570--><p class="noindent">This gives us another interpretation of the definite integral. Namely,
+</p><!--l. 574--><p class="noindent">“definite integral of the velocity over <script type="math/tex">[a,b]</script>= the displacement over <script type="math/tex">[a,b]</script>.”
+</p><!--l. 578--><p class="noindent">On the other hand, the displacement of an object during the time interval <script type="math/tex">[0,4]</script> is given
+by <script type="math/tex; mode=display"> \text {displacement}=\text {change of position} </script>
+</p><!--l. 583--><p class="noindent">The change of position can be written in terms of <script type="math/tex">s</script>, the position function of the object
+<script type="math/tex; mode=display"> \text {displacement}=s(4)-s(0). </script> But, we know that <script type="math/tex">s</script> is an antiderivative of <script type="math/tex">v</script>. Therefore, <script type="math/tex; mode=display"> s(t)=\int v(t)\d t=\int \left (\frac {t^2}{4}+1\right )\d t=\frac {t^3}{\answer [given]{12}}+\answer [given]{t}+C </script> If <script type="math/tex">t=0</script>, we get <script type="math/tex; mode=display"> s(0)=C </script> So,
+the position function is given by <script type="math/tex; mode=display"> s(t)=\frac {t^3}{\answer [given]{12}}+\answer [given]{t}+s(0). </script> Now we can compute the displacement
+<script type="math/tex; mode=display"> \text {displacement}=s(4)-s(0)=\frac {\answer [given]{28}}{3}. </script>
+</p></div>
+<!--l. 605--><p class="noindent">Much more important than this computation is the fact that we were able to express
+the displacement as a definite integral and compute the definite integral of <script type="math/tex">v</script> using the
+antiderivative of <script type="math/tex">v</script>.
+</p><!--l. 609--><p class="noindent"><script type="math/tex; mode=display"> \int _{0}^{4}v(t)\d t=s(4)-s(0) </script>
+</p><!--l. 611--><p class="noindent">Is this always so?
+</p><!--l. 613--><p class="noindent">Is it true that for any continuous function <script type="math/tex">f</script> and its antiderivative <script type="math/tex">F</script>, we can
+                                                                  
+
+                                                                  
+compute the definite integral of <script type="math/tex">f</script> on the interval <script type="math/tex">[a,b]</script> by this simple formula
+<script type="math/tex; mode=display"> \int _{a}^{b}f(t)\d t=F(b)-F(a)? </script>
+</p><!--l. 618--></div>  
+ 
+
+                                                                  
+
+
+</body></html>

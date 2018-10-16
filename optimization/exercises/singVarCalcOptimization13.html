@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="singVarCalcOptimization13.tex"/> 
+<meta name="date" content="2018-10-16 01:37:00"/> 
+<meta name="author" content="Bart  Snappand  Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible."/> 
+<meta name="learning-outcome" content="Set up an optimization problem by identifying the objective function and appropriate constraints."/> 
+<meta name="learning-outcome" content="Solve optimization problems by finding the appropriate absolute extremum."/> 
+<meta name="learning-outcome" content="Solve basic word problems involving maxima or minima."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="a586ab45e5d7e8c0366bdfd177a9120eed102c63 optimization/exercises/singVarCalcOptimization13.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+A window is to be built in the shape of a semi-circle over a rectangle:
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">           
+</div>
+If the outer perimeter is <script type="math/tex">10</script> feet, maximize the area. Round your answer to the closest
+tenth of a square foot. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> Let’s label the picture. <div class="image-environment" role="img" aria-labelledby="image-alt-2">                 <script type="math/tex">r</script><script type="math/tex">r</script><script type="math/tex">2r</script><script type="math/tex">x</script>
+</div>
+</div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> The outer perimeter, <script type="math/tex">P</script>, is given by
+<!--l. 44--><p class="noindent"><script type="math/tex">P=2r+2x+r\pi </script>.
+</p><!--l. 46--><p class="noindent">Since we know that <script type="math/tex">P=10</script>, we can express <script type="math/tex">x</script> in terms of <script type="math/tex">r</script>.
+</p><!--l. 48--><p class="noindent"><script type="math/tex">x=5-r\frac {\pi }{2}-r</script>.
+</p><!--l. 50--><p class="noindent">The area, A , consists of the area of the rectangle + the area of the semicircle:
+</p><!--l. 52--><p class="noindent"><script type="math/tex">A= 2\cdot r\cdot x+\frac {\pi }{2} r^2</script>
+</p>
+</div> <div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> We can now express the area <script type="math/tex">A</script> as a function of <script type="math/tex">r</script>:
+<!--l. 58--><p class="noindent"><script type="math/tex">A(r)=2\cdot r\cdot (5-r\frac {\pi }{2}-r)+\frac {\pi }{2} r^2=10r-\frac {\pi }{2}r^2-2r^2</script>.
+</p><!--l. 60--><p class="noindent">The domain of A is the closed interval <script type="math/tex">\left [0,\frac {10}{2+\pi }\right ]</script>.(Remember: P=10!)
+</p></div> <div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> Now we have to find the global maximum of <script type="math/tex">A</script> on its domain. First, we have to find
+the critical points of <script type="math/tex">A</script>. Since
+<!--l. 67--><p class="noindent"><script type="math/tex">A'(r)=10-\pi r-4r</script>,
+</p><!--l. 69--><p class="noindent">it follows that the function <script type="math/tex">A</script> has its only critical point at <script type="math/tex">r=\frac {\answer {10}}{4+\pi }</script> .
+</p></div> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-69r6"></a> Now, we evaluate <script type="math/tex">A</script> at the end points and at the critical point and then compare the
+                                                                  
+
+                                                                  
+values.
+<!--l. 74--><p class="noindent"><script type="math/tex">A(0)=0</script>
+</p><!--l. 76--><p class="noindent"><script type="math/tex">A\left (\frac {10}{2+\pi }\right )=\frac {50\pi }{(2+\pi )^2}</script>
+</p><!--l. 78--><p class="noindent"><script type="math/tex">A\left (\frac {\answer {10}}{4+\pi }\right )=\frac {\answer {50}}{4+\pi }\approx 7</script>
+</p><!--l. 80--><p class="noindent">This seems complicated. It is better to argue that the derivative
+</p><!--l. 82--><p class="noindent"><script type="math/tex">A'(r)>0</script> on <script type="math/tex">\left (0,\frac {10}{4+\pi }\right )</script> and <script type="math/tex">A'(r)<0</script> on <script type="math/tex">\left (\frac {10}{4+\pi },\frac {10}{2+\pi }\right )</script>,
+</p><!--l. 84--><p class="noindent">since <script type="math/tex">A'(r)=10-\pi r-4r=10-r(\pi +4)=-(\pi +4)\left (r-\frac {10}{\pi +4}\right )</script>.
+</p><!--l. 87--><p class="noindent">This implies that the global maximum occurs at the critical point.
+</p>
+</div> <script type="math/tex; mode=display"> A = \answer {7.0} ft^2 </script>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

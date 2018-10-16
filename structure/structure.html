@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head> <title>Structure</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.tug.org/tex4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="structure.tex"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="cb09d17d8c03369bc041316b12ead0da45100a28 structure/structure.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }</script><script type="text/javascript"> 
+</script> 
+</div>
+<div class="abstract">
+<!--l. 7--><p class="noindent">We describe the programmatic structure of the content.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Global directory structure</h3>
+<!--l. 14--><p class="noindent">A collection of Ximera activities should be organized as a single directory that
+contains </p>
+     <ul class="itemize1">
+     <li class="itemize">All the activities, with activities that are directly related located within
+     distinct own directories.
+     </li>
+     <li class="itemize">A preamble file, if it is needed.
+     </li>
+     <li class="itemize">A <code>xourse</code> file at the top level of the directory.</li></ul>
+<!--l. 22--><p class="noindent">As an example, see our directory for <a href="http://github.com/mooculus/calculus">calculus</a>. In this directory, the preamble is
+called <code>preamble.tex</code>, each collection of related activities are in their own
+directories, and these activities are collected via <code>xourse</code> files, for example
+<a href="https://github.com/mooculus/calculus/blob/master/calculus1.tex">calculus1.tex</a>.
+</p>
+<h3 class="sectionHead"><a id="x1-2000"></a>Activity directory structure</h3>
+<!--l. 31--><p class="noindent">Each collection of activities that would form a “section/chapter” of a book should be
+located in their own directories. In some sense the author should imagine these as
+being self-standing. As an example check out <a href="https://github.com/mooculus/calculus/tree/master/anApplicationOfLimits">this collection</a>.
+</p><!--l. 36--><p class="noindent">Ideally the directory containing the activity would contain all the documents needed
+to understand and (re)produce the activity from an authors point of view. Other files
+that might be included could be: PDF’s of papers, Mathematica documents that were
+used to develop examples, etc.
+</p>
+<h3 class="sectionHead"><a id="x1-3000"></a>Document structure</h3>
+<!--l. 44--><p class="noindent">Each activity has the following document structure:
+</p><!--l. 46--><pre>                                                                  
+
+                                                                  
+\documentclass{ximera}
+ <br/>
+ <br/>\input{../preamble.tex}
+ <br/>
+ <br/>\title{A title}
+ <br/>
+ <br/>\begin{document}
+ <br/>\begin{abstract}
+ <br/>Write an abstract.
+ <br/>\end{abstract}
+ <br/>\maketitle
+ <br/>
+ <br/>The body of the document.
+ <br/>
+ <br/>\end{document}
+<!--l. 62--></pre>
+<!--l. 64--><p class="noindent">With the <code>mooculus</code> project, we have additional, optional structure added. See
+<a href="https://github.com/mooculus/calculus/blob/master/anApplicationOfLimits/digInInstantaneousVelocity.tex">digInInstantaneousVelocity.tex</a>
+</p>
+<h3 class="sectionHead"><a id="x1-4000"></a>Xourse</h3>
+<!--l. 70--><p class="noindent">The <code>xourse</code> file “glues” all of the activities together. The basic structure of a <code>xourse</code>
+file is:
+</p><!--l. 73--><pre>\documentclass{xourse}
+ <br/>
+ <br/>\input{../preamble.tex}
+ <br/>
+ <br/>\title{The title of the book}
+ <br/>
+ <br/>\begin{document}
+ <br/>\maketitle
+ <br/>
+ <br/>\activity{myFirstActivity/myFirstActivity.tex}
+ <br/>\activity{aGreatSecondActivity/aGreatSecondActivity.tex}
+ <br/>\activity{anotherActivity/anotherActivity.tex}
+ <br/>
+ <br/>\end{document}
+<!--l. 88--></pre>
+                                                                  
+
+                                                                  
+<!--l. 90--><p class="noindent">Note, while <em>any</em> names can be used for directories and files, we <strong>strongly</strong> encourage
+you to use names that are “obvious” from the point of view of someone who is a user
+of your project. The course file for calculus1 is located at the top-level of
+<a href="http://github.com/mooculus/calculus">calculus</a>.
+</p>
+<h3 class="sectionHead"><a id="x1-5000"></a>Publishing textbooks</h3>
+<!--l. 100--><p class="noindent">To obtain a “fancy” layout of your textbook, we suggest a custom package, for
+example <a href="https://github.com/mooculus/calculus/tree/master/printStyles">here are the style files</a>. Creation of a style file is beyond the scope of this
+document.
+ 
+ 
+
+                                                                  
+
+                                                                  
+                                                                  
+
+
+</p></body></html>

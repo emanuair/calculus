@@ -1,0 +1,152 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  chain
+                                                                  
+
+                                                                  
+rule</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInChainRule.tex"/> 
+<meta name="date" content="2018-10-16 15:07:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Recognize a composition of functions."/> 
+<meta name="learning-outcome" content="Take derivatives of compositions of functions using the chain rule."/> 
+<meta name="learning-outcome" content="Take derivatives that require the use of multiple derivative rules."/> 
+<meta name="learning-outcome" content="Use the chain rule to calculate derivatives from a table of values."/> 
+<meta name="learning-outcome" content="Understand rate of change when quantities are dependent upon each other."/> 
+<meta name="learning-outcome" content="Use order of operations in situations requiring multiple derivative rules."/> 
+<meta name="learning-outcome" content="Apply chain rule to relate quantities expressed with different units."/> 
+<meta name="dependency" content="05a3902a1b033284c053e05730e15405b1898b30 preamble.tex"/><meta name="dependency" content="942997fbf08057262653057ea5e9b2aa386b4720 chainRule/digInChainRule.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 17--><p class="noindent">Here we compute derivatives of compositions of functions
+</p></div>   <div class="maketitle"></div>
+So far we have seen how to compute the derivative of a function built up from other
+functions by addition, subtraction, multiplication and division. There is another
+very important way that we combine functions: composition. The <em>chain rule</em>
+allows us to deal with this case. Consider <script type="math/tex; mode=display"> h(x) = \sin (1+2x). </script> While there are several different
+ways to differentiate this function, if we let <script type="math/tex">f(x) = \sin (x)</script> and <script type="math/tex">g(x) = 1+2x</script>, then we can express <script type="math/tex">h(x) = f(g(x))</script>. The
+question is, can we compute the derivative of a composition of functions
+using the derivatives of the constituents <script type="math/tex">f(x)</script> and <script type="math/tex">g(x)</script>? To do so, we need the <em>chain
+rule</em>.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Chain Rule</span> If <script type="math/tex">f</script> and <script type="math/tex">g</script> are differentiable, then <script type="math/tex; mode=display"> \ddx f(g(x)) = f'(g(x))g'(x). </script>
+</div>
+<!--l. 47--><p class="noindent">It will take a bit of practice to make the use of the chain rule come naturally, it is
+more complicated than the earlier differentiation rules we have seen. Let’s return to
+our motivating example.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a id="x1-65r2"></a>Compute: <script type="math/tex; mode=display"> \ddx \sin (1+2x) </script>
+<div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-66r3"></a>Set <script type="math/tex">f(x) = \sin (x)</script> and <script type="math/tex">g(x) = 1+2x</script>, now <script type="math/tex; mode=display"> f'(x) = \answer [given]{\cos (x)} \qquad \text {and}\qquad g'(x) = \answer [given]{2}. </script> Hence <script type="math/tex; mode=display"> \begin{align*} 
+\ddx \sin(1+2x) &= \ddx f(g(x))\\
+&=f'(g(x))g'(x) \\
+&= \cos(\answer[given]{1+2x})\cdot \answer[given]{2}\\
+&= 2\cos(1+2x).
+\end{align*}</script>
+</div>
+</div>
+<!--l. 73--><p class="noindent">Let’s see a more complicated chain of compositions.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-67r4"></a>Compute: <script type="math/tex; mode=display"> \ddx \sqrt {1+\sqrt {x}} </script>
+<div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-68r5"></a>Set <script type="math/tex">f(x)=\sqrt {x}</script> and <script type="math/tex">g(x)=1+x</script>. Hence, <script type="math/tex; mode=display"> \sqrt {1+\sqrt {x}}=f(g(\answer [given]{f}(x))) </script> and by the chain rule we know <script type="math/tex; mode=display"> \ddx f(g(f(x))) = f'(g(f(x)))g'(f(x))f'(x). </script> Since <script type="math/tex; mode=display"> f'(x) = \answer [given]{\frac {1}{2\sqrt {x}}} \qquad \text {and}\qquad g'(x) = \answer [given]{1} </script> We have that
+<script type="math/tex; mode=display"> \ddx \sqrt {1+\sqrt {x}} = \frac {1}{2\sqrt {1+\sqrt {x}}}\cdot 1\cdot \answer [given]{\frac {1}{2\sqrt {x}}}. </script>
+</div>
+</div>
+<!--l. 102--><p class="noindent">The chain rule allows to differentiate compositions of functions that would otherwise
+be difficult to get our hands on.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-69r6"></a>Compute: <script type="math/tex; mode=display"> \ddx e^{\sin (x^2)} </script>
+<div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-70r7"></a>Set <script type="math/tex">f(x) = \answer [given]{e^x}</script>, <script type="math/tex">g(x) = \answer [given]{\sin (x)}</script>, and <script type="math/tex">h(x) = \answer [given]{x^2}</script> so that <script type="math/tex">f(g(h(x))) = e^{\sin (x^2)}</script>. Now <script type="math/tex; mode=display"> \begin{align*} 
+   \ddx e^{\sin(x^2)} &= \ddx f(g(h(x)))\\
+                                                                  
+
+                                                                  
+  &= f'(g(h(x))) \cdot g'(h(x)) \cdot h'(x)\\
+  &= e^{\answer[given]{\sin(x^2)}} \cdot \cos(\answer[given]{x^2}) \cdot \answer[given]{2x}.
+\end{align*}</script>
+</div>
+</div>
+<!--l. 125--><p class="noindent">Using the chain rule, the power rule, and the product rule it is possible to avoid using
+the quotient rule entirely.
+</p>
+<div class="theorem-like problem-environment example" id="problem8"><a id="x1-71r8"></a>Compute: <script type="math/tex; mode=display"> \ddx \frac {x^3}{x^2+1} </script>
+<div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-72r9"></a>Rewriting this as <script type="math/tex; mode=display"> \ddx x^3(x^2+1)^{-1}, </script> set <script type="math/tex">f(x) = \answer [given]{x^{-1}}</script> and <script type="math/tex">g(x) = \answer [given]{x^2+1}</script> so that <script type="math/tex">f(g(x)) = (x^2 + 1)^{-1}</script>. Now <script type="math/tex; mode=display"> x^3(x^2+1)^{-1} = x^3 f(g(x)), </script> and by the product and chain rules <script type="math/tex; mode=display"> \ddx x^3 f(g(x)) = \answer [given]{3x^2} \cdot f(g(x))+ \answer [given]{x^3} \cdot f'(g(x))g'(x). </script> Since <script type="math/tex">f'(x) = \answer [given]{\frac {-1}{x^2}}</script>
+and <script type="math/tex">g'(x) = \answer [given]{2x}</script>, write <script type="math/tex; mode=display"> \ddx \frac {x^3}{x^2+1} = \frac {3x^2}{x^2+1}-\frac {2x^4}{(x^2+1)^2}. </script>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

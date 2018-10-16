@@ -1,0 +1,315 @@
+<!DOCTYPE html><html lang="en"><head> <title>Linear approximation</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInLinearApproximation.tex"/> 
+<meta name="date" content="2018-10-16 14:36:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define linear approximation as an application of the tangent to a curve."/> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Identify when a linear approximation can be used."/> 
+<meta name="learning-outcome" content="Label a graph with the appropriate quantities used in linear approximation."/> 
+<meta name="learning-outcome" content="Find the error of a linear approximation."/> 
+<meta name="learning-outcome" content="Compute differentials."/> 
+<meta name="learning-outcome" content="Contrast the notation and meaning of $\o:mathop: {}\protect \kern -.1667em\relax dy$ versus $\Delta y$."/> 
+<meta name="learning-outcome" content="Justify the chain rule via the composition of linear approximations."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="1e673a154655484f470fcca1df120dce5b0831f2 linearApproximation/digInLinearApproximation.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 22--><p class="noindent">We use a method called “linear approximation” to estimate the value of a
+(complicated) function at a given point.
+</p></div>   <div class="maketitle"></div>
+Given a function, a <em>linear approximation</em> is a fancy phrase for something you already
+know:
+     <div class="quote">
+     <!--l. 33--><p class="noindent"><strong>The line tangent to the graph of a function at a point is
+     very close to the graph of the function near that point.</strong></p></div>
+<!--l. 35--><p class="noindent">This tangent line is the graph of a linear function, called the <strong>linear approximation</strong>.
+</p><div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Let <script type="math/tex">f</script> be a function that is differentiable on some interval I that contains the point <script type="math/tex">a</script>.
+The graph of a function <script type="math/tex">f</script> and the line tangent to the curve
+<!--l. 39--><p class="noindent"><script type="math/tex">y=f(x)</script> at the point where <script type="math/tex">x=a</script> are given in the figure below. Find the equation of the tangent
+line. </p><div class="image-environment" role="img" aria-labelledby="image-alt-1"> <script type="math/tex">y=f(x)</script><script type="math/tex">y=L(x)</script><script type="math/tex">(a,f(a))</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+First, find the expression for <script type="math/tex">m</script>, the slope of the tangent line to the curve <script type="math/tex">y=f(x)</script> at the point <script type="math/tex">(a,f(a))</script>.
+Select the correct choice. <div class="multiple-choice" id="problem2">
+<span class="choice  " id="choice1"><script type="math/tex">m= f(a)</script></span> <span class="choice correct " id="choice2"><script type="math/tex">m=f'(a)</script></span> <span class="choice  " id="choice3"><script type="math/tex">m= \frac {f(a)-f(0)}{a-0}</script></span> <span class="choice  " id="choice4"><script type="math/tex">m= \frac {f(a+h)-f(a)}{h}</script></span> <span class="choice  " id="choice5"> We don’t have enough information to determine the slope.</span>
+</div>
+Since we know that the point <script type="math/tex">(a,f(a))</script> lies on the tangent line, we can write an equation of
+the tangent line.
+<!--l. 81--><p class="noindent"><script type="math/tex; mode=display"> y= f'(a)(x-a) +f(a). </script> Now, we define a function, <script type="math/tex">L</script>, by <script type="math/tex">L(x)= f'(a)(x-a) +f(a)</script>. This function is linear and its graph is the line
+tangent to the curve <script type="math/tex">y=f(x)</script> at the point where <script type="math/tex">x=a</script>. This function deserves a special
+name.
+</p></div> <div class="theorem-like problem-environment definition" id="problem3"><a id="x1-65r2"></a> If <script type="math/tex">f</script> is a function differentiable at <script type="math/tex">x=a</script>, then a <strong>linear approximation</strong> to the function <script type="math/tex">f</script> at
+<script type="math/tex">x=a</script> is given by <script type="math/tex; mode=display"> L(x) = f'(a)(x-a) +f(a). </script>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 94--><p class="noindent">Note that the graph of <script type="math/tex">L</script> is just the tangent line to the graph of <script type="math/tex">f</script> at <script type="math/tex">x=a</script>.
+</p><!--l. 96--><p class="noindent">A linear approximation of <script type="math/tex">f</script> is a “good” approximation as long as <script type="math/tex">x</script> is “not too far”
+from <script type="math/tex">a</script>. If one “zooms in” on the graph of <script type="math/tex">f</script> sufficiently, then the graphs of <script type="math/tex">f</script> and <script type="math/tex">L</script> are
+nearly indistinguishable.
+</p><!--l. 102--><p class="noindent">As a first example, we will see how linear approximations allow us to approximate
+“difficult” computations.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-66r3"></a>Let <script type="math/tex">f</script> be a function defined by <script type="math/tex; mode=display"> f(x) =\sqrt [3]{x}. </script> Approximate <script type="math/tex">\sqrt [3]{50}</script>, using <script type="math/tex">L</script>, a linear approximation to the
+function <script type="math/tex">f</script> at <script type="math/tex">a=64</script>.
+<div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-67r4"></a>To start, write <script type="math/tex; mode=display"> \ddx f(x) = \ddx x^{1/3} = \frac {1}{3x^{\answer [given]{2/3}}}. </script> <script type="math/tex; mode=display"> \begin{align*} 
+L(x) &= \answer[given]{4}+ \frac{1}{3\cdot 64^{2/3}} (x-64)  \\
+&=4+ \frac{1}{\answer[given]{48}} (x-64) \\
+&= \frac{x}{48} +\frac{8}{3}.
+\end{align*}</script>
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">    204050648090100<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">L</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Now we evaluate <script type="math/tex">L(50) \approx 3.71</script> and compare it to <script type="math/tex">\sqrt [3]{50}\approx 3.68</script>. From this we see that the linear approximation,
+while perhaps inexact, is computationally <strong>easier</strong> than computing the cube
+root.
+</div>
+<!--l. 157--><p class="noindent">What would happen if we chose <script type="math/tex">a=27</script> instead?
+</p><!--l. 159--><p class="noindent">Then we would use <script type="math/tex">L_{27}</script>, the linear approximation to the function <script type="math/tex">f</script> at <script type="math/tex">a=27</script>. In that case, <script type="math/tex">L_{27}=f(27)+f'(27)(x-27)=3+\frac {1}{27}(x-27)</script>. The
+graph of <script type="math/tex">L_{27}</script>, together with the graphs of <script type="math/tex">f</script> and <script type="math/tex">L=L_{64}</script> is given in the figure below.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-3">    274050648090100<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">L_{64}</script><script type="math/tex">L_{27}</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+From the picture we can see that
+<!--l. 192--><p class="noindent"><script type="math/tex">L_{27}(50)>L_{64}(50)>f(50)</script>.
+</p><!--l. 194--><p class="noindent">So, our choice, <script type="math/tex">a=64</script>, was better!
+</p></div> With modern calculators and computing software, it may not appear necessary to
+use linear approximations. In fact they are quite useful. In cases requiring an
+explicit numerical approximation, they allow us to get a quick rough estimate
+which can be used as a “reality check” on a more complex calculation. In
+some complex calculations involving functions, the linear approximation
+makes an otherwise intractable calculation possible, without serious loss of
+accuracy.
+
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-68r5"></a>Use a linear approximation of <script type="math/tex">f(x) =\sin (x)</script> at <script type="math/tex">a=0</script> to approximate <script type="math/tex">\sin (0.3)</script>. <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-69r6"></a>To start, write <script type="math/tex; mode=display"> \ddx f(x) = \answer [given]{\cos (x)}, </script> so our linear
+approximation is <script type="math/tex; mode=display"> \begin{align*} 
+L(x) &= 0+\answer[given]{\cos(0)}\cdot(x-0)\\
+&= x.
+\end{align*}</script>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">-\pi /2</script>0.3<script type="math/tex">\pi /2</script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">L</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Hence, a linear approximation for <script type="math/tex">\sin (x)</script> at <script type="math/tex">a=0</script> is <script type="math/tex">L(x) = x</script>, and so <script type="math/tex">L(0.3) = 0.3</script>. Comparing this to <script type="math/tex">\sin (.3) \approx 0.295</script>, we see that
+the approximation is quite good. For this reason, it is common to approximate <script type="math/tex">\sin (x)</script> with
+its linear approximation <script type="math/tex">L(x) = x</script> when <script type="math/tex">x</script> is near zero.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Differentials</h3>
+<!--l. 259--><p class="noindent">The graph of a function <script type="math/tex">f</script> and the graph of <script type="math/tex">L</script>, the linear approximation of <script type="math/tex">f</script> at <script type="math/tex">a</script>, are
+shown in the figure below. Also, two quantities, <script type="math/tex">\d x</script> and <script type="math/tex">\d f</script>, and a point <script type="math/tex">P</script> are marked
+in the figure. Look carefully at the figure when answering the questions
+below.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-5"> 
+<script type="math/tex">\d x</script><script type="math/tex">\d f</script><script type="math/tex">y=f(x)</script><script type="math/tex">y=L(x)</script><script type="math/tex">(a,f(a))</script><script type="math/tex">(x,f(x))</script><script type="math/tex">P</script><script type="math/tex">x</script><script type="math/tex">y</script></div><div role="article" class="problem-environment question" id="problem8"><a id="x1-1001r7"></a>                                     Select all the correct expressions for the quantity <script type="math/tex">\d x</script>. <div role="article" class="problem-environment hint" id="problem9"><a id="x1-1002r8"></a> You can see that <script type="math/tex">x=a+\d x</script>.
+                                                                  
+
+                                                                  
+</div> <div class="select-all" id="problem10"><a id="x1-1003r9"></a> <span class="choice  " id="choice6"><script type="math/tex">\d x=f(x)-f(a)</script></span> <span class="choice  " id="choice7"><script type="math/tex">\d x=f(x)-L(x)</script></span> <span class="choice correct " id="choice8"><script type="math/tex">\d x=x-a</script></span> <span class="choice  " id="choice9"><script type="math/tex">\d x=L(x)-f(a)</script></span> <span class="choice  " id="choice10"><script type="math/tex">\d x=L(x)-L(a)</script></span>
+</div>
+</div> <div role="article" class="problem-environment question" id="problem11"><a id="x1-1004r10"></a> Select all the correct expressions for the quantity <script type="math/tex">\d f</script>. <div role="article" class="problem-environment hint" id="problem12"><a id="x1-1005r11"></a> You can see that <script type="math/tex">L(x)=f(a)+\d f</script>.
+</div> <div role="article" class="problem-environment hint" id="problem13"><a id="x1-1006r12"></a> Recall: <script type="math/tex">L(a)=f(a)</script>.
+</div> <div class="select-all" id="problem14"><a id="x1-1007r13"></a> <span class="choice  " id="choice11"><script type="math/tex">\d f=f(x)-f(a)</script></span> <span class="choice  " id="choice12"><script type="math/tex">\d f=f(x)-L(x)</script></span> <span class="choice  " id="choice13"><script type="math/tex">\d f=x-a</script></span> <span class="choice correct " id="choice14"><script type="math/tex">\d f=L(x)-f(a)</script></span> <span class="choice correct " id="choice15"><script type="math/tex">\d f=L(x)-L(a)</script></span>
+<!--l. 325--></div>
+
+</div>
+<div role="article" class="problem-environment question" id="problem15"><a id="x1-1008r14"></a> Based on the figure and the expression for <script type="math/tex">L(x)</script>, select all the correct expressions for <script type="math/tex">\d f</script>. <div role="article" class="problem-environment hint" id="problem16"><a id="x1-1009r15"></a>
+Recall: <script type="math/tex">\d f=L(x)-f(a)=f(a)+f'(a)(x-a)-f(a)=f'(a)(x-a)=f'(a)\d x</script>.
+</div> <div class="select-all" id="problem17"><a id="x1-1010r16"></a> <span class="choice correct " id="choice16"> <script type="math/tex">\d f=f'(a)(x-a)</script></span> <span class="choice correct " id="choice17"> <script type="math/tex">\d f=f'(a)\d x</script></span> <span class="choice  " id="choice18"><script type="math/tex">\d f=f'(x-a)</script></span> <span class="choice  " id="choice19"><script type="math/tex">\d f=f'(x)\d x</script></span> <span class="choice  " id="choice20"><script type="math/tex">\d f=f'(x)(x-a)</script></span>
+</div>
+</div>
+<!--l. 343--><p class="noindent">So, we can write <script type="math/tex">\d f=f'(a)\d x</script> and call it a <strong>differential</strong> of <script type="math/tex">f</script> at <script type="math/tex">a</script>. Notice that we can define a
+differential at any point <script type="math/tex">x</script> of the domain of <script type="math/tex">f</script>, provided that <script type="math/tex">f'(x)</script> exists. We will do that in
+our next definition. </p><div class="theorem-like problem-environment definition" id="problem18"><a id="x1-1011r17"></a>Let <script type="math/tex">f</script> be a differentiable function, let <script type="math/tex">x</script> be a point in the domain of <script type="math/tex">f</script>,
+and let <script type="math/tex">\d x</script> be some quantity, called a <strong>differential of <script type="math/tex">x</script></strong>. We define <script type="math/tex">\d f</script>, a differential of <script type="math/tex">f</script>, at a
+point <script type="math/tex">x</script> by <script type="math/tex; mode=display"> \d f=f'(x)\cdot \d x </script>
+<!--l. 352--><p class="noindent">Geometrically, differentials can be interpreted via the diagram below.
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-6"> 
+<script type="math/tex">\d x</script><script type="math/tex">\d f</script><script type="math/tex">f</script><script type="math/tex">L</script><script type="math/tex">(x,f(x))</script><script type="math/tex">(x+\d x,f(x+\d x))</script><script type="math/tex">x</script><script type="math/tex">y</script></div><!--l. 387--><p class="noindent">Note, it is now the case (by definition!) that <script type="math/tex; mode=display"> f'(x)=\frac {\d f}{\d x}. </script>
+</p></div> We should not be surprised, since the slope of the tangent line in the figure is <script type="math/tex">f'(x)</script>, and
+this slope is also given by <script type="math/tex">\frac {\d f }{\d x}</script>.
+<!--l. 396--><p class="noindent">Essentially, differentials allow us to solve the problems presented in the previous
+examples from a slightly different point of view. Recall, when <script type="math/tex">h</script> is near but not
+equal zero, <script type="math/tex; mode=display"> f'(x) \approx \frac {f(x+h)-f(x)}{h}. </script> Hence, <script type="math/tex; mode=display"> f'(x)h \approx f(x+h)-f(x). </script> We can replace a quantity <script type="math/tex">h</script> with a quantity <script type="math/tex">\d x</script> to write
+</p><script type="math/tex; mode=display"> \begin{align*} 
+f'(x)\cdot \d x &\approx f(x+\d x)-f(x)\\
+                                                                  
+
+                                                                  
+\d f &\approx f(x+\d x)-f(x).
+\end{align*}</script>
+Adding <script type="math/tex">f(x)</script> to both sides we see <script type="math/tex; mode=display"> f(x) + \d f\approx f(x+\d x) </script> or, equivalently <script type="math/tex; mode=display"> f(x+\d x)\approx f(x) + \d f . </script> There are contexts where the language of
+differentials is common. Here is the basic strategy: <div class="image-environment" role="img" aria-labelledby="image-alt-7">                      <script type="math/tex">\underbrace {f(x + \d x)} \approx \overbrace {f(x)} + \underbrace {\d f}</script>what you wantwhat you knowwhat you compute
+</div>
+<!--l. 433--><p class="noindent">We will repeat our previous examples using differentials.
+</p>
+<div class="theorem-like problem-environment example" id="problem19"><a id="x1-1012r18"></a>Use differentials to approximate <script type="math/tex">\sqrt [3]{50}</script>. <div class="theorem-like problem-environment explanation" id="problem20"><a id="x1-1013r19"></a>Set <script type="math/tex">f(x) = \sqrt [3]{x}</script>. We want to know <script type="math/tex">\sqrt [3]{50}</script>. Since <script type="math/tex">4^3 = 64</script>, we set <script type="math/tex">x=64</script>. Setting <script type="math/tex">\d x=50-64=-14</script>,
+we have <script type="math/tex; mode=display"> \begin{align*} 
+   \sqrt[3]{50} = f(x + \d x) &\approx  f(x) + \d f\\
+  &\approx \sqrt[3]{64} + \d f.
+  \end{align*}</script>
+Here we see a plot of <script type="math/tex">y=\sqrt [3]{x}</script> with the differentials above marked:
+<div class="image-environment" role="img" aria-labelledby="image-alt-8">  
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\d x</script><script type="math/tex">\d f</script><script type="math/tex">(64,4)</script><script type="math/tex">f</script><script type="math/tex">L</script><script type="math/tex">x</script><script type="math/tex">y</script><a class="ximera-label" id="figure:diff sqrt3x"></a>                                               </div>
+Now we must compute <script type="math/tex">\d f</script>: <script type="math/tex; mode=display"> \begin{align*} 
+      \d f &= f'(x) \cdot \d x\\
+    &= \answer[given]{\frac{1}{3x^{2/3}}} \cdot \d x\\
+    &= \frac{1}{3\cdot64^{2/3}} \cdot(\answer[given]{-14})\\
+    &= \frac{1}{3\cdot64^{2/3}} \cdot(-14)\\
+    &= \frac{-7}{24}
+  \end{align*}</script>
+Hence <script type="math/tex">f(50) \approx f(64) + \frac {-7}{24} \approx 3.71</script>.
+</div>
+                                                                  
+
+                                                                  
+</div>
+<div class="theorem-like problem-environment example" id="problem21"><a id="x1-1014r20"></a>Use differentials to approximate <script type="math/tex">\sin (0.3)</script>. <div class="theorem-like problem-environment explanation" id="problem22"><a id="x1-1015r21"></a>Set <script type="math/tex">y = \sin (x)</script>. We want to know <script type="math/tex">\sin (0.3)</script>. Since <script type="math/tex">\sin (0) = 0</script>, we will set <script type="math/tex">x = 0</script> and <script type="math/tex">\d x=0.3</script>.
+Write with me <script type="math/tex; mode=display"> \begin{align*} 
+   \sin(0.3) = \sin(x + \d x) &\approx  \sin(x) + \d y\\
+  &\approx 0 + \d y.
+  \end{align*}</script>
+Here we see a plot of <script type="math/tex">y=\sin (x)</script> with the differentials above marked: <div class="image-environment" role="img" aria-labelledby="image-alt-9"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">L</script><script type="math/tex">\d x</script><script type="math/tex">\d y</script><script type="math/tex">(0,0)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+<a class="ximera-label" id="figure:diff sin"></a> </div>
+Now we must compute <script type="math/tex">\d y</script>: <script type="math/tex; mode=display"> \begin{align*} 
+   \d y &= \left(\ddx \sin(x)\right) \cdot \d x\\
+  &=\answer[given]{\cos(0)} \cdot \d x\\
+  &= 1 \cdot (\answer[given]{0.3})\\
+  &= 0.3
+\end{align*}</script>
+Hence <script type="math/tex">\sin (0.3) \approx \sin (0) + 0.3 \approx 0.3</script>.
+</div>
+</div>
+<!--l. 541--><p class="noindent">The upshot is that linear approximations and differentials are simply two slightly
+different ways of doing the exact same thing.
+</p>
+<h3 class="sectionHead"><a id="x1-2000"></a>Error approximation</h3>
+<!--l. 546--><p class="noindent">Differentials also help us estimate error in real life settings.
+</p>
+<div class="theorem-like problem-environment example" id="problem23"><a id="x1-2001r22"></a>The cross-section of a <script type="math/tex">250</script> ml glass can be modeled by the function <script type="math/tex">r(x) = \frac {x^4}{3}</script>:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-10">  <script type="math/tex">y=\frac {x^4}{3}</script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+At <script type="math/tex">16.8</script> cm from the base of the glass, there is a mark indicating when the glass is filled
+to <script type="math/tex">250</script> ml. If the glass is filled within <script type="math/tex">\pm 2</script> millimeters of the mark, what are the bounds on
+the volume? As a gesture of friendship, we will tell you that the volume in milliliters,
+as a function of the height of water in centimeters, <script type="math/tex">y</script>, is given by <script type="math/tex; mode=display"> V(y) = \frac {2\pi y^{3/2}}{\sqrt {3}}. </script> Note: If you persist
+in your quest to learn calculus, you will be able to derive the formula above like it’s
+no-big-deal. <div class="theorem-like problem-environment explanation" id="problem24"><a id="x1-2002r23"></a>We want to know what a small change in the height, <script type="math/tex">y</script>, does to the
+volume <script type="math/tex">V</script>. These small changes can be modeled by the differentials <script type="math/tex">\d V</script> and <script type="math/tex">\d y</script>. Since <script type="math/tex; mode=display"> \d V = V'(y) \d y </script> and <script type="math/tex">V'(y) = \answer [given]{\pi \sqrt {3 y}}</script>
+we use the fact that <script type="math/tex">\d y = \pm 0.2</script> with <script type="math/tex">y=\answer [given]{16.8}</script> to see <script type="math/tex; mode=display"> \d V = \answer [given]{\pi \sqrt {3 \cdot 16.8}} \cdot 0.2. </script> Hence the volume will vary by roughly <script type="math/tex">\pm \answer [given,tolerance=.01]{4.46062}</script>
+milliliters.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-3000"></a>New and old friends</h3>
+<!--l. 603--><p class="noindent">You might be wondering, given a plot <script type="math/tex">y=f(x)</script>,
+     </p><div class="quote">
+     <!--l. 605--><p class="noindent">What’s the difference between <script type="math/tex">\Delta x</script> and <script type="math/tex">\d x</script>? What about <script type="math/tex">\Delta y</script> and <script type="math/tex">\d y</script>?</p></div>
+<!--l. 608--><p class="noindent">Regardless, it is now a pressing question. Here’s the deal: <script type="math/tex; mode=display"> \frac {\Delta y}{\Delta x} </script> is the <strong>average rate of
+change</strong> of <script type="math/tex">y=f(x)</script> with respect to <script type="math/tex">x</script>. On the other hand: <script type="math/tex; mode=display"> \frac {\d y}{\d x} </script> is the <strong>instantaneous rate of
+change</strong> of <script type="math/tex">y=f(x)</script> with respect to <script type="math/tex">x</script>. Essentially, <script type="math/tex">\Delta x</script> and <script type="math/tex">\d x</script> are the same type of thing, they
+are (usually small) changes in <script type="math/tex">x</script>. However, <script type="math/tex">\Delta y</script> and <script type="math/tex">\d y</script> are very different things.
+</p>
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\Delta y=f(x+\Delta x)-f(x)</script>; it is the change in <script type="math/tex">y=f(x)</script> associated to <script type="math/tex">\Delta x</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\d y=L(x+\d x)-L(x)</script>, it is the change in <script type="math/tex">y=L(x)</script> associated to <script type="math/tex">\Delta x=\d x</script>. <script type="math/tex; mode=display"> \d y =f'(x)\d x </script> Note: <script type="math/tex"> L(x+\d x)= f(x)+f'(x)\d x</script>.
+                                                                  
+
+                                                                  
+     <!--l. 629--><p class="noindent">So, the change </p><script type="math/tex; mode=display"> \begin{align*} 
+      \d y &= L(x+\d x)-L(x)\\
+         &= f(x)+f'(x)\d x-L(x)\\
+         &= f(x)+f'(x)\d x-f(x)\\
+         &=f'(x)\d x
+       \end{align*}</script>
+     </li></ul>
+<div role="article" class="problem-environment question" id="problem25"><a id="x1-3001r24"></a> Suppose <script type="math/tex">f(x) = x^2</script>. If we are at the point <script type="math/tex">x=1</script> and <script type="math/tex">\Delta x =\d x = 0.1</script>, what is <script type="math/tex">\Delta y</script>? What is <script type="math/tex">\d y</script>? <div role="article" class="problem-environment hint" id="problem26"><a id="x1-3002r25"></a> <script type="math/tex"> \Delta y=f(1+\Delta x)-f(1)=f(1.1)-f(1)</script>
+</div> <div role="article" class="problem-environment hint" id="problem27"><a id="x1-3003r26"></a> <script type="math/tex">\d y=f'(1)\cdot \d x=f'(1)\cdot 0.1</script>
+</div> <script type="math/tex; mode=display"> \Delta y = \answer {0.21}\qquad \d y = \answer {0.2} </script>
+</div> Differentials can be confusing at first. However, when you master them, you will
+have a powerful tool at your disposal.
+ 
+ 
+
+                                                                  
+
+
+</body></html>

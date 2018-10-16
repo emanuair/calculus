@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="graphingComputations1.tex"/> 
+<meta name="date" content="2018-10-16 01:13:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the intervals where a function is increasing or decreasing."/> 
+<meta name="learning-outcome" content="Find the intervals where a function is concave up or down."/> 
+<meta name="learning-outcome" content="Find any asymptotic behaviors a function may have: vertical, horizontal, or slant."/> 
+<meta name="learning-outcome" content="Determine how the graph of a function looks without using a calculator."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="378b1cd266a18f54ed078107dbda1c4544b502af computationsForGraphingFunctions/exercises/graphingComputations1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Consider the <script type="math/tex">f</script> given by <script type="math/tex; mode=display"> f(x) = \frac {x}{\sqrt {x^2-9}}. </script>
+<!--l. 20--><p class="noindent">The domain of <script type="math/tex">f</script> (written from left to right) is <script type="math/tex">\left (\answer {-\infty },\answer {-3}\right )\cup \left (\answer {3},\answer {\infty }\right )</script>.
+</p><!--l. 22--><p class="noindent"><script type="math/tex">f</script> has horizontal asymptotes (from bottom to top) at <script type="math/tex">y=\answer {-1}</script> and <script type="math/tex">y=\answer {1}</script>.
+</p><!--l. 24--><p class="noindent"><script type="math/tex">f</script> has vertical asymptotes (from left to right) at <script type="math/tex">x=\answer {-3}</script> and <script type="math/tex">x=\answer {3}</script>.
+</p><!--l. 26--><p class="noindent">The derivative of <script type="math/tex">f(x)</script> is <script type="math/tex; mode=display"> f'(x) =\frac { \answer {-9}}{(x^2-9)^{3/2}}. </script>
+</p><!--l. 31--><p class="noindent">The second derivative of <script type="math/tex">f(x)</script> is <script type="math/tex; mode=display"> f''(x) =\frac {\answer {27x}}{(x^2-9)^{5/2}}. </script>
+</p><!--l. 36--><p class="noindent">On the interval <script type="math/tex">(-\infty ,-3)</script> <script type="math/tex">f</script> is <span class="word-choice" id="word-choice2"><a id="x1-65r2"></a><span class="choice  " id="choice1">increasing</span><span class="choice correct " id="choice2">decreasing</span><span class="choice  " id="choice3">not defined</span>
+</span> and <span class="word-choice" id="word-choice3"><a id="x1-66r3"></a><span class="choice  " id="choice4">concave up</span><span class="choice correct " id="choice5">concave down</span><span class="choice  " id="choice6">not defined</span>
+</span>.
+</p><!--l. 38--><p class="noindent">On the interval <script type="math/tex">(-3,3)</script> <script type="math/tex">f</script> is <span class="word-choice" id="word-choice4"><a id="x1-67r4"></a><span class="choice  " id="choice7">increasing</span><span class="choice  " id="choice8">decreasing</span><span class="choice correct " id="choice9">not defined</span>
+</span> and <span class="word-choice" id="word-choice5"><a id="x1-68r5"></a><span class="choice  " id="choice10">concave up</span><span class="choice  " id="choice11">concave down</span><span class="choice correct " id="choice12">not defined</span>
+</span>.
+</p><!--l. 40--><p class="noindent">On the interval <script type="math/tex">(3,\infty )</script> <script type="math/tex">f</script> is <span class="word-choice" id="word-choice6"><a id="x1-69r6"></a><span class="choice  " id="choice13">increasing</span><span class="choice correct " id="choice14">decreasing</span><span class="choice  " id="choice15">not defined</span>
+</span> and <span class="word-choice" id="word-choice7"><a id="x1-70r7"></a><span class="choice correct " id="choice16">concave up</span><span class="choice  " id="choice17">concave down</span><span class="choice  " id="choice18">not defined</span>
+</span>.
+</p><!--l. 42--><p class="noindent">Consider the graphs below.
+</p>
+<div class="center">
+<!--l. 44--><p class="noindent">
+</p><!--l. 45--><p class="noindent"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">A</script><script type="math/tex">x</script><script type="math/tex">y</script>                    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">B</script><script type="math/tex">x</script><script type="math/tex">y</script>                    <br/>
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">C</script><script type="math/tex">x</script><script type="math/tex">y</script>                    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">D</script><script type="math/tex">x</script><script type="math/tex">y</script>                    </p></div>
+                                                                  
+
+                                                                  
+<!--l. 128--><p class="noindent">Which graph correctly depicts <script type="math/tex">f</script>? </p><div class="multiple-choice" id="problem8"><span class="choice correct " id="choice19"><script type="math/tex">A</script></span> <span class="choice  " id="choice20"><script type="math/tex">B</script></span> <span class="choice  " id="choice21"><script type="math/tex">C</script></span> <span class="choice  " id="choice22"><script type="math/tex">D</script></span> </div>
+<!--l. 136--><p class="noindent"><script type="math/tex">f</script> <span class="word-choice" id="word-choice9"><a id="x1-71r8"></a><span class="choice correct " id="choice23">is</span><span class="choice  " id="choice24">is not</span>
+</span> one-to-one.
+</p><!--l. 138--><p class="noindent">The inverse of <script type="math/tex">f(x)</script> is <script type="math/tex; mode=display"> f^{-1}(x) = \answer {\frac {3x}{\sqrt {x^2-1}}}. </script>
+</p><!--l. 143--><p class="noindent">The domain of <script type="math/tex">f^{-1}(x)</script> (from left to right) is <script type="math/tex">\left (\answer {-\infty },\answer {-1}\right )\cup \left (\answer {1},\answer {\infty }\right )</script>.
+</p>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
