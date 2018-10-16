@@ -1,0 +1,140 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="maxMinFromGraph1.tex"/> 
+<meta name="date" content="2018-10-16 01:34:00"/> 
+<meta name="author" content="Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Critical points, local extrema, inflection points from a graph."/> 
+<meta name="learning-outcome" content="Locate critical points from the graph."/> 
+<meta name="learning-outcome" content="Determine local extrema and inflection points from the graph."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="f42dcda6026cbc263dda5b82c9c3815a5ef59a6d maximumsAndMinimums/exercises/maxMinFromGraph1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Let <script type="math/tex">f</script> be a function defined on <script type="math/tex">(-8,8)</script>. The graph of <script type="math/tex">f</script> is given in the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a critical point.
+<div class="select-all" id="problem2"><a id="x1-65r2"></a> <span class="choice  " id="choice1"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice2"><script type="math/tex">x=-7</script></span> <span class="choice correct " id="choice3"><script type="math/tex">x=-4</script></span> <span class="choice correct " id="choice4"><script type="math/tex">x=-2</script></span> <span class="choice correct " id="choice5"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice6"><script type="math/tex">x=1</script></span> <span class="choice correct " id="choice7"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice8"><script type="math/tex">x=4</script></span> <span class="choice correct " id="choice9"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice10"><script type="math/tex">x=8</script></span>
+</div>
+<div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 96--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a critical point such that <script type="math/tex">f'(x)=0</script>. </p><div class="select-all" id="problem4"><a id="x1-67r4"></a> <span class="choice  " id="choice11"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice12"><script type="math/tex">x=-7</script></span> <span class="choice  " id="choice13"><script type="math/tex">x=-4</script></span> <span class="choice  " id="choice14"><script type="math/tex">x=-2</script></span> <span class="choice correct " id="choice15"><script type="math/tex">x=0</script></span>
+<span class="choice  " id="choice16"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice17"><script type="math/tex">x=2</script></span> <span class="choice  " id="choice18"><script type="math/tex">x=4</script></span> <span class="choice correct " id="choice19"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice20"><script type="math/tex">x=8</script></span>
+</div>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem5"><a id="x1-68r5"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 145--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a critical point such that <script type="math/tex">f'(x)</script> is undefined. </p><div class="select-all" id="problem6"><a id="x1-69r6"></a> <span class="choice  " id="choice21"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice22"><script type="math/tex">x=-7</script></span> <span class="choice correct " id="choice23"><script type="math/tex">x=-4</script></span> <span class="choice correct " id="choice24"><script type="math/tex">x=-2</script></span> <span class="choice  " id="choice25"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice26"><script type="math/tex">x=1</script></span> <span class="choice correct " id="choice27"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice28"><script type="math/tex">x=4</script></span> <span class="choice  " id="choice29"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice30"><script type="math/tex">x=8</script></span>
+</div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem7"><a id="x1-70r7"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 195--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a critical point, but no local extremum. </p><div class="select-all" id="problem8"><a id="x1-71r8"></a> <span class="choice  " id="choice31"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice32"><script type="math/tex">x=-7</script></span> <span class="choice  " id="choice33"><script type="math/tex">x=-4</script></span> <span class="choice  " id="choice34"><script type="math/tex">x=-2</script></span> <span class="choice correct " id="choice35"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice36"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice37"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice38"><script type="math/tex">x=4</script></span> <span class="choice  " id="choice39"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice40"><script type="math/tex">x=8</script></span>
+</div>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem9"><a id="x1-72r9"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-5">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 246--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a local minimum. </p><div class="select-all" id="problem10"><a id="x1-73r10"></a> <span class="choice  " id="choice41"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice42"><script type="math/tex">x=-7</script></span> <span class="choice  " id="choice43"><script type="math/tex">x=-4</script></span> <span class="choice  " id="choice44"><script type="math/tex">x=-2</script></span> <span class="choice  " id="choice45"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice46"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice47"><script type="math/tex">x=2</script></span> <span class="choice  " id="choice48"><script type="math/tex">x=4</script></span> <span class="choice correct
+" id="choice49"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice50"><script type="math/tex">x=8</script></span>
+</div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem11"><a id="x1-74r11"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-6">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 294--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has a local maximum. </p><div class="select-all" id="problem12"><a id="x1-75r12"></a> <span class="choice  " id="choice51"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice52"><script type="math/tex">x=-7</script></span> <span class="choice correct " id="choice53"><script type="math/tex">x=-4</script></span> <span class="choice correct " id="choice54"><script type="math/tex">x=-2</script></span> <span class="choice  " id="choice55"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice56"><script type="math/tex">x=1</script></span> <span class="choice correct " id="choice57"><script type="math/tex">x=2</script></span> <span class="choice  " id="choice58"><script type="math/tex">x=4</script></span>
+<span class="choice  " id="choice59"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice60"><script type="math/tex">x=8</script></span>
+</div>
+                                                                  
+
+                                                                  
+</div> <div role="article" class="problem-environment exercise" id="problem13"><a id="x1-76r13"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-7">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 341--><p class="noindent">Select all values of <script type="math/tex">x</script> where the function <script type="math/tex">f</script> has an inflection point. </p><div class="select-all" id="problem14"><a id="x1-77r14"></a> <span class="choice  " id="choice61"><script type="math/tex">x=-8</script></span> <span class="choice  " id="choice62"><script type="math/tex">x=-7</script></span> <span class="choice  " id="choice63"><script type="math/tex">x=-4</script></span> <span class="choice  " id="choice64"><script type="math/tex">x=-2</script></span> <span class="choice correct " id="choice65"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice66"><script type="math/tex">x=1</script></span> <span class="choice correct " id="choice67"><script type="math/tex">x=2</script></span> <span class="choice correct " id="choice68"><script type="math/tex">x=4</script></span> <span class="choice  " id="choice69"><script type="math/tex">x=6</script></span> <span class="choice  " id="choice70"><script type="math/tex">x=8</script></span>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

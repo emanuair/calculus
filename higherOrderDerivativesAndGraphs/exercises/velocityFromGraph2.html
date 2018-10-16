@@ -1,0 +1,229 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="velocityFromGraph2.tex"/> 
+<meta name="date" content="2018-10-16 01:26:00"/> 
+<meta name="author" content="Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use the first derivative to determine whether a function is increasing or decreasing."/> 
+<meta name="learning-outcome" content="Use thesecond derivative to determine whether the derivative of a function is increasing or decreasing."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="cf8eb8961488f96996a57d5b5b1aa76a8c1cd70a higherOrderDerivativesAndGraphs/exercises/velocityFromGraph2.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+<!--l. 13--><p class="noindent">An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. </p><div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 61--><p class="noindent">The average velocity of the object on the interval <script type="math/tex">\left [0,6\right ]</script> is <script type="math/tex; mode=display"> v_{\text {av}} = \answer {\frac {2}{3}}\text {m/s}. </script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 116--><p class="noindent">Choose the best description of the shape of the graph of <script type="math/tex">s</script> on the time interval <script type="math/tex">\left (0,1\right )</script>. </p><div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">Increasing and concave up</span> <span class="choice correct " id="choice2">Increasing and concave down</span> <span class="choice  " id="choice3">Decreasing and concave
+up</span> <span class="choice  " id="choice4">Decreasing and concave down</span> </div>
+                                                                  
+
+                                                                  
+</div>
+<div role="article" class="problem-environment exercise" id="problem4"><a id="x1-66r3"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 174--><p class="noindent">Make a choice that completes the statement about the velocity.<br class="newline"/>
+</p><!--l. 176--><p class="noindent">On the interval <script type="math/tex">(0,1)</script> the velocity is </p><div class="multiple-choice" id="problem5"><span class="choice  " id="choice5">increasing, because the function <script type="math/tex">s</script> is increasing on
+that interval</span> <span class="choice  " id="choice6">decreasing, because the function <script type="math/tex">s</script> is decreasing on that interval</span> <span class="choice  " id="choice7">increasing, because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice8">decreasing,
+because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice9">increasing, because
+the graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice correct " id="choice10">decreasing, because the
+graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice  " id="choice11">zero</span> <span class="choice  " id="choice12">positive and constant</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem6"><a id="x1-67r4"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+                                                                  
+
+                                                                  
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 238--><p class="noindent">Make a choice that completes the statement about the velocity.<br class="newline"/>
+</p><!--l. 240--><p class="noindent">On the interval <script type="math/tex">(1,3)</script> the velocity is </p><div class="multiple-choice" id="problem7"><span class="choice  " id="choice13">increasing, because the function <script type="math/tex">s</script> is increasing on
+that interval</span> <span class="choice  " id="choice14">decreasing, because the function <script type="math/tex">s</script> is decreasing on that interval</span> <span class="choice  " id="choice15">increasing, because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice16">decreasing,
+because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice17">increasing, because
+the graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice  " id="choice18">decreasing, because the
+graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice correct " id="choice19">zero</span> <span class="choice  " id="choice20">positive and constant</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem8"><a id="x1-68r5"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 302--><p class="noindent">Make a choice that completes the statement about the velocity.<br class="newline"/>
+</p><!--l. 304--><p class="noindent">On the interval <script type="math/tex">(3,4)</script> the velocity is </p><div class="multiple-choice" id="problem9"><span class="choice  " id="choice21">increasing, because the function <script type="math/tex">s</script> is increasing on
+that interval</span> <span class="choice  " id="choice22">decreasing, because the function <script type="math/tex">s</script> is decreasing on that interval</span> <span class="choice correct " id="choice23">increasing, because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice24">decreasing,
+because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice25">increasing, because
+the graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice  " id="choice26">decreasing, because the
+graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice  " id="choice27">zero</span> <span class="choice  " id="choice28">positive and constant</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem10"><a id="x1-69r6"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-6"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 366--><p class="noindent">Make a choice that completes the statement about the velocity.<br class="newline"/>
+</p><!--l. 368--><p class="noindent">On the interval <script type="math/tex">(4,6)</script> the velocity is </p><div class="multiple-choice" id="problem11"><span class="choice  " id="choice29">increasing, because the function <script type="math/tex">s</script> is increasing on
+that interval</span> <span class="choice  " id="choice30">decreasing, because the function <script type="math/tex">s</script> is decreasing on that interval</span> <span class="choice  " id="choice31">increasing, because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice32">decreasing,
+because the graph of <script type="math/tex">s</script> is concave up on that interval</span> <span class="choice  " id="choice33">increasing, because
+the graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice correct " id="choice34">decreasing, because the
+graph of <script type="math/tex">s</script> is concave down on that interval</span> <span class="choice  " id="choice35">zero</span> <span class="choice  " id="choice36">positive and constant</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem12"><a id="x1-70r7"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+                                                                  
+
+                                                                  
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-7"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 431--><p class="noindent">Make a choice that completes the statement about the acceleration.<br class="newline"/>
+</p><!--l. 433--><p class="noindent">On the interval <script type="math/tex">(0,1)</script> the acceleration </p><div class="multiple-choice" id="problem13"><span class="choice  " id="choice37">is positive.</span> <span class="choice correct " id="choice38">is negative.</span> <span class="choice  " id="choice39">is zero.</span> <span class="choice  " id="choice40">assumes
+both positive and negative values.</span> <span class="choice  " id="choice41">inconclusive, since from the graph of s we cannot
+conclude anything about acceleration. </span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem14"><a id="x1-71r8"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-8"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 493--><p class="noindent">Make a choice that completes the statement about the acceleration.<br class="newline"/>
+                                                                  
+
+                                                                  
+</p><!--l. 495--><p class="noindent">On the interval <script type="math/tex">(1,3)</script> the acceleration </p><div class="multiple-choice" id="problem15">
+<span class="choice  " id="choice42">is positive.</span> <span class="choice  " id="choice43">is negative.</span> <span class="choice correct " id="choice44">is zero.</span> <span class="choice  " id="choice45">assumes both positive and negative values.</span> <span class="choice  " id="choice46">inconclusive, since from the graph of s we cannot conclude anything about
+acceleration. </span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem16"><a id="x1-72r9"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-9"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 556--><p class="noindent">Make a choice that completes the statement about the acceleration.<br class="newline"/>
+</p><!--l. 558--><p class="noindent">On the interval <script type="math/tex">(3,4)</script> the acceleration </p><div class="multiple-choice" id="problem17">
+<span class="choice correct " id="choice47">is positive.</span> <span class="choice  " id="choice48">is negative.</span> <span class="choice  " id="choice49">is zero.</span> <span class="choice  " id="choice50">assumes both positive and negative values.</span> <span class="choice  " id="choice51">inconclusive, since from the graph of s we cannot conclude anything about
+acceleration. </span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem18"><a id="x1-73r10"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+                                                                  
+
+                                                                  
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-10"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 619--><p class="noindent">Make a choice that completes the statement about the acceleration.<br class="newline"/>
+</p><!--l. 621--><p class="noindent">On the interval <script type="math/tex">(4,6)</script> the acceleration </p><div class="multiple-choice" id="problem19">
+<span class="choice  " id="choice52">is positive.</span> <span class="choice correct " id="choice53">is negative.</span> <span class="choice  " id="choice54">is zero.</span> <span class="choice  " id="choice55">assumes both positive and negative values.</span> <span class="choice  " id="choice56">inconclusive, since from the graph of s we cannot conclude anything about
+acceleration. </span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem20"><a id="x1-74r11"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-11"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 683--><p class="noindent">Let <script type="math/tex">v(t)</script> be the velocity of the object at time <script type="math/tex">t</script>. Choose the greatest value amongst the
+                                                                  
+
+                                                                  
+following choices. </p><div class="multiple-choice" id="problem21"><span class="choice  " id="choice57"><script type="math/tex">v(3.1)</script></span> <span class="choice correct " id="choice58"><script type="math/tex">v(4.5)</script></span> <span class="choice  " id="choice59"><script type="math/tex">v(5)</script></span> <span class="choice  " id="choice60"><script type="math/tex">v(5.5)</script></span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem22"><a id="x1-75r12"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-12"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+<!--l. 742--><p class="noindent">At which of the following times is speed greatest? </p><div class="multiple-choice" id="problem23"><span class="choice  " id="choice61">1s</span> <span class="choice  " id="choice62">3s</span> <span class="choice correct " id="choice63">4s</span> <span class="choice  " id="choice64">5s</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem24"><a id="x1-76r13"></a> An object begins moving along a horizontal line at time <script type="math/tex">t=0</script>s and stops at time <script type="math/tex">t=6</script>s. Its
+position from the origin at time <script type="math/tex">t</script> is given by <script type="math/tex">s(t)</script> depicted in the graph below, where <script type="math/tex">s</script> is
+measured in meters. <div class="image-environment" role="img" aria-labelledby="image-alt-13"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 801--><p class="noindent">At what time is the object farthest from the origin and how far is it from the origin
+at that time? </p><div class="multiple-choice" id="problem25"><span class="choice  " id="choice65">1s, 1m</span> <span class="choice  " id="choice66">1s, 3m</span> <span class="choice  " id="choice67">4s, 6m</span> <span class="choice  " id="choice68">4s, 2m</span> <span class="choice  " id="choice69">6s, 6m</span> <span class="choice correct " id="choice70">6s, 4m</span> <span class="choice  " id="choice71">6s, <script type="math/tex">\sqrt {52}</script>m</span> </div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="limitTrueFalse3.tex"/> 
+<meta name="date" content="2018-10-16 14:34:00"/> 
+<meta name="author" content="Nela Lakos and Kyle Parsons and Bobby
+                                                                  
+
+                                                                  
+Ramsey"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the relationship between limits and vertical asymptotes."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="c797ff51152f3a3c7634189b80141a1881792413 asymptotesAsLimits/exercises/limitTrueFalse3.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Select True if the statement is <strong>always</strong> true; otherwise, select False.
+<!--l. 15--><p class="noindent">Let <script type="math/tex">f</script> be a one-to-one function and <script type="math/tex">f^{-1}</script> its inverse. If the point <script type="math/tex">(4,3)</script> lies on the graph of <script type="math/tex">f^{-1}</script>, then
+the point <script type="math/tex">(3,4)</script> lies on the graph of <script type="math/tex">f</script>. </p><div class="multiple-choice" id="problem2"><span class="choice correct " id="choice1">True</span> <span class="choice  " id="choice2">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback3">The graph of <script type="math/tex">f^{-1}</script> contains all points of the form <script type="math/tex">\left (b,f^{-1}(b)\right )</script> whereas the graph of <script type="math/tex">f</script> contains all
+points of the form <script type="math/tex">\left (f^{-1}(b),f(f^{-1}(b))\right )=\left (f^{-1}(b),b\right )</script>. </div>
+<div role="article" class="problem-environment exercise" id="problem4"><a id="x1-65r2"></a> If <script type="math/tex">f</script> and <script type="math/tex">g</script> are two functions defined on <script type="math/tex">\left (-1,1\right )</script>, and if <script type="math/tex">g(0) = 0</script>, then it must be true that
+<script type="math/tex">\displaystyle \lim _{x\to 0}\left [f(x)g(x)\right ]=0</script>.
+<div class="multiple-choice" id="problem5"><span class="choice  " id="choice3">True</span> <span class="choice correct " id="choice4">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback6">If <script type="math/tex">g(x) = x</script> and <script type="math/tex">f(x)=\begin {cases} \frac {1}{x} \,; & \text { for } x\neq 0 \\ 0 \,; & \text { for } x=0 \end {cases}</script>, then <script type="math/tex; mode=display"> \lim _{x\to 0}\left [f(x)g(x)\right ] = 1. </script> </div>
+<div role="article" class="problem-environment exercise" id="problem7"><a id="x1-66r3"></a> If <script type="math/tex">f</script> is continuous on <script type="math/tex">\left (-1,1\right )</script> and if <script type="math/tex">f(0) = 10</script> and <script type="math/tex">\displaystyle \lim _{x\to 0}g(x) = 2</script>, then <script type="math/tex">\displaystyle \lim _{x\to 0}\frac {f(x)}{g(x)} = 5</script>. <div class="multiple-choice" id="problem8"><span class="choice correct " id="choice5">True</span> <span class="choice  " id="choice6">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback9">Since <script type="math/tex">f</script> is continuous at 0 we know that <script type="math/tex">\displaystyle \lim _{x\to 0}f(x) = f(0) = 10</script> so we can use the quotient limit law to
+evaluate <script type="math/tex">\displaystyle \lim _{x\to 0}\frac {f(x)}{g(x)}</script>. </div>
+<div role="article" class="problem-environment exercise" id="problem10"><a id="x1-67r4"></a> Let <script type="math/tex">f</script> be a positive function with vertical asymptote <script type="math/tex">x=5</script>, then <script type="math/tex">\displaystyle \lim _{x\to 5}f(x) = \infty </script>. <div class="multiple-choice" id="problem11"><span class="choice  " id="choice7">True</span> <span class="choice correct " id="choice8">False</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback12">It could be that <script type="math/tex">\displaystyle \lim _{x\to 5^-}f(x) = \infty </script> so that <script type="math/tex">f</script> has a vertical asymptote at 5, but <script type="math/tex">\lim _{x\to 5^+}f(x)=10</script>. In this case <script type="math/tex">\lim _{x\to 5}f(x)</script> does not
+exist. </div>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
