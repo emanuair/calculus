@@ -1,0 +1,223 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Mean  Value
+                                                                  
+
+                                                                  
+Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInMeanValueTheorem.tex"/> 
+<meta name="date" content="2018-10-16 20:32:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement of the Mean Value Theorem."/> 
+<meta name="learning-outcome" content="Sketch pictures to illustrate why the Mean Value Theorem is true."/> 
+<meta name="learning-outcome" content="Determine whether Rolle&#39;s Theorem or the Mean Value Theorem can be applied."/> 
+<meta name="learning-outcome" content="Find the values guaranteed by Rolle&#39;s Theorem or the Mean Value Theorem."/> 
+<meta name="learning-outcome" content="Use the Mean Value Theorem to solve word problems."/> 
+<meta name="learning-outcome" content="Compare and contrast the Intermediate Value Theorem, Mean Value Theorem, and Rolle&#39;s Theorem."/> 
+<meta name="learning-outcome" content="Identify calculus ideas which are consequences of the Mean Value Theorem."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="0bc953ec681064cf7ebb3bfab5433f9397a3cfb7 meanValueTheorem/digInMeanValueTheorem.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 17--><p class="noindent">Here we see a key theorem of calculus.
+</p></div>   <div class="maketitle"></div>
+Here are some interesting questions involving derivatives:
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Suppose you toss a ball upward into the air and then catch it. Must the
+     ball’s velocity have been zero at some point?
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Suppose you drive a car on a straight stretch of highway from toll booth
+     to another toll booth <script type="math/tex">30</script> miles away in half of an hour. Must you have been
+     driving at <script type="math/tex">60</script> miles per hour at some point?
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Suppose two different functions have the same derivative. What can you
+     say about the relationship between the two functions?</dd></dl>
+<!--l. 34--><p class="noindent">While these problems sound very different, it turns out that the problems are very
+closely related. We’ll start simply:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-67r1"></a><span class="theorem-like-title">Rolle’s Theorem</span> Suppose that <script type="math/tex">f</script> is differentiable on the interval <script type="math/tex">(a,b)</script>, continuous on the
+interval <script type="math/tex">[a,b]</script>, and that <script type="math/tex">f(a)=f(b)</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-1"> 
+<script type="math/tex">f</script><script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script></div>                       Then <script type="math/tex; mode=display"> f'(c)=0 </script> for some <script type="math/tex">c</script> in the open interval <script type="math/tex">(a,b)</script>.
+<!--l. 83--></div> <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-68r2"></a>If the function <script type="math/tex">f</script> happens to be a constant, then <script type="math/tex">f'(c)=0</script> for all points <script type="math/tex">c</script> in the open interval
+<script type="math/tex">(a,b)</script>.
+<!--l. 87--><p class="noindent">If <script type="math/tex">f</script> is not a constant, then it must attain both global extrema in the interval <script type="math/tex">[a,b]</script>, by the
+Extreme Value Theorem. One of these two different extrema is attained in the open
+interval <script type="math/tex">(a,b)</script> at some point <script type="math/tex">c</script>, and the function <script type="math/tex">f</script> has a critical point there. Since <script type="math/tex">f</script> is
+                                                                  
+
+                                                                  
+differentiable on <script type="math/tex">(a,b)</script>, it follows that <script type="math/tex">f'(c)=0</script>.
+</p></div>
+<!--l. 91--><p class="noindent">We can now answer our first question above.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-69r3"></a>Suppose you toss a ball upward into the air and then catch it at the same point
+where you tossed it from. Must the ball’s velocity have been zero at some point? <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-70r4"></a>Let <script type="math/tex">p(t)</script>
+be the position of the ball (on the vertical line) at time <script type="math/tex">t</script>. Our time interval in
+question will be <script type="math/tex; mode=display"> [t_\mathrm {start},t_\mathrm {finish}]. </script> We may assume that <script type="math/tex">p</script> is continuous on <script type="math/tex"> [t_\mathrm {start},t_\mathrm {finish}]</script> and differentiable on
+<script type="math/tex"> (t_\mathrm {start},t_\mathrm {finish})</script>. Since <script type="math/tex">p(t_\mathrm {start})=p(t_\mathrm {finish})</script>, we may now apply Rolle’s Theorem and conclude that at some
+time <script type="math/tex">c</script> in the given time interval, <script type="math/tex">p'(c)=\answer [given]{0}</script>. Hence the velocity must be zero at some
+point.
+</div>
+</div>
+<!--l. 108--><p class="noindent">Rolle’s Theorem is a special case of a more general theorem.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem5"><a id="x1-71r5"></a><span class="theorem-like-title">Mean Value Theorem</span><a class="ximera-label" id="thm:mvt"></a> Suppose that <script type="math/tex">f</script> has a derivative on the interval <script type="math/tex">(a,b)</script> and is
+continuous on the interval <script type="math/tex">[a,b]</script>. <div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">b</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Then <script type="math/tex; mode=display"> f'(c)=\frac {f(b)-f(a)}{b-a} </script> for some <script type="math/tex">c</script> in <script type="math/tex">(a,b)</script>.
+</div>
+<!--l. 173--><p class="noindent">We can now answer our second question above.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-72r6"></a>Suppose you drive a car on a straight stretch of highway from toll booth to another
+toll booth <script type="math/tex">30</script> miles away in half of an hour. Must you have been driving at <script type="math/tex">60</script> miles per
+hour at some point?
+<div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-73r7"></a>Let <script type="math/tex">p(t)</script> is the position of the car at time <script type="math/tex">t</script>, and <script type="math/tex">0</script> hours is the starting time with <script type="math/tex">1/2</script> hours
+being the final time, where <script type="math/tex">p(0)=0</script>, and <script type="math/tex">p(1/2)=30</script>. We can assume that <script type="math/tex">p</script> is continuous on <script type="math/tex">[0,1/2]</script> and
+differentiable on <script type="math/tex">(0,1/2)</script>. Now the Mean Value Theorem states that there is a time <script type="math/tex">c</script> such
+that <script type="math/tex; mode=display"> p'(c) = \frac {30-0}{1/2-0} = \answer [given]{60}\qquad \text {where $0<c<1/2$.} </script> Since the derivative of position is velocity, this says that the car must have been
+                                                                  
+
+                                                                  
+driving at <script type="math/tex">60</script> miles per hour at some point.
+</div>
+</div>
+<!--l. 193--><p class="noindent">Now we will address the unthinkable: could there be a continuous function <script type="math/tex">f</script> on <script type="math/tex">[a,b]</script> whose
+derivative is zero on <script type="math/tex">(a,b)</script> that is not constant? As we will see, the answer is
+“no.”
+</p>
+<div class="theorem-like problem-environment theorem" id="problem8"><a id="x1-74r8"></a>If <script type="math/tex">f'(x)=0</script> for all <script type="math/tex">x</script> in an interval <script type="math/tex">I</script>, then <script type="math/tex">f(x)</script> is constant on <script type="math/tex">I</script>. <div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-75r9"></a>Let <script type="math/tex">a< b</script> be two points in <script type="math/tex">I</script>. Since <script type="math/tex">f</script> is
+continuous on <script type="math/tex">[a,b]</script> and differentiable on <script type="math/tex">(a,b)</script>, by the Mean Value Theorem we know <script type="math/tex; mode=display"> \frac {f(b)-f(a)}{b-a} = f'(c) </script> for some
+<script type="math/tex">c</script> in the interval <script type="math/tex">(a,b)</script>. Since <script type="math/tex">f'(c)=0</script> we see that <script type="math/tex">f(b)=f(a)</script>. Moreover, since <script type="math/tex">a</script> and <script type="math/tex">b</script> were arbitrarily chosen, <script type="math/tex">f(x)</script>
+must be the constant function.
+</div>
+</div>
+<!--l. 214--><p class="noindent">Now let’s answer our third question.
+</p>
+<div class="theorem-like problem-environment example" id="problem10"><a id="x1-76r10"></a>Suppose two different functions have the same derivative on some interval <script type="math/tex">I</script>. What can
+you say about the relationship between the two functions?
+<div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-77r11"></a>Set <script type="math/tex">h(x) = f(x) - g(x)</script>, so <script type="math/tex">h'(x) = f'(x) -g'(x)</script>. Now <script type="math/tex">h'(x) = 0</script> on the interval <script type="math/tex">I</script>. This means that <script type="math/tex">h(x) = k</script>, for all <script type="math/tex">x</script> in <script type="math/tex">I</script>, where <script type="math/tex">k</script> is some constant.
+Hence, for all <script type="math/tex">x</script> in <script type="math/tex">I</script> <script type="math/tex; mode=display"> f(x) = g(x) + k. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem12"><a id="x1-78r12"></a>Describe all functions whose derivative is <script type="math/tex">\sin (x)</script>. <div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-79r13"></a>One such function is <script type="math/tex">-\cos (x)</script>, so all such functions
+have the form <script type="math/tex">-\cos (x)+k</script>, <div class="image-environment" role="img" aria-labelledby="image-alt-3">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+</div>
+<!--l. 260--><p class="noindent">Finally, let us investigate two young mathematicians who run to class.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment example" id="problem14"><a id="x1-80r14"></a>Two students Devyn and Riley raced to class down a straight hall. They start at the
+same time and finish in a tie. Was there a point during the race that Devyn and
+Riley were running at exactly the same velocity? <div class="theorem-like problem-environment explanation" id="problem15"><a id="x1-81r15"></a>Let <script type="math/tex">P_\mathrm {Devyn}</script> represent Devyn’s position
+with respect to time, and let <script type="math/tex">P_\mathrm {Riley}</script> represent Riley’s position with respect to time. Let <script type="math/tex">t_\mathrm {start}</script> be
+the starting time of the race, and <script type="math/tex">t_\mathrm {finish}</script> be the end of the race. Set <script type="math/tex; mode=display"> f(t) =P_\mathrm {Devyn}(t)-P_\mathrm {Riley}(t). </script> Note, we may assume
+that <script type="math/tex">P_\mathrm {Devyn}</script> and <script type="math/tex">P_\mathrm {Riley}(t)</script> are continuous on <script type="math/tex">[t_\mathrm {start},t_\mathrm {finish}]</script> and that they are differentiable on <script type="math/tex">(t_\mathrm {start},t_\mathrm {finish})</script>. Hence the
+same is true for <script type="math/tex">f</script>. Since both runners start and finish at the same place,
+<script type="math/tex; mode=display"> \begin{align*} 
+    f(t_\mathrm{start}) = P_\mathrm{Devyn}(t_\mathrm{start})-P_\mathrm{Riley}(t_\mathrm{start}) &= \answer[given]{0}\qquad\text{and}\\
+    f(t_\mathrm{finish})=P_\mathrm{Devyn}(t_\mathrm{finish})-P_\mathrm{Riley}(t_\mathrm{finish}) &= \answer[given]{0}.\\
+    \end{align*}</script>
+In fact, this shows us that the average rate of change of <script type="math/tex; mode=display"> f(t) = P_\mathrm {Devyn}(t)-P_\mathrm {Riley}(t) \qquad \text {on}\qquad [t_\mathrm {start},t_\mathrm {finish}] </script> is <script type="math/tex">\answer [given]{0}</script>. Hence by the
+mean value theorem, there is a point <script type="math/tex">c</script> <script type="math/tex; mode=display"> t_\mathrm {start}\le c \le t_{\mathrm {finish}} </script> with <script type="math/tex">f'(c) = \answer [given]{0}</script>. However, <script type="math/tex; mode=display"> \answer [given]{0} = f'(c) = P_\mathrm {Devyn}'(c)-P_\mathrm {Riley}'(c). </script> Hence at <script type="math/tex">c</script>, <script type="math/tex; mode=display"> P_\mathrm {Devyn}'(c)=P_\mathrm {Riley}'(c), </script> this
+means that there was a time when they were running at exactly the same
+velocity.
+</div>
+</div>
+<!--l. 305--><p class="noindent">In conclusion, the Mean Value Theorem relates the function <script type="math/tex">f</script> and its derivative, <script type="math/tex">f'</script>.
+Since the derivative has many interpretations, e.g. instantaneous rate of change, slope
+of the tangent line, velocity, it is no surprise that we can use the MVT in different
+contexts.
+</p><!--l. 307--><p class="noindent">Therefore, if the the function <script type="math/tex">f</script> is continuous on <script type="math/tex">[a,b]</script> and differentiable on <script type="math/tex">(a,b)</script>, then the MVT
+guarantees that
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">there is a point <script type="math/tex">c</script> in <script type="math/tex">(a,b)</script> where the instantaneous rate of change of <script type="math/tex">f</script> is equal to
+     the average rate of change of <script type="math/tex">f</script> over the interval <script type="math/tex">[a,b]</script>;
+     <!--l. 311--><p class="noindent">or
+     </p></dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">there is a point <script type="math/tex">c</script> in <script type="math/tex">(a,b)</script> where the slope of the tangent line to the curve <script type="math/tex">y=f(x)</script> is
+     equal to the slope of the secant line through the points <script type="math/tex">(a,f(a))</script> and <script type="math/tex">(b,f(b))</script>;
+     <!--l. 315--><p class="noindent">or
+     </p></dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">there is a point <script type="math/tex">c</script> in the time interval <script type="math/tex">(a,b)</script> where the instantaneous velocity is
+     equal to the average velocity over the time interval <script type="math/tex">[a,b]</script>. Here, we assume that
+     <script type="math/tex">f</script> is the position function for the object moving along a straight line.</dd></dl>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

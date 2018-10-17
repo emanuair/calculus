@@ -1,0 +1,218 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  Intermediate  Value
+                                                                  
+
+                                                                  
+Theorem</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheIntermediateValueTheorem.tex"/> 
+<meta name="date" content="2018-10-16 20:34:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="State the Intermediate Value Theorem including hypotheses."/> 
+<meta name="learning-outcome" content="Sketch pictures indicating why the Intermediate Value Theorem is true, and why all hypotheses are necessary."/> 
+<meta name="learning-outcome" content="Explain why certain points exist using the Intermediate Value Theorem."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="1b8c76e5b780b1bb4e5ec5b8b35222d04cc20fab continuity/digInTheIntermediateValueTheorem.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 15--><p class="noindent">Here we see a consequence of a function being continuous.
+</p></div>   <div class="maketitle"></div>
+The <em>Intermediate Value Theorem</em> should not be brushed off lightly. Once it is
+understood, it may seem “obvious,” but mathematicians should not underestimate its
+power.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Intermediate Value Theorem</span><a class="ximera-label" id="theorem:IVT"></a> If <script type="math/tex">f</script> is a continuous function for all <script type="math/tex">x</script> in the closed interval <script type="math/tex">[a,b]</script>
+and <script type="math/tex">d</script> is between <script type="math/tex">f(a)</script> and <script type="math/tex">f(b)</script>, then there is a number <script type="math/tex">c</script> in <script type="math/tex">(a, b)</script> such that <script type="math/tex">f(c) = d</script>.
+</div>
+<!--l. 41--><p class="noindent">If you are more of a visual person, you should imagine a continuous function,
+where you know the value of the function at two endpoints, <script type="math/tex">x=a</script> and <script type="math/tex">x=b</script>, but
+you don’t really know what the function does between the points <script type="math/tex">x=a</script> and <script type="math/tex">x=b</script>:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">b</script><script type="math/tex">f(a)</script><script type="math/tex">f(c)=d</script><script type="math/tex">f(b)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+The Intermediate Value Theorem says that despite the fact that you don’t really
+know what the function is doing between the endpoints, a point <script type="math/tex">x=c</script> exists and gives an
+<em>intermediate value</em> for <script type="math/tex">f</script>.
+<!--l. 83--><p class="noindent">Now, let’s contrast this with a time when the conclusion of the Intermediate Value
+Theorem does not hold.
+</p>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-65r2"></a> Consider the following situation, <div class="image-environment" role="img" aria-labelledby="image-alt-2">      <script type="math/tex">a</script><script type="math/tex">b</script><script type="math/tex">f(a)</script><script type="math/tex">d</script><script type="math/tex">f(b)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+and select all that are true: <div class="select-all" id="problem3"><a id="x1-66r3"></a> <span class="choice correct " id="choice1"><script type="math/tex">f</script> is continuous on <script type="math/tex">(a,b)</script>.</span> <span class="choice correct " id="choice2"><script type="math/tex">f</script> is continuous on <script type="math/tex">[a,b)</script>.</span> <span class="choice  " id="choice3"><script type="math/tex">f</script> is
+continuous on <script type="math/tex">(a,b]</script>.</span> <span class="choice  " id="choice4"><script type="math/tex">f</script> is continuous on <script type="math/tex">[a,b]</script>.</span> <span class="choice  " id="choice5">There is a point <script type="math/tex">c</script> in <script type="math/tex">[a,b]</script> with <script type="math/tex">f(c) = d</script>.</span>
+</div>
+</div>
+<!--l. 123--><p class="noindent">Building on the question above, it is not difficult to see that each of the hypothesis of
+the Intermediate Value Theorem is necessary.
+</p><!--l. 128--><p class="noindent">Let’s see the Intermediate Value Theorem in action.
+</p>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-67r4"></a>Explain why the function <script type="math/tex">f(x)=x^3 + 3x^2+x-2</script> has a zero between <script type="math/tex">0</script> and <script type="math/tex">1</script>.
+<div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-68r5"></a>Since <script type="math/tex">f</script> is a polynomial, we see that <script type="math/tex">f</script> is continuous for all real numbers. We will apply
+the IVT here. Let <script type="math/tex">a=\answer [given]{0}</script>, <script type="math/tex">b=\answer [given]{1}</script>, and <script type="math/tex">d=\answer [given]{0}</script>, since <script type="math/tex">f(a)=f(0)=\answer [given]{-2}</script>, <script type="math/tex">f(b)=f(1)=\answer [given]{3}</script>, and <script type="math/tex">0</script> is between <script type="math/tex">f(a)=-2</script> and <script type="math/tex">f(b)=3</script>. Then by the
+Intermediate Value Theorem, there is a point <script type="math/tex">c</script> in the interval <script type="math/tex">[0,1]</script> such that
+<script type="math/tex">f(c)=d=\answer [given]{0}</script>.
+</div>
+</div>
+<!--l. 147--><p class="noindent">This example also points the way to a simple method for approximating
+roots.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-69r6"></a>Approximate a root of <script type="math/tex">f(x) =x^3 + 3x^2+x-2</script> between <script type="math/tex">0</script> and <script type="math/tex">1</script> to within one decimal place.
+<div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-70r7"></a>Again, since <script type="math/tex">f</script> is a polynomial, we see that <script type="math/tex">f</script> is continuous for all real numbers.
+Consider the table <script type="math/tex; mode=display"> \begin {array}{c|c} x & f(x) \\ \hline 0.1 & -1.869\\ 0.2 &-1.672\\ 0.3 & -1.403\\ 0.4 & -1.056\\ 0.5 & -0.625\\ 0.6 & -0.104\\ 0.7 & 0.513 \end {array} </script> By the Intermediate Value Theorem, <script type="math/tex">f</script> has a root between <script type="math/tex">0.6</script> and <script type="math/tex">0.7</script>.
+Repeating the process <script type="math/tex; mode=display"> \begin {array}{c|c} x & f(x) \\ \hline 0.61 &-0.046719\\ 0.62 & 0.011528 \end {array} </script> and using the Intermediate Value Theorem, we can conclude
+that <script type="math/tex">f</script> has a root between <script type="math/tex">0.61</script> and <script type="math/tex">0.62</script>, and the root is <script type="math/tex">0.6</script> rounded to one decimal
+place.
+</div>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 186--><p class="noindent">The Intermediate Value Theorem can be used to show that curves cross:
+</p>
+<div class="theorem-like problem-environment example" id="problem8"><a id="x1-71r8"></a>Explain why the graphs of the functions <script type="math/tex">f(x) = x^2\ln (x)</script> and <script type="math/tex"> g(x) = 2x\cos (\ln (x))</script> intersect on the interval <script type="math/tex">[1,e]</script>.
+<!--l. 192--><p class="noindent">To start, note that both <script type="math/tex">f</script> and <script type="math/tex">g</script> are continuous functions on the interval <script type="math/tex">[1,e]</script>, and hence <script type="math/tex">h = f-g</script> is
+also a continuous function on the interval <script type="math/tex">[1,e]</script>. Now </p><script type="math/tex; mode=display"> \begin{align*} 
+      h(1) &= f(1) - g(1) \\
+    &= (\answer[given]{1})^2\cdot \ln(\answer[given]{1}) - 2\cdot\answer[given]{1}\cdot \cos(\ln(\answer[given]{1}))\\
+    &= \answer[given]{-2}.
+  \end{align*}</script>
+and in a similar fashion <script type="math/tex; mode=display"> \begin{align*} 
+      h(e) &= f(e) - g(e) \\
+    &= e^2\cdot \answer[given]{1} - 2\cdot e\cos(\answer[given]{1})
+   \end{align*}</script>
+Since <script type="math/tex">e>2</script> and <script type="math/tex">0 < \cos (1)<1</script> we see that the expression above is positive. Therefore, <script type="math/tex">h(1)<0<h(e)</script>, and by the
+Intermediate Value Theorem, there exist a number <script type="math/tex">c</script> in <script type="math/tex">(1,e)</script> such that <script type="math/tex; mode=display"> h(c)=0. </script> But this
+means that <script type="math/tex; mode=display"> f(c)-g(c)=0, </script> and that <script type="math/tex">f(c)=g(c)</script>. Therefore, the curves <script type="math/tex">y=f(x)</script> and <script type="math/tex">y=g(x)</script> intersect at the point
+<script type="math/tex">(c,f(c))</script>.
+<!--l. 217--><p class="noindent">We can see this point of intersection by looking at the graphs of <script type="math/tex">y=f(x)</script> and <script type="math/tex">y=g(x)</script> on the given
+interval. <script type="math/tex; mode=display"> \graph [xmin=1,xmax=e,ymin=-10,ymax=10]{x^2\ln (x), 2x\cos (\ln (x))} </script> 
+</p><!--l. 223--></div> Now we move on to a more subtle example:
+
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-72r9"></a>Suppose you have two cats, Roxy and Yuri. Is there a time when Roxy and Yuri have
+the same amount of water in their bowls assuming:
+     <ul class="itemize1">
+     <li class="itemize">They start and finish drinking at the same times.
+     </li>
+     <li class="itemize">Roxy starts with more water than Yuri, and leaves less water left in her
+     bowl than Yuri.</li></ul>
+<div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-73r10"></a>To solve this problem, consider two functions:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">W_{\mathrm {Roxy}}(t) =</script> the amount of water in Roxy’s bowl at time <script type="math/tex">t</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">W_{\mathrm {Yuri}}(t) =</script> the amount of water in Yuri’s bowl at time <script type="math/tex">t</script>.</li></ul>
+<!--l. 241--><p class="noindent">Now if <script type="math/tex">t_\mathrm {start}</script> is the time the cats start drinking and <script type="math/tex">t_\mathrm {finish}</script> is the time the cats finish
+drinking. Then we have <script type="math/tex; mode=display"> W_\mathrm {Roxy}(t_\mathrm {start})-W_{\mathrm {Yuri}}(t_\mathrm {start}) > 0</script> and <script type="math/tex; mode=display"> W_\mathrm {Roxy}(t_\mathrm {finish})-W_{\mathrm {Yuri}}(t_\mathrm {finish}) < 0. </script> Since the amount of water in a bowl at time <script type="math/tex">t</script> is a
+continuous function, as water is “lapped” up in continuous amounts, <script type="math/tex; mode=display"> W_\mathrm {Roxy}-W_{\mathrm {Yuri}} </script> is a
+continuous function, and hence the Intermediate Value Theorem applies. Since <script type="math/tex">W_\mathrm {Roxy}-W_{\mathrm {Yuri}}</script> is
+                                                                  
+
+                                                                  
+positive when at <script type="math/tex">t_\mathrm {start}</script> and negative at <script type="math/tex">t_\mathrm {finish}</script>, there is some time <script type="math/tex">t_\mathrm {equal}</script> when the value is
+zero, meaning <script type="math/tex; mode=display"> W_\mathrm {Roxy}(t_\mathrm {equal})- W_{\mathrm {Yuri}}(t_\mathrm {equal}) =0 </script> meaning there is the same amount of water in each of their
+bowls.
+</p></div>
+</div>
+<!--l. 267--><p class="noindent">And finally, an example when the Intermediate Value Theorem <em>does not</em>
+apply.
+</p>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-74r11"></a>Suppose you have two cats, Roxy and Yuri. Is there a time when Roxy and Yuri have
+the same amount of dry cat food in their bowls assuming:
+     <ul class="itemize1">
+     <li class="itemize">They start and finish eating at the same times.
+     </li>
+     <li class="itemize">Roxy starts with more food than Yuri, and leaves less food uneaten than
+     Yuri.</li></ul>
+<div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-75r12"></a>Here we could try the same approach as before, setting:
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">F_{\mathrm {Roxy}}(t) =</script> the amount of dry cat food in Roxy’s bowl at time <script type="math/tex">t</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">F_{\mathrm {Yuri}}(t) =</script> the amount of dry cat food in Yuri’s bowl at time <script type="math/tex">t</script>.</li></ul>
+<!--l. 286--><p class="noindent">However in this case, the amount of food in a bowl at time <script type="math/tex">t</script> is <strong>not</strong> a continuous
+function! This is because dry cat food consists of discrete kibbles, and is not eaten in
+a continuous fashion. Hence the Intermediate Value Theorem <strong>does not
+apply</strong>, and we can make no definitive statements concerning the question
+above.
+</p></div>
+</div>
+<!--l. 296--><p class="noindent">For some interesting extra reading check out: </p>
+     <ul class="itemize1">
+    <li class="itemize"><a href="http://www.jstor.org/stable/10.4169/college.math.j.42.4.254"><em>The intermediate value theorem is NOT obvious—and I am going to prove
+     it to you</em>, S.M. Walk, College Math Journal, September 2011</a>.</li></ul>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

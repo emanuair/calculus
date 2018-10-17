@@ -1,0 +1,201 @@
+<!DOCTYPE html><html lang="en"><head> <title>The Second Fundamental Theorem of
+                                                                  
+
+                                                                  
+Calculus</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInSecondFundamentalTheoremOfCalculus.tex"/> 
+<meta name="date" content="2018-10-16 15:06:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="State the Second Fundamental Theorem of Calculus."/> 
+<meta name="learning-outcome" content="Evaluate definite integrals using the Second Fundamental Theorem of Calculus."/> 
+<meta name="learning-outcome" content="Understand how the area under a curve is related to the antiderivative."/> 
+<meta name="learning-outcome" content="Understand the relationship between indefinite and definite integrals."/> 
+<meta name="dependency" content="05a3902a1b033284c053e05730e15405b1898b30 preamble.tex"/><meta name="dependency" content="e9dc96095bc1ac3d36e869f9f2343f93d647f6d2 secondFundamentalTheoremOfCalculus/digInSecondFundamentalTheoremOfCalculus.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">The accumulation of a rate is given by the change in the amount.
+</p></div>   <div class="maketitle"></div>
+There is a another common form of the Fundamental Theorem of Calculus:
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Second Fundamental Theorem of Calculus</span> Let <script type="math/tex">f</script> be continuous on <script type="math/tex">[a,b]</script>. If <script type="math/tex">F</script> is <strong>any</strong> antiderivative of <script type="math/tex">f</script>, then <script type="math/tex; mode=display"> \int _a^b f(x)\d x = F(b)-F(a). </script>
+<div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Let <script type="math/tex">a\le c\le b</script> and write <script type="math/tex; mode=display"> \begin{align*} 
+         \int_a^b f(x) \d x &= \int_a^c f(x) \d x + \int_c^b f(x) \d x \\
+      &= \int_c^b f(x) \d x - \int_c^a f(x) \d x.
+    \end{align*}</script>
+By the First Fundamental Theorem of Calculus, we have <script type="math/tex; mode=display"> F(b) = \int _c^b f(x) \d x\qquad \text {and}\qquad F(a) = \int _c^a f(x) \d x </script> for some antiderivative <script type="math/tex">F</script> of <script type="math/tex">f</script>.
+So <script type="math/tex; mode=display"> \int _a^b f(x) \d x = F(b)-F(a) </script> for this antiderivative. However, <strong>any</strong> antiderivative could have be chosen, as
+antiderivatives of a given function differ only by a constant, and this constant <em>always</em>
+cancels out of the expression when evaluating <script type="math/tex">F(b)-F(a)</script>.
+</div>
+</div>
+<!--l. 47--><p class="noindent">From this you should see that the two versions of the Fundamental Theorem are very
+closely related. In reality, the two forms are <strong>equivalent</strong>, just differently stated.
+Hence people often simply call them both “The Fundamental Theorem of Calculus.”
+One way of thinking about the Second Fundamental Theorem of Calculus is:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1"> <script type="math/tex">\color {green!70!black!70!blue}\int _a^b\color {blue!70!green}f'(x)\color {green!70!black!70!blue}\d x\color {black} = \color {purple!50!blue!90!black}f(b) - f(a)</script>
+</div>
+This could be read as:
+     <div class="quote">
+     <!--l. 61--><p class="noindent"><strong>The <span style="color:#007D4D;">accumulation</span> of a <span style="color:#004DB2;">rate</span> is given by the <span style="color:#56008F;">change
+     in the amount</span>.</strong></p></div>
+<!--l. 66--><p class="noindent">When we compute a definite integral, we first find an antiderivative and then
+evaluate at the limits of integration. It is convenient to first display the antiderivative
+and then evaluate. A special notation is often used in the process of evaluating
+definite integrals using the Fundamental Theorem of Calculus. Instead of explicitly
+writing <script type="math/tex">F(b)-F(a)</script>, we often write <script type="math/tex; mode=display"> \eval {F(x)}_a^b </script> meaning that one should evaluate <script type="math/tex">F(x)</script> at <script type="math/tex">b</script> and then subtract <script type="math/tex">F(x)</script>
+evaluated at <script type="math/tex">a</script> <script type="math/tex; mode=display"> \eval {F(x)}_a^b = F(b)-F(a). </script>
+</p><!--l. 81--><p class="noindent">Let’s see some examples of the fundamental theorem in action.
+</p>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-66r3"></a>Compute: <script type="math/tex; mode=display"> \int _{-2}^2 x^3\d x </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>We start by finding an antiderivative of <script type="math/tex">x^3</script>. A correct
+choice is <script type="math/tex">\frac {x^{4}}{4}</script>, one could verify this by taking the derivative. Hence
+<script type="math/tex; mode=display"> \begin{align*} 
+      \int_{-2}^2 x^3 \d x &=\eval{\frac{x^4}{4}}_{-2}^2\\
+      &= \frac{2^4}{4} - \frac{(-2)^4}{4}\\
+      &= 0.
+                                                                  
+
+                                                                  
+    \end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-68r5"></a>Compute: <script type="math/tex; mode=display"> \int _0^\pi \sin \theta \d \theta </script> <div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-69r6"></a>We start by finding an antiderivative of <script type="math/tex">\sin \theta </script>. A correct
+choice is <script type="math/tex">-\cos \theta </script>, one could verify this by taking the derivative. Hence
+<script type="math/tex; mode=display"> \begin{align*} 
+      \int_0^\pi \sin\theta \d \theta &= \eval{-\cos\theta}_0^\pi\\
+      &=\answer[given]{-\cos(\pi)} - (-\cos(0))\\
+      &=\answer[given]{2}.
+    \end{align*}</script>
+This is interesting: It says that the area under one “hump” of a sine curve is
+<script type="math/tex">2</script>.
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-70r7"></a>Compute: <script type="math/tex; mode=display"> \int _0^5 e^t\d t </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-71r8"></a>We start by finding an antiderivative of <script type="math/tex">e^t</script>. A correct choice is <script type="math/tex">\answer [given]{e^t}</script>, one could verify
+this by taking the derivative. Hence <script type="math/tex; mode=display"> \begin{align*} 
+         \int_0^5 e^t \d t &= \eval{e^t}_0^5 \\
+      &= e^5-\answer[given]{e^0}\\
+      &= e^5-\answer[given]{1}.
+    \end{align*}</script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-72r9"></a>Compute: <script type="math/tex; mode=display"> \int _1^2\left (x^9 + \frac {1}{x}\right ) \d x </script> <div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-73r10"></a>We start by finding an antiderivative of <script type="math/tex">x^9 + \frac {1}{x}</script>. A correct
+choice is <script type="math/tex">\frac {x^{10}}{10} + \ln (x)</script>, one could verify this by taking the derivative. Hence
+<script type="math/tex; mode=display"> \begin{align*} 
+\int_1^2\left(x^9 + \frac{1}{x}\right) \d x &= \eval{\frac{x^{10}}{10} + \ln(x)}_1^2 \\
+&= \frac{2^{10}}{10} + \ln(2) - \answer[given]{\frac{1}{10}}.
+\end{align*}</script>
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-1000"></a>Understanding motion with the Fundamental Theorem of Calculus</h3>
+<!--l. 159--><p class="noindent">We know that </p>
+     <ul class="itemize1">
+     <li class="itemize">The derivative of a position function is a velocity function.
+     </li>
+     <li class="itemize">The derivative of a velocity function is an acceleration function.</li></ul>
+                                                                  
+
+                                                                  
+<!--l. 165--><p class="noindent">Now consider definite integrals of velocity and acceleration functions. Specifically, if <script type="math/tex">v(t)</script>
+is a velocity function, what does <script type="math/tex">\int _a^b v(t)\d t</script> mean?
+</p><!--l. 169--><p class="noindent">The Second Fundamental Theorem of Calculus states that <script type="math/tex; mode=display"> \int _a^b v(t)\d t = V(b) - V(a), </script> where <script type="math/tex">V(t)</script> is any
+antiderivative of <script type="math/tex">v(t)</script>. Since <script type="math/tex">v(t)</script> is a velocity function, <script type="math/tex">V(t)</script> must be a position function, and <script type="math/tex">V(b) - V(a)</script>
+measures a <strong>change in position</strong>, or <strong>displacement</strong>.
+</p>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-1001r11"></a>A ball is thrown straight up with velocity given by <script type="math/tex">v(t) = -32t+20</script>ft/s, where <script type="math/tex">t</script> is measured in
+seconds. Find, and interpret, <script type="math/tex">\int _0^1 v(t)\d t</script>. <div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-1002r12"></a>Using the Second Fundamental Theorem of Calculus,
+we have <script type="math/tex; mode=display"> \begin{align*} 
+             \int_0^1 v(t)\d t &= \int_0^1 (-32t+20)\d t \\
+  &= \eval{\answer[given]{-16t^2 + 20t}}_0^1 \\
+  &= 4.
+      \end{align*}</script>
+Thus if a ball is thrown straight up into the air with velocity <script type="math/tex; mode=display"> v(t) = \answer [given]{-32t+20}, </script> the height of the ball, <script type="math/tex">1</script>
+second later, will be <script type="math/tex">4</script> feet above the initial height. Note that the ball has <em>traveled</em>
+much farther. It has gone up to its peak and is falling down, but the difference
+between its height at <script type="math/tex">t=0</script> and <script type="math/tex">t=1</script> is <script type="math/tex">4</script>ft.
+</div>
+</div>
+<!--l. 201--><p class="noindent">Now we know that to solve certain kinds of problems, those that involve
+accumulation of some form, we “merely” find an antiderivative and substitute two
+values and subtract. Unfortunately, finding antiderivatives can be quite difficult.
+While there are a small number of rules that allow us to compute the derivative of
+any common function, there are no such rules for antiderivatives. There are some
+techniques that frequently prove useful, but we will never be able to reduce the
+problem to a completely mechanical process.
+ 
+ 
+
+                                                                  
+
+
+</p></body></html>

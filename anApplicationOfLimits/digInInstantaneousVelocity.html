@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en"><head> <title>Instantaneous
+                                                                  
+
+                                                                  
+velocity</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInInstantaneousVelocity.tex"/> 
+<meta name="date" content="2018-10-16 20:23:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Compute limits of families of functions."/> 
+<meta name="learning-outcome" content="Compute average velocity."/> 
+<meta name="learning-outcome" content="Approximate instantaneous velocity."/> 
+<meta name="learning-outcome" content="Compare average and instantaneous velocity."/> 
+<meta name="learning-outcome" content="Plot difference quotients for varying approximations of the instantaneous rate of change."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="4249054b00842137b4b7cd84c6e9152bd5ebdd2b anApplicationOfLimits/digInInstantaneousVelocity.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 15--><p class="noindent">We use limits to compute instantaneous velocity.
+</p></div>   <div class="maketitle"></div>
+When we compute average velocity, we look at <script type="math/tex; mode=display"> \frac {\text {change in position}}{\text {change in time}}. </script> To obtain the (instantaneous)
+velocity, we want the change in time to “go to” zero. By this point we should know
+that “go to” is a buzz-word for a <em>limit</em>. The change in time is often given as the
+length of a time interval, and this length goes to zero.
+<!--l. 28--><p class="noindent">The average velocity on the (time) interval <script type="math/tex">[a,b]</script> is given by <script type="math/tex; mode=display"> v_{\text {av}} = \frac {\text {change in position}}{\text {change in time}} = \frac {s(b)-s(a)}{b-a}. </script> Here <script type="math/tex">s(t)</script> denotes the position, at
+the time <script type="math/tex">t</script>, of an object moving along a line.
+</p><!--l. 36--><p class="noindent">Let’s put all of this together by working an example.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>A young mathematician throws a ball straight into the air with a velocity of
+40ft/sec. Its height (in feet) after <script type="math/tex">t</script> seconds is given by <script type="math/tex; mode=display"> s(t) = 40t-16t^2 \qquad \text {(feet above the ground)} . </script> Here is the graph of <script type="math/tex">s</script>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">0</script><script type="math/tex">t</script><script type="math/tex">s</script>
+</div>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">When will the ball hit the ground?
+     <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-66r2"></a>To determine when the ball hits the ground we need to solve the equation <script type="math/tex; mode=display"> s(t)=0 </script> for t.
+     That is, <script type="math/tex; mode=display"> \begin{align*} 
+40t-16t^2 &= 0\\
+     t(40-16t) &= 0.
+     \end{align*}</script>
+     This has solutions <script type="math/tex">t=0</script> seconds and <script type="math/tex">t=\answer [given]{2.5}</script> seconds. Since the ball hits the ground <span class="word-choice" id="word-choice3"><a id="x1-67r3"></a><span class="choice  " id="choice1">before</span><span class="choice correct " id="choice2">after</span>
+     </span> it’s thrown, we know that the ball hits the ground at <script type="math/tex">t=\answer [given]{2.5}</script> seconds.
+     </div>
+     </dd><dt class="enumerate-enumitem">
+                                                                  
+
+                                                                  
+ (b) </dt><dd class="enumerate-enumitem">What is the height of the ball after <script type="math/tex">2</script> seconds?
+     <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-69r4"></a>To find the height of the ball after <script type="math/tex">2</script> seconds, we simply need to plug <script type="math/tex">2</script> into the
+     equation for <script type="math/tex">s(t)</script> to find <script type="math/tex; mode=display"> s(2) = 40\cdot \answer [given]{2} - 16\cdot \answer [given]{2}^2 = \answer [given]{16}\unit {ft.} </script>
+     <!--l. 92--></div>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Consider the following points lying along the <script type="math/tex">s</script> axis. <div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">A</script><script type="math/tex">B</script><script type="math/tex">0</script><script type="math/tex">D</script><script type="math/tex">C</script><script type="math/tex">s</script>
+     </div>
+     <!--l. 132--><p class="noindent">Which points correspond to the height of the ball at times <script type="math/tex">0</script>, <script type="math/tex">1</script> and <script type="math/tex">2</script> seconds? </p><div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-71r5"></a>The
+     point that corresponds to <script type="math/tex">s(0)</script>, the position (height) of the ball at <script type="math/tex">t=0</script>, is <span class="word-choice" id="word-choice6"><a id="x1-72r6"></a><span class="choice  " id="choice3">A</span><span class="choice correct " id="choice4">B</span><span class="choice  " id="choice5">C</span><span class="choice  " id="choice6">D</span>
+     </span>.
+     <!--l. 137--><p class="noindent">The point that corresponds to <script type="math/tex">s(1)</script>, the position (height) of the ball at <script type="math/tex">t=1</script>, is <span class="word-choice" id="word-choice7"><a id="x1-73r7"></a><span class="choice  " id="choice7">A</span><span class="choice  " id="choice8">B</span><span class="choice  " id="choice9">C</span><span class="choice correct " id="choice10">D</span>
+     </span>.
+     </p><!--l. 140--><p class="noindent">The point that corresponds to <script type="math/tex">s(2)</script>, the position (height) of the ball at <script type="math/tex">t=2</script>, is <span class="word-choice" id="word-choice8"><a id="x1-74r8"></a><span class="choice  " id="choice11">A</span><span class="choice  " id="choice12">B</span><span class="choice correct " id="choice13">C</span><span class="choice  " id="choice14">D</span>
+     </span>.
+     </p><!--l. 143--></div>
+     <!--l. 145--><p class="noindent">Next let’s consider the average velocity of the ball.
+     </p></dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">What is the average velocity of the ball on the time interval <script type="math/tex">[1,2]</script>?
+     <div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-76r9"></a>
+     <!--l. 151--><p class="noindent">In order to find the average velocity of the ball on the interval <script type="math/tex">[1,2]</script> we recall that
+     the average velocity on the time interval <script type="math/tex">[a,b]</script> is given by <script type="math/tex; mode=display"> v_{\text {av}} = \frac {s(b) - s\left (\answer [given]{a}\right )} {b-a}. </script> Plugging in <script type="math/tex">a=1</script> and <script type="math/tex">b=2</script> we find
+                                                                  
+
+                                                                  
+     that <script type="math/tex; mode=display"> v_{\text {av}} = \frac {s(2)-s(1)}{2-1} = \frac {\answer [given]{16} - \answer [given]{24}}{1} = \answer [given]{-8}\unit {ft}/\unit {s}. </script> Check the figure below. </p><div class="image-environment" role="img" aria-labelledby="image-alt-3">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">0</script>change in timechange inposition<script type="math/tex">(2,s(2))</script><script type="math/tex">(1,s(1))</script><script type="math/tex">t</script><script type="math/tex">s</script>
+     </div>
+     </div>
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">What is the average velocity of the ball on the time interval <script type="math/tex">[t,2]</script>, for <script type="math/tex">0<t<2</script>?
+     <div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-78r10"></a>
+     <!--l. 206--><p class="noindent">We use the same formula we used to find the average velocity on the interval <script type="math/tex">[1,2]</script> to
+     find the average velocity on the time interval <script type="math/tex">[t,2]</script> for <script type="math/tex">0<t<2</script>. </p><script type="math/tex; mode=display"> \begin{align*} 
+v_{\text{av}} &=
+    \frac{s(2)-s\left(\answer[given]{t}\right)}
+     {\answer[given]{2}-\answer[given]{t}}\\
+     &= \frac{16 - (40t-16t^2)}{2-t}\\
+     &= \frac{8(2t^2-5t+2)}{2-t}\\
+     &= \frac{8(2t-1)\cancel{(t-2)}}{-\cancel{(t-2)}}\\
+     &= -8(2t-1)\\
+     &= 8-16t \hspace{0.06in}\unit{ft}/\unit{s},
+     \end{align*}</script>
+                                                                  
+
+                                                                  
+     for <script type="math/tex">0<t<2</script>. Check the figure below. <div class="image-environment" role="img" aria-labelledby="image-alt-4">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">0</script><script type="math/tex">\Delta t</script><script type="math/tex">\Delta s</script><script type="math/tex">t</script><script type="math/tex">(2,s(2))</script><script type="math/tex">(t,s(t))</script><script type="math/tex">t</script><script type="math/tex">s</script>
+     </div>
+     <!--l. 256--></div>
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">What is the average velocity of the ball on the interval <script type="math/tex">[2,t]</script>, for <script type="math/tex">2<t<2.5</script>?
+     <div class="theorem-like problem-environment explanation" id="problem11"><a id="x1-80r11"></a>
+     <!--l. 263--><p class="noindent">To calculate the average velocity on the interval <script type="math/tex">[2,t]</script>, for <script type="math/tex">2<t<2.5</script>, we will use our average
+     velocity formula one more time to find <script type="math/tex; mode=display"> v_{\text {av}} = \frac {s(t)-s(2)}{t-2} = \frac {s(2)-s(t)}{2-t}. </script> However, this is exactly the
+     same expression we got when calculating the average velocity on the
+     interval <script type="math/tex">[t,2]</script> for <script type="math/tex">0<t<2</script>. So the average velocity on the interval <script type="math/tex">[2,t]</script>, for <script type="math/tex">2<t<2.5</script>, is given by
+     <script type="math/tex; mode=display"> v_{\text {av}} =\answer [given]{8-16t}\hspace {0.06in}\unit {ft}/\unit {s}. </script>
+     </p></div>
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd class="enumerate-enumitem">Using the results in parts (e) and (f), compute the average velocity on the
+     interval
+         <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+      (i) </dt><dd class="enumerate-enumitem"><script type="math/tex">[2, 2.1]</script> <script type="math/tex; mode=display"> v_{\text {av}} = 8-16(\answer [given]{2.1})=-25.6 \hspace {0.06in}\unit {ft}/\unit {s} </script>
+         </dd><dt class="enumerate-enumitem">
+     (ii) </dt><dd class="enumerate-enumitem"><script type="math/tex">[1.9,2]</script> <script type="math/tex; mode=display"> v_{\text {av}} = 8-16(\answer [given]{1.9})=-22.4 \hspace {0.06in}\unit {ft}/\unit {s} </script></dd></dl>
+     </dd></dl>
+<!--l. 288--></div>
+<!--l. 290--><p class="noindent">In our previous example, we computed <em>average velocity</em> on several different intervals.
+If we let the size of the interval go to zero, we get <strong>instantaneous velocity</strong>. Limits
+will allow us to compute instantaneous velocity. Let’s use the same setting as
+before.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment example" id="problem12"><a id="x1-84r12"></a>The height of a ball above the ground between <script type="math/tex">0</script> and <script type="math/tex">2.5</script> seconds is given by <script type="math/tex; mode=display"> s(t) = 40t - 16t^2. </script> Find the
+instantaneous velocity of the ball <script type="math/tex">2</script> seconds after it is thrown. <div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-85r13"></a>From the previous
+example, we know that the average velocity of the ball on the interval <script type="math/tex">[t,2]</script>, for <script type="math/tex">0<t<2</script>, and the
+average velocity on the interval <script type="math/tex">[2,t]</script>, for <script type="math/tex">2<t<2.5</script>, are both given by <script type="math/tex; mode=display"> v_{\text {av}} = \frac {s(t)-s(2)}{t-2}= 8-16t \hspace {0.06in}\unit {ft}/\unit {s}. </script> All we need to do to find the
+instantaneous velocity at <script type="math/tex">t=2</script> is take the limit as <script type="math/tex">t</script> goes to <script type="math/tex">\answer [given]{2}</script> of the expression above. Doing
+so we find <script type="math/tex; mode=display"> \begin{align*} 
+v = \lim_{t\to2}v_{\text{av}}
+=\lim_{t\to2}  \frac{s(t)-s(2)}{t-2}
+&= \lim_{t\to2}(8-16t)\\
+&= \answer[given]{-24}\unit{ft}/\unit{s}.
+\end{align*}</script>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
