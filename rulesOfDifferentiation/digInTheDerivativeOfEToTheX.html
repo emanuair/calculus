@@ -1,0 +1,155 @@
+<!DOCTYPE html><html lang="en"><head> <title>The derivative of the natural exponential
+                                                                  
+
+                                                                  
+function</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheDerivativeOfEToTheX.tex"/> 
+<meta name="date" content="2018-10-16 20:33:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use ``shortcut&#39;&#39; rules to find and use derivatives."/> 
+<meta name="learning-outcome" content="Use the definition of the derivative to develop a shortcut rule to find the derivative of the natural exponential function."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="9a3918a0ee30c14367ab721c0cd12e1e53a72674 rulesOfDifferentiation/digInTheDerivativeOfEToTheX.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">We derive the derivative of the natural exponential function.
+</p></div>   <div class="maketitle"></div>
+We don’t know anything about derivatives that allows us to compute the derivatives of
+exponential functions without getting our hands dirty. Let’s do a little work with the
+definition of the derivative: <div class="theorem-like problem-environment explanation" id="problem1"><a id="x1-64r1"></a><script type="math/tex; mode=display"> \begin{align*} 
+\ddx a^x &=\lim_{h\to 0} \frac{a^{x+h}-a^x}{h} \\
+&=\lim_{h\to 0} \frac{a^xa^{h}-a^x}{h} \\
+&=\lim_{h\to 0} a^x\frac{\answer[given]{a^{h}-1}}{h} \\
+&=a^x\lim_{h\to 0} \frac{a^{h}-1}{h} \\
+&=a^x \cdot \underbrace{\text{(constant)}}_{\lim_{h\to 0} \frac{a^{h}-1}{h}}
+\end{align*}</script>
+</div> There are two interesting things to note here: We are left with a limit that involves <script type="math/tex">h</script>
+but not <script type="math/tex">x</script>, which means that whatever <script type="math/tex"> \lim _{h\to 0} (a^h-1)/h</script> is, provided it exists, we know that it is a
+number, or in other words, a constant. This means that <script type="math/tex">a^x</script> has a remarkable
+property:
+     <div class="quote">
+     <!--l. 35--><p class="noindent"><strong>The  derivative  of  an  exponential  function  is  a  constant
+     times itself.</strong></p></div>
+<!--l. 37--><p class="noindent">Unfortunately it is beyond the scope of this text to compute the limit <script type="math/tex; mode=display"> \lim _{h\to 0} \frac {a^h-1}{h}. </script> However, we
+can look at some examples. Consider <script type="math/tex">(2^h-1)/h</script> and <script type="math/tex">(3^h-1)/h</script>:
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"> <script type="math/tex">\begin {array}{c|c} h & (2^h-1)/h\\ \hline -1 & .5 \\ -0.1 & \approx 0.6700 \\ -0.01 & \approx 0.6910 \\ -0.001 & \approx 0.6929 \\ -0.0001 & \approx 0.6931 \\ -0.00001 & \approx 0.6932 \\ \end {array} \qquad \begin {array}{c|c} h & (2^h-1)/h\\ \hline 1 & 1 \\ 0.1 & \approx 0.7177 \\ 0.01 & \approx 0.6956 \\ 0.001 & \approx 0.6934 \\ 0.0001 & \approx 0.6932 \\ 0.00001 & \approx 0.6932 \\ \end {array} \qquad \qquad \begin {array}{c|c} h & (3^h-1)/h\\ \hline -1 & \approx 0.6667 \\ -0.1 & \approx 1.0404 \\ -0.01 & \approx 1.0926 \\ -0.001 & \approx 1.0980 \\ -0.0001 & \approx 1.0986 \\ -0.00001 & \approx 1.0986 \\ \end {array} \qquad \begin {array}{c|c} h & (3^h-1)/h\\ \hline 1 & 2 \\ 0.1 & \approx 1.1612 \\ 0.01 & \approx 1.1047 \\ 0.001 & \approx 1.0992 \\ 0.0001 & \approx 1.0987 \\ 0.00001 & \approx 1.0986 \\ \end {array}</script>
+</div>
+<!--l. 89--><p class="noindent">While these tables don’t prove that we have a pattern, it turns out that <script type="math/tex; mode=display"> \lim _{h\to 0}\frac {2^h-1}{h} \approx .7 \qquad \text {and}\qquad \lim _{h\to 0} \frac {3^h-1}{h} \approx 1.1. </script> Moreover, if
+you do more examples, choosing other values for the base <script type="math/tex">a</script>, you will find that the
+limit varies directly with the value of <script type="math/tex">a</script>: bigger <script type="math/tex">a</script>, bigger limit; smaller <script type="math/tex">a</script>, smaller limit.
+As we can already see, some of these limits will be less than <script type="math/tex">1</script> and some larger than <script type="math/tex">1</script>.
+Somewhere between <script type="math/tex">a=2</script> and <script type="math/tex">a=3</script> the limit will be exactly <script type="math/tex">1</script>. This happens when <script type="math/tex; mode=display"> a = e = 2.718281828459045\dots . </script> We will
+define the number <script type="math/tex">e</script> by this property in the next definition: </p><div class="theorem-like problem-environment definition" id="problem2"><a id="x1-65r2"></a> The number denoted by <script type="math/tex">e</script>,
+called <strong>Euler’s number</strong>, is defined to be the number satisfying the following relation
+<script type="math/tex; mode=display"> \lim _{h\to 0} \frac {e^h-1}{h} = 1. </script>
+</div> Using this definition, we see that the function <script type="math/tex">e^x</script> has the following truly remarkable
+property.
+<div class="theorem-like problem-environment theorem" id="problem3"><a id="x1-66r3"></a><span class="theorem-like-title">The derivative of the natural exponential function</span> The derivative of
+the natural exponential function is the natural exponential function
+itself. In other words, <script type="math/tex; mode=display"> \ddx e^x = e^x. </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>From the limit definition of the derivative, write
+<script type="math/tex; mode=display"> \begin{align*} 
+\ddx e^x&=\lim_{h\to 0} \frac{e^{x+h}-e^x}{h} \\
+                                                                  
+
+                                                                  
+&=\lim_{h\to 0} \frac{e^xe^{h}-e^x}{h} \\
+&=\lim_{h\to 0} \answer[given]{e^x}\frac{e^{h}-1}{h} \\
+&=e^x\lim_{h\to 0} \frac{e^{h}-1}{h} \\
+&=e^x\cdot1\\
+&=e^x.
+\end{align*}</script>
+</div>
+</div>
+<!--l. 132--><p class="noindent">Hence <script type="math/tex">e^x</script> is its own derivative. In other words, the slope of the plot of <script type="math/tex">e^x</script> is the same
+as its height, or the same as its second coordinate. Said another way, the
+function <script type="math/tex">f(x)=e^x</script> goes through the point <script type="math/tex">(a,e^a)</script> and has slope <script type="math/tex">e^a</script> at that point, no matter what <script type="math/tex">a</script>
+is.
+</p>
+<div role="article" class="problem-environment question" id="problem5"><a id="x1-68r5"></a> What is the slope of the tangent line to the graph of the function <script type="math/tex">f(x) = e^x</script> at <script type="math/tex">x = 5</script>?  The slope is <script type="math/tex">\answer [given]{e^5}</script>.
+</div>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-69r6"></a>Compute: <script type="math/tex; mode=display"> \ddx \left (8\sqrt {x} + 7e^x \right ) </script> <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-70r7"></a>Write with me: <script type="math/tex; mode=display"> \begin{align*} 
+\ddx\left(8\sqrt{x} + 7e^x \right) &= 8\ddx x^{1/2} + 7\ddx e^x\\
+&= 4x^{-1/2} + 7 \answer[given]{e^x}.
+\end{align*}</script>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

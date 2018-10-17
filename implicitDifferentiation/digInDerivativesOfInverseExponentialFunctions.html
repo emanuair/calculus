@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="en"><head> <title>Derivatives  of  inverse  exponential
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInDerivativesOfInverseExponentialFunctions.tex"/> 
+<meta name="date" content="2018-10-16 20:34:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find derivatives of inverse functions in general."/> 
+<meta name="learning-outcome" content="Understand how the derivative of an inverse function relates to the original derivative."/> 
+<meta name="learning-outcome" content="Explain the formula for the derivative of the natural log function."/> 
+<meta name="learning-outcome" content="Calculate derivatives of logs in any base."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="84d2f59f9e064b816aad58023bec8a4430c6157f implicitDifferentiation/digInDerivativesOfInverseExponentialFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 15--><p class="noindent">We derive the derivatives of inverse exponential functions using implicit
+differentiation.
+</p></div>   <div class="maketitle"></div>
+Geometrically, there is a close relationship between the plots of <script type="math/tex">e^x</script> and <script type="math/tex">\ln (x)</script>, they are
+reflections of each other over the line <script type="math/tex">y=x</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">e^x</script><script type="math/tex">\ln (x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+One may suspect that we can use the fact that <script type="math/tex">\ddx e^x = e^x</script>, to deduce the derivative of <script type="math/tex">\ln (x)</script>. We will
+use implicit differentiation to exploit this relationship computationally.
+<div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">The Derivative of the Natural Logrithm</span> <script type="math/tex; mode=display"> \ddx \ln (x) = \frac {1}{x}. </script> <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Recall <script type="math/tex; mode=display"> \ln (x) = y \qquad \text {exactly when}\qquad e^y = x\qquad \text {and}\qquad x>\answer [given]{0}. </script> Hence <script type="math/tex; mode=display"> \begin{align*} 
+e^y &= x\\
+\ddx e^y &= \ddx x &\text{Differentiate both sides.}\\
+e^y \dd[y]{x} &= 1 &\text{Implicit differentiation.}\\
+\dd[y]{x} &= \frac{1}{e^y} = \answer[given]{\frac{1}{x}}&\text{Solve for $\dd[y]{x}$.}
+\end{align*}</script>
+Since <script type="math/tex">y=\ln (x)</script>, <script type="math/tex">\ddx \ln (x) = \answer [given]{\frac {1}{x}}</script>.
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem3"><a id="x1-66r3"></a> Compute: <script type="math/tex; mode=display"> \ddx \left (-\ln (\cos (x))\right ) \begin {prompt} = \answer {\tan (x)} \end {prompt} </script>
+</div>
+<!--l. 82--><p class="noindent">From the derivative of the natural logarithm, we can deduce another fact:
+</p>
+<div class="theorem-like problem-environment theorem" id="problem4"><a id="x1-67r4"></a><span class="theorem-like-title">The derivative of any logarithm</span> Let <script type="math/tex">b</script> be a positive real number.
+Then <script type="math/tex; mode=display"> \ddx \log _b(x) = \frac {1}{x\ln (b)}. </script> <div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-68r5"></a>Here we need to remember that <script type="math/tex; mode=display"> \log _b(x) = \frac {\ln (x)}{\answer [given]{\ln (b)}}. </script> So we may write
+<script type="math/tex; mode=display"> \begin{align*} 
+      \ddx \log_b(x) &= \ddx \frac{\ln(x)}{\answer[given]{\ln(b)}}\\
+      &= \answer[given]{\frac{1}{x\ln(b)}}.
+    \end{align*}</script>
+                                                                  
+
+                                                                  
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem6"><a id="x1-69r6"></a> Compute: <script type="math/tex; mode=display"> \ddx \log _7(x) \begin {prompt} = \answer {1/(x \ln (7))} \end {prompt} </script>
+</div>
+<!--l. 113--><p class="noindent">We can also compute the derivative of an arbitrary exponential function.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem7"><a id="x1-70r7"></a><span class="theorem-like-title">The derivative of an exponential function</span> <script type="math/tex; mode=display"> \ddx a^x = a^x\cdot \ln (a). </script> <div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-71r8"></a>Here we need to be slightly sneaky. Note <script type="math/tex; mode=display"> a^x = e^{\ln (a^x)} = e^{x\ln (a)}. </script>
+So we may write <script type="math/tex; mode=display"> \begin{align*} 
+         \ddx a^x &= \ddx e^{x\ln(a)}\\
+      &= e^{x\ln(a)} \cdot \answer[given]{\ln(a)}\\
+      &= \answer[given]{a^x\cdot \ln(a)}.
+    \end{align*}</script>
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem9"><a id="x1-72r9"></a> Compute: <script type="math/tex; mode=display"> \ddx 7^x \begin {prompt} = \answer {7^x \ln (7)} \end {prompt} </script>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

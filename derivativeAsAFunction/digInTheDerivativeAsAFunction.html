@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  derivative  as  a
+                                                                  
+
+                                                                  
+function</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheDerivativeAsAFunction.tex"/> 
+<meta name="date" content="2018-10-16 20:34:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the derivative as a function related to the original definition of a function."/> 
+<meta name="learning-outcome" content="Find the derivative function using the limit definition."/> 
+<meta name="learning-outcome" content="Relate the derivative function to the derivative at a point."/> 
+<meta name="learning-outcome" content="Relate the graph of the function to the graph of its derivative."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="0d97a2a5c5df1634d4f5af7b1e4f93c2772480b0 derivativeAsAFunction/digInTheDerivativeAsAFunction.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 18--><p class="noindent">Here we study the derivative of a function, as a function, in its own right.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>The derivative of a function, as a function</h3>
+<!--l. 24--><p class="noindent">First, we have to find an alternate definition for <script type="math/tex">f'(a)</script>, the derivative of a function <script type="math/tex">f</script> at
+<script type="math/tex">a</script>.
+</p><!--l. 26--><p class="noindent">Let’s start with the average rate of change of the function <script type="math/tex">f</script> as the input changes from <script type="math/tex">a</script> to
+<script type="math/tex">x</script>. We will introduce a new variable, <script type="math/tex">h</script>, to denote the difference between <script type="math/tex">x</script> and <script type="math/tex">a</script>. That is <script type="math/tex">x-a=h</script>
+or <script type="math/tex">x=a+h</script>. Take a look at the figure below. </p><div class="image-environment" role="img" aria-labelledby="image-alt-1">      <script type="math/tex">0</script><script type="math/tex">h</script><script type="math/tex">\Delta y</script><script type="math/tex">=\frac {\Delta y}{h}=\frac {f(a+h)-f(a)}{h}</script>average rateof change<script type="math/tex">f</script><script type="math/tex">a</script><script type="math/tex">a+h</script><script type="math/tex">f(a)</script><script type="math/tex">f(a+h)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Now we can write <script type="math/tex; mode=display"> {\text {average rate of change }}=\frac {f(a+h)-f(a)}{(a+h)-a}=\frac {f(a+h)-f(a)}{h} </script> What happens if <script type="math/tex">h\to 0</script>? In other words, what is the meaning of the
+limit <script type="math/tex; mode=display"> \lim _{h\to 0} \frac {f(a+h)-f(a)}{h}? </script> Obviously, this limit represents <script type="math/tex">f'(a)</script>, the instantaneous rate of change of <script type="math/tex">f</script> at <script type="math/tex">a</script>!
+Therefore, we have an alternate way of writing the definition of the derivative at the
+point <script type="math/tex">a</script>, namely <script type="math/tex; mode=display"> f'(a) = \lim _{h\to 0} \frac {f(a+h)-f(a)}{h}. </script>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-1001r1"></a>Let <script type="math/tex">f(x) = x^2-2x</script>. Using the alternate expression for the derivative, find the slope of the tangent
+line to the curve <script type="math/tex">y=f(x)</script> at the point <script type="math/tex">(2,f(2))</script>. <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-1002r2"></a>The slope of the tangent line is given by the
+derivative, <script type="math/tex">f'(2)</script>. <script type="math/tex; mode=display"> f'(2) = \lim _{h\to 0}\frac {f\left (\answer [given]{2+h}\right )-f\left (2\right )}{h}. </script> Now substitute in for the function we know, <script type="math/tex; mode=display"> f'(2) = \lim _{h\to 0}\frac {(2+h)^2-2(2+h) -0}{h}. </script> Now expand the
+numerator of the fraction, <script type="math/tex; mode=display"> f'(2) =\lim _{h\to 0} \frac {4+4h+h^2-4-2h }{h}. </script> Now combine like-terms, <script type="math/tex; mode=display"> f'(2) = \lim _{h\to 0} \frac {2h+h^2}{h}. </script> Factor an <script type="math/tex">h</script> from every term in
+the numerator, <script type="math/tex; mode=display"> f'(2) = \lim _{h\to 0}\frac {\cancel {h}\left (2+h\right )}{\cancel {h}}. </script> Compute the limit, <script type="math/tex; mode=display"> f'(2) = \lim _{h\to 0}(2+h)=\answer [given]{2}. </script>
+</div>
+</div>
+<!--l. 118--><p class="noindent">This alternate definition of the derivative of <script type="math/tex">f</script> at <script type="math/tex">a</script>, namely,
+</p><!--l. 123--><p class="noindent"><script type="math/tex; mode=display"> f'(a) = \lim _{h\to 0}\frac {f(a+h)-f(a)}{h}, </script> (provided that the limit exists), allows us to define <script type="math/tex">f'(x)</script> for any value of <script type="math/tex">x</script>,
+</p><!--l. 129--><p class="noindent"><script type="math/tex; mode=display"> f'(x) = \lim _{h\to 0}\frac {f(x+h)-f(x)}{h}, </script> (provided that the limit exists).
+</p><!--l. 132--><p class="noindent">And this is how we define a new function, <script type="math/tex">f'</script>, the derivative of <script type="math/tex">f</script>. The domain of <script type="math/tex">f'</script>
+consists of all points in the domain of <script type="math/tex">f</script> where the function <script type="math/tex">f</script> is differentiable. <script type="math/tex">f'(x)</script>
+                                                                  
+
+                                                                  
+gives us the instantaneous rate of change of <script type="math/tex">f</script> at any point <script type="math/tex">x</script> in the domain of
+<script type="math/tex">f'</script>.<br class="newline"/>
+Given a function <script type="math/tex">f</script> from some set of real numbers to the real numbers, the derivative <script type="math/tex">f'</script>
+is also a function from some set of real numbers to the real numbers. Understanding
+the relationship between the <em>functions</em> <script type="math/tex">f</script> and <script type="math/tex">f'</script> helps us understand any situation (real
+or imagined) involving changing values.
+</p><div class="theorem-like problem-environment example" id="problem3"><a id="x1-1003r3"></a>Given the function <script type="math/tex">f(x) = 3x+2</script>, find <script type="math/tex">f'(x)</script>. <br class="newline"/>
+<div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-1004r4"></a>Start with the definition of <script type="math/tex">f'(x)</script> <script type="math/tex; mode=display"> f'(x) = \lim _{h\to 0}\frac {f(x+h)-f(\answer [given]{x})}{h}. </script> Replace <script type="math/tex">f</script> with its formula, <script type="math/tex; mode=display"> f'(x) = \lim _{h\to 0}\frac {3(x+h)+2-\left (\answer [given]{3x+2}\right )}{h}. </script> Simplify the top, <script type="math/tex; mode=display"> f'(x) = \lim _{h\to 0}\frac {3\cancel {h}}{\cancel {h}}. </script> Evaluate
+the limit. <script type="math/tex; mode=display"> f'(x) = \lim _{h\to 0}{3}=\answer [given]{3}. </script>
+<!--l. 184--></div>
+</div>
+
+<div role="article" class="problem-environment question" id="problem5"><a id="x1-1005r5"></a> Is it true that the domain of <script type="math/tex">f'</script> is equal to the domain of <script type="math/tex">f</script>?  <div class="multiple-choice" id="problem6"><span class="choice  " id="choice1">yes</span> <span class="choice correct " id="choice2">no</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback7">Let’s consider the function <script type="math/tex">f(x)=|x|</script>. The domain of <script type="math/tex">f</script> is <script type="math/tex">\RR </script>. Remember, <script type="math/tex">f</script> is in fact a piecewise
+defined function, since <script type="math/tex; mode=display"> f(x)=|x| = \begin {cases} \answer [given]{-x} &\text {if $x<0$},\\ \answer [given]{x} &\text {if $x\ge 0$}. \end {cases} </script> We can easily see that all nonzero real numbers are in the
+domain of <script type="math/tex">f'</script>. Why?
+<!--l. 207--><p class="noindent">Because, if <script type="math/tex">x>0</script>, then the graph of <script type="math/tex">f</script> near <script type="math/tex">x</script> is a line with the slope <script type="math/tex">1</script>. Therefore, <script type="math/tex">f'(x)=1</script>, for <script type="math/tex">x>0</script>.
+Similarly, if <script type="math/tex">x<0</script>, then the graph of <script type="math/tex">f</script> near <script type="math/tex">x</script> is a line with the slope <script type="math/tex">-1</script>. So, <script type="math/tex">f'(x)=-1</script>, for <script type="math/tex">x<0</script>. Therefore, <script type="math/tex">f'(x)</script>
+is defined for all <strong>nonzero</strong> numbers. <script type="math/tex; mode=display"> f'(x) = \begin {cases} \answer [given]{ -1} &\text {if $x<0$},\\ \answer [given]{1} &\text {if $x> 0$}. \end {cases} </script> But, what about <script type="math/tex">x=0</script>? Is 0 in the domain of
+<script type="math/tex">f'</script>?<br class="newline"/>Let’s try to compute <script type="math/tex">f'(0)</script>, and see what happens. <script type="math/tex; mode=display"> f'(0)= \lim _{h\to 0} \dfrac {f(0+h) - f(\answer [given]{0})}{h}= \lim _{h\to 0} \dfrac {|0+h|-|\answer [given]{0}| }{h} = \lim _{h\to 0} \dfrac {|\answer [given]{h}| }{h} </script> The last limit does not exist. Recall <script type="math/tex; mode=display"> \lim _{h\to 0^+} \dfrac {|h| }{h}= \lim _{h\to 0^+} \dfrac {\answer [given]{h} }{h}=\lim _{h\to 0^+} \answer [given]{1}=\answer [given]{1} </script>
+and <script type="math/tex; mode=display"> \lim _{h\to 0^-} \dfrac {|h| }{h}= \lim _{h\to 0^-} \dfrac {\answer [given]{-h} }{h}=\lim _{h\to 0^+} \answer [given]{-1}=\answer [given]{-1} </script> Since <script type="math/tex">f'(0)</script> is not defined, <script type="math/tex">f</script> is <strong>not differentiable</strong> at <script type="math/tex">0</script>, and , therefore, <script type="math/tex">0</script> is not in the
+domain of <script type="math/tex">f'</script>.
+</p><!--l. 236--><p class="noindent">This example demonstrates that a function <script type="math/tex">f</script> and its derivative, <script type="math/tex">f'</script>, may have different
+domains. </p></div>
+</div>
+<div role="article" class="problem-environment question" id="problem8"><a id="x1-1006r6"></a> Can two different functions, say, <script type="math/tex">f</script> and <script type="math/tex">g</script>, have the same derivative?  <div class="multiple-choice" id="problem9"><span class="choice correct " id="choice3">yes</span> <span class="choice  " id="choice4">no</span>
+</div>
+<div class="feedback" data-feedback="attempt" id="feedback10">Many different functions can share the same derivatives. Consider two different
+functions, <script type="math/tex">f</script> and <script type="math/tex">g</script>, defined by<br class="newline"/><script type="math/tex">f(x)=x</script> and <script type="math/tex">g(x)=x+5</script>. Then, <script type="math/tex">f'(x)=1</script>, and <script type="math/tex">g'(x)=1</script>, for all real numbers <script type="math/tex">x</script>.<br class="newline"/>So, the derivatives of these two different functions are equal.
+</div>
+</div>
+<!--l. 259--><p class="noindent">Let’s compare the graphs of <script type="math/tex">f</script> and <script type="math/tex">f'</script> for the derivatives we’ve computed so
+far:
+                                                                  
+
+                                                                  
+</p><!--l. 261--><p class="noindent">
+                                 <script type="math/tex; mode=display">f(x)=x^2, f'(x)=2x</script>
+ </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">f</script><script type="math/tex">f'</script>
+</div>
+<!--l. 280--><p class="noindent">
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display">f(x)=3x+2, f'(x)=3</script>
+ </p><div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">f</script><script type="math/tex">f'</script>
+</div>
+<!--l. 303--><p class="noindent">
+                                 <script type="math/tex; mode=display">f(x)=|x|, f'(x)=\begin {cases} 1 & \text {for } x>0 \\ -1 & \text {for } x<0 \end {cases}</script>
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">f</script><script type="math/tex">f'</script>
+</div>
+<div role="article" class="problem-environment question" id="problem11"><a id="x1-1007r7"></a> For each of the three pairs of functions, describe <script type="math/tex">y=f(x)</script> when <script type="math/tex">f'</script> is positive, and when <script type="math/tex">f'</script> is
+negative.<br class="newline"/>
+<!--l. 330--><p class="noindent">When <script type="math/tex">f'</script> is positive, <script type="math/tex">y=f(x)</script> is <span class="word-choice" id="word-choice12"><a id="x1-1008r8"></a><span class="choice  " id="choice5">positive</span><span class="choice correct " id="choice6">increasing</span><span class="choice  " id="choice7">negative</span><span class="choice  " id="choice8">decreasing</span>
+</span>. When <script type="math/tex">f'</script> is negative, <script type="math/tex">y=f(x)</script> is <span class="word-choice" id="word-choice13"><a id="x1-1009r9"></a><span class="choice  " id="choice9">positive</span><span class="choice  " id="choice10">increasing</span><span class="choice  " id="choice11">negative</span><span class="choice correct " id="choice12">decreasing</span>
+</span>
+</p></div> <div role="article" class="problem-environment question" id="problem14"><a id="x1-1010r10"></a> Here we see the graph of <script type="math/tex">f'</script>, the derivative of some function <script type="math/tex">f</script>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-5">
+</div>
+<!--l. 354--><p class="noindent">Which of the following graphs could be <script type="math/tex">y = f(x)</script>? </p><div class="multiple-choice" id="problem15"><span class="choice  " id="choice13"> 
+
+                                                                  
+
+                                                                  
+</span> <span class="choice correct " id="choice14"> 
+
+</span> <span class="choice  " id="choice15"> 
+
+</span> </div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

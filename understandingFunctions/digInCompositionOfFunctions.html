@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head> <title>Compositions  of
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInCompositionOfFunctions.tex"/> 
+<meta name="date" content="2018-10-16 20:53:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the domain and range of a function."/> 
+<meta name="learning-outcome" content="Distinguish between functions by considering their domains."/> 
+<meta name="learning-outcome" content="Perform basic operations and compositions on functions."/> 
+<meta name="learning-outcome" content="Work with piecewise defined functions."/> 
+<meta name="learning-outcome" content="Recognize different representations of the same function."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="434705ab0e103ea51e4b78e547ce5fd2a867c429 understandingFunctions/digInCompositionOfFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">We discuss compositions of functions.
+</p></div>   <div class="maketitle"></div>
+Given two functions, we can compose them. Let’s give an example in a “real
+context.”
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Let <script type="math/tex; mode=display"> g(m) = \text {the amount of gas one can buy with $m$ dollars,} </script> and let <script type="math/tex; mode=display"> f(g) = \text {how far one can drive with $g$ gallons of gas.} </script> What does <script type="math/tex">f(g(m))</script> represent in this setting? <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>With <script type="math/tex">f(g(m))</script> we first relate how
+far one can drive with <script type="math/tex">\answer [given]{g}</script> gallons of gas, and this in turn is determined by
+how much money <script type="math/tex">\answer [given]{m}</script> one has. Hence <script type="math/tex">f(g(m))</script> represents how far one can drive with <script type="math/tex">\answer [given]{m}</script>
+dollars.
+</div>
+</div>
+<!--l. 40--><p class="noindent">Composition of functions can be thought of as putting one function inside another.
+We use the notation <script type="math/tex; mode=display"> (f\circ g)(x) = f(g(x)). </script> </p><div class="theorem-like problem-environment warning" id="problem3"><a id="x1-66r3"></a>The composition <script type="math/tex">f\circ g</script> only makes sense if <script type="math/tex; mode=display"> \{\text {the range of $g$}\} \text { is contained in or equal to } \{\text {the domain of $f$}\} </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-67r4"></a>Suppose we have <script type="math/tex; mode=display"> \begin{align*} 
+   f(x)&={{x}^{2}}+5x+4 &&\text{for $-\infty< x< \infty$,}\\
+  g(x)&= x+7 &&\text{for $-\infty< x< \infty$.}\\
+\end{align*}</script>
+Find <script type="math/tex">f(g(x))</script> and state its domain. <div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-68r5"></a>The range of <script type="math/tex">g</script> is <script type="math/tex">-\infty < x< \infty </script>, which is equal to the domain of <script type="math/tex">f</script>. This
+means the domain of <script type="math/tex">f\circ g</script> is <script type="math/tex">-\infty < x< \infty </script>. Next, we substitute <script type="math/tex">x+7</script> for each instance of <script type="math/tex">\answer [given]{x}</script> found in <script type="math/tex; mode=display"> f(x)={{x}^{2}}+5x+4 </script> and so
+<script type="math/tex; mode=display"> \begin{align*} 
+  f(g(x)) &=f(x+7)\\
+  &=\answer[given]{{{(x+7)}^{2}}+5(x+7)+4}.
+  \end{align*}</script>
+</div>
+</div>
+<!--l. 77--><p class="noindent">Now let’s try an example with a more restricted domain.
+</p>
+<div class="theorem-like problem-environment example" id="problem6"><a id="x1-69r6"></a>Suppose we have: <script type="math/tex; mode=display"> \begin{align*} 
+   f(x)&=x^2 &&\text{for $-\infty< x< \infty$,}\\
+  g(x)&= \sqrt{x} &&\text{for $0\le x< \infty$.}\\
+\end{align*}</script>
+Find <script type="math/tex">f(g(x))</script> and state its domain. <div class="theorem-like problem-environment explanation" id="problem7"><a id="x1-70r7"></a>The domain of <script type="math/tex">g</script> is <script type="math/tex">0\le x< \infty </script>. From this we can see that the range
+of <script type="math/tex">g</script> is <script type="math/tex">\answer [given]{0}\le x< \infty </script>. This is contained in the domain of <script type="math/tex">f</script>.
+<!--l. 91--><p class="noindent">This means that the domain of <script type="math/tex">f\circ g</script> is <script type="math/tex">0\le x< \infty </script>. Next, we substitute <script type="math/tex">\answer [given]{\sqrt {x}}</script> for each instance of <script type="math/tex">x</script> found
+in <script type="math/tex; mode=display"> f(x)={{x}^{2}} </script> and so </p><script type="math/tex; mode=display"> \begin{align*} 
+   f(g(x))&=f(\sqrt{x})\\
+  &=\left(\sqrt{x}\right)^2.
+  \end{align*}</script>
+We can summarize our results as a piecewise function, which looks somewhat
+interesting: <script type="math/tex; mode=display"> (f\circ g)(x) = \begin {cases} x & \text {if $0\le x < \infty $}\\ \text {undefined} &\text {otherwise}. \end {cases} </script>
+</div>
+                                                                  
+
+                                                                  
+</div>
+<div class="theorem-like problem-environment example" id="problem8"><a id="x1-71r8"></a>Suppose we have: <script type="math/tex; mode=display"> \begin{align*} 
+   f(x)&=\sqrt{x} &&\text{for $0\le x< \infty$,}\\
+  g(x)&= x^2 &&\text{for $-\infty< x< \infty$.}
+\end{align*}</script>
+Find <script type="math/tex">f(g(x))</script> and state its domain. <div class="theorem-like problem-environment explanation" id="problem9"><a id="x1-72r9"></a>While the domain of <script type="math/tex">g</script> is <script type="math/tex">-\infty < x< \infty </script>, its range is only <script type="math/tex">0 \le x<\infty </script>. This is
+exactly the domain of <script type="math/tex">f</script>. This means that the domain of <script type="math/tex">f\circ g</script> is <script type="math/tex">-\infty < x< \infty </script>. Now we may substitute <script type="math/tex">\answer [given]{x^2}</script>
+for each instance of <script type="math/tex">\answer [given]{x}</script> found in <script type="math/tex; mode=display"> f(x)=\sqrt {x} </script> and so <script type="math/tex; mode=display"> \begin{align*} 
+   f(g(x))&=f(x^2)\\
+  &=\sqrt{x^2},\\
+  &=|x|.
+  \end{align*}</script>
+</div>
+</div>
+<!--l. 140--><p class="noindent">Compare and contrast the previous two examples. We used the same functions for
+each example, but composed them in different ways. The resulting compositions are
+not only different, they have different domains!
+ 
+ 
+
+                                                                  
+
+
+</p></body></html>

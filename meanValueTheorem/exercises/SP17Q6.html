@@ -1,0 +1,108 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="SP17Q6.tex"/> 
+<meta name="date" content="2018-10-16 01:35:00"/> 
+<meta name="author" content="Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Use the Mean Value Theorem to bound the error in linear approximation."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="2f9ceeaef0e3b6f2781372c6eae6ce9c936b57a2 meanValueTheorem/exercises/SP17Q6.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<span class="learning-outcome">Find the linear approximation to a function at a point and use it to approximate the function value.</span> <span class="learning-outcome">Use the Mean Value Theorem to bound the error in linear approximation.</span>
+<!--l. 9--><p class="noindent">Let <script type="math/tex">f</script> be a differentiable function on the interval <script type="math/tex">(0,6)</script> with the particular values of <script type="math/tex">f</script> and <script type="math/tex">f'</script>
+given in the table below. <script type="math/tex; mode=display"> \begin {array}{c|c|c|} x & f(x) & f'(x)\\ \hline 1 & 0 & 4\\ 2 & 1 & 3\\ 3 & 5 & 2\\ 4 & 6 & 5\\ \end {array} </script>
+</p>
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Find the average rate of change of <script type="math/tex">f</script> on the interval <script type="math/tex">[1,4]</script>. <script type="math/tex; mode=display"> \text {average rate of change of $f$ on $[1,4]$}=\answer {2} </script> <div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Choose the correct statement. <div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">There exists a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that the instantaneous rate of change of <script type="math/tex">f</script> at the point <script type="math/tex">c</script>
+is equal to the average rate of change of <script type="math/tex">f</script> on <script type="math/tex">[1,4]</script> , although the function <script type="math/tex">f</script> does
+not satisfy the conditions of the Mean value theorem on <script type="math/tex">[1,4]</script>.</span> <span class="choice correct " id="choice2">There exists
+a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that the instantaneous rate of change of <script type="math/tex">f</script> at the point <script type="math/tex">c</script>
+is equal to the average rate of change of <script type="math/tex">f</script> on <script type="math/tex">[1,4]</script>, since the function <script type="math/tex">f</script> satisfies
+the conditions of the Mean value theorem on <script type="math/tex">[1,4]</script>.</span> <span class="choice  " id="choice3">There exists a point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script>
+such that the instantaneous rate of change of <script type="math/tex">f</script> at the point <script type="math/tex">c</script> is equal to the
+average rate of change of <script type="math/tex">f</script> on <script type="math/tex">[1,4]</script>, but we don’t have enough information to find
+such a point.</span> <span class="choice  " id="choice4">There exists no point <script type="math/tex">c</script> in <script type="math/tex">(1,4)</script> such that the instantaneous rate
+of change of <script type="math/tex">f</script> at the point <script type="math/tex">c</script> is equal to the average rate of change of <script type="math/tex">f</script> on <script type="math/tex">[1,4]</script>.</span> </div>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

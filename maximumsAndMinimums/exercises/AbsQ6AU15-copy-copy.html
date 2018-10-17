@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="AbsQ6AU15-copy-copy.tex"/> 
+<meta name="date" content="2018-10-16 01:33:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Classify critical points."/> 
+<meta name="learning-outcome" content="Apply the First Derivative Test."/> 
+<meta name="learning-outcome" content="Apply the Second Derivative Test."/> 
+<meta name="learning-outcome" content="Find inflection points."/> 
+<meta name="learning-outcome" content="Identify situations in which an absolute maximum or minimum is guaranteed."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="f62becbbb680e8eb6df5ab88012e083b4936936d maximumsAndMinimums/exercises/AbsQ6AU15-copy-copy.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<span class="learning-outcome">Classify critical points.</span> <span class="learning-outcome">Apply the First Derivative Test.</span> <span class="learning-outcome">Apply the Second Derivative Test.</span> <span class="learning-outcome">Find inflection points.</span> <span class="learning-outcome">Identify situations in which an absolute maximum or minimum is guaranteed.</span>
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Let <script type="math/tex">f(x)=x\ln x</script>. The domain of <script type="math/tex">f</script> is <script type="math/tex">(\answer {0},\answer {\infty })</script>. <div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> <div class="select-all" id="problem3"><a id="x1-66r3"></a> <span class="choice  " id="choice1"><script type="math/tex">f</script> is not everywhere continuous on <script type="math/tex">(0,\infty )</script></span> <span class="choice correct " id="choice2"><script type="math/tex">f</script> is continuous on <script type="math/tex">[M,\infty )</script>
+for some <script type="math/tex">M>0</script></span> <span class="choice  " id="choice3">There is some <script type="math/tex">M>0</script> such that <script type="math/tex">f</script> is not continuous on <script type="math/tex">[M,\infty )</script>.</span> <span class="choice  " id="choice4"><script type="math/tex">f</script> is nowhere continuous
+on <script type="math/tex">(0,\infty )</script></span> <span class="choice correct " id="choice5"><script type="math/tex">f</script> is continuous on <script type="math/tex">(\varepsilon ,\infty )</script> for every <script type="math/tex">\varepsilon >0</script>.</span> <span class="choice correct " id="choice6"><script type="math/tex">f</script> is continuous on <script type="math/tex">(0,\infty )</script></span>
+</div> <div role="article" class="problem-environment exercise" id="problem4"><a id="x1-67r4"></a> The preceding statements regarding <script type="math/tex">f</script> are true because <div class="multiple-choice" id="problem5"><span class="choice  " id="choice7"><script type="math/tex">f</script> is the product of two
+functions whose intervals of continuity have union equal to <script type="math/tex">(0,\infty )</script>.</span> <span class="choice  " id="choice8">the natural logarithm
+is not continuous.</span> <span class="choice  " id="choice9">the limit <script type="math/tex">\lim _{x\to 0^+}f(x)</script> exists and is equal to <script type="math/tex">0</script>.</span> <span class="choice correct " id="choice10"><script type="math/tex">f</script> is the product of two
+functions which are continuous on <script type="math/tex">(0,\infty )</script>.</span> </div>
+<div role="article" class="problem-environment exercise" id="problem6"><a id="x1-68r5"></a> Next, we shall classify the extrema of <script type="math/tex">f</script> and determine whether it has any global
+extrema.
+<!--l. 36--><p class="noindent">First, compute <script type="math/tex; mode=display"> f'(x)=\answer {1+\ln (x)} </script> </p><div role="article" class="problem-environment exercise" id="problem7"><a id="x1-69r6"></a> The function <script type="math/tex">f</script> has <script type="math/tex">\answer {1}</script> critical point(s). <div role="article" class="problem-environment exercise" id="problem8"><a id="x1-70r7"></a> The single critical point of <script type="math/tex">f</script> is
+located at <script type="math/tex; mode=display"> x=\answer {1/e} </script> <div role="article" class="problem-environment exercise" id="problem9"><a id="x1-71r8"></a> Now compute <script type="math/tex; mode=display"> f''(x)=\answer {\frac {1}{x}} </script> <div role="article" class="problem-environment exercise" id="problem10"><a id="x1-72r9"></a> Because the value of <script type="math/tex">f''(\frac {1}{e})=\frac {1}{1/e}=e</script> is <span class="word-choice" id="word-choice11"><a id="x1-73r10"></a><span class="choice correct " id="choice11">positive</span><span class="choice  " id="choice12">negative</span><span class="choice  " id="choice13">zero</span>
+</span>, the local extremum <script type="math/tex">f</script> has at <script type="math/tex">x=1/e</script> is <span class="word-choice" id="word-choice12"><a id="x1-74r11"></a><span class="choice  " id="choice14">a local maximum</span><span class="choice correct " id="choice15">a local minimum</span><span class="choice  " id="choice16">neither a
+local maximum nor a local minimum</span><span class="choice  " id="choice17">possibly a local maximum, a local minimum or
+neither</span>
+</span> by the second derivative test. <div role="article" class="problem-environment exercise" id="problem13"><a id="x1-75r12"></a> Since <script type="math/tex">f</script> is decreasing on the interval <script type="math/tex">(\answer {0},\answer {1/e})</script> and is increasing
+on the interval <script type="math/tex">(\answer {1/e},\answer {\infty })</script>, <script type="math/tex">f(x)</script> has <span class="word-choice" id="word-choice14"><a id="x1-76r13"></a><span class="choice  " id="choice18">no global minimum</span><span class="choice correct " id="choice19">a global minimum</span>
+</span> at <script type="math/tex">x=\answer {1/e}</script>. The global minimum of <script type="math/tex">f</script> is <script type="math/tex">\answer {-1/e}</script>. <div role="article" class="problem-environment exercise" id="problem15"><a id="x1-77r14"></a> On the other hand, the function <script type="math/tex">\ln x</script> is <div class="multiple-choice" id="problem16"><span class="choice correct " id="choice20">increasing on <script type="math/tex">(0,\infty )</script></span>
+<span class="choice  " id="choice21">decreasing on <script type="math/tex">(0,\infty )</script></span> <span class="choice  " id="choice22">increasing on <script type="math/tex">(0,e)</script> and decreasing on <script type="math/tex">(e,\infty )</script></span> <span class="choice  " id="choice23">decreasing on <script type="math/tex">(0,e)</script> and increasing
+on <script type="math/tex">(e,\infty )</script></span> </div>
+<div role="article" class="problem-environment exercise" id="problem17"><a id="x1-78r15"></a> Since <script type="math/tex">\ln x</script> is increasing on <script type="math/tex">(0,\infty )</script> and since <script type="math/tex">\ln e=\answer {1}</script>, it follows that for all <script type="math/tex">x>e</script>, <script type="math/tex; mode=display"> f(x)\ge \answer {x} </script> <div role="article" class="problem-environment exercise" id="problem18"><a id="x1-79r16"></a> Therefore on <script type="math/tex">(e,\infty )</script>, <script type="math/tex">f(x)</script> is positive
+and <span class="word-choice" id="word-choice19"><a id="x1-80r17"></a><span class="choice  " id="choice24">bounded</span><span class="choice correct " id="choice25">unbounded</span>
+</span>. Therefore <script type="math/tex">f(x)</script> <span class="word-choice" id="word-choice20"><a id="x1-81r18"></a><span class="choice  " id="choice26">has a global maximum</span><span class="choice  " id="choice27">has no global maximum, but does have a local
+maximum</span><span class="choice correct " id="choice28">has no global maximum</span><span class="choice  " id="choice29">has no global maximum, but may have a local
+maximum</span>
+</span>. <div role="article" class="problem-environment exercise" id="problem21"><a id="x1-82r19"></a> Finally, we shall identify the inflection points of <script type="math/tex">f</script> and the intervals on which <script type="math/tex">f</script> is
+concave up or concave down.
+<!--l. 74--><p class="noindent">The function <script type="math/tex">f</script> has <script type="math/tex">\answer {0}</script> inflection point(s). </p><div role="article" class="problem-environment exercise" id="problem22"><a id="x1-83r20"></a> Since <script type="math/tex; mode=display"> \frac {d^2}{dx^2}f(x)=\answer {1/x} </script> <script type="math/tex">f''(x)</script> is <span class="word-choice" id="word-choice23"><a id="x1-84r21"></a><span class="choice correct " id="choice30">positive</span><span class="choice  " id="choice31">negative</span>
+</span> on <script type="math/tex">(0,\infty )</script>. <div role="article" class="problem-environment exercise" id="problem24"><a id="x1-85r22"></a> Since <script type="math/tex">f''(x)>0</script> for all <script type="math/tex">x>0</script>, <script type="math/tex">f</script> is <span class="word-choice" id="word-choice25"><a id="x1-86r23"></a><span class="choice correct " id="choice32">concave up</span><span class="choice  " id="choice33">concave down</span>
+</span> on <script type="math/tex">(\answer {0},\answer {\infty })</script>.
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+                                                                  
+
+                                                                  
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

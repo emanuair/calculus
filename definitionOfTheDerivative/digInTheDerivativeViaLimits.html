@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  definition  of  the
+                                                                  
+
+                                                                  
+derivative</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheDerivativeViaLimits.tex"/> 
+<meta name="date" content="2018-10-16 20:53:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use limits to find the slope of the tangent line at a point."/> 
+<meta name="learning-outcome" content="Understand the definition of the derivative at a point."/> 
+<meta name="learning-outcome" content="Compute the derivative of a function at a point."/> 
+<meta name="learning-outcome" content="Estimate the slope of the tangent line graphically."/> 
+<meta name="learning-outcome" content="Write the equation of the tangent line to a graph at a given point."/> 
+<meta name="learning-outcome" content="Recognize and distinguish between secant and tangent lines."/> 
+<meta name="learning-outcome" content="Recognize different notation for the derivative."/> 
+<meta name="learning-outcome" content="Recognize the the tangent line as a local approximation for a differentiable function."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="541a11a2d38e448d22d6ae8626fccdbed859170c definitionOfTheDerivative/digInTheDerivativeViaLimits.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 19--><p class="noindent">We compute the instantaneous growth rate by computing the limit of average growth
+rates.
+</p></div>   <div class="maketitle"></div>
+Given a function, it is often useful to know the rate at which the function changes.
+To give you a feeling why this is true, consider the following:
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">s(t)</script> represents the <strong>position</strong> of an object on a line (with respect to time),
+     the rate of change gives the <strong>velocity</strong> of the object.
+     </li>
+     <li class="itemize">If <script type="math/tex">v(t)</script> represents the <strong>velocity</strong> of an object with respect to time, the rate of
+     change gives the <strong>acceleration</strong> of the object.
+     </li>
+     <li class="itemize">If  <script type="math/tex">R(x)</script>  represents  the  revenue  generated  by  selling  <script type="math/tex">x</script>  objects,  the  rate  of
+     change gives us the <strong>marginal revenue</strong>, meaning the additional revenue
+     generated  by  selling  one  additional  unit.  Note,  there  is  an  implicit
+     assumption that <script type="math/tex">x</script> is quite large compared to <script type="math/tex">1</script>.
+     </li>
+     <li class="itemize">If <script type="math/tex">C(x)</script> represents the cost to produce <script type="math/tex">x</script> objects, the rate of change gives us
+     the <strong>marginal cost</strong>, meaning the additional cost generated by selling one
+     additional unit. Again, there is an implicit assumption that <script type="math/tex">x</script> is quite large
+     compared to <script type="math/tex">1</script>.
+     </li>
+     <li class="itemize">The rate of change of a function can help us approximate a complicated
+     function with a simple function.
+     </li>
+     <li class="itemize">The rate of change of a function can be used to help us solve equations
+     that we would not be able to solve via other methods.</li></ul>
+<h3 class="sectionHead"><a id="x1-1000"></a>From slopes of secant lines to slopes of tangent lines</h3>
+<!--l. 61--><p class="noindent">We’ve been computing average rates of change for a while now,
+</p><!--l. 68--><p class="noindent"><script type="math/tex; mode=display"> {\text {average rate of change= }} \frac {\text {change in the function (output)}}{\text {change in the input }}. </script>
+</p><!--l. 158--><p class="noindent">More precisely, the average rate of change of a function <script type="math/tex">f</script> is given by <script type="math/tex; mode=display"> {\text {average rate of change of $f$ }} =\frac {f(x)-f(a)}{x-a}, </script> as the input
+changes from <script type="math/tex">a</script> to <script type="math/tex">x</script>.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">0</script><script type="math/tex">\Delta x</script><script type="math/tex">\Delta y</script><script type="math/tex">=\frac {\Delta y}{\Delta x}=\frac {f(x)-f(a)}{x-a}</script>average rateof change<script type="math/tex">f</script><script type="math/tex">a</script><script type="math/tex">x</script><script type="math/tex">f(a)</script><script type="math/tex">f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 245--><p class="noindent">What happens if we compute the average rate of change of <script type="math/tex">f</script> for each value of <script type="math/tex">x</script> as <script type="math/tex">x</script> gets
+closer and closer to <script type="math/tex">a</script>? In other words, what is the meaning of the limit <script type="math/tex; mode=display"> \lim _{x\to a} \frac {f(x)-f(a)}{x-a}, </script> provided that
+the limit exists?
+</p><!--l. 251--><p class="noindent">Naturally, we call this limit the <strong>instantaneous rate of change</strong> of the function <script type="math/tex">f</script> at <script type="math/tex">a</script>.
+</p><div class="theorem-like problem-environment example" id="problem1"><a id="x1-1001r1"></a>(In this example we will use abreviation AvRCh for the average rate of change, and
+InRCh for the instantaneous rate of change.)
+<!--l. 257--><p class="noindent">Let <script type="math/tex">f(x)=2x^2+3</script>.
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Find the expression for the average rate of change of <script type="math/tex">f</script> between the points
+     <script type="math/tex">a=2</script> and <script type="math/tex">x=-1</script>. <script type="math/tex; mode=display"> AvRCh=\frac {f(-1)-f(2)}{-1-(\answer [given]{2})} </script> Now evaluate the function, <script type="math/tex; mode=display"> AvRCh=\frac {2(-1)^2+3-(2(2)^2+3)}{-1-(\answer [given]{2})}. </script> Simplify, <script type="math/tex; mode=display"> AvRCh=\frac {5-11}{-3}=2. </script>
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the average rate of change of <script type="math/tex">f</script> between the points <script type="math/tex">a=2</script> and <script type="math/tex">x</script>, <script type="math/tex">x\ne 2</script>. <script type="math/tex; mode=display"> AvRCh=\frac {f(x)-f(2)}{x-\answer [given]{2}} </script> Now
+     substitute in for the function, <script type="math/tex; mode=display"> AvRCh=\frac {2x^2+3-11}{x-\answer [given]{2}} </script> Simplify the top, <script type="math/tex; mode=display"> AvRCh=\frac {2x^2-8}{x-\answer [given]{2}}. </script> Factor, <script type="math/tex; mode=display"> AvRCh=\frac {2(x^2-4)}{x-2} </script> Factor and cancel,
+     <script type="math/tex; mode=display"> AvRCh=\frac {2(x+2)\cancel {(x-2)}}{\cancel {x-2}}=2(x+2) </script>
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Find  the  instantaneous  rate  of  change  of  <script type="math/tex">f</script>  at  the  point  <script type="math/tex">x=2</script>.  <script type="math/tex; mode=display"> InRCh= \lim _{x\to 2} \frac {f(x)-f(2)}{x-2} </script>  So,  the
+     instantaneous rate of change is the limit, as <script type="math/tex">x\to 2</script>, of average rates of change of
+     <script type="math/tex">f</script> between points <script type="math/tex">a=2</script> and <script type="math/tex">x</script>, for <script type="math/tex">x\ne 2</script>.
+     <!--l. 297--><p class="noindent">We have already computed an expression for the average rate of change
+     for all <script type="math/tex">x\ne 2</script>. Therefore, <script type="math/tex; mode=display"> InRCh=\lim _{x\to 2}2(x+2)=8 </script>
+</p>
+     </dd></dl>
+<!--l. 304--></div> We can arrive at the same limit, <script type="math/tex; mode=display"> \lim _{x\to a} \frac {f(x)-f(a)}{x-a}, </script>
+<!--l. 310--><p class="noindent">within a completely different context.
+                                                                  
+
+
+</p></body></html>

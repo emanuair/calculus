@@ -1,0 +1,151 @@
+<!DOCTYPE html><html lang="en"><head> <title>Roxy  and  Yuri  like
+                                                                  
+
+                                                                  
+food</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 20:32:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the necessity of continuity for the Intermediate Value Theorem."/> 
+<meta name="learning-outcome" content="Determine if the Intermediate Value Theorem applies."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="760b9ac4b083865fd14730eacf3e93fc2cc2cbc3 continuity/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 12--><p class="noindent">Two young mathematicians discuss the eating habits of their cats.
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Yo Riley, I was watching my two cats <em>Roxy</em> and <em>Yuri</em> eat their dry cat
+     food last night.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Cats love food! It’s so weird that they swallow the pieces whole!
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! I noticed something else kinda funny though: Both Roxy and
+     Yuri start and finish eating at the same times; and while I gave Roxy a
+     little more food than Yuri, less food was left in Roxy’s bowl when they
+     stopped eating.
+     <!--l. 28--><p class="noindent">I wonder, is there is a point in time when Roxy and Yuri have the exact
+     same amount of <strong>dry cat food</strong> in their bowls?
+     </p></dd><dt class="actor">
+Riley </dt><dd class="speech">Hmmmmm. Do Roxy and Yuri both start and finish drinking their water
+     at the same times? And does Roxy start with a little more water than
+     Yuri, and finish with less water left than Yuri?
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Yes!
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Interesting. I wonder, is there is a point in time when Roxy and Yuri
+     have the exact same amount of <strong>water</strong> in their bowls?</dd></dl>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> Is there a time when Roxy and Yuri have the same amount of dry cat food in their
+bowls? Make the following assumptions:
+     <ul class="itemize1">
+     <li class="itemize">They start and finish eating at the same times.
+     </li>
+     <li class="itemize">Roxy starts with more food than Yuri, and leaves less food uneaten than
+     Yuri.</li></ul>
+<div role="article" class="problem-environment hint" id="problem2"><a id="x1-66r2"></a> You might want to try drawing a graph of this situation.
+</div> <div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">yes</span> <span class="choice  " id="choice2">no</span> <span class="choice correct " id="choice3">There is no way to tell.</span> </div>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-67r3"></a> Is there a time when Roxy and Yuri have the same amount of water in their bowls?
+Make the following assumptions:
+     <ul class="itemize1">
+     <li class="itemize">They start and finish drinking at the same times.
+     </li>
+     <li class="itemize">Roxy starts with more water than Yuri, and leaves less water left in her
+     bowl than Yuri.</li></ul>
+<div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r4"></a> You might want to try drawing a graph of this situation.
+</div> <div class="multiple-choice" id="problem6"><span class="choice correct " id="choice4">yes</span> <span class="choice  " id="choice5">no</span> <span class="choice  " id="choice6">There is no way to tell.</span> </div>
+</div>
+<div role="article" class="problem-environment problem" id="problem7"><a id="x1-69r5"></a> Within the context of the two problems above, what is the difference between “dry
+cat food” and “water?” <div class="free-response" id="problem8"><a id="x1-70r6"></a> If we write the amount of dry cat food as a function
+of time, this function is not continuous. The reason it isn’t continuous is
+that the dry cat food is a collection of individual kibbles, which are eaten
+whole.
+<!--l. 89--><p class="noindent">On the other hand, if we write the amount of water as a function of time, this
+function is continuous.
+</p></div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="en"><head> <title>For  each  input,  exactly  one
+                                                                  
+
+                                                                  
+output</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInForEachInputExactlyOneOutput.tex"/> 
+<meta name="date" content="2018-10-16 20:34:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define the concept of a function."/> 
+<meta name="learning-outcome" content="Distinguish between functions by considering their domains."/> 
+<meta name="learning-outcome" content="Plot basic functions."/> 
+<meta name="learning-outcome" content="Recognize different representations of the same function."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="cd57ea480d5c7c88ab36f38bf6c35c104b494864 understandingFunctions/digInForEachInputExactlyOneOutput.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">We define the concept of a function.
+</p></div>   <div class="maketitle"></div>
+Life is complex. Part of this complexity stems from the fact that there are many
+relationships between seemingly unrelated events. Armed with mathematics, we seek
+to understand the world. Perhaps the most relevant “real-world” relation
+is
+     <div class="quote">
+     <!--l. 23--><p class="noindent"><strong>the position of an object with respect to time.</strong></p></div>
+<!--l. 25--><p class="noindent">Our observations seem to indicate that every instant in time is associated to a
+unique positioning of the objects in the universe. You may have heard the
+saying,
+     </p><div class="quote">
+     <!--l. 29--><p class="noindent"><strong>you cannot be two places at the same time,</strong></p></div>
+<!--l. 31--><p class="noindent">and it is this fact that motivates our definition for functions.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-64r1"></a> A <strong>function</strong> is a relation between sets where for each input, there is exactly one
+output.
+</div>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-65r2"></a> If our function is the “position with respect to time” of some object, then the input
+is <div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">position</span> <span class="choice correct " id="choice2">time</span> <span class="choice  " id="choice3">none of the above</span> </div>
+and the output is <div class="multiple-choice" id="problem4"><span class="choice correct " id="choice4">position</span> <span class="choice  " id="choice5">time</span> <span class="choice  " id="choice6">none of the above</span> </div>
+</div>
+<!--l. 55--><p class="noindent">Something as simple as a dictionary could be thought of as a relation, as it connects
+<em>words</em> to <em>definitions</em>. However, a dictionary is not a function, as there are words with
+multiple definitions. On the other hand, if each word only had a single definition,
+then a dictionary would be a function.
+</p>
+<div role="article" class="problem-environment question" id="problem5"><a id="x1-66r3"></a> Which of the following are functions? <div class="select-all" id="problem6"><a id="x1-67r4"></a> <span class="choice  " id="choice7">Mapping words to their definition in a
+dictionary.</span> <span class="choice correct " id="choice8">Given an object traveling through space, mapping time to the position
+of the object in space.</span> <span class="choice correct " id="choice9">Mapping people to their birth date.</span> <span class="choice  " id="choice10">Mapping mothers to
+their children.</span>
+</div> <div class="feedback" data-feedback="attempt" id="feedback7">
+     <ul class="itemize1">
+     <li class="itemize">Since words may have more than one definition, “relating words to their
+     definition in a dictionary” is not a function.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize">Since for any given time, objects cannot be “two places at once,” this is a
+     function.
+     </li>
+     <li class="itemize">Since every person only has one birth date, “relating people to their birth
+     date” is a function.
+     </li>
+     <li class="itemize">Since mothers can have more (or less) than one child, “relating mothers
+     to their children” is not a function.</li></ul>
+</div>
+</div>
+<!--l. 84--><p class="noindent">What we are hoping to convince you is that the following are true:
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">The definition of a function is well-grounded in a real context.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">The definition of a function is flexible enough that it can be used to model
+     a wide range of phenomena.</dd></dl>
+<!--l. 100--><p class="noindent">Whenever we talk about functions, we should explicitly state what type of things the
+inputs are and what type of things the outputs are. In calculus, functions often define
+a relation from (a subset of) the real numbers (denoted by <script type="math/tex">\RR </script>) to (a subset of) the real
+numbers.
+</p>
+<div class="theorem-like problem-environment definition" id="problem8"><a id="x1-70r5"></a>We call the set of the inputs of a function the <strong>domain</strong>, and we call the set of the
+outputs of a function the <strong>range</strong>.
+</div>
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-71r6"></a>Consider the function <script type="math/tex">f</script> that maps from the real numbers to the real numbers by
+taking a number and mapping it to its cube: <script type="math/tex; mode=display"> \begin{align*} 
+1 &\mapsto 1\\
+-2 &\mapsto -8\\
+1.5 &\mapsto 3.375
+\end{align*}</script>
+and so on. This function can be <em>described</em> by the formula <script type="math/tex">f(x)=x^3</script> or by the graph shown in the plot below:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+<div class="theorem-like problem-environment warning" id="problem10"><a id="x1-72r7"></a>A function is a relation (such that for each input, there is exactly one output)
+between sets. The formula and the graph are merely descriptions of this
+relation.
+     <ul class="itemize1">
+     <li class="itemize">A formula <strong>describes</strong> the relation using symbols.
+     </li>
+     <li class="itemize">A graph <strong>describes</strong> the relation using pictures.</li></ul>
+<!--l. 150--><p class="noindent">The <strong>function is the relation itself</strong>, and is independent of how it is described.
+</p></div>
+<!--l. 154--><p class="noindent">Our next example may be a function that is new to you. It is the <em>greatest integer
+function</em>.
+</p>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-73r8"></a>Consider the <strong>greatest integer function</strong>. This function maps any real number <script type="math/tex">x</script> to
+the greatest integer less than or equal to <script type="math/tex">x</script>. People sometimes write this as <script type="math/tex">f(x) = \lfloor x\rfloor </script>, where
+those funny symbols mean exactly the words above describing the function.
+For your viewing pleasure, here is a graph of the greatest integer function:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Observe that here we have multiple inputs that give the same output. This is not a
+problem! To be a function, we merely need to check that for each input, there is
+exactly one output, and this condition is satisfied.
+</div>
+<div role="article" class="problem-environment question" id="problem12"><a id="x1-74r9"></a> Compute: <script type="math/tex; mode=display"> \lfloor 2.4 \rfloor \begin {prompt} =\answer {2} \end {prompt} </script> <div role="article" class="problem-environment question" id="problem13"><a id="x1-75r10"></a> Compute: <script type="math/tex; mode=display"> \lfloor -2.4 \rfloor \begin {prompt} =\answer {-3} \end {prompt} </script>
+</div>
+</div>
+<!--l. 233--><p class="noindent">Notice that both the functions described above pass the so-called <em>vertical line
+test</em>.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem14"><a id="x1-76r11"></a>The curve <script type="math/tex">y=f(x)</script> represents <script type="math/tex">y</script> as a function of <script type="math/tex">x</script> at <script type="math/tex">x=a</script> if and only if the vertical line <script type="math/tex">x=a</script>
+intersects the curve <script type="math/tex">y=f(x)</script> at exactly one point. This is called the <strong>vertical line
+test</strong>.
+</div>
+<!--l. 242--><p class="noindent">Sometimes the domain and range are the <em>entire</em> set of real numbers, denoted by <script type="math/tex">\RR </script>. In
+our next examples we show that this is not always the case.
+</p>
+<div class="theorem-like problem-environment example" id="problem15"><a id="x1-77r12"></a>Consider the function that maps non-negative real numbers to their positive square
+root. This function can be described by the formula <script type="math/tex; mode=display"> f(x) = \sqrt {x}. </script> The domain is <script type="math/tex">0\le x<\infty </script>, which we
+prefer to write as <script type="math/tex">[0,\infty )</script> in interval notation. The range is <script type="math/tex">[0,\infty )</script>. Here is a graph of <script type="math/tex">y=f(x)</script>:
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+<!--l. 278--><p class="noindent">To really tease out the difference between a function and its description, let’s
+consider an example of a function with two different descriptions.
+</p>
+<div class="theorem-like problem-environment example" id="problem16"><a id="x1-78r13"></a>Explain why <script type="math/tex">\sqrt {x^2} = |x|</script>. <div class="theorem-like problem-environment explanation" id="problem17"><a id="x1-79r14"></a>Although <script type="math/tex">\sqrt {x^2}</script> may appear to simplify to just <script type="math/tex">x</script>, let’s see what
+happens when we plug in some values. <script type="math/tex; mode=display"> \begin {aligned} \sqrt {3^2} &= \sqrt {9}\\ &=3, \end {aligned} \qquad \text {and}\qquad \begin {aligned} \sqrt {(-3)^2} &= \sqrt {9}\\ &=3. \end {aligned} </script> Let <script type="math/tex">f(x)=\sqrt {x^2}</script>. We see that for any negative
+<script type="math/tex">x</script>, <script type="math/tex">x=-|x|</script>, and, therefore, <script type="math/tex">f(x)=f(-|x|)=\sqrt {(-|x|)^2}=\sqrt {|x|^2}=\answer [given]{|x|}</script>. Hence <script type="math/tex">\sqrt {x^2}\ne x</script>. Rather we see that <script type="math/tex">\sqrt {x^2} = |x|</script>. The domain of <script type="math/tex">f(x)=\sqrt {x^2}</script> is <script type="math/tex">(-\infty ,\infty )</script> and
+the range is <script type="math/tex">[0,\infty )</script>. For your viewing pleasure we’ve included a graph of <script type="math/tex">y=f(x)</script>:
+<div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 323--><p class="noindent">Finally, we will consider a function whose domain is all real numbers except for a
+single point.
+</p>
+<div class="theorem-like problem-environment example" id="problem18"><a id="x1-80r15"></a>Are <script type="math/tex; mode=display"> f(x) = \frac {x^2 - 3x + 2}{x-2} = \frac {(x-2)(x-1)}{(x-2)} </script> and <script type="math/tex; mode=display"> g(x) = x-1 </script> the same function? <div class="theorem-like problem-environment explanation" id="problem19"><a id="x1-81r16"></a>Let’s use a series of steps to think about this
+question. First, what if we compare graphs? Here we see a graph of <script type="math/tex">f</script>:
+<div class="image-environment" role="img" aria-labelledby="image-alt-5">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+On the other hand, here is a graph of <script type="math/tex">g</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-6">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Second, what if we compare the domains? We cannot evaluate <script type="math/tex">f</script> at <script type="math/tex">x=\answer [given]{2}</script>. This is where <script type="math/tex">f</script> is
+undefined. On the other hand, there is no value of <script type="math/tex">x</script> where we cannot evaluate <script type="math/tex">g</script>. In
+other words, the domain of <script type="math/tex">g</script> is <script type="math/tex">(-\infty , \infty )</script>.
+<!--l. 383--><p class="noindent">Since these two functions do not have the same graph, and they do not have the same
+domain, they must not be the same function.
+</p><!--l. 386--><p class="noindent">However, if we look at the two functions everywhere except at <script type="math/tex">x = 2</script>, we can say that <script type="math/tex">f(x)=g(x)</script>. In
+other words, <script type="math/tex; mode=display"> f(x)=x-1\qquad \text {when}\qquad \text {$x \ne 2$}. </script> From this example we see that it is critical to consider the domain and
+range of a function.
+                                                                  
+
+                                                                  
+</p></div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>
