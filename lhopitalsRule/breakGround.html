@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head> <title>A  limitless
+                                                                  
+
+                                                                  
+dialogue</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 20:52:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Demonstrate that we can only sometimes find a limit value by finding the limit of quotient of the derivative of the numerator and derivative of the denominator."/> 
+<meta name="learning-outcome" content="Explore the hypothesis of L&#39;Hospital&#39;s Rule."/> 
+<meta name="learning-outcome" content="Make a guess and test this guess."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="86a607e9cf53269a62af720431dabc16f1959b71 lhopitalsRule/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 17--><p class="noindent">Two young mathematicians consider a way to compute limits using derivatives.
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Yo Riley, guess what I did last night?
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">What?
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I was doing some calculus.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">That. Is. Awesome.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! Anyway, I noticed something kinda funny. I think you can
+     sometimes take limits by taking the derivative of the numerator and the
+     denominator.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">That’s crazy.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I  know!  But  check  it:
+     <script type="math/tex; mode=display"> \begin{align*} 
+      \lim_{x\to 0} \frac{\sin(x)}{x} &= \lim_{x\to 0} \frac{\dd{x}\sin(x)}{\dd{x}x}\\
+         &= \lim_{x\to 0} \frac{\cos(x)}{1}\\
+         &=1.
+       \end{align*}</script>
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Woah. That. Is. Awes…weird. Hmmm, but it seems like
+     cheating. Wait, it doesn’t always work, check this out: <script type="math/tex; mode=display"> \lim _{x\to 0} \frac {x^2+1}{x+1} = 1, </script> but
+     <script type="math/tex; mode=display"> \begin{align*} 
+         \lim_{x\to 0} \frac{\dd{x}\left(x^2+1\right)}{\dd{x}\left(x+1\right)} &=
+           \lim_{x\to 0} \frac{2x}{1} \\
+           &=0.
+         \end{align*}</script>
+     </dd></dl>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a> Find <strong>five</strong> examples where this “trick” works, and <strong>five</strong> examples where it doesn’t
+work. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-66r2"></a> Start with limits of fractions that you know how to compute. Then take the
+derivative of the numerator and the denominator, and see if the new limit equals the
+old limit or not.
+</div> <div class="free-response" id="problem3"><a id="x1-67r3"></a>
+</div>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-68r4"></a> What is the pattern for when the “trick” works and when it does not work?
+<div class="free-response" id="problem5"><a id="x1-69r5"></a>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html><html lang="en"><head> <title>Trigonometric
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTrigonometricFunctions.tex"/> 
+<meta name="date" content="2018-10-16 20:54:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Know the graphs and properties of ``famous&#39;&#39; functions."/> 
+<meta name="learning-outcome" content="Understand the properties of trigonometric functions."/> 
+<meta name="learning-outcome" content="Evaluate expressions and solve equations involving trigonometric functions and inverse trigonometric functions."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="42515dbb63794d07f49b2afdb52f20a48ded8136 reviewOfFamousFunctions/digInTrigonometricFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">We review trigonometric functions.
+</p></div>   <div class="maketitle"></div>
+<h3 class="sectionHead"><a id="x1-1000"></a>What are trigonometric functions?</h3>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a>A <strong>trigonometric function</strong> is a function that relates a measure of an angle of a right
+triangle to a ratio of the triangle’s sides.
+</div>
+<!--l. 28--><p class="noindent">The basic trigonometric functions are cosine and sine. They are called “trigonometric”
+because they relate measures of angles to measurements of triangles. Given a right
+triangle </p><div class="image-environment" role="img" aria-labelledby="image-alt-1">  
+adjacentoppositehypotenuse<script type="math/tex">\theta </script></div>we define <script type="math/tex; mode=display"> \cos (\theta ) = \frac {\text {adjacent}}{\text {hypotenuse}}\qquad \text {and}\qquad \sin (\theta ) = \frac {\text {opposite}}{\text {hypotenuse}}. </script> Note, thevalues of sine and cosine do not depend on the scale
+of the triangle. Being very explicit, if we scale a triangle by a scale factor
+<script type="math/tex">k</script>,
+<div class="image-environment" role="img" aria-labelledby="image-alt-2"> 
+<script type="math/tex">k\cdot </script>adjacent<script type="math/tex">k\cdot </script>opposite<script type="math/tex">k\cdot </script>hypotenuse<script type="math/tex">\theta </script></div><script type="math/tex; mode=display"> \cos (\theta ) = \frac {k\cdot \text {adjacent}}{k\cdot \text {hypotenuse}} =\frac {\text {adjacent}}{\text {hypotenuse}} </script>and <script type="math/tex; mode=display"> \sin (\theta ) = \frac {k\cdot \text {opposite}}{k\cdot \text {hypotenuse}} = \frac {\text {opposite}}{\text {hypotenuse}}. </script>
+<!--l. 89--><p class="noindent">At this point we could simply assume that whenever we draw a triangle for
+computing sine and cosine, that the hypotenuse will be <script type="math/tex">1</script>. We can do this because we
+are simply scaling the triangle, and as we see above, this makes absolutely no
+difference when computing sine and cosine. Hence, when the hypotenuse is <script type="math/tex">1</script>, we find
+that a convenient way to think about sine and cosine is via the unit circle:
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\theta </script><script type="math/tex">\sin (\theta )</script><script type="math/tex">\cos (\theta )</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 130--><p class="noindent">If we consider all possible combinations of ratios of </p>
+<div class="center">
+<!--l. 131--><p class="noindent">
+</p><!--l. 132--><p class="noindent">adjacent,       opposite,       hypotenuse,</p></div>
+<!--l. 134--><p class="noindent">(allowing the adjacent and opposite to be negative, as on the unit circle) we obtain all
+of the trigonometric functions.
+</p>
+<div class="theorem-like problem-environment definition" id="problem2"><a id="x1-1002r2"></a> The trigonometric functions are: <script type="math/tex; mode=display"> \begin {aligned} \cos (\theta ) &= \frac {\text {adj}}{\text {hyp}}\\ \sec (\theta ) &= \frac {1}{\cos (\theta )}\\ \tan (\theta ) &= \frac {\sin (\theta )}{\cos (\theta )}\qquad \end {aligned} \qquad \begin {aligned} \sin (\theta ) &= \frac {\text {opp}}{\text {hyp}}\\ \csc (\theta ) &= \frac {1}{\sin (\theta )}\\ \cot (\theta ) &= \frac {\cos (\theta )}{\sin (\theta )} \end {aligned} </script> where the domain of sine and cosine is all real
+numbers, and the other trigonometric functions are defined precisely when their
+denominators are nonzero.
+</div>
+<div role="article" class="problem-environment question" id="problem3"><a id="x1-1003r3"></a> Which of the following expressions are equal to <script type="math/tex">\sec (\theta )</script>? <div class="select-all" id="problem4"><a id="x1-1004r4"></a> <span class="choice correct " id="choice1"><script type="math/tex">\frac {1}{\cos (\theta )}</script></span> <span class="choice  " id="choice2"><script type="math/tex">\frac {1}{\sin (\theta )}</script></span> <span class="choice  " id="choice3"><script type="math/tex">\frac {\text {adj}}{\text {hyp}}</script></span> <span class="choice correct " id="choice4"><script type="math/tex">\frac {\text {hyp}}{\text {adj}}</script></span> <span class="choice  " id="choice5"><script type="math/tex">\frac {\tan (\theta )}{\sin (\theta )}</script></span> <span class="choice  " id="choice6"><script type="math/tex">\frac {1}{\sin (\theta )\cdot \cot (\theta )}</script></span>
+</div> <div class="feedback" data-feedback="attempt" id="feedback5">Note, <script type="math/tex">\frac {\tan (\theta )}{\sin (\theta )}\ne \sec (\theta )</script>, and <script type="math/tex">\frac {1}{\sin (\theta )\cdot \cot (\theta )}\ne \sec (\theta )</script> since they differ when <script type="math/tex">\theta =0</script>. </div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Connections to inverse functions</h3>
+<!--l. 187--><p class="noindent">Trigonometric functions arise frequently in problems, and often we are interested in
+finding specific angle measures. For instance, you may want to find some angle <script type="math/tex">\theta </script> such
+that <script type="math/tex; mode=display"> \cos (\theta ) = .7 </script> Hence we want to be able to “undo” trigonometric functions. However, since
+trigonometric functions are not one-to-one, meaning there are are infinitely many
+                                                                  
+
+                                                                  
+angles with <script type="math/tex">\cos (\theta ) = .7</script>, it is impossible to find a true inverse function for <script type="math/tex">\cos (\theta )</script>. Nevertheless,
+it is useful to have something like an inverse to these functions, however
+imperfect. The usual approach is to pick out some collection of angles that
+produce all possible values exactly once. If we “discard” all other angles, the
+resulting function has a proper inverse. In other words, we are restricting
+the domain of the trigonometric function in order to find an inverse. The
+function <script type="math/tex">\cos (\theta )</script> takes on all values between <script type="math/tex">-1</script> and <script type="math/tex">1</script> exactly once on the interval
+<script type="math/tex">[0,\pi ]</script>.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">-2\pi </script><script type="math/tex">-3\pi /2</script><script type="math/tex">-\pi </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">3\pi /2</script><script type="math/tex">2\pi </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\cos (\theta )</script><script type="math/tex">\theta </script><script type="math/tex">x</script>
+</div>
+If we restrict the domain of <script type="math/tex">\cos (\theta )</script> to this interval, then this restricted function is
+one-to-one and hence has an inverse.
+<div role="article" class="problem-environment question" id="problem6"><a id="x1-2001r5"></a> What arc on the unit circle corresponds to the restricted domain described above of
+<script type="math/tex">\cos (\theta )</script>? <div class="multiple-choice" id="problem7"><span class="choice  " id="choice7"> 
+
+</span> <span class="choice correct " id="choice8"> 
+
+</span> <span class="choice  " id="choice9"> 
+
+</span> <span class="choice  " id="choice10"> 
+
+</span> </div>
+</div>
+<!--l. 317--><p class="noindent">In a similar fashion, we need to restrict the domain of sine to be able to take an
+inverse. The function <script type="math/tex">\sin (\theta )</script> takes on all values between <script type="math/tex">-1</script> and <script type="math/tex">1</script> exactly once on the interval
+<script type="math/tex">[-\pi /2,\pi /2]</script>.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-5"><script type="math/tex">-2\pi </script><script type="math/tex">-3\pi /2</script><script type="math/tex">-\pi </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">3\pi /2</script><script type="math/tex">2\pi </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\sin (\theta )</script><script type="math/tex">\theta </script><script type="math/tex">x</script>
+</div>
+<!--l. 356--><p class="noindent">If we restrict the domain of <script type="math/tex">\sin (\theta )</script> to this interval, then this restricted function is
+one-to-one and thus has an inverse.
+</p>
+<div role="article" class="problem-environment question" id="problem8"><a id="x1-2002r6"></a> What arc on the unit circle corresponds to the restricted domain described above of
+<script type="math/tex">\sin (\theta )</script>? <div class="multiple-choice" id="problem9"><span class="choice correct " id="choice11"> 
+
+</span> <span class="choice  " id="choice12"> 
+
+</span> <span class="choice  " id="choice13"> 
+
+</span> <span class="choice  " id="choice14"> 
+
+</span> </div>
+</div>
+<!--l. 436--><p class="noindent">By examining both sine and cosine on restricted domains, we can now produce
+functions arcsine and arccosine:
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-6">    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">x</script><script type="math/tex">\theta </script><!--l. 455--><p class="noindent">Here we see a plot of <script type="math/tex">\arccos (x)</script>, the inverse function
+of <script type="math/tex">\cos (\theta )</script> when the domain is restricted to the
+interval <script type="math/tex">[0,\pi ]</script>.
+</p></div>
+<div class="image-environment" role="img" aria-labelledby="image-alt-7">    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">x</script><script type="math/tex">\theta </script><!--l. 477--><p class="noindent">Here we see a plot of <script type="math/tex">\arcsin (x)</script>, the inverse function
+of <script type="math/tex">\sin (\theta )</script> when the domain is restricted to the
+interval <script type="math/tex">[-\pi /2,\pi /2]</script>.
+</p></div>
+<!--l. 482--><p class="noindent">The functions <script type="math/tex; mode=display"> \arccos (x)\qquad \text {and}\qquad \arcsin (x) </script> are called “arc” because they give the angle that cosine or sine used to
+produce their value. It is quite common to write <script type="math/tex; mode=display"> \arccos (x) = \cos ^{-1}(x)\qquad \text {and}\qquad \arcsin (x) = \sin ^{-1}(x). </script> However, this notation is
+misleading as <script type="math/tex">\cos ^{-1}(x)</script> and <script type="math/tex">\sin ^{-1}(x)</script> are not true inverse functions of cosine and sine. Recall that
+a function and its inverse undo each other in either order, for example, <script type="math/tex; mode=display"> \sqrt [3]{x^3}=x\qquad \text {and}\qquad \left (\sqrt [3]{x}\right )^3=x. </script>
+Since arcsine is the inverse of sine restricted to the interval <script type="math/tex">[-\pi /2,\pi /2]</script>, this does not
+work with sine and arcsine, for example <script type="math/tex; mode=display"> \arcsin (\sin (\pi ))=0. </script> though it is true that <script type="math/tex; mode=display"> \sin (\arcsin (x)) = x\qquad \text {and}\qquad \cos (\arccos (x)) = x. </script> </p><div role="article" class="problem-environment question" id="problem10"><a id="x1-2003r7"></a> Which of
+                                                                  
+
+                                                                  
+the following statements is true? <div class="multiple-choice" id="problem11"><span class="choice  " id="choice15"><script type="math/tex">\sin ^{-1}(x)</script> is the inverse function of <script type="math/tex">\sin (x)</script></span> <span class="choice correct " id="choice16"><script type="math/tex">\sin \left (\sin ^{-1}\left (\frac {1}{2}\right )\right ) = \frac {1}{2}</script></span> <span class="choice  " id="choice17"><script type="math/tex">\sin ^{-1}\left (\sin \left (\frac {5\pi }{2}\right )\right ) = \frac {5\pi }{2}</script></span> <span class="choice  " id="choice18"><script type="math/tex">\sin ^{-1}(x) = \frac {1}{\sin (x)}</script></span> </div>
+</div>
+<div class="theorem-like problem-environment example" id="problem12"><a id="x1-2004r8"></a>Compute: <script type="math/tex; mode=display"> \arccos (\cos (5\pi /3)) </script> <div class="theorem-like problem-environment explanation" id="problem13"><a id="x1-2005r9"></a>The issue here is that <script type="math/tex">5\pi /3</script> might not be in the range of arccosine. To find our
+missing number, we’ll check with a unit circle that we’ve decorated with the domain
+of arccosine: <div class="image-environment" role="img" aria-labelledby="image-alt-8"><script type="math/tex">0</script><script type="math/tex">\pi /3</script><script type="math/tex">2\pi /3</script><script type="math/tex">\pi </script><script type="math/tex">\pi /3</script><script type="math/tex">2\pi /3</script><script type="math/tex">\pi </script><script type="math/tex">4\pi /3</script><script type="math/tex">5\pi /3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Since the points <script type="math/tex">5\pi /3</script> and <script type="math/tex">\pi /3</script> have the same <script type="math/tex">x</script>-coordinate, <script type="math/tex">\cos (5\pi /3) = \cos (\pi /3)</script>. Hence <script type="math/tex; mode=display"> \arccos (\cos (5\pi /3)) = \pi /3. </script>
+</div>
+</div>
+<!--l. 574--><p class="noindent">Now that you have a feel for how <script type="math/tex">\arcsin (x)</script> and <script type="math/tex">\arccos (x)</script> behave, let’s examine tangent.
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-9"><script type="math/tex">-2\pi </script><script type="math/tex">-3\pi /2</script><script type="math/tex">-\pi </script><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">\pi </script><script type="math/tex">3\pi /2</script><script type="math/tex">2\pi </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\tan (\theta )</script><script type="math/tex">\theta </script><script type="math/tex">x</script>
+</div>
+<div role="article" class="problem-environment question" id="problem14"><a id="x1-2006r10"></a> What arc on the unit circle corresponds to the restricted domain described above of
+<script type="math/tex">\tan (\theta )</script>? <div class="multiple-choice" id="problem15"><span class="choice correct " id="choice19"> 
+
+</span> <span class="choice  " id="choice20"> 
+
+</span> <span class="choice  " id="choice21"> 
+
+</span> <span class="choice  " id="choice22"> 
+
+</span> </div>
+</div> Again, only working on a restricted domain of tangent, we can produce an inverse
+function, arctangent. Here we see a plot of <script type="math/tex">\arctan (x)</script>, the inverse function of <script type="math/tex">\tan (\theta )</script> when its domain
+is restricted to the interval <script type="math/tex">(-\pi /2,\pi /2)</script>.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-10"><script type="math/tex">-\pi /2</script><script type="math/tex">\pi /2</script><script type="math/tex">x</script><script type="math/tex">\theta </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem16"><a id="x1-2007r11"></a>Compute: <script type="math/tex; mode=display"> \arctan (\tan (5\pi /3)) </script> <div class="theorem-like problem-environment explanation" id="problem17"><a id="x1-2008r12"></a>The issue here is that <script type="math/tex">5\pi /3</script> might not be in the range of arctangent. To find
+our missing number, we’ll check with a unit circle that we’ve decorated with the
+domain of arctangent: <div class="image-environment" role="img" aria-labelledby="image-alt-11"><script type="math/tex">0</script><script type="math/tex">\pi /3</script><script type="math/tex">-\pi /3</script><script type="math/tex">\pi /3</script><script type="math/tex">2\pi /3</script><script type="math/tex">\pi </script><script type="math/tex">4\pi /3</script><script type="math/tex">5\pi /3</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Since the points <script type="math/tex">5\pi /3</script> and <script type="math/tex">-\pi /3</script> have the same <script type="math/tex">x</script> and <script type="math/tex">y</script>-coordinates, <script type="math/tex; mode=display"> \arctan (\tan (5\pi /3)) = -\pi /3. </script>
+</div>
+</div>
+<!--l. 778--><p class="noindent">Now we give some facts of other trigonometric and “inverse” trigonometric
+functions.
+</p>
+<div class="theorem-like problem-environment definition" id="problem18"><a id="x1-2009r13"></a>
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\arccos (x) = \theta </script> means that <script type="math/tex">\cos (\theta ) = x</script> and <script type="math/tex">0\le \theta \le \pi </script>. The domain of <script type="math/tex">\arccos (x)</script> is <script type="math/tex">-1\le x\le 1</script>.
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><script type="math/tex">\arcsin (x) = \theta </script> means that <script type="math/tex">\sin (\theta ) = x</script> and <script type="math/tex">-\frac {\pi }{2}\le \theta \le \frac {\pi }{2}</script>. The domain of <script type="math/tex">\arcsin (x)</script> is <script type="math/tex">-1\le x\le 1</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\arctan (x) = \theta </script> means that <script type="math/tex">\tan (\theta ) = x</script> and <script type="math/tex">-\frac {\pi }{2}< \theta < \frac {\pi }{2}</script>. The domain of <script type="math/tex">\arctan (x)</script> is <script type="math/tex">-\infty <x<\infty </script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\arccot (x) = \theta </script> means that <script type="math/tex">\cot (\theta ) = x</script> and <script type="math/tex">0< \theta < \pi </script>. The domain of <script type="math/tex">\arccot (x)</script> is <script type="math/tex">-\infty <x<\infty </script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\arcsec (x) = \theta </script> means that <script type="math/tex">\sec (\theta ) = x</script> and <script type="math/tex">0\le \theta \le \pi </script> with <script type="math/tex">\theta \ne \pi /2</script>. The domain of <script type="math/tex">\arcsec (x)</script> is all <script type="math/tex">x</script> with absolute value greater
+     than <script type="math/tex">1</script>.
+     </li>
+     <li class="itemize"><script type="math/tex">\arccsc (x) = \theta </script> means that <script type="math/tex">\csc (\theta ) = x</script> and <script type="math/tex">-\frac {\pi }{2}\le \theta \le \frac {\pi }{2}</script> with <script type="math/tex">\theta \ne 0</script>. The domain of <script type="math/tex">\arccsc (x)</script> is all <script type="math/tex">x</script> with absolute value greater
+     than <script type="math/tex">1</script>.</li></ul>
+<!--l. 810--></div>
+
+<h3 class="sectionHead"><a id="x1-3000"></a>The power of the Pythagorean Theorem</h3>
+<!--l. 815--><p class="noindent">The Pythagorean Theorem is probably the most famous theorem in all of
+mathematics.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem19"><a id="x1-3001r14"></a><span class="theorem-like-title">Pythagorean Theorem</span> Given a right triangle: <div class="image-environment" role="img" aria-labelledby="image-alt-12">  
+<script type="math/tex">b</script><script type="math/tex">a</script><script type="math/tex">c</script><script type="math/tex">\theta </script></div>We have that: <script type="math/tex; mode=display"> a^2 + b^2 = c^2 </script>
+</div>
+<!--l. 845--><p class="noindent">The Pythagorean Theorem gives several key trigonometric identities.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem20"><a id="x1-3002r15"></a><span class="theorem-like-title">Pythagorean Identities</span> The following hold: <script type="math/tex; mode=display"> \cos ^2\theta +\sin ^2\theta = 1 \qquad 1 + \tan ^2\theta = \sec ^2\theta \qquad \cot ^2\theta + 1 = \csc ^2\theta </script> <div class="theorem-like problem-environment explanation" id="problem21"><a id="x1-3003r16"></a>From the unit circle we can see
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-13"><script type="math/tex">t</script><script type="math/tex">\sin (t)</script><script type="math/tex">\cos (t)</script>
+</div>
+via the Pythagorean Theorem that <script type="math/tex; mode=display"> \cos ^2(t) + \sin ^2(t) = 1. </script> If we divide this expression by <script type="math/tex">\answer [given]{\cos ^2(t)}</script> we obtain <script type="math/tex; mode=display"> 1 + \tan ^2(t) = \sec ^2(t) </script> and if
+we divide <script type="math/tex">\cos ^2(t) + \sin ^2(t) = 1</script> by <script type="math/tex">\answer [given]{\sin ^2(t)}</script> we obtain <script type="math/tex; mode=display"> \cot ^2(t) + 1 = \csc ^2(t). </script>
+</div>
+</div>
+<!--l. 902--><p class="noindent">We can simplify expressions using the Pythagorean Theorem
+</p>
+<div class="theorem-like problem-environment example" id="problem22"><a id="x1-3004r17"></a>Suppose that <script type="math/tex">\arctan (3/5) = \theta </script>. Compute <script type="math/tex">\sin (\theta )</script>. <div class="theorem-like problem-environment explanation" id="problem23"><a id="x1-3005r18"></a>If <script type="math/tex">\arctan (3/5) = \theta </script>, then <script type="math/tex; mode=display"> \begin{align*} 
+      \tan(\arctan(3/5)) &= \tan(\theta)\\
+    \answer[given]{3/5} &= \tan(\theta).
+    \end{align*}</script>
+Now we will use the Pythagorean Theorem to deduce <script type="math/tex">\sin (\theta )</script>. If <script type="math/tex">\tan (\theta )=3/5</script>, the triangle in question
+must be similar to this triangle: <div class="image-environment" role="img" aria-labelledby="image-alt-14">  
+<script type="math/tex">5</script><script type="math/tex">3</script><script type="math/tex">\sqrt {3^2+5^2}</script><script type="math/tex">\theta </script></div>From this triangle and our work above, we see that <script type="math/tex; mode=display"> \sin (\theta ) = \answer [given]{3/\sqrt {3^2+5^2}}. </script>
+</div>
+</div>
+<!--l. 941--><p class="noindent">We’ll also use the Pythagorean Theorem to help us simplify abstract expressions into
+ones we can compute with ease.
+</p>
+<div class="theorem-like problem-environment example" id="problem24"><a id="x1-3006r19"></a>Simplify <script type="math/tex; mode=display"> \tan (\arccos (x)) </script> <div class="theorem-like problem-environment explanation" id="problem25"><a id="x1-3007r20"></a>Start by saying <script type="math/tex; mode=display"> \theta = \arccos (x) </script> This means <script type="math/tex">\tan (\arccos (x)) = \tan (\theta )</script>. Apply cosine to both sides of the equation
+                                                                  
+
+                                                                  
+above, <script type="math/tex; mode=display"> \begin{align*} 
+         \cos(\theta) &= \cos(\arccos(x))\\
+      \cos(\theta) &= \answer[given]{x}.
+    \end{align*}</script>
+Now we will use the Pythagorean Theorem to deduce <script type="math/tex">\tan (\theta )</script>. If <script type="math/tex">\cos (\theta )=x</script>, the triangle in question
+must be similar to this triangle: <div class="image-environment" role="img" aria-labelledby="image-alt-15">  
+<script type="math/tex">x</script><script type="math/tex">\sqrt {1-x^2}</script><script type="math/tex">1</script><script type="math/tex">\theta </script></div>From this triangle and our work above, we see that <script type="math/tex; mode=display"> \tan (\arccos (x)) = \tan (\theta ) = \answer [given]{\frac {\sqrt {1-x^2}}{x}}. </script>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

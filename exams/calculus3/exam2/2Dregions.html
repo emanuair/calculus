@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="2Dregions.tex"/> 
+<meta name="date" content="2018-10-16 21:17:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="3a58fe725b2ab8c99a5b132faa3669a1cf01aeb1 exams/calculus3/exam2/2Dregions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> Here we see several shaded regions:
+<div class="center">
+<!--l. 8--><p class="noindent">
+</p><!--l. 9--><p class="noindent"><img src="region2.png" alt="PIC"/>          <img src="region1.png" alt="PIC"/>          <img src="region6.png" alt="PIC"/>          <br/>
+<img src="region5.png" alt="PIC"/>          <img src="region4.png" alt="PIC"/>          <img src="region3.png" alt="PIC"/>          </p></div>
+<!--l. 17--><p class="noindent">Below we have several iterated integrals. Each is integrating over one of the regions
+above. Identify which region goes with each integral. </p>
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\answer [format=string]{A}: \int _0^{\pi /2} \int _{0}^{y}F(x,y) \d x\d y</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\answer [format=string]{D}: \int _0^{\pi /2} \int _{\theta }^{\pi /2}F(r,\theta )r \d r\d \theta </script>
+     </li>
+     <li class="itemize"><script type="math/tex">\answer [format=string]{E}: \int _0^{\pi /2} \int _{0}^{\pi /2-y}F(x,y) \d x\d y</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\answer [format=string]{C}: \int _0^{\pi /2} \int _0^{\theta }F(r,\theta )r \d r\d \theta </script> </li></ul>
+</div>__________________________________________________________________
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-65r2"></a> Here are three integrals:
+       <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (A) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _0^1 \int _{-\sqrt {1-x^2}}^0\int _{-\sqrt {1-x^2-y^2}}^{\sqrt {1-x^2-y^2}} x \d z \d y \d x</script>
+       </dd><dt class="enumerate-enumitem">
+  (B) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _0^1 \int _{-\sqrt {1-x^2}}^0\int _{-\sqrt {1-x^2-y^2}}^{\sqrt {1-x^2-y^2}} y \d z \d y \d x</script>
+       </dd><dt class="enumerate-enumitem">
+ (C) </dt><dd class="enumerate-enumitem"><script type="math/tex">\int _0^1 \int _{-\sqrt {1-x^2}}^0\int _{-\sqrt {1-x^2-y^2}}^{\sqrt {1-x^2-y^2}} z \d z \d y \d x</script></dd></dl>
+<!--l. 46--><p class="noindent">Order these integrals from least to greatest.   Write the letter corresponding to the
+integral: <script type="math/tex; mode=display"> \answer [format=string]{B} < \answer [format=string]{C} < \answer [format=string]{A} </script>
+</p></div>_______________________________________________________________________________________________________
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-66r3"></a> Let: <script type="math/tex; mode=display"> \begin{align*} 
+      R &= \{(x,y): x^2 +y^2 \le 1~\text{with}~x\ge0, y\ge0\}\\
+    T &= \{(x,y): x+y\le 1~\text{with}~x\ge0, y\ge0\}
+  \end{align*}</script>
+Additionally, let <script type="math/tex">F(x,y) = \sqrt {1-x^2-y^2}</script> and <script type="math/tex">G(x,y) = 1-x-y</script>. Which quantity is largest? <div class="multiple-choice" id="problem4"> <span class="choice correct " id="choice1"><script type="math/tex">\iint _R \sqrt {1+F^{(1,0)}(x,y)^2+F^{(0,1)}(x,y)^2} \d A</script></span> <span class="choice  " id="choice2"><script type="math/tex">\iint _T \sqrt {1+G^{(1,0)}(x,y)^2+G^{(0,1)}(x,y)^2} \d A</script></span>  </div>
+</div>
+                                                                  
+
+                                                                  
+ 
+ 
+
+                                                                  
+
+
+</body></html>

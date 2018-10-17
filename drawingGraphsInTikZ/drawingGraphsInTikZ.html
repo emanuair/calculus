@@ -1,0 +1,247 @@
+<!DOCTYPE html><html lang="en"><head> <title>Drawing  graphs  in  TikZ</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="drawingGraphsInTikZ.tex"/> 
+<meta name="date" content="2018-10-16 21:14:00"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="e6f8eabe04cf4467eb27c918e89e52deebf80745 drawingGraphsInTikZ/drawingGraphsInTikZ.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We give a basic template for graphs in TikZ.
+</p></div>   <div class="maketitle"></div>
+If you want to produce a simple graph, like this one: <div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 34--><p class="noindent">You do it like this:
+</p><!--l. 36--><pre>  \begin{image}
+ <br/>  \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-6.4,
+ <br/>        xmax=6.4,
+ <br/>        ymin=-1.2,
+ <br/>        ymax=1.2,
+ <br/>        axis lines=center,
+ <br/>        xlabel=$x$,
+ <br/>        ylabel=$y$,
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot [ultra thick, penColor, smooth] {sin(deg(x))};
+ <br/>    \end{axis}
+ <br/>  \end{tikzpicture}
+ <br/>\end{image}
+<!--l. 54--></pre>
+                                                                  
+
+                                                                  
+<!--l. 56--><p class="noindent">You can add more plots, like so: </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 79--><pre>\begin{image}
+ <br/>  \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-6.4,
+ <br/>        xmax=6.4,
+ <br/>        ymin=-1.2,
+ <br/>        ymax=1.2,
+ <br/>        axis lines=center,
+ <br/>        xlabel=$x$,
+ <br/>        ylabel=$y$,
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot [ultra thick, penColor, smooth] {sin(deg(x))};
+ <br/>      \addplot [ultra thick, penColor2, smooth,domain] {cos(deg(x))};
+ <br/>      \addplot [ultra thick, penColor3, smooth] {1};
+ <br/>      \addplot [ultra thick, penColor4, smooth] {-1};
+ <br/>      \addplot [ultra thick, penColor5, smooth,domain=-1:1] {x};
+ <br/>    \end{axis}
+ <br/>  \end{tikzpicture}
+ <br/>\end{image}
+<!--l. 101--></pre>
+<!--l. 103--><p class="noindent">You can make an array of plots like this:
+                                                                  
+
+                                                                  
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-3"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">A</script><script type="math/tex">x</script><script type="math/tex">y</script>
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">B</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-4"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">C</script><script type="math/tex">x</script><script type="math/tex">y</script>
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">D</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 192--><pre>\begin{image}
+ <br/>  \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-10.3,xmax=10.3,ymin=-10.3,ymax=10.3,
+ <br/>        clip=true,
+ <br/>        unit vector ratio*=1 1 1,
+ <br/>        axis lines=center,
+ <br/>        grid = major,
+ <br/>        ytick={-21,-18,...,21},
+ <br/>     xtick={-21,-18,...,21},
+                                                                  
+
+                                                                  
+ <br/>        xlabel=$x$, ylabel=$y$,
+ <br/>        y tick label style={anchor=west},
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot[very thick,penColor,domain=-10.3:-3,samples=50] plot{x/sqrt(x^2-9)};
+ <br/>      \addplot[very thick,penColor,domain=3:10.3,samples=500]  plot{x/sqrt(x^2-9)};
+ <br/>
+ <br/>      \node at (axis cs:6,6) {\huge$A$};
+ <br/>      \end{axis}
+ <br/>  \end{tikzpicture}\quad
+ <br/>  \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-10.3,xmax=10.3,ymin=-10.3,ymax=10.3,
+ <br/>        clip=true,
+ <br/>        unit vector ratio*=1 1 1,
+ <br/>        axis lines=center,
+ <br/>        grid = major,
+ <br/>        ytick={-21,-18,...,21},
+ <br/>     xtick={-21,-18,...,21},
+ <br/>        xlabel=$x$, ylabel=$y$,
+ <br/>        y tick label style={anchor=west},
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot[very thick,penColor,domain=-10.3:-0.08,samples=50] plot{1/x};
+ <br/>      \addplot[very thick,penColor,domain=0.08:10.3,samples=50] plot{1/x};
+ <br/>
+ <br/>      \node at (axis cs:6,6) {\huge$B$};
+ <br/>      \end{axis}
+ <br/>  \end{tikzpicture}
+ <br/>\end{image}
+ <br/>
+ <br/>\begin{image}
+ <br/>  \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-10.3,xmax=10.3,ymin=-10.3,ymax=10.3,
+ <br/>        clip=true,
+ <br/>        unit vector ratio*=1 1 1,
+ <br/>        axis lines=center,
+ <br/>        grid = major,
+ <br/>        ytick={-21,-18,...,21},
+ <br/>     xtick={-21,-18,...,21},
+ <br/>        xlabel=$x$, ylabel=$y$,
+ <br/>        y tick label style={anchor=west},
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+                                                                  
+
+                                                                  
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot[very thick,penColor,domain=-10.3:-0.08,samples=50] plot{1/x-1};
+ <br/>      \addplot[very thick,penColor,domain=0.08:10.3,samples=50] plot{1/x+1};
+ <br/>
+ <br/>      \node at (axis cs:6,6) {\huge$C$};
+ <br/>      \end{axis}
+ <br/>  \end{tikzpicture}\quad
+ <br/> \begin{tikzpicture}
+ <br/>    \begin{axis}[
+ <br/>        xmin=-10.3,xmax=10.3,ymin=-10.3,ymax=10.3,
+ <br/>        clip=true,
+ <br/>        unit vector ratio*=1 1 1,
+ <br/>        axis lines=center,
+ <br/>        grid = major,
+ <br/>        ytick={-21,-18,...,20},
+ <br/>     xtick={-21,-18,...,20},
+ <br/>        xlabel=$x$, ylabel=$y$,
+ <br/>        y tick label style={anchor=west},
+ <br/>        every axis y label/.style={at=(current axis.above origin),anchor=south},
+ <br/>        every axis x label/.style={at=(current axis.right of origin),anchor=west},
+ <br/>      ]
+ <br/>      \addplot[very thick,penColor,domain=-10.3:-3,samples=50] plot{-x/sqrt(x^2-9)-2};
+ <br/>      \addplot[very thick,penColor,domain=3:10.3,samples=800]  plot{-x/sqrt(x^2-9)+2};
+ <br/>
+ <br/>      \node at (axis cs:6,6) {\huge$D$};
+ <br/>      \end{axis}
+ <br/>  \end{tikzpicture}
+ <br/>\end{image}
+<!--l. 278--></pre>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="linearApproximation1.tex"/> 
+<meta name="date" content="2018-10-16 21:27:00"/> 
+<meta name="author" content="Steven  Gubkinand  Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define linear approximation as an application of the tangent to a curve."/> 
+<meta name="learning-outcome" content="Find the linear approximation to a function at a point and use it to approximate the function value."/> 
+<meta name="learning-outcome" content="Identify when a linear approximation can be used."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="71f54d9ff8badb4de74bbd43c16066796c6b3cf5 linearApproximation/exercises/linearApproximation1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Approximate <script type="math/tex">\sqrt {9.5}</script> by hand using the idea of linear approximation (of a conveniently
+chosen function, and base point). Using the second derivative, explain whether you
+think this is an underestimate or an overestimate. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a>
+<!--l. 15--><p class="noindent">The number that you have to approximate should be expressed as
+</p><!--l. 17--><p class="noindent"><script type="math/tex">\sqrt {9.5}=f(x)</script>. Obviously, <script type="math/tex">f(x)=\sqrt {x}</script>, and <script type="math/tex">x=9.5</script>.
+</p></div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a>
+<!--l. 22--><p class="noindent">You will now approximate <script type="math/tex">\sqrt {9.5}=f(x)</script> with <script type="math/tex">L (x)</script>, where <script type="math/tex">L</script> is the linear approximation of <script type="math/tex">f</script> at <script type="math/tex">a</script>. In other
+words, <script type="math/tex">\sqrt {9.5}=f(x)\approx L(x)</script>.
+</p><!--l. 26--><p class="noindent">You have to choose the ”base” number <script type="math/tex">a</script> wisely, so that <script type="math/tex">x=9.5</script> is near <script type="math/tex">a</script>, and so that you can
+easily and exactly compute the values <script type="math/tex">f(a)</script> and <script type="math/tex">f'(a)</script>. These two values are needed when we
+compute the expression for <script type="math/tex">L(x)</script>.
+</p></div> <div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> The obvious choice for <script type="math/tex">a</script> is <script type="math/tex">a=9</script>. Any other number for which it is easy to compute <script type="math/tex">\sqrt {a}</script> is
+farther away from <script type="math/tex">x=9.5</script>. Now we have to compute <script type="math/tex">f(a)=f(9)</script> and <script type="math/tex">f'(a)=f'(9)</script>.
+                                 <script type="math/tex; mode=display">f(9)= \answer {3}</script>
+                                 <script type="math/tex; mode=display">f'(x)= \frac {1}{ \answer {2\sqrt {x}}}</script>
+                                                                  
+
+                                                                  
+                                 <script type="math/tex; mode=display">f'(9)= \frac {1}{ \answer {6}}</script>
+</div> <div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a>
+<!--l. 44--><p class="noindent">Now, we have to find an expression for <script type="math/tex">L(x)=f(9)+f'(9)(x-9)</script>.
+                                 <script type="math/tex; mode=display">L(x)= \answer {3}+\answer {\frac {1}{6}}(x-9)</script>
+</p>
+</div> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-69r6"></a>
+<!--l. 52--><p class="noindent">Now, we have to evaluate <script type="math/tex">L(x)=L(9.5)</script>.
+                                 <script type="math/tex; mode=display">L(9.5)= \answer {3}+\answer {\frac {1}{6}}(9.5-9)</script>
+                                                                  
+
+                                                                  
+</p>
+</div>
+                                 <script type="math/tex; mode=display">\sqrt {9.5} \approx \answer {3+\frac {1}{12}}</script>
+ Is this an underestimate or overestimate? <div role="article" class="problem-environment hint" id="problem7"><a id="x1-70r7"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">y=f(x)</script><script type="math/tex">y=L(x)</script><script type="math/tex">(9,f(9))</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div> <div role="article" class="problem-environment hint" id="problem8"><a id="x1-71r8"></a> Recall: <script type="math/tex">f''(x)=-\frac {1}{4\cdot x^{\answer {\frac {3}{2}}}}</script>.
+<!--l. 92--><p class="noindent">Since <script type="math/tex">f''(x)<0</script> on <script type="math/tex">(0,\infty )</script>, the graph of <script type="math/tex">f</script> is concave down. Therefore, the tangent line lies above the
+graph of <script type="math/tex">f</script>, except at <script type="math/tex">x=9</script>, where <script type="math/tex">f(9)=L(9)</script>.
+</p><!--l. 95--><p class="noindent">This means that <script type="math/tex">L(x)\ge f(x)</script>. So, <script type="math/tex">L(9.5)\ge f(9.5)</script>.
+</p></div> This is an <div class="multiple-choice" id="problem9"><span class="choice  " id="choice1">underestimate</span> <span class="choice correct " id="choice2">overestimate</span> </div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

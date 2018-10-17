@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  derivative  of
+                                                                  
+
+                                                                  
+sine</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInTheDerivativeOfSine.tex"/> 
+<meta name="date" content="2018-10-16 21:05:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Use ``shortcut&#39;&#39; rules to find and use derivatives."/> 
+<meta name="learning-outcome" content="Use the definition of the derivative to develop a shortcut rule to find the derivative of the sine function."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="6f87d741cca797091e474fbb6cd70fa59e14a043 rulesOfDifferentiation/digInTheDerivativeOfSine.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">We derive the derivative of sine.
+</p></div>   <div class="maketitle"></div>
+It is now time to visit our two friends who concern themselves periodically with
+triangles and circles. In particular, we want to show that <script type="math/tex; mode=display"> \dd {\theta }\sin (\theta )=\cos (\theta ). </script> Before we tackle this
+monster, let’s remember a fact, and derive a new fact. You may initially be
+uncomfortable because you can’t quite see why we need these results, but this
+style of exposition is a fact of technical writing; it is best to get used to
+it.
+<!--l. 27--><p class="noindent">First, recall the fact that <script type="math/tex; mode=display"> \lim _{\theta \to 0} \frac {\sin (\theta )}{\theta } = 1. </script> Next, we will use this fact to derive our new fact: </p><div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a><script type="math/tex; mode=display"> \lim _{\theta \to 0}\frac {\cos (\theta )-1}{\theta } = 0. </script> <div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-65r2"></a>Write with me:
+<script type="math/tex; mode=display"> \begin{align*} 
+\lim_{\theta\to 0}\frac{\cos(\theta)-1}{\theta} &= \lim_{\theta\to 0}\left(\frac{\cos(\theta)-1}{\theta}\cdot\frac{\cos(\theta)+1}{\cos(\theta)+1}\right)\\
+&=\lim_{\theta\to 0}\frac{\cos^2(\theta)-1}{\theta(\cos(\theta)+1)}\\
+&=\lim_{\theta\to 0}\frac{-\sin^2(\theta)}{\theta(\cos(\theta)+1)}\\
+&=-\lim_{\theta\to 0}\left(\frac{\sin(\theta)}{\theta}\cdot\frac{\sin(\theta)}{\cos(\theta)+1}\right)\\
+&=-\lim_{\theta\to 0}\answer[given]{\frac{\sin(\theta)}{\theta}} \cdot \lim_{\theta\to 0}\frac{\sin(\theta)}{\cos(\theta)+1}\\
+&= -1 \cdot \answer[given]{\frac{0}{2}} = 0.
+\end{align*}</script>
+</div>
+</div>
+<!--l. 49--><p class="noindent">After these delicious appetizers, we are now ready for the main course.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem3"><a id="x1-66r3"></a><span class="theorem-like-title">The derivative of sine</span><a class="ximera-label" id="theorem:deriv sin"></a> For any angle <script type="math/tex">\theta </script> measured in radians, the derivative of <script type="math/tex">\sin (\theta )</script> with respect
+to <script type="math/tex">\theta </script> is <script type="math/tex">\cos (\theta )</script>. In other words, <script type="math/tex; mode=display"> \dd {\theta } \sin (\theta ) = \cos (\theta ). </script> <div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-67r4"></a>Using the definition of the derivative, write with me <script type="math/tex; mode=display"> \dd {\theta } \sin (\theta ) = \lim _{h\to 0} \frac {\sin (\theta +h)-\sin (\theta )}{h} </script> Now we
+get sneaky and apply the trigonometric addition formula for sine, that says <script type="math/tex">\sin (\alpha +\beta ) = \sin (\alpha )\cos (\beta )+\sin (\beta )\cos (\alpha )</script>, to write
+<script type="math/tex; mode=display"> \begin{align*} 
+  &= \lim_{h\to0} \frac{\sin(\theta)\cos(h)+\sin(h)\cos(\theta)-\sin(\theta)}{h}  \\
+  &= \lim_{h\to0} \left(\frac{\sin(\theta)\cos(h)-\sin(\theta)}{h} + \frac{\sin(h)\cos{\theta}}{h} \right)\\
+  &=\lim_{h\to0} \left(\sin (\theta)\frac{\cos(h) - 1}{h}+\cos(\theta)\frac{\sin(h)}{h}\right) \\
+   &=\lim_{h\to0} \sin (\theta)\frac{\cos(h) - 1}{h}+\lim_{h\to0}\cos(\theta)\frac{\sin(h)}{h} \\
+     &= \sin (\theta)\lim_{h\to0}\frac{\cos(h) - 1}{h}+\cos(\theta)\lim_{h\to0}\frac{\sin(h)}{h} \\
+  &=\sin(\theta) \cdot \answer[given]{0} + \cos(\theta) \cdot \answer[given]{1}\\
+  &= \cos(\theta).
+\end{align*}</script>
+</div>
+</div>
+<div role="article" class="problem-environment question" id="problem5"><a id="x1-68r5"></a> What is the slope of the line tangent to the graph of <script type="math/tex">\sin (\theta )</script> at <script type="math/tex">\theta = \pi /4</script>?  <script type="math/tex; mode=display"> \answer {\sqrt {2}/2} </script>
+<div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-69r6"></a>The slope of the line tangent to the graph of <script type="math/tex">\sin (\theta )</script> at <script type="math/tex">\theta = \pi /4</script> is given by <script type="math/tex; mode=display"> \eval {\ddx \sin (\theta )}_{\theta = \pi /4}=\cos (\pi /4)=\sqrt {2}/2. </script>
+                                                                  
+
+                                                                  
+<!--l. 89--></div>
+</div>
+<!--l. 92--><p class="noindent">For your intellectual stimulation, consider the following geometric interpretation of
+the derivative of <script type="math/tex">\sin (\theta )</script>.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><img src="0.png" alt="PIC"/> </div>
+<!--l. 102--><p class="noindent">From this diagram, we see that increasing <script type="math/tex">\theta </script> by a small amount <script type="math/tex">h</script> increases <script type="math/tex">\sin (\theta )</script> by
+approximately <script type="math/tex">h\cos (\theta )</script>. Hence, <script type="math/tex; mode=display"> \frac {\Delta y}{\Delta \theta }\approx \frac {h\cos (\theta )}{h} = \cos (\theta ). </script>
+</p><!--l. 110--><p class="noindent">With all of this said, the derivative of a function measures the slope of the plot of a
+function. If we examine the graphs of the sine and cosine side by side, it should be
+clear that the latter appears to accurately describe the slope of the former, and
+indeed this is true. </p><div class="image-environment" role="img" aria-labelledby="image-alt-2"><img src="1.png" alt="PIC"/> </div>
+<div role="article" class="problem-environment question" id="problem7"><a id="x1-70r7"></a> Using the graph above, what is the value of <script type="math/tex">x</script> in the interval <script type="math/tex">[0, 2\pi ]</script> where the tangent to the
+graph of <script type="math/tex">f(x) = \sin (x)</script> has slope <script type="math/tex">-1</script>?  The tangent line to the graph of the function <script type="math/tex">\sin (x)</script> has slope <script type="math/tex">-1</script> at <script type="math/tex">x = \answer {\pi }</script>.
+</div>
+<!--l. 125--><p class="noindent">Pro-tip: When working with trigonometric functions, you should always keep their
+graphical representations in mind.
+ 
+ 
+
+                                                                  
+
+
+</p></body></html>

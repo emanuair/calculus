@@ -1,0 +1,317 @@
+<!DOCTYPE html><html lang="en"><head> <title>Applied  related
+                                                                  
+
+                                                                  
+rates</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInAppliedRelatedRates.tex"/> 
+<meta name="date" content="2018-10-16 20:28:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Identify word problems as related rates problems."/> 
+<meta name="learning-outcome" content="Solve related rates word problems."/> 
+<meta name="learning-outcome" content="Translate word problems into mathematical expressions."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="0ef11366c0b0557de70ca32063adfdaaffa9ff89 appliedRelatedRates/digInAppliedRelatedRates.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 13--><p class="noindent">We solve related rates problems in context.
+</p></div>   <div class="maketitle"></div>
+Now we are ready to solve related rates problems in context. Just as before, we are
+going to follow essentially the same plan of attack in each problem.
+     <dl class="description"><dt class="description">
+<strong>Introduce variables, identify the given rate and the unknown rate.</strong> </dt><dd class="description">
+     Assign a variable to each quantity that changes in time.
+     </dd><dt class="description">
+<strong>Draw a picture.</strong> </dt><dd class="description">If possible, draw a schematic picture with all the relevant
+     information.
+     </dd><dt class="description">
+<strong>Find equations.</strong> </dt><dd class="description">Write equations that relate all relevant variables.
+     </dd><dt class="description">
+<strong>Differentiate with respect to t.</strong> </dt><dd class="description">Here    we    will    often    use    implicit
+     differentiation and obtain an equation that relates the given rate and the
+     unknown rate.
+     </dd><dt class="description">
+<strong>Evaluate and solve.</strong> </dt><dd class="description">Evaluate each quantity at the relevant instant and solve
+     for the unknown rate.
+     </dd></dl>
+<h3 class="sectionHead"><a id="x1-1000"></a>Formulas</h3>
+<!--l. 38--><p class="noindent">In our next problem, we will stretch and flatten a cylinder-shaped pizza dough.
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-1">                                                                       
+</div>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-1001r1"></a>A hand-tossed pizza crust starts off as a ball of dough with a volume of <script type="math/tex">400\pi \, \text {cm}^3</script>. First, the
+cook stretches the dough to the shape of a cylinder of radius <script type="math/tex">12</script> cm. Next the cook
+tosses the dough.
+<!--l. 68--><p class="noindent">If during tossing, the dough maintains the shape of a cylinder and the radius is
+increasing at a rate of <script type="math/tex">15</script> cm/min, how fast is its thickness changing when the radius is <script type="math/tex">20</script>
+cm? </p><div class="theorem-like problem-environment explanation" id="problem2"><a id="x1-1002r2"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">V</script>, <script type="math/tex">r</script>, and <script type="math/tex">h</script>, denoting the volume, the radius,
+and the thickness of the pizza, in that order. We <strong>identify</strong> the given rate <script type="math/tex">\frac {dr}{dt}=15</script> cm/min
+and the unknown rate <script type="math/tex">\frac {dh}{dt}</script>, when <script type="math/tex">r=20</script>.
+                                                                  
+
+                                                                  
+<!--l. 74--><p class="noindent">Next, we <strong>draw a picture</strong>. Note that our pizza dough is shaped as a cylinder.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">                             <script type="math/tex">r</script><script type="math/tex">\frac {dr}{dt} = 15</script><script type="math/tex">h</script><script type="math/tex">\frac {dh}{dt}=</script> ?, when <script type="math/tex">r=20</script>
+</div>
+Next we need to <strong>find equations</strong>. Recall the formula for the volume of the cylinder, <script type="math/tex">V=\pi \cdot r^2\cdot h</script>
+and note that <script type="math/tex">V=400\pi \, \text {cm}^3</script>, and write <script type="math/tex; mode=display"> 400\pi = \pi \cdot r^2 \cdot h, </script> which immediately simplifies to <script type="math/tex; mode=display"> 400 = r^2 \cdot h. </script> Since both <script type="math/tex">r</script> and <script type="math/tex">h</script> are
+functions of time, we now <strong>differentiate</strong> both sides of the equation using implicit
+differentiation,
+<!--l. 102--><p class="noindent"><script type="math/tex; mode=display"> 0 = 2\cdot r \cdot \frac {dr}{dt} \cdot h+ r^2 \cdot \frac {dh}{dt}. </script> Now we’ll <strong>evaluate</strong> all the quantities at the instant when <script type="math/tex">r=20</script>. But, first, we have to
+compute <script type="math/tex">h</script> at that moment. Since <script type="math/tex; mode=display"> 400 = 20^2 \cdot h , </script> it follows that <script type="math/tex">h=1</script>, when <script type="math/tex">r=20</script>. Now, we are ready to
+<strong>solve</strong>.
+</p><!--l. 111--><p class="noindent"><script type="math/tex; mode=display"> 0 = 2\cdot 20 \cdot 15 \cdot 1 + 20^2 \cdot \frac {dh}{dt} </script> <script type="math/tex; mode=display"> \frac {-2\cdot 20 \cdot 15 \cdot 1}{20^2} = \frac {dh}{dt} </script> Therefore, when <script type="math/tex">r=20</script>,
+</p><!--l. 119--><p class="noindent"><script type="math/tex; mode=display"> \frac {dh}{dt} = -1.5. </script> Hence, the thickness of the dough is changing at a rate of <script type="math/tex">\answer [given]{-1.5}</script> cm/min when <script type="math/tex">r=20</script>
+cm.
+</p></div>
+</div> In our next example we consider a melting snowball.
+<div class="image-environment" role="img" aria-labelledby="image-alt-3">                                           
+</div>
+<div class="theorem-like problem-environment example" id="problem3"><a id="x1-1003r3"></a>Consider a melting snowball. We will assume that the rate at which the snowball is
+melting is proportional to its surface area. Show that the radius of the snowball is
+changing at a constant rate.
+<div class="theorem-like problem-environment explanation" id="problem4"><a id="x1-1004r4"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">V</script>, <script type="math/tex">r</script>, and <script type="math/tex">A</script>, denoting the volume, the radius, and the
+surface area of the snowball, in that order . Then, we <strong>identify</strong> the given rate <script type="math/tex">\frac {dV}{dt}</script> and
+the unknown rate <script type="math/tex">\frac {dr}{dt}</script>, the rate to be determined. This problem is a bit unusual,
+because“the given rate” is not explicitly given. We will deal with this issue below.
+                                                                  
+
+                                                                  
+Next, we <strong>draw a picture</strong>. <div class="image-environment" role="img" aria-labelledby="image-alt-4">                                      <script type="math/tex">r</script><script type="math/tex">\frac {dV}{dt}\sim A</script><script type="math/tex">\frac {dr}{dt}=</script> ?
+</div>
+In order to <strong>find equations</strong> that relate all relevant variables, we recall formulas for
+the volume and the surface area of the sphere, <script type="math/tex; mode=display"> (1) \hspace {0.1in} V =\frac {4}{3} \cdot \pi \cdot r^3 \qquad \text {and}\qquad (2) \hspace {0.1in} A = 4 \pi \cdot r^2. </script> Now the key words are “the rate at
+which the snowball is melting (the given rate) is proportional to its surface area.”
+From this we have the following equation: <div class="image-environment" role="img" aria-labelledby="image-alt-5">                       <script type="math/tex">\underbrace {\frac {dV}{dt}} = \overbrace {k} \cdot \underbrace {A}</script>rate the snowball is meltingis proportional toits surface area
+</div>
+We need to compute <script type="math/tex">\frac {dV}{dt}</script>. Since <script type="math/tex">r</script> is a function of <script type="math/tex">t</script>, we differentiate both sides of equation <script type="math/tex">(1)</script>.
+So <script type="math/tex; mode=display"> \frac {dV}{dt} = 4\cdot \pi \cdot r^2 \cdot \frac {dr}{dt}. </script> On the other hand, <script type="math/tex; mode=display"> \frac {dV}{dt} = k\cdot A. </script> Therefore, <script type="math/tex; mode=display"> 4\cdot \pi \cdot r^2 \cdot \frac {dr}{dt} = k\underbrace {\cdot 4\cdot \pi \cdot r^2}_{A} . </script> Now, we <strong>solve</strong> for <script type="math/tex">\frac {dr}{dt}</script> and obtain that
+<script type="math/tex; mode=display"> \begin{align*} 
+\frac{dr}{dt} &=  k.\\
+  \end{align*}</script>
+Hence, the radius is changing at a constant rate. Notice, in this example we did not
+have to evaluate quantities at particular time, because the unknown rate did not
+depend on time.
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Right triangles</h3>
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-2001r5"></a>A road running north to south crosses a road going east to west at the point <script type="math/tex">P</script>. Cyclist
+<script type="math/tex">A</script> is riding north along the first road, and cyclist <script type="math/tex">B</script> is riding east along the
+second road. At a particular time, cyclist <script type="math/tex">A</script> is <script type="math/tex">3</script> kilometers to the north of <script type="math/tex">P</script> and
+traveling at <script type="math/tex">20</script> km/h, while cyclist <script type="math/tex">B</script> is <script type="math/tex">4</script> kilometers to the east of <script type="math/tex">P</script> and traveling at <script type="math/tex">15</script>
+km/h. How fast is the distance between the two cyclists changing at that
+time?
+<div class="theorem-like problem-environment explanation" id="problem6"><a id="x1-2002r6"></a>First, we <strong>introduce the variables</strong> <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script>, denoting the distance of cyclist <script type="math/tex">A</script>
+from the point <script type="math/tex">P</script>, the distance of cyclist <script type="math/tex">B</script> from the point <script type="math/tex">P</script>, and the distance
+between the two cyclists, in that order. We <strong>identify</strong> the given rates <script type="math/tex">\frac {da}{dt}=20</script> km/h, <script type="math/tex">\frac {db}{dt}=15</script>
+km/h, when <script type="math/tex">a=3, b=4</script> and the unknown rate <script type="math/tex">\frac {dc}{dt}</script>, when <script type="math/tex">a=3, b=4</script>. Now, we <strong>draw a picture</strong>.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-6">      when <script type="math/tex">a=3</script> km, <script type="math/tex">b=4</script> km<script type="math/tex">\frac {da}{dt}=20</script> km/h<script type="math/tex">\frac {db}{dt}=15</script> km/h<script type="math/tex">\frac {dc}{dt}=</script> ?<script type="math/tex">P</script><script type="math/tex">a</script><script type="math/tex">A</script><script type="math/tex">b</script>B<script type="math/tex">c</script>
+</div>
+We <strong>find equations</strong> relating the variables <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script>. By the Pythagorean Theorem, <script type="math/tex; mode=display"> (1)\hspace {0.2in}c^2=a^2+b^2. </script>
+Since <script type="math/tex">a</script>, <script type="math/tex">b</script>, and <script type="math/tex">c</script> are functions of time, we <strong>differentiate</strong> both sides of the equation with
+respect to <script type="math/tex">t</script>. <script type="math/tex; mode=display"> (2)\hspace {0.2in}2\cdot c\cdot \frac {dc}{dt}=2\cdot a\cdot \frac {da}{dt}+2\cdot b\cdot \frac {db}{dt}. </script> This equation holds on some time interval, and , in particular, at the
+instant when <script type="math/tex">a=3</script> and <script type="math/tex">b=4</script>. Therefore, at that instant,
+<!--l. 257--><p class="noindent"><script type="math/tex; mode=display"> (3)\hspace {0.2in}2\cdot c \cdot \underbrace {\frac {dc}{dt}}_{unknown\hspace {0.015in} rate} =2\cdot 3\cdot \underbrace {20}_ {given\hspace {0.02in} rate}+2\cdot 4 \cdot \underbrace {15}_{given\hspace {0.02in} rate} . </script>
+</p><!--l. 259--><p class="noindent">In order to evaluate <script type="math/tex">c</script>, the distance between the cyclists, at the instant when <script type="math/tex">a=3</script> and <script type="math/tex">b=4</script>, we
+draw a picture “taken” at that instant. </p><div class="image-environment" role="img" aria-labelledby="image-alt-7">         <script type="math/tex">P</script>A<script type="math/tex">3</script> km<script type="math/tex">4</script> kmB<script type="math/tex">c</script><script type="math/tex">c^2=3^2+4^2=25</script>
+</div>
+By the the Pythagorean Theorem and the picture above, when <script type="math/tex">a=3</script>, <script type="math/tex">b=4</script>, it follows that <script type="math/tex; mode=display"> c= \answer [given]{5} km. </script>
+Now we can <strong>evaluate</strong> all the quantities in equation <script type="math/tex">(3)</script> and <strong>solve</strong> <script type="math/tex; mode=display"> 2\cdot 5 \cdot \frac {dc}{dt} = 2 \cdot 3\cdot 20 + 2 \cdot 4 \cdot 15. </script> We find that <script type="math/tex">\frac {dc}{dt} = 24</script> km/hr
+at the moment when <script type="math/tex">a=3</script>, <script type="math/tex">b=4</script>. <br class="newline"/>
+<!--l. 294--></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem7"><a id="x1-2003r7"></a>A plane is flying at an altitude of <script type="math/tex">3</script> miles directly away from you at <script type="math/tex">500</script> mph . How fast is
+the plane’s distance from you increasing at the moment when the plane is flying over
+a point on the ground <script type="math/tex">4</script> miles from you?
+<div class="theorem-like problem-environment explanation" id="problem8"><a id="x1-2004r8"></a>First, we <strong>introduce variables</strong> <script type="math/tex">p</script>, the distance the plane has traveled after it flew
+                                                                  
+
+                                                                  
+right above you, and <script type="math/tex">s</script>, the distance between you and the plane. The given
+rate is <script type="math/tex">\frac {dp}{dt}=500</script> mph and the unknown rate is <script type="math/tex">\frac {ds}{dt}</script>, when <script type="math/tex">p=4</script>. Next, we <strong>draw a picture</strong>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-8">     <script type="math/tex">3</script> miles<script type="math/tex">p</script><script type="math/tex">plane</script><script type="math/tex">\frac {dp}{dt}=500</script> mph<script type="math/tex">\frac {ds}{dt}=</script> ?, when <script type="math/tex">p=4</script> miground<script type="math/tex">s</script>You
+</div>
+Next we <strong>find equations</strong> relating the variables <script type="math/tex">p</script> and <script type="math/tex">s</script>. By the Pythagorean Theorem
+we know that <script type="math/tex; mode=display"> p^2+3^2=s^2. </script> Since <script type="math/tex">p</script> and <script type="math/tex">s</script> are functions of time, we now <strong>differentiate</strong> both sides of
+the equation <script type="math/tex; mode=display"> 2\cdot p\cdot \frac {dp}{dt} = 2\cdot s \cdot \frac {ds}{dt}. </script> At the instant when <script type="math/tex">p=4</script> mi, we get that <script type="math/tex; mode=display"> 2\cdot 4\cdot \underbrace { 500}_{given\hspace {0.02in}rate} = 2\cdot \overbrace {s}^{unknown\hspace {0.02in}value} \cdot \underbrace {\frac {ds}{dt}}_{unknown\hspace {0.02in}rate} . </script> This implies that <script type="math/tex">s</script> has to be
+evaluated at time when <script type="math/tex">p=4</script>. In order to do that, let’s draw the picture at the given
+instant, when <script type="math/tex">p=4</script> mi. <div class="image-environment" role="img" aria-labelledby="image-alt-9">        <script type="math/tex">3</script> milespointon the ground4 miles away from you<script type="math/tex">s^2=4^2+3^2=25</script>  <script type="math/tex">mi^2</script><script type="math/tex">p=4</script> miles<script type="math/tex">plane</script><script type="math/tex">4</script> miles<script type="math/tex">s</script>You
+</div>
+<!--l. 373--><p class="noindent">So, <script type="math/tex">s=\answer [given]{5}</script>. Putting together all the information we get <script type="math/tex; mode=display"> 2(4)(500)=2(5)\frac {ds}{dt} . </script> Finally, we <strong>solve</strong>: <script type="math/tex">\frac {ds}{dt}=\answer [given]{400}</script> mph, at the
+moment when <script type="math/tex">p=4</script> miles.
+</p></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-3000"></a>Angular rates</h3>
+<div class="theorem-like problem-environment example" id="problem9"><a id="x1-3001r9"></a>A plane is flying at an altitude of <script type="math/tex">3</script> miles directly away from you at <script type="math/tex">500</script> mph . Let <script type="math/tex">\theta </script> be
+the <strong>angle of elevation</strong> of the plane, i.e., the angle between the ground
+and your line of sight to the plane. How fast is the angle <script type="math/tex">\theta </script> changing at the
+moment when the plane is flying over a point on the ground <script type="math/tex">4</script> miles from
+you?
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment explanation" id="problem10"><a id="x1-3002r10"></a>First, we <strong>introduce a variable</strong> <script type="math/tex">p</script>, the distance the plane has traveled after it flew
+right above you. So, the given rate is <script type="math/tex">\frac {dp}{dt}=500</script> mph and the unknown (related) rate is <script type="math/tex">\frac {d\theta }{dt}</script>, at
+the instant when <script type="math/tex">p=4</script> miles. This rate should be measured in rad/s. Therefore,
+we have to convert the units of the given rate, mph, into mi/s: <script type="math/tex">\frac {dp}{dt}=500</script>mph<script type="math/tex">=\frac {500}{60\cdot 60}</script> mi/s.
+<br class="newline"/>Next, we <strong>draw a picture</strong>. <div class="image-environment" role="img" aria-labelledby="image-alt-10">        <script type="math/tex">\theta </script><script type="math/tex">3</script> miles<script type="math/tex">p</script><script type="math/tex">plane</script><script type="math/tex">\frac {dp}{dt}=\frac {500}{60\cdot 60}</script>mi/s<script type="math/tex">\frac {d\theta }{dt}=</script> ?, when <script type="math/tex">p=4</script> migroundYou
+</div>
+Now we <strong>find an equation</strong> relating variables <script type="math/tex">p</script> and <script type="math/tex">\theta </script>. From the picture we can see that
+<script type="math/tex; mode=display"> \tan {\theta }=\frac {3}{p}. </script> Since <script type="math/tex">p</script> and <script type="math/tex">\theta </script> are both functions of time, we now <strong>differentiate</strong> both sides of the
+equation. We write <script type="math/tex; mode=display"> \sec ^{2}{\theta }\cdot \frac {d\theta }{dt} = -\frac {3}{p^2}\cdot \frac {dp}{dt}. </script> The above equation holds over some interval of time. In
+particular, it is true when <script type="math/tex">p=4</script>. Therefore, when <script type="math/tex">p=4</script>, <script type="math/tex; mode=display"> \overbrace {\sec ^{2}{\theta }}^{unknown\hspace {0.02in}value}\cdot \underbrace {\frac {d\theta }{dt} }_{unknown\hspace {0.02in}rate} = -\frac {3}{4^2}\cdot \underbrace { \frac {500}{3600}}_{given\hspace {0.02in}rate}. </script> This implies that we have to compute
+the unknown value, <script type="math/tex">\sec ^{2}{\theta }</script>, when <script type="math/tex">p=4</script>. To this end, we draw and label the picture at the time
+when <script type="math/tex">p=4</script> mi. <div class="image-environment" role="img" aria-labelledby="image-alt-11">        <script type="math/tex">\theta </script><script type="math/tex">3</script> miles<script type="math/tex">\sec ^{2}{\theta }=1+\tan ^{2}{\theta }=1+\Bigl (\frac {3}{4}\Bigr )^2=\frac {25}{16}</script>pointon the ground4 miles away from you<script type="math/tex">p=4</script> miles<script type="math/tex">plane</script><script type="math/tex">4</script> milesYou
+</div>
+<!--l. 473--><p class="noindent">So, at the moment when <script type="math/tex">p=4</script> miles, <script type="math/tex; mode=display"> \sec ^2{\theta }=1+\Bigr (\frac {3}{4}\Bigl )^2=\frac {25}{16}. </script> Now, by substituting all the known values into the
+equation above, we get <script type="math/tex; mode=display"> \frac {25}{16}\cdot \frac {d\theta }{dt}= -\frac {3}{16}\cdot \frac {500}{3600}. </script> We <strong>solve</strong> for <script type="math/tex">\frac {d\theta }{dt}</script>, when <script type="math/tex">p=4</script>, and get that <script type="math/tex; mode=display"> \frac {d\theta }{dt} = -\frac {1}{60} rad/s. </script>
+</p></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-4000"></a>Similar triangles</h3>
+<div class="theorem-like problem-environment example" id="problem11"><a id="x1-4001r11"></a>It is night. Someone who is <script type="math/tex">6</script> feet tall is walking away from a street light at a rate of <script type="math/tex">3</script>
+                                                                  
+
+                                                                  
+feet per second. The street light is <script type="math/tex">15</script> feet tall. The person casts a shadow on the
+ground in front of them. How fast is the length of the shadow growing when the
+person is <script type="math/tex">7</script> feet from the street light?
+<div class="theorem-like problem-environment explanation" id="problem12"><a id="x1-4002r12"></a>First, we <strong>introduce two variables</strong>, <script type="math/tex">p</script>, the distance from the person to the lamp,
+and <script type="math/tex">s</script>, the length of the shadow. The given rate is <script type="math/tex">\frac {dp}{dt}=3</script> ft/s and the unknown
+(related) rate is <script type="math/tex">\frac {ds}{dt}</script> at the moment when <script type="math/tex">p=7</script> feet. Next, we <strong>draw a picture</strong>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-12">   
+<script type="math/tex">6</script><script type="math/tex">p</script><script type="math/tex">s</script><script type="math/tex">15</script><script type="math/tex">\frac {dp}{dt}=3</script>ft/s<script type="math/tex">\frac {ds}{dt}=</script> ?, when <script type="math/tex">p=7</script>ft</div><!--l. 531--><p class="noindent">Now we <strong>find equations</strong> that relate the variables <script type="math/tex">p</script> and <script type="math/tex">s</script>. We use the fact that we have
+similar triangles to write: </p><script type="math/tex; mode=display"> \begin{align*} 
+         \frac{s+p}{15} &= \frac{s}{\answer[given]{6}},\\
+      6\cdot s + 6 \cdot p &= 15\cdot s,\\
+      6\cdot p &=9\cdot s,\\
+      2\cdot p &=3 \cdot s.
+    \end{align*}</script>
+Since <script type="math/tex">p</script> and <script type="math/tex">s</script> are both functions of time, we <strong>differentiate</strong> both sides of the equation
+above. We use implicit differentiation and write <script type="math/tex; mode=display"> 2\cdot \frac {dp}{dt} =3 \cdot \frac {ds}{dt} </script> At this point we <strong>evaluate</strong> all
+the quantities at time when <script type="math/tex">p=7</script> ft <script type="math/tex; mode=display"> 2\cdot \cancel {3} = \cancel {3} \cdot \frac {ds}{dt}. </script> Now we <strong>solve</strong> for <script type="math/tex">\frac {ds}{dt}</script> and get that <script type="math/tex">\frac {ds}{dt}= \answer [given]{2}</script>, when <script type="math/tex">p=7</script>
+ft.
+<!--l. 552--><p class="noindent">Therefore, the shadow is growing at a rate of <script type="math/tex">2</script> ft/s when the person is <script type="math/tex">7</script> ft from the
+lamp.<br class="newline"/>
+</p></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem13"><a id="x1-4003r13"></a>Water is poured into a conical container at the rate of 10 cm<script type="math/tex">{}^3</script>/s. The cone points
+directly down, and it has a height of 30 cm and a base radius of 10 cm. How fast is
+the water level rising when the water is 4 cm deep?
+<div class="theorem-like problem-environment explanation" id="problem14"><a id="x1-4004r14"></a>First, we <strong>introduce several variables</strong>. Let <script type="math/tex">V</script> be the volume of the water in
+the container, let <script type="math/tex">r</script> be the radius of the circular surface of the water, and
+let <script type="math/tex">h</script> be the depth of the water in the container. The given rate is <script type="math/tex">\frac {dV}{dt}=10</script> <script type="math/tex">cm^3/s</script>, and
+the unknown rate is <script type="math/tex">\frac {dh}{dt}</script>, at the moment when <script type="math/tex">h=4</script> cm. Now, we <strong>draw a picture</strong>.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-13">                           <script type="math/tex">\dd [V]{t} = 10</script> cm<script type="math/tex">^3</script>/sec;<script type="math/tex">\dd [h]{t} = </script> ?, when <script type="math/tex">h=4</script> cm<script type="math/tex">10</script> cm<script type="math/tex">r</script> cm<script type="math/tex">h</script> cm<script type="math/tex">30</script> cm
+</div>
+Note, no attempt was made to draw this picture to scale, rather we want all of the
+relevant information to be available to the mathematician.
+<!--l. 591--><p class="noindent">Now we <strong>find equations</strong> that relate all the variables. Notice that water in the
+container assumes the shape of the container. In this example, the shape is a cone.
+Therefore, we use the formula for the volume of a cone <script type="math/tex; mode=display"> V = \frac {\pi }{3} r^2 h. </script> Let’s draw a cross section of
+the cone. </p><div class="image-environment" role="img" aria-labelledby="image-alt-14">                                  <script type="math/tex">10</script> cm<script type="math/tex">r</script><script type="math/tex">h</script><script type="math/tex">30</script> cm
+</div>
+Notice a big right triangle and a smaller right triangle inside the big one. These two
+right triangles are similar, because their corresponding angles are equal. Since the
+ratios of corresponding sides in similar triangles are equal, we get <script type="math/tex; mode=display"> \frac {r}{h}=\frac {10}{30} \qquad \text {so}\qquad r=\frac {h}{\answer [given]{3} }. </script> At this point we
+could <strong>differentiate</strong> both sides of each equation, but we can take a simpler
+approach by combining these two equations and expressing <script type="math/tex">V</script> in terms of
+<script type="math/tex">h</script>.
+<!--l. 624--><p class="noindent">QUESTION: Why is it more convenient to express <script type="math/tex">V</script> in terms of <script type="math/tex">h</script> than in terms of
+<script type="math/tex">r</script>?
+</p><!--l. 626--><p class="noindent">Therefore, <script type="math/tex; mode=display"> V = \frac {\pi }{3}\overbrace { \Bigl (\frac {h}{3}\Bigr )^2}^{r^2} h, </script> and <script type="math/tex; mode=display"> V = \frac {\pi }{27} \cdot h^3. </script> Now, we <strong>differentiate</strong> with respect to <script type="math/tex">t</script>. <script type="math/tex; mode=display"> \dd [V]{t} = \frac {\pi }{27} \cdot 3\cdot h^2\cdot \frac {dh}{dt}. </script> This equation holds over
+some time interval. In particular, the equation is true at time when <script type="math/tex">h=4</script> cm. Now
+we <strong>evaluate</strong> all the quantities at that time. <script type="math/tex; mode=display"> 10 = \frac {\pi }{27} \cdot 3\cdot 4^2\cdot \frac {dh}{dt}. </script> So, at the instant when the
+water in the container is <script type="math/tex">4</script> cm deep, the water level is rising at the rate of <script type="math/tex">\frac {45}{8\pi }</script>
+cm/s.
+                                                                  
+
+                                                                  
+</p></div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
