@@ -1,0 +1,384 @@
+<!DOCTYPE html><html lang="en"><head> <title>Basic antiderivatives</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInBasicAntiderivatives.tex"/> 
+<meta name="date" content="2018-10-16 14:58:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="05a3902a1b033284c053e05730e15405b1898b30 preamble.tex"/><meta name="dependency" content="e0bca6352759b99df2638335f811276a09cd8c97 antiderivatives/digInBasicAntiderivatives.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">We introduce antiderivatives.
+</p></div>   <div class="maketitle"></div>
+Computing derivatives is not too difficult. At this point, you should be able to take
+the derivative of almost any function you can write down. However, undoing
+derivatives is much harder. This process of undoing a derivative is called taking an
+<em>antiderivative</em>.
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-64r1"></a>A function <script type="math/tex">F</script> is called an <strong>antiderivative</strong> of <script type="math/tex">f</script> on an interval if <script type="math/tex; mode=display"> F'(x) = f(x) </script> for all <script type="math/tex">x</script> in the
+interval.
+</div>
+<div role="article" class="problem-environment question" id="problem2"><a id="x1-65r2"></a> How many antiderivatives does <script type="math/tex">f(x) = 2x</script> have?  <div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">none</span> <span class="choice  " id="choice2">one</span> <span class="choice correct " id="choice3">infinitely many</span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback4"><div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">F(x)+2</script><script type="math/tex">F(x)=x^2</script><script type="math/tex">F(x)-1.5</script><script type="math/tex">F(x)+5</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+The functions <script type="math/tex">x^2</script>, <script type="math/tex">x^2-1.5</script>, <script type="math/tex">x^2+2</script>, <script type="math/tex">x^2+5</script> and so on, are all antiderivatives of <script type="math/tex">2x</script>.
+<!--l. 74--><p class="noindent">It is clear that any function <script type="math/tex">x^2+C</script>, where <script type="math/tex">C</script> is a constant, is an antiderivative of <script type="math/tex">f</script>. Why?
+Because, <script type="math/tex">(x^2+C)'=2x=f(x)</script>.
+</p><!--l. 77--><p class="noindent">Could there exist any other antiderivative of <script type="math/tex">f</script>, call it <script type="math/tex">G</script>, such that <script type="math/tex">G(x)</script> is not a sum of <script type="math/tex">x^2</script> and
+a constant? In that case, for all <script type="math/tex">x</script> we would have <script type="math/tex; mode=display"> (G(x)-x^2)' = G'(x)-2x=f(x)-2x= \answer [given]{0} </script> </p></div>
+Recall: Any function whose derivative is equal to <script type="math/tex">0</script> on some interval is equal to a
+constant on that interval. This means that the function <script type="math/tex">G(x)-x^2=C</script>, for some constant <script type="math/tex">C</script>. This
+implies that <script type="math/tex">G(x)=x^2+C</script>, for all x.
+</div>
+<div class="theorem-like problem-environment theorem" id="problem5"><a id="x1-66r3"></a><span class="theorem-like-title">The Family of Antiderivatives</span><a class="ximera-label" id="theorem:FOA"></a>
+<!--l. 92--><p class="noindent">If <script type="math/tex">F</script> is an antiderivative of <script type="math/tex">f</script>, then the function <script type="math/tex">f</script> has a whole <strong>family of antiderivatives</strong>.
+Each antiderivative of <script type="math/tex">f</script> is the sum of <script type="math/tex">F</script> and some constant <script type="math/tex">C</script>.
+</p></div>
+                                                                  
+
+                                                                  
+<!--l. 95--><p class="noindent">So, when we write <script type="math/tex">F(x)+C</script>, we denote the entire family of antiderivatives of <script type="math/tex">f</script>. Alternative
+notation for this family of antiderivatives was introduced by <a href="https://en.wikipedia.org/wiki/Gottfried_Wilhelm_Leibniz">G.W. Leibniz</a>
+(1646-1716):
+</p>
+<div class="theorem-like problem-environment definition" id="problem6"><a id="x1-67r4"></a> Let <script type="math/tex">f</script> be a function. The family of of <em>all</em> antiderivatives of <script type="math/tex">f</script> is denoted by
+<script type="math/tex; mode=display"> \int f(x) \d x. </script>
+<!--l. 105--><p class="noindent">This is called the <strong>indefinite integral</strong> of <script type="math/tex">f</script>.
+</p></div> It follows that <script type="math/tex; mode=display"> \int f(x) \d x =F(x)+C, </script> where <script type="math/tex">F</script> is any antiderivative of <script type="math/tex">f</script> and <script type="math/tex">C</script> is an arbitrary constant.
+<!--l. 114--><p class="noindent">Now we are ready to ”integrate” some famous functions.
+</p><!--l. 117--><p class="noindent">Fill out these basic antiderivatives. Note each of these examples comes directly from
+our knowledge of basic derivatives.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem7"><a id="x1-68r5"></a><span class="theorem-like-title">Basic Indefinite Integrals</span>
+     <ul class="itemize1">
+     <li class="itemize"><script type="math/tex">\int k \d x= k x+C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \frac {1}{x} \d x= \ln |x|+C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int x^n \d x= \frac {x^{n+1}}{n+1}+C\qquad (n\ne -1)</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int e^x \d x= e^x + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int a^x \d x= \frac {a^x}{\ln (a)}+C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \cos (x) \d x = \sin (x) + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \sin (x) \d x = -\cos (x) + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \sec ^2(x) \d x = \tan (x) + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \csc ^2(x) \d x = -\cot (x) + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \sec (x)\tan (x) \d x = \sec (x) + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \csc (x)\cot (x) \d x = -\csc (x) + C</script>
+                                                                  
+
+                                                                  
+     </li>
+     <li class="itemize"><script type="math/tex">\int \frac {1}{x^2+1}\d x = \arctan {(x)} + C</script>
+     </li>
+     <li class="itemize"><script type="math/tex">\int \frac {1}{\sqrt {1-x^2}}\d x= \arcsin {(x)}+C</script></li></ul>
+<!--l. 160--></div>
+<!--l. 163--><p class="noindent">It may seem that one could simply memorize these antiderivatives and antidifferentiating
+would be as easy as differentiating. This is <strong>not</strong> the case. The issue comes up when
+trying to combine these functions. When taking derivatives we have the
+<em>product rule</em> and the <em>chain rule</em>. The analogues of these two rules are much
+more difficult to deal with when taking antiderivatives. However, not all is
+lost.
+</p><!--l. 171--><p class="noindent">Consider the following example. </p><div class="theorem-like problem-environment example" id="problem8"><a id="x1-69r6"></a>Find an antiderivative of the function <script type="math/tex">h</script> defined by
+expression
+<!--l. 175--><p class="noindent"><script type="math/tex">h(x)=\cos {x}+\frac {1}{x}</script>, for all <script type="math/tex">x</script> in some interval <script type="math/tex">I</script>. </p><div class="multiple-choice" id="problem9"><span class="choice  " id="choice4"><script type="math/tex">H(x)=\cos {x}+\frac {1}{x}</script></span> <span class="choice  " id="choice5"><script type="math/tex">H(x)=\sin {x}+\frac {1}{x^2}</script></span> <span class="choice correct " id="choice6"><script type="math/tex">H(x)=\sin {x}+\ln {x}</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback10">Differentiate each choice. In the last choice we get <script type="math/tex">H'(x)=\cos {x}+\frac {1}{x}=h(x)</script>. </div>
+</div> It is easy to recognize an antiderivative: we just have to differentiate it, and check
+whether <script type="math/tex">H'(x)=h(x)</script>, for all <script type="math/tex">x</script> in <script type="math/tex">I</script>.
+<!--l. 188--><p class="noindent">Notice, that the function <script type="math/tex">h</script> is the sum of the two functions, <script type="math/tex">f</script> and <script type="math/tex">g</script>, where <script type="math/tex">f(x)=\cos {x}</script> and <script type="math/tex">g(x)=\frac {1}{x}</script>, for <script type="math/tex">x</script> in
+<script type="math/tex">I</script>.
+</p><!--l. 190--><p class="noindent">We know antiderivatives of both functions: <script type="math/tex">F(x)=\sin {x}</script> and <script type="math/tex">G(x)=\ln {x}</script>, for <script type="math/tex">x</script> in <script type="math/tex">I</script>, are antiderivatives of <script type="math/tex">f</script> and <script type="math/tex">g</script>,
+respectively. So, in this example we see that the function <script type="math/tex">F+G</script> is an antiderivative
+of <script type="math/tex">f+g</script>. In other words, ”the sum of antiderivatives is an antiderivative of a
+sum”.
+</p><!--l. 194--><p class="noindent">Is this true in general?
+</p><!--l. 196--><p class="noindent">Let’s check whether this rule holds for any eligible pair of functions <script type="math/tex">f</script> and <script type="math/tex">g</script>
+defined on some interval <script type="math/tex">I</script>. </p><div role="article" class="problem-environment question" id="problem11"><a id="x1-70r7"></a> Let <script type="math/tex">f</script>, <script type="math/tex">g</script>, <script type="math/tex">F</script> and <script type="math/tex">G</script> be four functions defined on some
+interval <script type="math/tex">I</script> such that <script type="math/tex">F</script> is an antiderivative of <script type="math/tex">f</script> and <script type="math/tex">G</script> is an antiderivative of <script type="math/tex">g</script>,
+i.e.
+<!--l. 200--><p class="noindent"><script type="math/tex">F'(x)=f(x)</script> and <script type="math/tex">G'(x)=g(x)</script> for all <script type="math/tex">x</script> in some interval <script type="math/tex">I</script>.
+</p><!--l. 202--><p class="noindent">Find an antiderivative of the function <script type="math/tex">f+g</script>. </p><div role="article" class="problem-environment hint" id="problem12"><a id="x1-71r8"></a> Differentiate the function <script type="math/tex">F+G</script>.
+</div> Since <script type="math/tex">\left (F(x)+G(x)\right )'=F'(x)+G'(x)=f(x)+g(x)</script>, it follows that <script type="math/tex">F+G</script> is an antiderivative of <script type="math/tex">f+g</script>.
+<!--l. 210--><p class="noindent">To summarize: The sum of antiderivatives is an antiderivative of a sum.
+</p></div> We have proved the following theorem.
+<div class="theorem-like problem-environment theorem" id="problem13"><a id="x1-72r9"></a><span class="theorem-like-title">The Sum Rule for Antiderivatives</span><a class="ximera-label" id="theorem:SRA"></a> If <script type="math/tex">F</script> is an antiderivative of <script type="math/tex">f</script> and <script type="math/tex">G</script> is an antiderivative
+of <script type="math/tex">g</script>, then <script type="math/tex">F+G</script> is an antiderivative of <script type="math/tex">f+g</script>.
+<!--l. 218--><p class="noindent">We can write equivalently, using indefinite integrals,
+</p><!--l. 220--><p class="noindent"><script type="math/tex">\int \left (f(x)+g(x)\right ) \d x= \int f(x)\d x +\int g(x) \d x</script>.
+</p></div>
+                                                                  
+
+                                                                  
+<!--l. 223--><p class="noindent">Next, we will try to prove an analogue of the constant multiple rule for derivatives.
+Let’s consider the following example. </p><div class="theorem-like problem-environment example" id="problem14"><a id="x1-73r10"></a>Find an antiderivative of the function <script type="math/tex">h</script>, where <script type="math/tex">h(x)=5\sec ^{2}{x}</script>,
+for all <script type="math/tex">x</script> in some interval <script type="math/tex">I</script>. <div class="multiple-choice" id="problem15"><span class="choice correct " id="choice7"><script type="math/tex">H(x)=5\tan {x}</script></span> <span class="choice  " id="choice8"><script type="math/tex">H(x)=5\sec ^{2}{x}</script></span> <span class="choice  " id="choice9"><script type="math/tex">H(x)=\sec ^{2}{5x}</script></span> </div>
+<div class="feedback" data-feedback="attempt" id="feedback16">Differentiate each choice for <script type="math/tex">H(x)</script>. In the first choice we get <script type="math/tex">H'(x)=5\sec ^{2}{x}=h(x)</script>. </div>
+</div> It is easy to recognize an antiderivative: we just have to differentiate it, and check
+whether <script type="math/tex">H'(x)=h(x)</script>, for all <script type="math/tex">x</script> in <script type="math/tex">I</script>.
+<!--l. 240--><p class="noindent">Notice, in this example the function <script type="math/tex">h</script> is a constant multiple of <script type="math/tex">f</script>,
+</p><!--l. 242--><p class="noindent">where <script type="math/tex">f(x)=\sec ^{2}{x}</script>. On the other hand, we know that the function <script type="math/tex">F</script>, defined by <script type="math/tex">F(x)=\tan {x}</script> is an
+antiderivative of <script type="math/tex">f</script>.
+</p><!--l. 245--><p class="noindent">If we differentiate the function <script type="math/tex">5F</script>, we get that
+</p><!--l. 247--><p class="noindent"><script type="math/tex">\left (5F(x)\right )'=\left (5\tan {x}\right )'=5\left (\tan {x}\right )'=5\sec ^{2}{x}=5f(x)</script>, for <script type="math/tex">x</script> in <script type="math/tex">I</script>.
+</p><!--l. 249--><p class="noindent">In other words, “a constant multiple of an antiderivative is an antiderivative of a
+constant multiple of a function.” Is this always true?
+</p><!--l. 252--><p class="noindent">Let’s check whether this rule holds for any constant <script type="math/tex">k</script> and any eligible function <script type="math/tex">f</script>
+defined on some interval <script type="math/tex">I</script>. </p><div role="article" class="problem-environment question" id="problem17"><a id="x1-74r11"></a> Let <script type="math/tex">k</script> be a constant, let <script type="math/tex">f</script> be a function defined on some
+interval <script type="math/tex">I</script> and let <script type="math/tex">F</script> be an antiderivative of <script type="math/tex">f</script>, i.e.
+<!--l. 256--><p class="noindent"><script type="math/tex">F'(x)=f(x)</script>, for all <script type="math/tex">x</script> in some interval <script type="math/tex">I</script>.
+</p><!--l. 258--><p class="noindent">Find an antiderivative of the function <script type="math/tex">k f</script>. </p><div role="article" class="problem-environment hint" id="problem18"><a id="x1-75r12"></a> Differentiate the function <script type="math/tex">kF</script>.
+</div> Since <script type="math/tex">\left (kF(x)\right )'=kF'(x)=kf(x)</script>, it follows that <script type="math/tex">kF</script> is an antiderivative of <script type="math/tex">kf</script>. To summarize: The constant
+multiple of an antiderivative is an antiderivative of a constant multiple of a
+function.
+</div> We have proved the following theorem. <div class="theorem-like problem-environment theorem" id="problem19"><a id="x1-76r13"></a><span class="theorem-like-title">The Constant Multiple Rule for
+Antiderivatives</span><a class="ximera-label" id="theorem:CMRA"></a> If <script type="math/tex">F</script> is an antiderivative of <script type="math/tex">f</script>, and <script type="math/tex">k</script> is a constant, then <script type="math/tex">kF</script> is an
+antiderivative of <script type="math/tex">kf</script>.
+<!--l. 271--><p class="noindent">We can write equivalently, using indefinite integrals, <script type="math/tex">\int kf(x) \d x= k\int f(x)\d x</script>.
+</p></div> Let’s put these rules and our knowledge of basic derivatives to work. <div class="theorem-like problem-environment example" id="problem20"><a id="x1-77r14"></a>Find the antiderivative
+of <script type="math/tex">3 x^7</script>. <div class="theorem-like problem-environment explanation" id="problem21"><a id="x1-78r15"></a>By the theorems above , we see that <script type="math/tex; mode=display"> \begin{align*} 
+\int 3 x^7 \d x &= 3 \int x^7 \d x\\
+&= 3 \cdot \answer[given]{\frac{x^8}{8}}+C.
+\end{align*}</script>
+</div>
+</div> The sum rule for antiderivatives allows us to integrate term-by-term. Let’s see an
+example of this.
+<div class="theorem-like problem-environment example" id="problem22"><a id="x1-79r16"></a>Compute: <script type="math/tex; mode=display"> \int \left (x^4 + 5x^2 - \cos (x)\right ) \d x </script> <div class="theorem-like problem-environment explanation" id="problem23"><a id="x1-80r17"></a>Let’s start by simplifying the problem using the sum rule and constant
+multiple rule for antiderivatives, <script type="math/tex; mode=display"> \begin{align*} 
+\int &\left(x^4 + 5x^2 - \cos(x)\right) \d x\\
+&= \int x^4 \d x + 5\int x^2 \d x - \int \cos(x) \d x.
+\end{align*}</script>
+Now we may integrate term-by-term to find <script type="math/tex; mode=display"> = \answer [given]{\frac {x^5}{5} + \frac {5x^3}{3} - \sin (x)}+C. </script>
+</div>
+                                                                  
+
+                                                                  
+</div>
+<div class="theorem-like problem-environment warning" id="problem24"><a id="x1-81r18"></a>While the sum rule for antiderivatives allows us to integrate term-by-term, we cannot
+integrate <em>factor-by-factor</em>, meaning that in general <script type="math/tex; mode=display"> \int f(x)g(x) \d x \ne \int f(x) \d x\cdot \int g(x) \d x. </script>
+</div>
+<div class="theorem-like problem-environment example" id="problem25"><a id="x1-82r19"></a>A student claims that <script type="math/tex">\int 2x \cos (x) \d x = x^2 \sin (x) +C</script>. Determine whether the student is correct or incorrect.
+<div class="theorem-like problem-environment explanation" id="problem26"><a id="x1-83r20"></a>If the student were correct, then the derivative of <script type="math/tex">x^2 \sin (x) +C</script> with respect to <script type="math/tex">x</script> would have to be <script type="math/tex">2x \cos (x)</script>.
+However:
+<!--l. 324--><p class="noindent"><script type="math/tex; mode=display">\ddx x^2 \sin (x) = \answer [given]{2x \sin (x) +x^2 \cos (x)} </script>
+</p><!--l. 326--><p class="noindent">Hence, the student is incorrect!
+</p></div>
+</div>
+
+<h3 class="sectionHead"><a id="x1-1000"></a>Computing antiderivatives</h3>
+<!--l. 338--><p class="noindent">Unfortunately, we cannot tell you how to compute every antiderivative; we view them
+as a sort of <em>puzzle</em>. Later we will learn a hand-full of techniques for computing
+antiderivatives. However, a robust and simple way to compute antiderivatives is
+guess-and-check.
+</p><!--l. 345--><p class="noindent"><span class="paragraphHead">Tips for guessing antiderivatives</span>
+     </p><dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">If possible, express the function that you are integrating in a form that is
+     convenient for integration.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Make a guess for the antiderivative.
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Take the derivative of your guess.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">Note  how  the  above  derivative  is  different  from  the  function  whose
+     antiderivative you want to find.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">Change your original guess by <strong>multiplying</strong> by constants or by <strong>adding</strong>
+     in new functions.</dd></dl>
+<div class="theorem-like problem-environment example" id="problem27"><a id="x1-1006r21"></a>Compute: <script type="math/tex; mode=display"> \int \frac {\sqrt {x}+1+x}{x} \d x </script> <div class="theorem-like problem-environment explanation" id="problem28"><a id="x1-1007r22"></a>Before guessing the solution, let’s express the function in the
+form convenient for integration. Due to Sum Rule, it is more convenient
+to have a sum of functions, instead of a single, complicated term.
+<script type="math/tex; mode=display"> \begin{align*} 
+  \int \frac{\sqrt{x}+1+x}{x} \d x &=\int \left(\frac{\sqrt{x}}{x}+\frac{1}{x}+\frac{x}{x}\right) \d x\\
+  &=\int \left(\frac{1}{\sqrt{x}}+\frac{1}{x}+1\right) \d x\\
+                                                                  
+
+                                                                  
+  &=\int \left(x^{-\frac{1}{2}}+\frac{1}{x}+1\right) \d x
+\end{align*}</script>
+Now, we can apply the Sum Rule. <script type="math/tex; mode=display"> \int \left (x^{-\frac {1}{2}}+\frac {1}{x}+1\right ) \d x=\int x^{-\frac {1}{2}}\d x+\int \frac {1}{x}\d x+\int 1 \d x </script> Now we can finish the problem. <script type="math/tex; mode=display"> \int \frac {\sqrt {x}+1+x}{x} \d x= \answer [given]{2}\sqrt {x}+\ln {x}+ \answer [given]{x} + C. </script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem29"><a id="x1-1008r23"></a>Compute: <script type="math/tex; mode=display"> \int \cos {(4x)} \d x </script> <div class="theorem-like problem-environment explanation" id="problem30"><a id="x1-1009r24"></a>Start with a guess of <script type="math/tex; mode=display"> \int \cos {(4x)} \d x \approx \sin {(4x)}. </script> Take the derivative of your guess to see if it is
+correct: <script type="math/tex; mode=display"> \ddx \sin {(4x)} = 4 \cos {(4x)}. </script> We’re off by a factor of <script type="math/tex">\frac {1}{4}</script>, so multiply your guess by this constant to get the
+solution, <script type="math/tex; mode=display"> \int \cos {(4x)} \d x = \answer [given]{\frac {1}{4}\sin {(4x)}}+C. </script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem31"><a id="x1-1010r25"></a>Compute: <script type="math/tex; mode=display"> \int 3x^2\sin {(x^3 -6)} \d x </script> <div class="theorem-like problem-environment explanation" id="problem32"><a id="x1-1011r26"></a>Start with a guess of <script type="math/tex; mode=display"> \int 3x^2\sin {(x^3 -6)} \d x \approx -\cos {(x^3 -6)}. </script> Take the derivative of your guess to see if it is
+correct: <script type="math/tex; mode=display"> \ddx \left (-\cos {(x^3 -6)}\right ) = 3x^2\sin {(x^3 -6)}. </script> Therefore, <script type="math/tex; mode=display"> \int 3x^2\sin {(x^3 -6)} \d x =- \cos {(\answer [given]{x^3 -6})}+C. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem33"><a id="x1-1012r27"></a>Compute: <script type="math/tex; mode=display"> \int x^2\sin {(x^3 -6)} \d x </script> <div class="theorem-like problem-environment explanation" id="problem34"><a id="x1-1013r28"></a>Start with a guess of <script type="math/tex; mode=display"> \int x^2\sin {(x^3 -6)} \d x \approx -\cos {(x^3 -6)}. </script> Take the derivative of your guess to see if it is
+correct: <script type="math/tex; mode=display"> \ddx \left (-\cos {(x^3 -6)}\right ) = 3x^2\sin {(x^3 -6)}. </script> We’re off by a factor of <script type="math/tex">1/3</script>, so multiply our guess by this constant to get the
+solution, <script type="math/tex; mode=display"> \int x^2\sin {(x^3 -6)} \d x =- \answer [given]{\frac {1}{3}}\cos {(x^3 -6)}+C. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem35"><a id="x1-1014r29"></a>Compute: <script type="math/tex; mode=display"> \int \frac {x^3}{\sqrt {x^4 -6}} \d x </script> <div class="theorem-like problem-environment explanation" id="problem36"><a id="x1-1015r30"></a>Start by rewriting the indefinite integral as <script type="math/tex; mode=display"> \int x^3\left (x^4 -6\right )^{-1/2} \d x. </script> Now start with a
+guess of <script type="math/tex; mode=display"> \int x^3\left (x^4 -6\right )^{-1/2} \d x \approx \left (x^4 -6\right )^{1/2}. </script> Take the derivative of your guess to see if it is correct: <script type="math/tex; mode=display"> \ddx \left (x^4 -6\right )^{1/2} = (4/2)x^3\left (x^4 -6\right )^{-1/2}. </script> We’re off
+by a factor of <script type="math/tex">2/4</script>, so multiply our guess by this constant to get the solution,
+<script type="math/tex; mode=display"> \int \frac {x^3}{\sqrt {x^4 -6}} \d x = \answer [given]{\frac {1}{2}}(x^4 -6)^{1/2}+C. </script>
+</div>
+</div>
+<div class="theorem-like problem-environment example" id="problem37"><a id="x1-1016r31"></a>Compute: <script type="math/tex; mode=display"> \int xe^{x^2} \d x </script> <div class="theorem-like problem-environment explanation" id="problem38"><a id="x1-1017r32"></a>We try to guess the antiderivative. Start with a guess of <script type="math/tex; mode=display"> \int xe^{x^2} \d x \approx e^{x^2}. </script> Take the
+derivative of your guess to see if it is correct: <script type="math/tex; mode=display"> \ddx e^{x^2} = 2xe^{x^2} . </script> Ah! So we need only multiply our
+original guess by <script type="math/tex">\frac {1}{2}</script>. We now find <script type="math/tex; mode=display"> \int xe^{x^2} \d x =\answer [given]{\frac {1}{2}}e^{x^2} + C. </script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem39"><a id="x1-1018r33"></a>Compute: <script type="math/tex; mode=display"> \int \frac {21x^2}{7x^3 + 3} \d x </script> <div class="theorem-like problem-environment explanation" id="problem40"><a id="x1-1019r34"></a>We notice that the numerator is the derivative of the denominator, i.e.,
+the function that we are integrating has the form <script type="math/tex">\frac {f'(x)}{f(x)}</script>. <script type="math/tex; mode=display"> \int \frac {21x^2}{7x^3 + 3} \d x = \ln (7x^3+3). </script> Take the derivative of your guess
+to see if it is correct: <script type="math/tex; mode=display"> \ddx \ln (7x^3+3) = \frac {21x^2}{7x^3 + 3}. </script> Therefore, <script type="math/tex; mode=display"> \int \frac {21x^2}{7x^3 + 3} \d x = \ln {(\answer [given]{7x^3+3})}+C. </script>
+</div>
+</div> <div class="theorem-like problem-environment example" id="problem41"><a id="x1-1020r35"></a>Compute: <script type="math/tex; mode=display"> \int \frac {2x^2}{7x^3 + 3} \d x </script> <div class="theorem-like problem-environment explanation" id="problem42"><a id="x1-1021r36"></a>We’ll start with a guess of <script type="math/tex; mode=display"> \int \frac {2x^2}{7x^3 + 3} \d x \approx \ln (7x^3+3). </script> Take the derivative of your guess to see if it is
+correct: <script type="math/tex; mode=display"> \ddx \ln (7x^3+3) = \frac {21x^2}{7x^3 + 3}. </script> We are only off by a factor of <script type="math/tex">2/21</script>, so we need to multiply our original guess by
+this constant to get the solution, <script type="math/tex; mode=display"> \int \frac {2x^2}{7x^3 + 3} \d x = \answer [given]{(2/21)\ln (7x^3+3)}+C. </script>
+</div>
+</div>
+<h3 class="sectionHead"><a id="x1-2000"></a>Final thoughts</h3>
+<!--l. 536--><p class="noindent">Computing antiderivatives is a place where insight and rote computation meet.
+We cannot teach you a method that will always work. Moreover, merely
+<em>understanding</em> the examples above will probably not be enough for you to
+become proficient in computing antiderivatives. You must practice, practice,
+                                                                  
+
+                                                                  
+practice!
+</p>
+<h3 class="sectionHead"><a id="x1-3000"></a>Differential equations</h3>
+<!--l. 544--><p class="noindent">Differential equations show you relationships between rates of functions.
+</p><!--l. 549--><p class="noindent">A <em>differential equation</em> is simply an equation with a derivative in it. Here is an
+example: <script type="math/tex; mode=display"> a\cdot f'(x)+ b\cdot f(x) = g(x). </script> </p><div role="article" class="problem-environment question" id="problem43"><a id="x1-3001r37"></a> Which one is a differential equation? <div class="multiple-choice" id="problem44"><span class="choice  " id="choice10"><script type="math/tex">x^2+3x-1=0</script></span> <span class="choice correct " id="choice11"><script type="math/tex">f'(x)=x^2+3x-1</script></span> <span class="choice  " id="choice12"><script type="math/tex">f(x)=x^2+3x-1</script></span> </div>
+</div>
+<!--l. 563--><p class="noindent">When a mathematician solves a differential equation, they are finding <em>functions</em>
+satisfying the equation. </p><div role="article" class="problem-environment question" id="problem45"><a id="x1-3002r38"></a> Which of the following functions solve the differential
+equation <script type="math/tex; mode=display"> f'(x) = f(x)? </script> <div class="select-all" id="problem46"><a id="x1-3003r39"></a> <span class="choice  " id="choice13"><script type="math/tex">f(x) = \sin (x)</script></span> <span class="choice  " id="choice14"><script type="math/tex">f(x) = x^2</script></span> <span class="choice correct " id="choice15"><script type="math/tex">f(x) = e^x</script></span> <span class="choice correct " id="choice16"><script type="math/tex">f(x) =6 e^x</script></span> <span class="choice  " id="choice17"><script type="math/tex">f(x) = e^{-x}</script></span> <span class="choice  " id="choice18"><script type="math/tex">f(x) = \tan (x)</script></span>
+</div>
+</div> <div class="theorem-like problem-environment remark" id="problem47"><a id="x1-3004r40"></a>We can directly check that any function <script type="math/tex">f(x)=Ce^x</script> is a solution to our differential equation <script type="math/tex">f'(x)=f(x)</script>.
+Could there be any others? It turns out that these are the <em>only</em> solutions. But
+showing that we didn’t miss any is a bit tricky. <div data-original="expandable" id="foldable48" class="foldable">
+<div class="theorem-like problem-environment explanation" id="problem49"><a id="x1-3005r41"></a>Well, suppose we have some mysterious function <script type="math/tex">f</script> and all we know is that <script type="math/tex">f'(x)=f(x)</script>. Let’s
+define a new function <script type="math/tex">g(x)=f(x)/e^x</script>. Since our denominator is never 0, the quotient rule tells
+us that <script type="math/tex; mode=display"> g'(x)= \frac {e^x f'(x)- f(x) e^x}{(e^x)^2} = \frac {e^x\left (f'(x)- f(x)\right )}{(e^x)^2} = \frac {e^x\cdot 0}{(e^x)^2}=0. </script> But we know that a function with a 0 derivative is constant, so <script type="math/tex">g(x)=C</script>.
+Plugging this back into our formula for <script type="math/tex">g(x)</script> tells us that <script type="math/tex">C=f(x)/e^x</script>. Now we rearrange to get
+<script type="math/tex">f(x)=Ce^x</script>.
+<!--l. 589--><p class="noindent">This shows us that any solution to our differential equation <em>must</em> be one of the
+functions we’ve already found. Our argument relies on some features that are special
+to this problem; proving that we’ve found all the possible solutions to an arbitrary
+differential equation is a very difficult task!
+</p></div> </div>
+</div>
+<!--l. 594--><p class="noindent">A function <script type="math/tex">Ce^x</script> is called a <strong>general solution</strong> of the differential equation. Since there are
+infinitely many solutions to a differential equation, we can impose an additional
+condition (say <script type="math/tex">f(0)=1</script>), called an <strong>initial condition</strong>. When we are asked to find a function <script type="math/tex">f</script>
+that satisfies both the differential equation (DE) and the initial condition (IC), this is
+called an <strong>initial value problem</strong> (IVP). Let’s try one out. </p><div class="theorem-like problem-environment example" id="problem50"><a id="x1-3006r42"></a>Solve the initial value
+problem (IVP): <script type="math/tex; mode=display"> \begin{align*} 
+   f'(x) & = f(x) && \text{(DE)}  \\
+  f(0) & = 1 && \text{(IC)}
+\end{align*}</script>
+<div class="theorem-like problem-environment explanation" id="problem51"><a id="x1-3007r43"></a>The figure below shows several solutions of the differential equation.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">  
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f(x)=e^x</script><script type="math/tex">y=-e^x</script><script type="math/tex">y=-2e^x</script><script type="math/tex">y=2e^x</script><script type="math/tex">x</script><script type="math/tex">y</script></div>The figure suggests that the only solution to the initial value problem is the function <script type="math/tex">f(x)=e^x</script>.
+We can verify this result.
+<!--l. 629--><p class="noindent">Since all solutions of the differential equation have the form <script type="math/tex">f(x)=Ce^x</script> and <script type="math/tex">f(0)=1</script>, it follows that <script type="math/tex; mode=display"> Ce^0 = 1. </script>
+Therefore, <script type="math/tex; mode=display"> C = \answer [given]{1}. </script> So, the <strong>unique</strong> solution to the given initial value problem is the function
+<script type="math/tex">f(x)=e^x</script>.
+</p></div>
+</div>
+
+<div class="theorem-like problem-environment example" id="problem52"><a id="x1-3008r44"></a>Solve the initial value problem (IVP): <script type="math/tex; mode=display"> \begin{align*} 
+f'(x) & = \sin{x}  \\
+f(0) & = -1
+\end{align*}</script>
+<div class="theorem-like problem-environment explanation" id="problem53"><a id="x1-3009r45"></a>First, we have to solve the differential equation. The solution is clearly an
+antiderivative of <script type="math/tex">\sin {x}</script>. <script type="math/tex; mode=display"> f(x)=-\answer [given]{\cos {x}}+C, </script> where <script type="math/tex">C</script> is an arbitrary constant. We have found the general
+solution of the DE and this family of solutions is illustrated by the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f(x)=-\cos {x}</script><script type="math/tex">y=-\cos {x}-1</script><script type="math/tex">y=-\cos {x}+1</script><script type="math/tex">y=-\cos {x}+2</script><script type="math/tex">y=-\cos {x}+3</script><script type="math/tex">y=2e^x</script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+Now we must find the solution that also satisfies the initial condition <script type="math/tex">f(0)=-1</script>.
+<!--l. 680--><p class="noindent">Since <script type="math/tex; mode=display"> f(0)=\answer [given]{-1}+C, </script> it follows that <script type="math/tex; mode=display"> -1=\answer [given]{-1}+C. </script> Therefore, <script type="math/tex; mode=display"> C=\answer [given]{0}. </script> The function <script type="math/tex; mode=display"> f(x)=\answer [given]{-\cos {x}}. </script> is the solution of the initial value
+problem and it is shown in the figure above.
+</p></div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

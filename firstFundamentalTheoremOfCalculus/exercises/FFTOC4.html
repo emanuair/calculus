@@ -1,0 +1,123 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="FFTOC4.tex"/> 
+<meta name="date" content="2018-10-16 01:23:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define accumulation functions."/> 
+<meta name="learning-outcome" content="Calculate and evaluate accumulation functions."/> 
+<meta name="learning-outcome" content="Take derivatives of accumulation functions using the First Fundamental Theorem of Calculus."/> 
+<meta name="learning-outcome" content="Understand the relationship between the function and the derivative of its accumulation function."/> 
+<meta name="dependency" content="b66387ed9f687fd735eed8b5b7893c398782df82 preamble.tex"/><meta name="dependency" content="7b9c3d18c560179eb5afbf5d3d02747fb87a4e23 firstFundamentalTheoremOfCalculus/exercises/FFTOC4.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+The graph of <script type="math/tex">f</script> is shown below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-1"><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(t)</script><script type="math/tex">t</script><script type="math/tex">y</script>
+</div>
+<!--l. 42--><p class="noindent">Let <script type="math/tex; mode=display"> A(x) = \int _0^x f(t) \d t \text { for } 0\leq x\leq 6 \text { and } F(x) = \int _3^x f(t) \d t \text { for } 3\leq x\leq 6. </script>
+</p><!--l. 47--><p class="noindent">Evaluate the following expressions. </p><script type="math/tex; mode=display"> \begin{align*} 
+A(3) &= \answer{-2}\\
+\end{align*}</script>
+<div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> Recall: <script type="math/tex">A(3)= \int _0^3 f(t) \d t </script>. This definite integral gives signed area of the region between the curve <script type="math/tex">y=f(x)</script> and
+the interval <script type="math/tex">[0,3]</script> on the <script type="math/tex">x-</script>axis. Use geometry!
+</div>
+<script type="math/tex; mode=display"> \begin{align*} 
+F(3) &= \answer{0}\\
+\end{align*}</script>
+<div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> Recall: <script type="math/tex">F(3)= \int _3^3 f(t) \d t </script>.
+</div> <script type="math/tex; mode=display"> \begin{align*} 
+A'(1.5) &= \answer{-1}
+\end{align*}</script>
+<div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> Recall: <script type="math/tex">A'(x)=f(x)</script>
+</div> <div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> Recall: <script type="math/tex">A'(1.5)=f(1.5)</script>. Determine the value <script type="math/tex">f(1.5)</script> from the graph.
+</div> For <script type="math/tex">3\leq x\leq 6</script>, we can express <script type="math/tex">F'(x)</script> as <script type="math/tex; mode=display"> F'(x) = \answer {x-3}. </script> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-69r6"></a> Recall: <script type="math/tex">F'(x)=f(x)</script> for <script type="math/tex">3\leq x\leq 6</script>.
+</div> <div role="article" class="problem-environment hint" id="problem7"><a id="x1-70r7"></a> Recall: <script type="math/tex">F'(x)=f(x)</script> for <script type="math/tex">3\leq x\leq 6</script>. <script type="math/tex">f</script> is a linear function on the interval <script type="math/tex">[3,6]</script>.
+</div> For <script type="math/tex">3\leq x\leq 6</script>, we can experss <script type="math/tex">F(x)</script> as <script type="math/tex; mode=display"> F(x) = \answer {\frac {(x-3)^2}{2}}. </script> <div role="article" class="problem-environment hint" id="problem8"><a id="x1-71r8"></a> Recall: <script type="math/tex">F(x)= \int _3^x f(t) \d t</script> for <script type="math/tex">3\leq x\leq 6</script>. This definite integral gives signed
+area of the region between the graph of <script type="math/tex">f</script> and the interval <script type="math/tex">[3,x]</script> on the <script type="math/tex">x-</script>axis. This
+region is a triangle with the base <script type="math/tex">(x-3)</script> and the height <script type="math/tex">f(x)</script>. Compute the area of the
+triangle!
+</div> <script type="math/tex; mode=display"> \int _0^5\left |f(t)\right | \d t = \answer {4} </script> <div role="article" class="problem-environment hint" id="problem9"><a id="x1-72r9"></a> This integral gives the area of the region between the graph of <script type="math/tex">|f|</script> and the interval <script type="math/tex">[0,5]</script> on
+the <script type="math/tex">x-</script>axis. Use geometry! It can be expressed as <script type="math/tex">-A(3)+F(5)</script>.
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

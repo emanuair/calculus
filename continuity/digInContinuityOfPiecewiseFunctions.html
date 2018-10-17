@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="en"><head> <title>Continuity  of  piecewise
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInContinuityOfPiecewiseFunctions.tex"/> 
+<meta name="date" content="2018-10-16 15:07:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Identify where a function is, and is not, continuous."/> 
+<meta name="learning-outcome" content="Understand the connection between continuity of a function and the value of a limit."/> 
+<meta name="learning-outcome" content="Make a piecewise function continuous."/> 
+<meta name="dependency" content="05a3902a1b033284c053e05730e15405b1898b30 preamble.tex"/><meta name="dependency" content="62b44d4a9ff9506db2c0518c541ede3edc523535 continuity/digInContinuityOfPiecewiseFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 14--><p class="noindent">Here we use limits to check whether piecewise functions are continuous.
+</p></div>   <div class="maketitle"></div>Before we start talking about continuity of piecewise functions, let’s remind
+ourselves of all famous functions that are continuous on their domains. <div class="theorem-like problem-environment theorem" id="problem1"><a id="x1-64r1"></a><span class="theorem-like-title">Continuity of
+Famous Functions</span><a class="ximera-label" id="theorem:continuity"></a> The following functions are continuous on their natural
+domains:
+     <ul class="itemize1">
+     <li class="itemize">Constant functions
+     </li>
+     <li class="itemize">Polynomials
+     </li>
+     <li class="itemize">Rational functions
+     </li>
+     <li class="itemize">Power functions
+     </li>
+     <li class="itemize">Exponential functions
+     </li>
+     <li class="itemize">Logarithmic functions
+     </li>
+     <li class="itemize">Trigonometric functions
+     </li>
+     <li class="itemize">Inverse trigonometric functions</li></ul>
+<!--l. 30--><p class="noindent">In essence, we are saying that the functions listed above are continuous wherever they
+are defined.
+</p><!--l. 33--><p class="noindent">We proved continuity of polynomials earlier using the Sum Law, Product Law and
+continuity of power functions.
+</p><!--l. 37--><p class="noindent">We proved continuity of rational functions earlier using the Quotient Law and
+continuity of polynomials.
+</p><!--l. 41--><p class="noindent">We can prove continuity of the remaining four trig functions using the Quotient Law
+and continuity of sine and cosine functions.
+</p><!--l. 45--><p class="noindent">Since a continuous function and its inverse have “unbroken” graphs, it follows that an
+inverse of a continuous function is continuous on its domain.
+</p><!--l. 50--><p class="noindent">This implies that inverse trig functions are continuous on their domains.
+</p><!--l. 53--><p class="noindent">Using the Limit Laws we can prove that given two functions, both continuous on the
+same interval, then their sum, difference, product, and quotient (where defined) are
+also continuous on the same interval (where defined).
+                                                                  
+
+                                                                  
+</p></div> In this section we will work a couple of examples involving limits, continuity and
+piecewise functions.
+
+<div class="theorem-like problem-environment example" id="problem2"><a id="x1-65r2"></a>Consider the following piecewise defined function <script type="math/tex; mode=display"> f(x) = \begin {cases} \frac {x}{x-1} &\text {if $x<0$,}\\ e^{-x} + c &\text {if $x\ge 0$}. \end {cases} </script> Find the constant <script type="math/tex">c</script> so that <script type="math/tex">f</script> is
+continuous at <script type="math/tex">x=0</script>. <div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-66r3"></a>To find <script type="math/tex">c</script> such that <script type="math/tex">f</script> is continuous at <script type="math/tex">x=0</script>, we need to find <script type="math/tex">c</script> such that <script type="math/tex; mode=display"> \lim _{x\to 0} f(x) = f\Bigl (\answer [given]{0}\Bigr ). </script> In
+this case, in order to compute the limit, we will have to compute two one-sided
+limits, since the expression for <script type="math/tex">f(x)</script> if <script type="math/tex">x<0</script> is different from the expression for <script type="math/tex">f(x)</script> if <script type="math/tex">x>0</script>. So,
+<script type="math/tex; mode=display"> \begin{align*} 
+    \lim_{x\to 0^-} f(x) &= \lim_{x\to 0^-}\answer[given]{\frac{x}{x-1}}\\
+    &= \frac{\answer[given]{0}}{-1}\\
+    &=\answer[given]{0}.
+  \end{align*}</script>
+and <script type="math/tex; mode=display"> \begin{align*} 
+      \lim_{x\to 0^+} f(x) &= \lim_{x\to 0^+}\left(e^{-x}+c\right)\\
+    &= \answer[given]{e^0 + c}\\
+    &= \answer[given]{1+ c}
+  \end{align*}</script>
+In order for <script type="math/tex">f</script> to be continuous, the limit <script type="math/tex"> \lim _{x\to 0} f(x)</script> has to exist. This means that <script type="math/tex; mode=display"> 1 + c = 0\qquad \text {so}\qquad c = \answer [given]{-1}. </script> So, if <script type="math/tex">c=-1</script>, the
+limit <script type="math/tex"> \lim _{x\to 0} f(x)=0</script>. Now, we have find the value
+<!--l. 101--><p class="noindent"><script type="math/tex; mode=display"> f(0) = \answer [given]{0}. </script> Therefore, <script type="math/tex; mode=display"> \lim _{x\to 0} f(x) = f\Bigl (0\Bigr )\checkmark , </script> which proves that <script type="math/tex">f</script> is continuous at <script type="math/tex">x=0</script>.
+</p></div>
+</div>
+Consider the next, more challenging example.
+
+<div class="theorem-like problem-environment example" id="problem4"><a id="x1-67r4"></a>Consider the following piecewise defined function <script type="math/tex; mode=display"> f(x) = \begin {cases} x+4 &\text {if $x<1$,}\\ ax^2+bx+2 &\text {if $1\le x< 3$,}\\ 6x+a-b &\text {if $x\ge 3$.} \end {cases} </script> Find the constants <script type="math/tex">a</script> and <script type="math/tex">b</script> so that <script type="math/tex">f</script> is
+continuous at both <script type="math/tex">x=1</script> and <script type="math/tex">x=3</script>. <div class="theorem-like problem-environment explanation" id="problem5"><a id="x1-68r5"></a>This problem is more challenging because we have more
+unknowns. However, be brave intrepid mathematician. To find <script type="math/tex">a</script> and <script type="math/tex">b</script> that make
+<script type="math/tex">f</script> continuous at <script type="math/tex">x=1</script>, we need to find <script type="math/tex">a</script> and <script type="math/tex">b</script> such that <script type="math/tex; mode=display"> \lim _{x\to 1} f(x) =f(\answer [given]{1}). </script> Since <script type="math/tex">f(1)=a+b+2</script>, it follows that <script type="math/tex; mode=display"> \lim _{x\to 1} f(x) =a+b+2. </script>
+We have to compute two one-sided limits, since the expression for <script type="math/tex">f(x)</script> if <script type="math/tex">x<1</script> is
+different from the expression for <script type="math/tex">f(x)</script> if <script type="math/tex">x>1</script>. Looking at the limit from the left, we have
+<script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 1^-} f(x) &= \lim_{x\to 1^-} \left(\answer[given]{x+4}\right) \\
+  &=\answer[given]{5}.
+\end{align*}</script>
+Looking at the limit from the right, we have
+<script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 1^+} f(x) &= \lim_{x\to 1^+} \left(ax^2+bx+2\right) \\
+  &= \answer[given]{a+b+2}.
+\end{align*}</script>
+Hence, for the limit <script type="math/tex">\lim _{x\to 1} f(x)</script> to exist, we must have that <script type="math/tex; mode=display"> \begin{align*} 
+   5 &= a+b+2\\ or\\
+  a+b &= \answer[given]{3}.
+\end{align*}</script>
+Also, Hmmmm. More work needs to be done.
+                                                                  
+
+                                                                  
+<!--l. 158--><p class="noindent">To find <script type="math/tex">a</script> and <script type="math/tex">b</script> that make <script type="math/tex">f</script> is continuous at <script type="math/tex">x=3</script>, we need to find <script type="math/tex">a</script> and <script type="math/tex">b</script> such
+that <script type="math/tex; mode=display"> \lim _{x\to 3} f(x) =f(3). </script> Since <script type="math/tex">f(3)=18+a-b</script>, it follows that <script type="math/tex; mode=display"> \lim _{x\to 3} f(x) =18+a-b. </script> Looking at the limit from the left, we have
+</p><script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 3^-} f(x) &= \lim_{x\to 3^-} \left(ax^2+bx+2\right) \\
+  &=a\cdot 9 + b\cdot 3 + 2.
+\end{align*}</script>
+Looking at the limit from the right, we have
+<script type="math/tex; mode=display"> \begin{align*} 
+  \lim_{x\to 3^+} f(x) &= \lim_{x\to 3^+} \left(6x+a-b\right) \\
+  &= \answer[given]{18+a-b}.
+\end{align*}</script>
+Hence <script type="math/tex; mode=display"> \begin{align*} 
+   9a + 3b + 2 &= 18+a-b\\
+  8a + 4b -16 &= 0\\
+  2a + b -4 &= 0
+\end{align*}</script>
+So now we have two equations and two unknowns: <script type="math/tex; mode=display"> a+b=3 \qquad \text {and}\qquad 2a + b = 4. </script> Set <script type="math/tex">b = 3-a</script> and write <script type="math/tex; mode=display"> \begin{align*} 
+     2a+3-a&=4 \\
+  a &= 1,
+ \end{align*}</script>
+hence <script type="math/tex; mode=display"> a=\answer [given]{1}\qquad \text {and so}\qquad b =\answer [given]{2}. </script> Let’s check, so now plugging in values for both <script type="math/tex">a</script> and <script type="math/tex">b</script> we find <script type="math/tex; mode=display"> f(x) = \begin {cases} x+4 &\text {if $x<1$,}\\ \answer [given]{x^2+2x+2} &\text {if $1\le x< 3$,}\\ \answer [given]{6x-1} &\text {if $x\ge 3$.} \end {cases} </script> Now <script type="math/tex; mode=display"> \lim _{x\to 1^-} f(x) =\lim _{x\to 1^+}f(x) =f(1) = 5, </script> and <script type="math/tex; mode=display"> \lim _{x\to 3^-} f(x) =\lim _{x\to 3^+}f(x) =f(3) = 17. </script> So
+setting <script type="math/tex">a= \answer [given]{1}</script> and <script type="math/tex">b=\answer [given]{2}</script> makes <script type="math/tex">f</script> continuous at <script type="math/tex">x=1</script> and <script type="math/tex">x=3</script>. We can confirm our results by looking at
+the graph of <script type="math/tex">y=f(x)</script>: <script type="math/tex; mode=display"> \graph [xmin=-10,xmax=10,ymin=0,ymax=30]{y=x+4\left \{x<1\right \},y=x^2+2x+2\left \{1\leq x<3\right \},y=6x-1\left \{3 \leq x\right \}} </script> 
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>
