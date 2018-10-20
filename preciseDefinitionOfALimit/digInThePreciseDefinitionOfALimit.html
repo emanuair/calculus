@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head> <title>The  precise  definition  of  a
+                                                                  
+
+                                                                  
+limit</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInThePreciseDefinitionOfALimit.tex"/> 
+<meta name="date" content="2018-10-16 21:33:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="0f211771d1d8ef6aa2cdbea057e6833dfe54ea44 preciseDefinitionOfALimit/digInThePreciseDefinitionOfALimit.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">We give a mathematically precise definition of a limit.
+</p></div>   <div class="maketitle"></div>
+Recall that intuitively, the <em>limit</em> of <script type="math/tex">f(x)</script> as <script type="math/tex">x</script> approaches <script type="math/tex">a</script> is <script type="math/tex">L</script>, written <script type="math/tex; mode=display"> \lim _{x\to a} f(x) = L, </script> if the value <script type="math/tex">f(x)</script> can be
+made as close as one wishes to <script type="math/tex">L</script> for all <script type="math/tex">x</script> sufficiently close, but not equal to, <script type="math/tex">a</script>. This
+leads us to a precise definition of a <em>limit</em>.
+<h3 class="sectionHead"><a id="x1-1000"></a>The definition of a limit</h3>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a><a class="ximera-label" id="def:limit"></a> The <strong>limit</strong> of <script type="math/tex">f(x)</script> as <script type="math/tex">x</script> goes to <script type="math/tex">a</script> is <script type="math/tex">L</script>, <script type="math/tex; mode=display"> \lim _{x\to a} f(x) = L, </script> if for every <script type="math/tex">\epsilon >0</script> there is a <script type="math/tex">\delta > 0</script> so that whenever <script type="math/tex; mode=display"> 0 < |x-a| < \delta , \qquad \text {we have} \qquad |f(x)-L|<\epsilon . </script>
+If no such value of <script type="math/tex">L</script> can be found, then we say that the <strong>limit does not
+exist</strong>.
+</div>
+<!--l. 43--><p class="noindent">In the figure below, we see a geometric interpretation of this definition.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">a-\delta </script><script type="math/tex">a</script><script type="math/tex">a+\delta </script><script type="math/tex">L-\epsilon </script><script type="math/tex">L</script><script type="math/tex">L+\epsilon </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 79--><p class="noindent">Now we are going to get our hands dirty, and really use the definition of a
+limit.
+</p>
+<div class="theorem-like problem-environment example" id="problem2"><a id="x1-1002r2"></a>Show that <script type="math/tex">\lim _{x\to 2} x^2=4</script>. <div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-1003r3"></a>We want to show that for any given <script type="math/tex">\epsilon >0</script>, we can find a <script type="math/tex">\delta >0</script> such that <script type="math/tex; mode=display"> |x^2 -4|<\epsilon </script> whenever <script type="math/tex">0<|x - 2|<\delta </script>.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-2">     <script type="math/tex">2-\delta </script><script type="math/tex">2</script><script type="math/tex">2+\delta </script><script type="math/tex">4-\epsilon </script><script type="math/tex">4</script><script type="math/tex">4+\epsilon </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Start by factoring the left-hand side of the inequality above <script type="math/tex; mode=display"> |x+2||x-2|<\epsilon . </script> Since we are going to
+assume that <script type="math/tex">0<|x - 2|<\delta </script>, we will focus on the factor <script type="math/tex">|x+2|</script>. Since <script type="math/tex">x</script> is assumed to be close to <script type="math/tex">2</script>, suppose
+that <script type="math/tex">x\in [1,3]</script>. In this case <script type="math/tex; mode=display"> |x+2| \le 3+2 = 5, </script> and so we want <script type="math/tex; mode=display"> \begin{align*} 
+5\cdot |x-2| &< \epsilon\\
+|x-2| &< \frac{\epsilon}{5}
+\end{align*}</script>
+Recall, we assumed that <script type="math/tex">x\in [1,3]</script>, which is equivalent to <script type="math/tex">|x-2|\le 1</script>. Hence we must set <script type="math/tex">\delta = \min \left (\dfrac {\epsilon }{5},1\right )</script>.
+</div>
+</div>
+<!--l. 139--><p class="noindent">When dealing with limits of polynomials, the general strategy is always the same. Let
+<script type="math/tex">p(x)</script> be a polynomial. If showing <script type="math/tex; mode=display"> \lim _{x\to a} p(x) = L, </script> one must first factor out <script type="math/tex">|x-a|</script> from <script type="math/tex">|p(x) - L|</script>. Next bound <script type="math/tex">x\in [a-1,a+1]</script> and
+estimate the largest possible value of <script type="math/tex; mode=display"> \left |\frac {p(x) -L}{x-a}\right | </script> for <script type="math/tex">x\in [a-1,a+1]</script>, call this estimation <script type="math/tex">M</script>. Finally, one must set
+<script type="math/tex">\delta = \min \left (\frac {\epsilon }{M}, 1\right )</script>.
+</p>
+<h3 class="sectionHead"><a id="x1-2000"></a>Tolerance problems</h3>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

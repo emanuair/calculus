@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="graphingComputations8.tex"/> 
+<meta name="date" content="2018-10-16 21:08:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Find the intervals where a function is increasing or decreasing."/> 
+<meta name="learning-outcome" content="Find the intervals where a function is concave up or down."/> 
+<meta name="learning-outcome" content="Find any asymptotic behaviors a function may have: vertical, horizontal, or slant."/> 
+<meta name="learning-outcome" content="Determine how the graph of a function looks without using a calculator."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="8d677af52f64b5c380e5e372ab44c7336ab6f4c5 computationsForGraphingFunctions/exercises/graphingComputations8.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Consider the function <script type="math/tex">f(x) = \frac {x^2-2x+4}{x-2}</script>.
+<!--l. 17--><p class="noindent">The domain of <script type="math/tex">f</script> (from left to right) is <script type="math/tex">\left (\answer {-\infty },\answer {2}\right )\cup \left (\answer {2},\answer {\infty }\right )</script>.
+</p><!--l. 19--><p class="noindent"><script type="math/tex">f</script> is <span class="word-choice" id="word-choice2"><a id="x1-65r2"></a><span class="choice  " id="choice1">even</span><span class="choice  " id="choice2">odd</span><span class="choice correct " id="choice3">neither even nor odd</span>
+</span>.
+</p><!--l. 21--><p class="noindent"><script type="math/tex">f</script> <span class="word-choice" id="word-choice3"><a id="x1-66r3"></a><span class="choice  " id="choice4">has</span><span class="choice correct " id="choice5">has no</span>
+</span> horizontal asymptotes.
+</p><!--l. 23--><p class="noindent"><script type="math/tex">f</script> has a vertical asymptote at <script type="math/tex">x=\answer {2}</script>.
+</p><!--l. 25--><p class="noindent">The derivative of <script type="math/tex">f</script> is given by <script type="math/tex; mode=display"> f'(x) =\frac {x(x- \answer {4})}{(x- \answer {2})^2}. </script>
+</p><!--l. 30--><p class="noindent">The second derivative of <script type="math/tex">f</script> is given by <script type="math/tex; mode=display"> f''(x) = \answer {\frac {8}{(x-2)^3}}. </script>
+</p><!--l. 35--><p class="noindent"><script type="math/tex">f</script> is increasing and concave up on <script type="math/tex">\left (\answer {4},\answer {\infty }\right )</script>.
+</p><!--l. 37--><p class="noindent"><script type="math/tex">f</script> is increasing and concave down on <script type="math/tex">\left (\answer {-\infty },\answer {0}\right )</script>.
+</p><!--l. 39--><p class="noindent"><script type="math/tex">f</script> is decreasing and concave up on <script type="math/tex">\left (\answer {2},\answer {4}\right )</script>.
+</p><!--l. 41--><p class="noindent"><script type="math/tex">f</script> is decreasing and concave down on <script type="math/tex">\left (\answer {0},\answer {2}\right )</script>.
+</p><!--l. 43--><p class="noindent"><script type="math/tex">f</script> achieves a local maximum at <script type="math/tex">x=\answer {0}</script>.
+</p><!--l. 45--><p class="noindent"><script type="math/tex">f</script> achieves a local minimum at <script type="math/tex">x=\answer {4}</script>.
+</p><!--l. 47--><p class="noindent"><script type="math/tex">f</script> <span class="word-choice" id="word-choice4"><a id="x1-67r4"></a><span class="choice  " id="choice6">has</span><span class="choice correct " id="choice7">does not have</span>
+</span> an inflection point at <script type="math/tex">x=2</script>.
+</p><!--l. 49--><p class="noindent">Consider the graphs below.
+</p><!--l. 51--><p class="noindent"> <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">A</script><script type="math/tex">x</script><script type="math/tex">y</script>                                    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">B</script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</p><!--l. 95--><p class="noindent"> <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">C</script><script type="math/tex">x</script><script type="math/tex">y</script>                                    <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">D</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</p><!--l. 139--><p class="noindent">Chose the graph that correctly depicts <script type="math/tex">f(x)</script>. </p><div class="multiple-choice" id="problem5"><span class="choice correct " id="choice8"><script type="math/tex">A</script></span> <span class="choice  " id="choice9"><script type="math/tex">B</script></span> <span class="choice  " id="choice10"><script type="math/tex">C</script></span> <span class="choice  " id="choice11"><script type="math/tex">D</script></span> </div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="AU15_WH4.tex"/> 
+<meta name="date" content="2018-10-16 21:11:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Recognize and distinguish between secant and tangent lines."/> 
+<meta name="learning-outcome" content="Understand the definition of the derivative at a point."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="399d38ae615051a26fff94bb73610bae5c89adde definitionOfTheDerivative/exercises/AU15_WH4.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+An oil tank is to be drained for cleaning. There are <script type="math/tex">V(t)</script> gallons of oil left in the tank <script type="math/tex">t</script>
+minutes after the draining began, where <script type="math/tex">V(t)=45(60-t)^2</script>. <div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> Find the <strong>average rate</strong> at which oil drains
+during the first <script type="math/tex">15</script> minutes. <script type="math/tex; mode=display"> \answer {-4725}\unit {gal/m} </script> <div role="article" class="problem-environment exercise" id="problem2"><a id="x1-65r2"></a> Find the <strong>average rate</strong> at which oil drains during the
+time interval <script type="math/tex">[10,15]</script>. <script type="math/tex; mode=display"> \answer {-4275}\unit {gal/m} </script> <div role="article" class="problem-environment exercise" id="problem3"><a id="x1-66r3"></a> Find the <strong>rate</strong> at which oil is flowing out the tank <script type="math/tex">15</script> minutes
+after the draining began. <script type="math/tex; mode=display"> \answer {-4050}\unit {gal/m} </script> <div role="article" class="problem-environment exercise" id="problem4"><a id="x1-67r4"></a> Find the <strong>average rate</strong>, <script type="math/tex">AR(t)</script>, at which oil drains
+during the time interval <script type="math/tex">[15+ t,15]</script> if <script type="math/tex">-1< t<0</script>. <script type="math/tex; mode=display"> AR(t)=\answer {45(t-90)}\unit {gal/m} </script> Now find the <strong>average rate</strong>, <script type="math/tex">AR( t)</script>, at which oil
+drains during the time interval <script type="math/tex">[15,15+ t]</script> if <script type="math/tex">0< t<1</script>. <script type="math/tex; mode=display"> AR(t)=\answer {45(t-90)}\unit {gal/m} </script> <div role="article" class="problem-environment exercise" id="problem5"><a id="x1-68r5"></a> Using your result, compute the limit <script type="math/tex; mode=display"> \lim _{t\to 0}AR(t)=\answer {-4050}\unit {gal/m} </script> <div role="article" class="problem-environment exercise" id="problem6"><a id="x1-69r6"></a>
+What does this limit <script type="math/tex">\lim _{t\to 0}AR(t)</script> represent? <div class="multiple-choice" id="problem7"><span class="choice  " id="choice1">The average rate of change at <script type="math/tex">t=0</script>.</span> <span class="choice  " id="choice2">The
+quantity <script type="math/tex">V(15)</script>.</span> <span class="choice correct " id="choice3">The instantaneous rate of change of <script type="math/tex">V(t)</script> at <script type="math/tex">t=15</script>.</span> <span class="choice  " id="choice4">The derivative of <script type="math/tex">V(t)</script> at <script type="math/tex">t=0</script>.</span>
+</div>
+<div role="article" class="problem-environment exercise" id="problem8"><a id="x1-70r7"></a> Suppose the oil tank has been completely drained and is now being refilled. Let <script type="math/tex">F(t)</script>
+denote the gallons of oil in the tank <script type="math/tex">t</script> minutes after the refilling process began.
+Suppose we are told that the function <script type="math/tex">F</script> is a <strong>differentiable function</strong> and that the
+tank is so large that it will take a while to fill.
+Find an expression for the <strong>average rate</strong>, <script type="math/tex">\bar {r}(t)</script>, at which oil flows into the tank in the
+first <script type="math/tex">t</script> minutes for <script type="math/tex">t>0</script>. Express <script type="math/tex">\bar {r}</script> <strong>symbolically</strong> in terms of the function <script type="math/tex">F(t)</script>, the variable <script type="math/tex">t</script> and
+the quantity <script type="math/tex">F(0)</script>. <div class="multiple-choice" id="problem9"><span class="choice  " id="choice5"><script type="math/tex">\bar {r}(t)=\frac {F(0)-F(t)}{t}\unit {gal/m}</script></span> <span class="choice  " id="choice6"><script type="math/tex">\bar {r}(t)=F(0)-F(t)\unit {gal/m}</script></span> <span class="choice  " id="choice7"><script type="math/tex">\bar {r}(t)=\frac {F(0)}{t}\unit {gal/m}</script></span> <span class="choice  " id="choice8"><script type="math/tex">\bar {r}(t)=\frac {F(t)}{t}\unit {gal/m}</script></span> <span class="choice correct " id="choice9"><script type="math/tex">\bar {r}(t)=\frac {F(t)-F(0)}{t}\unit {gal/m}</script></span> <span class="choice  " id="choice10"><script type="math/tex">\bar {r}(t)=\frac {F(t)}{t}\unit {gal/m}</script></span> </div>
+<div role="article" class="problem-environment exercise" id="problem10"><a id="x1-71r8"></a> Now let <script type="math/tex">\bar {r}_{\Delta }(t,\tau )</script> be the function denoting the <strong>average rate</strong> at which oil drains in the time
+interval <script type="math/tex">[t,\tau ]</script> where <script type="math/tex">t</script> is greater than <script type="math/tex">0</script> and less than tau—that is, where <script type="math/tex">0<t<\tau </script>. Express <script type="math/tex">\bar {r}_{\Delta }</script>
+<strong>symbolically</strong> in terms of the function <script type="math/tex">F</script> and the variables <script type="math/tex">t_0</script> and <script type="math/tex">t_f</script>. <div class="multiple-choice" id="problem11"><span class="choice  " id="choice11"><script type="math/tex">\bar {r}_\Delta (t,\tau )=\frac {F(t)-F(\tau )}{\tau -t}\unit {gal/m}</script></span> <span class="choice  " id="choice12"><script type="math/tex">\bar {r}_\Delta (t,\tau )=F(t)-F(\tau )\unit {gal/m}</script></span> <span class="choice  " id="choice13"><script type="math/tex">\bar {r}_\Delta (t,\tau )=\frac {F(t)}{\tau }\unit {gal/m}</script></span> <span class="choice  " id="choice14"><script type="math/tex">\bar {r}_\Delta (t,\tau )=\frac {F(\tau )}{t}\unit {gal/m}</script></span> <span class="choice correct " id="choice15"><script type="math/tex">\bar {r}_\Delta (t,\tau )=\frac {F(\tau )-F(t)}{\tau -t}\unit {gal/m}</script></span> <span class="choice  " id="choice16"><script type="math/tex">\bar {r}_\Delta (t,\tau )=\frac {F(\tau )}{\tau }\unit {gal/m}</script></span>
+</div>
+<div role="article" class="problem-environment exercise" id="problem12"><a id="x1-72r9"></a> What does <script type="math/tex">\lim _{t\to \tau } \bar {r}_\Delta (t,\tau )</script> compute? <div class="select-all" id="problem13"><a id="x1-73r10"></a> <span class="choice  " id="choice17">The average rate of change of <script type="math/tex">\bar {r}(\tau )</script>.</span> <span class="choice  " id="choice18">The average rate of
+change of <script type="math/tex">V</script> at <script type="math/tex">\tau </script>.</span> <span class="choice  " id="choice19">The instantanous rate of change of <script type="math/tex">\bar {r}(\tau )</script>.</span> <span class="choice correct " id="choice20">The instantanous rate of
+change of <script type="math/tex">V</script> at time <script type="math/tex">\tau </script>.</span> <span class="choice correct " id="choice21"><script type="math/tex">V'(\tau )</script></span> <span class="choice  " id="choice22"><script type="math/tex">\bar {r}'(\tau )</script>.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

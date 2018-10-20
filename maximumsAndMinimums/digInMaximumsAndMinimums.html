@@ -1,0 +1,418 @@
+<!DOCTYPE html><html lang="en"><head> <title>Maximums  and
+                                                                  
+
+                                                                  
+minimums</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInMaximumsAndMinimums.tex"/> 
+<meta name="date" content="2018-10-16 20:52:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Define a critical point."/> 
+<meta name="learning-outcome" content="Find critical points."/> 
+<meta name="learning-outcome" content="Define absolute maximum and absolute minimum."/> 
+<meta name="learning-outcome" content="Find the absolute max or min of a continuous function on a closed interval."/> 
+<meta name="learning-outcome" content="Define local maximum and local minimum."/> 
+<meta name="learning-outcome" content="Compare and contrast local and absolute maxima and minima."/> 
+<meta name="learning-outcome" content="Identify situations in which an absolute maximum or minimum is guaranteed."/> 
+<meta name="learning-outcome" content="Classify critical points."/> 
+<meta name="learning-outcome" content="State the First Derivative Test."/> 
+<meta name="learning-outcome" content="Apply the First Derivative Test."/> 
+<meta name="learning-outcome" content="State the Second Derivative Test."/> 
+<meta name="learning-outcome" content="Apply the Second Derivative Test."/> 
+<meta name="learning-outcome" content="Define inflection points."/> 
+<meta name="learning-outcome" content="Find inflection points."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="050fe52da113740633f0437b0101a9ff617792d5 maximumsAndMinimums/digInMaximumsAndMinimums.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 24--><p class="noindent">We use derivatives to help locate extrema.
+</p></div>   <div class="maketitle"></div>
+Whether we are interested in a function as a purely mathematical object or in
+connection with some application to the real world, it is often useful to know
+what the graph of the function looks like. We can obtain a good picture of
+the graph using certain crucial information provided by derivatives of the
+function.
+<h3 class="sectionHead"><a id="x1-1000"></a>Extrema</h3>
+<!--l. 37--><p class="noindent">Local <em>extrema</em> of a function are points on the graph where the <script type="math/tex">y</script>-coordinate is larger
+(or smaller) than all other <script type="math/tex">y</script>-coordinates on the graph at points “close to”
+<script type="math/tex">(x,y)</script>.
+</p>
+<div class="theorem-like problem-environment definition" id="problem1"><a id="x1-1001r1"></a>
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">A function <script type="math/tex">f</script> has a <strong>local maximum</strong> at <script type="math/tex">x=a</script>, if <script type="math/tex">f(a)\ge f(x)</script> for every <script type="math/tex">x</script> in some open interval
+     I containing <script type="math/tex">a</script>.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">A function <script type="math/tex">f</script> has a <strong>local minimum</strong> at <script type="math/tex">x=a</script>, if <script type="math/tex">f(a)\le f(x)</script> for every <script type="math/tex">x</script> in some open interval
+     I containing <script type="math/tex">a</script>.</dd></dl>
+<!--l. 48--><p class="noindent">A <strong>local extremum</strong> is either a local maximum or a local minimum.
+</p></div>
+<!--l. 62--><p class="noindent">In our next example, we clarify the definition of a local minimum. </p><div class="theorem-like problem-environment example" id="problem2"><a id="x1-1004r2"></a>Consider the graph
+of a function <script type="math/tex">f</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-1">   <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f(x)</script><script type="math/tex">f(1)</script><script type="math/tex">x</script><script type="math/tex">I</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Identify the local extrema of <script type="math/tex">f</script> and give an explanation. <div class="theorem-like problem-environment explanation" id="problem3"><a id="x1-1005r3"></a>In the figure above the
+                                                                  
+
+                                                                  
+function <script type="math/tex">f</script> has a local minimum at, <script type="math/tex; mode=display"> a=\answer [given]{1}, </script> because were able to find an <strong>open</strong> interval <script type="math/tex">I</script>
+(marked in the figure) that contains the number <script type="math/tex; mode=display"> a=\answer [given]{1}, </script> and for all numbers <script type="math/tex">x</script> in <script type="math/tex">I</script> the
+following statement is true: <script type="math/tex; mode=display"> f\left (\answer [given]{1}\right )\le f\left (\answer [given]{x}\right ). </script>
+</div>
+</div>
+<!--l. 116--><p class="noindent">Local maximum and minimum points are quite distinctive on the graph of a function,
+and are, therefore, useful in understanding the shape of the graph. In many applied
+problems we want to find the largest or smallest value that a function achieves (for
+example, we might want to find the minimum cost at which some task can be
+performed) and so identifying maximum and minimum points will be useful for
+applied problems as well.
+</p>
+<h3 class="sectionHead"><a id="x1-2000"></a>Critical points</h3>
+<!--l. 128--><p class="noindent">Consider the graph of the function <script type="math/tex">f</script>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-2">    -6-4-2246-2246<script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+The function <script type="math/tex">f</script> has four local extremums: at <script type="math/tex">x=-4</script>, <script type="math/tex">x=-2</script>, <script type="math/tex">x=0</script> and <script type="math/tex">x=4</script>. Notice that the function <script type="math/tex">f</script> is <strong>not
+differentiable</strong> at <script type="math/tex">x=-4</script> and <script type="math/tex">x=-2</script>. Notice that <script type="math/tex">f'(0)=0</script> and <script type="math/tex">f'(4)=0</script>.
+<!--l. 160--><p class="noindent">After this example, the following theorem should not come as a surprise.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem4"><a id="x1-2001r4"></a><span class="theorem-like-title">Fermat’s Theorem</span><a class="ximera-label" id="theorem:fermat"></a> If <script type="math/tex">f</script> has a local extremum at <script type="math/tex">x=a</script> and <script type="math/tex">f</script> is differentiable at <script type="math/tex">a</script>, then
+<script type="math/tex">f'(a)=0</script>.
+</div> <div role="article" class="problem-environment question" id="problem5"><a id="x1-2002r5"></a> Does Fermat’s Theorem say that if <script type="math/tex">f'(a) = 0</script>, then <script type="math/tex">f</script> has a local extrema at <script type="math/tex">x=a</script>? <div class="multiple-choice" id="problem6"><span class="choice  " id="choice1">yes</span> <span class="choice correct " id="choice2">no</span>
+</div>
+<div class="feedback" data-feedback="attempt" id="feedback7">Consider <script type="math/tex">f(x) = x^3</script>, <script type="math/tex">f'(0) = 0</script>, but <script type="math/tex">f</script> does not have a local maximum or minimum at <script type="math/tex">x=0</script>. </div>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 181--><p class="noindent">Fermat’s Theorem says that the only points at which a function can have a local
+maximum or minimum are points at which the derivative is zero or the derivative is
+undefined. As an illustration of the first scenario, consider the plots of <script type="math/tex">f(x) = x^3-4.5x^2+6x</script> and <script type="math/tex">f'(x) = 3x^2-9x+6</script>.
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-3">
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f'</script><script type="math/tex">x</script><script type="math/tex">y</script></div>
+<div role="article" class="problem-environment question" id="problem8"><a id="x1-2003r6"></a> Make a correct choice that completes the sentence below. <br class="newline"/>
+<!--l. 214--><p class="noindent">At the point <script type="math/tex">(1,f(1))</script>, the function <script type="math/tex">f</script> has
+</p>
+<div class="multiple-choice" id="problem9"><span class="choice correct " id="choice3">a local maximum</span> <span class="choice  " id="choice4">a local minimum</span> <span class="choice  " id="choice5">no local extremum</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem10"><a id="x1-2004r7"></a> Select the correct statement. <div class="multiple-choice" id="problem11"><span class="choice  " id="choice6"><script type="math/tex">f'(1)</script> is undefined</span> <span class="choice  " id="choice7"><script type="math/tex">f'(1)>0</script></span> <span class="choice correct " id="choice8"><script type="math/tex">f'(1)=0</script></span> <span class="choice  " id="choice9"><script type="math/tex">f'(1)<0</script></span> </div>
+</div> <div role="article" class="problem-environment question" id="problem12"><a id="x1-2005r8"></a> Make a correct choice that completes the sentence below. <br class="newline"/>
+<!--l. 234--><p class="noindent">At the point <script type="math/tex">(1.5,f(1.5))</script>, the function <script type="math/tex">f</script> has
+</p>
+<div class="multiple-choice" id="problem13"><span class="choice  " id="choice10">a local maximum</span> <span class="choice  " id="choice11">a local minimum</span> <span class="choice correct " id="choice12">no local extremum</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem14"><a id="x1-2006r9"></a> Select the correct statement. <div class="multiple-choice" id="problem15"><span class="choice  " id="choice13"><script type="math/tex">f'(1.5)</script> is undefined</span> <span class="choice  " id="choice14"><script type="math/tex">f'(1.5)>0</script></span> <span class="choice  " id="choice15"><script type="math/tex">f'(1.5)=0</script></span> <span class="choice correct " id="choice16"><script type="math/tex">f'(1.5)<0</script></span> </div>
+</div>
+<div role="article" class="problem-environment question" id="problem16"><a id="x1-2007r10"></a> Make a correct choice that completes the sentence below. <br class="newline"/>
+<!--l. 255--><p class="noindent">At the point <script type="math/tex">(2,f(2))</script>, the function <script type="math/tex">f</script> has
+</p>
+<div class="multiple-choice" id="problem17"><span class="choice  " id="choice17">a local maximum</span> <span class="choice correct " id="choice18">a local minimum</span> <span class="choice  " id="choice19">no local extremum</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem18"><a id="x1-2008r11"></a> Select the correct statement. <div class="multiple-choice" id="problem19"><span class="choice  " id="choice20"><script type="math/tex">f'(2)</script> is undefined</span> <span class="choice  " id="choice21"><script type="math/tex">f'(2)>0</script></span> <span class="choice correct " id="choice22"><script type="math/tex">f'(2)=0</script></span> <span class="choice  " id="choice23"><script type="math/tex">f'(2)<0</script></span> </div>
+                                                                  
+
+                                                                  
+</div> As an illustration of the second scenario, consider the plots of <script type="math/tex">f(x) = x^{2/3}</script> and <script type="math/tex">f'(x) = \frac {2}{3x^{1/3}}</script>:
+<div class="image-environment" role="img" aria-labelledby="image-alt-4">  
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f'</script><script type="math/tex">x</script><script type="math/tex">y</script></div><div role="article" class="problem-environment question" id="problem20"><a id="x1-2009r12"></a>Make a correct choice that completes the sentence below. <br class="newline"/>
+<!--l. 297--><p class="noindent">At the point <script type="math/tex">(-2,f(-2))</script>, the function <script type="math/tex">f</script> has
+</p>
+<div class="multiple-choice" id="problem21"><span class="choice  " id="choice24">a local maximum</span> <span class="choice  " id="choice25">a local minimum</span> <span class="choice correct " id="choice26">no local extremum</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem22"><a id="x1-2010r13"></a> Select the correct statement. <div class="multiple-choice" id="problem23"><span class="choice  " id="choice27"><script type="math/tex">f'(-2)</script> is undefined</span> <span class="choice  " id="choice28"><script type="math/tex">f'(-2)>0</script></span> <span class="choice  " id="choice29"><script type="math/tex">f'(-2)=0</script></span> <span class="choice correct " id="choice30"><script type="math/tex">f'(-2)<0</script></span> </div>
+</div> <div role="article" class="problem-environment question" id="problem24"><a id="x1-2011r14"></a> Make a correct choice that completes the sentence below. <br class="newline"/>
+<!--l. 317--><p class="noindent">At the point <script type="math/tex">(0,0)</script>, the function <script type="math/tex">f</script> has
+</p>
+<div class="multiple-choice" id="problem25"><span class="choice  " id="choice31">a local maximum</span> <span class="choice correct " id="choice32">a local minimum</span> <span class="choice  " id="choice33">no local extremum</span> </div>
+</div> <div role="article" class="problem-environment question" id="problem26"><a id="x1-2012r15"></a> Select the correct statement. <div class="multiple-choice" id="problem27"><span class="choice correct " id="choice34"><script type="math/tex">f'(0)</script> is undefined</span> <span class="choice  " id="choice35"><script type="math/tex">f'(0)>0</script></span> <span class="choice  " id="choice36"><script type="math/tex">f'(0)=0</script></span> <span class="choice  " id="choice37"><script type="math/tex">f'(0)<0</script></span> </div>
+</div>
+<!--l. 335--><p class="noindent">This brings us to our next definition.
+</p>
+<div class="theorem-like problem-environment definition" id="problem28"><a id="x1-2013r16"></a> Assume that a function <script type="math/tex">f</script> is defined on an open interval I that contains a point <script type="math/tex">a</script>. The
+function <script type="math/tex">f</script> has a <strong>critical point</strong> at <script type="math/tex">x=a</script> if <script type="math/tex; mode=display"> f'(a) = 0\qquad \text {or}\qquad \text {$f'(a)$ does not exist.} </script>
+</div>
+<div class="theorem-like problem-environment warning" id="problem29"><a id="x1-2014r17"></a>When looking for local maximum and minimum points, you are likely to make two
+sorts of mistakes:
+     <ul class="itemize1">
+                                                                  
+
+                                                                  
+     <li class="itemize">You  may  forget  that  a  maximum  or  minimum  can  occur  where  the
+     derivative does not exist, and so forget to check whether the derivative
+     exists everywhere.
+     </li>
+     <li class="itemize">You might assume that any place that the derivative is zero is a local maximum
+     or minimum point, but this is not true, consider the plots of <script type="math/tex">f(x) = x^3</script> and <script type="math/tex">f'(x) = 3x^2</script>.
+     <div class="image-environment" role="img" aria-labelledby="image-alt-5">
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f'</script><script type="math/tex">x</script><script type="math/tex">y</script>                          </div>
+     While <script type="math/tex">f'(0)=0</script>, there is neither a maximum nor minimum at <script type="math/tex">x=0</script>.</li></ul>
+<!--l. 376--></div>
+<!--l. 380--><p class="noindent">Since both local maximum and local minimum occur at a critical point, when
+we locate a critical point, we need to determine which, if either, actually
+occurs. </p><div class="theorem-like problem-environment example" id="problem30"><a id="x1-2015r18"></a>Find all local maximum and minimum points for the function <script type="math/tex">f(x)=x^3-x</script>. <div class="theorem-like problem-environment explanation" id="problem31"><a id="x1-2016r19"></a>Write <script type="math/tex; mode=display"> \ddx f(x)=\answer [given]{3x^2-1}. </script>
+We can easily express <script type="math/tex">f'(x)</script> as a product of its factors <script type="math/tex; mode=display"> \ddx f(x)=3\left (x+\answer [given]{\frac {\sqrt {3}}{3}}\right )\left (x-\answer [given]{\frac {\sqrt {3}}{3}}\right ), </script> which implies that the
+function <script type="math/tex">f</script> has only two critical points, <script type="math/tex">x=-\frac {\sqrt {3}}{3}</script> and <script type="math/tex">x=\frac {\sqrt {3}}{3}</script>. Notice that the derivative <script type="math/tex">f'(x)</script>
+is a polynomial, and polynomials do not change signs except possibly at
+their zeros. This implies that derivative <script type="math/tex">f'(x)</script> <strong>does not change the sign</strong> on
+the intervals <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script>, <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>, and <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>, because these intervals do not contain any zeros of
+<script type="math/tex">f'(x)</script>.
+<div role="article" class="problem-environment question" id="problem32"><a id="x1-2017r20"></a> Select the correct statement about the sign of <script type="math/tex">f'(x)</script> on the intervals <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. <div class="multiple-choice" id="problem33"><span class="choice  " id="choice38"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice correct " id="choice39"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">x</script> in <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice  " id="choice40"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice  " id="choice41"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script></span> </div>
+</div> If we know the sign of the derivative on an interval, we also know whether
+the function is increasing or decreasing on that interval. This will help us
+determine whether the function has a local extremum at the critical point where <script type="math/tex">x=-\frac {\sqrt {3}}{3}</script>.
+<br class="newline"/><div role="article" class="problem-environment question" id="problem34"><a id="x1-2018r21"></a>
+<!--l. 420--><p class="noindent">At the critical point where <script type="math/tex">x=-\frac {\sqrt {3}}{3}</script>, the function <script type="math/tex">f</script> has <br class="newline"/>
+                                                                  
+
+                                                                  
+</p>
+<div class="multiple-choice" id="problem35"><span class="choice  " id="choice42">no local extremum, because <script type="math/tex">f</script> is increasing on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and increasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice correct " id="choice43">a local
+maximum, because <script type="math/tex">f</script> is increasing on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and decreasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice  " id="choice44">a local minimum,
+because <script type="math/tex">f</script> is decreasing on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and increasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> <span class="choice  " id="choice45">no local extremum, because <script type="math/tex">f</script> is
+decreasing on <script type="math/tex">\left (-\infty ,-\frac {\sqrt {3}}{3}\right )</script> and decreasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script>. </span> </div>
+</div> <div role="article" class="problem-environment question" id="problem36"><a id="x1-2019r22"></a> Select the correct statement about the sign of <script type="math/tex">f'(x)</script> on the intervals <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>. <br class="newline"/>
+<div class="multiple-choice" id="problem37"><span class="choice  " id="choice46"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>.</span> <span class="choice  " id="choice47"><script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>.</span> <span class="choice correct " id="choice48"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)>0</script> on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>.</span> <span class="choice  " id="choice49"><script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and <script type="math/tex">f'(x)<0</script> on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>.</span> </div>
+</div> Again, the sign of the derivative on an interval determines whether the function is
+increasing or decreasing on that interval. This will help us determine whether the
+function has a local extremum at the critical point where <script type="math/tex">x=\frac {\sqrt {3}}{3}</script>. <br class="newline"/><div role="article" class="problem-environment question" id="problem38"><a id="x1-2020r23"></a>
+<!--l. 441--><p class="noindent">At the critical point where <script type="math/tex">x=\frac {\sqrt {3}}{3}</script>, the function <script type="math/tex">f</script> has <br class="newline"/>
+</p>
+<div class="multiple-choice" id="problem39"><span class="choice  " id="choice50">no local extremum, because <script type="math/tex">f</script> is increasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and increasing on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>. </span> <span class="choice  " id="choice51">a local
+maximum, because <script type="math/tex">f</script> is increasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and decreasing on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>. </span> <span class="choice correct " id="choice52">a local minimum,
+because <script type="math/tex">f</script> is decreasing on <script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and increasing on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>. </span> <span class="choice  " id="choice53">no local extremum, because <script type="math/tex">f</script> is
+decreasing on<script type="math/tex">\left (-\frac {\sqrt {3}}{3},\frac {\sqrt {3}}{3}\right )</script> and decreasing on <script type="math/tex">\left (\frac {\sqrt {3}}{3},\infty \right )</script>. </span> </div>
+</div> Do your answers agree with the graphs of <script type="math/tex">f</script> and <script type="math/tex">f'</script> given in the picture below?
+<div class="image-environment" role="img" aria-labelledby="image-alt-6"> 
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f'</script><script type="math/tex">x</script><script type="math/tex">y</script></div></div>                                                                       
+
+                                                                  
+</div>
+<h3 class="sectionHead"><a id="x1-3000"></a>The first derivative test</h3>
+<!--l. 490--><p class="noindent">We will further explore and refine the method of the previous section for deciding
+whether there is a local maximum or minimum at a critical point. Recall that
+</p>
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">f'(x) >0</script> on an interval, then <script type="math/tex">f</script> is increasing on that interval.
+     </li>
+     <li class="itemize">If <script type="math/tex">f'(x) <0</script> on an interval, then <script type="math/tex">f</script> is decreasing on that interval.</li></ul>
+<!--l. 498--><p class="noindent">So how exactly does the derivative tell us whether there is a maximum, minimum, or
+neither at a point? Use the <em>first derivative test</em>.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem40"><a id="x1-3001r24"></a><span class="theorem-like-title">First Derivative Test</span><a class="ximera-label" id="T:fdt"></a> Suppose that <script type="math/tex">f</script> is continuous on an interval, and that <script type="math/tex">f'(a)=0</script> for some
+value of <script type="math/tex">a</script> in that interval.
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">f'(x)>0</script> to the left of <script type="math/tex">a</script> and <script type="math/tex">f'(x)<0</script> to the right of <script type="math/tex">a</script>, then <script type="math/tex">f(a)</script> is a local maximum.
+     </li>
+     <li class="itemize">If <script type="math/tex">f'(x)<0</script> to the left of <script type="math/tex">a</script> and <script type="math/tex">f'(x)>0</script> to the right of <script type="math/tex">a</script>, then <script type="math/tex">f(a)</script> is a local minimum.
+     </li>
+     <li class="itemize">If <script type="math/tex">f'(x)</script> has the same sign to the left and right of <script type="math/tex">a</script>, then <script type="math/tex">f(a)</script> is not a local extremum.</li></ul>
+<!--l. 512--></div>
+
+<div class="theorem-like problem-environment example" id="problem41"><a id="x1-3002r25"></a><a class="ximera-label" id="E:localextrema"></a> Consider the function <script type="math/tex; mode=display"> f(x) = \frac {x^4}{4}+\frac {x^3}{3}-x^2 </script> Find the intervals on which <script type="math/tex">f</script> is increasing and decreasing and
+identify the local extrema of <script type="math/tex">f</script>.
+<div class="theorem-like problem-environment explanation" id="problem42"><a id="x1-3003r26"></a>Start by computing <script type="math/tex; mode=display"> \ddx f(x) = \answer [given]{x^3+x^2-2x}. </script> Now we need to find on what intervals is <script type="math/tex">f'</script> positive and what intervals
+it is negative. To do this, solve <script type="math/tex; mode=display"> f'(x) = \answer [given]{x^3+x^2-2x} =0. </script> Factor <script type="math/tex">f'(x)</script> <script type="math/tex; mode=display"> \begin{align*} 
+f'(x) &= \answer[given]{x^3+x^2-2x} \\
+&=x(\answer[given]{x^2+x-2})\\
+&=x(x+2)(\answer[given]{x-1}).
+\end{align*}</script>
+So the critical points (when <script type="math/tex">f'(x)=0</script>) are when <script type="math/tex">x=-2</script>, <script type="math/tex">x=0</script>, and <script type="math/tex">x=1</script>. Since the derivative, <script type="math/tex">f'(x)</script>, is a
+polynomial, it does not change the sign on intervals between its zeros, i.e.,
+between the critical points. Now we can check the sign of <script type="math/tex">f'(x)</script> at some points
+<strong>between</strong> the critical points to find where <script type="math/tex">f'(x)</script> is positive and where negative:
+<script type="math/tex; mode=display"> \begin{align*} 
+  f'(-3)&=\answer[given]{-12},\\
+  f'(.5)&=\answer[given]{-0.625},\\
+  f'(-1)&=\answer[given]{2},\\
+                                                                  
+
+                                                                  
+  f'(2)&=\answer[given]{8}.
+\end{align*}</script>
+From this we can make a sign table:
+<div class="image-environment" role="img" aria-labelledby="image-alt-7">
+
+<script type="math/tex">-2</script><script type="math/tex">0</script><script type="math/tex">1</script><script type="math/tex">f'(x)<0</script><script type="math/tex">f'(x)<0</script><script type="math/tex">f'(x)>0</script><script type="math/tex">f'(x)>0</script></div>
+<!--l. 596--><p class="noindent">Hence <script type="math/tex">f</script> is increasing on <script type="math/tex">(-2,0)</script> and <script type="math/tex">(1,\infty )</script> and <script type="math/tex">f</script> is decreasing on <script type="math/tex">(-\infty ,-2)</script> and <script type="math/tex">(0,1)</script>. Moreover, from the first
+derivative test, the local maximum is at <script type="math/tex">x=0</script> while the local minimums are at <script type="math/tex">x=-2</script> and <script type="math/tex">x=1</script>, see
+the graphs of <script type="math/tex">f(x) =x^4/4 + x^3/3 -x^2</script> and <script type="math/tex">f'(x) = x^3 + x^2 -2x</script>. </p><div class="image-environment" role="img" aria-labelledby="image-alt-8"> 
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f'</script><script type="math/tex">x</script><script type="math/tex">y</script></div></div></div><!--l. 633--><p class="noindent">Hence we have seen that if <script type="math/tex">f'</script> is zero at a point and increasing on an interval containing
+that point, then <script type="math/tex">f</script> has a local minimum at the point. If <script type="math/tex">f'</script> is zero at a point and
+decreasing on an interval containing that point, then <script type="math/tex">f</script> has a local maximum at the
+point. Thus, we see that we can gain information about <script type="math/tex">f</script> by studying how <script type="math/tex">f'</script> changes.
+This leads us to our next section.
+</p>
+<h3 class="sectionHead"><a id="x1-4000"></a>Inflection points</h3>
+<!--l. 649--><p class="noindent">If we are trying to understand the shape of the graph of a function, knowing
+where it is concave up and concave down helps us to get a more accurate
+picture. It is worth summarizing what we have seen already in to a single
+theorem.
+</p>
+                                                                  
+
+                                                                  
+<div class="theorem-like problem-environment theorem" id="problem43"><a id="x1-4001r27"></a><span class="theorem-like-title">Test for Concavity</span> Suppose that <script type="math/tex">f''(x)</script> exists on an interval.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">If <script type="math/tex">f''(x)>0</script> on an interval, then <script type="math/tex">f</script> is concave up on that interval.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">If <script type="math/tex">f''(x)<0</script> on an interval, then <script type="math/tex">f</script> is concave down on that interval.</dd></dl>
+<!--l. 660--></div>
+<!--l. 663--><p class="noindent">Of particular interest are points at which the concavity changes from up to down or
+down to up.
+</p>
+<div class="theorem-like problem-environment definition" id="problem44"><a id="x1-4004r28"></a> If <script type="math/tex">f</script> is continuous at <script type="math/tex">x=a</script> and its concavity changes either from up to down or down to up
+at <script type="math/tex">x=a</script>, then <script type="math/tex">f</script> has an <strong>inflection point</strong> at <script type="math/tex">x=a</script>.
+</div>
+<!--l. 672--><p class="noindent">It is instructive to see some examples of inflection points:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-9">    <!--l. 694--><p class="noindent">This is an inflection point. The
+concavity changes from concave
+up to concave down.</p><!--l. 694--><p class="noindent">This is an inflectionpoint. The
+concavity changes from concave
+up to concave down.
+</p></div>
+<!--l. 698--><p class="noindent">It is also instructive to see some nonexamples of inflection points:
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-10">    <!--l. 718--><p class="noindent">This is <strong>not</strong> an inflection point.
+The curve is concave down on
+either side of the point.</p><!--l. 718--><p class="noindent">This is <strong>not</strong> an inflection point.
+The curve is concave down on
+either side of the point.
+</p></div>
+<!--l. 722--><p class="noindent">We identify inflection points by first finding <script type="math/tex">x</script> such that <script type="math/tex">f''(x)</script> is zero or undefined and then
+                                                                  
+
+                                                                  
+checking to see whether <script type="math/tex">f''(x)</script> does in fact go from positive to negative or negative to
+positive at these points.
+</p>
+<div class="theorem-like problem-environment warning" id="problem45"><a id="x1-4005r29"></a>Even if <script type="math/tex">f''(a) = 0</script>, the point determined by <script type="math/tex">x=a</script> might <strong>not</strong> be an inflection point.
+</div>
+<div class="theorem-like problem-environment example" id="problem46"><a id="x1-4006r30"></a>Describe the concavity of <script type="math/tex">f(x)=x^3-x</script>.
+<div class="theorem-like problem-environment explanation" id="problem47"><a id="x1-4007r31"></a>To start, compute the first and second derivative of <script type="math/tex">f(x)</script> with respect to <script type="math/tex">x</script>, <script type="math/tex; mode=display"> f'(x)=\answer [given]{3x^2-1}\qquad \text {and}\qquad f''(x)=\answer [given]{6x}. </script> Since <script type="math/tex">f''(0)=0</script>, there is
+potentially an inflection point at <script type="math/tex">x=0</script>. Using test points, we note the concavity does
+change from down to up, hence there is an inflection point at <script type="math/tex">x=0</script>. The curve
+is concave down for all <script type="math/tex">x<0</script> and concave up for all <script type="math/tex">x>0</script>, see the graphs of <script type="math/tex">f(x) = x^3-x</script> and <script type="math/tex">f''(x) = 6x</script>.
+<div class="image-environment" role="img" aria-labelledby="image-alt-11"> 
+<script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f''</script><script type="math/tex">x</script><script type="math/tex">y</script></div></div></div><!--l. 773--><p class="noindent">Note that we need to compute and analyze the second derivative to understand
+concavity, so we may as well try to use the second derivative test for maxima
+and minima. If for some reason this fails we can then try one of the other
+tests.
+</p>
+<h3 class="sectionHead"><a id="x1-5000"></a>The second derivative test</h3>
+<!--l. 781--><p class="noindent">Recall the first derivative test: </p>
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">f'(x)>0</script> to the left of <script type="math/tex">a</script> and <script type="math/tex">f'(x)<0</script> to the right of <script type="math/tex">a</script>, then <script type="math/tex">f(a)</script> is a local maximum.
+     </li>
+     <li class="itemize">If <script type="math/tex">f'(x)<0</script> to the left of <script type="math/tex">a</script> and <script type="math/tex">f'(x)>0</script> to the right of <script type="math/tex">a</script>, then <script type="math/tex">f(a)</script> is a local minimum.</li></ul>
+<!--l. 789--><p class="noindent">If <script type="math/tex">f'</script> changes from positive to negative it is decreasing. In this case, <script type="math/tex">f''</script> might be negative,
+                                                                  
+
+                                                                  
+and if in fact <script type="math/tex">f''</script> is negative then <script type="math/tex">f'</script> is definitely decreasing, so there is a local
+maximum at the point in question. On the other hand, if <script type="math/tex">f'</script> changes from
+negative to positive it is increasing. Again, this means that <script type="math/tex">f''</script> might be positive,
+and if in fact <script type="math/tex">f''</script> is positive then <script type="math/tex">f'</script> is definitely increasing, so there is a local
+minimum at the point in question. We summarize this as the <em>second derivative
+test</em>.
+</p>
+<div class="theorem-like problem-environment theorem" id="problem48"><a id="x1-5001r32"></a><span class="theorem-like-title">Second Derivative Test</span><a class="ximera-label" id="T:sdt"></a> Suppose that <script type="math/tex">f''(x)</script> is continuous on an open interval and that <script type="math/tex">f'(a)=0</script> for
+some value of <script type="math/tex">a</script> in that interval.
+     <ul class="itemize1">
+     <li class="itemize">If <script type="math/tex">f''(a) <0</script>, then <script type="math/tex">f</script> has a local maximum at <script type="math/tex">a</script>.
+     </li>
+     <li class="itemize">If <script type="math/tex">f''(a) >0</script>, then <script type="math/tex">f</script> has a local minimum at <script type="math/tex">a</script>.
+     </li>
+     <li class="itemize">If <script type="math/tex">f''(a) =0</script>, then the test is inconclusive. In this case, <script type="math/tex">f</script> may or may not have a local
+     extremum at <script type="math/tex">x=a</script>.</li></ul>
+<!--l. 808--></div>
+<!--l. 811--><p class="noindent">The second derivative test is often the easiest way to identify local maximum and
+minimum points. Sometimes the test fails and sometimes the second derivative is
+quite difficult to evaluate. In such cases we must fall back on one of the previous
+tests.
+</p>
+<div class="theorem-like problem-environment example" id="problem49"><a id="x1-5002r33"></a>Once again, consider the function <script type="math/tex; mode=display"> f(x) = \frac {x^4}{4}+\frac {x^3}{3}-x^2 </script> Use the second derivative test, to locate the local
+extrema of <script type="math/tex">f</script>.
+<div class="theorem-like problem-environment explanation" id="problem50"><a id="x1-5003r34"></a>Start by computing <script type="math/tex; mode=display"> f'(x) = \answer [given]{x^3 + x^2 -2x} \qquad \text {and}\qquad f''(x) = \answer [given]{3x^2 + 2x-2}. </script> Using the same technique as we used before, we find that <script type="math/tex; mode=display"> f'(-2) = \answer [given]{0},\qquad f'(0) = \answer [given]{0}, \qquad f'(1) = \answer [given]{0}. </script> Now
+we’ll attempt to use the second derivative test, <script type="math/tex; mode=display"> f''(-2) = \answer [given]{6}, \qquad f''(0) =\answer [given]{ -2}, \qquad f''(1) = \answer [given]{3}. </script> Hence we see that <script type="math/tex">f</script> has a local
+minimum at <script type="math/tex">x=-2</script>, a local maximum at <script type="math/tex">x=0</script>, and a local minimum at <script type="math/tex">x=1</script>, see below for a plot of <script type="math/tex">f(x) =x^4/4 + x^3/3 -x^2</script>
+and <script type="math/tex">f''(x) = 3x^2 + 2x -2</script>: <div class="image-environment" role="img" aria-labelledby="image-alt-12"> <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">f</script><script type="math/tex">f''</script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+<!--l. 872--></div>
+</div>
+
+<div role="article" class="problem-environment question" id="problem51"><a id="x1-5004r35"></a> If <script type="math/tex">f''(a)=0</script>, what does the second derivative test tell us? <div class="multiple-choice" id="problem52"><span class="choice  " id="choice54">The function has a local
+extremum at <script type="math/tex">x=a</script>.</span> <span class="choice  " id="choice55">The function does not have a local extremum at <script type="math/tex">x=a</script>.</span> <span class="choice correct " id="choice56">It
+gives no information on whether the function has a local extremum at <script type="math/tex">x=a</script>.</span> </div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

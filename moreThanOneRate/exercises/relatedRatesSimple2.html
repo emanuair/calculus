@@ -1,0 +1,114 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="relatedRatesSimple2.tex"/> 
+<meta name="date" content="2018-10-16 21:31:00"/> 
+<meta name="author" content="Steven
+                                                                  
+
+                                                                  
+Gubkin"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Solve basic related rates word problems."/> 
+<meta name="learning-outcome" content="Understand the process of solving related rates problems."/> 
+<meta name="learning-outcome" content="Calculate derivatives of expressions with multiple variables implicitly."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="19975452508ed931e895534ee1f1bb723c240697 moreThanOneRate/exercises/relatedRatesSimple2.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+<!--l. 13--><p class="noindent">The hypotenuse of an isosceles right triangle is increasing at a rate of <script type="math/tex">2 \frac {\textrm {m}}{\textrm {s}}</script>.
+</p><!--l. 16--><p class="noindent">At what rate is the area of this triangle increasing when the hypotenuse has length
+<script type="math/tex">4 \textrm {m}</script>?
+</p>
+<div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> Let <script type="math/tex">s</script> be the length of the legs, <script type="math/tex">h</script> be the length of the hypotenuse, and <script type="math/tex">A</script> be the area.
+Then we know that <script type="math/tex; mode=display"> \begin{align*} 
+   2s^2 &= h^2\\
+  A &=\frac{s^2}{2}
+\end{align*}</script>
+</div>
+<div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> There are a lot of ways to procede. We could just blindly differentiate, but a little
+algebra first might clean things up. In particular, we can notice that the two
+equations imply that <script type="math/tex; mode=display"> A = \frac {1}{4} h^2. </script>
+</div>
+<div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> Differentiating this implicitly with respect to <script type="math/tex">t</script>, we have <script type="math/tex; mode=display"> \dd [A]{t} = \frac {1}{2} h \dd [h]{t}. </script>
+</div>
+<div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> Substituting what we know about these quantities at the time in question, we have
+<script type="math/tex; mode=display"> \Bigl [ \dd [A]{t} \Bigr ]_{h=4}= \frac {1}{2} (4) (2) = 4\frac {\textrm {m}^2}{\textrm {s}}. </script>
+</div>
+<!--l. 55--><p class="noindent"><script type="math/tex; mode=display"> \Bigl [ \dd [A]{t} \Bigr ]_{h=4} = \answer {4}\frac {\textrm {m}^2}{\textrm {s}} </script>
+</p></div>  
+ 
+
+                                                                  
+
+
+</body></html>

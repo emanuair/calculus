@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="singVarCalcOptimization16.tex"/> 
+<meta name="date" content="2018-10-16 21:32:00"/> 
+<meta name="author" content="Bart  Snappand  Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Interpret an optimization problem as the procedure used to make a system or design as effective or functional as possible."/> 
+<meta name="learning-outcome" content="Set up an optimization problem by identifying the objective function and appropriate constraints."/> 
+<meta name="learning-outcome" content="Solve optimization problems by finding the appropriate absolute extremum."/> 
+<meta name="learning-outcome" content="Solve basic word problems involving maxima or minima."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="e5d4beea7c9ffe42f407d11048e39593aae16037 optimization/exercises/singVarCalcOptimization16.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+A rectangle is inscribed in the ellipse <script type="math/tex; mode=display"> \frac {x^2}{3}+\frac {y^2}{5}=1 </script> so that two of its edges are parallel to the <script type="math/tex">x</script>-axis,
+and the other two are parallel to the <script type="math/tex">y</script>-axis. Find the dimensions of the rectangle with
+the largest area. <div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> <div class="image-environment" role="img" aria-labelledby="image-alt-1">                          
+<script type="math/tex">y</script><script type="math/tex">x</script><script type="math/tex">(x,y)</script>∙</div>
+</div> <div role="article" class="problem-environment hint" id="problem3"><a id="x1-66r3"></a> Area of the rectangle <script type="math/tex">A=2x\cdot 2y</script>. We will express <script type="math/tex">A</script> as a function of, say, <script type="math/tex">x</script>. Note that <script type="math/tex">x</script>
+and <script type="math/tex">y</script> satisfy the equation of the ellipse, so <script type="math/tex; mode=display"> y^2=5- \frac {5x^2}{3} </script> Since in our figure <script type="math/tex">y\ge 0</script>, we have
+<script type="math/tex; mode=display"> y=\sqrt {5- \frac {5x^2}{3}} </script>
+</div> <div role="article" class="problem-environment hint" id="problem4"><a id="x1-67r4"></a> Now <script type="math/tex">A(x)=2x\cdot 2\sqrt {5- \frac {5x^2}{3}}</script>.
+<!--l. 57--><p class="noindent">The domain of <script type="math/tex">A=\left [0,\answer {\sqrt {3}}\right ]</script>.
+</p></div> <div role="article" class="problem-environment hint" id="problem5"><a id="x1-68r5"></a> We have to find the critical points of <script type="math/tex">A</script>.
+<!--l. 63--><p class="noindent"><script type="math/tex">A'(x)=4\cdot \sqrt {5- \frac {5x^2}{3}}+\frac {4x}{2\sqrt {5- \frac {5x^2}{3}}}\cdot \left (-\frac {10}{3}x\right )</script>. If we simplify <script type="math/tex">A'(x)</script>, we get
+</p><!--l. 66--><p class="noindent"><script type="math/tex">A'(x)=4\cdot \sqrt {5- \frac {5x^2}{3}}-\frac {20x^2}{3\sqrt {5- \frac {5x^2}{3}}}</script>,
+</p><!--l. 68--><p class="noindent">and if we simplify again, we get
+</p><!--l. 70--><p class="noindent"><script type="math/tex">A'(x)=\frac {60-40x^2}{3\sqrt {5- \frac {5x^2}{3}}}</script>
+</p><!--l. 72--><p class="noindent">The function <script type="math/tex">A</script> has the only critical point at <script type="math/tex">x=\sqrt {\frac {\answer {3}}{2}}</script>.
+</p></div> <div role="article" class="problem-environment hint" id="problem6"><a id="x1-69r6"></a>
+<!--l. 76--><p class="noindent">Since the domain of <script type="math/tex">A</script> is a closed interval <script type="math/tex">\left [0,\answer {\sqrt {3}}\right ]</script>, we have to evaluate the function <script type="math/tex">A</script> at the end
+points and at the critical point: <script type="math/tex; mode=display"> A(0)=0 </script> <script type="math/tex; mode=display"> A(\sqrt {3})=0 </script> <script type="math/tex; mode=display"> A\left (\sqrt {\frac {\answer {3}}{2}}\right )=4\sqrt {\frac {\answer {3}}{2}}\sqrt {5- \frac {5}{2}}=2\sqrt {15}. </script> So, the maximum is attained at the critical
+point.
+</p></div> <script type="math/tex; mode=display"> \begin{align*} 
+   \text{base}&= \answer{\sqrt{6}}\\
+  \text{height} &= \answer{\sqrt{10}}
+  \end{align*}</script>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

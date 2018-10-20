@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"><head> <title>Wanted:  graphing
+                                                                  
+
+                                                                  
+procedure</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="breakGround.tex"/> 
+<meta name="date" content="2018-10-16 20:32:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Determine how the graph of a function looks without using a calculator."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="e6d578d5665f2ba517ee0c3884b297d98c007a47 computationsForGraphingFunctions/breakGround.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }
+\newcommand {\descriptionlabel }[1]{\hspace {\labelsep }\textbf {#1:}}                  </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 21--><p class="noindent">Two young mathematicians discuss how to sketch the graphs of functions.
+</p></div>   <div class="maketitle"></div>
+Check out this dialogue between two calculus students (based on a true
+story):
+     <dl class="dialogue"><dt class="actor">
+Devyn </dt><dd class="speech">Riley, OK I know how to plot something if I’m given a description.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">Yes, it’s kinda fun right?
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">I know! But now I’m not sure how to get the information I need.
+     </dd><dt class="actor">
+Riley </dt><dd class="speech">You know, I’d like to make up a procedure based on all these facts, that
+     would tell me what the graph of any function would look like.
+     </dd><dt class="actor">
+Devyn </dt><dd class="speech">Me too! Let’s get to work!</dd></dl>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-65r1"></a>Below is a list of features of a graph of a function.
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Find the points <script type="math/tex">x=a</script> where <script type="math/tex">f(x)</script> goes to infinity as <script type="math/tex">x</script> goes to <script type="math/tex">a</script> (from the right, left,
+     or both). These are the points where <script type="math/tex">f</script> has a vertical asymptote.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find the critical points (the points where <script type="math/tex">f'(x) = 0</script> or <script type="math/tex">f'(x)</script> is undefined).
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">Identify inflection points and concavity.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">Determine an interval that shows all relevant behavior.
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">Find the <script type="math/tex">y</script>-intercept, this is the point <script type="math/tex">(0,f(0))</script>. Place this point on your graph.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">Find the candidates for inflection points, the points where <script type="math/tex">f''(x) = 0</script> or <script type="math/tex">f''(x)</script> is undefined.
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd class="enumerate-enumitem">If possible, find the <script type="math/tex">x</script>-intercepts, the points where <script type="math/tex">f(x) = 0</script>. Place these points on
+     your graph.
+     </dd><dt class="enumerate-enumitem">
+ (h) </dt><dd class="enumerate-enumitem">Compute <script type="math/tex">f'</script> and <script type="math/tex">f''</script>.
+                                                                  
+
+                                                                  
+     </dd><dt class="enumerate-enumitem">
+  (i) </dt><dd class="enumerate-enumitem">Analyze end behavior: as <script type="math/tex">x \to \pm \infty </script>, what happens to the graph of <script type="math/tex">f</script>? Does it have
+     horizontal asymptotes, increase or decrease without bound, or have some
+     other kind of behavior?</dd></dl>
+Use either the first or second derivative test to identify local extrema and/or find the
+intervals where your function is increasing/decreasing. In what order should we take
+these steps? For example, one must compute <script type="math/tex">f'</script> before computing <script type="math/tex">f''</script>. Also, one
+must compute <script type="math/tex">f'</script> before finding the critical points. There is more than one
+correct answer. <div class="free-response" id="problem2"><a id="x1-75r2"></a> Here is one possible answer to this question. Compare it with
+yours!
+     <dl class="enumerate-enumitem"><dt class="enumerate-enumitem">
+ (a) </dt><dd class="enumerate-enumitem">Find the <script type="math/tex">y</script>-intercept, this is the point <script type="math/tex">(0,f(0))</script>. Place this point on your graph.
+     </dd><dt class="enumerate-enumitem">
+ (b) </dt><dd class="enumerate-enumitem">Find any vertical asymptotes, these are points <script type="math/tex">x=a</script> where <script type="math/tex">f(x)</script> goes to infinity as
+     <script type="math/tex">x</script> goes to <script type="math/tex">a</script> (from the right, left, or both).
+     </dd><dt class="enumerate-enumitem">
+ (c) </dt><dd class="enumerate-enumitem">If possible, find the <script type="math/tex">x</script>-intercepts, the points where <script type="math/tex">f(x) = 0</script>. Place these points on
+     your graph.
+     </dd><dt class="enumerate-enumitem">
+ (d) </dt><dd class="enumerate-enumitem">Analyze end behavior: as <script type="math/tex">x \to \pm \infty </script>, what happens to the graph of <script type="math/tex">f</script>? Does it have
+     horizontal asymptotes, increase or decrease without bound, or have some
+     other kind of behavior?
+     </dd><dt class="enumerate-enumitem">
+ (e) </dt><dd class="enumerate-enumitem">Compute <script type="math/tex">f'(x)</script> and <script type="math/tex">f''(x)</script>.
+     </dd><dt class="enumerate-enumitem">
+  (f) </dt><dd class="enumerate-enumitem">Find the critical points (the points where <script type="math/tex">f'(x) = 0</script> or <script type="math/tex">f'(x)</script> is undefined).
+     </dd><dt class="enumerate-enumitem">
+ (g) </dt><dd class="enumerate-enumitem">Use either the first or second derivative test to identify local extrema
+     and/or find the intervals where your function is increasing/decreasing.
+     </dd><dt class="enumerate-enumitem">
+ (h) </dt><dd class="enumerate-enumitem">Find the candidates for inflection points, the points where <script type="math/tex">f''(x) = 0</script> or <script type="math/tex">f''(x)</script> is undefined.
+     </dd><dt class="enumerate-enumitem">
+  (i) </dt><dd class="enumerate-enumitem">Identify inflection points and concavity.
+     </dd><dt class="enumerate-enumitem">
+  (j) </dt><dd class="enumerate-enumitem">Determine an interval that shows all relevant behavior</dd></dl>
+                                                                  
+
+                                                                  
+<!--l. 85--></div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

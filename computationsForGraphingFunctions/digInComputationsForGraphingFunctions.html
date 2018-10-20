@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="en"><head> <title>Computations  for  graphing
+                                                                  
+
+                                                                  
+functions</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="digInComputationsForGraphingFunctions.tex"/> 
+<meta name="date" content="2018-10-16 20:54:00"/> 
+<meta name="author" content=""/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Determine how the graph of a function looks without using a calculator."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="59b444e4ab9a915a7a668e25254a77de76cc7e6d computationsForGraphingFunctions/digInComputationsForGraphingFunctions.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 11--><p class="noindent">We will give some general guidelines for sketching the plot of a function.
+</p></div>   <div class="maketitle"></div>
+Let’s get to the point. Here we use all of the tools we know to sketch the graph of
+<script type="math/tex">y=f(x)</script>:
+     <ul class="itemize1">
+     <li class="itemize">Find the <script type="math/tex">y</script>-intercept, this is the point <script type="math/tex">(0,f(0))</script>. Place this point on your graph.
+     </li>
+     <li class="itemize">Find any vertical asymptotes, these are points <script type="math/tex">x=a</script> where <script type="math/tex">f(x)</script> goes to infinity as
+     <script type="math/tex">x</script> goes to <script type="math/tex">a</script> (from the right, left, or both).
+     </li>
+     <li class="itemize">If possible, find the <script type="math/tex">x</script>-intercepts, the points where <script type="math/tex">f(x) = 0</script>. Place these points on
+     your graph.
+     </li>
+     <li class="itemize">Analyze end behavior: as <script type="math/tex">x \to \pm \infty </script>, what happens to the graph of <script type="math/tex">f</script>? Does it have
+     horizontal asymptotes, increase or decrease without bound, or have some
+     other kind of behavior?
+     </li>
+     <li class="itemize">Compute <script type="math/tex">f'</script> and <script type="math/tex">f''</script>.
+     </li>
+     <li class="itemize">Find the critical points (the points where <script type="math/tex">f'(x) = 0</script> or <script type="math/tex">f'(x)</script> is undefined).
+     </li>
+     <li class="itemize">Use either the first or second derivative test to identify local extrema
+     and/or find the intervals where your function is increasing/decreasing.
+     </li>
+     <li class="itemize">Find the candidates for inflection points, the points where <script type="math/tex">f''(x) = 0</script> or <script type="math/tex">f''(x)</script> is undefined.
+     </li>
+     <li class="itemize">Identify inflection points and concavity.
+     </li>
+     <li class="itemize">Determine an interval that shows all relevant behavior.</li></ul>
+<!--l. 40--><p class="noindent">At this point you should be able to sketch the plot of your function.
+</p>
+<div class="theorem-like problem-environment example" id="problem1"><a id="x1-64r1"></a>Sketch the graph of the function defined by <script type="math/tex">f(x)=2x^3-3x^2-12x</script>.
+                                                                  
+
+                                                                  
+<!--l. 45--><p class="noindent">The <script type="math/tex">y</script>-intercept is <script type="math/tex">(0,\answer [given]{0})</script>. Place this point on your plot. </p><div class="image-environment" role="img" aria-labelledby="image-alt-1">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 67--><p class="noindent">Which of the following are vertical asymptotes? Select all that apply.
+</p>
+<div class="select-all" id="problem2"><a id="x1-65r2"></a> <span class="choice  " id="choice1"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice2"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice3"><script type="math/tex">x=-1</script></span> <span class="choice  " id="choice4"><script type="math/tex">x=\sqrt {2}</script></span> <span class="choice correct " id="choice5">There are no vertical asymptotes</span>
+</div>
+<!--l. 77--><p class="noindent">In this case, <script type="math/tex">f(x) =2x^3-3x^2-12x</script>, we can find the <script type="math/tex">x</script>-intercepts. There are three <script type="math/tex">x</script> intercepts. Call them <script type="math/tex">a</script>, <script type="math/tex">b</script>,
+and <script type="math/tex">c</script>, and order them such that <script type="math/tex">a<b<c</script>. Then
+</p>
+<script type="math/tex; mode=display"> \begin{align*} 
+  a &= \answer[given]{\frac{3-\sqrt{105}}{4}},\\
+  b &= \answer[given]{0}, \\
+  c &= \answer[given]{\frac{3+\sqrt{105}}{4}}.
+\end{align*}</script>
+<!--l. 88--><p class="noindent">Which of the following best describes the end behavior of <script type="math/tex">f</script> as <script type="math/tex">x \to \infty </script>? </p><div class="multiple-choice" id="problem3"><span class="choice correct " id="choice6"><script type="math/tex">f</script> increases without
+bound.</span> <span class="choice  " id="choice7"><script type="math/tex">f</script> decreases without bound.</span> <span class="choice  " id="choice8"><script type="math/tex">f</script> has a horizontal asymptote.</span> <span class="choice  " id="choice9"><script type="math/tex">f</script> has some other
+behavior at <script type="math/tex">\infty </script>.</span> </div>
+Which of the following best describes the end behavior of <script type="math/tex">f</script> as <script type="math/tex">x \to -\infty </script>? <div class="multiple-choice" id="problem4"><span class="choice  " id="choice10"><script type="math/tex">f</script> increases without
+bound.</span> <span class="choice correct " id="choice11"><script type="math/tex">f</script> decreases without bound.</span> <span class="choice  " id="choice12"><script type="math/tex">f</script> has a horizontal asymptote.</span> <span class="choice  " id="choice13"><script type="math/tex">f</script> has some other
+behavior at <script type="math/tex">\infty </script>.</span> </div>
+<!--l. 103--><p class="noindent">Compute <script type="math/tex">f'(x)</script> and <script type="math/tex">f''(x)</script>, </p><script type="math/tex; mode=display"> \begin{align*} 
+   f'(x) &= \answer[given]{6x^2 -6x -12}\\
+  &=6\left(\answer[given]{x^2-x-2}\right)\\
+  &=6(x+1)\left(\answer[given]{x-2}\right).
+\end{align*}</script>
+On the other hand <script type="math/tex; mode=display"> \begin{align*} 
+   f''(x) &= \answer[given]{12x-6}\\
+                                                                  
+
+                                                                  
+  &=12\left(\answer[given]{x-\frac{1}{2}}\right).
+\end{align*}</script>
+The critical points are where <script type="math/tex">f'(x) = 0</script>, thus we need to solve <script type="math/tex">6(x+1)(x-2) = 0</script> for <script type="math/tex">x</script>. This equation has two
+solutions. If we call them <script type="math/tex">a</script> and <script type="math/tex">b</script>, with <script type="math/tex">a<b</script>, then what are <script type="math/tex">a</script> and <script type="math/tex">b</script>? <script type="math/tex; mode=display"> a = \answer [given]{-1}\qquad \text {and}\qquad b = \answer [given]{2}. </script>
+<!--l. 121--><p class="noindent">Mark the critical points <script type="math/tex">x=2</script> and <script type="math/tex">x=-1</script> on your plot. </p><div class="image-environment" role="img" aria-labelledby="image-alt-2">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Since <script type="math/tex">f'(x)=6(x+1)(x-2)</script>, and both factors <script type="math/tex">(x+1)</script> and <script type="math/tex">(x-2)</script> are negative for <script type="math/tex">x<-1</script>, it follows that <script type="math/tex">f'(x)>0</script>, and, therefore, our
+function is increasing on <script type="math/tex">(-\infty ,-1)</script>.
+<!--l. 148--><p class="noindent">Similarly, since for <script type="math/tex">-1<x<2</script>, <script type="math/tex">(x+1)>0</script> and <script type="math/tex">(x-2)<0</script>, the derivative is negative there, and, therefore, our
+function is decreasing on <script type="math/tex">(-1,2)</script>.
+</p><!--l. 155--><p class="noindent">And, for <script type="math/tex">x>2</script>, both factors <script type="math/tex">(x+1)</script> and <script type="math/tex">(x-2)</script> are positive, and, therefore, our function is increasing on
+<script type="math/tex">(2,\infty )</script>.
+</p><!--l. 158--><p class="noindent">Hence <script type="math/tex">x=-1</script>, corresponding to the point <script type="math/tex">(-1,7)</script> is a local maximum and <script type="math/tex">x=2</script>, corresponding to the point <script type="math/tex">(2,-20)</script> is
+local minimum of <script type="math/tex">f(x)</script>. Identify this on your plot. </p><div class="image-environment" role="img" aria-labelledby="image-alt-3">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+                                                                  
+
+                                                                  
+<!--l. 193--><p class="noindent">The candidates for the inflection points are where <script type="math/tex">f''(x) = 0</script>, thus we need to solve <script type="math/tex">12(x-\frac {1}{2})=0</script> for
+<script type="math/tex">x</script>.
+</p><!--l. 196--><p class="noindent">The solution to this is <script type="math/tex">x = \answer {\frac {1}{2}}</script>.
+</p><!--l. 198--><p class="noindent">This is only a <strong>possible</strong> inflection point, since the concavity needs to change to make
+it a true inflection point.<br class="newline"/>
+</p><!--l. 200--><p class="noindent">We have that <script type="math/tex">f''(x)<0</script> for <script type="math/tex">x<\frac {1}{2}</script>, therefore <script type="math/tex">f</script> is concave downon <script type="math/tex">(-\infty ,\frac {1}{2})</script>.<br class="newline"/>
+</p><!--l. 203--><p class="noindent">Similarly, <script type="math/tex">f''(x)>0</script> for <script type="math/tex">x>\frac {1}{2}</script>, therefore <script type="math/tex">f</script> is concave up on <script type="math/tex">(\frac {1}{2},\infty )</script>.
+</p><!--l. 206--><p class="noindent">So this point is a point of inflection.
+</p><!--l. 208--><p class="noindent">Since all of this behavior as described above occurs on the interval <script type="math/tex">[-2,4]</script>, we
+now have a complete sketch of <script type="math/tex">f(x)</script> on this interval, see the figure below.
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-4">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 241--></div>
+
+<div class="theorem-like problem-environment example" id="problem5"><a id="x1-66r3"></a>Sketch the plot of <script type="math/tex; mode=display"> f(x) = \begin {cases} xe^x+2 &\text {if $x<0$} \\ x^4-x^2+3 &\text {if $x \geq 0$}. \end {cases} </script> NOTE: <script type="math/tex">\lim _{x \to -\infty }xe^x=0</script>. You will need this limit when answering some questions
+below.<br class="newline"/>Try this on your own first, then either check with a friend, a graphing calculator (like
+<a href="http://www.desmos.com">Desmos</a>), or check the online version.
+<!--l. 254--><p class="noindent">Since this function is piecewise defined, we will analyze the cases <script type="math/tex">(-\infty ,0)</script> and <script type="math/tex">[0,\infty )</script> separately.
+</p><!--l. 256--><p class="noindent">Because <script type="math/tex">f</script> is piecewise defined, and potentially discontinuous at <script type="math/tex">0</script>, it is important to
+understand the behavior of <script type="math/tex">f</script> near <script type="math/tex">x = 0</script>.
+</p><!--l. 260--><p class="noindent"><script type="math/tex; mode=display"> \lim _{x \to 0^-} f(x) = \answer [given]{2} </script>
+</p><!--l. 264--><p class="noindent"><script type="math/tex; mode=display"> \lim _{x \to 0^+} f(x) = \answer [given]{3} </script>
+</p><!--l. 266--><p class="noindent">Moreover,
+                                                                  
+
+                                                                  
+</p><!--l. 270--><p class="noindent"><script type="math/tex; mode=display"> f(0) = \answer [given]{3} </script>
+</p><!--l. 272--><p class="noindent">Record this information on our graph with filled and unfilled circles.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-5">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 294--><p class="noindent">Which of the following are vertical asymptotes on <script type="math/tex">(-\infty ,0)</script>? Select all that apply.
+</p>
+<div class="select-all" id="problem6"><a id="x1-67r4"></a> <span class="choice  " id="choice14"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice15"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice16"><script type="math/tex">x=-1</script></span> <span class="choice  " id="choice17"><script type="math/tex">x=\sqrt {2}</script></span> <span class="choice correct " id="choice18">There are no vertical asymptotes</span>
+</div>
+<!--l. 304--><p class="noindent">Which of the following are vertical asymptotes on <script type="math/tex">(0,\infty )</script>? Select all that apply.
+</p>
+<div class="select-all" id="problem7"><a id="x1-68r5"></a> <span class="choice  " id="choice19"><script type="math/tex">x=0</script></span> <span class="choice  " id="choice20"><script type="math/tex">x=1</script></span> <span class="choice  " id="choice21"><script type="math/tex">x=-1</script></span> <span class="choice  " id="choice22"><script type="math/tex">x=\sqrt {2}</script></span> <span class="choice correct " id="choice23">There are no vertical asymptotes</span>
+</div>
+<!--l. 315--><p class="noindent">Which of the following best describes the end behavior of <script type="math/tex">f</script> as <script type="math/tex">x \to \infty </script>?
+</p>
+<div class="multiple-choice" id="problem8"><span class="choice correct " id="choice24"><script type="math/tex">f</script> increases without bound.</span> <span class="choice  " id="choice25"><script type="math/tex">f</script> decreases without bound.</span> <span class="choice  " id="choice26"><script type="math/tex">f</script> has a horizontal
+asymptote of <script type="math/tex">y=2</script>.</span> <span class="choice  " id="choice27"><script type="math/tex">f</script> has some other behavior at <script type="math/tex">\infty </script>.</span> </div>
+<!--l. 324--><p class="noindent">Which of the following best describes the end behavior of <script type="math/tex">f</script> as <script type="math/tex">x \to -\infty </script>?
+</p>
+<div class="multiple-choice" id="problem9"><span class="choice  " id="choice28"><script type="math/tex">f</script> increases without bound.</span> <span class="choice  " id="choice29"><script type="math/tex">f</script> decreases without bound.</span> <span class="choice correct " id="choice30"><script type="math/tex">f</script> has a horizontal
+asymptote of <script type="math/tex">y = 2</script>.</span> <span class="choice  " id="choice31"><script type="math/tex">f</script> has some other behavior at <script type="math/tex">\infty </script>.</span> </div>
+<!--l. 333--><p class="noindent">We mark the location of the horizontal asymptote:
+</p>
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-6">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 356--><p class="noindent">The derivative of <script type="math/tex">f</script> on <script type="math/tex">(-\infty , 0)</script> is <script type="math/tex; mode=display"> f'(x)= \answer [given]{xe^x+e^x}=e^x(\answer [given]{x+1}) </script>
+</p><!--l. 361--><p class="noindent">The derivative of <script type="math/tex">f</script> on <script type="math/tex">(0, \infty )</script> is <script type="math/tex; mode=display"> f'(x)= \answer [given]{4x^3-2x}=4x\left (\answer [given]{x^2-\frac {1}{2}}\right ) </script>
+</p><!--l. 367--><p class="noindent">The critical points are where <script type="math/tex">f'(x) = 0</script> or does not exist. <script type="math/tex">0</script> is a critical point, since we have
+already seen it is a point of discontinuity for <script type="math/tex">f</script>, and thus <script type="math/tex">f'(0)</script> does not exist there. On <script type="math/tex">(-\infty , 0)</script>, <script type="math/tex">f</script>
+has a critical point at <script type="math/tex">x = \answer [given]{-1}</script>. On <script type="math/tex">(0,\infty )</script>, <script type="math/tex">f</script> has a critical point at <script type="math/tex">x = \answer [given]{\frac {1}{\sqrt {2}}}</script>. Mark the critical points <script type="math/tex">x=-1</script> and <script type="math/tex">x=\frac {1}{\sqrt {2}}</script> on
+your plot. would be nice </p><div class="image-environment" role="img" aria-labelledby="image-alt-7">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+Using the first derivative, we can see that on <script type="math/tex">(-\infty , -1)</script>, <script type="math/tex">f'(x)=e^x(x+1)</script> and has the same sign as the factor <script type="math/tex">(x+1)</script>,
+which is negative. Therefore, <script type="math/tex">f</script> is  decreasing on <script type="math/tex">(-\infty , -1)</script>. On <script type="math/tex">(-1, 0)</script>, <script type="math/tex">f'(x)</script> has the same sign as the factor
+<script type="math/tex">(x+1)</script>, which is positive. Therefore,  increasing on <script type="math/tex">(-1, 0)</script>. On <script type="math/tex">(0, \frac {1}{\sqrt {2}})</script>, since <script type="math/tex">f'\left (\frac {1}{4}\right )= \frac {1}{16}-\frac {1}{2}<0</script>, <script type="math/tex">f</script> is decreasing. On <script type="math/tex">\left (\frac {1}{\sqrt {2}}, \infty \right )</script>, since <script type="math/tex">f'(1)= 4\left (1-\frac {1}{2}\right )>0</script>, <script type="math/tex">f</script>
+                                                                  
+
+                                                                  
+is  increasing. <div class="image-environment" role="img" aria-labelledby="image-alt-8">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+The second derivative of <script type="math/tex">f</script> on <script type="math/tex">(-\infty , 0)</script> is <script type="math/tex; mode=display"> f''(x)= \answer [given]{xe^x+2e^x}=e^x(\answer [given]{x+2}) </script>
+<!--l. 443--><p class="noindent">The second derivative of <script type="math/tex">f</script> on <script type="math/tex">(0, \infty )</script> is <script type="math/tex; mode=display"> f''(x)= \answer [given]{12x^2-2}=12\left (\answer [given]{x^2-\frac {1}{6}}\right ) </script> The candidates for the inflection points are where
+<script type="math/tex">f''(x) = 0</script>.
+</p><!--l. 450--><p class="noindent">On <script type="math/tex">(-\infty , 0)</script>, <script type="math/tex">f''</script> has one zero, namely <script type="math/tex">x = \answer [given]{-2}</script>. The sign of <script type="math/tex">f''</script> changes from negative to positive]  through
+this point. On <script type="math/tex">(0, \infty )</script>, <script type="math/tex">f''</script> has one zero, namely <script type="math/tex">x = \answer [given]{\frac {1}{\sqrt {6}}}</script>. The sign of <script type="math/tex">f''</script> changes from negative to
+positive]  through this point.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-9">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 487--><p class="noindent">Since all of this behavior as described above occurs on the interval <script type="math/tex">[-5,2]</script>, we
+now have a complete sketch of <script type="math/tex">y=f(x)</script> on this interval, see the figure below.
+                                                                  
+
+                                                                  
+</p><div class="image-environment" role="img" aria-labelledby="image-alt-10">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

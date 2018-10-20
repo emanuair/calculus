@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="en"><head> <title>Midterm 2 Review</title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="examTwoReview.tex"/> 
+<meta name="date" content="2018-10-16 21:16:00"/> 
+<meta name="author" content="Tom Dinitz and Nela
+                                                                  
+
+                                                                  
+Lakos"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="9d78e6641bc373a836f1c164a90d3c9926c98f80 exams/calculus1/examReviews/examTwoReview.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div class="abstract">
+<!--l. 9--><p class="noindent">Review questions for MIDTERM 2.
+</p></div>   <div class="maketitle"></div>
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a> (a) Suppose <script type="math/tex">s(t)</script> is the position (in feet) of an object moving along a line at time <script type="math/tex">t\geq 0</script>
+seconds.
+<!--l. 17--><p class="noindent">What is the average velocity between times <script type="math/tex">t=a</script> and <script type="math/tex">t=b</script>?  </p><div class="multiple-choice" id="problem2"><span class="choice  " id="choice1"><script type="math/tex">s(b)-s(a)</script> <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice correct " id="choice2"><script type="math/tex">\frac {s(b)-s(a)}{b-a}</script> <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice  " id="choice3"><script type="math/tex">\frac {b-a}{s(b)-s(a)}</script> <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice  " id="choice4"><script type="math/tex">b-a</script> <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> </div>
+<!--l. 27--><p class="noindent">(b) The table gives <script type="math/tex">s(t)</script> over a three second interval.
+</p><!--l. 35--><p class="noindent"><script type="math/tex; mode=display"> \begin {array}{|c|c|c|c|c|c|c|c|} \hline t& 0& 0.5& 1& 1.5& 2& 2.5& 3\\ \hline s(t)& 0 & 22 & 32 & 48 & 54 & 64 & 74 \\ \hline \end {array} </script>
+</p><!--l. 37--><p class="noindent">The average velocity over the interval <script type="math/tex">[1,3]</script> is <script type="math/tex">v_{av}=\answer {21}</script> <script type="math/tex">\frac {\text {ft}}{\text {second}}</script>
+</p><!--l. 39--><p class="noindent">(c) Select all reasonable approximations for the instantaneous velocity at time <script type="math/tex">t=1</script>
+second: </p><div class="select-all" id="problem3"><a id="x1-65r2"></a> <span class="choice correct " id="choice5">32 <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice  " id="choice6">10 <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice correct " id="choice7">26 <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice  " id="choice8">-5 <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span> <span class="choice  " id="choice9">48 <script type="math/tex">\frac {\text {ft}}{\text {second}}</script></span>
+</div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem4"><a id="x1-66r3"></a> (a) Fill in the blanks: <script type="math/tex">f'(x)=\lim _{h\to \answer {0}}\frac {f(\answer {x+h})-f(\answer {x})}{\answer {h}}</script>
+<!--l. 53--><p class="noindent">(b) Let <script type="math/tex">f(x)=\frac {1}{x-4}</script>. Using the equation in part (a), compute:
+</p><!--l. 55--><p class="noindent"><script type="math/tex">f'(x)=\lim _{h\to \answer {0}}\frac {\frac {1}{\answer {(x+h)-4}}-\frac {1}{\answer {x-4}}}{h}=\answer {-(x-4)^{-2}}</script>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem5"><a id="x1-67r4"></a> The graph of a function <script type="math/tex">f</script> is given below
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+<!--l. 80--><p class="noindent">(1) (a) Select the figure which has a secant line drawn through the points <script type="math/tex">(0,f(0))</script> and
+<script type="math/tex">(4,f(4))</script>.
+</p>
+<div class="multiple-choice" id="problem6"><span class="choice  " id="choice10"> <div class="image-environment" role="img" aria-labelledby="image-alt-2">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span>
+<span class="choice correct " id="choice11"> <div class="image-environment" role="img" aria-labelledby="image-alt-3">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+</span>
+<span class="choice  " id="choice12"> <div class="image-environment" role="img" aria-labelledby="image-alt-4">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> </div>
+<!--l. 145--><p class="noindent">(b) Select the figure which has the line tangent to the curve at <script type="math/tex">x=1</script>
+</p>
+<div class="multiple-choice" id="problem7"><span class="choice correct " id="choice13"> <div class="image-environment" role="img" aria-labelledby="image-alt-5">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+                                                                  
+
+                                                                  
+</div>
+</span>
+<span class="choice  " id="choice14"> <div class="image-environment" role="img" aria-labelledby="image-alt-6">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span>
+<span class="choice  " id="choice15"> <div class="image-environment" role="img" aria-labelledby="image-alt-7">      <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> </div>
+                                                                  
+
+                                                                  
+<!--l. 210--><p class="noindent">(2) Choose the correct statement:
+</p><!--l. 212--><p class="noindent">(i) </p><div class="multiple-choice" id="problem8"><span class="choice  " id="choice16"><script type="math/tex">f(1)=f(3)</script></span> <span class="choice  " id="choice17"><script type="math/tex">f(1)>f(3)</script></span> <span class="choice correct " id="choice18"><script type="math/tex">f(1)<f(3)</script></span> </div>
+<!--l. 218--><p class="noindent">(ii) </p><div class="multiple-choice" id="problem9"><span class="choice  " id="choice19"><script type="math/tex">f'(1)=f'(3)</script></span> <span class="choice correct " id="choice20"><script type="math/tex">f'(1)>f'(3)</script></span> <span class="choice  " id="choice21"><script type="math/tex">f'(1)<f'(3)</script></span> </div>
+<!--l. 224--><p class="noindent">(iii) Select the best approximation of <script type="math/tex">f'(3)</script> </p><div class="multiple-choice" id="problem10"><span class="choice  " id="choice22"><script type="math/tex">f'(3)\approx 2</script></span> <span class="choice  " id="choice23"><script type="math/tex">f'(3)\approx -2</script></span> <span class="choice  " id="choice24"><script type="math/tex">f'(3)\approx 1</script></span> <span class="choice  " id="choice25"><script type="math/tex">f'(3)\approx -1</script></span> <span class="choice correct " id="choice26"><script type="math/tex">f'(3)\approx \frac {1}{2}</script></span> <span class="choice  " id="choice27"><script type="math/tex">f'(3)\approx -\frac {1}{2}</script></span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem11"><a id="x1-68r5"></a> Let <script type="math/tex">f</script> be a function such that <script type="math/tex">f(4)=3</script> and <script type="math/tex">f'(4)=-6</script>.
+<!--l. 239--><p class="noindent">(a) Find the limit or say it does not exist (DNE).
+</p><!--l. 241--><p class="noindent"><script type="math/tex">\lim _{x\to 4} \frac {f(x)-f(4)}{x-4}=\answer {-6}</script>
+</p><!--l. 243--><p class="noindent">(b) An equation of the tangent line to the curve <script type="math/tex">y=f(x)</script> at the point where <script type="math/tex">x=4</script> is given by
+<script type="math/tex">y=\answer {-6x+27}</script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem12"><a id="x1-69r6"></a> (i) Given
+                                 <script type="math/tex; mode=display">e^{xy}=e+x-y,</script>
+ use implicit differentiation to find <script type="math/tex">\frac {dy}{dx}=\answer {\frac {1-ye^{xy}}{1+xe^{xy}}}</script>
+<!--l. 250--><p class="noindent">(ii) Given y, select <script type="math/tex">\frac {dy}{dx}</script>:
+</p><!--l. 252--><p class="noindent">(a) <script type="math/tex">y=5\sin (x)\arctan \left (\frac {x}{x+1}\right )</script> </p><div class="multiple-choice" id="problem13"><span class="choice  " id="choice28"><script type="math/tex">5\cos (x)\frac {(x+1)^{-1}-x(x+1)^{-2}}{1+\frac {x^2}{(x+1)^2}}</script></span> <span class="choice correct " id="choice29"><script type="math/tex">5\sin (x)\frac {(x+1)^{-1}-x(x+1)^{-2}}{1+\frac {x^2}{(x+1)^2}}+5\cos (x)\arctan (\frac {x}{x+1})</script></span> <span class="choice  " id="choice30"><script type="math/tex">5\sin (x)\frac {1}{1+\frac {x^2}{(x+1)^2}}+5\cos (x)\arctan (\frac {x}{x+1})</script></span> </div>
+(b) <script type="math/tex">y=\frac {1}{\sqrt {\tan (x^2)+5}}</script> <div class="multiple-choice" id="problem14"><span class="choice correct " id="choice31"><script type="math/tex">\frac {-x\sec ^2(x^2)}{(\tan (x^2)+5)^{1.5}}</script></span> <span class="choice  " id="choice32"><script type="math/tex">\frac {-1}{(\tan (x^2)+5)^{1.5}}</script></span> <span class="choice  " id="choice33"><script type="math/tex">\frac {-x\sec ^2(2x)}{(\tan (x^2)+5)^{1.5}}</script></span> </div>
+<!--l. 265--><p class="noindent">(c) <script type="math/tex">y=xe^{ax}+\arcsin (ax)</script> </p><div class="multiple-choice" id="problem15"><span class="choice  " id="choice34"><script type="math/tex">e^{ax}+axe^{ax}+a\arccos (ax)</script></span> <span class="choice  " id="choice35"><script type="math/tex">ae^{ax}+\frac {a}{\sqrt {1-a^2x^2}}</script></span> <span class="choice correct " id="choice36"><script type="math/tex">e^{ax}+axe^{ax}+\frac {a}{\sqrt {1-a^2x^2}}</script></span> </div>
+<!--l. 272--><p class="noindent">(d) <script type="math/tex">y(x)=\left (\sin (x)\right )^{ax}</script> </p><div class="multiple-choice" id="problem16"><span class="choice correct " id="choice37"><script type="math/tex">\sin (x)^{ax}(ax\cot (x)+a\ln (\sin (x)))</script></span> <span class="choice  " id="choice38"><script type="math/tex">ax\sin (x)^{ax-1}\cos {x}</script></span> <span class="choice  " id="choice39"><script type="math/tex">a\sin (x)^{ax}\ln (\sin (x))</script></span> </div>
+<!--l. 279--><p class="noindent">(ii) Find the following values or state the value is undefined (DNE):
+</p><!--l. 281--><p class="noindent">(a) <script type="math/tex">\sin \left (\frac {17\pi }{6}\right )=\frac {1}{\answer {2}}</script>
+</p><!--l. 283--><p class="noindent">(b) <script type="math/tex">\arcsin \left (\frac {17\pi }{6}\right )=\answer [format=string]{DNE}</script>
+                                                                  
+
+                                                                  
+</p><!--l. 285--><p class="noindent">(c) <script type="math/tex">\arcsin \left (\frac {-\sqrt {3}}{2}\right )=\frac {\pi }{\answer {-3}}</script>
+</p><!--l. 287--><p class="noindent">(d) <script type="math/tex">e^{-2\ln (3)}=\frac {1}{\answer {9}}</script>
+</p><!--l. 289--><p class="noindent">(e) <script type="math/tex">\ln \left (-e^2\right )=\answer [format=string]{DNE}</script>
+</p><!--l. 291--><p class="noindent">(f) <script type="math/tex">\ln \left (e^{2t}\right )=2\answer {t}</script>
+</p><!--l. 293--><p class="noindent">(g) <script type="math/tex">10^{3\log _{10}(4)}=4^{\answer {3}}</script>
+</p><!--l. 295--><p class="noindent">(h) <script type="math/tex">\ln (1)=\answer {0}</script>
+</p><!--l. 297--><p class="noindent">(i) <script type="math/tex">\arctan \left (-\sqrt {3}\right )=\frac {\pi }{\answer {-3}}</script>
+</p><!--l. 299--><p class="noindent">(j) <script type="math/tex">\left [\ddx \left (\cot (x)\right )\right ]_{\frac {\pi }{3}}=\answer {-\frac {4}{3}}</script>
+</p><!--l. 301--><p class="noindent">(k) <script type="math/tex">\left [\ddx \left (\arctan (x)\right )\right ]_{-\sqrt {3}}=\answer {\frac {1}{4}}</script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem17"><a id="x1-70r7"></a> A table of values for <script type="math/tex">f(x)</script> and <script type="math/tex">f'(x)</script>, along with a graph of a function <script type="math/tex">g(x)</script> is shown below. <script type="math/tex; mode=display"> \begin {array}{c|c|c} x & f(x)&f'(x)\\ \hline 1 & 2 & 4\\ \hline 2 & 3 & 5\\ \hline 3 & 4 & 1\\ \hline \end {array} </script>
+<div class="image-environment" role="img" aria-labelledby="image-alt-8">
+<!--l. 316--><p class="noindent">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</p></div>
+<!--l. 337--><p class="noindent">(i) <script type="math/tex">\ddx \left [g(x)\right ]_{x=1}</script>=</p><div class="multiple-choice" id="problem18"><span class="choice  " id="choice40"><script type="math/tex">\frac {13}{3}</script></span> <span class="choice  " id="choice41"><script type="math/tex">\frac {4}{3}</script></span> <span class="choice  " id="choice42">12</span> <span class="choice  " id="choice43">4</span> <span class="choice correct " id="choice44">DNE</span> <span class="choice  " id="choice45">None of the above</span> </div>
+<!--l. 346--><p class="noindent">(ii) <script type="math/tex">\ddx \left [f(g(x))\right ]_{x=3}</script>=</p><div class="multiple-choice" id="problem19"><span class="choice  " id="choice46">-1</span> <span class="choice correct " id="choice47">-4</span> <span class="choice  " id="choice48"><script type="math/tex">\frac {1}{4}</script></span> <span class="choice  " id="choice49">4</span> <span class="choice  " id="choice50">DNE</span> <span class="choice  " id="choice51">None of the above</span> </div>
+<!--l. 362--><p class="noindent"><script type="math/tex; mode=display"> \begin {array}{c|c|c} x & f(x)&f'(x)\\ \hline 1 & 2 & 4\\ \hline 2 & 3 & 5\\ \hline 3 & 4 & 1\\ \hline \end {array} </script> </p><div class="image-environment" role="img" aria-labelledby="image-alt-9">
+                                                                  
+
+                                                                  
+<!--l. 365--><p class="noindent">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</p></div>
+<!--l. 386--><p class="noindent">(iii) <script type="math/tex">\ddx \left [g(f(x))\right ]_{x=2}</script>=</p><div class="multiple-choice" id="problem20"><span class="choice  " id="choice52">-1</span> <span class="choice correct " id="choice53">-5</span> <span class="choice  " id="choice54"><script type="math/tex">\frac {1}{5}</script></span> <span class="choice  " id="choice55">0</span> <span class="choice  " id="choice56">DNE</span> <span class="choice  " id="choice57">None of the above</span> </div>
+<!--l. 395--><p class="noindent">(iv) <script type="math/tex">f^{-1}(3)=</script> </p><div class="multiple-choice" id="problem21"><span class="choice  " id="choice58">4</span> <span class="choice  " id="choice59">1</span> <span class="choice  " id="choice60"><script type="math/tex">\frac {1}{3}</script></span> <span class="choice correct " id="choice61">2</span> <span class="choice  " id="choice62">DNE</span> <span class="choice  " id="choice63">None of the above</span> </div>
+<!--l. 411--><p class="noindent"><script type="math/tex; mode=display"> \begin {array}{c|c|c} x & f(x)&f'(x)\\ \hline 1 & 2 & 4\\ \hline 2 & 3 & 5\\ \hline 3 & 4 & 1\\ \hline \end {array} </script> </p><div class="image-environment" role="img" aria-labelledby="image-alt-10">
+<!--l. 414--><p class="noindent">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</p></div>
+                                                                  
+
+                                                                  
+<!--l. 435--><p class="noindent">(v) <script type="math/tex">\ddx \left [f^{-1}(x)\right ]_{x=3}</script>=</p><div class="multiple-choice" id="problem22"><span class="choice  " id="choice64"><script type="math/tex">\frac {1}{4}</script></span> <span class="choice correct " id="choice65"><script type="math/tex">\frac {1}{5}</script></span> <span class="choice  " id="choice66">2</span> <span class="choice  " id="choice67">4</span> <span class="choice  " id="choice68">DNE</span> <span class="choice  " id="choice69">None of the above</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem23"><a id="x1-71r8"></a> The function <script type="math/tex">f</script> is defined by <script type="math/tex">f(x)=\frac {x}{\sqrt {x^2-9}}</script>.<br class="newline"/>
+<!--l. 449--><p class="noindent">Answer the following question about the function <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 451--><p class="noindent">(a) The domain of <script type="math/tex">f</script> is <script type="math/tex">(\answer {-\infty },\answer {-3})\cup (\answer {3},\answer {\infty })</script>
+</p><!--l. 453--><p class="noindent">(b) The function <script type="math/tex">f</script> is </p><div class="multiple-choice" id="problem24"><span class="choice correct " id="choice70">odd</span> <span class="choice  " id="choice71">even</span> <span class="choice  " id="choice72">neither</span> </div>
+<!--l. 459--><p class="noindent">(c) <script type="math/tex">f'(x)=\answer {\frac {-9}{(x^2-9)^{1.5}}}</script>
+</p><!--l. 461--><p class="noindent">(d) <script type="math/tex">f''(x)=\answer {\frac {27x}{(x^2-9)^{2.5}}}</script>
+</p><!--l. 463--><p class="noindent">(e) Select the correct statement for each interval:
+</p>
+<div class="tabular"> <table id="TBL-1" class="tabular" cellspacing="0" cellpadding="0" rules="groups"><colgroup id="TBL-1-1g"><col id="TBL-1-1"/></colgroup><colgroup id="TBL-1-2g"><col id="TBL-1-2"/></colgroup><colgroup id="TBL-1-3g"><col id="TBL-1-3"/></colgroup><tbody><tr class="hline"><td><hr/></td><td><hr/></td><td><hr/></td></tr><tr style="vertical-align:baseline;" id="TBL-1-1-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-1" class="td11"> On this interval  </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-2" class="td11">               f is                        </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-1-3" class="td11">                 f is                           </td></tr><tr style="vertical-align:baseline;" id="TBL-1-2-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-1" class="td11">  <script type="math/tex">(-\infty ,-3)</script> </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-2" class="td11"> <span class="word-choice" id="word-choice25"><a id="x1-72r9"></a><span class="choice  " id="choice73">inceasing</span><span class="choice correct " id="choice74">decreasing</span><span class="choice  " id="choice75">not defined</span></span> </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-2-3" class="td11"> <span class="word-choice" id="word-choice26"><a id="x1-73r10"></a><span class="choice  " id="choice76">concave up</span><span class="choice  " id="choice77">not defined</span><span class="choice correct " id="choice78">cocave down</span></span></td>
+</tr><tr class="hline"><td><hr/></td><td><hr/></td><td><hr/></td></tr><tr style="vertical-align:baseline;" id="TBL-1-3-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-3-1" class="td11">        <script type="math/tex">(-3,3)</script>        </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-3-2" class="td11"> <span class="word-choice" id="word-choice27"><a id="x1-74r11"></a><span class="choice  " id="choice79">inceasing</span><span class="choice  " id="choice80">decreasing</span><span class="choice correct " id="choice81">not defined</span></span>  </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-3-3" class="td11"> <span class="word-choice" id="word-choice28"><a id="x1-75r12"></a><span class="choice  " id="choice82">concave up</span><span class="choice correct " id="choice83">not defined</span><span class="choice  " id="choice84">cocave down</span></span>  </td>
+</tr><tr class="hline"><td><hr/></td><td><hr/></td><td><hr/></td></tr><tr style="vertical-align:baseline;" id="TBL-1-4-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-4-1" class="td11">        <script type="math/tex">(3,\infty )</script>        </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-4-2" class="td11"> <span class="word-choice" id="word-choice29"><a id="x1-76r13"></a><span class="choice  " id="choice85">inceasing</span><span class="choice correct " id="choice86">decreasing</span><span class="choice  " id="choice87">not defined</span></span>  </td><td style="white-space:nowrap; text-align:center;" id="TBL-1-4-3" class="td11"> <span class="word-choice" id="word-choice30"><a id="x1-77r14"></a><span class="choice correct " id="choice88">concave up</span><span class="choice  " id="choice89">not defined</span><span class="choice  " id="choice90">cocave down</span></span>  </td>
+</tr><tr class="hline"><td><hr/></td><td><hr/></td><td><hr/></td></tr><tr style="vertical-align:baseline;" id="TBL-1-5-"><td style="white-space:nowrap; text-align:center;" id="TBL-1-5-1" class="td11">                </td>
+</tr></tbody></table></div>
+<!--l. 472--><p class="noindent">(f) Select the correct graph for <script type="math/tex">f</script>: </p><div class="multiple-choice" id="problem31"><span class="choice  " id="choice91"> <div class="image-environment" role="img" aria-labelledby="image-alt-11">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+                                                                  
+
+                                                                  
+</span> <span class="choice  " id="choice92"> <div class="image-environment" role="img" aria-labelledby="image-alt-12">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> <span class="choice correct " id="choice93"> <div class="image-environment" role="img" aria-labelledby="image-alt-13">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> <span class="choice  " id="choice94"><div class="image-environment" role="img" aria-labelledby="image-alt-14">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> </div>
+<!--l. 551--><p class="noindent">(g) Is the function <script type="math/tex">f</script> one-to-one: </p><div class="multiple-choice" id="problem32"><span class="choice correct " id="choice95">Yes</span> <span class="choice  " id="choice96">No</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem33"><a id="x1-78r15"></a> The graph of <script type="math/tex">f'</script> (the derivative of <script type="math/tex">f</script>) on the interval <script type="math/tex">(-6,7)</script> is shown in the figure.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-15">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 581--><p class="noindent">Use the given graph of <script type="math/tex">f'</script> to answer the following questions about f:
+</p><!--l. 583--><p class="noindent">(a) On what interval(s) is <script type="math/tex">f</script> decreasing?<br class="newline"/>
+</p><!--l. 585--><p class="noindent">ANSWER:<script type="math/tex">(\answer {-6},\answer {-2})</script> and <script type="math/tex">(\answer {6},\answer {7})</script><br class="newline"/>
+</p><!--l. 587--><p class="noindent">(b) List the x- coordinates of all critical points of <script type="math/tex">f</script> (in ascending order). <br class="newline"/>
+</p><!--l. 589--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {-2},\answer {4},\answer {6}</script><br class="newline"/>
+</p><!--l. 591--><p class="noindent">(c) List the x-coordinates of all critical points of <script type="math/tex">f</script> that correspond to local
+maxima?<br class="newline"/>
+</p><!--l. 593--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {6}</script><br class="newline"/>
+</p><!--l. 595--><p class="noindent">(d) List the x-coordinates of all critical points of <script type="math/tex">f</script> that correspond to neither local
+maxima nor local minima? <br class="newline"/>
+</p><!--l. 597--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {4}</script><br class="newline"/>
+</p><!--l. 599--><p class="noindent">(e) On what intervals is <script type="math/tex">f</script> concave up?<br class="newline"/>
+</p><!--l. 601--><p class="noindent">ANSWER:<script type="math/tex">(\answer {-6},0)</script> and <script type="math/tex">(\answer {4},\answer {5})</script><br class="newline"/>
+</p><!--l. 603--><p class="noindent">(f) List the x-coordinates of all inflection points of <script type="math/tex">f</script> (in ascending order).
+<br class="newline"/>
+</p><!--l. 605--><p class="noindent">ANSWER <script type="math/tex">x=\answer {0},\answer {4},\answer {5}</script><br class="newline"/>
+                                                                  
+
+                                                                  
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem34"><a id="x1-79r16"></a> Given that <script type="math/tex">f(1)=2</script>, <script type="math/tex">f'(1)=3</script>, and <script type="math/tex">f''(1)=-1</script>, find the following values or state ‘cannot be determined’
+(CBD):
+<!--l. 612--><p class="noindent">(a) <script type="math/tex">\left (\ddx \frac {(x+5)f'(x)}{f(x)}\right )_{x=1}=\answer {-15}</script>
+</p><!--l. 614--><p class="noindent">(b) <script type="math/tex">\lim _{x\to 1}f(x)=\answer {2}</script>
+</p><!--l. 616--><p class="noindent">(c) <script type="math/tex">\left (\ddx f^{-1}(x)\right )_{x=2}=\answer {\frac {1}{3}}</script>
+</p><!--l. 618--><p class="noindent">(d) <script type="math/tex">\lim _{h\to 0}\frac {f(1+h)-f(1)}{h}=\answer {3}</script>
+</p><!--l. 620--><p class="noindent">(e) <script type="math/tex">\lim _{h\to 0} \frac {f'(1+h)-f'(1)}{h}=\answer {-1}</script>
+</p><!--l. 622--><p class="noindent">(f) <script type="math/tex">\lim _{x \to 1} \frac {f'(x)-f'(1)}{x-1}=\answer {-1}</script>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem35"><a id="x1-80r17"></a> Simplify!<br class="newline"/>Given that <script type="math/tex">f(x)=\ln (\sec (x)+\tan (x))</script>, <script type="math/tex">f'(x) = \answer {\sec (x)}</script>
+</div>
+<div role="article" class="problem-environment exercise" id="problem36"><a id="x1-81r18"></a> The position, <script type="math/tex">s(t)</script>, of an object moving along a horizontal line is given by <script type="math/tex">s(t)=3\sin \left (\frac {\pi }{4}t\right )</script>, <script type="math/tex">t\geq 0</script>, where <script type="math/tex">s</script> is
+measured in feet and <script type="math/tex">t</script> in seconds.<br class="newline"/>
+<!--l. 637--><p class="noindent">Complete the statements below.<br class="newline"/>
+</p><!--l. 639--><p class="noindent">(a) The position of the particle at time <script type="math/tex">t=2</script> is <script type="math/tex">\answer {3}</script> ft.
+</p><!--l. 641--><p class="noindent">(b) The <span class="underline">average velocity</span>, <script type="math/tex">v_{av}</script>, of the object over the interval <script type="math/tex">[0,t]</script> is
+</p><!--l. 643--><p class="noindent"><script type="math/tex">\answer {\frac {3\sin (\frac {\pi }{4}t)}{t}}</script> <script type="math/tex">\frac {\text {ft}}{\text {s}}</script>.<br class="newline"/>
+</p><!--l. 645--><p class="noindent">(c) Using the expression found in part (b), evaluate <script type="math/tex">\lim _{t\to 0^+} v_{av} = \answer {\frac {3\pi }{4}}</script> <script type="math/tex">\frac {\text {ft}}{\text {s}}</script>
+</p><!--l. 647--><p class="noindent">(e) What does the limit in part (c) represent? </p><div class="multiple-choice" id="problem37"><span class="choice  " id="choice97">The position at <script type="math/tex">t=0</script></span> <span class="choice  " id="choice98">The acceleration
+at <script type="math/tex">t=0</script></span> <span class="choice correct " id="choice99">The instantaneous velocity at <script type="math/tex">t=0</script></span> </div>
+<!--l. 654--><p class="noindent">(f) Find the velocity of the particle: <script type="math/tex">v(t)=\answer {\frac {3\pi }{4}\cos (\frac {\pi }{4}t)}</script> <script type="math/tex">\frac {\text {ft}}{\text {s}}</script>
+</p><!--l. 656--><p class="noindent">(g) Find the acceleartion of the particle: <script type="math/tex">a(t)=\answer {-\frac {3\pi ^2}{16}\sin (\frac {\pi }{4}t)}</script> <script type="math/tex">\frac {\text {ft}}{\text {s}^2}</script>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem38"><a id="x1-82r19"></a> The figure below shows the graphs of <script type="math/tex">f</script>, <script type="math/tex">f'</script>, and another function <script type="math/tex">g</script>.
+                                                                  
+
+                                                                  
+<div class="image-environment" role="img" aria-labelledby="image-alt-16">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script>ABC<script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 680--><p class="noindent">Which curve is which: <script type="math/tex">f=\answer [format=string]{c}</script>; <script type="math/tex">f'=\answer [format=string]{a}</script>; <script type="math/tex">g=\answer [format=string]{b}</script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem39"><a id="x1-83r20"></a> The (entire) graph of a function <script type="math/tex">f</script> is shown in the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-17">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 706--><p class="noindent">Give answers for the following, or write ‘DNE’.
+</p><!--l. 712--><p class="noindent">(a) Find the x-coordiantes of all points in the interval <script type="math/tex">(0,5)</script> where <script type="math/tex">f</script> has a local minimum.
+<br class="newline"/>
+</p><!--l. 714--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {1}</script><br class="newline"/>
+</p><!--l. 716--><p class="noindent">(b) Find the x-coordinate of all points in the interval <script type="math/tex">(0,5)</script> where <script type="math/tex">f</script> has a local
+maximum.<br class="newline"/>
+</p><!--l. 718--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {2}</script><br class="newline"/>
+</p><!--l. 720--><p class="noindent">(c) Find all critical points in the interval <script type="math/tex">(0,5)</script> (in ascending order). <br class="newline"/>
+</p><!--l. 722--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {1},\answer {2}</script><br class="newline"/>
+                                                                  
+
+                                                                  
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem40"><a id="x1-84r21"></a> Assume that a function <script type="math/tex">f</script> is continuous on its domain, <script type="math/tex">(-1,6)</script>. The graph of <script type="math/tex">f'</script>, the derivative
+of <script type="math/tex">f</script>, is shown in the figure below.
+<div class="image-environment" role="img" aria-labelledby="image-alt-18">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 752--><p class="noindent">(a) Write the x-coordinates of all critical points of <script type="math/tex">f</script> (or write NONE), in ascending
+order.<br class="newline"/>
+</p><!--l. 754--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {0},\answer {3},\answer {5}</script><br class="newline"/>
+</p><!--l. 756--><p class="noindent">(b) Write the x-coordinates of all local maxima of <script type="math/tex">f</script> (or write NONE).<br class="newline"/>
+</p><!--l. 758--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {5}</script><br class="newline"/>
+</p><!--l. 760--><p class="noindent">(c) Write the x-coordinates of all local minima of <script type="math/tex">f</script> (or write NONE).<br class="newline"/>
+</p><!--l. 762--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {3}</script><br class="newline"/>
+</p><!--l. 764--><p class="noindent">(d)Find the interval(s) on which <script type="math/tex">f</script> is increasing.<br class="newline"/>
+</p><!--l. 766--><p class="noindent">ANSWER: <script type="math/tex">(\answer {3},\answer {5})</script><br class="newline"/>
+</p><!--l. 768--><p class="noindent">(e) Find the interval(s) on which <script type="math/tex">f</script> is concave down. <br class="newline"/>
+</p><!--l. 770--><p class="noindent">ANSWER: <script type="math/tex">(\answer {0},\answer {1})</script><br class="newline"/>
+</p><!--l. 772--><p class="noindent">(f) Write the x-coordinates of all inflection points (or write NONE), in ascending
+order.<br class="newline"/>
+</p><!--l. 774--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {0},\answer {1}</script><br class="newline"/>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem41"><a id="x1-85r22"></a> A curve is given by the equation
+                                 <script type="math/tex; mode=display">\tan (3y+x)=x^2-1</script>
+.
+<!--l. 781--><p class="noindent">(i) (a) Use implicit differentiation to find the derivative.<br class="newline"/>
+</p><!--l. 783--><p class="noindent"><script type="math/tex">\frac {dy}{dx}=\answer {\frac {2x}{3\sec ^2(3y+x)}-\frac {1}{3}}</script>
+</p><!--l. 785--><p class="noindent">(b) Check (algebraically), that the point <script type="math/tex">(1,-\frac {1}{3})</script> lies on the curve.
+</p><!--l. 787--><p class="noindent">(c) Compute <script type="math/tex">\frac {dy}{dx}</script> at the point <script type="math/tex">(1,-\frac {1}{3})</script>.<br class="newline"/>
+</p><!--l. 789--><p class="noindent">ANSWER: <script type="math/tex">\left [\frac {dy}{dx}\right ]_{x=1, y=-\frac {1}{3}}=\answer {\frac {1}{3}}</script>
+</p><!--l. 791--><p class="noindent">(ii) Part of the curve <script type="math/tex">\tan (3y+x)=x^2-1</script> that contains the point <script type="math/tex">(1,-\frac {1}{3})</script> is shown in the figure below:
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-19">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">-\frac {2}{3}</script><script type="math/tex">-\frac {1}{3}</script><script type="math/tex">\frac {1}{3}</script><script type="math/tex">\frac {2}{3}</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 810--><p class="noindent">(a) Find an explicit expression for <script type="math/tex">y</script>, <script type="math/tex">y=y(x)</script>, represented by the graph above.<br class="newline"/>
+</p><!--l. 812--><p class="noindent"><script type="math/tex">y(x)=\answer {\frac {1}{3}(\arctan (x^2-1)-x)}</script>
+</p><!--l. 814--><p class="noindent">(b) Using the explicit expression in part (a), find <script type="math/tex">\frac {dy}{dx}</script>.<br class="newline"/>
+                                                                  
+
+                                                                  
+</p><!--l. 816--><p class="noindent"><script type="math/tex">\frac {dy}{dx}=\answer {\frac {1}{3}(\frac {2x}{(x^2-1)^2+1}-1)}</script>
+</p><!--l. 818--><p class="noindent">(c) Evaluate the derivative.<br class="newline"/><script type="math/tex">\left [\frac {dy}{dx}\right ]_{x=1}=\answer {\frac {1}{3}}</script>
+</p><!--l. 825--><p class="noindent">(d) Write an equation of the tangent line to the graph of <script type="math/tex">y=y(x)</script> at the point where <script type="math/tex">x=1</script>.
+<br class="newline"/>
+</p><!--l. 827--><p class="noindent">ANSWER: <script type="math/tex">y=\answer {\frac {1}{3}(x-1)-\frac {1}{3}}</script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem42"><a id="x1-86r23"></a> A function <script type="math/tex">f'</script> (the derivative of <script type="math/tex">f</script>) is given by <script type="math/tex">f'(x)=(x-5)^3</script>. Answer the following, or write ”DNE”
+(does not exist).
+<!--l. 836--><p class="noindent">(a) List all interval(s) on which <script type="math/tex">f</script> is increasing.<br class="newline"/>
+</p><!--l. 839--><p class="noindent">ANSWER: <script type="math/tex">(\answer {5},\answer {\infty })</script><br class="newline"/>
+</p><!--l. 842--><p class="noindent">(b) List x-coordinates of all points where <script type="math/tex">f</script> has a local maximum. <br class="newline"/>
+</p><!--l. 844--><p class="noindent">ANSWER: <script type="math/tex">x=\answer [format=string]{DNE}</script><br class="newline"/>
+</p><!--l. 846--><p class="noindent">(c) List x-coordinates of all points where <script type="math/tex">f</script> has a local minimum.<br class="newline"/>
+</p><!--l. 848--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {5}</script><br class="newline"/>
+</p><!--l. 850--><p class="noindent">(d) Find <script type="math/tex">f''(x)</script>.<br class="newline"/>
+</p><!--l. 852--><p class="noindent">ANSWER: <script type="math/tex">f''(x)=\answer {3(x-5)^2}</script><br class="newline"/>
+</p><!--l. 854--><p class="noindent">(e) List all interval(s) on which <script type="math/tex">f</script> is concave up.<br class="newline"/>
+</p><!--l. 856--><p class="noindent">ANSWER: <script type="math/tex">(\answer {-\infty },\answer {\infty })</script><br class="newline"/>
+</p><!--l. 858--><p class="noindent">(f) List x-coordinates of all inflection points of <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 860--><p class="noindent">ANSWER: <script type="math/tex">x=\answer [format=string]{DNE}</script><br class="newline"/>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem43"><a id="x1-87r24"></a> The function <script type="math/tex">s(t)=\frac {12}{t+1}</script>, measured in meters, gives the position of an object moving along a
+line at time <script type="math/tex">t\geq 0</script>, measured in seconds.
+                                                                  
+
+                                                                  
+<!--l. 868--><p class="noindent">(a) Is the function <script type="math/tex">s</script> one-to-one? </p><div class="multiple-choice" id="problem44"><span class="choice correct " id="choice100">Yes</span> <span class="choice  " id="choice101">No</span> </div>
+<!--l. 874--><p class="noindent">(b) Find the expression for inverse of <script type="math/tex">s</script>, <script type="math/tex">s^{-1}(t)</script>.<br class="newline"/>
+</p><!--l. 876--><p class="noindent">ANSWER: <script type="math/tex">s^{-1}(t)=\answer {\frac {12}{t}-1}</script><br class="newline"/>
+</p><!--l. 878--><p class="noindent">(c) Find <script type="math/tex">s^{-1}(5)</script>.<br class="newline"/>
+</p><!--l. 880--><p class="noindent">ANSWER: <script type="math/tex">s^{-1}(5) =\answer {\frac {7}{5}}</script><br class="newline"/>
+</p><!--l. 882--><p class="noindent">(d) Interpret your answer to part (c), by selecting the correct answer. </p><div class="multiple-choice" id="problem45"><span class="choice  " id="choice102"><script type="math/tex">s^{-1}(5)</script> gives the
+speed of the object at time 5</span> <span class="choice  " id="choice103"><script type="math/tex">s^{-1}(5)</script> gives the position of the object at time 5</span> <span class="choice correct " id="choice104"><script type="math/tex">s^{-1}(5)</script> gives the
+time when the object was at position 5</span> <span class="choice  " id="choice105"><script type="math/tex">s^{-1}(5)</script> gives the time when the object had speed 5</span>
+</div>
+<!--l. 890--><p class="noindent">(e) Find the average velocity between times <script type="math/tex">t=0</script> and <script type="math/tex">t=2</script>.<br class="newline"/>
+</p><!--l. 892--><p class="noindent">ANSWER: <script type="math/tex">v_{av}=\answer {-4}</script> <script type="math/tex">\frac {\text {m}}{\text {s}}</script><br class="newline"/>
+</p><!--l. 894--><p class="noindent">(f) Find an expression for the instantaneous velocity at time <script type="math/tex">t>0</script>.<br class="newline"/>
+</p><!--l. 896--><p class="noindent">ANSWER: <script type="math/tex">v(t)=\answer {-12(t+1)^{-2}}</script> <script type="math/tex">\frac {\text {m}}{\text {s}}</script><br class="newline"/>
+</p><!--l. 898--><p class="noindent">(g) Find an expression for the instantaneous acceleration at time <script type="math/tex">t>0</script>.<br class="newline"/>
+</p><!--l. 900--><p class="noindent">ANSWER: <script type="math/tex">a(t)=\answer {24(t+1)^{-3}}</script> <script type="math/tex">\frac {\text {m}}{\text {s}^2}</script><br class="newline"/>
+</p><!--l. 902--><p class="noindent">(h) Is the velocity increasing or decreasing for <script type="math/tex">t>0</script>? Select the correct answer.<br class="newline"/></p><div class="multiple-choice" id="problem46"><span class="choice correct " id="choice106">Increasing</span> <span class="choice  " id="choice107">Decreasing</span> </div>
+<!--l. 908--><p class="noindent">(i) Is the speed increasing or decreasing for <script type="math/tex">t>0</script>? Select the correct answer.<br class="newline"/></p><div class="multiple-choice" id="problem47"><span class="choice  " id="choice108">Increasing</span> <span class="choice correct " id="choice109">Decreasing</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem48"><a id="x1-88r25"></a> A ladder <script type="math/tex">10</script> ft long rests against a vertical wall. If the bottom of the ladder
+slides away from the wal at a speed of <script type="math/tex">2</script> ft/s, how fast is the angle between
+the top of the ladder and the wall changing when the angle is <script type="math/tex">\frac {\pi }{3}</script> radians? <script type="math/tex">\answer {\frac {2}{5}}</script>
+<script type="math/tex">\frac {\text {rad}}{\text {s}}</script>
+</div>
+                                                                  
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem49"><a id="x1-89r26"></a> The position function (in feet) for an object at time <script type="math/tex">t</script> (in minutes), <script type="math/tex">0\leq t\leq 10</script>, is given by
+<script type="math/tex">s(t)=-40t^2+160t+480</script>.
+<!--l. 924--><p class="noindent">(a) Find the velocity <script type="math/tex">v(t)</script> at any time <script type="math/tex">t</script>.<br class="newline"/>
+</p><!--l. 926--><p class="noindent">ANSWER: <script type="math/tex">v(t)=\answer {-80t+160}</script> <script type="math/tex">\frac {\text {ft}}{\text {min}}</script>
+</p><!--l. 928--><p class="noindent">(b) Find the acceleration <script type="math/tex">a(t)</script> at any time <script type="math/tex">t</script>.<br class="newline"/>
+</p><!--l. 930--><p class="noindent">ANSWER: <script type="math/tex">a(t)=\answer {-80}</script> <script type="math/tex">\frac {\text {ft}}{\text {min}^2}</script>
+</p><!--l. 932--><p class="noindent">(c) At what time is the object furthest from the origin in the positive direction?<br class="newline"/>
+</p><!--l. 934--><p class="noindent">ANSWER: At the time <script type="math/tex">t=\answer {2}</script> min.<br class="newline"/>
+</p><!--l. 936--><p class="noindent">(d) What are the velocity and acceleration at that time?<br class="newline"/>
+</p><!--l. 938--><p class="noindent">ANSWER: <script type="math/tex">v=\answer {0}</script> <script type="math/tex">\frac {\text {ft}}{\text {min}}</script>, <script type="math/tex">a=\answer {-80} \frac {\text {ft}}{\text {min}^2}</script><br class="newline"/>
+</p><!--l. 940--><p class="noindent">(e) At what (positive) time is the object at the origin?<br class="newline"/>
+</p><!--l. 942--><p class="noindent">ANSWER: At the time <script type="math/tex">t=\answer {6}</script> min.<br class="newline"/>
+</p><!--l. 944--><p class="noindent">(f) What are the velocity and acceleration at that time?<br class="newline"/>
+</p><!--l. 946--><p class="noindent">ANSWER: <script type="math/tex">v=\answer {-320}</script> <script type="math/tex">\frac {\text {ft}}{\text {min}}</script>, <script type="math/tex">a=\answer {-80}</script> <script type="math/tex">\frac {\text {ft}}{\text {min}^2}</script>
+</p><!--l. 948--><p class="noindent">(g) Find the time interval(s) when the velocity is decreasing.<br class="newline"/>
+</p><!--l. 950--><p class="noindent">ANSWER: <script type="math/tex">(\answer {0},\answer {10})</script><br class="newline"/>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem50"><a id="x1-90r27"></a> The (entire) graph of a function <script type="math/tex">f</script> is given in the figure below:
+<div class="image-environment" role="img" aria-labelledby="image-alt-20">
+                                                                  
+
+                                                                  
+<!--l. 959--><p class="noindent">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</p></div>
+<!--l. 983--><p class="noindent">(a) Find the value.<br class="newline"/><script type="math/tex">\ddx \left [f^{-1}(x)\right ]_{x=-3}=\answer {-2}</script><br class="newline"/>
+</p><!--l. 986--><p class="noindent">(b) List the x-coordinates of all critical points of <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 988--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {3}</script><br class="newline"/>
+</p><!--l. 990--><p class="noindent">(c) List the x-coordinates of all local minima of <script type="math/tex">f</script>, or say ‘none’.<br class="newline"/>
+</p><!--l. 992--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {3}</script><br class="newline"/>
+</p><!--l. 994--><p class="noindent">(d) List the x-coordinates of all local maxima in of <script type="math/tex">f</script>, or say ‘none’.<br class="newline"/>
+</p><!--l. 996--><p class="noindent"><script type="math/tex">x=\answer [format=string]{none}</script><br class="newline"/>
+</p><!--l. 1002--><p class="noindent">(g) Select the correct graph of <script type="math/tex">f'</script>. </p><div class="multiple-choice" id="problem51"><span class="choice  " id="choice110"> <div class="image-environment" role="img" aria-labelledby="image-alt-21">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span>
+<span class="choice correct " id="choice111"> <div class="image-environment" role="img" aria-labelledby="image-alt-22">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span>
+                                                                  
+
+                                                                  
+<span class="choice  " id="choice112"> <div class="image-environment" role="img" aria-labelledby="image-alt-23">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span>
+<span class="choice  " id="choice113"> <div class="image-environment" role="img" aria-labelledby="image-alt-24">  <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+</span> </div>
+</div>
+<div role="article" class="problem-environment exercise" id="problem52"><a id="x1-91r28"></a> (i) Let <script type="math/tex">f(x)=x^4-8x^2+10</script>.
+<!--l. 1126--><p class="noindent">List the x-coordinates of all critical points of <script type="math/tex">f</script> in ascending order.<br class="newline"/>
+</p><!--l. 1128--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {-2},\answer {0},\answer {2}</script><br class="newline"/>
+</p><!--l. 1134--><p class="noindent">(ii) Let <script type="math/tex">f(x)=x\ln (x)</script>
+</p><!--l. 1136--><p class="noindent">(a) Find the domain of the function <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 1138--><p class="noindent">ANSWER: <script type="math/tex">(\answer {0},\answer {\infty })</script>
+</p><!--l. 1140--><p class="noindent">(b) List the x-coordinates of all critical points of <script type="math/tex">f</script> in ascending order.<br class="newline"/>
+</p><!--l. 1142--><p class="noindent">ANSWER: <script type="math/tex">x=\answer {\frac {1}{e}}</script>
+</p><!--l. 1156--><p class="noindent">(iii) Let <script type="math/tex">f(x)=x\sqrt {6-x^2}</script>
+</p><!--l. 1158--><p class="noindent">(a) Find the domain of the function <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 1160--><p class="noindent">ANSWER: <script type="math/tex">[\answer {-\sqrt {6}},\answer {\sqrt {6}}]</script><br class="newline"/>
+</p><!--l. 1162--><p class="noindent">(b) State the interval(s) of continuity of <script type="math/tex">f</script>.<br class="newline"/>
+</p><!--l. 1164--><p class="noindent">ANSWER: <script type="math/tex">[\answer {-\sqrt {6}},\answer {\sqrt {6}}]</script><br class="newline"/>
+</p><!--l. 1166--><p class="noindent">(c) List the x-coordinates of all critical points of <script type="math/tex">f</script> in ascending order.<br class="newline"/>
+                                                                  
+
+                                                                  
+</p><!--l. 1168--><p class="noindent">ANSWER: <script type="math/tex">\answer {-\sqrt {3}},\answer {\sqrt {3}}</script><br class="newline"/>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem53"><a id="x1-92r29"></a> A water tank is to be drained for cleaning. There are <script type="math/tex">V</script> liters of water left in the tank <script type="math/tex">t</script>
+minutes after the draining began, where <script type="math/tex">V=42(60-t)^2</script>
+<!--l. 1179--><p class="noindent">(a) Find the average rate at which water drains during the first <script type="math/tex">10</script> minutes.<br class="newline"/>
+</p><!--l. 1181--><p class="noindent">ANSWER: <script type="math/tex">\answer {-4620}</script> <script type="math/tex">\frac {\text {liters}}{\text {min}}</script><br class="newline"/>
+</p><!--l. 1183--><p class="noindent">(b) Find the rate at which the volume of water is changing <script type="math/tex">10</script> minutes after the
+draining began.<br class="newline"/>
+</p><!--l. 1185--><p class="noindent">ANSWER: <script type="math/tex">\answer {-4200}</script> <script type="math/tex">\frac {\text {liters}}{\text {min}}</script>
+</p><!--l. 1187--><p class="noindent">(c) Compute the derivative.<br class="newline"/>
+</p><!--l. 1189--><p class="noindent"><script type="math/tex">\frac {d}{dt}\left (\frac {\frac {dV}{dt}(t)}{V(t)}\right )=\answer {-2(60-t)^{-2}}</script><br class="newline"/>
+</p><!--l. 1191--><p class="noindent">(d) What are the units of the answer to part (c)?
+</p><!--l. 1193--><p class="noindent">(e) Find the rate of the rate at which the volume of water is changing 10 minutes
+after draining begins.
+</p><!--l. 1195--><p class="noindent">ANSWER: <script type="math/tex">\answer {84}</script> <script type="math/tex">\frac {\text {liters}}{\text {min}^2}</script><br class="newline"/>
+</p><!--l. 1197--><p class="noindent">(f) Is the rate at which the volume of the water is changing increasing or decreasing
+(during the draining)? </p><div class="multiple-choice" id="problem54"><span class="choice correct " id="choice114">Increasing</span> <span class="choice  " id="choice115">Decreasing</span> </div>
+<!--l. 1203--><p class="noindent">(g) Assume that the tank has the shape of a rectangular box <script type="math/tex">7</script>m long, <script type="math/tex">6</script>m wide, and <script type="math/tex">5</script>m
+high. What is the rate of change of the water depth when the water depth is <script type="math/tex">3</script>m?
+(HINT: 1 liter = .001 <script type="math/tex">m^3</script>) <br class="newline"/>
+</p><!--l. 1205--><p class="noindent">ANSWER: <script type="math/tex">\answer {\frac {-\sqrt {30}}{50}}</script> <script type="math/tex">\frac {\text {m}}{\text {min}}</script>
+</p>
+</div>
+<div role="article" class="problem-environment exercise" id="problem55"><a id="x1-93r30"></a> We are inflating a spherical balloon at a rate of 3 <script type="math/tex">cm^3/sec</script>.
+<!--l. 1213--><p class="noindent">(a) At what rate is the radius increasing when the radius is <script type="math/tex">6</script> cm?<br class="newline"/>
+</p><!--l. 1215--><p class="noindent">ANSWER: <script type="math/tex">\answer {\frac {1}{48\pi }}</script> <script type="math/tex">\frac {\text {cm}}{\text {sec}}</script>
+</p><!--l. 1217--><p class="noindent">(b) At what rate is the surface area increasing at that moment?<br class="newline"/>
+</p><!--l. 1219--><p class="noindent">ANSWER: <script type="math/tex">\answer {1}</script> <script type="math/tex">\frac {\text {cm}^2}{\text {sec}}</script>
+</p></div>
+<div role="article" class="problem-environment exercise" id="problem56"><a id="x1-94r31"></a> Two cars leave an intersection. One heads west at <script type="math/tex">30</script> mi/hr. The other leaves 30
+minutes later, heading north at <script type="math/tex">40</script> mi/hr. How fast is the distance between them
+changing <script type="math/tex">1</script> hr after the first car left the intersection?<br class="newline"/>
+<!--l. 1226--><p class="noindent">ANSWER: <script type="math/tex">\answer {\frac {170}{\sqrt {13}}}</script> <script type="math/tex">\frac {\text {mi}}{\text {hr}}</script>
+</p>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

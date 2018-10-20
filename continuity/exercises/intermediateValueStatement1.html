@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="intermediateValueStatement1.tex"/> 
+<meta name="date" content="2018-10-16 21:09:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="State the Intermediate Value Theorem including hypotheses."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="0747c1752e516de0d734cedf5b5a8587a6cad0dd continuity/exercises/intermediateValueStatement1.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Complete the statement of the Intermediate Value Theorem:
+<!--l. 15--><p class="noindent">Suppose <script type="math/tex">f</script> is continuous on the interval <script type="math/tex">\left [a,b\right ]</script> and <script type="math/tex">L</script> is a number between <script type="math/tex">f(a)</script> and <script type="math/tex">f(b)</script>. Then there is
+at least one number <script type="math/tex">c</script> in <script type="math/tex">\left (a,b\right )</script> such that </p><div class="multiple-choice" id="problem2"><span class="choice  " id="choice1"><script type="math/tex">c=L</script></span> <span class="choice  " id="choice2"><script type="math/tex">f(c)=0</script></span> <span class="choice correct " id="choice3"><script type="math/tex">f(c)=L</script></span> <span class="choice  " id="choice4"><script type="math/tex">f(L)=c</script></span> <span class="choice  " id="choice5"><script type="math/tex">c=0</script></span> <span class="choice  " id="choice6"><script type="math/tex">f(a)<c<f(b)</script></span> <span class="choice  " id="choice7">None of the above</span>
+</div>
+.
+<div role="article" class="problem-environment exercise" id="problem3"><a id="x1-65r2"></a>
+<!--l. 28--><p class="noindent">The figure below shows the graph of a function <script type="math/tex">f</script>.
+</p>
+<div class="image-environment" role="img" aria-labelledby="image-alt-1">     <script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">\pgfmathresult </script><script type="math/tex">y=f(x)</script><script type="math/tex">x</script><script type="math/tex">y</script>
+</div>
+<!--l. 54--><p class="noindent">When we apply the Intermediate value theorem to <script type="math/tex">f</script> on the interval <script type="math/tex">\left [1,5\right ]</script> with <script type="math/tex">L=2</script>,
+we are guaranteed the existence of at least one point <script type="math/tex">c</script> which in this case is
+<script type="math/tex">c=\answer {3}</script>.
+</p>
+<div role="article" class="problem-environment exercise" id="problem4"><a id="x1-66r3"></a>
+<!--l. 58--><p class="noindent">Select all the following statements that are correct.
+</p>
+<div class="select-all" id="problem5"><a id="x1-67r4"></a> <span class="choice  " id="choice8">If <script type="math/tex">f(x) = x^3-x^2+x</script>, the IVT implies that there is a number <script type="math/tex">c</script> in <script type="math/tex">\left (0,2\right )</script> such that <script type="math/tex">f(c)=10</script>.</span> <span class="choice correct " id="choice9">If <script type="math/tex">f(x) = x^3-x^2+x</script>, the IVT implies
+that there is a number <script type="math/tex">c</script> in <script type="math/tex">\left (0,3\right )</script> such that <script type="math/tex">f(c)=10</script>.</span> <span class="choice correct " id="choice10">If <script type="math/tex">f(x) = x^3-x^2+x</script>, the IVT implies that there is a number <script type="math/tex">c</script>
+in <script type="math/tex">\left (2,3\right )</script> such that <script type="math/tex">f(c)=10</script>.</span>
+</div>
+</div>
+</div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>

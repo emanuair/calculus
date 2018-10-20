@@ -1,0 +1,103 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="3DRegionRect.tex"/> 
+<meta name="date" content="2018-10-16 21:17:00"/> 
+<meta name="author" content="Bart
+                                                                  
+
+                                                                  
+Snapp"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="d422937f037636d9767221ad06afc70758c44f64 exams/calculus3/exam2/3DRegionRect.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+Consider the region: <script type="math/tex; mode=display"> R = \{(x,y,z): 0\le x \le 1, \sqrt {x}\le y\le 1, 0 \le z \le 1-y\} </script> <div class="image-environment" role="img" aria-labelledby="image-alt-1"> <img src="3DRectRegion.png" alt="PIC"/> </div>
+<div role="article" class="problem-environment problem" id="problem1"><a id="x1-64r1"></a> Fill-in the limits of integration to compute the volume: <script type="math/tex; mode=display"> \int _{\answer {0}}^{\answer {1}}\int _{\answer {\sqrt {x}}}^{\answer {1}}\int _{\answer {0}}^{\answer {1-y}}\d z \d y \d x </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem2"><a id="x1-65r2"></a> Fill-in the limits of integration to compute the volume: <script type="math/tex; mode=display"> \int _{\answer {0}}^{\answer {1}}\int _{\answer {0}}^{\answer {1-\sqrt {x}}}\int _{\answer {\sqrt {x}}}^{\answer {1-z}}\d y \d z \d x </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem3"><a id="x1-66r3"></a> Fill-in the limits of integration to compute the volume: <script type="math/tex; mode=display"> \int _{\answer {0}}^{\answer {1}}\int _{\answer {0}}^{\answer {1-z}}\int _{\answer {0}}^{\answer {y^2}}\d x \d y \d z </script>
+</div>
+<div role="article" class="problem-environment problem" id="problem4"><a id="x1-67r4"></a> Which statements are necessarily true?
+<div class="select-all" id="problem5"><a id="x1-68r5"></a> <span class="choice  " id="choice1">If <script type="math/tex">G(x,y) = \int _0^x\int _0^y F(s,t)\d s \d t</script>, then <script type="math/tex">G^{(1,1)}(x,y) = F(x,y)</script>.</span> <span class="choice  " id="choice2">The chain rule states: <script type="math/tex">\dd {t} F(\vec {p}(t)) = \grad F(\vec {p}(t)) \dotp \grad F(\vec {p}'(t))</script>.</span> <span class="choice  " id="choice3">If <script type="math/tex">F</script> is a continuous function then <script type="math/tex">\int _3^8\int _2^7 F(x,y) \d x \d y = \int _2^7\int _3^8 F(x,y) \d x\d y</script>.</span> <span class="choice correct " id="choice4">If <script type="math/tex">(3,2)</script> is a
+maximum of <script type="math/tex">F(x,y)</script> under the constraint <script type="math/tex">G(x,y)=0</script>, then <script type="math/tex; mode=display"> |\grad F(3,2) \dotp \grad G(3,2)| = |\grad F(3,2)|\cdot |\grad G(3,2)|. </script></span> <span class="choice  " id="choice5">For any continuous function <script type="math/tex">F</script>, <script type="math/tex">\int _0^1\int _x^1 F(x,y) \d x\d y = \int _0^1\int _y^1 F(x,y) \d y \d x</script>.</span> <span class="choice  " id="choice6">None of
+these.</span>
+</div>
+</div>
+ 
+ 
+
+                                                                  
+
+
+</body></html>

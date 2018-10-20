@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en"><head> <title></title> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="originator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<!-- charset=utf-8,-css,html,htex4ht,xhtml --> 
+<meta name="src" content="meanValueTheorem3.tex"/> 
+<meta name="date" content="2018-10-16 21:31:00"/> 
+<meta name="author" content="Nela  Lakos  and  Kyle
+                                                                  
+
+                                                                  
+Parsons"/> 
+<meta name="generator" content="TeX4ht (http://www.cse.ohio-state.edu/~gurari/TeX4ht/)"/> 
+<meta name="ximera" content="version 0.0.1"/> 
+<link href="https://ximera.osu.edu/public/stylesheets/standalone.css" rel="stylesheet" media="screen"/> 
+<script type="text/javascript" async="" src="https://ximera.osu.edu/public/javascripts/standalone.min.js"></script> 
+<meta name="learning-outcome" content="Understand the statement of the Mean Value Theorem."/> 
+<meta name="learning-outcome" content="Determine whether Rolle&#39;s Theorem or the Mean Value Theorem can be applied."/> 
+<meta name="dependency" content="de5072594585302302113b46517abf5cbdff3e9a preamble.tex"/><meta name="dependency" content="106295feea2a60ae6267ba4478f774da2850c0ac meanValueTheorem/exercises/meanValueTheorem3.tex"/></head><body> 
+<div class="preamble"><script type="math/tex">\newenvironment {prompt}{}{}
+\newcommand {\ungraded }[0]{}
+\newcommand {\todo }[0]{}
+\newcommand {\oiint }[0]{{\large \bigcirc }\kern -1.56em\iint }
+\newcommand {\mooculus }[0]{\textsf {\textbf {MOOC}\textnormal {\textsf {ULUS}}}}
+\newcommand {\npnoround }[0]{\nprounddigits {-1}}
+\newcommand {\npnoroundexp }[0]{\nproundexpdigits {-1}}
+\newcommand {\npunitcommand }[1]{\ensuremath {\mathrm {#1}}}
+\newcommand {\RR }[0]{\mathbb R}
+\newcommand {\R }[0]{\mathbb R}
+\newcommand {\N }[0]{\mathbb N}
+\newcommand {\Z }[0]{\mathbb Z}
+\newcommand {\sagemath }[0]{\textsf {SageMath}}
+\newcommand {\d }[0]{\mathop {}\!d}
+\newcommand {\l }[0]{\ell }
+\newcommand {\ddx }[0]{\frac {d}{\d x}}
+\newcommand {\zeroOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {0}{0}}}}
+\newcommand {\inftyOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {\infty }{\infty }}}}
+\newcommand {\zeroOverInfty }[0]{\ensuremath {\boldsymbol {\tfrac {0}{\infty }}}}
+\newcommand {\zeroTimesInfty }[0]{\ensuremath {\small \boldsymbol {0\cdot \infty }}}
+\newcommand {\inftyMinusInfty }[0]{\ensuremath {\small \boldsymbol {\infty -\infty }}}
+\newcommand {\oneToInfty }[0]{\ensuremath {\boldsymbol {1^\infty }}}
+\newcommand {\zeroToZero }[0]{\ensuremath {\boldsymbol {0^0}}}
+\newcommand {\inftyToZero }[0]{\ensuremath {\boldsymbol {\infty ^0}}}
+\newcommand {\numOverZero }[0]{\ensuremath {\boldsymbol {\tfrac {\#}{0}}}}
+\newcommand {\dfn }[0]{\textbf }
+\newcommand {\unit }[0]{\mathop {}\!\mathrm }
+\newcommand {\eval }[1]{\bigg [ #1 \bigg ]}
+\newcommand {\seq }[1]{\left ( #1 \right )}
+\newcommand {\epsilon }[0]{\varepsilon }
+\newcommand {\phi }[0]{\varphi }
+\newcommand {\iff }[0]{\Leftrightarrow }
+\DeclareMathOperator {\arccot }{arccot}
+\DeclareMathOperator {\arcsec }{arcsec}
+\DeclareMathOperator {\arccsc }{arccsc}
+\DeclareMathOperator {\si }{Si}
+\DeclareMathOperator {\scal }{scal}
+\DeclareMathOperator {\sign }{sign}
+\newcommand {\arrowvec }[1]{{\overset {\rightharpoonup }{#1}}}
+\newcommand {\vec }[1]{{\overset {\boldsymbol {\rightharpoonup }}{\mathbf {#1}}}}
+\DeclareMathOperator {\proj }{\mathbf {proj}}
+\newcommand {\veci }[0]{{\boldsymbol {\hat {\imath }}}}
+\newcommand {\vecj }[0]{{\boldsymbol {\hat {\jmath }}}}
+\newcommand {\veck }[0]{{\boldsymbol {\hat {k}}}}
+\newcommand {\vecl }[0]{\vec {\boldsymbol {\l }}}
+\newcommand {\uvec }[1]{\mathbf {\hat {#1}}}
+\newcommand {\utan }[0]{\mathbf {\hat {t}}}
+\newcommand {\unormal }[0]{\mathbf {\hat {n}}}
+\newcommand {\ubinormal }[0]{\mathbf {\hat {b}}}
+\newcommand {\dotp }[0]{\bullet }
+\newcommand {\cross }[0]{\boldsymbol \times }
+\newcommand {\grad }[0]{\boldsymbol \nabla }
+\newcommand {\divergence }[0]{\grad \dotp }
+\newcommand {\curl }[0]{\grad \cross }
+\newcommand {\lto }[0]{\mathop {\longrightarrow \,}\limits }
+\newcommand {\bar }[0]{\overline }
+\newcommand {\surfaceColor }[0]{violet}
+\newcommand {\surfaceColorTwo }[0]{redyellow}
+\newcommand {\sliceColor }[0]{greenyellow}
+\newcommand {\vector }[1]{\left \langle #1\right \rangle }
+\newcommand {\sectionOutcomes }[0]{}
+\newcommand {\HyperFirstAtBeginDocument }[0]{\AtBeginDocument }                         </script><script type="text/javascript"> 
+</script> 
+</div>
+
+                                                                  
+<div role="article" class="problem-environment exercise" id="problem1"><a id="x1-64r1"></a>
+Suppose <script type="math/tex">g</script> is a function that is continuous on <script type="math/tex">[3,5]</script> and differentiable on <script type="math/tex">(3,5)</script>. Further suppose
+that <script type="math/tex">g(3)=2</script>, <script type="math/tex">g(5)=8</script>, and <script type="math/tex">g'(x)>0</script> for all <script type="math/tex">x</script> in <script type="math/tex">(3,5)</script>.
+<!--l. 22--><p class="noindent">Answer the following true-false questions.
+</p><!--l. 24--><p class="noindent"><script type="math/tex">g</script> does not satisfy the conditions of the Mean Value Theorem on <script type="math/tex">[3,5]</script>. </p><div role="article" class="problem-environment hint" id="problem2"><a id="x1-65r2"></a> Note, <script type="math/tex">g</script> is
+<strong>continuous</strong> on <script type="math/tex">[3,5]</script> and <strong>differentiable</strong> on <script type="math/tex">(3,5)</script>.
+</div> <div class="multiple-choice" id="problem3"><span class="choice  " id="choice1">True</span> <span class="choice correct " id="choice2">False</span> </div>
+<!--l. 33--><p class="noindent"><script type="math/tex">g'(c)=3</script> for some number <script type="math/tex">c</script> in <script type="math/tex">(3,5)</script>. </p><div role="article" class="problem-environment hint" id="problem4"><a id="x1-66r3"></a> Since the function <script type="math/tex">g</script> satisfies the conditions of the Mean value
+theorem (MVT), there exists a points <script type="math/tex">c</script> in <script type="math/tex">(3,5)</script> such that <script type="math/tex">g'(c)=\frac {g(5)-g(3)}{5-3}=\answer {3}</script>.
+</div> <div class="multiple-choice" id="problem5"><span class="choice correct " id="choice3">True</span> <span class="choice  " id="choice4">False</span> </div>
+<!--l. 43--><p class="noindent"><script type="math/tex">0<g'(x)\leq 2</script> for all <script type="math/tex">x</script> in <script type="math/tex">(3,5)</script>. </p><div role="article" class="problem-environment hint" id="problem6"><a id="x1-67r4"></a> Since the function <script type="math/tex">g</script> satisfies the conditions of the Mean value theorem
+(MVT), there exists a points <script type="math/tex">c</script> in <script type="math/tex">(3,5)</script> such that <script type="math/tex">g'(c)=\answer {3}</script>.
+</div> <div role="article" class="problem-environment hint" id="problem7"><a id="x1-68r5"></a> Since <script type="math/tex">g'(c)=\answer {3}</script>,<br class="newline"/>it follows that <script type="math/tex">g'(c)>2</script>.
+</div> <div class="multiple-choice" id="problem8"><span class="choice  " id="choice5">True</span> <span class="choice correct " id="choice6">False</span> </div>
+<!--l. 56--><p class="noindent"><script type="math/tex">0<g(x)\leq 8</script> for all <script type="math/tex">x</script> in <script type="math/tex">(3,5)</script>. </p><div role="article" class="problem-environment hint" id="problem9"><a id="x1-69r6"></a> Since <script type="math/tex">g'(x)>0</script> on <script type="math/tex">(3,5)</script>, the function <script type="math/tex">g</script> is increasing on the interval <script type="math/tex">(3,5)</script>.
+</div> <div role="article" class="problem-environment hint" id="problem10"><a id="x1-70r7"></a> Since the function <script type="math/tex">g</script> is increasing (and continuous on <script type="math/tex">[3,5]</script>) on the interval <script type="math/tex">(3,5)</script>, it follows
+that
+<!--l. 63--><p class="noindent"><script type="math/tex">g(x)\le g(5)</script>, for all <script type="math/tex">x</script> in <script type="math/tex">(3,5)</script>.
+</p></div> <div class="multiple-choice" id="problem11"><span class="choice correct " id="choice7">True</span> <span class="choice  " id="choice8">False</span> </div>
+</div>  
+ 
+
+                                                                  
+
+
+</body></html>
