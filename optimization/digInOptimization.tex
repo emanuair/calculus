@@ -80,12 +80,7 @@ use a similar argument.
 \begin{explanation}
   First we draw a picture, Here is a rectangle with an area of $100$.
 \begin{image}
-  \begin{tikzpicture}
-    \draw [penColor,very thick,fill=fill2] (0,0) rectangle (5,4);
-    \node [penColor] at (2.5,2) {$A=100$};
-    %\node [right,penColor] at (5,2) {$\frac{100}{x}$};
-    \node [below,penColor] at (2.5,0) {$x$};
-  \end{tikzpicture}
+  \includegraphics[scale=0.75]{0.png}
 \end{image}
 
 If $x$ denotes one of the sides of the rectangle, then the adjacent
@@ -139,36 +134,7 @@ parabola $y=x^2$ below the line $y=a$, where $a$ is an unspecified
 positive constant, with the top side of the rectangle on the horizontal
 line $y=a$. See the figure below:
 \begin{image}
-\begin{tikzpicture}
-	\begin{axis}[
-            domain=-3:3, ymin=0, ymax=9, xmin=-3, xmax=3,
-            axis lines =center, xlabel=$x$, ylabel=$y$,
-            ticks=none,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west},
-            axis on top,
-          ]
-          \addplot [draw=none, fill=fill2, domain=(-1.5:1.5)] {7} \closedcycle;
-          \addplot [draw=none, fill=background, domain=(-1.5:1.5)] {2.25} \closedcycle;
-
-          \addplot [very thick,penColor2,domain=(-3:3)] {x^2};
-          \addplot [very thick,penColor5,domain=(-3:3)] {7};
-
-          \addplot [very thick, penColor] plot coordinates {(1.5,2.25) (-1.5,2.25)};
-          \addplot [very thick, penColor] plot coordinates {(1.5,2.25) (1.5,7)};
-          \addplot [very thick, penColor] plot coordinates {(1.5,7) (-1.5,7)};
-          \addplot [very thick, penColor] plot coordinates {(-1.5,7) (-1.5,2.25)};
-          
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.5,2.25)};  %% closed hole          
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1.5,2.25)};  %% closed hole          
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(1.5,7)};  %% closed hole          
-          \addplot [color=penColor,fill=penColor,only marks,mark=*] coordinates{(-1.5,7)};  %% closed hole   
-
-          \node at (axis cs:0,4.625) [penColor] {$A(x) =$~area};
-          \node at (axis cs:1.5,2.25) [anchor=west,penColor] {$(x,x^2)$};
-          \node at (axis cs:1.5,7.2) [anchor=west,penColor] {$(x,a)$};
-        \end{axis}
-\end{tikzpicture}
+  \includegraphics{1.png}
 \end{image}
 \begin{explanation}
 We want to maximize value of $A(x)$.  The lower right corner of the
