@@ -92,20 +92,7 @@ Consider the function
     will become arbitrarily large as $x$ approaches $-1$.  We can see this
     in the graph of $f$.
     \begin{image}
-      \begin{tikzpicture}
-	\begin{axis}[
-            domain=-2:1,
-            ymax=100,
-            samples=100,
-            axis lines =middle, xlabel=$x$, ylabel=$y$,
-            every axis y label/.style={at=(current axis.above origin),anchor=south},
-            every axis x label/.style={at=(current axis.right of origin),anchor=west}
-          ]
-	  \addplot [very thick, penColor, smooth, domain=(-2:-1.1)] {1/(x+1)^2};
-          \addplot [very thick, penColor, smooth, domain=(-.9:1)] {1/(x+1)^2};
-          \addplot [textColor, dashed] plot coordinates {(-1,0) (-1,100)};
-        \end{axis}
-      \end{tikzpicture}
+      \includegraphics{20.png}
     \end{image}
   \end{explanation}
 \end{example}
